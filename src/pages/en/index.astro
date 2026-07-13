@@ -1,0 +1,391 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Shotera — Faster, smarter screenshots and screen recording',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Download free',
+        href: '#download',
+        icon: 'tabler:download',
+      },
+      { text: 'See features', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera capture and screen recording interface' }}
+  >
+    <Fragment slot="title">
+      Screenshots, screen recording, <span class="text-accent dark:text-white">AI capture</span><br class="hidden md:inline" />
+      all from a single shortcut
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Shotera</span> is a desktop capture tool built for people who screenshot all day.
+        Annotate, record to GIF, remove backgrounds with AI, extract text offline, and pin references — without leaving
+        your flow.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Shotera: capture, record, done.</span>
+      Everything you reach for a dozen times a day, a little faster.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Philosophy:" description="Fast, precise, and out of your way — that's the whole idea" />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Core features"
+    title="One app for every kind of screenshot"
+    subtitle="From a quick grab to serious creative work, Shotera packs your most frequent capture, recording, OCR, and annotation needs into one lightweight app."
+    items={[
+      {
+        title: 'Smart capture',
+        description:
+          'Grab a region, window, or full screen in one keystroke. Shotera auto-detects windows and UI elements down to the pixel, and scrolling capture grabs the whole page at once.',
+        icon: 'tabler:capture',
+      },
+      {
+        title: 'Screen recording & GIF',
+        description:
+          'Record your screen and export to MP4 or a lightweight GIF. Perfect for walkthroughs, tutorials, and reproducible bug reports.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'AI background removal',
+        description:
+          'Isolate the subject and drop the background in one click. People, products, logos — cut out and ready to use, no Photoshop required.',
+        icon: 'tabler:scissors',
+      },
+      {
+        title: 'Offline OCR',
+        description:
+          'Pull text out of any screenshot, processed entirely on your device. Nothing is uploaded. Handles mixed languages, code, and tables cleanly.',
+        icon: 'tabler:text-recognition',
+      },
+      {
+        title: 'Image translation',
+        description:
+          'Recognize and translate text inside any image on the spot. Read foreign docs, screenshots, and menus, then copy the translation straight out.',
+        icon: 'tabler:language',
+      },
+      {
+        title: 'Pin to screen',
+        description:
+          'Keep any screenshot floating on top while you work. Resize, arrange, and reference side by side without switching windows.',
+        icon: 'tabler:pin',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Capture"
+    title="Fast to grab, precise to frame"
+    items={[
+      {
+        title: 'Smart window / element detection',
+        description:
+          'Hover to snap to any window or UI element — no manual dragging. Lock onto exactly what you want in a second.',
+      },
+      {
+        title: 'Scrolling capture',
+        description: 'Auto-scroll and stitch long pages, chats, and documents that run well beyond the screen.',
+      },
+      {
+        title: 'A full annotation kit',
+        description:
+          'Arrows, boxes, text, step numbers, highlights, and blur — mark it up the moment you capture, so the point lands instantly.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Capture and annotation demo',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built for constant use</h3>
+      Trigger it with a shortcut, then capture, annotate, and copy in one uninterrupted motion.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    tagline="Recording"
+    title="Recordings and GIFs that explain themselves"
+    items={[
+      {
+        title: 'One-click screen recording',
+        description: `Pick a region or window and hit record. Demos, tutorials, and repro steps, all in crisp quality.`,
+      },
+      {
+        title: 'Export to lightweight GIF',
+        description:
+          'Drop it into docs, chats, or issues. No player needed — it plays the moment it loads.',
+      },
+      {
+        title: 'Capture cursor & clicks',
+        description: 'Highlight the pointer and click actions so every step in your demo reads clearly.',
+      },
+      {
+        title: 'Flexible output',
+        description:
+          'MP4 or GIF at the resolution you choose, balancing quality and file size for the job at hand.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Screen recording and GIF export demo',
+    }}
+  >
+    <Fragment slot="content">Turn "hard to explain" into a clip anyone can follow.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    tagline="AI features"
+    title="AI that goes beyond the screenshot"
+    items={[
+      {
+        title: 'AI background removal',
+        description:
+          'Detect the subject and drop the background in one click — transparent PNGs of people and products in seconds.',
+      },
+      {
+        title: 'Offline text extraction',
+        description:
+          'OCR runs locally and never touches the cloud. Turn screenshot text into editable, copyable text in a click.',
+      },
+      {
+        title: 'Instant image translation',
+        description:
+          'Recognize and translate in one step. Read foreign screenshots, docs, and interfaces, and copy the translation right out.',
+      },
+      {
+        title: 'Better as you go',
+        description: `Bind your most-used actions to custom shortcuts until they're muscle memory.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AI background removal and OCR demo',
+    }}
+  >
+    <Fragment slot="content">Let AI handle the most time-consuming part of working with screenshots.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Three steps to turn screenshots into work done."
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Press the shortcut</span>',
+        description:
+          'Trigger Shotera anywhere. Hover to auto-detect windows and elements, then frame exactly what you need.',
+        icon: 'tabler:keyboard',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Annotate, extract, or edit</span>',
+        description:
+          'Mark up the important parts, or run OCR, AI cutout, and translation — all in the same window.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Copy, save, or pin</span>',
+        description:
+          'Copy to the clipboard, save locally, or pin it on top for reference. Sharing is seamless.',
+        icon: 'tabler:share',
+      },
+      {
+        title: 'Done!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Shotera workflow',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="The little things you'll come to rely on"
+    subtitle="The small touches hidden in the details are what make Shotera hard to put down."
+    tagline="More features"
+    items={[
+      {
+        title: 'Scrolling capture',
+        description: 'Auto-scroll and stitch web pages, long docs, and chat histories — capture it all in one shot.',
+        icon: 'tabler:arrow-autofit-down',
+      },
+      {
+        title: 'Pin to screen',
+        description: 'Keep reference images floating on top so you can work alongside them, no window juggling.',
+        icon: 'tabler:pin',
+      },
+      {
+        title: 'Custom shortcuts',
+        description: 'Bind every frequent action to a shortcut that fits your hands. A power-user favorite.',
+        icon: 'tabler:keyboard',
+      },
+      {
+        title: 'History',
+        description: 'Every capture and recording is saved automatically, so a slip of the hand never loses your work.',
+        icon: 'tabler:history',
+      },
+      {
+        title: 'Multi-monitor support',
+        description: 'Works flawlessly across multiple and high-DPI displays, capturing precisely on every screen.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'One-click sharing',
+        description: 'Copy, save, or share right after you capture or record — straight into your workflow.',
+        icon: 'tabler:share',
+      },
+      {
+        title: 'Local-first & private',
+        description: 'OCR and core features run on your device — nothing uploaded. Your screenshots are yours alone.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Light on resources',
+        description: 'Starts instantly with a tiny memory footprint, always on standby without slowing you down.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Dark mode',
+        description: 'Follows your system theme automatically — easy on the eyes, day or night.',
+        icon: 'tabler:moon',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Tips & updates"
+    information={`On the blog we share Shotera tips, shortcut tricks, release notes, and efficient workflows
+                        to help you get more out of it.
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently asked questions"
+    subtitle="A few things you might be wondering about Shotera."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Which operating systems does Shotera support?',
+        description:
+          "Windows and macOS today. The installer is small and starts fast — download it and you're ready to go. More platforms are on the roadmap.",
+      },
+      {
+        title: 'Do OCR and AI cutout need an internet connection?',
+        description:
+          'OCR runs entirely offline on your device — nothing is uploaded. Some AI features can run locally or in the cloud; you choose in settings.',
+      },
+      {
+        title: 'Is Shotera free?',
+        description:
+          'Core capture, annotation, and pinning are free forever. Recording, AI cutout, and image translation are part of Pro — see the pricing page for details.',
+      },
+      {
+        title: 'Can recordings be exported as GIF?',
+        description:
+          'Yes. Export any recording to MP4 or a compact GIF — ideal for dropping into docs, chat, and bug reports.',
+      },
+      {
+        title: 'How does scrolling capture work?',
+        description:
+          'Pick scrolling mode and Shotera auto-scrolls and stitches the content for you — full pages, long documents, and chat histories included.',
+      },
+      {
+        title: 'Will it slow down my computer?',
+        description:
+          'No. Shotera is built to stay light — minimal memory and instant startup, unnoticeable even when running in the background.',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Satisfaction', amount: '99%' },
+      { title: 'Daily captures', amount: '1.2M' },
+      { title: 'Active users', amount: '48K' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    id="download"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Download Shotera free',
+        href: '#download',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">Make your everyday<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> screenshots faster</span></Fragment>
+
+    <Fragment slot="subtitle">
+      Download free, install in seconds.<br class="hidden md:inline" />Core features are free forever.
+    </Fragment>
+  </CallToAction>
+</Layout>

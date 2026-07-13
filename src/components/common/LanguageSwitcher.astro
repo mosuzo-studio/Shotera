@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import { languages, switchLocalePath, type Lang } from '~/i18n/utils';
+
+const currentLang = (Astro.currentLocale ?? 'en') as Lang;
+const entries = Object.entries(languages) as [Lang, string][];
+---
+
+<div class="dropdown relative inline-flex">
+  <button
+    type="button"
+    class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center gap-1"
+    aria-label={languages[currentLang]}
+  >
+    <Icon name="tabler:language" class="w-5 h-5" />
+    <span class="text-sm font-medium md:hidden">{languages[currentLang]}</span>
+    <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 hidden md:inline" />
+  </button>
+  <ul
+    class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute right-0 pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[140px] drop-shadow-xl"
+  >
+    {
+      entries.map(([lang, label]) => (
+        <li>
+          <a
+            class:list={[
+              'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+              { 'aw-link-active': lang === currentLang },
+            ]}
+            href={switchLocalePath(Astro.url, lang)}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

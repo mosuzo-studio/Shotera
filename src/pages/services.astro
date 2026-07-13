@@ -1,0 +1,227 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
+
+const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+
+const metadata = {
+  title: '服务',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="服务"
+    title="用我们精美的模板，提升你的项目"
+    subtitle="探索我们为各行各业与不同用途精心打造的模板。从引人入胜的演示文稿到实用的网站设计，我们为你提供成功所需的工具。"
+    actions={[{ variant: 'primary', target: '_blank', text: '开始探索', href: localizedPath(lang, '/') }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'AstroWind 主图',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="探索我们丰富多样的模板"
+    subtitle="浏览下方精选，让你的项目更高效、更出色。"
+    columns={3}
+    items={[
+      {
+        title: '教育',
+        description:
+          '通过将教学设计与视觉美感相融合，模板简化了各类素材的内容创作，加快开发速度，营造引人入胜的教育空间。',
+        icon: 'tabler:school',
+      },
+      {
+        title: '室内设计',
+        description:
+          '为住宅与商业空间打造兼具功能性与视觉美感的场景。模板着重于布局、配色与家具陈设，为你的设计构想提供灵活多变的工具箱。',
+        icon: 'tabler:home-star',
+      },
+      {
+        title: '摄影',
+        description: `助力摄影师讲述引人入胜的故事。模板专注于布局、图库与排版，无论专业人士还是爱好者都能得心应手。`,
+        icon: 'tabler:photo',
+      },
+      {
+        title: '电子商务',
+        description:
+          '我们的电子商务模板致力于打造引人入胜的网店，以动态呈现有效展示你的产品。无论是初创还是改版都非常合适。',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: '博客',
+        description:
+          '这些模板注重排版，帮助各阶段的写作者有效呈现内容，打造视觉吸引力强、易于使用的博客。',
+        icon: 'tabler:article',
+      },
+      {
+        title: '商务',
+        description:
+          '这些模板提供精致的选择，助力高效的视觉沟通，无论初创企业还是成熟公司，都能塑造专业的品牌形象。',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: '品牌塑造',
+        description:
+          '提供预先设计好的元素，助你打造一致的品牌形象，包括标志与营销素材。无论新创业务还是品牌改版都非常合适。',
+        icon: 'tabler:arrow-big-up-lines',
+      },
+      {
+        title: '医疗',
+        description: `从演示文稿到患者表单，这些工具提升了医疗专业人士的沟通效率。非常适合医疗机构与科研工作。`,
+        icon: 'tabler:vaccine',
+      },
+      {
+        title: '时装设计',
+        description:
+          '凭借对细节的关注、定制能力与现代设计，助力设计师连贯地展示创意。适合各个层次的设计师。',
+        icon: 'tabler:tie',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: '高品质设计',
+        description:
+          '我们的模板采用顶级设计，确保你的项目呈现专业而精致的外观。',
+        icon: 'tabler:wand',
+      },
+      {
+        title: '定制工具',
+        description:
+          '借助易于上手的定制工具，个性化调整配色、字体与内容，让每款模板都契合你的独特需求。',
+        icon: 'tabler:settings',
+      },
+      {
+        title: '预设计元素',
+        description:
+          '借助我们即拿即用的元素（包括图形、图标与布局）节省时间与精力，提升作品的视觉吸引力。',
+        icon: 'tabler:presentation',
+      },
+      {
+        title: '预览与样机视图',
+        description:
+          '在做任何改动之前，先用我们的预览与样机视图直观呈现最终效果，确保项目达到你的预期。',
+        icon: 'tabler:carousel-horizontal',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: '功能特性图片',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">主要特性</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: '节省时间',
+        description:
+          '简化你的工作流程，让你高效地制作出色的素材，把更多时间留给核心任务。',
+        icon: 'tabler:clock',
+      },
+      {
+        title: '专业外观',
+        description:
+          '用我们模板所带来的精致而考究的外观提升你的项目，给受众留下深刻印象。',
+        icon: 'tabler:school',
+      },
+      {
+        title: '成本效益',
+        description:
+          '省去定制设计的需求，从而节省成本，因为我们的模板以极低的价格提供专业级设计。',
+        icon: 'tabler:coin',
+      },
+      {
+        title: '即时下载',
+        description:
+          '购买后即可立即获取所选模板，让你毫不延迟地投入项目工作。',
+        icon: 'tabler:file-download',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: '优势图片',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">优势</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="真实客户的心声"
+    testimonials={[
+      {
+        testimonial: `这些设计不仅赏心悦目，而且非常专业。这些模板为我节省了大量时间，同时帮助我给客户留下了深刻的印象。`,
+        name: 'Emily Kennedy',
+        job: '前端开发者',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Emily Kennedy 图片',
+        },
+      },
+      {
+        testimonial: `它以简洁优雅的设计精美地呈现了我的作品，让我的照片熠熠生辉。即便对我这样不懂技术的人来说，定制也轻而易举。最终成果是一个专业而富有沉浸感的作品集，收获了无数赞誉。`,
+        name: 'Sarah Hansen',
+        job: '摄影师',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sarah Hansen 图片',
+        },
+      },
+      {
+        testimonial: `我发现了这些模板，它们的多样性与品质令我印象深刻。它们帮助我在营销与社交平台上建立了一致的品牌形象，提升了我业务的整体面貌。`,
+        name: 'Mark Wilkinson',
+        job: '小企业主',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Mark Wilkinson 图片',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: '更多客户评价……',
+      href: 'https://github.com/mosuzo-studio/Shotera',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '开始探索',
+        href: localizedPath(lang, '/'),
+      },
+    ]}
+    title="尽情探索我们的模板集合"
+    subtitle="无论你身处商业、设计还是教育领域，我们的模板都能助你提升项目。"
+  />
+</Layout>

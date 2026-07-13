@@ -1,0 +1,212 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
+
+const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+
+const metadata = {
+  title: '价格 — Shotera',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="价格方案"
+    title="免费开始，按需升级"
+    subtitle="日常截图与标注永久免费。需要录屏、AI 抠图、图片翻译等进阶能力时，再升级到专业版。"
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="选择适合你的方案"
+    subtitle="没有隐藏收费，随时可取消"
+    prices={[
+      {
+        title: '免费版',
+        subtitle: '满足日常截图所需',
+        price: 0,
+        period: '永久免费',
+        items: [
+          { description: '区域 / 窗口 / 全屏截图' },
+          { description: '智能窗口与元素检测' },
+          { description: '滚动长截图' },
+          { description: '丰富的标注工具' },
+          { description: '贴图钉屏' },
+          { description: '离线 OCR（每日限量）' },
+        ],
+        callToAction: {
+          text: '免费下载',
+          href: localizedPath(lang, '/#download'),
+        },
+      },
+      {
+        title: '专业版',
+        subtitle: '重度截图与录屏用户首选',
+        price: 39,
+        period: '每年',
+        items: [
+          { description: '包含免费版全部功能' },
+          { description: '高清录屏与 GIF 导出' },
+          { description: 'AI 智能抠图，无限次' },
+          { description: '离线 OCR 无限使用' },
+          { description: '图片翻译' },
+          { description: '截图 / 录屏历史记录云同步' },
+          { description: '优先技术支持' },
+        ],
+        callToAction: {
+          text: '升级专业版',
+          href: localizedPath(lang, '/#download'),
+        },
+        hasRibbon: true,
+        ribbonTitle: '推荐',
+      },
+      {
+        title: '团队版',
+        subtitle: '为团队协作而生',
+        price: 29,
+        period: '每人每年',
+        items: [
+          { description: '包含专业版全部功能' },
+          { description: '团队统一授权与管理' },
+          { description: '共享素材库与模板' },
+          { description: '集中计费与发票' },
+          { description: '专属客户成功经理' },
+        ],
+        callToAction: {
+          text: '联系我们',
+          href: localizedPath(lang, '/contact'),
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="为什么值得升级"
+    subtitle="专业版把你每天都在做的截图、录屏、识别做到更快、更省心"
+    columns={2}
+    items={[
+      {
+        title: '一次付费，全年畅用',
+        description: '按年订阅，价格透明，没有任何隐藏费用或意外扣费。',
+        icon: 'tabler:receipt',
+      },
+      {
+        title: '本地优先，隐私安心',
+        description: 'OCR 等核心能力本地运行，不联网、不上传，你的截图只属于你。',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: '多端授权',
+        description: '一个账号可在你的多台设备上登录使用，工作、家用无缝切换。',
+        icon: 'tabler:devices',
+      },
+      {
+        title: '下载即用',
+        description: '几秒安装、开箱即用，无需复杂配置，装好就能上手。',
+        icon: 'tabler:download',
+      },
+      {
+        title: '持续更新',
+        description: '订阅期内免费获取所有新功能与版本升级，越用越好用。',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: '优先支持',
+        description: '专业版与团队版用户享受优先响应，问题第一时间得到解答。',
+        icon: 'tabler:headset',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="三步用上专业版"
+    tagline="简单快捷"
+    isReversed={true}
+    items={[
+      {
+        title: '下载并安装 Shotera',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: '选择专业版方案',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: '登录账号，解锁全部功能',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: '开始高效截图与录屏',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: '升级流程示意',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="价格常见问题"
+    subtitle="关于付费与授权，你可能想了解的一些问题。"
+    columns={1}
+    items={[
+      {
+        title: '免费版会一直免费吗？',
+        description:
+          '会。截图、标注、贴图钉图以及基础的离线 OCR 等日常功能永久免费，无使用期限，也不会强制升级。',
+      },
+      {
+        title: '专业版和免费版的主要区别是什么？',
+        description:
+          '专业版解锁高清录屏与 GIF 导出、无限次 AI 抠图、无限离线 OCR、图片翻译以及历史记录云同步，适合每天大量截图录屏的重度用户。',
+      },
+      {
+        title: '一个授权可以在几台设备上使用？',
+        description:
+          '专业版授权可在你个人的多台设备上登录使用。团队版则按人数授权，方便统一管理与计费。',
+      },
+      {
+        title: '支持哪些支付方式？',
+        description:
+          '我们支持微信支付、支付宝以及主流信用卡，交易过程安全便捷。',
+      },
+      {
+        title: '可以退款吗？',
+        description:
+          '专业版提供 14 天无理由退款。如果在此期间你觉得不合适，可随时申请全额退款。',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="现在就让截图更高效"
+    subtitle="免费下载，几秒安装，随时升级解锁完整能力。"
+    actions={[
+      {
+        variant: 'primary',
+        text: '免费下载 Shotera',
+        href: localizedPath(lang, '/#download'),
+        icon: 'tabler:download',
+      },
+    ]}
+  />
+</Layout>

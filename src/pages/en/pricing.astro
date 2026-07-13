@@ -1,0 +1,211 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
+
+const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+
+const metadata = {
+  title: 'Pricing — Shotera',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Pricing"
+    title="Start free, upgrade when you need to"
+    subtitle="Everyday capture and annotation are free forever. Upgrade to Pro when you need recording, AI cutout, and image translation."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Choose the plan that fits"
+    subtitle="No hidden fees. Cancel anytime."
+    prices={[
+      {
+        title: 'Free',
+        subtitle: 'Everything you need day to day',
+        price: 0,
+        period: 'Free forever',
+        items: [
+          { description: 'Region / window / full-screen capture' },
+          { description: 'Smart window & element detection' },
+          { description: 'Scrolling capture' },
+          { description: 'Full annotation kit' },
+          { description: 'Pin to screen' },
+          { description: 'Offline OCR (daily limit)' },
+        ],
+        callToAction: {
+          text: 'Download free',
+          href: localizedPath(lang, '/#download'),
+        },
+      },
+      {
+        title: 'Pro',
+        subtitle: 'For heavy capture & recording users',
+        price: 39,
+        period: 'Per year',
+        items: [
+          { description: 'Everything in Free' },
+          { description: 'HD recording & GIF export' },
+          { description: 'Unlimited AI background removal' },
+          { description: 'Unlimited offline OCR' },
+          { description: 'Image translation' },
+          { description: 'Cloud sync for capture history' },
+          { description: 'Priority support' },
+        ],
+        callToAction: {
+          text: 'Get Pro',
+          href: localizedPath(lang, '/#download'),
+        },
+        hasRibbon: true,
+        ribbonTitle: 'Popular',
+      },
+      {
+        title: 'Team',
+        subtitle: 'Built for team collaboration',
+        price: 29,
+        period: 'Per user / year',
+        items: [
+          { description: 'Everything in Pro' },
+          { description: 'Centralized licensing & management' },
+          { description: 'Shared asset library & templates' },
+          { description: 'Consolidated billing & invoicing' },
+          { description: 'Dedicated customer success manager' },
+        ],
+        callToAction: {
+          text: 'Contact us',
+          href: localizedPath(lang, '/contact'),
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Why it's worth upgrading"
+    subtitle="Pro makes the capturing, recording, and text extraction you already do every day faster and more reliable."
+    columns={2}
+    items={[
+      {
+        title: 'Pay once, use all year',
+        description: 'Annual billing with transparent pricing — no hidden fees, no surprise charges.',
+        icon: 'tabler:receipt',
+      },
+      {
+        title: 'Local-first & private',
+        description: 'OCR and core features run on your device — nothing uploaded, your screenshots stay yours.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Licensed across devices',
+        description: 'One account, signed in on all your machines. Switch between work and home seamlessly.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Ready in seconds',
+        description: 'Installs in seconds and works out of the box — no complex setup.',
+        icon: 'tabler:download',
+      },
+      {
+        title: 'Always improving',
+        description: 'Every new feature and update during your subscription, free.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Priority support',
+        description: 'Pro and Team users get faster responses and answers when it matters.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Three steps to Pro"
+    tagline="Quick and simple"
+    isReversed={true}
+    items={[
+      {
+        title: 'Download and install Shotera',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Choose the Pro plan',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Sign in to unlock everything',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Start capturing and recording faster',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Upgrade flow',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Pricing FAQs"
+    subtitle="A few things you might want to know about billing and licensing."
+    columns={1}
+    items={[
+      {
+        title: 'Is the Free plan really free?',
+        description:
+          'Yes. Capture, annotation, pinning, and basic offline OCR are free forever, with no time limit and no forced upgrades.',
+      },
+      {
+        title: "What's the main difference between Free and Pro?",
+        description:
+          'Pro unlocks HD recording & GIF export, unlimited AI cutout, unlimited offline OCR, image translation, and cloud sync for your history — built for people who capture and record all day.',
+      },
+      {
+        title: 'How many devices does one license cover?',
+        description:
+          'A Pro license works across your personal devices. Team is licensed per seat for easy central management and billing.',
+      },
+      {
+        title: 'What payment methods do you accept?',
+        description: 'We accept all major credit cards and PayPal for a secure, convenient checkout.',
+      },
+      {
+        title: 'Can I get a refund?',
+        description:
+          "Pro comes with a 14-day, no-questions-asked refund. If it's not the right fit within that window, request a full refund anytime.",
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Make your screenshots more productive today"
+    subtitle="Download free, install in seconds, upgrade whenever you're ready."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Download Shotera free',
+        href: localizedPath(lang, '/#download'),
+        icon: 'tabler:download',
+      },
+    ]}
+  />
+</Layout>

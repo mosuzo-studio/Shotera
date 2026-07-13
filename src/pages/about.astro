@@ -1,0 +1,204 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
+
+const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+
+const metadata = {
+  title: '关于 Shotera',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="关于我们"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Shotera 团队',
+    }}
+  >
+    <Fragment slot="title">
+      把截图这件小事，<br />
+      <span class="text-accent dark:text-white">做到极致</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Shotera 诞生于一个朴素的念头：每天都要用无数次的截图和录屏，理应更快、更顺手。
+      我们是一群自己也重度依赖截图工具的产品人和工程师，把对效率的执念，做进了每一个快捷键、每一次框选、每一帧录制里。
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Shotera 数据一览"
+    stats={[
+      { title: '累计下载', amount: '200 万+' },
+      { title: '日均截图', amount: '1800 万次' },
+      { title: '好评率', amount: '4.9 / 5' },
+      { title: '支持语言', amount: '12 种' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="我们坚持的事"
+    subtitle="工具越顺手，你越感觉不到它的存在。这是 Shotera 每一个设计决策背后的准则。"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: '快，是第一位的',
+        description:
+          '一个快捷键唤起，窗口与元素自动识别，框选即所得。从想截图到截完图，不超过一秒。',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: '本地优先，隐私安心',
+        description:
+          'OCR、抠图等能力尽可能在本地完成，你的截图默认不上传云端。敏感内容，留在你自己的电脑里。',
+        icon: 'tabler:lock',
+      },
+      {
+        title: '克制的设计',
+        description:
+          '不堆砌功能，不打扰工作流。常用的一键可达，进阶的需要时才出现。',
+        icon: 'tabler:sparkles',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: '截图',
+        description:
+          '智能识别窗口与界面元素，支持滚动长截图，一次截下整个网页或聊天记录。',
+        icon: 'tabler:capture',
+      },
+      {
+        title: '录屏 & GIF',
+        description:
+          '录制屏幕并一键导出轻量 GIF，光标高亮、按键提示，演示教程格外清晰。',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'AI 抠图',
+        description:
+          '一键智能识别主体、去除背景，导出透明底图片，无需 PS。',
+        icon: 'tabler:wand',
+      },
+      {
+        title: '离线 OCR',
+        description:
+          '本地识别截图中的文字，中英日等多语言，复制粘贴即用，无需联网。',
+        icon: 'tabler:text-recognition',
+      },
+      {
+        title: '图片翻译',
+        description:
+          '识别图片中的文字并即时翻译，看外文文档、图表、界面不再有障碍。',
+        icon: 'tabler:language',
+      },
+      {
+        title: '贴图 / 钉图',
+        description:
+          '把截图钉在屏幕最上层，随时对照参考，多图排布也不乱。',
+        icon: 'tabler:pin',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Shotera 功能一览',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="我们的价值观"
+    subtitle="做一款工具，和用一款工具，是同一件事。我们用自己做出来的东西，每天工作。"
+    items={[
+      {
+        title: '为真实场景而造',
+        description:
+          '每个功能都来自真实的使用痛点——写文档、做设计稿标注、录 Bug 复现、翻外文资料。我们先自己用，再交给你。',
+      },
+      {
+        title: '持续打磨',
+        description:
+          '快捷键的手感、框选的边缘吸附、录屏的体积与清晰度——这些细节我们会一直调，直到顺手为止。',
+      },
+      {
+        title: '尊重用户',
+        description:
+          '不捆绑、不弹窗骚扰、不偷偷上传数据。核心功能长期免费，是我们对用户的承诺。',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="一路走来"
+    subtitle="从一个自用的小工具，到几百万人每天在用的截图利器。"
+    isReversed={true}
+    callToAction={{
+      text: '免费下载 Shotera',
+      href: localizedPath(lang, '/#download'),
+    }}
+    items={[
+      {
+        title: '始于自己的需求',
+        description: '因为找不到一款足够快、足够顺手的截图工具，我们决定自己写一个。',
+        icon: 'tabler:seeding',
+      },
+      {
+        title: '被用户推着长大',
+        description:
+          '长截图、AI 抠图、离线 OCR、图片翻译……很多功能，都是用户在反馈里「点」出来的。',
+        icon: 'tabler:users',
+      },
+      {
+        title: '走向更多人',
+        description:
+          '如今 Shotera 支持多语言、多平台，服务着全球两百多万用户，但初心没变：让截图更简单。',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="联系我们"
+    tagline="随时找到我们"
+    columns={2}
+    items={[
+      {
+        title: '用户社群',
+        description:
+          '加入 Shotera 用户群，第一时间获取新版本、使用技巧，也能直接把想法告诉我们。',
+        icon: 'tabler:messages',
+      },
+      {
+        title: '邮件支持',
+        description:
+          '遇到问题或有功能建议？发邮件到 support@shotera.app，我们会认真回复每一封。',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>

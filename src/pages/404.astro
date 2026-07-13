@@ -1,0 +1,26 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
+
+const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+
+const title = `错误 404`;
+---
+
+<Layout metadata={{ title }}>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="max-w-md text-center">
+        <h2 class="mb-8 font-bold text-9xl">
+          <span class="sr-only">错误</span>
+          <span class="text-primary">404</span>
+        </h2>
+        <p class="text-3xl font-semibold md:text-3xl">抱歉，我们找不到这个页面。</p>
+        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+          别担心，你可以在我们的首页找到许多其他内容。
+        </p>
+        <a rel="noopener noreferrer" href={localizedPath(lang, '/')} class="btn ml-4">返回首页</a>
+      </div>
+    </div>
+  </section>
+</Layout>

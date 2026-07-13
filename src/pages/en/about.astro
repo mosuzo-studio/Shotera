@@ -1,0 +1,202 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
+
+const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+
+const metadata = {
+  title: 'About Shotera',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About us"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'The Shotera team',
+    }}
+  >
+    <Fragment slot="title">
+      Make screenshots <br />
+      <span class="text-accent dark:text-white">good enough to disappear</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Shotera started with a simple frustration: the screenshots and recordings we take dozens of times a day should be
+      faster and smoother. We're a small group of product folks and engineers who lean on capture tools as heavily as
+      anyone — and we built that obsession into every shortcut, every selection, every frame.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Shotera at a glance"
+    stats={[
+      { title: 'Downloads', amount: '2M+' },
+      { title: 'Daily captures', amount: '18M' },
+      { title: 'Rating', amount: '4.9 / 5' },
+      { title: 'Languages', amount: '12' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="What we stand by"
+    subtitle="The better a tool feels, the less you notice it. That principle sits behind every decision we make."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Speed comes first',
+        description:
+          'One shortcut to summon it, automatic window and element detection, what-you-select-is-what-you-get. Under a second from intent to capture.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Local-first, private by default',
+        description:
+          'OCR, cutout, and more run on-device wherever possible. Your screenshots stay off the cloud unless you say otherwise.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Restraint by design',
+        description:
+          'No feature bloat, no interrupting your flow. Common things are one click away; advanced ones show up only when you need them.',
+        icon: 'tabler:sparkles',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Capture',
+        description:
+          'Smart window and element detection, plus scrolling capture that grabs an entire page or chat in one shot.',
+        icon: 'tabler:capture',
+      },
+      {
+        title: 'Recording & GIF',
+        description:
+          'Record your screen and export to a lightweight GIF — cursor highlights and click cues make demos crystal clear.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'AI cutout',
+        description: 'Detect the subject and drop the background in one click, exporting transparent PNGs. No Photoshop.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Offline OCR',
+        description:
+          'Extract text from any screenshot on-device, across multiple languages. Copy and paste, no internet required.',
+        icon: 'tabler:text-recognition',
+      },
+      {
+        title: 'Image translation',
+        description:
+          'Recognize and translate text inside any image on the spot — foreign docs, charts, and interfaces made readable.',
+        icon: 'tabler:language',
+      },
+      {
+        title: 'Pin to screen',
+        description: 'Keep any screenshot floating on top for reference, arranged side by side without the clutter.',
+        icon: 'tabler:pin',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Shotera features overview',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our values"
+    subtitle="Building a tool and using one are the same thing to us. We work in what we make, every day."
+    items={[
+      {
+        title: 'Built for real work',
+        description:
+          'Every feature comes from a real pain point — writing docs, annotating design specs, recording repros, reading foreign material. We use it first, then hand it to you.',
+      },
+      {
+        title: 'Always refining',
+        description:
+          'Shortcut feel, edge snapping on selections, recording size vs. clarity — we keep tuning the details until they feel right.',
+      },
+      {
+        title: 'Respect for users',
+        description:
+          'No bundleware, no nagging popups, no quietly uploading your data. Core features stay free — that\'s our promise.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="How we got here"
+    subtitle="From a tool we built for ourselves to one millions rely on every day."
+    isReversed={true}
+    callToAction={{
+      text: 'Download Shotera free',
+      href: localizedPath(lang, '/#download'),
+    }}
+    items={[
+      {
+        title: 'Started with our own need',
+        description: 'We couldn\'t find a capture tool that was fast and smooth enough, so we wrote one.',
+        icon: 'tabler:seeding',
+      },
+      {
+        title: 'Grown by our users',
+        description:
+          'Scrolling capture, AI cutout, offline OCR, image translation — so many features came straight from user feedback.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Reaching more people',
+        description:
+          'Today Shotera runs on multiple languages and platforms, serving over two million users worldwide — with the same goal: make screenshots simple.',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Get in touch"
+    tagline="Reach us anytime"
+    columns={2}
+    items={[
+      {
+        title: 'Community',
+        description:
+          'Join the Shotera community for new releases, tips, and a direct line to tell us what you think.',
+        icon: 'tabler:brand-discord',
+      },
+      {
+        title: 'Email support',
+        description: 'Hit a problem or have a feature idea? Email support@shotera.app — we read and reply to every one.',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>

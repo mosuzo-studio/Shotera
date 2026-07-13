@@ -1,0 +1,41 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: '预发布落地页',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="预发布演示"
+    title="预发布落地页：在盛大揭晓前点燃期待！"
+    subtitle="打造一个引人入胜的“即将推出”或预发布落地页，让访客翘首期待你的正式发布。"
+    actions={[
+      { variant: 'primary', text: '立即行动', href: '#', icon: 'tabler:square-rounded-arrow-right' },
+      { text: '了解更多', href: '#' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1558803116-c1b4ac867b31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+      alt: '挂着“即将开业”招牌的店铺。预发布落地页',
+    }}
+  />
+
+  <CallToAction
+    title="即将推出"
+    subtitle="我们正在完善这些演示页面的内容，很快就能与你见面。敬请期待，敬请期待！"
+    actions={[
+      {
+        variant: 'primary',
+        text: '下载模板',
+        href: 'https://github.com/mosuzo-studio/Shotera',
+        icon: 'tabler:download',
+      },
+    ]}
+  />
+</Layout>

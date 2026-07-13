@@ -1,0 +1,79 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact — Shotera',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contact" title="Got a question or an idea? Tell us." />
+
+  <ContactUs
+    id="form"
+    title="Send us a message"
+    subtitle="Running into something, or wishing Shotera did one more thing? Check the FAQ on the homepage first — the answer might be there. If not, drop us a note below and we'll get back to you soon."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this form, you agree that we may collect the information you provide, used only to respond to your inquiry.',
+    }}
+    description="We usually reply within 24 business hours."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Other ways to reach us"
+    items={[
+      {
+        title: 'Usage questions',
+        description: `Stuck on install, capture, recording, OCR, or AI cutout? Send a note and we'll help you sort it out.`,
+      },
+      {
+        title: 'Feature requests',
+        description:
+          "Want something Shotera doesn't do yet? A lot of what it does started as a user suggestion — tell us, and it might land in the next release.",
+      },
+      {
+        title: 'Business & team licensing',
+        description:
+          'For team purchases, volume licensing, invoicing, and partnerships, reach out to our business team.',
+      },
+      {
+        title: 'Community',
+        description: 'Join the community for updates and tips',
+        icon: 'tabler:brand-discord',
+      },
+      {
+        title: 'Email',
+        description: 'support@shotera.app',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Feedback',
+        description: 'feedback@shotera.app',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+</Layout>

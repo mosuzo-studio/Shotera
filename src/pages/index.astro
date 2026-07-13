@@ -1,0 +1,392 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Shotera — 更快、更聪明的截图与录屏工具',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: '免费下载',
+        href: '#download',
+        icon: 'tabler:download',
+      },
+      { text: '查看功能', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera 截图录屏工具界面' }}
+  >
+    <Fragment slot="title">
+      截图、录屏、<span class="text-accent dark:text-white">AI 识图</span><br class="hidden md:inline" />
+      一个快捷键全搞定
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Shotera</span> 是一款为效率而生的桌面截图与录屏工具，集截图标注、录屏导出 GIF、AI
+        抠图、离线 OCR、图片翻译、贴图钉图于一身。</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Shotera：截图录屏，一步到位。</span>
+      让每一次「截个图」都又快又顺手。
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="产品理念：" description="又快、又准、又顺手——把截图这件小事做到极致" />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="核心功能"
+    title="一款工具，覆盖你所有的截图场景"
+    subtitle="从随手一截到专业创作，Shotera 把日常最高频的截图、录屏、识别与标注需求全部装进一个轻量应用里。"
+    items={[
+      {
+        title: '智能截图',
+        description:
+          '一键区域、窗口、全屏截图，自动检测窗口与界面元素，边缘对齐精准到像素。支持滚动长截图，整页内容一次截全。',
+        icon: 'tabler:capture',
+      },
+      {
+        title: '录屏 & GIF',
+        description:
+          '高清录制屏幕，一键导出为 MP4 或体积小巧的 GIF。演示操作、录制教程、留存 Bug 复现，分享即所见。',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'AI 抠图',
+        description:
+          '智能识别主体，一键去除背景，人像、商品、Logo 瞬间扣出。无需 PS，截完即用，做图效率翻倍。',
+        icon: 'tabler:scissors',
+      },
+      {
+        title: '离线 OCR 文字识别',
+        description:
+          '本地识别截图中的文字，无需联网、不上传云端，隐私更安心。中英文混排、代码、表格都能精准提取。',
+        icon: 'tabler:text-recognition',
+      },
+      {
+        title: '图片翻译',
+        description:
+          '识别图中文字并即时翻译，外文文档、截图、菜单一看就懂。译文可直接复制，跨语言阅读毫无障碍。',
+        icon: 'tabler:language',
+      },
+      {
+        title: '贴图 / 钉图',
+        description:
+          '把截图钉在屏幕最上层，随时对照参考。多图并排、缩放、半透明，边看边做，再也不用来回切窗口。',
+        icon: 'tabler:pin',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="截图"
+    title="截得快，更截得准"
+    items={[
+      {
+        title: '智能窗口 / 元素检测',
+        description:
+          '鼠标划过即自动识别窗口与界面元素边界，无需手动框选，一秒锁定要截的内容。',
+      },
+      {
+        title: '滚动长截图',
+        description:
+          '网页、聊天记录、长文档自动滚动拼接，超出屏幕的内容也能完整截取。',
+      },
+      {
+        title: '丰富的标注工具',
+        description:
+          '箭头、方框、文字、序号、高亮、马赛克一应俱全，截完即标，重点一目了然。',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: '截图与标注功能演示',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">为高频使用而设计</h3>
+      快捷键随手唤起，截图、标注、复制一气呵成，把打断思路的操作降到最低。
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    tagline="录屏"
+    title="录屏与 GIF，分享即所见"
+    items={[
+      {
+        title: '一键录制屏幕',
+        description: `选定区域或窗口即可开录，操作演示、教程讲解、问题复现，全程高清留存。`,
+      },
+      {
+        title: '导出轻量 GIF',
+        description:
+          '把操作过程压成体积小巧的 GIF，贴进文档、聊天、Issue，无需播放器，打开即看。',
+      },
+      {
+        title: '录制光标与点击',
+        description:
+          '高亮显示鼠标轨迹与点击动作，让每一步演示都清晰易懂。',
+      },
+      {
+        title: '灵活的输出格式',
+        description:
+          '支持 MP4 / GIF 多种格式与清晰度，兼顾画质与文件大小，按需选择。',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: '录屏与 GIF 导出演示',
+    }}
+  >
+    <Fragment slot="content">把「说不清」的操作，变成一段一看就懂的演示。</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    tagline="AI 能力"
+    title="AI 加持，截图不止于截图"
+    items={[
+      {
+        title: 'AI 智能抠图',
+        description:
+          '自动识别主体、一键去背景，人像与商品图秒变透明底，做图、拼图、配图都更省事。',
+      },
+      {
+        title: '离线 OCR 提取文字',
+        description:
+          '本地识别、不联网、不上云，截图里的文字一键变成可复制文本，隐私与效率兼得。',
+      },
+      {
+        title: '图片即时翻译',
+        description:
+          '识别 + 翻译一步到位，外文截图、文档、界面轻松读懂，译文可直接复制使用。',
+      },
+      {
+        title: '越用越顺手',
+        description: `常用操作可自定义快捷键与流程，把你最常做的动作固化成肌肉记忆。`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AI 抠图与 OCR 演示',
+    }}
+  >
+    <Fragment slot="content">让 AI 帮你处理截图里最费时的那部分。</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="三步上手，把截图变成生产力。"
+    items={[
+      {
+        title: '第 1 步：<span class="font-medium">按下快捷键</span>',
+        description:
+          '随时随地一键唤起 Shotera，鼠标划过自动识别窗口与元素，精准框选你要的画面。',
+        icon: 'tabler:keyboard',
+      },
+      {
+        title: '第 2 步：<span class="font-medium">标注 / 识别 / 处理</span>',
+        description:
+          '截完立刻标注重点，或一键 OCR 提取文字、AI 抠图、翻译，所有操作都在同一个界面完成。',
+        icon: 'tabler:wand',
+      },
+      {
+        title: '第 3 步：<span class="font-medium">复制 / 保存 / 钉图</span>',
+        description:
+          '一键复制到剪贴板、保存到本地，或把截图钉在屏幕上随时对照，分享无缝衔接。',
+        icon: 'tabler:share',
+      },
+      {
+        title: '搞定！',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Shotera 使用流程',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="还有更多贴心功能"
+    subtitle="这些藏在细节里的小功能，才是让人一用就离不开的原因。"
+    tagline="更多功能"
+    items={[
+      {
+        title: '滚动长截图',
+        description: '网页、长文档、聊天记录自动滚动拼接，再长的内容也能一截到底。',
+        icon: 'tabler:arrow-autofit-down',
+      },
+      {
+        title: '贴图钉屏',
+        description: '把参考图钉在屏幕最上层，边看边做，告别来回切换窗口。',
+        icon: 'tabler:pin',
+      },
+      {
+        title: '快捷键自定义',
+        description: '所有高频操作都能绑定顺手的快捷键，效率党的最爱。',
+        icon: 'tabler:keyboard',
+      },
+      {
+        title: '历史记录',
+        description: '自动保存每一次截图与录屏，想找回随时翻，不怕手滑丢失。',
+        icon: 'tabler:history',
+      },
+      {
+        title: '多显示器支持',
+        description: '完美适配多屏与高分辨率显示器，每块屏幕都能精准截取。',
+        icon: 'tabler:devices',
+      },
+      {
+        title: '一键分享',
+        description: '截图录屏后直接复制、保存或分享，无缝衔接到你的工作流。',
+        icon: 'tabler:share',
+      },
+      {
+        title: '本地优先 · 隐私安心',
+        description: 'OCR 等核心能力本地运行，不联网、不上传，你的截图只属于你。',
+        icon: 'tabler:lock',
+      },
+      {
+        title: '轻量不占资源',
+        description: '启动飞快、常驻内存极小，随时待命也不拖慢你的电脑。',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: '深色模式',
+        description: '跟随系统自动切换明暗主题，白天夜晚都护眼。',
+        icon: 'tabler:moon',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="使用技巧与更新"
+    information={`在博客里，我们会分享 Shotera 的使用技巧、快捷键玩法、版本更新与效率工作流，
+                        帮你把这款小工具的价值榨到最大。
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="常见问题"
+    subtitle="关于 Shotera 你可能想知道的那些事。"
+    tagline="常见问题"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Shotera 支持哪些操作系统？',
+        description:
+          '目前支持 Windows 与 macOS 桌面平台，安装包体积小、启动快，下载后即可使用。更多平台正在规划中。',
+      },
+      {
+        title: 'OCR 和 AI 抠图需要联网吗？',
+        description:
+          'OCR 文字识别为离线本地运行，不联网、不上传，隐私更有保障。部分 AI 能力可选择本地或云端处理，你可以在设置中自由选择。',
+      },
+      {
+        title: 'Shotera 是免费的吗？',
+        description:
+          '核心的截图、标注、贴图功能免费使用。录屏、AI 抠图、图片翻译等进阶能力提供更完整的体验，具体可查看价格页面。',
+      },
+      {
+        title: '录屏可以导出成 GIF 吗？',
+        description:
+          '可以。录制完成后可一键导出为 MP4 或体积小巧的 GIF，方便贴进文档、聊天工具和问题反馈中。',
+      },
+      {
+        title: '滚动长截图怎么用？',
+        description:
+          '选择长截图模式后，Shotera 会自动向下滚动并拼接页面内容，网页、长文档、聊天记录都能完整截取。',
+      },
+      {
+        title: '会占用很多系统资源吗？',
+        description:
+          '不会。Shotera 以轻量为设计目标，常驻内存极小、启动迅速，即使长期后台待命也几乎无感。',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: '下载量', amount: '132K' },
+      { title: '好评率', amount: '99%' },
+      { title: '日均截图', amount: '1.2M' },
+      { title: '活跃用户', amount: '48K' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    id="download"
+    actions={[
+      {
+        variant: 'primary',
+        text: '免费下载 Shotera',
+        href: '#download',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">现在就让截图变得<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">又快又聪明</span></Fragment>
+
+    <Fragment slot="subtitle">
+      免费下载，几秒安装，立刻上手。<br class="hidden md:inline" />把每天都要做的「截个图」，交给更懂你的工具。
+    </Fragment>
+  </CallToAction>
+</Layout>

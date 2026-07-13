@@ -1,0 +1,78 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: '联系我们 — Shotera',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="联系我们" title="有问题或建议？告诉我们" />
+
+  <ContactUs
+    id="form"
+    title="给我们留言"
+    subtitle="使用中遇到问题，或者有想要的新功能？先看看首页的常见问题，也许答案就在那里。如果没有，填写下面的表单，我们会尽快回复你。"
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: '称呼',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: '邮箱',
+      },
+    ]}
+    textarea={{
+      label: '留言内容',
+    }}
+    disclaimer={{
+      label: '提交此表单即表示你知悉并同意我们收集你所填写的信息，仅用于回复你的咨询。',
+    }}
+    description="我们通常会在 24 个工作小时内回复。"
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="其他联系方式"
+    items={[
+      {
+        title: '使用问题',
+        description: `关于安装、截图录屏、OCR、AI 抠图等功能的使用疑问，欢迎留言，我们会协助你排查解决。`,
+      },
+      {
+        title: '功能建议',
+        description:
+          '想要的功能还没有？Shotera 的很多能力都来自用户建议，把你的想法告诉我们，说不定下个版本就实现了。',
+      },
+      {
+        title: '商务与团队授权',
+        description:
+          '关于团队版采购、批量授权、发票与合作等事宜，欢迎联系我们的商务团队。',
+      },
+      {
+        title: '用户社群',
+        description: '加入用户群，获取更新与技巧',
+        icon: 'tabler:brand-wechat',
+      },
+      {
+        title: '邮箱',
+        description: 'support@shotera.app',
+        icon: 'tabler:mail',
+      },
+      {
+        title: '反馈与建议',
+        description: 'feedback@shotera.app',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+</Layout>

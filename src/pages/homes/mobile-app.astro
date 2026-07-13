@@ -1,0 +1,297 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+
+const appStoreImg = '~/assets/images/app-store.png';
+const appStoreDownloadLink = 'https://github.com/mosuzo-studio/Shotera';
+
+const googlePlayImg = '~/assets/images/google-play.png';
+const googlePlayDownloadLink = 'https://github.com/mosuzo-studio/Shotera';
+
+const metadata = {
+  title: '移动应用主页',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      position="left"
+      links={[
+        { text: '服务', href: '#' },
+        { text: '功能', href: '#' },
+        { text: '关于', href: '#' },
+      ]}
+      actions={[
+        {
+          text: '下载',
+          href: '#download',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="移动应用网页演示"
+    image={{
+      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'AstroWind 主图',
+    }}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white">AstroWind App</span>：<br /> 轻松打造<span
+        class="hidden xl:inline">专业级</span
+      >网站
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        触手可及，释放无限创意：这是你通往创新设计的门户。
+      </span>
+      立即下载，踏上让你的项目焕然一新的旅程。
+    </Fragment>
+
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="App Store 图片" width={200} format="webp" />
+      </Button>
+
+      <Button variant="link" href={googlePlayDownloadLink}>
+        <Image src={googlePlayImg} alt="Google Play 图片" width={200} format="webp" />
+      </Button>
+    </div>
+  </Hero2>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    id="features"
+    title="如何使用我们的应用？"
+    subtitle="厌倦了花数小时从零开始制作文档？我们的应用带来创新的解决方案。凭借海量专业设计的模板，你现在只需几分钟就能创建精美的文档。立即探索我们的模板，感受不一样的体验。"
+    tagline="分步指南"
+    columns={2}
+    items={[
+      {
+        title: '下载并安装应用',
+        description: `从你设备的应用商店或我们的官方网站下载这款易于使用的应用，开启你的旅程。`,
+        icon: 'tabler:square-number-1',
+      },
+      {
+        title: '注册账户',
+        description:
+          '填写必要信息创建你的账户，即可解锁我们的全部功能。',
+        icon: 'tabler:square-number-2',
+      },
+      {
+        title: '浏览模板',
+        description: '探索我们种类丰富的网站模板，已分好类别，方便查找。',
+        icon: 'tabler:square-number-3',
+      },
+      {
+        title: '预览并选择模板',
+        description: `通过预览直观感受每个模板的潜力，然后挑选最契合你项目需求的那一个。`,
+        icon: 'tabler:square-number-4',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+      alt: '多彩图片',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: '友好的用户界面',
+        description:
+          '直观、易于导航的界面，让用户能够快速浏览并找到所需的模板。',
+        icon: 'tabler:wand',
+      },
+      {
+        title: '个性化选项',
+        description:
+          '内置基础的自定义工具，让用户可以修改模板中的文字、颜色、图片及其他元素。',
+        icon: 'tabler:settings',
+      },
+      {
+        title: '开箱即用的组件',
+        description:
+          '用图形、图标、布局等现成元素强化你的设计，为你节省时间，提升视觉吸引力。',
+        icon: 'tabler:template',
+      },
+      {
+        title: '预览模式',
+        description: '提供每个模板的预览，让用户在购买前就能看到实际效果。',
+        icon: 'tabler:carousel-horizontal',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+      alt: '多彩图片',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">主要功能</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: '离线访问',
+        description: '为用户提供下载已购模板离线使用的选项。',
+        icon: 'tabler:wifi-off',
+      },
+      {
+        title: '安全的云端存储',
+        description:
+          '为已购模板提供云端存储，确保用户能随时随地安全地访问并备份自己的模板。',
+        icon: 'tabler:file-download',
+      },
+      {
+        title: '定期更新',
+        description: '持续新增模板与功能，让应用始终保持新鲜感，让用户乐在其中。',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: '心愿单',
+        description: `让用户把感兴趣的模板加入心愿单，方便日后回顾并可能进一步购买。`,
+        icon: 'tabler:heart',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: '复古图片',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">其他功能</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="我们应用的数据"
+    stats={[
+      { amount: '20K', icon: 'tabler:download' },
+      { amount: '18.5K', icon: 'tabler:users' },
+      { amount: '4.7', icon: 'tabler:user-star' },
+    ]}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="用户怎么说？"
+    testimonials={[
+      {
+        testimonial: `它让浏览和下载网站模板变得轻而易举。界面直观，我毫不费力就为我的项目找到了完美的模板。这是一款真正为用户赋能的应用。`,
+        name: '卡里·肯尼迪',
+        job: '电影导演',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: '卡里·肯尼迪图片',
+        },
+      },
+      {
+        testimonial: `这款应用流畅的下载流程和直观的布局，让挑选模板成为一种享受。在决定之前就能预览并尝试不同的设计，既为我节省了时间，也确保我的网站呈现出完美的外观。`,
+        name: '乔什·威尔金森',
+        job: '产品经理',
+        image: {
+          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: '乔什·威尔金森图片',
+        },
+      },
+      {
+        testimonial:
+          '我在几分钟内就下载并用上了一套专业的网站模板。分步流程和友好的界面，让我轻松打造出一个看起来像专业设计师操刀的网站。',
+        name: '西德尼·汉森',
+        job: '装饰设计师',
+        image: {
+          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: '西德尼·汉森图片',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: '阅读更多用户评价',
+      href: 'https://github.com/mosuzo-studio/Shotera',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="还有疑问？"
+    items={[
+      {
+        title: '这款应用能做什么？',
+        description:
+          '这款应用为你提供一个平台，让你轻松浏览、购买、下载并使用海量网站模板，用于你的各类项目。',
+      },
+      {
+        title: '这款应用如何解决我的问题？',
+        description:
+          '这款应用简化了寻找并应用专业网站设计的流程，帮你省时省力地打造美观又实用的网站。',
+      },
+      {
+        title: '它支持我的设备吗？',
+        description: `我们的应用兼容各类设备与平台，无论你使用智能手机、平板还是电脑，都能轻松访问。`,
+      },
+      {
+        title: '这款应用与其他应用有何不同？',
+        description:
+          '我们的应用凭借友好的用户界面、丰富的模板库，以及购买与下载流程的无缝衔接脱颖而出，效率极高。',
+      },
+      {
+        title: '会产生费用吗？',
+        description:
+          '应用本身可能免费下载，但根据你的偏好与项目需求，购买特定模板可能会产生费用。',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    id="download"
+    title="立即下载我们的应用！"
+    subtitle="尽享种类繁多的精美模板，简化你的创作流程，提升你的线上形象。"
+  >
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="App Store 图片" width={200} format="webp" />
+      </Button>
+
+      <Button variant="link" href={googlePlayDownloadLink}>
+        <Image src={googlePlayImg} alt="Google Play 图片" width={200} format="webp" />
+      </Button>
+    </div>
+  </CallToAction>
+</Layout>
