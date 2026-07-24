@@ -1,8 +1,23 @@
-# Shotera Release Notes
+# Shotera
 
 
+Capture, annotate, edit, translate, and share effortlessly. Shotera combines AI editing, offline OCR, translation, stickers, emoji, magnifier, and productivity tools in one modern Windows app.
+
+轻松完成截图、标注、编辑、翻译与分享。Shotera 将 AI 编辑、离线 OCR、翻译、贴图、Emoji、放大镜等效率工具整合于一款现代化 Windows 应用中。
+
+<br>
+
+<img width="100%" alt="Shotera-1" src="https://github.com/user-attachments/assets/b32374bb-8b86-465b-adcb-bed9e768498e" />
+
+<img width="100%" alt="Shotera-2" src="https://github.com/user-attachments/assets/51a8cf1a-1082-496e-ab72-27c5ec87b7ea" />
+
+<br><br>
 
 ---
+
+<br><br>
+
+# Shotera Release Notes
 
 ## Milestone
 
