@@ -23,6 +23,7 @@ Capture, annotate, edit, translate, and share effortlessly. Shotera combines AI 
 
 - **2026.07.23: Shotera v7.0.0 is Now Officially Available. Welcome to Try the Latest Version.**
 - **2026.07.23：Shotera v7.0.0 正式发布，欢迎体验最新版本。**
+- **2026.07.26：Shotera v7.1.0 正式发布**
 
 
 
