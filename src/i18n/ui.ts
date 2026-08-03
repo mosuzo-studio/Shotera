@@ -90,7 +90,7 @@ export const ui = {
     'footer.feedback': 'Feedback',
 
     'announcement.new': 'NEW',
-    'announcement.text': 'Shotera 2.0 is here — now with AI cutout & image translation! »',
+    'announcement.text': 'Shotera v7.2.0+ is here — AI cutout, illustration, offline OCR & image translation! (Site under construction) »',
 
     'blog.readMore': 'Read more',
     'blog.backToList': '← Back to Blog',
@@ -176,7 +176,7 @@ export const ui = {
     'footer.feedback': '意见反馈',
 
     'announcement.new': '新',
-    'announcement.text': 'Shotera 2.0 发布 —— 新增 AI 抠图与图片翻译！»',
+    'announcement.text': 'Shotera v7.2.0+ 发布 —— 新增 AI 抠图、插图、本地离线 OCR 与图片翻译！（同时本官网正在建设中）»',
 
     'blog.readMore': '阅读更多',
     'blog.backToList': '← 返回博客',

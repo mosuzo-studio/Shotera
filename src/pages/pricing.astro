@@ -21,14 +21,14 @@ const metadata = {
   <HeroText
     tagline="价格方案"
     title="免费开始，按需升级"
-    subtitle="日常截图与标注永久免费。需要录屏、AI 抠图、图片翻译等进阶能力时，再升级到专业版。"
+    subtitle="日常截图与标注永久免费。需要录屏、AI 抠图、图片翻译等进阶能力时，升级到专业版或团队版。"
   />
 
   <!-- Pricing Widget ******************* -->
 
   <Prices
     title="选择适合你的方案"
-    subtitle="没有隐藏收费，随时可取消"
+    subtitle="一次买断，无隐藏收费"
     prices={[
       {
         title: '免费版',
@@ -38,48 +38,51 @@ const metadata = {
         items: [
           { description: '区域 / 窗口 / 全屏截图' },
           { description: '智能窗口与元素检测' },
-          { description: '滚动长截图' },
-          { description: '丰富的标注工具' },
+          { description: '丰富的标注工具（箭头、方框、文字、高亮、马赛克等）' },
+          { description: '表情贴纸、Emoji、放大镜、序号标注' },
           { description: '贴图钉屏' },
-          { description: '离线 OCR（每日限量）' },
+          { description: '基础离线 OCR（每日限量）' },
+          { description: '持续维护与版本更新' },
         ],
         callToAction: {
           text: '免费下载',
-          href: localizedPath(lang, '/#download'),
+          href: 'https://github.com/mosuzo-studio/Shotera/releases',
         },
       },
       {
         title: '专业版',
-        subtitle: '重度截图与录屏用户首选',
-        price: 39,
-        period: '每年',
+        subtitle: '进阶截屏与 AI 能力',
+        price: 29,
+        period: '买断',
         items: [
           { description: '包含免费版全部功能' },
           { description: '高清录屏与 GIF 导出' },
           { description: 'AI 智能抠图，无限次' },
+          { description: 'AI 擦图 / 修图，无限次' },
           { description: '离线 OCR 无限使用' },
           { description: '图片翻译' },
           { description: '截图 / 录屏历史记录云同步' },
-          { description: '优先技术支持' },
+          { description: '一次买断，终身使用，免费更新' },
         ],
         callToAction: {
-          text: '升级专业版',
-          href: localizedPath(lang, '/#download'),
+          text: '立即购买',
+          href: 'https://github.com/mosuzo-studio/Shotera/releases',
         },
         hasRibbon: true,
         ribbonTitle: '推荐',
       },
       {
         title: '团队版',
-        subtitle: '为团队协作而生',
-        price: 29,
-        period: '每人每年',
+        subtitle: '企业级服务与专属支持',
+        price: 39,
+        period: '/ 人',
         items: [
           { description: '包含专业版全部功能' },
           { description: '团队统一授权与管理' },
-          { description: '共享素材库与模板' },
           { description: '集中计费与发票' },
-          { description: '专属客户成功经理' },
+          { description: '专属 Bug 与需求响应通道' },
+          { description: '最高级技术支持与售后服务' },
+          { description: '批量采购享受优惠价格' },
         ],
         callToAction: {
           text: '联系我们',
@@ -97,18 +100,18 @@ const metadata = {
     columns={2}
     items={[
       {
-        title: '一次付费，全年畅用',
-        description: '按年订阅，价格透明，没有任何隐藏费用或意外扣费。',
+        title: '一次买断，终身使用',
+        description: '专业版 $29 一次性付费，终身使用，无年费、无订阅，且免费获取后续版本更新。',
         icon: 'tabler:receipt',
       },
       {
         title: '本地优先，隐私安心',
-        description: 'OCR 等核心能力本地运行，不联网、不上传，你的截图只属于你。',
+        description: 'AI 抠图、擦图、OCR 等核心能力本地运行，不联网、不上传，你的截图只属于你。',
         icon: 'tabler:shield-lock',
       },
       {
         title: '多端授权',
-        description: '一个账号可在你的多台设备上登录使用，工作、家用无缝切换。',
+        description: '一个授权可在你的多台设备上激活使用，工作、家用无缝切换。',
         icon: 'tabler:devices',
       },
       {
@@ -118,7 +121,7 @@ const metadata = {
       },
       {
         title: '持续更新',
-        description: '订阅期内免费获取所有新功能与版本升级，越用越好用。',
+        description: '买断期内免费获取所有新功能与版本升级，越用越好用。',
         icon: 'tabler:refresh',
       },
       {
@@ -142,11 +145,11 @@ const metadata = {
         icon: 'tabler:number-1',
       },
       {
-        title: '选择专业版方案',
+        title: '选择专业版方案并购买',
         icon: 'tabler:number-2',
       },
       {
-        title: '登录账号，解锁全部功能',
+        title: '激活授权，解锁全部功能',
         icon: 'tabler:number-3',
       },
       {
@@ -155,7 +158,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: '~/assets/images/workflow.png',
       alt: '升级流程示意',
     }}
   />
@@ -170,17 +173,22 @@ const metadata = {
       {
         title: '免费版会一直免费吗？',
         description:
-          '会。截图、标注、贴图钉图以及基础的离线 OCR 等日常功能永久免费，无使用期限，也不会强制升级。',
+          '会。截图、标注、贴图钉图以及基础的离线 OCR 等日常功能永久免费，无使用期限，也不会强制升级。我们持续维护和更新，免费用户同样受益。',
       },
       {
-        title: '专业版和免费版的主要区别是什么？',
+        title: '专业版是买断制还是订阅制？',
         description:
-          '专业版解锁高清录屏与 GIF 导出、无限次 AI 抠图、无限离线 OCR、图片翻译以及历史记录云同步，适合每天大量截图录屏的重度用户。',
+          '专业版是一次性买断制，$29 终身使用，无需每年续费。一次付费后，你拥有该版本的永久使用权，且后续版本更新免费。专业版仅限个人用户使用。',
+      },
+      {
+        title: '团队版和专业版有什么区别？',
+        description:
+          '团队版（$39/人）支持商业公司和团队使用，提供团队统一授权管理、集中计费与发票、专属 Bug 与需求响应通道、最高级技术支持与售后服务。批量采购可享受优惠价格。',
       },
       {
         title: '一个授权可以在几台设备上使用？',
         description:
-          '专业版授权可在你个人的多台设备上登录使用。团队版则按人数授权，方便统一管理与计费。',
+          '专业版授权可在你个人的多台设备上激活使用。团队版则按人数授权，方便统一管理与计费。',
       },
       {
         title: '支持哪些支付方式？',
@@ -190,7 +198,7 @@ const metadata = {
       {
         title: '可以退款吗？',
         description:
-          '专业版提供 14 天无理由退款。如果在此期间你觉得不合适，可随时申请全额退款。',
+          '团队版提供 7 天无理由退款。如有疑问可随时联系我们。',
       },
     ]}
   />
@@ -204,7 +212,7 @@ const metadata = {
       {
         variant: 'primary',
         text: '免费下载 Shotera',
-        href: localizedPath(lang, '/#download'),
+        href: 'https://github.com/mosuzo-studio/Shotera/releases',
         icon: 'tabler:download',
       },
     ]}

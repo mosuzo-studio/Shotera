@@ -21,14 +21,14 @@ const metadata = {
   <HeroText
     tagline="Pricing"
     title="Start free, upgrade when you need to"
-    subtitle="Everyday capture and annotation are free forever. Upgrade to Pro when you need recording, AI cutout, and image translation."
+    subtitle="Everyday capture and annotation are free forever. Upgrade to Pro or Team when you need recording, AI cutout, and image translation."
   />
 
   <!-- Pricing Widget ******************* -->
 
   <Prices
     title="Choose the plan that fits"
-    subtitle="No hidden fees. Cancel anytime."
+    subtitle="Buy once, no hidden fees"
     prices={[
       {
         title: 'Free',
@@ -38,48 +38,51 @@ const metadata = {
         items: [
           { description: 'Region / window / full-screen capture' },
           { description: 'Smart window & element detection' },
-          { description: 'Scrolling capture' },
-          { description: 'Full annotation kit' },
+          { description: 'Full annotation kit (arrows, boxes, text, highlights, blur)' },
+          { description: 'Emoji stickers, magnifier, step numbers' },
           { description: 'Pin to screen' },
-          { description: 'Offline OCR (daily limit)' },
+          { description: 'Basic offline OCR (daily limit)' },
+          { description: 'Ongoing maintenance & updates' },
         ],
         callToAction: {
           text: 'Download free',
-          href: localizedPath(lang, '/#download'),
+          href: 'https://github.com/mosuzo-studio/Shotera/releases',
         },
       },
       {
         title: 'Pro',
-        subtitle: 'For heavy capture & recording users',
-        price: 39,
-        period: 'Per year',
+        subtitle: 'Advanced capture & AI',
+        price: 29,
+        period: 'One-time',
         items: [
           { description: 'Everything in Free' },
           { description: 'HD recording & GIF export' },
           { description: 'Unlimited AI background removal' },
+          { description: 'Unlimited AI eraser / inpainting' },
           { description: 'Unlimited offline OCR' },
           { description: 'Image translation' },
           { description: 'Cloud sync for capture history' },
-          { description: 'Priority support' },
+          { description: 'Buy once, use forever, free updates' },
         ],
         callToAction: {
-          text: 'Get Pro',
-          href: localizedPath(lang, '/#download'),
+          text: 'Buy now',
+          href: 'https://github.com/mosuzo-studio/Shotera/releases',
         },
         hasRibbon: true,
         ribbonTitle: 'Popular',
       },
       {
         title: 'Team',
-        subtitle: 'Built for team collaboration',
-        price: 29,
-        period: 'Per user / year',
+        subtitle: 'Enterprise-grade service & dedicated support',
+        price: 39,
+        period: '/ seat',
         items: [
           { description: 'Everything in Pro' },
           { description: 'Centralized licensing & management' },
-          { description: 'Shared asset library & templates' },
           { description: 'Consolidated billing & invoicing' },
-          { description: 'Dedicated customer success manager' },
+          { description: 'Dedicated bug & feature response channel' },
+          { description: 'Top-tier technical support & after-sales service' },
+          { description: 'Volume discounts for bulk purchases' },
         ],
         callToAction: {
           text: 'Contact us',
@@ -93,22 +96,22 @@ const metadata = {
 
   <Features3
     title="Why it's worth upgrading"
-    subtitle="Pro makes the capturing, recording, and text extraction you already do every day faster and more reliable."
+    subtitle="Pro makes the capturing, recording, and AI features you already use every day faster and more reliable."
     columns={2}
     items={[
       {
-        title: 'Pay once, use all year',
-        description: 'Annual billing with transparent pricing — no hidden fees, no surprise charges.',
+        title: 'Buy once, use forever',
+        description: 'Pro is a one-time $29 purchase — no annual fees, no subscriptions. Free updates for all future versions.',
         icon: 'tabler:receipt',
       },
       {
         title: 'Local-first & private',
-        description: 'OCR and core features run on your device — nothing uploaded, your screenshots stay yours.',
+        description: 'AI cutout, eraser, and OCR all run on your device — nothing uploaded, your screenshots stay yours.',
         icon: 'tabler:shield-lock',
       },
       {
         title: 'Licensed across devices',
-        description: 'One account, signed in on all your machines. Switch between work and home seamlessly.',
+        description: 'One license, activate on all your machines. Switch between work and home seamlessly.',
         icon: 'tabler:devices',
       },
       {
@@ -118,12 +121,12 @@ const metadata = {
       },
       {
         title: 'Always improving',
-        description: 'Every new feature and update during your subscription, free.',
+        description: 'Every new feature and version update during your license, free.',
         icon: 'tabler:refresh',
       },
       {
         title: 'Priority support',
-        description: 'Pro and Team users get faster responses and answers when it matters.',
+        description: 'Pro and Team users get faster responses when it matters.',
         icon: 'tabler:headset',
       },
     ]}
@@ -142,11 +145,11 @@ const metadata = {
         icon: 'tabler:number-1',
       },
       {
-        title: 'Choose the Pro plan',
+        title: 'Choose Pro plan & purchase',
         icon: 'tabler:number-2',
       },
       {
-        title: 'Sign in to unlock everything',
+        title: 'Activate license to unlock everything',
         icon: 'tabler:number-3',
       },
       {
@@ -155,7 +158,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: '~/assets/images/workflow.png',
       alt: 'Upgrade flow',
     }}
   />
@@ -170,12 +173,17 @@ const metadata = {
       {
         title: 'Is the Free plan really free?',
         description:
-          'Yes. Capture, annotation, pinning, and basic offline OCR are free forever, with no time limit and no forced upgrades.',
+          'Yes. Capture, annotation, pinning, and basic offline OCR are free forever, with no time limit and no forced upgrades. Free users also benefit from ongoing maintenance and updates.',
       },
       {
-        title: "What's the main difference between Free and Pro?",
+        title: 'Is Pro a one-time purchase or a subscription?',
         description:
-          'Pro unlocks HD recording & GIF export, unlimited AI cutout, unlimited offline OCR, image translation, and cloud sync for your history — built for people who capture and record all day.',
+          'Pro is a one-time purchase of $29 — own it for life. No annual renewal needed. You get permanent access to your licensed version, plus free updates for future versions. Pro is for personal use only.',
+      },
+      {
+        title: "What's the difference between Pro and Team?",
+        description:
+          'Team ($39/seat) is built for business and commercial teams. It includes centralized licensing, consolidated billing & invoicing, a dedicated bug & feature response channel, top-tier technical support and after-sales service. Volume discounts are available for bulk purchases.',
       },
       {
         title: 'How many devices does one license cover?',
@@ -184,12 +192,11 @@ const metadata = {
       },
       {
         title: 'What payment methods do you accept?',
-        description: 'We accept all major credit cards and PayPal for a secure, convenient checkout.',
+        description: 'We accept major credit cards, PayPal, WeChat Pay, and Alipay for a secure, convenient checkout.',
       },
       {
         title: 'Can I get a refund?',
-        description:
-          "Pro comes with a 14-day, no-questions-asked refund. If it's not the right fit within that window, request a full refund anytime.",
+        description: 'Team licenses come with a 7-day refund policy. Contact us if you have any questions.',
       },
     ]}
   />
@@ -203,7 +210,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Download Shotera free',
-        href: localizedPath(lang, '/#download'),
+        href: 'https://github.com/mosuzo-studio/Shotera/releases',
         icon: 'tabler:download',
       },
     ]}

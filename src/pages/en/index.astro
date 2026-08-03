@@ -26,7 +26,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Download free',
-        href: '#download',
+        href: 'https://github.com/mosuzo-studio/Shotera/releases',
         icon: 'tabler:download',
       },
       { text: 'See features', href: '#features' },
@@ -34,15 +34,15 @@ const metadata = {
     image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera capture and screen recording interface' }}
   >
     <Fragment slot="title">
-      Screenshots, screen recording, <span class="text-accent dark:text-white">AI capture</span><br class="hidden md:inline" />
+      Screenshots, screen recording, <span class="text-accent dark:text-white">AI magic</span><br class="hidden md:inline" />
       all from a single shortcut
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
         <span class="font-semibold">Shotera</span> is a desktop capture tool built for people who screenshot all day.
-        Annotate, record to GIF, remove backgrounds with AI, extract text offline, and pin references — without leaving
-        your flow.</span
+        Annotate, record to GIF, AI cutout, AI eraser (inpainting), offline OCR, image translation, and pin references —
+        without leaving your flow.</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Shotera: capture, record, done.</span>
       Everything you reach for a dozen times a day, a little faster.
@@ -64,20 +64,26 @@ const metadata = {
       {
         title: 'Smart capture',
         description:
-          'Grab a region, window, or full screen in one keystroke. Shotera auto-detects windows and UI elements down to the pixel, and scrolling capture grabs the whole page at once.',
+          'Grab a region, window, or full screen in one keystroke. Shotera auto-detects windows and UI elements down to the pixel.',
         icon: 'tabler:capture',
       },
       {
         title: 'Screen recording & GIF',
         description:
-          'Record your screen and export to MP4 or a lightweight GIF. Perfect for walkthroughs, tutorials, and reproducible bug reports.',
+          'Record at up to 4K ultra-HD resolution with high frame rate, export to MP4 or lightweight GIF. No recording time limit — capture as long as you need.',
         icon: 'tabler:video',
       },
       {
         title: 'AI background removal',
         description:
-          'Isolate the subject and drop the background in one click. People, products, logos — cut out and ready to use, no Photoshop required.',
+          'Isolate the subject and drop the background in one click. People, products, logos — cut out and ready to use, processed entirely on-device. No Photoshop required.',
         icon: 'tabler:scissors',
+      },
+      {
+        title: 'AI eraser / inpainting',
+        description:
+          'Intelligently remove unwanted objects, watermarks, or blemishes from images. AI fills in the background naturally. Fully offline, fully private.',
+        icon: 'tabler:eraser',
       },
       {
         title: 'Offline OCR',
@@ -113,17 +119,18 @@ const metadata = {
           'Hover to snap to any window or UI element — no manual dragging. Lock onto exactly what you want in a second.',
       },
       {
-        title: 'Scrolling capture',
-        description: 'Auto-scroll and stitch long pages, chats, and documents that run well beyond the screen.',
-      },
-      {
         title: 'A full annotation kit',
         description:
-          'Arrows, boxes, text, step numbers, highlights, and blur — mark it up the moment you capture, so the point lands instantly.',
+          'Emoji stickers, magnifier, step numbers, arrows, boxes, text, highlights, and blur — mark it up the moment you capture, so the point lands instantly.',
+      },
+      {
+        title: 'Blur & highlight',
+        description:
+          'Blur sensitive info or highlight key areas in one click. Privacy protection and visual emphasis, both covered.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: '~/assets/images/capture-demo.png',
       alt: 'Capture and annotation demo',
     }}
   >
@@ -142,11 +149,11 @@ const metadata = {
   <Content
     isAfterContent
     tagline="Recording"
-    title="Recordings and GIFs that explain themselves"
+    title="Recordings and GIFs, ultra-HD with no time limit"
     items={[
       {
-        title: 'One-click screen recording',
-        description: `Pick a region or window and hit record. Demos, tutorials, and repro steps, all in crisp quality.`,
+        title: 'Ultra-HD, unlimited recording',
+        description: `Record at 1080p, 2K, or 4K ultra-HD with high frame rates. No recording time limit — record as long as you need.`,
       },
       {
         title: 'Export to lightweight GIF',
@@ -164,7 +171,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      src: '~/assets/images/recording-demo.png',
       alt: 'Screen recording and GIF export demo',
     }}
   >
@@ -186,7 +193,12 @@ const metadata = {
       {
         title: 'AI background removal',
         description:
-          'Detect the subject and drop the background in one click — transparent PNGs of people and products in seconds.',
+          'Detect the subject and drop the background in one click — transparent PNGs of people and products in seconds. Runs entirely on-device.',
+      },
+      {
+        title: 'AI eraser / inpainting',
+        description:
+          'Remove unwanted objects, watermarks, or blemishes intelligently. AI fills in the background naturally. Also runs locally — no upload, no cloud.',
       },
       {
         title: 'Offline text extraction',
@@ -194,21 +206,16 @@ const metadata = {
           'OCR runs locally and never touches the cloud. Turn screenshot text into editable, copyable text in a click.',
       },
       {
-        title: 'Instant image translation',
-        description:
-          'Recognize and translate in one step. Read foreign screenshots, docs, and interfaces, and copy the translation right out.',
-      },
-      {
-        title: 'Better as you go',
-        description: `Bind your most-used actions to custom shortcuts until they're muscle memory.`,
+        title: 'Flexible model switching',
+        description: `AI cutout and eraser support custom model switching. Use the current best model anytime and stay ahead of the curve.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: '~/assets/images/ai-demo.png',
       alt: 'AI background removal and OCR demo',
     }}
   >
-    <Fragment slot="content">Let AI handle the most time-consuming part of working with screenshots.</Fragment>
+    <Fragment slot="content">AI cutout, eraser, and OCR all run locally — intelligence without sacrificing privacy.</Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -244,7 +251,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: '~/assets/images/workflow.png',
       alt: 'Shotera workflow',
     }}
   />
@@ -257,9 +264,19 @@ const metadata = {
     tagline="More features"
     items={[
       {
-        title: 'Scrolling capture',
-        description: 'Auto-scroll and stitch web pages, long docs, and chat histories — capture it all in one shot.',
-        icon: 'tabler:arrow-autofit-down',
+        title: 'Emoji stickers',
+        description: 'Add emoji stickers and fun annotations to your screenshots in one click. Make your captures more expressive.',
+        icon: 'tabler:mood-happy',
+      },
+      {
+        title: 'Magnifier',
+        description: 'Zoom in on key details so your audience sees exactly what you want to emphasize.',
+        icon: 'tabler:zoom-in',
+      },
+      {
+        title: 'Step numbers',
+        description: 'Guide viewers through your screenshots with numbered step annotations — perfect for tutorials and how-to guides.',
+        icon: 'tabler:list-numbers',
       },
       {
         title: 'Pin to screen',
@@ -282,13 +299,8 @@ const metadata = {
         icon: 'tabler:devices',
       },
       {
-        title: 'One-click sharing',
-        description: 'Copy, save, or share right after you capture or record — straight into your workflow.',
-        icon: 'tabler:share',
-      },
-      {
         title: 'Local-first & private',
-        description: 'OCR and core features run on your device — nothing uploaded. Your screenshots are yours alone.',
+        description: 'OCR, AI cutout, and AI eraser all run on your device — nothing uploaded. Your screenshots are yours alone.',
         icon: 'tabler:lock',
       },
       {
@@ -328,27 +340,27 @@ const metadata = {
       {
         title: 'Which operating systems does Shotera support?',
         description:
-          "Windows and macOS today. The installer is small and starts fast — download it and you're ready to go. More platforms are on the roadmap.",
+          "Shotera currently supports Windows desktop with a small, fast-launching installer that works offline — download and start right away. macOS, Linux, and more platforms are on the roadmap.",
+      },
+      {
+        title: 'Which interface languages does Shotera support?',
+        description:
+          'Shotera now supports Traditional Chinese, Japanese, Brazilian Portuguese, Spanish, German, French, Italian, Korean, Russian, Arabic, Dutch, Polish, and Swedish. Together with English and Simplified Chinese, Shotera supports 15 interface languages.',
       },
       {
         title: 'Do OCR and AI cutout need an internet connection?',
         description:
-          'OCR runs entirely offline on your device — nothing is uploaded. Some AI features can run locally or in the cloud; you choose in settings.',
+          'No. OCR text recognition, AI background removal, and AI eraser (inpainting) all run entirely offline on your device — nothing is uploaded, keeping your data private. Image translation uses cloud APIs and complies with the respective cloud providers\' privacy policies.',
       },
       {
         title: 'Is Shotera free?',
         description:
-          'Core capture, annotation, and pinning are free forever. Recording, AI cutout, and image translation are part of Pro — see the pricing page for details.',
+          'Core capture, annotation, and pinning are free forever. Recording, AI cutout, AI eraser, and image translation are part of Pro — see the pricing page for details.',
       },
       {
         title: 'Can recordings be exported as GIF?',
         description:
-          'Yes. Export any recording to MP4 or a compact GIF — ideal for dropping into docs, chat, and bug reports.',
-      },
-      {
-        title: 'How does scrolling capture work?',
-        description:
-          'Pick scrolling mode and Shotera auto-scrolls and stitches the content for you — full pages, long documents, and chat histories included.',
+          'Yes. Export any recording to MP4 or a compact GIF, supporting 1080p to 4K ultra-HD resolution with no time limit — ideal for dropping into docs, chat, and bug reports.',
       },
       {
         title: 'Will it slow down my computer?',
@@ -362,10 +374,10 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Satisfaction', amount: '99%' },
-      { title: 'Daily captures', amount: '1.2M' },
-      { title: 'Active users', amount: '48K' },
+      { title: 'Languages', amount: '15' },
+      { title: 'Rating', amount: '4.9 / 5' },
+      { title: 'Offline AI', amount: '100%' },
+      { title: 'Launch time', amount: '<0.1s' },
     ]}
   />
 
@@ -377,7 +389,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Download Shotera free',
-        href: '#download',
+        href: 'https://github.com/mosuzo-studio/Shotera/releases',
         icon: 'tabler:download',
       },
     ]}

@@ -12,7 +12,7 @@ export const getHeaderData = (lang: Lang) => {
       { text: t('nav.blog'), href: getBlogPermalink() },
       { text: t('nav.about'), href: l('/about') },
     ],
-    actions: [{ text: t('nav.download'), href: l('/#download'), icon: 'tabler:download' }],
+    actions: [{ text: t('nav.download'), href: 'https://github.com/mosuzo-studio/Shotera/releases', icon: 'tabler:download' }],
   };
 };
 
@@ -36,10 +36,10 @@ export const getFooterData = (lang: Lang) => {
       {
         title: t('footer.support'),
         links: [
-          { text: t('footer.download'), href: l('/#download') },
+          { text: t('footer.download'), href: 'https://github.com/mosuzo-studio/Shotera/releases' },
           { text: t('footer.docs'), href: '#' },
           { text: t('footer.faq'), href: l('/#faqs') },
-          { text: t('footer.changelog'), href: '#' },
+          { text: t('footer.changelog'), href: l('/changelog') },
           { text: t('footer.feedback'), href: l('/contact') },
         ],
       },
@@ -61,7 +61,7 @@ export const getFooterData = (lang: Lang) => {
       { ariaLabel: 'Bilibili', icon: 'tabler:brand-bilibili', href: '#' },
       { ariaLabel: 'WeChat', icon: 'tabler:brand-wechat', href: '#' },
       { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-      { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
+      { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/mosuzo-studio/Shotera' },
     ],
     footNote: `
       <span class="font-semibold">Shotera</span> · 让每一次截图与录屏都更高效。
