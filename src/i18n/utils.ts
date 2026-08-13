@@ -1,12 +1,14 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 import { ui, defaultLang, languages, type Lang, type UIKey } from './ui';
+import { getLocaleDirection } from './locales';
 
-export { languages, defaultLang, type Lang, type UIKey };
+export { languages, defaultLang, getLocaleDirection, type Lang, type UIKey };
 
 /**
  * Extract the active language from a URL. With `prefixDefaultLocale: false`,
- * English lives at the root (`/about`) and Chinese under `/zh/` (`/zh/about`).
+ * English lives at the root (`/about`) and Simplified Chinese under
+ * `/zh-cn` (`/zh-cn/about`).
  *
  * `Astro.url.pathname` includes the configured `base` (e.g. `/template`), so we
  * strip that first before reading the locale segment. Prefer `Astro.currentLocale`
@@ -36,7 +38,7 @@ export function useTranslations(lang: Lang) {
 /**
  * Build a locale-aware, base-prefixed absolute path for an internal route.
  * Wraps Astro's `getRelativeLocaleUrl` so callers pass a plain path
- * (`/about`, `#features`, `/`) and get back e.g. `/template/zh/about`.
+ * (`/about`, `#features`, `/`) and get back e.g. `/template/zh-cn/about`.
  *
  * External URLs, hash links and protocol-relative links pass through
  * untouched — those are never localized.

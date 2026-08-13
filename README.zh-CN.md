@@ -160,7 +160,7 @@ Shotera 将截图保存在本地。本地离线 OCR 直接在设备上运行，�
 
 你还可以自定义快捷键、界面语言与字体、启动方式和托盘图标，始终掌控自己的使用方式。
 
-详情请阅读[隐私政策](https://shotera.mosuzo.com/zh/privacy)。
+详情请阅读[隐私政策](https://shotera.mosuzo.com/zh-cn/privacy)。
 
 <br/>
 
@@ -220,7 +220,7 @@ Shotera；Shotera AI；Mosuzo Studio；AI 抠图；AI 修复；离线 OCR；截�
   <a href="https://github.com/mosuzo-studio/Shotera/issues">
     <img src="https://img.shields.io/badge/%E5%BB%BA%E8%AE%AE%E4%B8%8E%E5%8F%8D%E9%A6%88%20%26%20Bug-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="提出建议、反馈问题或报告 Bug" />
   </a>
-  <a href="https://shotera.mosuzo.com/zh/changelog">
+  <a href="https://shotera.mosuzo.com/zh-cn/changelog">
     <img src="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="查看 Shotera 更新日志" />
   </a>
   <a href="mailto:mosuzo.studio@gmail.com">

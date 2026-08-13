@@ -1,16 +1,18 @@
+import { defaultLocale, localeRegistry, type PublishedLocale } from './locales';
+
 export const languages = {
-  en: 'English',
-  zh: '中文',
-} as const;
+  en: localeRegistry.en.label,
+  'zh-cn': localeRegistry['zh-cn'].label,
+} as const satisfies Record<PublishedLocale, string>;
 
 export type Lang = keyof typeof languages;
 
-export const defaultLang: Lang = 'en';
+export const defaultLang: Lang = defaultLocale;
 
 /**
  * UI strings for global chrome (header, footer, announcement, buttons, blog
  * taxonomy labels). Page body copy lives in the per-language page files under
- * `src/pages` and `src/pages/zh`, not here — this dictionary is for shared,
+ * `src/pages` and `src/pages/zh-cn`, not here — this dictionary is for shared,
  * reused fragments only.
  */
 export const ui = {
@@ -101,7 +103,7 @@ export const ui = {
 
     'lang.label': 'Language',
   },
-  zh: {
+  'zh-cn': {
     'nav.homes': '首页',
     'nav.homes.saas': 'SaaS',
     'nav.homes.startup': '创业公司',
