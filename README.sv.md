@@ -2,7 +2,11 @@
 <p align="center"><strong>Fånga exakt. Förklara tydligt. Fortsätt arbeta.</strong></p>
 <p align="center">En Windows-app för skärmbilder, anteckningar och skrivbordsnålar, med AI-bildverktyg, offline-OCR, smart markering, bildöversättning och Presentationsläge.</p>
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.es.md">Español</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.it.md">Italiano</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.nl.md">Nederlands</a> · <a href="README.pl.md">Polski</a> · <strong><a href="README.sv.md">Svenska</a></strong></p>
-<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Hämta Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="Fler versioner" /></a></p>
+<br/>
+
+<h3 align="center">Ladda ned Shotera</h3>
+
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="60" alt="Hämta Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.sv.svg" height="60" alt="Fler versioner" /></a></p>
 <figure><img src="src/assets/images/readme/01-overview.png" alt="Shotera-översikt" /><p align="center"><strong>Shotera i korthet.</strong> Smart fångst, AI, anteckningar, offline-OCR och bildöversättning i en Windows-app.</p></figure>
 <br/>
 ## För arbetet efter varje skärmbild
@@ -52,7 +56,9 @@ Shotera; Shotera AI; Mosuzo Studio; AI-friläggning; offline-OCR; skärmbild; sk
 <br/>
 ## Hämtning och utgåvor
 
-Basutgåvans funktioner är alltid kostnadsfria; vissa avancerade funktioner kräver Pro. [Microsoft Store](https://apps.microsoft.com/detail/9n73ldhrmc8v) · [GitHub Releases](https://github.com/mosuzo-studio/Shotera/releases)
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="Hämta Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.sv.svg" height="44" alt="Fler versioner" /></a></p>
+
+> **Versionsinformation:** Basversionens funktioner är alltid kostnadsfria. Vissa avancerade funktioner kräver Pro; innehållet kan variera mellan versioner.
 <br/>
 ## Support och feedback
 
@@ -63,4 +69,4 @@ Basutgåvans funktioner är alltid kostnadsfria; vissa avancerade funktioner kr�
 Om Shotera gör ditt arbete enklare hjälper ditt stöd oss att fortsätta utveckla och skapa nya funktioner.
 <p align="center"><a href="https://ko-fi.com/mosuzo"><img src="src/assets/images/readme/support_me_on_kofi_beige.png" width="280" alt="Stöd Shotera" /></a></p>
 ---
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="40" align="middle" alt="Mosuzo Studio" /></a> <strong>Mosuzo Studio</strong> · Copyright © 2026. Alla rättigheter förbehållna.</p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="24" align="middle" alt="Mosuzo Studio" /></a> <strong>Mosuzo Studio</strong> · Copyright © 2026. Alla rättigheter förbehållna.</p>

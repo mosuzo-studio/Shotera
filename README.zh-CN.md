@@ -36,12 +36,16 @@
   <img src="https://img.shields.io/badge/languages-15-16a34a" alt="支持 15 种界面语言" />
 </p>
 
+<br/>
+
+<h3 align="center">下载 Shotera</h3>
+
 <p align="center">
   <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer">
-    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="从 Microsoft Store 获取 Shotera" />
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="60" alt="从 Microsoft Store 获取 Shotera" />
   </a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self">
-    <img src="src/assets/images/readme/github-releases-badge.zh-CN.svg" height="44" alt="从 GitHub Releases 下载更多版本" />
+    <img src="src/assets/images/readme/github-releases-badge.zh-CN.svg" height="60" alt="从 GitHub Releases 下载更多版本" />
   </a>
 </p>
 
@@ -240,7 +244,7 @@ Shotera；Shotera AI；Mosuzo Studio；AI 抠图；AI 修复；离线 OCR；截�
 
 <p align="center">
   <a href="https://shotera.mosuzo.com">
-    <img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="40" align="middle" alt="Mosuzo Studio 标志" />
+    <img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="24" align="middle" alt="Mosuzo Studio 标志" />
   </a>
   <strong>Mosuzo Studio</strong> · © 2026 保留所有权利<br/>
   Shotera 专为 Windows 打造，让截图、视觉表达与桌面参考更加高效。

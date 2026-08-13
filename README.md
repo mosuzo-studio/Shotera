@@ -36,12 +36,16 @@
   <img src="https://img.shields.io/badge/languages-15-16a34a" alt="15 interface languages" />
 </p>
 
+<br/>
+
+<h3 align="center">Download Shotera</h3>
+
 <p align="center">
   <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer">
-    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="Get Shotera from Microsoft Store" />
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="60" alt="Get Shotera from Microsoft Store" />
   </a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self">
-    <img src="src/assets/images/readme/github-releases-badge.svg" height="44" alt="Download more versions from GitHub Releases" />
+    <img src="src/assets/images/readme/github-releases-badge.svg" height="60" alt="Download more versions from GitHub Releases" />
   </a>
 </p>
 
@@ -240,7 +244,7 @@ If Shotera makes your work easier, your support will help us continue developing
 
 <p align="center">
   <a href="https://shotera.mosuzo.com">
-    <img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="40" align="middle" alt="Mosuzo Studio logo" />
+    <img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="24" align="middle" alt="Mosuzo Studio logo" />
   </a>
   <strong>Mosuzo Studio</strong> · Copyright © 2026. All rights reserved.<br/>
   Shotera is built for Windows to make screenshot capture, visual communication, and desktop reference more efficient.

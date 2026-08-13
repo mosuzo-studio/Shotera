@@ -4,7 +4,11 @@
 <p align="center">Un’app Windows per screenshot, annotazioni e immagini fissate sul desktop, con strumenti IA, OCR offline, selezione intelligente, traduzione delle immagini e Modalità Presentazione.</p>
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.es.md">Español</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <strong><a href="README.it.md">Italiano</a></strong> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.nl.md">Nederlands</a> · <a href="README.pl.md">Polski</a> · <a href="README.sv.md">Svenska</a></p>
 <p align="center"><a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/v/release/mosuzo-studio/Shotera?display_name=tag&amp;label=Release&amp;color=2563eb" alt="Ultima versione" /></a> <img src="https://img.shields.io/badge/platform-Windows-0078D4?logo=windows&amp;logoColor=white" alt="Windows" /> <img src="https://img.shields.io/badge/languages-15-16a34a" alt="15 lingue dell’interfaccia" /></p>
-<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Ottieni Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="Altre versioni" /></a></p>
+<br/>
+
+<h3 align="center">Scarica Shotera</h3>
+
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="60" alt="Ottieni Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.it.svg" height="60" alt="Altre versioni" /></a></p>
 
 <details open><summary><strong>🧭 Navigazione rapida</strong></summary>
 
@@ -65,7 +69,7 @@ Shotera; Shotera AI; Mosuzo Studio; ritaglio IA; riparazione immagini IA; OCR of
 <br/>
 ## Download ed edizioni
 
-<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Ottieni Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="Altre versioni" /></a></p>
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="Ottieni Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.it.svg" height="44" alt="Altre versioni" /></a></p>
 > **Nota sulle edizioni:** le funzioni dell’edizione base restano gratuite per sempre. Alcune funzioni avanzate richiedono Pro e possono variare in base alla versione.
 <br/>
 ## Supporto e feedback
@@ -78,4 +82,4 @@ Domande, suggerimenti e commenti sono sempre benvenuti.
 Se Shotera semplifica il tuo lavoro, il tuo supporto ci aiuta a continuare lo sviluppo e a offrire nuove funzioni. Su Ko-fi condividiamo anche gli aggiornamenti più recenti.
 <p align="center"><a href="https://ko-fi.com/mosuzo"><img src="src/assets/images/readme/support_me_on_kofi_beige.png" width="280" alt="Supporta Shotera su Ko-fi" /></a></p>
 ---
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="40" align="middle" alt="Mosuzo Studio" /></a> <strong>Mosuzo Studio</strong> · Copyright © 2026. Tutti i diritti riservati.<br/>Shotera è progettato per Windows per rendere più efficienti catture, comunicazione visiva e riferimenti sul desktop.</p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="24" align="middle" alt="Mosuzo Studio" /></a> <strong>Mosuzo Studio</strong> · Copyright © 2026. Tutti i diritti riservati.<br/>Shotera è progettato per Windows per rendere più efficienti catture, comunicazione visiva e riferimenti sul desktop.</p>

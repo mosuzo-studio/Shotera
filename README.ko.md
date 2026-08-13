@@ -4,7 +4,11 @@
 <p align="center">AI 이미지 도구, 오프라인 OCR, 스마트 선택, 이미지 번역, 프레젠테이션 모드를 갖춘 Windows용 화면 캡처·주석·데스크톱 고정 앱입니다.</p>
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.es.md">Español</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.it.md">Italiano</a> · <strong><a href="README.ko.md">한국어</a></strong> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.nl.md">Nederlands</a> · <a href="README.pl.md">Polski</a> · <a href="README.sv.md">Svenska</a></p>
 <p align="center"><a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/v/release/mosuzo-studio/Shotera?display_name=tag&amp;label=Release&amp;color=2563eb" alt="최신 버전" /></a> <img src="https://img.shields.io/badge/platform-Windows-0078D4?logo=windows&amp;logoColor=white" alt="Windows" /> <img src="https://img.shields.io/badge/languages-15-16a34a" alt="15개 인터페이스 언어" /></p>
-<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Shotera 받기" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="다른 버전 다운로드" /></a></p>
+<br/>
+
+<h3 align="center">Shotera 다운로드</h3>
+
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="60" alt="Shotera 받기" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.ko.svg" height="60" alt="다른 버전 다운로드" /></a></p>
 <details open><summary><strong>🧭 빠른 탐색</strong></summary>
 
 [Shotera 소개](#캡처-이후의-작업을-위해) · [핵심 기능](#핵심-기능) · [제품 갤러리](#제품-갤러리) · [전체 기능](#전체-기능) · [개인정보 보호](#개인정보-보호와-제어) · [다운로드](#다운로드와-에디션) · [지원](#지원과-피드백)
@@ -63,7 +67,7 @@ Shotera; Shotera AI; Mosuzo Studio; AI 누끼; AI 이미지 복원; 오프라인
 <br/>
 ## 다운로드와 에디션
 
-<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Shotera 받기" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="다른 버전" /></a></p>
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="Shotera 받기" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.ko.svg" height="44" alt="다른 버전" /></a></p>
 > **에디션 안내:** 기본 에디션의 기능은 영구 무료입니다. 일부 고급 기능에는 Pro가 필요하며 버전에 따라 달라질 수 있습니다.
 <br/>
 ## 지원과 피드백
@@ -76,4 +80,4 @@ Shotera; Shotera AI; Mosuzo Studio; AI 누끼; AI 이미지 복원; 오프라인
 Shotera가 업무를 더 쉽게 만든다면 여러분의 후원은 지속적인 개발과 새 기능 제공에 도움이 됩니다. Ko-fi에서 최근 개발 소식도 공유합니다.
 <p align="center"><a href="https://ko-fi.com/mosuzo"><img src="src/assets/images/readme/support_me_on_kofi_beige.png" width="280" alt="Ko-fi에서 Shotera 후원" /></a></p>
 ---
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="40" align="middle" alt="Mosuzo Studio" /></a> <strong>Mosuzo Studio</strong> · Copyright © 2026. All rights reserved.<br/>Shotera는 화면 캡처, 시각적 소통과 데스크톱 참조를 더 효율적으로 만드는 Windows 앱입니다.</p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="24" align="middle" alt="Mosuzo Studio" /></a> <strong>Mosuzo Studio</strong> · Copyright © 2026. All rights reserved.<br/>Shotera는 화면 캡처, 시각적 소통과 데스크톱 참조를 더 효율적으로 만드는 Windows 앱입니다.</p>

@@ -16,9 +16,13 @@
   <img src="https://img.shields.io/badge/languages-15-16a34a" alt="支援 15 種介面語言" />
 </p>
 
+<br/>
+
+<h3 align="center">下載 Shotera</h3>
+
 <p align="center">
-  <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="從 Microsoft Store 取得 Shotera" /></a>
-  <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="從 GitHub Releases 下載更多版本" /></a>
+  <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="60" alt="從 Microsoft Store 取得 Shotera" /></a>
+  <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.zh-TW.svg" height="60" alt="從 GitHub Releases 下載更多版本" /></a>
 </p>
 
 <details open>
@@ -129,7 +133,7 @@ Shotera；Shotera AI；Mosuzo Studio；AI 去背；AI 圖像修復；離線 OCR�
 
 ## 下載與版本
 
-<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="從 Microsoft Store 取得 Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="下載更多版本" /></a></p>
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="從 Microsoft Store 取得 Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.zh-TW.svg" height="44" alt="下載更多版本" /></a></p>
 
 > **版本說明：** 基礎版本的功能永久免費使用，部分進階功能需要升級 Pro；實際提供內容可能因版本而異。
 
@@ -151,4 +155,4 @@ Shotera；Shotera AI；Mosuzo Studio；AI 去背；AI 圖像修復；離線 OCR�
 
 ---
 
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="40" align="middle" alt="Mosuzo Studio 標誌" /></a> <strong>Mosuzo Studio</strong> · © 2026 保留所有權利<br/>Shotera 專為 Windows 打造，讓螢幕擷取、視覺溝通與桌面參考更有效率。</p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="24" align="middle" alt="Mosuzo Studio 標誌" /></a> <strong>Mosuzo Studio</strong> · © 2026 保留所有權利<br/>Shotera 專為 Windows 打造，讓螢幕擷取、視覺溝通與桌面參考更有效率。</p>

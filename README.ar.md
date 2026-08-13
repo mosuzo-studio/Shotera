@@ -2,7 +2,11 @@
 <p align="center"><strong>التقط بدقة. اشرح بوضوح. واصل العمل.</strong></p>
 <p align="center">تطبيق Windows للقطات الشاشة والتعليقات والتثبيت على سطح المكتب، مع أدوات صور بالذكاء الاصطناعي وOCR دون اتصال وتحديد ذكي وترجمة الصور ووضع العرض.</p>
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.es.md">Español</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.it.md">Italiano</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a> · <strong><a href="README.ar.md">العربية</a></strong> · <a href="README.nl.md">Nederlands</a> · <a href="README.pl.md">Polski</a> · <a href="README.sv.md">Svenska</a></p>
-<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="تنزيل Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="إصدارات أخرى" /></a></p>
+<br/>
+
+<h3 align="center">تنزيل Shotera</h3>
+
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="60" alt="تنزيل Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.ar.svg" height="60" alt="إصدارات أخرى" /></a></p>
 <details open><summary><strong>🧭 تنقل سريع</strong></summary>[المزايا](#أبرز-المزايا) · [الصور](#معرض-المنتج) · [الوظائف](#مجموعة-الوظائف) · [الخصوصية](#الخصوصية-والتحكم) · [التنزيل](#التنزيل-والإصدارات) · [الدعم](#الدعم-والملاحظات)</details>
 
 <figure><img src="src/assets/images/readme/01-overview.png" alt="نظرة عامة على Shotera" /><p align="center"><strong>Shotera في لمحة.</strong> التقاط ذكي وأدوات AI وتعليقات وOCR دون اتصال وترجمة صور في تطبيق Windows واحد.</p></figure>
@@ -54,7 +58,9 @@ Shotera؛ Shotera AI؛ Mosuzo Studio؛ قص AI؛ OCR دون اتصال؛ لقط�
 <br/>
 ## التنزيل والإصدارات
 
-النسخة الأساسية مجانية دائماً، وقد تتطلب بعض الوظائف المتقدمة Pro. [Microsoft Store](https://apps.microsoft.com/detail/9n73ldhrmc8v) · [GitHub Releases](https://github.com/mosuzo-studio/Shotera/releases)
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="تنزيل Shotera" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.ar.svg" height="44" alt="إصدارات أخرى" /></a></p>
+
+> **ملاحظة الإصدار:** وظائف الإصدار الأساسي مجانية دائماً، وقد تتطلب بعض الوظائف المتقدمة الترقية إلى Pro؛ وقد يختلف المحتوى المتاح حسب الإصدار.
 <br/>
 ## الدعم والملاحظات
 
@@ -65,4 +71,4 @@ Shotera؛ Shotera AI؛ Mosuzo Studio؛ قص AI؛ OCR دون اتصال؛ لقط�
 إذا جعل Shotera عملك أسهل، فسيساعدنا دعمك على مواصلة التطوير وإضافة مزايا جديدة.
 <p align="center"><a href="https://ko-fi.com/mosuzo"><img src="src/assets/images/readme/support_me_on_kofi_beige.png" width="280" alt="دعم Shotera على Ko-fi" /></a></p>
 ---
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="40" align="middle" alt="Mosuzo Studio" /></a> <strong>Mosuzo Studio</strong> · Copyright © 2026. جميع الحقوق محفوظة.</p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="24" align="middle" alt="Mosuzo Studio" /></a> <strong>Mosuzo Studio</strong> · Copyright © 2026. جميع الحقوق محفوظة.</p>

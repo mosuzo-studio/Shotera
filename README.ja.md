@@ -12,7 +12,11 @@
 
 <p align="center"><a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/v/release/mosuzo-studio/Shotera?display_name=tag&amp;label=Release&amp;color=2563eb" alt="最新リリース" /></a> <img src="https://img.shields.io/badge/platform-Windows-0078D4?logo=windows&amp;logoColor=white" alt="Windows" /> <img src="https://img.shields.io/badge/languages-15-16a34a" alt="15 のインターフェイス言語" /></p>
 
-<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Microsoft Store から Shotera を入手" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="GitHub Releases から他のバージョンをダウンロード" /></a></p>
+<br/>
+
+<h3 align="center">Shotera をダウンロード</h3>
+
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="60" alt="Microsoft Store から Shotera を入手" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.ja.svg" height="60" alt="GitHub Releases から他のバージョンをダウンロード" /></a></p>
 
 <details open>
 <summary><strong>🧭 クイックナビゲーション</strong></summary>
@@ -119,7 +123,7 @@ Shotera；Shotera AI；Mosuzo Studio；AI 切り抜き；AI 画像修復；オ�
 
 ## ダウンロードとエディション
 
-<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Microsoft Store から Shotera を入手" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="他のバージョンをダウンロード" /></a></p>
+<p align="center"><a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="Microsoft Store から Shotera を入手" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self"><img src="src/assets/images/readme/github-releases-badge.ja.svg" height="44" alt="他のバージョンをダウンロード" /></a></p>
 
 > **エディションについて：** 基本エディションの機能は永続的に無料です。一部の高度な機能には Pro が必要で、提供状況はリリースによって異なる場合があります。
 
@@ -141,4 +145,4 @@ Shotera が仕事を楽にしているなら、ご支援は継続的な開発と
 
 ---
 
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="40" align="middle" alt="Mosuzo Studio ロゴ" /></a> <strong>Mosuzo Studio</strong> · Copyright © 2026. All rights reserved.<br/>Shotera は Windows 向けに設計され、画面キャプチャ、視覚的なコミュニケーション、デスクトップ参照を効率化します。</p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="24" align="middle" alt="Mosuzo Studio ロゴ" /></a> <strong>Mosuzo Studio</strong> · Copyright © 2026. All rights reserved.<br/>Shotera は Windows 向けに設計され、画面キャプチャ、視覚的なコミュニケーション、デスクトップ参照を効率化します。</p>
