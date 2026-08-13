@@ -1,0 +1,125 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  language?: string;
+  moreVersionsLabel?: string;
+  storeAriaLabel?: string;
+  moreVersionsAriaLabel?: string;
+}
+
+const {
+  language = 'en-us',
+  moreVersionsLabel = 'More versions',
+  storeAriaLabel = 'Get Shotera from Microsoft Store',
+  moreVersionsAriaLabel = 'Download more versions from GitHub Releases',
+} = Astro.props;
+---
+
+<div class="download-buttons">
+  <div class="store-badge" role="group" aria-label={storeAriaLabel}>
+    <ms-store-badge
+      productid="9n73ldhrmc8v"
+      cid="743e47fd-8675-403d-9631-82e7e0"
+      window-mode="full"
+      theme="auto"
+      size="large"
+      language={language}
+      animation="on"
+    >
+    </ms-store-badge>
+  </div>
+
+  <a
+    class="more-versions"
+    href="https://github.com/mosuzo-studio/Shotera/releases"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={moreVersionsAriaLabel}
+  >
+    <Icon name="tabler:brand-github" class="h-6 w-6" aria-hidden="true" />
+    <span>{moreVersionsLabel}</span>
+  </a>
+</div>
+
+<style>
+  .download-buttons {
+    display: flex;
+    width: max-content;
+    max-width: 100%;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .store-badge {
+    display: flex;
+    flex: none;
+    min-width: 190px;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ms-store-badge {
+    display: block;
+  }
+
+  .more-versions {
+    display: inline-flex;
+    flex: none;
+    min-width: 176px;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 0.625rem;
+    background: #202020;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.25;
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 18%);
+    transition:
+      transform 160ms ease,
+      background-color 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  .more-versions:hover {
+    background: #303030;
+    box-shadow: 0 6px 18px rgb(0 0 0 / 18%);
+    transform: translateY(-1px);
+  }
+
+  .more-versions:focus-visible {
+    outline: 3px solid rgb(59 130 246 / 55%);
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 639px) {
+    .download-buttons {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .more-versions {
+      width: min(100%, 250px);
+    }
+
+    .store-badge {
+      width: 100%;
+      min-width: 0;
+      min-height: 84px;
+      overflow: hidden;
+    }
+
+    ms-store-badge {
+      transform: scale(0.82);
+      transform-origin: center;
+    }
+  }
+</style>

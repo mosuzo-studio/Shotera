@@ -47,7 +47,7 @@ export const ui = {
     'nav.features': 'Features',
     'nav.pricing': 'Pricing',
     'nav.about': 'About',
-    'nav.download': 'Free Download',
+    'nav.download': 'More versions',
 
     'footer.product': 'Product',
     'footer.platform': 'Platform',
@@ -133,7 +133,7 @@ export const ui = {
     'nav.features': '功能',
     'nav.pricing': '价格',
     'nav.about': '关于',
-    'nav.download': '免费下载',
+    'nav.download': '更多版本',
 
     'footer.product': '产品',
     'footer.platform': '平台',

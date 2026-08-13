@@ -11,6 +11,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import DownloadButtons from '~/components/ui/DownloadButtons.astro';
 
 const metadata = {
   title: 'Shotera — 更快、更聪明的截图与录屏工具',
@@ -19,20 +20,21 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <script is:inline type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+
   <!-- Hero Widget ******************* -->
 
   <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: '免费下载',
-        href: 'https://github.com/mosuzo-studio/Shotera/releases',
-        icon: 'tabler:download',
-      },
-      { text: '查看功能', href: '#features' },
-    ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera 截图录屏工具界面' }}
   >
+    <DownloadButtons
+      slot="actions"
+      language="zh-cn"
+      moreVersionsLabel="更多版本"
+      storeAriaLabel="从 Microsoft Store 获取 Shotera"
+      moreVersionsAriaLabel="从 GitHub Releases 下载更多版本"
+    />
+
     <Fragment slot="title">
       截图、录屏、<span class="text-accent dark:text-white">AI 识图</span><br class="hidden md:inline" />
       一个快捷键全搞定
@@ -383,17 +385,15 @@ const metadata = {
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    id="download"
-    actions={[
-      {
-        variant: 'primary',
-        text: '免费下载 Shotera',
-        href: 'https://github.com/mosuzo-studio/Shotera/releases',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
+  <CallToAction id="download">
+    <DownloadButtons
+      slot="actions"
+      language="zh-cn"
+      moreVersionsLabel="更多版本"
+      storeAriaLabel="从 Microsoft Store 获取 Shotera"
+      moreVersionsAriaLabel="从 GitHub Releases 下载更多版本"
+    />
+
     <Fragment slot="title">现在就让截图变得<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">又快又聪明</span></Fragment>
 
     <Fragment slot="subtitle">

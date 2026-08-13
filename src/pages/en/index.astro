@@ -11,6 +11,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import DownloadButtons from '~/components/ui/DownloadButtons.astro';
 
 const metadata = {
   title: 'Shotera — Faster, smarter screenshots and screen recording',
@@ -19,20 +20,21 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <script is:inline type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+
   <!-- Hero Widget ******************* -->
 
   <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Download free',
-        href: 'https://github.com/mosuzo-studio/Shotera/releases',
-        icon: 'tabler:download',
-      },
-      { text: 'See features', href: '#features' },
-    ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera capture and screen recording interface' }}
   >
+    <DownloadButtons
+      slot="actions"
+      language="en-us"
+      moreVersionsLabel="More versions"
+      storeAriaLabel="Get Shotera from Microsoft Store"
+      moreVersionsAriaLabel="Download more versions from GitHub Releases"
+    />
+
     <Fragment slot="title">
       Screenshots, screen recording, <span class="text-accent dark:text-white">AI magic</span><br class="hidden md:inline" />
       all from a single shortcut
@@ -383,17 +385,15 @@ const metadata = {
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    id="download"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Download Shotera free',
-        href: 'https://github.com/mosuzo-studio/Shotera/releases',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
+  <CallToAction id="download">
+    <DownloadButtons
+      slot="actions"
+      language="en-us"
+      moreVersionsLabel="More versions"
+      storeAriaLabel="Get Shotera from Microsoft Store"
+      moreVersionsAriaLabel="Download more versions from GitHub Releases"
+    />
+
     <Fragment slot="title">Make your everyday<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> screenshots faster</span></Fragment>
 
     <Fragment slot="subtitle">
