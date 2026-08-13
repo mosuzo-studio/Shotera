@@ -54,7 +54,7 @@ Shotera는 스크린샷을 설명하고 공유하거나 재사용할 수 있는 
 <br/>
 ## 개인정보 보호와 제어
 
-Shotera는 캡처를 로컬에 저장합니다. 오프라인 OCR은 기기에서 실행되므로 텍스트 추출을 위해 스크린샷을 업로드할 필요가 없습니다. 단축키, 언어, 글꼴, 시작 방식과 트레이 아이콘도 직접 설정할 수 있습니다. [개인정보 처리방침](https://shotera.mosuzo.com/en/privacy)을 확인하세요.
+Shotera는 캡처를 로컬에 저장합니다. 오프라인 OCR은 기기에서 실행되므로 텍스트 추출을 위해 스크린샷을 업로드할 필요가 없습니다. 단축키, 언어, 글꼴, 시작 방식과 트레이 아이콘도 직접 설정할 수 있습니다. [개인정보 처리방침](https://shotera.mosuzo.com/privacy)을 확인하세요.
 <br/>
 ## 지원 언어
 
@@ -73,7 +73,7 @@ Shotera; Shotera AI; Mosuzo Studio; AI 누끼; AI 이미지 복원; 오프라인
 ## 지원과 피드백
 
 질문, 제안과 의견을 언제든 환영합니다.
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="공식 웹사이트" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="피드백과 버그" /></a> <a href="https://shotera.mosuzo.com/en/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="릴리스 노트" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="이메일" /></a></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="공식 웹사이트" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="피드백과 버그" /></a> <a href="https://shotera.mosuzo.com/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="릴리스 노트" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="이메일" /></a></p>
 <br/>
 ## Ko-fi에서 Shotera 후원하기
 

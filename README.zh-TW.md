@@ -113,7 +113,7 @@ Shotera 讓螢幕擷取從「捕捉」直接變成「可用」。無論是產品
 
 Shotera 將螢幕截圖儲存在本機。離線 OCR 直接在裝置上執行，提取文字時無須上傳螢幕截圖。你也能自訂快捷鍵、介面語言與字型、啟動方式和系統匣圖示，掌控自己的使用方式。
 
-詳情請閱讀[隱私權政策](https://shotera.mosuzo.com/privacy)。
+詳情請閱讀[隱私權政策](https://shotera.mosuzo.com/zh/privacy)。
 
 <br/>
 
@@ -143,7 +143,7 @@ Shotera；Shotera AI；Mosuzo Studio；AI 去背；AI 圖像修復；離線 OCR�
 
 歡迎提出問題與建議，也歡迎分享你的使用體驗。
 
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Shotera 官方網站" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="提供意見或回報錯誤" /></a> <a href="https://shotera.mosuzo.com/en/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="版本資訊" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="寄送電子郵件給 Mosuzo Studio" /></a></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Shotera 官方網站" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="提供意見或回報錯誤" /></a> <a href="https://shotera.mosuzo.com/zh/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="版本資訊" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="寄送電子郵件給 Mosuzo Studio" /></a></p>
 
 <br/>
 

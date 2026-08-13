@@ -46,7 +46,7 @@
 <br/>
 ## الخصوصية والتحكم
 
-يحفظ Shotera اللقطات محلياً ويشغّل OCR دون اتصال على جهازك، فلا يلزم رفع الصور لاستخراج النص. راجع [سياسة الخصوصية](https://shotera.mosuzo.com/en/privacy).
+يحفظ Shotera اللقطات محلياً ويشغّل OCR دون اتصال على جهازك، فلا يلزم رفع الصور لاستخراج النص. راجع [سياسة الخصوصية](https://shotera.mosuzo.com/privacy).
 <br/>
 ## اللغات المدعومة
 
@@ -64,7 +64,7 @@ Shotera؛ Shotera AI؛ Mosuzo Studio؛ قص AI؛ OCR دون اتصال؛ لقط�
 <br/>
 ## الدعم والملاحظات
 
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="الموقع الرسمي" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="الملاحظات والأخطاء" /></a> <a href="https://shotera.mosuzo.com/en/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="ملاحظات الإصدار" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="البريد الإلكتروني" /></a></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="الموقع الرسمي" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="الملاحظات والأخطاء" /></a> <a href="https://shotera.mosuzo.com/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="ملاحظات الإصدار" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="البريد الإلكتروني" /></a></p>
 <br/>
 ## ادعم Shotera على Ko-fi
 

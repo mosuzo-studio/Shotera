@@ -103,7 +103,7 @@ Shotera はスクリーンショットを、説明、共有、再利用できる
 
 Shotera はキャプチャをローカルに保存します。オフライン OCR は端末上で動作するため、文字抽出時にスクリーンショットをアップロードする必要はありません。ショートカット、表示言語とフォント、起動方法、トレイアイコンも設定できます。
 
-詳しくは[プライバシーポリシー](https://shotera.mosuzo.com/en/privacy)をご覧ください。
+詳しくは[プライバシーポリシー](https://shotera.mosuzo.com/privacy)をご覧ください。
 
 <br/>
 
@@ -133,7 +133,7 @@ Shotera；Shotera AI；Mosuzo Studio；AI 切り抜き；AI 画像修復；オ�
 
 ご質問、ご提案、フィードバックをいつでもお寄せください。
 
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Shotera 公式サイト" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="フィードバックまたはバグ報告" /></a> <a href="https://shotera.mosuzo.com/en/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="リリースノート" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="Mosuzo Studio にメール" /></a></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Shotera 公式サイト" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="フィードバックまたはバグ報告" /></a> <a href="https://shotera.mosuzo.com/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="リリースノート" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="Mosuzo Studio にメール" /></a></p>
 
 <br/>
 

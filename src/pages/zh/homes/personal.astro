@@ -1,0 +1,404 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+import { defaultLang, localizedPath, type Lang } from '~/i18n/utils';
+
+const metadata = {
+  title: '个人主页演示',
+};
+
+const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: '首页', href: '#' },
+        { text: '关于', href: '#about' },
+        { text: '简历', href: '#resume' },
+        { text: '作品集', href: '#porfolio' },
+        { text: '博客', href: '#blog' },
+        { text: 'Github', href: 'https://github.com/mosuzo-studio' },
+      ]}
+      actions={[
+        {
+          text: '聘用我',
+          href: '#',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="莎拉·约翰逊"
+    tagline="个人网页演示"
+    actions={[{ variant: 'primary', text: '聘用我', href: localizedPath(lang, '/contact#form') }]}
+  >
+    <Fragment slot="subtitle">
+      我是一名热爱用视觉讲述故事的平面设计师。<br /> 拥有 5 年经验，毕业于纽约大学设计学院。我为品牌与设计注入活力，将概念转化为引人入胜的现实。
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:brand-dribbble',
+        callToAction: {
+          target: '_blank',
+          text: 'Dribbble',
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:brand-behance',
+        callToAction: {
+          target: '_blank',
+          text: 'Behance',
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:brand-pinterest',
+        callToAction: {
+          target: '_blank',
+          text: 'Pinterest',
+          href: '#',
+        },
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: '多彩图片',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">关于我</h2>
+      <p>
+        欢迎走进我的创意旅程。我的作品见证了我将想法变为现实的执着，在这里，每一个像素都是想象画布上的一笔。
+      </p>
+      <br />
+      <p>
+        我从周遭的世界汲取灵感，无论是一本引人入胜的小说的字里行间、字体设计的精妙细节，还是户外探险时大自然的斑斓色彩。
+      </p>
+      <br />
+      <p>如果你想更深入地了解我的作品，欢迎关注我：</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="工作经历"
+    items={[
+      {
+        title:
+          '平面设计师 <br /> <span class="font-normal">ABC 设计工作室，纽约州纽约市</span> <br /> <span class="text-sm font-normal">2021 - 至今</span>',
+        description: `与客户协作，理解设计需求与目标。<br /> 开发品牌解决方案，包括标志、配色方案和品牌规范。<br /> 设计宣传册、海报和数字素材等营销材料。<br /> 为网站和应用创建视觉吸引力十足的用户界面。`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          '初级平面设计师 <br /> <span class="font-normal">XYZ 创意机构，加州洛杉矶</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
+        description: `协助资深设计师创作设计概念与视觉素材。<br /> 参与品牌形象与营销物料的开发。<br /> 与营销团队协作，确保各类活动的设计风格一致。<br /> 在多种设计软件与工具方面积累了实战经验。`,
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="教育背景"
+    items={[
+      {
+        title: `平面设计艺术硕士 <br /> <span class="font-normal">纽约大学设计学院</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `平面设计文学学士 <br /> <span class="font-normal">纽约大学设计学院</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="技能"
+    subtitle="领略我用设计将想象化为现实的各项专长。"
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: '平面设计',
+        description: '擅长打造视觉吸引力十足的设计，有效传达信息。',
+      },
+      {
+        title: '品牌与形象',
+        description: '精于打造统一连贯的品牌形象，包括标志与品牌规范。',
+      },
+      {
+        title: '以用户为中心的设计',
+        description: '在创建友好界面、优化用户体验方面经验丰富。',
+      },
+      {
+        title: 'Adobe Creative Suite',
+        description: '熟练运用 Photoshop、Illustrator 和 InDesign 创作与编辑视觉元素。',
+      },
+      {
+        title: '字体排版',
+        description: '善于挑选与运用字体，提升设计美感。',
+      },
+      {
+        title: '色彩理论',
+        description: '精于用色彩唤起情感、增强视觉和谐。',
+      },
+      {
+        title: '印刷与数字设计',
+        description: '熟悉印刷物料与数字平台的设计。',
+      },
+      {
+        title: '注重细节',
+        description: '在所有设计工作中始终保持精准与品质。',
+      },
+      {
+        title: '适应能力',
+        description: '能快速适应新的设计趋势、技术与客户偏好。',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="porfolio"
+    title="提升视觉叙事"
+    subtitle="踏上一段超越像素的设计旅程，走进想象的境界。探索我的作品集，热情与创意在这里交融，塑造出引人入胜的视觉故事。"
+    isReversed
+    items={[
+      {
+        title: '说明：',
+        description:
+          '为专注于颠覆式创新的科技初创公司 Tech Innovators 打造了完整的品牌形象。目标是传达一种既现代又平易近人的形象，同时打动企业客户和科技爱好者。',
+      },
+      {
+        title: '角色：',
+        description:
+          '从概念到执行，主导了整个品牌塑造过程。创作了象征创新的动感标志，选定了充满活力的配色方案，并设计了企业文具、网站图形和社交媒体素材。',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
+      alt: '科技设计图片',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: '查看该项目',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        项目 1：<br /><span class="text-2xl">Tech Innovators 的品牌形象</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: '说明：',
+        description:
+          '为艺术与音乐节 “ArtWave Fusion” 设计了一张引人入胜的活动海报，旨在展现视觉艺术与音乐流派之间的协同之美。',
+      },
+      {
+        title: '角色：',
+        description: `将音乐节的创意主题转化为视觉冲击力十足的海报。运用醒目的字体、鲜艳的色彩和抽象元素，呈现艺术与音乐的交融。确保设计捕捉到音乐节热烈的氛围。`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: '艺术与音乐海报图片',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: '查看该项目',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        项目 2：<br /><span class="text-2xl">艺术与音乐节活动海报</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: '说明：',
+        description: `为环保时尚品牌 GreenVogue 重新设计了电商网站。目标是让品牌的线上形象契合其可持续理念，并改善用户体验。`,
+      },
+      {
+        title: '角色：',
+        description: `深入分析品牌价值观与客户群体，为设计方向提供依据。打造了视觉吸引力十足、导航直观的界面，突出可持续材料，并融入友好的购物体验。`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1664455340023-214c33a9d0bd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: '时尚电商图片',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: '查看该项目',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        项目 3：<br /><span class="text-2xl">时尚品牌电商网站重新设计</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="客户评价"
+    subtitle="看看客户对与我合作的体验有何评价。"
+    testimonials={[
+      {
+        testimonial: `她将我们模糊的概念变成了完美契合目标的视觉杰作。她对细节的关注，以及将想法转化为动人视觉的能力，超出了我们的预期。`,
+        name: '马克·汤普森',
+        job: '创意总监',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: '马克·汤普森图片',
+        },
+      },
+      {
+        testimonial: `她以娴熟的创意重塑了我们的品牌形象，在每一个元素中都捕捉到了我们的精髓。她的投入与才华在作品中熠熠生辉。`,
+        name: '艾米丽·马丁内斯',
+        job: '首席执行官',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
+          alt: '艾米丽·马丁内斯图片',
+        },
+      },
+      {
+        testimonial: `她拥有传递情感与讲述故事的非凡能力。她为我们的非营利组织设计的标志，不仅代表了我们的事业，更能唤起共情。她的专业与投入，使她成为一位造诣非凡的设计师。`,
+        name: '劳拉·西蒙斯',
+        job: '非营利组织创始人',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: '劳拉·西蒙斯图片',
+        },
+      },
+      {
+        testimonial: `我们委托莎拉重新设计网站的用户界面，成果令人惊叹。她直觉般的设计感提升了用户体验，带来了参与度的显著增长。她是一位真正懂得美学与功能协同之道的设计师。`,
+        name: '亚历克斯·福斯特',
+        job: '网络服务总监',
+        image: {
+          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: '亚历克斯·福斯特图片',
+        },
+      },
+      {
+        testimonial: `她将我们的愿景提升到了超乎想象的高度。她捕捉品牌精髓并将其转化为设计的能力，堪称非凡。与她合作是一段鼓舞人心的旅程。`,
+        name: '杰西卡·柯林斯',
+        job: '产品经理',
+        image: {
+          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
+          alt: '杰西卡·柯林斯图片',
+        },
+      },
+      {
+        testimonial: `她将概念化为迷人视觉的能力，简直非同凡响。她把我们的活动海报创意变成了完美呈现音乐节精髓的视觉杰作。莎拉的投入、创意，以及超越预期的交付能力，让她成为任何项目不可或缺的宝贵财富。`,
+        name: '迈克尔·卡特',
+        job: '活动统筹',
+        image: {
+          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: '迈克尔·卡特图片',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="让我们一起创作"
+    subtitle="准备好将你的愿景变为迷人的设计了吗？"
+    actions={[
+      {
+        variant: 'primary',
+        text: '聘用我',
+        href: localizedPath(lang, '/'),
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="在我的博客中探索富有洞见的文章"
+    information={`潜入设计智慧与创意灵感的天地，在这里你将发现无价的见解、实用的技巧和引人入胜的故事，让你的创意之旅得到升华与滋养。`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

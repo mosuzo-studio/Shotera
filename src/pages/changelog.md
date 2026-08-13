@@ -1,132 +1,132 @@
 ---
-title: '更新日志'
+title: 'Changelog'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_最后更新_：2026 年 8 月 2 日
+_Last updated_: August 2, 2026
 
 # Shotera v7.2.0
 
-Shotera v7.2.0 重点提升截图启动速度，新增可重复使用的精确尺寸截图，并扩展界面语言和控件识别能力。
+Shotera v7.2.0 focuses on faster capture, repeatable exact-size screenshots, broader language support, and more dependable interface-control detection.
 
-## 重点更新
+## Highlights
 
-### 截图启动速度大幅提升
+### Much faster capture startup
 
-- 截图与标注链路现在会复用并预热标注窗口，绕过此前的图像解码瓶颈，更快呈现全分辨率桌面。
-- 在项目的 Windows 双屏实测中，从快捷键触发到显示选区的平均耗时减少 68.2%。
-- 退出截图时更加干净，已消除旧选区闪现和整窗残影；复制和保存也将更多工作移出用户可见的等待路径。
+- The capture and annotation path now reuses and prewarms the annotation window, avoids the previous image-decoding bottleneck, and presents the full-resolution desktop sooner.
+- In project benchmarks on a dual-monitor Windows setup, the average shortcut-to-selection time was reduced by 68.2%.
+- Capture exit is cleaner, with old selection flashes and the full-window afterimage removed. Copying and saving also move more work out of the visible path.
 
-### 全新的「自定义截图」流程
+### New Custom Capture workflow
 
-- 可通过默认快捷键 `Alt+F1` 或托盘菜单打开「自定义截图」。
-- 支持设置精确的 X/Y 坐标和宽高、锁定纵横比、交换横竖方向，以及设置延迟截图。
-- 支持保存常用尺寸预设，并自动恢复上次使用的参数。
-- 支持多显示器负坐标和最高 40000 像素的尺寸，选定区域后会直接进入标注器。
-- 全局快捷键可单独清空，也可一键恢复默认设置。
+- Open Custom Capture with the default `Alt+F1` shortcut or from the tray menu.
+- Define an exact X/Y position and width/height, lock an aspect ratio, swap orientation, or add a delay before capture.
+- Save reusable size presets and restore the last-used values automatically.
+- Multi-monitor coordinates, including negative positions, and sizes up to 40000 pixels are supported. Captures open directly in the annotator.
+- Global shortcuts can be cleared individually or restored to defaults in one action.
 
-### 15 种界面语言
+### 15 interface languages
 
-- **新增繁体中文、日语、巴西葡萄牙语、西班牙语、德语、法语、意大利语、韩语、俄语、阿拉伯语、荷兰语、波兰语和瑞典语。加上英文与简体中文，Shotera 现已支持 15 种界面语言。**
-- 切换语言后，已打开的应用窗口和托盘菜单会立即更新，无需重启 Shotera；后续通知也会使用所选语言。
-- 界面字体名称和语言选项已完成本地化，设置菜单中的较长语言名称也不再被截断。
-- 阿拉伯语获得完整的从右到左布局。弹层与下拉菜单会保持正确位置，技术内容则继续按从左到右显示。
+- **Added Traditional Chinese, Japanese, Brazilian Portuguese, Spanish, German, French, Italian, Korean, Russian, Arabic, Dutch, Polish, and Swedish. Together with English and Simplified Chinese, Shotera now supports 15 interface languages.**
+- Language changes apply immediately across open app windows and the tray without restarting Shotera. Notifications also use the selected language.
+- Interface font names and language choices are localized, and long language names are no longer truncated in the settings menu.
+- Arabic includes a full right-to-left layout. Popovers and dropdowns stay correctly positioned, while technical text remains left-to-right.
 
-## 改进
+## Improvements
 
-### 窗口与控件识别
+### Window and control detection
 
-- 嵌套控件识别更快、更稳定，减少从精确子控件跳回父窗口的情况。
-- 任务栏子控件、副屏任务栏，以及文件资源管理器导航项的图标和文字现在都能更准确地选中。
-- Chromium 和 Electron 的无障碍控件树会在需要时预热并重试，改善首次截图时的控件识别、元素高亮和放大镜初始化。
+- Faster, steadier nested-control recognition with fewer jumps from a precise child control back to its parent window.
+- Taskbar controls, including secondary-monitor taskbars, and File Explorer navigation icons and text can now be targeted more precisely.
+- Chromium and Electron accessibility trees are warmed and retried when needed, improving first-capture control detection, element highlighting, and magnifier initialization.
 
-### 截图、剪贴板与标注
+### Capture, clipboard, and annotation
 
-- 剪贴板图片使用更直接的 RGBA 传输路径，减少不必要的转换与内存复制。
-- 选区仍处于选中状态时，也可使用 `Alt+T` 钉图和 `Ctrl+S` 保存。
-- OCR 任务调度与进度反馈更加顺畅。
-- AI 模型资源已恢复，Portable 安装包现在也会完整包含所需模型文件。
+- Clipboard image transfer uses a more direct RGBA path, reducing avoidable conversion and copy work.
+- `Alt+T` for Pin and `Ctrl+S` for Save now work while a region is still selected.
+- OCR task scheduling and progress feedback are smoother.
+- AI model assets are restored, and Portable packages now include the required model files.
 
-## 修复
+## Fixes
 
-- 截图进行中不再允许重复触发第二次截图，避免遮罩层叠加。
-- 修复旧选区闪现、退出截图后的整窗残影，以及导出图片带有蓝色选区边框的问题。
-- 修复标注工具栏事件错误传递到画布的问题，并恢复独立 OCR 面板的边框与四角缩放。
-- 修复「自定义截图」窗口被截入自身画面的问题，改善首次打开时的呈现，并修正负坐标、4K 预设和 RTL 技术数值。
-- 修复普通权限与管理员权限进程之间的单实例处理问题。
+- Prevented a second capture from starting while another capture is already active, avoiding stacked overlays.
+- Fixed stale selection outlines, the full-window residual frame after capture exits, and blue selection borders appearing in exported images.
+- Fixed annotation toolbar events leaking into the canvas and restored the standalone OCR panel's border and corner resize handles.
+- Fixed Custom Capture appearing in its own screenshot, improved first-open rendering, and corrected negative coordinates, 4K presets, and right-to-left technical numbers.
+- Fixed single-instance handling across elevated and non-elevated launches.
 
-[下载 Shotera](https://github.com/mosuzo-studio/Shotera/releases)
+[Download Shotera](https://github.com/mosuzo-studio/Shotera/releases)
 
 ---
 
 # Shotera v7.1.0
 
-Shotera v7.1.0 优化截图精度、标注体验、贴图功能以及 Windows 使用一致性。
+Shotera v7.1.0 improves capture precision, annotation workflow, pin experience, and Windows integration.
 
-## 更新亮点
+## Highlights
 
-### 截图
+### Capture
 
-- 优化窗口与控件识别，支持更精准的嵌套目标选择。
-- 改进截图放大镜、边框、缩放控制点和十字线体验。
+- Improved window and control detection with easier nested target selection.
+- Refined capture magnifier with clearer borders, larger resize handles, and improved crosshair.
 
-### 标注
+### Annotation
 
-- 完善形状、箭头、文字、贴纸、荧光笔和局部放大镜功能。
-- 优化标注移动、缩放、旋转、样式调整、撤销与重做。
-- 统一工具栏布局，改进文字框控制体验。
+- Added refined support for shapes, arrows, text, stickers, markers, and local magnifier.
+- Improved annotation editing with smoother resize, rotation, styling, undo, and redo.
+- Updated toolbar layout and text-box controls for a more consistent experience.
 
-### 贴图与剪贴板
+### Pin & Clipboard
 
-- 增强置顶贴图能力，支持移动、缩放、旋转、翻转、透明度和鼠标穿透。
-- 优化剪贴板内容支持与透明背景处理。
+- Enhanced always-on-top pins with move, resize, rotate, flip, opacity, and click-through support.
+- Added better clipboard compatibility and transparent background handling.
 
-### AI 与功能
+### AI & Features
 
-- 恢复 AI 能力入口及一级工具栏 AI 按钮。
-- 恢复 AI 工具、录屏和 GIF 功能引导入口。
-- 优化 Presentation Mode，用于截图、会议和演示场景。
+- Restored AI tools entry and primary toolbar buttons.
+- Restored feature guide entries for AI tools, screen recording, and GIF creation.
+- Improved Presentation Mode for screenshots, meetings, and demos.
 
-### 设置与隐私
+### Settings & Privacy
 
-- 改进快捷键管理、更新渠道和设置窗口记忆。
-- MSI 安装程序支持中英双语许可协议。
-- 截图始终保存在本地，无需账号，捕获内容不会上传服务器。
+- Improved shortcut management, update channels, and settings window persistence.
+- Added bilingual license support in MSI installer.
+- Screenshots remain fully local. No account required, and captured content is never uploaded.
 
-[下载 Shotera](https://github.com/mosuzo-studio/Shotera/releases)
+[Download Shotera](https://github.com/mosuzo-studio/Shotera/releases)
 
 ---
 
-# 🎉🎉🎉 Shotera v7.0.0 发布
+# 🎉🎉🎉 Shotera v7.0.0 Release
 
 <img width="100%" alt="Shotera-V7 0 0_proc" src="https://github.com/user-attachments/assets/8e7901fe-1c09-4bc7-8ab1-b98531c89159" />
 
-截取重点，清楚表达，随时放在眼前。
+Capture what matters. Explain it clearly. Keep it where you can see it.
 
-Shotera 为 Windows 提供快速、专注的截图工作流。按下 `F1`，可以直接选择窗口或界面控件，也可以拖出所需区域。窗口与控件检测帮助选区准确落位，屏幕放大镜则让像素级微调更轻松。
+Shotera brings a fast, focused screenshot workflow to Windows. Press `F1`, point at a window or interface control, or drag the exact region you need. Window and control detection help the selection land cleanly, while the on-screen magnifier makes pixel-level adjustments easier.
 
-## 从截图到清晰表达
+## From capture to clear communication
 
-截图往往只是沟通的起点。Shotera 提供矩形与椭圆、直线与箭头、自由画笔、荧光笔、富文本、自动序号、马赛克与模糊、表情贴纸，以及用于突出局部细节的放大镜。不同工具采用一致的编辑方式，并可按工具调整颜色、线宽、填充和样式。
+A screenshot is often only the starting point. Shotera includes the tools needed to turn it into an explanation: rectangles and ellipses, lines and arrows, a freehand pen, highlighter, rich text, automatic step numbers, mosaic and blur, emoji stickers, and a local magnifier for emphasizing fine detail. Tools share a consistent editing workflow, with adjustable colors, line widths, fills, and styles where applicable.
 
-## 把参考内容放在眼前
+## Pin references without breaking your flow
 
-按下 `F3`，即可将截图或兼容的剪贴板内容变成置顶贴图。无论是设计稿、操作说明、代码片段还是对照图片，都能在使用其他应用时持续可见。贴图支持移动、缩放、旋转、翻转和透明度调整；桌面拥挤时可以一键隐藏全部贴图，之后统一恢复，也能找回最近关闭的贴图。
+Press `F3` to place a screenshot or compatible clipboard content in an always-on-top pin. Keep a design, instruction, code sample, or comparison visible while working in another app. Pins can be moved, resized, rotated, flipped, and made transparent. Hide every pin when the desktop gets crowded, bring them back together, or restore a recently closed pin.
 
-## 演示前快速整理桌面
+## Get the desktop ready to present
 
-Presentation Mode 可在截图、会议或现场演示前快速整理桌面。它能按预设隐藏桌面图标，并切换 Windows 主题与壁纸。使用结束后，Shotera 会恢复此前保存的桌面状态，无需逐项手动改回。
+Presentation Mode helps prepare a cleaner desktop before a screenshot, meeting, or demonstration. It can hide desktop icons and apply your preferred Windows theme and wallpaper preset in one action. When you finish, Shotera restores the desktop state it saved beforehand.
 
-## 让 Shotera 适应你的习惯
+## Make Shotera fit your routine
 
-截图、贴图、隐藏贴图和 Presentation Mode 的快捷键都可以自定义。你还可以设置输出目录、文件命名模板、保存行为、界面语言、界面字体和托盘图标样式。内置更新设置可选择是否接收测试版本，设置窗口也会记住上次使用的尺寸与位置。
+Customize capture, pin, hide, and Presentation Mode shortcuts. Choose output folders, filename templates, save behavior, interface language, UI typography, and tray icon style. Built-in update controls let you choose whether to include beta releases, while the settings window remembers its size and position.
 
-## v7.0.0 的打磨重点
+## What v7.0.0 focuses on
 
-本次版本让完整体验更加统一：选区反馈更清晰，缩放手柄更醒目，截图放大镜更利落；标注工具栏尺寸更一致，文字编辑控制点更易用；引导流程、设置行为和 Windows 安装体验也得到进一步完善。
+This release gives the whole experience a more consistent finish: clearer selection feedback, more visible resize handles, a cleaner capture magnifier, aligned annotation toolbars, refined text editing controls, improved onboarding, more dependable settings behavior, and a smoother Windows installation experience.
 
-截图保存在本地，Shotera 不会上传你捕获的内容，也无需注册账号。
+Screenshots are saved locally, and Shotera does not upload your captured content. No account is required.
 
-准备好用更顺手的方式截取、说明并随时参考屏幕内容了吗？
+Ready for a quicker way to capture, explain, and reference what is on your screen?
 
-[下载 Shotera](https://github.com/mosuzo-studio/Shotera/releases)
+[Download Shotera](https://github.com/mosuzo-studio/Shotera/releases)

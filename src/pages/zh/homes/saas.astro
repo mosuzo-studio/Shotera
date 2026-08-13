@@ -1,0 +1,353 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+
+import { getHeaderData } from '~/navigation';
+import FAQs from '~/components/widgets/FAQs.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+import { defaultLang, localizedPath, type Lang } from '~/i18n/utils';
+
+const metadata = {
+  title: 'SaaS 落地页',
+};
+
+const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+const headerData = getHeaderData(lang);
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: '登录',
+          href: '#',
+        },
+        {
+          variant: 'primary',
+          text: '注册',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="SaaS 网页演示"
+    actions={[
+      { variant: 'primary', target: '_blank', text: '立即开始', href: 'https://github.com/mosuzo-studio/Shotera' },
+      { text: '了解更多', href: '#features' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AstroWind 主图',
+    }}
+  >
+    <Fragment slot="title">
+      用 Astrowind 简化网页设计：<br /> 你的终极 <span class="text-accent dark:text-white">SaaS</span> 伙伴<br
+      />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        借助 <span class="font-semibold">AstroWind</span> 的 SaaS 解决方案，提升你的网站创建流程。</span
+      >
+      无缝融合 Astro v6 与 Tailwind CSS v4 的强大能力，打造与你品牌和受众产生共鸣的网站。
+    </Fragment>
+  </Hero2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="为什么选择 AstroWind？"
+    subtitle="以下每一项功能都在强化 AstroWind 的价值主张。"
+    columns={2}
+    items={[
+      {
+        title: 'Astro v6 与 Tailwind CSS v4 的集成',
+        description:
+          '带来强强联合，同时提升开发流程与最终用户体验。还能构建动态、视觉惊艳且性能优化的网站。',
+        icon: 'tabler:layers-union',
+      },
+      {
+        title: '适用于初创公司、小型企业等的多样化设计',
+        description: `轻松定制 AstroWind，使其与你事业独特的品牌形象和身份相协调。AstroWind 的多样化设计能灵活适配你的需求。`,
+        icon: 'tabler:artboard',
+      },
+      {
+        title: '为作品集与营销网站带来轻松定制',
+        description:
+          '凭借直观的定制方式，轻松展示作品、案例研究、项目亮点及相关内容。非常适合希望突出专业能力的创意人士与企业。',
+        icon: 'tabler:writing',
+      },
+      {
+        title: '优化的落地页与引人入胜的博客',
+        description: `落地页经过精心设计，能吸引访客并引导其采取特定行动。此外，博客创建功能助你分享见解、吸引受众。`,
+        icon: 'tabler:podium',
+      },
+      {
+        title: '快速的加载速度与生产就绪的代码',
+        description: `采用 Astro v6 确保快速加载与流畅渲染，提升浏览体验。代码遵循最佳实践，改善用户体验、SEO，并降低跳出率。`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: '为提升可见性而优化的 SEO 结构',
+        description: `遵循 SEO 最佳实践，采用简洁代码、语义化 HTML 标记与快速加载，提升搜索引擎排名。AstroWind 的 SEO 结构确保潜在客户与顾客都能看到你。`,
+        icon: 'tabler:eyeglass',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="应用场景"
+    subtitle="了解 AstroWind 的多样化模板如何成为各类场景的理想方案，提供量身定制的解决方案，助你走向成功。"
+    isReversed
+    items={[
+      {
+        title: '说明：',
+        description:
+          '你是一家怀揣远大梦想的初创公司吗？AstroWind 助你成功。我们的模板打造无缝的线上形象，从第一天起就吸引投资者与客户。Astro v6 与 Tailwind CSS v4 确保网站醒目且响应迅速，留下深刻印象。无数初创公司借助 AstroWind 开启征程，与受众产生共鸣。',
+      },
+      {
+        title: '优势：',
+        description: `让初创公司无需投入大量时间与资源，即可快速创建专业网站。<br /> 用视觉吸引力十足的设计元素留下难忘的第一印象，突出你初创公司独特的价值主张。<br /> 确保网站在所有设备上都外观出众、运行良好。<br /> 以引人入胜的内容、清晰的信息和直观的导航，吸引潜在投资者与客户。`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
+      alt: '初创公司图片',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        初创公司成功故事：<br /><span class="text-2xl">用 AstroWind 启航</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent={true}
+    items={[
+      {
+        title: '说明：',
+        description: `对于 SaaS 企业而言，用户体验至关重要。AstroWind 让你更直观地展示 SaaS 解决方案。模板对 Astro v6 与 Tailwind CSS v4 的集成保证了友好的用户体验，映射出你软件的高效。定制页面，向受众传达 SaaS 的价值与解决方案。`,
+      },
+      {
+        title: '优势：',
+        description: `为你的 SaaS 网站确保一致且以用户为中心的设计。<br /> 通过视觉辅助、动画和交互元素，有效传达复杂的 SaaS 功能。<br /> 以结构清晰的布局和明确的导航，优先考虑用户需求与痛点。<br /> 用策略性布置的 CTA 鼓励访客采取行动。<br /> 确保你的 SaaS 网站在所有设备上都无缝运行。`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1531973486364-5fa64260d75b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1658&q=80',
+      alt: 'SaaS 企业图片',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        SaaS 展示：<br /><span class="text-2xl">优化用户体验</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: '说明：',
+        description: `你的作品集就是你的杰作，而 AstroWind 就是你的画布。无论你是设计师、摄影师、艺术家，还是任何其他创意人士，AstroWind 都能助你以优雅而精致的方式展示作品。AstroWind 的模板专为突出你的创意项目而定制，提供沉浸式的视觉体验，让你的作品集熠熠生辉。`,
+      },
+      {
+        title: '优势：',
+        description: `作为迷人的背景衬托你的创意作品，吸引目光并留下持久印象。<br /> 量身定制你的作品集，展现你独特的风格与艺术视野。<br /> 优先呈现视觉效果，让你以高分辨率的细节展示作品，将观者带入你的创作之中。<br /> 实现流畅导航，让作品集浏览毫不费力。`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: '作品集图片',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        创意作品集：<br /><span class="text-2xl">突出你的作品</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    items={[
+      {
+        title: '说明：',
+        description: `对于小型企业来说，一个精心打造的网站可能带来质的飞跃。AstroWind 助力小型企业不仅建立可信的线上形象，还能将访客转化为忠实客户。模板经过深思熟虑的设计与优化功能，确保你的网站不只是吸引注意力，更引导访客完成流畅的旅程，最终促成转化。`,
+      },
+      {
+        title: '优势：',
+        description: `用专业而精致的网站呈现你的小型企业，在访客中树立信心与信任。<br /> 策略性布置的 CTA、易用的表单和优化的布局协同作用，推动用户参与与转化。<br /> 确保流畅的浏览体验，降低跳出率并鼓励互动。`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: '小型企业图片',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        小型企业成长：<br /><span class="text-2xl">将访客转化为客户</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Pricing Widget ******************* -->
+
+  <Pricing
+    title="灵活的定价方案"
+    prices={[
+      {
+        title: '免费版',
+        subtitle: '使用核心功能与丰富的模板库',
+        price: '0',
+        period: '/ 每月',
+        callToAction: {
+          target: '_blank',
+          text: '免费开始使用',
+          href: '#',
+        },
+      },
+      {
+        title: '专业版',
+        subtitle: '高级模板与进阶定制',
+        price: 15,
+        period: '/ 每月',
+        callToAction: {
+          target: '_blank',
+          text: '升级到专业版',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: '热门',
+      },
+      {
+        title: '企业版',
+        subtitle: '为大型项目量身定制的解决方案',
+        price: 45,
+        period: '/ 每月',
+        callToAction: {
+          target: '_blank',
+          text: '解锁企业版功能',
+          href: '#',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="常见问题"
+    items={[
+      {
+        title: 'AstroWind 是否兼容最新版本的 Astro 和 Tailwind CSS？',
+        description:
+          '是的，AstroWind 设计上兼容最新版本的 Astro 与 Tailwind CSS v4。这确保你既能充分发挥这些技术的全部能力，又能享受 AstroWind 提供的各项功能。',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '我可以将 AstroWind 用于个人和商业项目吗？',
+        description: `当然可以！AstroWind 用途广泛，适用于各类项目，包括个人和商业用途。无论你是在打造专业作品集、创办初创公司，还是创建营销网站，AstroWind 都能满足你的需求。`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '使用 AstroWind 需要什么程度的编程知识？',
+        description:
+          '虽然对 HTML、CSS 和网页开发概念有一定了解会有所帮助，但友好的界面与定制选项让编程经验有限的人也能创建出色的网站。对于更高阶的用户，AstroWind 提供了广泛的定制能力。',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'AstroWind 用户在需要指导时能获得客户支持吗？',
+        description: `当然，我们专业的客户支持团队随时为你解答任何问题或应对各种挑战。欢迎通过我们的支持渠道联系我们，我们很乐意提供你所需的帮助。`,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="联系我们"
+    subtitle="有疑问吗？欢迎通过下方表单联系我们。我们随时为你提供帮助！"
+    callToAction={{
+      text: '联系我们',
+      href: localizedPath(lang, '/'),
+    }}
+    items={[
+      {
+        title: '给我们发邮件',
+        description: 'contact@support.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: '致电我们',
+        description: '+1 (234) 567-890',
+        icon: 'tabler:headset',
+      },
+      {
+        title: '关注我们',
+        description: '@example',
+        icon: 'tabler:brand-twitter',
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="通过 AstroWind 博客了解最新资讯"
+    information={`浏览我们关于网页开发、设计趋势，以及如何高效地将 AstroWind 用于你项目的文章、指南和教程合集。`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

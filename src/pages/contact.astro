@@ -5,71 +5,72 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: '联系我们 — Shotera',
+  title: 'Contact — Shotera',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="联系我们" title="有问题或建议？告诉我们" />
+  <HeroText tagline="Contact" title="Got a question or an idea? Tell us." />
 
   <ContactUs
     id="form"
-    title="给我们留言"
-    subtitle="使用中遇到问题，或者有想要的新功能？先看看首页的常见问题，也许答案就在那里。如果没有，填写下面的表单，我们会尽快回复你。"
+    title="Send us a message"
+    subtitle="Running into something, or wishing Shotera did one more thing? Check the FAQ on the homepage first — the answer might be there. If not, drop us a note below and we'll get back to you soon."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: '称呼',
+        label: 'Name',
       },
       {
         type: 'email',
         name: 'email',
-        label: '邮箱',
+        label: 'Email',
       },
     ]}
     textarea={{
-      label: '留言内容',
+      label: 'Message',
     }}
     disclaimer={{
-      label: '提交此表单即表示你知悉并同意我们收集你所填写的信息，仅用于回复你的咨询。',
+      label:
+        'By submitting this form, you agree that we may collect the information you provide, used only to respond to your inquiry.',
     }}
-    description="我们通常会在 24 个工作小时内回复。"
+    description="We usually reply within 24 business hours."
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="其他联系方式"
+    title="Other ways to reach us"
     items={[
       {
-        title: '使用问题',
-        description: `关于安装、截图录屏、OCR、AI 抠图等功能的使用疑问，欢迎留言，我们会协助你排查解决。`,
+        title: 'Usage questions',
+        description: `Stuck on install, capture, recording, OCR, or AI cutout? Send a note and we'll help you sort it out.`,
       },
       {
-        title: '功能建议',
+        title: 'Feature requests',
         description:
-          '想要的功能还没有？Shotera 的很多能力都来自用户建议，把你的想法告诉我们，说不定下个版本就实现了。',
+          "Want something Shotera doesn't do yet? A lot of what it does started as a user suggestion — tell us, and it might land in the next release.",
       },
       {
-        title: '商务与团队授权',
+        title: 'Business & team licensing',
         description:
-          '关于团队版采购、批量授权、发票与合作等事宜，欢迎联系我们的商务团队。',
+          'For team purchases, volume licensing, invoicing, and partnerships, reach out to our business team.',
       },
       {
-        title: '用户社群',
-        description: '加入用户群，获取更新与技巧',
-        icon: 'tabler:brand-wechat',
+        title: 'Community',
+        description: 'Join the community for updates and tips',
+        icon: 'tabler:brand-discord',
       },
       {
-        title: '邮箱',
+        title: 'Email',
         description: 'support@shotera.app',
         icon: 'tabler:mail',
       },
       {
-        title: '反馈与建议',
+        title: 'Feedback',
         description: 'feedback@shotera.app',
         icon: 'tabler:bulb',
       },

@@ -160,7 +160,7 @@ Shotera saves captures locally. Offline OCR runs directly on your device, so scr
 
 You can also customize shortcuts, interface language and fonts, startup behavior, and tray icons, keeping the experience firmly under your control.
 
-See the [Privacy Policy](https://shotera.mosuzo.com/en/privacy) for details.
+See the [Privacy Policy](https://shotera.mosuzo.com/privacy) for details.
 
 <br/>
 
@@ -220,7 +220,7 @@ Questions, suggestions, and feedback are always welcome.
   <a href="https://github.com/mosuzo-studio/Shotera/issues">
     <img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="Share feedback or report a bug" />
   </a>
-  <a href="https://shotera.mosuzo.com/en/changelog">
+  <a href="https://shotera.mosuzo.com/changelog">
     <img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="Read the Shotera release notes" />
   </a>
   <a href="mailto:mosuzo.studio@gmail.com">

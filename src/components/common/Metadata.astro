@@ -23,13 +23,14 @@ const {
   openGraph = {},
   twitter = {},
 } = Astro.props;
+const currentLocale = Astro.currentLocale ?? I18N?.language ?? 'en';
 
 const mergedOg: MetaDataOpenGraph = merge(
   {
     url: canonical,
     siteName: SITE?.name,
     images: [],
-    locale: I18N?.language || 'en',
+    locale: currentLocale,
     type: 'website',
   },
   METADATA?.openGraph,

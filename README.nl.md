@@ -44,7 +44,7 @@ Shotera maakt een schermafbeelding klaar om uit te leggen, te delen of opnieuw t
 <br/>
 ## Privacy en controle
 
-Shotera bewaart opnamen lokaal. Offline OCR draait op je apparaat, dus uploads zijn niet nodig voor tekstextractie. Lees het [Privacybeleid](https://shotera.mosuzo.com/en/privacy).
+Shotera bewaart opnamen lokaal. Offline OCR draait op je apparaat, dus uploads zijn niet nodig voor tekstextractie. Lees het [Privacybeleid](https://shotera.mosuzo.com/privacy).
 <br/>
 ## Ondersteunde talen
 
@@ -62,7 +62,7 @@ Shotera; Shotera AI; Mosuzo Studio; AI Cutout; offline OCR; schermopname; screen
 <br/>
 ## Ondersteuning en feedback
 
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Officiële website" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="Feedback en bugs" /></a> <a href="https://shotera.mosuzo.com/en/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="Versie-informatie" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="E-mail" /></a></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Officiële website" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="Feedback en bugs" /></a> <a href="https://shotera.mosuzo.com/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="Versie-informatie" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="E-mail" /></a></p>
 <br/>
 ## Steun Shotera op Ko-fi
 

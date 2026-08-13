@@ -1,0 +1,41 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: '潜在客户开发落地页演示',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    tagline="潜在客户开发落地页演示"
+    title="高效的潜在客户开发落地页：解锁其中的秘诀"
+    subtitle="探索将好奇访客转化为踊跃潜在客户的落地页打造秘诀。（你的主视觉应当第一时间抓住注意力，用一句直击目标受众的有力标题。）"
+    actions={[
+      { variant: 'primary', text: '立即行动', href: '#', icon: 'tabler:square-rounded-arrow-right' },
+      { text: '了解更多', href: '#' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1597423498219-04418210827d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+      alt: '磁铁吸引螺丝钉。潜在客户开发落地页演示',
+    }}
+  />
+
+  <CallToAction
+    title="即将推出"
+    subtitle="我们正在完善这些演示页面的内容，很快就能与你见面。敬请期待，敬请期待！"
+    actions={[
+      {
+        variant: 'primary',
+        text: '下载模板',
+        href: 'https://github.com/mosuzo-studio/Shotera',
+        icon: 'tabler:download',
+      },
+    ]}
+  />
+</Layout>

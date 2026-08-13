@@ -1,56 +1,56 @@
 ---
-title: '用户条款'
+title: 'Terms and Conditions'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_最后更新_：2026 年 8 月 2 日
+_Last updated_: August 2, 2026
 
-## Shotera 最终用户许可协议
+## Shotera End User License Agreement
 
-**版权所有 © Mosuzo Studio。保留所有权利。**
+**Copyright © Mosuzo Studio. All rights reserved.**
 
-官网：[https://shotera.mosuzo.com](https://shotera.mosuzo.com) · 邮箱：mosuzo.studio@gmail.com
-
----
-
-感谢您选择 Shotera（以下简称「本软件」）。本协议是您与 Mosuzo Studio（以下简称「我们」）之间的法律协议。请在安装或使用前花几分钟阅读。一旦安装、复制或使用本软件，即表示您已阅读并同意本协议。若您不同意，请勿安装或使用本软件。
-
-### 1. 授权许可
-
-在您遵守本协议的前提下，我们授予您一项个人的、非独占的、不可转让且可撤销的许可，允许您在自有或可控的设备上安装并使用本软件。您可将本软件用于个人及商业用途。
-
-### 2. 使用规范
-
-为了让本软件及其生态对所有人保持健康，除非适用法律明确禁止此类限制，请勿对本软件进行反向工程、反编译或反汇编，亦请勿出租、转售、再许可或分发经修改的版本。您应负责在符合适用于您的法律的前提下使用本软件。
-
-### 3. 您的内容与隐私
-
-您使用本软件创建的截图、录制及其他内容均归您所有。我们尊重您的隐私，并致力于让您的内容始终由您掌控。任何数据的收集与处理均在我们的《隐私政策》中说明，该政策构成本协议的一部分。
-
-### 4. 知识产权
-
-本软件本身及其相关知识产权均归 Mosuzo Studio 所有，并受适用法律及国际条约保护。本协议授予您使用本软件的许可，并不向您转让任何所有权。
-
-### 5. 软件更新
-
-本软件可能会自动检查并安装更新，为您带来功能改进、新特性与安全修复。在可行的情况下，我们会尽量让重要变更对您保持透明。
-
-### 6. 免责声明
-
-本软件按「现状」及「现有」基础提供，不附带任何明示或默示的担保，包括但不限于适销性、特定用途适用性及不侵权的默示担保。我们不保证本软件运行不中断、无错误或不含有害组件。若您所在地区的法律赋予您不可排除的权利，则本免责声明仅在该法律允许的范围内适用。
-
-### 7. 责任限制
-
-在适用法律允许的最大范围内，对于因您使用或无法使用本软件而引起或与之相关的任何间接、附带、特殊或后果性损害，以及任何数据或利润的损失，Mosuzo Studio 均不承担责任。本协议中的任何内容均不限制依适用法律不得限制的任何责任。
-
-### 8. 协议终止
-
-本许可在终止前持续有效。若您重大违反本协议条款，许可将自动终止；您亦可随时停止使用本软件。协议终止后，请停止使用并从您的设备中卸载本软件。依其性质应在终止后继续有效的条款将继续适用。
-
-### 9. 一般条款
-
-若本协议任何条款被认定为不可执行，其余条款仍完全有效。本协议构成您与 Mosuzo Studio 之间就本软件达成的完整协议。我们可能会不时更新本协议；随每个版本一同提供的协议版本适用于您对该版本的使用。
+Website: [https://shotera.mosuzo.com](https://shotera.mosuzo.com) · Email: mosuzo.studio@gmail.com
 
 ---
 
-如您对本协议有任何疑问，我们很乐意提供帮助，请通过 mosuzo.studio@gmail.com 联系 Mosuzo Studio。
+Thank you for choosing Shotera (the "Software"). This Agreement is a legal agreement between you and Mosuzo Studio ("we", "us", or "our"). Please take a moment to read it before installing or using the Software. By installing, copying, or using the Software, you acknowledge that you have read and agree to these terms. If you do not agree, please do not install or use the Software.
+
+### 1. License Grant
+
+We grant you a personal, non-exclusive, non-transferable, and revocable license to install and use the Software on devices you own or control, in accordance with this Agreement. You are welcome to use the Software for both personal and commercial purposes.
+
+### 2. Acceptable Use
+
+To keep the Software and its ecosystem healthy for everyone, please do not reverse engineer, decompile, or disassemble the Software, nor rent, resell, sublicense, or distribute modified versions of it, except to the extent such restrictions are prohibited by applicable law. You are responsible for using the Software in compliance with the laws that apply to you.
+
+### 3. Your Content and Privacy
+
+The screenshots, recordings, and other content you create with the Software belong to you. We respect your privacy and design the Software to keep your content under your control. Any collection or handling of data is described in our Privacy Policy, which forms part of this Agreement.
+
+### 4. Intellectual Property
+
+The Software itself and all related intellectual property rights are owned by Mosuzo Studio and are protected by applicable laws and international treaties. This Agreement grants you a license to use the Software; it does not transfer any ownership rights to you.
+
+### 5. Updates
+
+The Software may check for and install updates automatically to bring you improvements, new features, and security fixes. Where practical, we aim to make significant changes transparent to you.
+
+### 6. Disclaimer of Warranty
+
+The Software is provided "as is" and "as available", without warranties of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Software will be uninterrupted, error-free, or free of harmful components. To the extent your local law grants you rights that cannot be excluded, this disclaimer applies only to the extent permitted by that law.
+
+### 7. Limitation of Liability
+
+To the maximum extent permitted by applicable law, Mosuzo Studio will not be liable for any indirect, incidental, special, or consequential damages, or for any loss of data or profits, arising out of or relating to your use of or inability to use the Software. Nothing in this Agreement limits any liability that cannot be limited under applicable law.
+
+### 8. Termination
+
+This license remains in effect until terminated. It will end automatically if you materially breach its terms. You may also stop using the Software at any time. Upon termination, please discontinue use and remove the Software from your devices. Sections that by their nature should survive termination will continue to apply.
+
+### 9. General
+
+If any provision of this Agreement is held to be unenforceable, the remaining provisions will remain in full force and effect. This Agreement constitutes the entire agreement between you and Mosuzo Studio regarding the Software. We may update this Agreement from time to time; the version accompanying each release governs your use of that release.
+
+---
+
+If you have any questions about this Agreement, we are happy to help. Please contact Mosuzo Studio at mosuzo.studio@gmail.com.

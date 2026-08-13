@@ -1,93 +1,93 @@
 ---
-title: '隐私政策'
+title: 'Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_最后更新_：2026 年 8 月 2 日
+_Last updated_: August 2, 2026
 
-## 我们对隐私的承诺
+## Our Commitment to Privacy
 
-在 Mosuzo Studio，我们深知截图和录屏往往包含您最敏感的信息。**隐私安全不是我们的附加功能，而是 Shotera 设计的核心原则。** 本隐私政策用尽可能清晰的语言，向您说明我们如何处理（或更准确地说，不处理）您的数据。
-
----
-
-## 核心承诺：您的数据，您做主
-
-### 截图与录屏内容 —— 永远在您本地
-
-您使用 Shotera 创建的所有截图、录屏、标注、贴图，**全部保存在您的设备上**。我们不会、也无法访问这些内容。没有云端上传、没有后台同步、没有任何形式的远程存储。您的内容 100% 属于您自己。
-
-### AI 功能 —— 全程本地离线
-
-以下 AI 功能**完全在您的设备本地运行**，无需联网，不向任何服务器传输数据：
-
-| 功能 | 处理方式 | 隐私影响 |
-|------|----------|----------|
-| **AI 抠图**（背景移除） | 设备本地 | 您的图片从未离开您的电脑 |
-| **AI 擦图**（物体移除 / 修图） | 设备本地 | 全程离线，无数据传输 |
-| **离线 OCR**（文字识别） | 设备本地 | 识别过程完全本地化 |
-
-这意味着即使您处理的是机密合同、个人证件、医疗记录等高度敏感的内容，也不存在数据泄露的风险——因为数据根本没有离开过您的设备。
-
-### 图片翻译 —— 云端 API
-
-图片翻译功能通过云服务商的翻译 API 进行处理。我们严格遵守对应云厂商的隐私协议与数据保护标准，**不与任何第三方共享**您的翻译数据，翻译完成后的临时数据不会被我们留存。您可以在软件设置中自由选择是否启用云端翻译功能。
+At Mosuzo Studio, we understand that screenshots and recordings often contain your most sensitive information. **Privacy is not an add-on feature — it is a core design principle of Shotera.** This Privacy Policy explains, in the clearest terms possible, how we handle (or more accurately, don't handle) your data.
 
 ---
 
-## 我们收集的少量数据
+## Core Promise: Your Data, Your Control
 
-为了让 Shotera 变得更好，我们会收集**极少量的匿名使用数据**，包括：
+### Screenshots & Recordings — Always Local
 
-- **功能使用统计**（例如某功能的使用频率）——帮助我们了解哪些功能最受欢迎，应该优先改进
-- **错误与崩溃日志**——帮助我们发现和修复 Bug
-- **软件版本与操作系统信息**——确保更新兼容性
+All screenshots, recordings, annotations, and pinned images you create with Shotera are **stored entirely on your device**. We do not, and cannot, access this content. No cloud uploads, no background sync, no remote storage of any kind. Your content is 100% yours.
 
-**以上数据均为匿名、聚合的统计数据，不包含任何个人身份信息。** 我们无法通过这些数据追溯到具体用户。您可以在设置中选择关闭数据收集。
+### AI Features — Fully Offline & Local
 
----
+The following AI features run **entirely on your device**, with no internet connection required and no data transmitted to any server:
 
-## 我们不会做的事
+| Feature | Processing | Privacy Impact |
+|---------|-----------|----------------|
+| **AI Background Removal** | On-device | Your images never leave your computer |
+| **AI Eraser** (object removal / inpainting) | On-device | Fully offline, zero data transmission |
+| **Offline OCR** (text recognition) | On-device | Recognition happens entirely locally |
 
-- ❌ **不上传**您的截图、录屏或任何内容文件
-- ❌ **不扫描**您本地文件
-- ❌ **不出售**任何数据（我们根本没有可以出售的用户数据）
-- ❌ **不追踪**您的网络行为或浏览历史
-- ❌ **不强制**您注册账户即可使用核心功能
+This means even if you're working with confidential contracts, personal IDs, medical records, or other highly sensitive content, there is no risk of data leakage — because the data never left your device in the first place.
 
----
+### Image Translation — Cloud API
 
-## 第三方服务
-
-Shotera 的部分功能可能依赖以下第三方服务：
-
-- **翻译 API**：图片翻译功能使用对应云服务商的翻译接口
-- **自动更新**：版本更新检查通过 GitHub 服务器完成
-
-我们仅选择业界信誉良好的服务商，并确保其隐私保护标准符合相关法规要求。
-
-## 数据安全
-
-我们采取合理的技术和管理措施保护通过 Shotera 收集的少量匿名数据，防止未经授权的访问、使用或泄露。
-
-## 儿童隐私
-
-Shotera 不面向 13 岁以下的儿童。我们不会有意收集儿童的个人信息。
-
-## 本隐私政策的变更
-
-我们可能会不时更新本隐私政策。更新后的版本将在本页面发布，重大变更我们会通过软件内通知或官网公告的方式告知您。
+The image translation feature is processed through cloud service providers' translation APIs. We strictly comply with the respective cloud providers' privacy policies and data protection standards, **never share** your translation data with any third party, and do not retain temporary translation data after processing. You can choose whether to enable cloud translation features in the app settings.
 
 ---
 
-## 联系我们
+## The Limited Data We Collect
 
-如果您对本隐私政策有任何疑问、顾虑或建议，我们非常乐意倾听：
+To make Shotera better, we collect **a minimal amount of anonymous usage data**, including:
 
-- **邮箱**：mosuzo.studio@gmail.com
-- **官网**：[https://shotera.mosuzo.com](https://shotera.mosuzo.com)
+- **Feature usage statistics** (e.g., how often a feature is used) — helps us understand what to improve first
+- **Error and crash logs** — helps us find and fix bugs
+- **Software version and OS information** — ensures update compatibility
+
+**All data above is anonymous and aggregated. It contains no personally identifiable information.** We cannot trace this data back to individual users. You can opt out of data collection in settings.
 
 ---
 
-> **我们相信，最好的隐私保护，是让数据从一开始就不离开你的设备。**
-> —— Mosuzo Studio
+## What We Don't Do
+
+- ❌ **Upload** your screenshots, recordings, or any content files
+- ❌ **Scan** your local files
+- ❌ **Sell** any data (we simply don't have user data to sell)
+- ❌ **Track** your browsing behavior or history
+- ❌ **Require** an account to use core features
+
+---
+
+## Third-Party Services
+
+Some Shotera features may rely on the following third-party services:
+
+- **Translation APIs**: Image translation uses cloud provider translation interfaces
+- **Auto-updates**: Version update checks are served through GitHub
+
+We only work with reputable service providers and ensure their privacy protection standards meet applicable regulatory requirements.
+
+## Data Security
+
+We take reasonable technical and administrative measures to protect the limited anonymous data collected through Shotera, preventing unauthorized access, use, or disclosure.
+
+## Children's Privacy
+
+Shotera is not directed at children under the age of 13. We do not knowingly collect personal information from children.
+
+## Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. Updated versions will be posted on this page, and we will notify you of significant changes through in-app notifications or announcements on our website.
+
+---
+
+## Contact Us
+
+If you have any questions, concerns, or suggestions about this Privacy Policy, we'd love to hear from you:
+
+- **Email**: mosuzo.studio@gmail.com
+- **Website**: [https://shotera.mosuzo.com](https://shotera.mosuzo.com)
+
+---
+
+> **We believe the best privacy protection is making sure your data never leaves your device in the first place.**
+> — Mosuzo Studio

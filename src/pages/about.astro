@@ -10,7 +10,7 @@ import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
 const lang = (Astro.currentLocale ?? defaultLang) as Lang;
 
 const metadata = {
-  title: '关于 Shotera',
+  title: 'About Shotera',
 };
 ---
 
@@ -18,59 +18,60 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="关于我们"
+    tagline="About us"
     image={{
       src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Shotera 团队',
+      alt: 'The Shotera team',
     }}
   >
     <Fragment slot="title">
-      把截图这件小事，<br />
-      <span class="text-accent dark:text-white">做到极致</span>
+      Make screenshots <br />
+      <span class="text-accent dark:text-white">good enough to disappear</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Shotera 诞生于一个朴素的念头：每天都要用无数次的截图和录屏，理应更快、更顺手。
-      我们是一群自己也重度依赖截图工具的产品人和工程师，把对效率的执念，做进了每一个快捷键、每一次框选、每一帧录制里。
+      Shotera started with a simple frustration: the screenshots and recordings we take dozens of times a day should be
+      faster and smoother. We're a small group of product folks and engineers who lean on capture tools as heavily as
+      anyone — and we built that obsession into every shortcut, every selection, every frame.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Shotera 数据一览"
+    title="Shotera at a glance"
     stats={[
-      { title: '界面语言', amount: '15 种' },
-      { title: '好评率', amount: '4.9 / 5' },
-      { title: 'AI 离线处理', amount: '100%' },
-      { title: '快捷键唤起', amount: '<0.1s' },
+      { title: 'Languages', amount: '15' },
+      { title: 'Rating', amount: '4.9 / 5' },
+      { title: 'Offline AI', amount: '100%' },
+      { title: 'Launch time', amount: '<0.1s' },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="我们坚持的事"
-    subtitle="工具越顺手，你越感觉不到它的存在。这是 Shotera 每一个设计决策背后的准则。"
+    title="What we stand by"
+    subtitle="The better a tool feels, the less you notice it. That principle sits behind every decision we make."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: '快，是第一位的',
+        title: 'Speed comes first',
         description:
-          '一个快捷键唤起，窗口与元素自动识别，框选即所得。从想截图到截完图，不超过一秒。',
+          'One shortcut to summon it, automatic window and element detection, what-you-select-is-what-you-get. Under a second from intent to capture.',
         icon: 'tabler:bolt',
       },
       {
-        title: '本地优先，隐私安心',
+        title: 'Local-first, private by default',
         description:
-          'OCR、抠图等能力尽可能在本地完成，你的截图默认不上传云端。敏感内容，留在你自己的电脑里。',
+          'OCR, cutout, and more run on-device wherever possible. Your screenshots stay off the cloud unless you say otherwise.',
         icon: 'tabler:lock',
       },
       {
-        title: '克制的设计',
+        title: 'Restraint by design',
         description:
-          '不堆砌功能，不打扰工作流。常用的一键可达，进阶的需要时才出现。',
+          'No feature bloat, no interrupting your flow. Common things are one click away; advanced ones show up only when you need them.',
         icon: 'tabler:sparkles',
       },
     ]}
@@ -83,68 +84,66 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: '截图',
+        title: 'Capture',
         description:
-          '智能识别窗口与界面元素，支持滚动长截图，一次截下整个网页或聊天记录。',
+          'Smart window and element detection, plus scrolling capture that grabs an entire page or chat in one shot.',
         icon: 'tabler:capture',
       },
       {
-        title: '录屏 & GIF',
+        title: 'Recording & GIF',
         description:
-          '录制屏幕并一键导出轻量 GIF，光标高亮、按键提示，演示教程格外清晰。',
+          'Record your screen and export to a lightweight GIF — cursor highlights and click cues make demos crystal clear.',
         icon: 'tabler:video',
       },
       {
-        title: 'AI 抠图',
-        description:
-          '一键智能识别主体、去除背景，导出透明底图片，无需 PS。',
+        title: 'AI cutout',
+        description: 'Detect the subject and drop the background in one click, exporting transparent PNGs. No Photoshop.',
         icon: 'tabler:wand',
       },
       {
-        title: '离线 OCR',
+        title: 'Offline OCR',
         description:
-          '本地识别截图中的文字，中英日等多语言，复制粘贴即用，无需联网。',
+          'Extract text from any screenshot on-device, across multiple languages. Copy and paste, no internet required.',
         icon: 'tabler:text-recognition',
       },
       {
-        title: '图片翻译',
+        title: 'Image translation',
         description:
-          '识别图片中的文字并即时翻译，看外文文档、图表、界面不再有障碍。',
+          'Recognize and translate text inside any image on the spot — foreign docs, charts, and interfaces made readable.',
         icon: 'tabler:language',
       },
       {
-        title: '贴图 / 钉图',
-        description:
-          '把截图钉在屏幕最上层，随时对照参考，多图排布也不乱。',
+        title: 'Pin to screen',
+        description: 'Keep any screenshot floating on top for reference, arranged side by side without the clutter.',
         icon: 'tabler:pin',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Shotera 功能一览',
+      alt: 'Shotera features overview',
     }}
   />
 
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="我们的价值观"
-    subtitle="做一款工具，和用一款工具，是同一件事。我们用自己做出来的东西，每天工作。"
+    title="Our values"
+    subtitle="Building a tool and using one are the same thing to us. We work in what we make, every day."
     items={[
       {
-        title: '为真实场景而造',
+        title: 'Built for real work',
         description:
-          '每个功能都来自真实的使用痛点——写文档、做设计稿标注、录 Bug 复现、翻外文资料。我们先自己用，再交给你。',
+          'Every feature comes from a real pain point — writing docs, annotating design specs, recording repros, reading foreign material. We use it first, then hand it to you.',
       },
       {
-        title: '持续打磨',
+        title: 'Always refining',
         description:
-          '快捷键的手感、框选的边缘吸附、录屏的体积与清晰度——这些细节我们会一直调，直到顺手为止。',
+          'Shortcut feel, edge snapping on selections, recording size vs. clarity — we keep tuning the details until they feel right.',
       },
       {
-        title: '尊重用户',
+        title: 'Respect for users',
         description:
-          '不捆绑、不弹窗骚扰、不偷偷上传数据。核心功能长期免费，是我们对用户的承诺。',
+          'No bundleware, no nagging popups, no quietly uploading your data. Core features stay free — that\'s our promise.',
       },
     ]}
   />
@@ -152,29 +151,29 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="一路走来"
-    subtitle="从一个自用的小工具，到越来越多人每天在用的截图利器。"
+    title="How we got here"
+    subtitle="From a tool we built for ourselves to one people rely on every day."
     isReversed={true}
     callToAction={{
-      text: '免费下载 Shotera',
+      text: 'Download Shotera free',
       href: 'https://github.com/mosuzo-studio/Shotera/releases',
     }}
     items={[
       {
-        title: '始于自己的需求',
-        description: '因为找不到一款足够快、足够顺手的截图工具，我们决定自己写一个。',
+        title: 'Started with our own need',
+        description: 'We couldn\'t find a capture tool that was fast and smooth enough, so we wrote one.',
         icon: 'tabler:seeding',
       },
       {
-        title: '被用户推着长大',
+        title: 'Grown by our users',
         description:
-          '长截图、AI 抠图、离线 OCR、图片翻译……很多功能，都是用户在反馈里「点」出来的。',
+          'Scrolling capture, AI cutout, offline OCR, image translation — so many features came straight from user feedback.',
         icon: 'tabler:users',
       },
       {
-        title: '走向更多人',
+        title: 'Reaching more people',
         description:
-          '如今 Shotera 支持多语言、多平台，但初心没变：让截图更简单。',
+          'Today Shotera runs on multiple languages and platforms — with the same goal: make screenshots simple.',
         icon: 'tabler:world',
       },
     ]}
@@ -183,20 +182,19 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="联系我们"
-    tagline="随时找到我们"
+    title="Get in touch"
+    tagline="Reach us anytime"
     columns={2}
     items={[
       {
-        title: '用户社群',
+        title: 'Community',
         description:
-          '加入 Shotera 用户群，第一时间获取新版本、使用技巧，也能直接把想法告诉我们。',
-        icon: 'tabler:messages',
+          'Join the Shotera community for new releases, tips, and a direct line to tell us what you think.',
+        icon: 'tabler:brand-discord',
       },
       {
-        title: '邮件支持',
-        description:
-          '遇到问题或有功能建议？发邮件到 support@shotera.app，我们会认真回复每一封。',
+        title: 'Email support',
+        description: 'Hit a problem or have a feature idea? Email support@shotera.app — we read and reply to every one.',
         icon: 'tabler:mail',
       },
     ]}

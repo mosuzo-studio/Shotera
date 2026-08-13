@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Shotera — 更懂效率的截图与录屏工具
+    default: Shotera — Faster, smarter screenshots and screen recording
     template: '%s — Shotera'
-  description: 'Shotera 是一款集截图、录屏 GIF、AI 抠图、离线 OCR、图片翻译、标注、贴图钉图、窗口与元素智能检测于一体的桌面效率工具，专为高频截图与录屏用户打造。'
+  description: 'Shotera is a Windows desktop productivity tool for smart screenshots, screen and GIF recording, AI cutout, offline OCR, image translation, annotation, pinning, and precise window and UI element detection.'
   robots:
     index: true
     follow: true
@@ -28,7 +28,7 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: zh
+  language: en
   textDirection: ltr
 
 apps:

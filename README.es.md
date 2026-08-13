@@ -83,7 +83,7 @@ Shotera convierte una captura en contenido listo para explicar, compartir o reut
 
 Shotera guarda las capturas localmente. El OCR sin conexión funciona en tu dispositivo, por lo que no necesitas subir capturas para extraer texto. También controlas los atajos, el idioma y las fuentes, el inicio y los iconos de la bandeja.
 
-Consulta la [Política de privacidad](https://shotera.mosuzo.com/en/privacy).
+Consulta la [Política de privacidad](https://shotera.mosuzo.com/privacy).
 
 <br/>
 
@@ -110,7 +110,7 @@ Shotera; Shotera AI; Mosuzo Studio; recorte IA; reparación de imágenes con IA;
 ## Soporte y comentarios
 
 Las preguntas, sugerencias y comentarios siempre son bienvenidos.
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Sitio oficial" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="Comentarios y errores" /></a> <a href="https://shotera.mosuzo.com/en/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="Notas de versión" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="Correo electrónico" /></a></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Sitio oficial" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="Comentarios y errores" /></a> <a href="https://shotera.mosuzo.com/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="Notas de versión" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="Correo electrónico" /></a></p>
 
 <br/>
 

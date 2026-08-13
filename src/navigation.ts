@@ -64,7 +64,7 @@ export const getFooterData = (lang: Lang) => {
       { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/mosuzo-studio/Shotera' },
     ],
     footNote: `
-      <span class="font-semibold">Shotera</span> · 让每一次截图与录屏都更高效。
+      <span class="font-semibold">Shotera</span> · ${t('footer.tagline')}
     `,
   };
 };

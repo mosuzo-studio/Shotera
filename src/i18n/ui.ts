@@ -1,11 +1,11 @@
 export const languages = {
-  zh: '中文',
   en: 'English',
+  zh: '中文',
 } as const;
 
 export type Lang = keyof typeof languages;
 
-export const defaultLang: Lang = 'zh';
+export const defaultLang: Lang = 'en';
 
 /**
  * UI strings for global chrome (header, footer, announcement, buttons, blog
@@ -88,6 +88,7 @@ export const ui = {
     'footer.faq': 'FAQ',
     'footer.changelog': 'Changelog',
     'footer.feedback': 'Feedback',
+    'footer.tagline': 'Make every screenshot and recording more efficient.',
 
     'announcement.new': 'NEW',
     'announcement.text': 'Shotera v7.2.0+ is here — AI cutout, illustration, offline OCR & image translation! (Site under construction) »',
@@ -174,6 +175,7 @@ export const ui = {
     'footer.faq': '常见问题',
     'footer.changelog': '更新日志',
     'footer.feedback': '意见反馈',
+    'footer.tagline': '让每一次截图与录屏都更高效。',
 
     'announcement.new': '新',
     'announcement.text': 'Shotera v7.2.0+ 发布 —— 新增 AI 抠图、插图、本地离线 OCR 与图片翻译！（同时本官网正在建设中）»',

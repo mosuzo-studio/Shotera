@@ -44,7 +44,7 @@ Shotera zmienia zrzut w materiał gotowy do objaśnienia, udostępnienia lub pon
 <br/>
 ## Prywatność i kontrola
 
-Shotera zapisuje zrzuty lokalnie. OCR offline działa na urządzeniu, więc przesyłanie obrazu nie jest potrzebne do wydobycia tekstu. Zobacz [Politykę prywatności](https://shotera.mosuzo.com/en/privacy).
+Shotera zapisuje zrzuty lokalnie. OCR offline działa na urządzeniu, więc przesyłanie obrazu nie jest potrzebne do wydobycia tekstu. Zobacz [Politykę prywatności](https://shotera.mosuzo.com/privacy).
 <br/>
 ## Obsługiwane języki
 
@@ -62,7 +62,7 @@ Shotera; Shotera AI; Mosuzo Studio; wycinanie AI; OCR offline; zrzut ekranu; edy
 <br/>
 ## Wsparcie i opinie
 
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Oficjalna strona" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="Opinie i błędy" /></a> <a href="https://shotera.mosuzo.com/en/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="Historia zmian" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="E-mail" /></a></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Oficjalna strona" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="Opinie i błędy" /></a> <a href="https://shotera.mosuzo.com/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="Historia zmian" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="E-mail" /></a></p>
 <br/>
 ## Wesprzyj Shotera na Ko-fi
 

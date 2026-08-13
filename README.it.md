@@ -56,7 +56,7 @@ Premi `F1`, scegli il soggetto, rifinisci i bordi, annota o modifica, quindi sal
 <br/>
 ## Privacy e controllo
 
-Shotera salva le catture localmente. L’OCR offline funziona sul dispositivo, quindi non è necessario caricare screenshot per estrarre testo. Puoi personalizzare scorciatoie, lingua, caratteri, avvio e icone. Consulta l’[Informativa sulla privacy](https://shotera.mosuzo.com/en/privacy).
+Shotera salva le catture localmente. L’OCR offline funziona sul dispositivo, quindi non è necessario caricare screenshot per estrarre testo. Puoi personalizzare scorciatoie, lingua, caratteri, avvio e icone. Consulta l’[Informativa sulla privacy](https://shotera.mosuzo.com/privacy).
 <br/>
 ## Lingue supportate
 
@@ -75,7 +75,7 @@ Shotera; Shotera AI; Mosuzo Studio; ritaglio IA; riparazione immagini IA; OCR of
 ## Supporto e feedback
 
 Domande, suggerimenti e commenti sono sempre benvenuti.
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Sito ufficiale" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="Feedback e bug" /></a> <a href="https://shotera.mosuzo.com/en/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="Note di rilascio" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="E-mail" /></a></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Sito ufficiale" /></a> <a href="https://github.com/mosuzo-studio/Shotera/issues"><img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="Feedback e bug" /></a> <a href="https://shotera.mosuzo.com/changelog"><img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="Note di rilascio" /></a> <a href="mailto:mosuzo.studio@gmail.com"><img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="E-mail" /></a></p>
 <br/>
 ## Supporta Shotera su Ko-fi
 

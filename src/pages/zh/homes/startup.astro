@@ -1,0 +1,319 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+import { YouTube } from 'astro-embed';
+
+import { defaultLang, localizedPath, type Lang } from '~/i18n/utils';
+
+const metadata = {
+  title: '初创公司落地页',
+};
+
+const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="初创公司网页演示"
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: '获取模板',
+        href: 'https://github.com/mosuzo-studio/Shotera',
+        icon: 'tabler:download',
+      },
+      { text: '了解更多', href: '#features' },
+    ]}
+  >
+    <Fragment slot="title">
+      用 Astrowind 模板<span class="hidden sm:inline">提升你</span>初创公司<span
+        class="text-accent dark:text-white">的线上形象</span
+      >
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      借助 <span class="font-semibold">Astrowind</span> 模板走进聚光灯下，这是你巩固初创公司数字足迹、建立公信力、拓展影响力的必经之路。
+    </Fragment>
+
+    <Fragment slot="image">
+      <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="关于我们"
+    subtitle="我们相信将梦想化为惊艳现实的魔力。我们由怀揣共同愿景的热忱开发者创立，立志简化网站创建流程。我们的模板汇聚了 Astro v6 的创新与 Tailwind CSS v4 的灵活，让你以前所未有的方式表达独特的品牌形象。"
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="领略 Astrowind 带来的惊人影响"
+    subtitle="以下数字反映了用户对我们的信任，以及我们帮助他们取得的非凡成果。"
+    stats={[
+      { title: '下载量', amount: '182K' },
+      { title: '已上线网站', amount: '87' },
+      { title: '用户评分', amount: '4.8' },
+      { title: '满意客户', amount: '116K' },
+    ]}
+  />
+
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="合作伙伴与协作"
+    subtitle="在 Astrowind，我们相信协作的力量能驱动创新，创造非凡体验。"
+    icons={[]}
+    images={[
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'Paypal',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/48/visa-6850402_1280.png',
+        alt: 'Visa',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png',
+        alt: 'Ebay',
+      },
+
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
+        alt: 'Youtube',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
+        alt: 'Microsoft',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
+        alt: 'Node JS',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
+        alt: 'Google',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
+        alt: 'Meta',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png',
+        alt: 'Yahoo',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="我们提供哪些服务？"
+    subtitle="我们提供适用于各行业与各种用途的丰富网站模板，涵盖商业、作品集、电子商务、博客等。"
+    items={[
+      {
+        title: '安装说明',
+        description:
+          '提供清晰的说明，指导你如何下载已购买的模板，并将其安装到各类网站平台或内容管理系统上。',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: '演示与预览',
+        description:
+          '提供交互式演示与预览，让客户在购买前就能看到所选模板的外观与功能表现。',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: '技术支持',
+        description:
+          '为模板本身或其实施过程中的任何技术问题提供客户支持。',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="我们模板的主要功能"
+    subtitle="具备若干关键特性，能有效满足初创公司与创业者的需求。"
+    columns={3}
+    items={[
+      {
+        title: '现代而专业的设计',
+        description:
+          '采用契合当下设计趋势的现代设计，给人以专业的印象。',
+        icon: 'tabler:artboard',
+      },
+      {
+        title: '响应式且适配移动端',
+        description: '无缝适配不同屏幕尺寸与设备，确保体验始终如一。',
+        icon: 'tabler:picture-in-picture',
+      },
+      {
+        title: '可定制性',
+        description:
+          '易于定制，让用户可以调整设计、颜色、字体和内容，以契合自身品牌形象。',
+        icon: 'tabler:adjustments-horizontal',
+      },
+      {
+        title: '快速的加载速度',
+        description: '为速度而优化，确保流畅的用户体验和良好的搜索引擎排名。',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: '搜索引擎优化（SEO）',
+        description:
+          '在模板结构与代码中融入 SEO 最佳实践，提升在搜索引擎结果中的可见性。',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: '兼容性',
+        description: '这些模板可在各类内容管理系统与建站工具中无缝运行。',
+        icon: 'tabler:plug-connected',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="常见问题"
+    items={[
+      {
+        title: '什么是落地页模板？',
+        description:
+          '落地页模板是预先设计好的网页布局，专门用作构建高效落地页的基础。这些模板旨在吸引访客的注意力，并引导他们完成特定的行动或目标，例如订阅新闻通讯、进行购买或下载资源。',
+      },
+      {
+        title: '我为什么要使用模板？',
+        description:
+          '模板的部分优势在于：它们提供现成可用的结构，为你节省大量时间；设计时充分考虑了易用性；并提供高性价比的替代方案，在交付优质成果的同时为你省钱。',
+      },
+      {
+        title: '购买前我可以预览模板吗？',
+        description:
+          '可以，这些模板允许你在购买前进行预览。每个模板都配有一个 “演示” 按钮。',
+      },
+      {
+        title: '使用模板需要技术技能吗？',
+        description:
+          '使用模板不需要高深的技术技能，但对网页导航有基本了解、熟悉在线工具的使用仍会有所帮助。如果你有更具体的定制需求，可能需要参考指南或联系客户支持寻求协助。',
+      },
+      {
+        title: '我可以在多个网站上使用同一个模板吗？',
+        description:
+          '不可以，模板采用单次使用授权，也就是说你只能在一个网站或项目中使用该模板。要在更多网站上使用，需要购买额外的授权。',
+      },
+      {
+        title: '如果我在定制时需要帮助怎么办？',
+        description:
+          '这些模板提供全面的分步指南，带你完成定制流程。如果仍有疑问，可以联系我们的客户支持团队。他们能解答你的问题、就定制提供指导，并处理你遇到的任何问题。',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="告诉我们能为你做些什么"
+    subtitle="我们随时为你解答任何疑问、提供帮助。"
+    columns={4}
+    items={[
+      {
+        title: '电话',
+        icon: 'tabler:phone',
+        callToAction: {
+          target: '_blank',
+          text: '致电我们',
+          href: localizedPath(lang, '/'),
+          variant: 'link',
+        },
+      },
+      {
+        title: '邮箱',
+        icon: 'tabler:mail',
+        callToAction: {
+          target: '_blank',
+          text: '写信给我们',
+          href: localizedPath(lang, '/'),
+          variant: 'link',
+        },
+      },
+      {
+        title: '与销售对话',
+        icon: 'tabler:message-circle',
+        callToAction: {
+          target: '_blank',
+          text: '开始聊天',
+          href: localizedPath(lang, '/'),
+          variant: 'link',
+        },
+      },
+      {
+        title: '与支持团队对话',
+        icon: 'tabler:message-circle',
+        callToAction: {
+          target: '_blank',
+          text: '开始聊天',
+          href: localizedPath(lang, '/'),
+          variant: 'link',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: '获取模板',
+        href: 'https://github.com/mosuzo-studio/Shotera',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">成为我们愿景的一部分</Fragment>
+
+    <Fragment slot="subtitle">
+      在这里，你将发现充满活力的工作环境、无与伦比的成长机会，以及创造深远影响的可能。
+    </Fragment>
+  </CallToAction>
+</Layout>

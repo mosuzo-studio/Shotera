@@ -57,7 +57,8 @@ export function localizedPath(lang: Lang, path = '/'): string {
   // Pure-anchor targets like `/#features` should keep the hash but still be
   // rooted at the current locale's home.
   const [pathname, hash] = path.split('#');
-  const localized = getRelativeLocaleUrl(lang, pathname === '' ? '/' : pathname);
+  const localeUrl = getRelativeLocaleUrl(lang, pathname === '' ? '/' : pathname);
+  const localized = localeUrl !== '/' && localeUrl.endsWith('/') ? localeUrl.slice(0, -1) : localeUrl;
   return hash ? `${localized.replace(/\/$/, '')}#${hash}` : localized;
 }
 
