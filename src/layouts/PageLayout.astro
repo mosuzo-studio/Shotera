@@ -12,21 +12,22 @@ import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  lang?: Lang;
 }
 
-const { metadata } = Astro.props;
+const { metadata, lang: explicitLang } = Astro.props;
 
-const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+const lang = explicitLang ?? ((Astro.currentLocale ?? defaultLang) as Lang);
 const headerData = getHeaderData(lang);
 const footerData = getFooterData(lang);
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} language={lang}>
   <slot name="announcement">
-    <Announcement />
+    <Announcement lang={lang} />
   </slot>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <Header {...headerData} lang={lang} isSticky showRssFeed showToggleTheme />
   </slot>
   <main>
     <slot />

@@ -19,10 +19,11 @@ import { defaultLang, getLocaleDirection, type Lang } from '~/i18n/utils';
 
 export interface Props {
   metadata?: MetaDataType;
+  language?: Lang;
 }
 
-const { metadata = {} } = Astro.props;
-const language = (Astro.currentLocale ?? defaultLang) as Lang;
+const { metadata = {}, language: explicitLanguage } = Astro.props;
+const language = explicitLanguage ?? ((Astro.currentLocale ?? defaultLang) as Lang);
 const textDirection = getLocaleDirection(language);
 ---
 
@@ -33,7 +34,7 @@ const textDirection = getLocaleDirection(language);
     <Favicons />
     <CustomStyles />
     <ApplyColorMode />
-    <Metadata {...metadata} />
+    <Metadata {...metadata} language={language} />
     <SiteVerification />
     <Analytics />
 

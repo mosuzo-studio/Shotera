@@ -1,0 +1,55 @@
+---
+import LocalizedHome from '~/components/localization/LocalizedHome.astro';
+import LocalizedPage from '~/components/localization/LocalizedPage.astro';
+import { publishedLocales } from '~/i18n/locales';
+import { localizedSiteContent, type LocalizedLocale } from '~/i18n/site-content';
+
+export function getStaticPaths() {
+  const localizedLocales = publishedLocales.filter(
+    (locale): locale is LocalizedLocale => locale !== 'en' && locale !== 'zh-cn'
+  );
+  const localizedPaths = [
+    '',
+    '404',
+    'about',
+    'changelog',
+    'contact',
+    'blog',
+    'pricing',
+    'services',
+    'homes/mobile-app',
+    'homes/personal',
+    'homes/saas',
+    'homes/startup',
+    'landing/click-through',
+    'landing/lead-generation',
+    'landing/pre-launch',
+    'landing/product',
+    'landing/sales',
+    'landing/subscription',
+  ] as const;
+
+  return localizedLocales.flatMap((locale) =>
+    localizedPaths.map((path) => ({
+      params: { locale, path: path || undefined },
+      props: { locale, path },
+    }))
+  );
+}
+
+interface Props {
+  locale: LocalizedLocale;
+  path: string;
+}
+
+const { locale, path } = Astro.props;
+const content = localizedSiteContent[locale];
+---
+
+{
+  path === '' ? (
+    <LocalizedHome locale={locale} content={content} />
+  ) : (
+    <LocalizedPage locale={locale} path={path} content={content} />
+  )
+}

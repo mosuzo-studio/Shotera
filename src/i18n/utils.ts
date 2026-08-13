@@ -31,7 +31,7 @@ export function getLangFromUrl(url: URL): Lang {
  */
 export function useTranslations(lang: Lang) {
   return function t(key: UIKey): string {
-    return ui[lang][key] ?? ui[defaultLang][key];
+    return ui[lang][key] ?? (ui[defaultLang][key] as string);
   };
 }
 
@@ -84,5 +84,8 @@ export function switchLocalePath(url: URL, targetLang: Lang): string {
   }
 
   const appPath = '/' + segments.join('/');
+  if ((appPath === '/privacy' || appPath === '/terms') && targetLang !== 'en' && targetLang !== 'zh-cn') {
+    return appPath;
+  }
   return localizedPath(targetLang, appPath === '/' ? '/' : appPath);
 }

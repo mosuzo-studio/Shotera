@@ -3,7 +3,12 @@ import { Icon } from 'astro-icon/components';
 
 import { languages, switchLocalePath, type Lang } from '~/i18n/utils';
 
-const currentLang = (Astro.currentLocale ?? 'en') as Lang;
+interface Props {
+  lang?: Lang;
+}
+
+const { lang: explicitLang } = Astro.props;
+const currentLang = explicitLang ?? ((Astro.currentLocale ?? 'en') as Lang);
 const entries = Object.entries(languages) as [Lang, string][];
 ---
 
@@ -18,7 +23,7 @@ const entries = Object.entries(languages) as [Lang, string][];
     <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 hidden md:inline" />
   </button>
   <ul
-    class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute right-0 pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[140px] drop-shadow-xl"
+    class="dropdown-menu max-h-[70vh] overflow-y-auto md:backdrop-blur-md dark:md:bg-dark rounded md:absolute right-0 pl-4 md:pl-0 md:hidden font-medium md:bg-white/95 md:min-w-[190px] drop-shadow-xl"
   >
     {
       entries.map(([lang, label]) => (

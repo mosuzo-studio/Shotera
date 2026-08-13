@@ -1,0 +1,144 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import PageLayout from '~/layouts/PageLayout.astro';
+import DownloadButtons from '~/components/ui/DownloadButtons.astro';
+import type { LocalizedSiteContent, LocalizedLocale } from '~/i18n/site-content';
+
+interface Props {
+  locale: LocalizedLocale;
+  content: LocalizedSiteContent;
+}
+
+const { locale, content } = Astro.props;
+const featureIcons = [
+  'tabler:capture',
+  'tabler:pencil',
+  'tabler:sparkles',
+  'tabler:text-recognition',
+  'tabler:language',
+  'tabler:pin',
+];
+const metadata = {
+  title: content.metaTitle,
+  description: content.metaDescription,
+  ignoreTitleTemplate: true,
+};
+---
+
+<PageLayout metadata={metadata} lang={locale}>
+  <script is:inline type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+
+  <section class="relative overflow-hidden px-5 pb-20 pt-20 sm:pt-28">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.14),transparent_50%)]"></div>
+    <div class="mx-auto max-w-5xl text-center">
+      <p class="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">Shotera for Windows</p>
+      <h1 class="text-balance text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+        {content.heroTitle}
+        <span class="text-blue-600 dark:text-blue-400">{content.heroAccent}</span>
+      </h1>
+      <p class="mx-auto mt-7 max-w-3xl text-pretty text-lg leading-8 text-gray-600 dark:text-gray-300">
+        {content.heroSubtitle}
+      </p>
+      <p class="mx-auto mt-4 max-w-2xl text-sm font-medium text-gray-500 dark:text-gray-400">{content.philosophy}</p>
+      <div class="mt-10 flex justify-center">
+        <DownloadButtons
+          language={content.storeLanguage}
+          moreVersionsLabel={content.moreVersions}
+          storeAriaLabel={content.storeAria}
+          moreVersionsAriaLabel={content.moreVersions}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="px-5 py-20 sm:py-24">
+    <div class="mx-auto max-w-6xl">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          {content.featuresTitle}
+        </h2>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">{content.featuresSubtitle}</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {
+          content.features.map((feature, index) => (
+            <article class="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+              <Icon name={featureIcons[index]} class="mb-5 h-8 w-8 text-blue-600 dark:text-blue-400" />
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
+              <p class="mt-3 leading-7 text-gray-600 dark:text-gray-300">{feature.description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 px-5 py-20 dark:bg-gray-900/50 sm:py-24">
+    <div class="mx-auto max-w-5xl">
+      <h2 class="text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+        {content.workflowTitle}
+      </h2>
+      <ol class="mt-12 grid gap-6 md:grid-cols-2">
+        {
+          content.workflow.map((step, index) => (
+            <li class="flex gap-4 rounded-2xl bg-white p-6 shadow-sm dark:bg-gray-900">
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 font-bold text-white">
+                {index + 1}
+              </span>
+              <span class="pt-1 leading-7 text-gray-700 dark:text-gray-200">{step}</span>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section id="faqs" class="px-5 py-20 sm:py-24">
+    <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+      <article
+        class="rounded-3xl border border-emerald-200 bg-emerald-50 p-8 dark:border-emerald-900 dark:bg-emerald-950/30"
+      >
+        <Icon name="tabler:shield-lock" class="h-9 w-9 text-emerald-700 dark:text-emerald-400" />
+        <h2 class="mt-5 text-2xl font-bold text-gray-900 dark:text-white">{content.privacyTitle}</h2>
+        <p class="mt-4 leading-7 text-gray-700 dark:text-gray-200">{content.privacyText}</p>
+        <a
+          class="mt-5 inline-flex font-semibold text-emerald-800 underline underline-offset-4 dark:text-emerald-300"
+          href="/privacy"
+        >
+          {content.privacyLink}
+        </a>
+      </article>
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">{content.faqTitle}</h2>
+        <div class="mt-6 space-y-4">
+          {
+            content.faqs.map((item) => (
+              <details class="group rounded-2xl border border-gray-200 p-5 dark:border-gray-800">
+                <summary class="cursor-pointer list-none font-semibold text-gray-900 dark:text-white">
+                  {item.title}
+                </summary>
+                <p class="mt-3 leading-7 text-gray-600 dark:text-gray-300">{item.answer}</p>
+              </details>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 pb-24">
+    <div class="mx-auto max-w-5xl rounded-3xl bg-gray-950 px-6 py-14 text-center text-white sm:px-12">
+      <h2 class="text-3xl font-bold sm:text-4xl">{content.ctaTitle}</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-gray-300">{content.ctaText}</p>
+      <div class="mt-8 flex justify-center">
+        <DownloadButtons
+          language={content.storeLanguage}
+          moreVersionsLabel={content.moreVersions}
+          storeAriaLabel={content.storeAria}
+          moreVersionsAriaLabel={content.moreVersions}
+        />
+      </div>
+    </div>
+  </section>
+</PageLayout>

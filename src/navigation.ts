@@ -4,12 +4,13 @@ import { localizedPath, useTranslations, type Lang } from './i18n/utils';
 export const getHeaderData = (lang: Lang) => {
   const t = useTranslations(lang);
   const l = (path: string) => localizedPath(lang, path);
+  const blogHref = lang === 'en' || lang === 'zh-cn' ? getBlogPermalink() : l('/blog');
 
   return {
     links: [
       { text: t('nav.features'), href: l('/#features') },
       { text: t('nav.pricing'), href: l('/pricing') },
-      { text: t('nav.blog'), href: getBlogPermalink() },
+      { text: t('nav.blog'), href: blogHref },
       { text: t('nav.about'), href: l('/about') },
     ],
     actions: [{ text: t('nav.download'), href: 'https://github.com/mosuzo-studio/Shotera/releases', icon: 'tabler:download' }],
@@ -19,6 +20,9 @@ export const getHeaderData = (lang: Lang) => {
 export const getFooterData = (lang: Lang) => {
   const t = useTranslations(lang);
   const l = (path: string) => localizedPath(lang, path);
+  const hasLocalizedLegalPages = lang === 'en' || lang === 'zh-cn';
+  const legal = (path: '/terms' | '/privacy') => (hasLocalizedLegalPages ? l(path) : path);
+  const blogHref = lang === 'en' || lang === 'zh-cn' ? getBlogPermalink() : l('/blog');
 
   return {
     links: [
@@ -37,7 +41,6 @@ export const getFooterData = (lang: Lang) => {
         title: t('footer.support'),
         links: [
           { text: t('footer.download'), href: 'https://github.com/mosuzo-studio/Shotera/releases' },
-          { text: t('footer.docs'), href: '#' },
           { text: t('footer.faq'), href: l('/#faqs') },
           { text: t('footer.changelog'), href: l('/changelog') },
           { text: t('footer.feedback'), href: l('/contact') },
@@ -47,14 +50,14 @@ export const getFooterData = (lang: Lang) => {
         title: t('footer.company'),
         links: [
           { text: t('footer.about'), href: l('/about') },
-          { text: t('footer.blog'), href: getBlogPermalink() },
+          { text: t('footer.blog'), href: blogHref },
           { text: t('footer.contact'), href: l('/contact') },
         ],
       },
     ],
     secondaryLinks: [
-      { text: t('footer.terms'), href: l('/terms') },
-      { text: t('footer.privacy'), href: l('/privacy') },
+      { text: t('footer.terms'), href: legal('/terms') },
+      { text: t('footer.privacy'), href: legal('/privacy') },
     ],
     socialLinks: [
       { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },

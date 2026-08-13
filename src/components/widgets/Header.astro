@@ -23,6 +23,7 @@ interface MenuLink extends Link {
 }
 
 export interface Props {
+  lang?: Lang;
   id?: string;
   links?: Array<MenuLink>;
   actions?: Array<CallToAction>;
@@ -35,6 +36,7 @@ export interface Props {
 }
 
 const {
+  lang: explicitLang,
   id = 'header',
   links = [],
   actions = [],
@@ -47,7 +49,7 @@ const {
 } = Astro.props;
 
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
-const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+const lang = explicitLang ?? ((Astro.currentLocale ?? defaultLang) as Lang);
 const homeHref = localizedPath(lang, '/');
 ---
 
@@ -141,7 +143,7 @@ const homeHref = localizedPath(lang, '/');
     >
       <div class="items-center flex justify-between w-full md:w-auto">
         <div class="flex">
-          <LanguageSwitcher />
+          <LanguageSwitcher lang={lang} />
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
           {
             showRssFeed && (

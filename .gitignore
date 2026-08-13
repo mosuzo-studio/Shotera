@@ -23,3 +23,6 @@ pnpm-lock.yaml
 
 .astro
 .gstack/
+
+# local debug logs
+debug.log

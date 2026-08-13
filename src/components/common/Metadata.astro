@@ -7,11 +7,13 @@ import type { SEOProps } from 'astro-seo';
 import { SITE, METADATA, I18N } from 'astrowind:config';
 import type { MetaData, MetaDataOpenGraph } from '~/types';
 import { getCanonical } from '~/utils/permalinks';
+import { defaultLang, languages, switchLocalePath, type Lang } from '~/i18n/utils';
 
 import { adaptOpenGraphImages } from '~/utils/images';
 
 export interface Props extends MetaData {
   dontUseTitleTemplate?: boolean;
+  language?: Lang;
 }
 
 const {
@@ -22,8 +24,9 @@ const {
   description,
   openGraph = {},
   twitter = {},
+  language,
 } = Astro.props;
-const currentLocale = Astro.currentLocale ?? I18N?.language ?? 'en';
+const currentLocale = language ?? Astro.currentLocale ?? I18N?.language ?? 'en';
 
 const mergedOg: MetaDataOpenGraph = merge(
   {
@@ -109,6 +112,18 @@ const seoProps: SEOProps = {
   twitter: mergedTwitter,
   surpressWarnings: true,
 };
+
+const isLegalPage = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?(?:privacy|terms)\/?$/i.test(Astro.url.pathname);
+const alternateLocales = (Object.keys(languages) as Lang[]).filter(
+  (locale) => !isLegalPage || locale === 'en' || locale === 'zh-cn'
+);
+const alternates = alternateLocales.map((locale) => ({
+  locale,
+  href: String(getCanonical(switchLocalePath(Astro.url, locale))),
+}));
+const defaultAlternate = String(getCanonical(switchLocalePath(Astro.url, defaultLang)));
 ---
 
 <SEO {...seoProps} />
+{alternates.map(({ locale, href }) => <link rel="alternate" hreflang={locale} href={href} />)}
+<link rel="alternate" hreflang="x-default" href={defaultAlternate} />

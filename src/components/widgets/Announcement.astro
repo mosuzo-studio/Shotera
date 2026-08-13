@@ -1,7 +1,12 @@
 ---
-import { useTranslations, defaultLang, type Lang } from '~/i18n/utils';
+import { localizedPath, useTranslations, defaultLang, type Lang } from '~/i18n/utils';
 
-const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+interface Props {
+  lang?: Lang;
+}
+
+const { lang: explicitLang } = Astro.props;
+const lang = explicitLang ?? ((Astro.currentLocale ?? defaultLang) as Lang);
 const t = useTranslations(lang);
 ---
 
@@ -12,7 +17,7 @@ const t = useTranslations(lang);
     class="bg-white/20 dark:bg-slate-700 text-slate-100 dark:text-slate-300 font-semibold px-1 py-0.5 text-xs mr-0.5 rtl:mr-0 rtl:ml-0.5 inline-block"
     >{t('announcement.new')}</span
   >
-  <a href="/#features" class="text-slate-300 hover:underline dark:text-slate-400 font-medium"
+  <a href={localizedPath(lang, '/#features')} class="text-slate-300 hover:underline dark:text-slate-400 font-medium"
     >{t('announcement.text')}</a
   >
   <a

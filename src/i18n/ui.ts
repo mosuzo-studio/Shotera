@@ -1,11 +1,11 @@
-import { defaultLocale, localeRegistry, type PublishedLocale } from './locales';
+import { defaultLocale, localeRegistry, publishedLocales, type PublishedLocale } from './locales';
+import { localizedSiteContent } from './site-content';
 
-export const languages = {
-  en: localeRegistry.en.label,
-  'zh-cn': localeRegistry['zh-cn'].label,
-} as const satisfies Record<PublishedLocale, string>;
+export const languages = Object.fromEntries(
+  publishedLocales.map((locale) => [locale, localeRegistry[locale].label])
+) as Record<PublishedLocale, string>;
 
-export type Lang = keyof typeof languages;
+export type Lang = PublishedLocale;
 
 export const defaultLang: Lang = defaultLocale;
 
@@ -15,7 +15,7 @@ export const defaultLang: Lang = defaultLocale;
  * `src/pages` and `src/pages/zh-cn`, not here — this dictionary is for shared,
  * reused fragments only.
  */
-export const ui = {
+const baseUi = {
   en: {
     'nav.homes': 'Homes',
     'nav.homes.saas': 'SaaS',
@@ -192,4 +192,44 @@ export const ui = {
   },
 } as const;
 
-export type UIKey = keyof (typeof ui)[typeof defaultLang];
+export type UIKey = keyof (typeof baseUi)[typeof defaultLang];
+
+const localizedUi = Object.fromEntries(
+  Object.entries(localizedSiteContent).map(([locale, content]) => [
+    locale,
+    {
+      'action.download': content.labels.download,
+      'nav.features': content.labels.features,
+      'nav.pricing': content.labels.pricing,
+      'nav.blog': content.labels.blog,
+      'nav.about': content.labels.about,
+      'nav.download': content.moreVersions,
+      'footer.product': content.labels.product,
+      'footer.support': content.labels.support,
+      'footer.company': content.labels.company,
+      'footer.terms': content.labels.terms,
+      'footer.privacy': content.labels.privacy,
+      'footer.about': content.labels.about,
+      'footer.blog': content.labels.blog,
+      'footer.contact': content.pages.contact[0],
+      'footer.feat.screenshot': content.labels.screenshot,
+      'footer.feat.record': content.labels.recording,
+      'footer.feat.cutout': content.labels.cutout,
+      'footer.feat.ocr': content.labels.ocr,
+      'footer.feat.translate': content.labels.translation,
+      'footer.feat.pin': content.labels.pin,
+      'footer.download': content.labels.download,
+      'footer.faq': content.labels.faq,
+      'footer.changelog': content.labels.changelog,
+      'footer.feedback': content.labels.feedback,
+      'footer.tagline': content.labels.tagline,
+      'announcement.new': content.labels.newLabel,
+      'announcement.text': content.labels.announcement,
+    },
+  ])
+) as Record<Exclude<Lang, 'en' | 'zh-cn'>, Partial<Record<UIKey, string>>>;
+
+export const ui: Record<Lang, Partial<Record<UIKey, string>>> = {
+  ...baseUi,
+  ...localizedUi,
+};
