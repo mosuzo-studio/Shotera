@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="126" height="40" viewBox="0 0 126 40" role="img" aria-label="官方网站">
+  <title>官方网站</title>
+  <rect width="126" height="40" rx="4" fill="#466A9F"/>
+  <g transform="translate(10 8)">
+    <path d="M12.9999.0712891V11.0004h6v-4c0-3.52647-2.6077-6.443881-6-6.9291109Z" fill="url(#badge-g0)"/>
+    <path d="M23.929 13.0004H12.9999v6h4c3.5265 0 6.4439-2.6077 6.9291-6Z" fill="url(#badge-g1)"/>
+    <path d="M10.9999 23.9295V13.0004l-5.99999 0v4c0 3.5265 2.60771 6.4439 5.99999 6.9291Z" fill="url(#badge-g2)"/>
+    <path d="M.0708008 11.0004H10.9999v-6H6.99991c-3.52647 0-6.443879 2.60771-6.9291092 6Z" fill="url(#badge-g3)"/>
+  </g>
+  <text x="44" y="26" fill="#fff" font-family="Segoe UI,Microsoft YaHei,Noto Sans SC,sans-serif" font-size="13" font-weight="700">官方网站</text>
+  <defs>
+    <linearGradient id="badge-g0" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#70D53C"/><stop offset="1" stop-color="#42B950"/></linearGradient>
+    <linearGradient id="badge-g1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#29D2B4"/><stop offset="1" stop-color="#24BEBB"/></linearGradient>
+    <linearGradient id="badge-g2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#35C764"/><stop offset="1" stop-color="#26B659"/></linearGradient>
+    <linearGradient id="badge-g3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#A7DD2B"/><stop offset="1" stop-color="#58C83C"/></linearGradient>
+  </defs>
+</svg>

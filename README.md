@@ -9,11 +9,25 @@
 </p>
 
 <p align="center">
-  AI-powered screenshot capture, annotation, and desktop pinning. AI Cutout, AI Erase, offline local OCR, smart UI selection, image translation, and Presentation Mode turn screenshots into ready-to-use content.
+  A Windows screenshot, annotation, and desktop-pinning app with AI image tools, offline OCR, smart selection, image translation, and Presentation Mode.
 </p>
 
 <p align="center">
-  <a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a>
+  <strong><a href="README.md">English</a></strong> ·
+  <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="README.zh-TW.md">繁體中文</a> ·
+  <a href="README.ja.md">日本語</a> ·
+  <a href="README.pt-BR.md">Português (Brasil)</a> ·
+  <a href="README.es.md">Español</a> ·
+  <a href="README.de.md">Deutsch</a> ·
+  <a href="README.fr.md">Français</a> ·
+  <a href="README.it.md">Italiano</a> ·
+  <a href="README.ko.md">한국어</a> ·
+  <a href="README.ru.md">Русский</a> ·
+  <a href="README.ar.md">العربية</a> ·
+  <a href="README.nl.md">Nederlands</a> ·
+  <a href="README.pl.md">Polski</a> ·
+  <a href="README.sv.md">Svenska</a>
 </p>
 
 <p align="center">
@@ -23,146 +37,211 @@
 </p>
 
 <p align="center">
-  <a href="https://get.microsoft.com/installer/download/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0" target="_self">
-    <img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="Get Shotera from Microsoft Store" />
+  <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer">
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Get Shotera from Microsoft Store" />
   </a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self">
     <img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="Download more versions from GitHub Releases" />
   </a>
 </p>
 
+<details open>
+<summary><strong>🧭 Quick navigation</strong></summary>
+
+| Discover Shotera | Explore | Get started |
+| --- | --- | --- |
+| [Why Shotera](#built-for-the-work-behind-every-screenshot)<br/>[Core highlights](#core-highlights)<br/>[Product gallery](#product-gallery) | [Complete feature set](#complete-feature-set)<br/>[Windows workflow](#a-focused-windows-workflow)<br/>[Privacy and control](#privacy-and-control)<br/>[Supported languages](#supported-languages)<br/>[Keywords](#keywords) | [Download and editions](#download-and-editions)<br/>[Support and feedback](#support-and-feedback)<br/>[Support Shotera on Ko-fi](#support-shotera-on-ko-fi) |
+
+</details>
+
 <figure>
   <img src="src/assets/images/readme/01-overview.png" alt="Shotera overview" />
-  <figcaption><strong>Shotera at a glance.</strong> Smart capture, AI tools, annotation, offline OCR, and image translation in one Windows app.</figcaption>
+  <p align="center"><strong>Shotera at a glance.</strong> Smart capture, AI tools, annotation, offline OCR, and image translation in one Windows app.</p>
 </figure>
+
+<br/>
 
 ## Built for the work behind every screenshot
 
-Shotera turns a capture into something ready to share. Press `F1` to capture a region, window, interface element, or full screen; refine the selection at pixel level; then annotate, redact, translate, extract text, or pin the result above your desktop with `F3`.
+Shotera turns a screenshot into something ready to explain, share, or reuse. From product feedback and bug reports to tutorials, documentation, support, design reviews, and meetings, capture, editing, text extraction, and desktop reference stay in one focused workflow.
 
-It is made for product feedback, bug reports, tutorials, documentation, support replies, design reviews, meetings, and any workflow where a clear visual explanation saves time.
+<br/>
 
-## Highlights
+## Core highlights
 
-| Capture with confidence                                                                                                                                                               | Make the point clear                                                                                                                                                        | Reuse without friction                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Capture regions, windows, UI elements, or the full screen. Smart detection, nested-element selection, a magnifier, fixed sizes, coordinates, and delays help you land the exact area. | Add shapes, arrows, text, freehand drawing, highlights, step numbers, emoji stickers, and detail magnification. Protect sensitive information with mosaic or Gaussian blur. | Pin captures above other windows with `F3`; adjust opacity, rotation, flip, click-through, and visibility. Auto-save, filename templates, and multiple export formats keep output moving. |
+- **Smart, precise capture** — detect windows and nested UI elements, then refine the selection with a magnifier and pixel-level control.
+- **AI image editing** — isolate subjects with AI Cutout and remove unwanted content with AI Erase.
+- **Offline OCR and image translation** — extract copyable text on your device and quickly translate text inside images without uploading screenshots.
+- **Professional annotation and privacy protection** — use arrows, text, step numbers, detail magnification, mosaic, and Gaussian blur to explain clearly and protect sensitive information.
+- **Desktop pins and Presentation Mode** — press `F3` to keep references visible, or press `Pause` to clear desktop distractions before meetings or demonstrations.
 
-### AI and text tools where they belong
-
-- **AI Cutout and AI Erase** — isolate an image subject or remove unwanted content without leaving the capture workflow.
-- **Offline local OCR** — extract copyable text from screenshots, images, and documents on your PC.
-- **Image translation** — translate text contained in an image when you need it.
-- **Presentation Mode** — clear desktop distractions before a meeting or demonstration, then restore the previous state.
-
-## A focused Windows workflow
-
-1. Press `F1` and choose a free region, a window, a UI element, or the full screen.
-2. Use the magnifier and smart UI detection to refine the boundary.
-3. Annotate, redact, extract text, translate, or use AI image tools as needed.
-4. Save or share the result—or press `F3` to keep it visible while you work.
-
-Shotera supports **15 interface languages**: English, Simplified Chinese, Traditional Chinese, Japanese, Brazilian Portuguese, Spanish, German, French, Italian, Korean, Russian, Arabic, Dutch, Polish, and Swedish.
-
-### 1. Introduction
-
-Shotera is an AI-powered screenshot capture, annotation, and desktop pinning tool. AI Cutout, AI Erase, and offline local OCR fit directly into the capture workflow, helping you isolate subjects, clean up images, and extract copyable text.
-
-Press F1 to precisely capture a region, window, or UI element. Smart detection, a magnifier, and pixel-level adjustment make complex interfaces easier to target. Add arrows, step markers, text, mosaic, or blur for tutorials, feedback, and everyday communication, then press F3 to pin content above other windows. Custom Capture, image translation, and Presentation Mode are also included.
-
-### 2. What’s new in this version?
-
-- **AI image tools** — AI Cutout, AI Erase, and offline local OCR for subject extraction, visual cleanup, and text extraction.
-- **Precise capture** — Capture regions, windows, UI elements, or the full screen, with fixed sizes, coordinates, and delayed capture.
-- **Smart selection** — Detect windows and nested controls, move through UI hierarchy, and refine boundaries with a magnifier.
-- **Professional annotation and redaction** — Use arrows, text, shapes, step markers, drawing, highlights, magnification, mosaic, and Gaussian blur.
-- **Efficient reuse** — Pin images with F3, translate images, save automatically, use filename templates, and export in multiple formats.
-- **Presentation and personalization** — Use Presentation Mode and customize shortcuts, languages, fonts, startup behavior, and tray icons.
-
-### 3. Product features
-
-1. **AI Cutout** — isolate image subjects in one click for transparent-background assets.
-2. **AI Erase** — remove unwanted image content and reduce follow-up editing.
-3. **Offline local OCR** — extract copyable text from screenshots, images, and documents on your PC.
-4. **Image translation** — quickly translate text contained in images.
-5. **F3 desktop pins** — keep screenshots above other windows while you work.
-6. **Clipboard pins** — turn compatible images, text, or colors from the clipboard into quick desktop references.
-7. **Pin controls** — adjust opacity, flip, rotate, enable click-through, hide all pins, or restore recently closed pins.
-8. **Emoji stickers and visual emphasis** — highlight key details with scalable Emoji stickers, highlighters, and a detail magnifier.
-9. **Capture magnifier** — magnify selection edges for precise pixel-level adjustment.
-10. **Automatic numbering** — quickly add sequential markers for tutorials, feedback, and instructions.
-11. **Presentation Mode** — hide desktop icons and distractions before a meeting, then restore the previous state.
-12. **F1 quick capture** — capture a free region, window, or full screen.
-13. **Smart window and UI detection** — automatically target windows or interface elements for more accurate captures.
-14. **Nested element selection** — scroll the mouse wheel to choose different UI levels in complex apps.
-15. **Custom Capture** — use fixed dimensions, aspect ratio, screen coordinates, delay, and size presets.
-16. **Professional annotation** — add rectangles, ellipses, lines, single or double arrows, freehand drawing, and text.
-17. **Information redaction** — conceal sensitive content with mosaic or Gaussian blur.
-18. **Flexible editing** — move, resize, rotate, restyle, undo, and redo annotations.
-19. **Efficient output** — use auto-save, quick save, filename templates, and multiple image formats.
-20. **Personalization** — configure shortcuts, interface language, fonts, startup behavior, and tray icons.
-
-### 4. Keywords
-
-Shotera; Shotera AI; AI Cutout; AI image repair; offline OCR; screen capture; screenshot editor; image annotation; desktop pin; image translation
+<br/>
 
 ## Product gallery
 
 <figure>
   <img src="src/assets/images/readme/02-smart-capture.png" alt="Shotera smart capture and annotation workspace" />
-  <figcaption><strong>Smart capture.</strong> Select a window or interface element, then annotate it from the capture toolbar.</figcaption>
+  <p align="center"><strong>Smart capture.</strong> Press <code>F1</code> to start a capture, select a window or UI element, and annotate it directly from the capture toolbar.</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/03-annotation-redaction.png" alt="Shotera annotation and redaction tools" />
-  <figcaption><strong>Annotations and redaction.</strong> Use arrows, step numbers, mosaic, and a detail magnifier to make instructions clear and protect sensitive content.</figcaption>
+  <p align="center"><strong>Annotations and redaction.</strong> Use arrows, step numbers, mosaic, and a detail magnifier to make instructions clear and protect sensitive content.</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/04-ocr-translation.png" alt="Shotera offline OCR and image translation" />
-  <figcaption><strong>Offline OCR and image translation.</strong> Extract copyable text and translate image content without leaving the capture flow.</figcaption>
+  <p align="center"><strong>Offline OCR and image translation.</strong> Extract copyable text and translate image content without leaving the capture flow.</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/05-ai-cutout.png" alt="Shotera AI Cutout" />
-  <figcaption><strong>AI Cutout.</strong> Separate an image subject from its background and create transparent-background assets in one step.</figcaption>
+  <p align="center"><strong>AI Cutout.</strong> Separate an image subject from its background and create transparent-background assets in one step.</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/06-emoji-stickers.png" alt="Shotera Emoji stickers" />
-  <figcaption><strong>Emoji stickers.</strong> Add expressive, scalable visual emphasis to make screenshots easier to understand.</figcaption>
+  <p align="center"><strong>Emoji stickers.</strong> Add expressive, scalable visual emphasis to make screenshots easier to understand.</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/07-presentation-mode.png" alt="Shotera Presentation Mode" />
-  <figcaption><strong>Presentation Mode.</strong> Hide desktop distractions before a meeting or demonstration, then restore the previous state.</figcaption>
+  <p align="center"><strong>Presentation Mode.</strong> Press <code>Pause</code> to hide desktop distractions before a meeting or demonstration, then restore the previous state.</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/08-feature-overview.png" alt="Shotera feature overview" />
-  <figcaption><strong>A complete visual toolkit.</strong> Screenshot, annotation, OCR, translation, GIF creation, and Emoji support work together in one app.</figcaption>
+  <p align="center"><strong>A complete visual toolkit.</strong> Screenshot, annotation, OCR, translation, GIF creation, and Emoji support work together in one app.</p>
 </figure>
+
+<br/>
+
+## Complete feature set
+
+1. **Capture** — use `F1` for regions, windows, UI elements, or the full screen, with fixed dimensions, aspect ratios, coordinates, delays, and reusable presets.
+2. **AI image editing** — create transparent-background assets with AI Cutout and clean up unwanted image content with AI Erase.
+3. **OCR and translation** — extract copyable text locally from screenshots, images, and documents, or translate text contained in an image.
+4. **Annotation and redaction** — add shapes, arrows, text, freehand drawing, highlights, step numbers, emoji stickers, and detail magnification; conceal sensitive content with mosaic or Gaussian blur.
+5. **Desktop pins** — press `F3` to pin screenshots or compatible clipboard images, text, and colors; adjust opacity, rotation, flip, click-through, visibility, and recently closed items.
+6. **Presentation Mode** — press `Pause` to clear desktop icons and distractions for meetings or demonstrations, then restore the previous state.
+7. **Editing and output** — move, resize, rotate, restyle, undo, and redo annotations, then use quick save, auto-save, filename templates, and multiple image formats.
+8. **Personalization** — configure shortcuts, interface language, fonts, startup behavior, and tray icons.
+
+<br/>
+
+## A focused Windows workflow
+
+1. Press `F1` and choose a free region, window, UI element, or the full screen.
+2. Refine the boundary with smart UI detection and the capture magnifier.
+3. Annotate, redact, extract text, translate, or apply AI image tools.
+4. Save or share the result—or press `F3` to keep it visible while you work.
+
+<br/>
 
 ## Privacy and control
 
-Your captures are saved locally. Offline OCR works on your device, so text extraction does not require uploading screenshots. Shotera also provides configurable shortcuts, interface language and font settings, startup behavior, and tray-icon preferences.
+Shotera saves captures locally. Offline OCR runs directly on your device, so screenshots do not need to be uploaded for text extraction.
 
-Read the [Privacy Policy](https://shotera.mosuzo.com/en/privacy) for details.
+You can also customize shortcuts, interface language and fonts, startup behavior, and tray icons, keeping the experience firmly under your control.
+
+See the [Privacy Policy](https://shotera.mosuzo.com/en/privacy) for details.
+
+<br/>
+
+## Supported languages
+
+Shotera is available in **15 interface languages**:
+
+<p>
+  <kbd>English</kbd>
+  <kbd>Simplified Chinese</kbd>
+  <kbd>Traditional Chinese</kbd>
+  <kbd>Japanese</kbd>
+  <kbd>Brazilian Portuguese</kbd>
+  <kbd>Spanish</kbd>
+  <kbd>German</kbd>
+  <kbd>French</kbd>
+  <kbd>Italian</kbd>
+  <kbd>Korean</kbd>
+  <kbd>Russian</kbd>
+  <kbd>Arabic</kbd>
+  <kbd>Dutch</kbd>
+  <kbd>Polish</kbd>
+  <kbd>Swedish</kbd>
+</p>
+
+<br/>
+
+## Keywords
+
+Shotera; Shotera AI; Mosuzo Studio; AI Cutout; AI image repair; offline OCR; screen capture; screenshot editor; image annotation; desktop pin; image translation
+
+<br/>
 
 ## Download and editions
 
-Download Shotera from [GitHub Releases](https://github.com/mosuzo-studio/Shotera/releases) or install it through the [Microsoft Store](https://apps.microsoft.com/detail/9N73LDHRMC8V).
+<p align="center">
+  <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer">
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Get Shotera from Microsoft Store" />
+  </a>
+  <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self">
+    <img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="Download more versions from GitHub Releases" />
+  </a>
+</p>
 
-Core screenshot, annotation, and desktop-pinning features are available free of charge. Advanced capabilities are available through Pro. The [Free vs. Pro comparison](https://shotera.mosuzo.com/en/pricing) is under construction; please refer to the editions and terms actually published at release.
+> **Edition note:** Features in the basic edition are free forever. Some advanced features require Pro; availability may vary by release.
 
-## Support and updates
+<br/>
 
-- [Website](https://shotera.mosuzo.com/en/)
-- [Release notes](https://shotera.mosuzo.com/en/changelog)
-- [GitHub Releases](https://github.com/mosuzo-studio/Shotera/releases)
-- Support: [support@shotera.app](mailto:support@shotera.app)
-- Feedback: [feedback@shotera.app](mailto:feedback@shotera.app)
+## Support and feedback
+
+Questions, suggestions, and feedback are always welcome.
+
+<p align="center">
+  <a href="https://shotera.mosuzo.com">
+    <img src="src/assets/images/readme/official-website-badge.svg" height="40" alt="Visit the official Shotera website" />
+  </a>
+  <a href="https://github.com/mosuzo-studio/Shotera/issues">
+    <img src="https://img.shields.io/badge/Feedback%20%26%20bugs-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="Share feedback or report a bug" />
+  </a>
+  <a href="https://shotera.mosuzo.com/en/changelog">
+    <img src="https://img.shields.io/badge/Release%20notes-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="Read the Shotera release notes" />
+  </a>
+  <a href="mailto:mosuzo.studio@gmail.com">
+    <img src="https://img.shields.io/badge/Email%20us-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="Email Mosuzo Studio" />
+  </a>
+</p>
+
+<br/>
+
+## Support Shotera on Ko-fi
+
+If Shotera makes your work easier, your support will help us continue developing it and bring you more new features. We’ll also share recent development updates on Ko-fi.
+
+<p align="center">
+  <a href="https://ko-fi.com/mosuzo">
+    <img src="src/assets/images/readme/support_me_on_kofi_beige.png" width="280" alt="Support Shotera on Ko-fi" />
+  </a>
+</p>
 
 ---
 
-© Mosuzo Studio. Shotera is a Windows desktop application.
+<p align="center">
+  <a href="https://shotera.mosuzo.com">
+    <img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="40" align="middle" alt="Mosuzo Studio logo" />
+  </a>
+  <strong>Mosuzo Studio</strong> · Copyright © 2026. All rights reserved.<br/>
+  Shotera is built for Windows to make screenshot capture, visual communication, and desktop reference more efficient.
+</p>

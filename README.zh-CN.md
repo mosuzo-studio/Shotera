@@ -9,11 +9,25 @@
 </p>
 
 <p align="center">
-  AI 截图、标注与桌面贴图工具。集成 AI 抠图、AI 擦图、本地离线 OCR、智能控件识别、图片翻译和演示模式，让截图立刻成为可用内容。
+  一款面向 Windows 的截图、标注与桌面贴图工具，集成 AI 图像处理、本地 OCR、智能选区、图片翻译和演示模式。
 </p>
 
 <p align="center">
-  <a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a>
+  <a href="README.md">English</a> ·
+  <strong><a href="README.zh-CN.md">简体中文</a></strong> ·
+  <a href="README.zh-TW.md">繁體中文</a> ·
+  <a href="README.ja.md">日本語</a> ·
+  <a href="README.pt-BR.md">Português (Brasil)</a> ·
+  <a href="README.es.md">Español</a> ·
+  <a href="README.de.md">Deutsch</a> ·
+  <a href="README.fr.md">Français</a> ·
+  <a href="README.it.md">Italiano</a> ·
+  <a href="README.ko.md">한국어</a> ·
+  <a href="README.ru.md">Русский</a> ·
+  <a href="README.ar.md">العربية</a> ·
+  <a href="README.nl.md">Nederlands</a> ·
+  <a href="README.pl.md">Polski</a> ·
+  <a href="README.sv.md">Svenska</a>
 </p>
 
 <p align="center">
@@ -23,146 +37,211 @@
 </p>
 
 <p align="center">
-  <a href="https://get.microsoft.com/installer/download/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0" target="_self">
-    <img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="从 Microsoft Store 获取 Shotera" />
+  <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer">
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="从 Microsoft Store 获取 Shotera" />
   </a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self">
     <img src="https://img.shields.io/badge/%E6%9B%B4%E5%A4%9A%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="从 GitHub Releases 下载更多版本" />
   </a>
 </p>
 
+<details open>
+<summary><strong>🧭 快速导航</strong></summary>
+
+| 了解 Shotera | 深入了解 | 开始使用 |
+| --- | --- | --- |
+| [为截图之后的工作而生](#为截图之后的工作而生)<br/>[核心亮点](#核心亮点)<br/>[产品图集](#产品图集) | [完整功能](#完整功能)<br/>[Windows 工作流](#专注的-windows-工作流)<br/>[隐私与掌控感](#隐私与掌控感)<br/>[支持语言](#支持语言)<br/>[关键词](#关键词) | [下载与版本](#下载与版本)<br/>[支持与反馈](#支持与反馈)<br/>[在 Ko-fi 上支持 Shotera](#在-ko-fi-上支持-shotera) |
+
+</details>
+
 <figure>
   <img src="src/assets/images/readme/01-overview.png" alt="Shotera 产品概览" />
-  <figcaption><strong>Shotera 一览。</strong> 在一款 Windows 应用中完成智能截图、AI 图像处理、标注、本地 OCR 与图片翻译。</figcaption>
+  <p align="center"><strong>Shotera 一览。</strong> 在一款 Windows 应用中完成智能截图、AI 图像处理、标注、本地 OCR 与图片翻译。</p>
 </figure>
+
+<br/>
 
 ## 为截图之后的工作而生
 
-Shotera 让每一次截图都能直接投入使用。按下 `F1`，即可截取区域、窗口、界面控件或全屏；完成像素级调整后，继续标注、脱敏、翻译、识别文字，或按 `F3` 将结果置顶在桌面上。
+Shotera 让截图从“捕获”直接走向“可用”。无论是产品反馈、缺陷报告、教程、文档、客服支持、设计评审还是会议演示，都可以在一个专注的工作流中完成截图、编辑、文字提取与桌面参考，更快地把重点说明清楚。
 
-无论是产品反馈、缺陷报告、教程、文档、客服回复、设计评审、会议，还是任何需要用画面高效说明问题的工作流，Shotera 都能帮助你更快地传达重点。
+<br/>
 
-## 核心能力
+## 核心亮点
 
-| 精准截取                                                                                                               | 清晰表达                                                                                               | 高效复用                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| 支持区域、窗口、界面控件与全屏截图。智能识别、嵌套控件层级选择、放大镜、固定尺寸、坐标和延时设置，帮助你准确选中目标。 | 支持图形、箭头、文字、画笔、荧光笔、自动序号、Emoji 贴纸和局部放大；可用马赛克或高斯模糊遮挡敏感信息。 | 按 `F3` 将截图置顶；可调透明度、旋转、翻转、鼠标穿透和显示状态。自动保存、文件名模板及多格式导出，让成果快速流转。 |
+- **智能精准截图：** 自动识别窗口与嵌套控件，配合截图放大镜和像素级调整，快速锁定目标区域。
+- **AI 图像处理：** 使用 AI 抠图快速分离主体，通过 AI 擦图移除画面中不需要的内容。
+- **本地 OCR 与图片翻译：** 在设备端提取可复制文字，并快速翻译图片中的文本，无需上传截图。
+- **专业标注与隐私保护：** 使用箭头、文字、自动序号、局部放大、马赛克和高斯模糊，让说明更清楚、信息更安全。
+- **桌面贴图与演示模式：** 按 `F3` 将内容置顶参考；按 `Pause` 可在会议或演示前快速隐藏桌面干扰项。
 
-### 将 AI 和文字工具放进截图流程
-
-- **AI 抠图与 AI 擦图**：无需离开当前工作流，即可提取图片主体或移除不需要的内容。
-- **本地离线 OCR**：在电脑本机提取截图、图片和文档中的可复制文字。
-- **图片翻译**：快速翻译图片中的文字内容。
-- **演示模式**：在会议或演示前隐藏桌面干扰项，结束后恢复原有状态。
-
-## 专注的 Windows 工作流
-
-1. 按 `F1`，选择自由区域、窗口、界面控件或全屏。
-2. 使用放大镜和智能控件识别，细调选区边界。
-3. 根据需要标注、脱敏、识别文字、翻译或使用 AI 图像工具。
-4. 保存或分享结果；也可按 `F3` 将内容留在桌面上，边看边做。
-
-Shotera 支持 **15 种界面语言**：英语、简体中文、繁体中文、日语、巴西葡萄牙语、西班牙语、德语、法语、意大利语、韩语、俄语、阿拉伯语、荷兰语、波兰语和瑞典语。
-
-### 1. 简介
-
-Shotera 是一款将 AI 处理融入日常工作流的截图、标注与桌面贴图工具。AI 抠图、AI 擦图和本地离线 OCR 可快速提取主体、清理画面或识别可复制文字。
-
-按 F1 即可精准截取区域、窗口或界面控件；智能识别、放大镜和像素级调整让复杂界面也能轻松选准。箭头、序号、文字、马赛克和模糊等标注工具，适合教程、反馈与工作沟通；按 F3 可将内容钉在桌面最上层。还支持自定义截图、图片翻译和演示模式。
-
-### 2. 此版本有哪些新增功能？
-
-- **AI 图像处理：** AI 抠图、AI 擦图和本地离线 OCR，覆盖主体提取、画面清理和文字提取。
-- **精准截图：** 支持区域、窗口、界面控件、全屏，以及固定尺寸、指定位置和延时截图。
-- **智能选区：** 自动识别窗口与嵌套控件，可切换控件层级，并通过放大镜进行像素级微调。
-- **专业标注与脱敏：** 提供箭头、文字、图形、序号、画笔、荧光笔、放大镜、马赛克和高斯模糊。
-- **高效复用：** 支持 F3 桌面贴图、图片翻译、自动保存、文件名模板和多格式导出。
-- **演示与个性化：** 支持演示模式、自定义快捷键、界面语言、字体、启动方式和托盘图标。
-
-### 3. 产品功能
-
-1. **AI 抠图：** 一键分离图片主体，便于制作透明背景素材。
-2. **AI 擦图：** 辅助移除图片中不需要的内容，减少二次修图步骤。
-3. **本地离线 OCR：** 在电脑本机提取截图、图片和文档中的可复制文字。
-4. **图片翻译：** 快速翻译图片中的文字内容。
-5. **F3 桌面贴图：** 将截图置顶显示，边看边做。
-6. **剪贴板贴图：** 将兼容的图片、文字或颜色内容快速转为桌面参考。
-7. **贴图控制：** 支持透明度、翻转、旋转、鼠标穿透、统一隐藏和最近关闭恢复。
-8. **Emoji 表情贴纸与重点强调：** 使用可缩放 Emoji 表情贴纸、荧光笔和局部放大镜突出重点。
-9. **截图放大镜：** 放大检查选区边缘，进行像素级精准调整。
-10. **自动序号：** 快速添加连续编号，轻松制作教程、反馈和操作指引。
-11. **演示模式：** 演示或会议前隐藏桌面图标和干扰项，结束后恢复桌面。
-12. **F1 快速截图：** 支持自由区域、窗口和全屏截图。
-13. **智能窗口与控件识别：** 自动锁定窗口或界面元素，提升截图准确度。
-14. **嵌套控件层级切换：** 滚动鼠标滚轮即可在复杂界面中选择不同层级。
-15. **自定义截图：** 支持固定尺寸、固定比例、屏幕坐标、延时和常用尺寸预设。
-16. **专业标注：** 支持矩形、椭圆、直线、单/双向箭头、画笔和文字。
-17. **信息脱敏：** 使用马赛克或高斯模糊遮挡敏感内容。
-18. **灵活编辑：** 可移动、缩放、旋转、调整样式，并支持撤销和重做。
-19. **高效输出：** 支持自动保存、快捷保存、文件名模板和多种图像格式。
-20. **个性化设置：** 支持自定义快捷键、界面语言、字体、启动方式和托盘图标。
-
-### 4. 关键词
-
-Shotera；Shotera AI；AI 抠图；AI 修复；离线 OCR；截图工具；截图编辑；截图标注；桌面贴图；图片翻译
+<br/>
 
 ## 产品图集
 
 <figure>
   <img src="src/assets/images/readme/02-smart-capture.png" alt="Shotera 智能截图与标注工作区" />
-  <figcaption><strong>智能截图。</strong> 选择窗口或界面控件后，直接在截图工具栏中完成标注。</figcaption>
+  <p align="center"><strong>智能截图。</strong> 按 <code>F1</code> 开始截图，选择窗口或界面控件后，直接在截图工具栏中完成标注。</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/03-annotation-redaction.png" alt="Shotera 标注与脱敏工具" />
-  <figcaption><strong>标注与脱敏。</strong> 用箭头、序号、马赛克和局部放大镜清晰说明操作，并保护敏感内容。</figcaption>
+  <p align="center"><strong>标注与脱敏。</strong> 用箭头、序号、马赛克和局部放大镜清晰说明操作，并保护敏感内容。</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/04-ocr-translation.png" alt="Shotera 本地 OCR 与图片翻译" />
-  <figcaption><strong>本地 OCR 与图片翻译。</strong> 无需离开截图流程，即可提取可复制文字并翻译图片内容。</figcaption>
+  <p align="center"><strong>本地 OCR 与图片翻译。</strong> 无需离开截图流程，即可提取可复制文字并翻译图片内容。</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/05-ai-cutout.png" alt="Shotera AI 抠图" />
-  <figcaption><strong>AI 抠图。</strong> 一步分离图片主体与背景，便于制作透明背景素材。</figcaption>
+  <p align="center"><strong>AI 抠图。</strong> 一步分离图片主体与背景，便于制作透明背景素材。</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/06-emoji-stickers.png" alt="Shotera Emoji 表情贴纸" />
-  <figcaption><strong>Emoji 表情贴纸。</strong> 使用可缩放的视觉贴纸突出重点，让截图更易理解。</figcaption>
+  <p align="center"><strong>Emoji 表情贴纸。</strong> 使用可缩放的视觉贴纸突出重点，让截图更易理解。</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/07-presentation-mode.png" alt="Shotera 演示模式" />
-  <figcaption><strong>演示模式。</strong> 在会议或演示前隐藏桌面干扰项，结束后恢复原有状态。</figcaption>
+  <p align="center"><strong>演示模式。</strong> 按 <code>Pause</code> 在会议或演示前隐藏桌面干扰项，结束后恢复原有状态。</p>
 </figure>
+
+<br/>
 
 <figure>
   <img src="src/assets/images/readme/08-feature-overview.png" alt="Shotera 功能概览" />
-  <figcaption><strong>完整的视觉工具集。</strong> 截图、标注、OCR、翻译、GIF 制作和 Emoji 支持在同一款应用中协同工作。</figcaption>
+  <p align="center"><strong>完整的视觉工具集。</strong> 截图、标注、OCR、翻译、GIF 制作和 Emoji 支持在同一款应用中协同工作。</p>
 </figure>
+
+<br/>
+
+## 完整功能
+
+1. **截图：** 按 `F1` 截取区域、窗口、界面控件或全屏，并可设置固定尺寸、比例、屏幕坐标、延时和常用预设。
+2. **AI 图像处理：** 使用 AI 抠图制作透明背景素材，通过 AI 擦图清理画面中不需要的内容。
+3. **OCR 与翻译：** 在本机提取截图、图片和文档中的可复制文字，或翻译图片中的文本。
+4. **标注与脱敏：** 添加图形、箭头、文字、画笔、荧光笔、自动序号、Emoji 贴纸和局部放大，并使用马赛克或高斯模糊遮挡敏感内容。
+5. **桌面贴图：** 按 `F3` 置顶截图或剪贴板中的兼容图片、文字和颜色，并调整透明度、旋转、翻转、鼠标穿透、显示状态及最近关闭内容。
+6. **演示模式：** 按 `Pause` 清理会议或演示时的桌面图标与干扰项，并在结束后恢复原有状态。
+7. **编辑与输出：** 移动、缩放、旋转和调整标注样式，支持撤销与重做，并通过快捷保存、自动保存、文件名模板和多种图像格式输出成果。
+8. **个性化设置：** 自定义快捷键、界面语言、字体、启动方式和托盘图标。
+
+<br/>
+
+## 专注的 Windows 工作流
+
+1. 按 `F1`，选择自由区域、窗口、界面控件或全屏。
+2. 使用智能控件识别和截图放大镜，细调选区边界。
+3. 根据需要完成标注、脱敏、文字提取、翻译或 AI 图像处理。
+4. 保存或分享结果；也可按 `F3` 将内容留在桌面上，边看边做。
+
+<br/>
 
 ## 隐私与掌控感
 
-截图保存在本地。本地离线 OCR 在设备上运行，提取文字时无需上传截图。Shotera 还支持自定义快捷键、界面语言与字体、启动方式和托盘图标，让它更贴合你的使用习惯。
+Shotera 将截图保存在本地。本地离线 OCR 直接在设备上运行，提取文字时无需上传截图。
+
+你还可以自定义快捷键、界面语言与字体、启动方式和托盘图标，始终掌控自己的使用方式。
 
 详情请阅读[隐私政策](https://shotera.mosuzo.com/privacy)。
 
+<br/>
+
+## 支持语言
+
+Shotera 支持 **15 种界面语言**：
+
+<p>
+  <kbd>英语</kbd>
+  <kbd>简体中文</kbd>
+  <kbd>繁体中文</kbd>
+  <kbd>日语</kbd>
+  <kbd>巴西葡萄牙语</kbd>
+  <kbd>西班牙语</kbd>
+  <kbd>德语</kbd>
+  <kbd>法语</kbd>
+  <kbd>意大利语</kbd>
+  <kbd>韩语</kbd>
+  <kbd>俄语</kbd>
+  <kbd>阿拉伯语</kbd>
+  <kbd>荷兰语</kbd>
+  <kbd>波兰语</kbd>
+  <kbd>瑞典语</kbd>
+</p>
+
+<br/>
+
+## 关键词
+
+Shotera；Shotera AI；Mosuzo Studio；AI 抠图；AI 修复；离线 OCR；截图工具；截图编辑；截图标注；桌面贴图；图片翻译
+
+<br/>
+
 ## 下载与版本
 
-可从 [GitHub Releases](https://github.com/mosuzo-studio/Shotera/releases) 下载 Shotera，或通过 [Microsoft Store](https://apps.microsoft.com/detail/9N73LDHRMC8V) 安装。
+<p align="center">
+  <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer">
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="从 Microsoft Store 获取 Shotera" />
+  </a>
+  <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self">
+    <img src="https://img.shields.io/badge/%E6%9B%B4%E5%A4%9A%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="从 GitHub Releases 下载更多版本" />
+  </a>
+</p>
 
-核心截图、标注与桌面贴图功能可免费使用；更高级的能力可通过 Pro 版本解锁。[免费版与 Pro 对比](https://shotera.mosuzo.com/pricing)正在搭建中，请以实际发布的版本与条款为准。
+> **版本说明：** 基础版本的功能永久免费使用，部分高级功能需升级 Pro，具体以实际发布版本为准。
 
-## 支持与更新
+<br/>
 
-- [官方网站](https://shotera.mosuzo.com/)
-- [更新日志](https://shotera.mosuzo.com/changelog)
-- [GitHub Releases](https://github.com/mosuzo-studio/Shotera/releases)
-- 技术支持：[support@shotera.app](mailto:support@shotera.app)
-- 意见反馈：[feedback@shotera.app](mailto:feedback@shotera.app)
+## 支持与反馈
+
+欢迎提出问题与建议，也欢迎分享你的使用体验。
+
+<p align="center">
+  <a href="https://shotera.mosuzo.com">
+    <img src="src/assets/images/readme/official-website-badge.zh-CN.svg" height="40" alt="访问 Shotera 官方网站" />
+  </a>
+  <a href="https://github.com/mosuzo-studio/Shotera/issues">
+    <img src="https://img.shields.io/badge/%E5%BB%BA%E8%AE%AE%E4%B8%8E%E5%8F%8D%E9%A6%88%20%26%20Bug-715A8A?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="40" alt="提出建议、反馈问题或报告 Bug" />
+  </a>
+  <a href="https://shotera.mosuzo.com/changelog">
+    <img src="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97-3F7C73?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" height="40" alt="查看 Shotera 更新日志" />
+  </a>
+  <a href="mailto:mosuzo.studio@gmail.com">
+    <img src="https://img.shields.io/badge/%E8%81%94%E7%B3%BB%E9%82%AE%E7%AE%B1-A75D5D?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" height="40" alt="发送邮件至 Mosuzo Studio" />
+  </a>
+</p>
+
+<br/>
+
+## 在 Ko-fi 上支持 Shotera
+
+如果 Shotera 让你的工作更轻松，你的支持将帮助我们持续开发、带来更多新功能。我们也会在 Ko-fi 分享产品开发中的新进展与近期动态。
+
+<p align="center">
+  <a href="https://ko-fi.com/mosuzo">
+    <img src="src/assets/images/readme/support_me_on_kofi_beige.png" width="280" alt="在 Ko-fi 上支持 Shotera" />
+  </a>
+</p>
 
 ---
 
-© Mosuzo Studio。Shotera 是一款 Windows 桌面应用。
+<p align="center">
+  <a href="https://shotera.mosuzo.com">
+    <img src="src/assets/images/readme/mosuzo-studio-logo.svg" width="40" align="middle" alt="Mosuzo Studio 标志" />
+  </a>
+  <strong>Mosuzo Studio</strong> · © 2026 保留所有权利<br/>
+  Shotera 专为 Windows 打造，让截图、视觉表达与桌面参考更加高效。
+</p>
