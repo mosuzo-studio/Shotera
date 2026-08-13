@@ -38,10 +38,10 @@
 
 <p align="center">
   <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer">
-    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Get Shotera from Microsoft Store" />
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="Get Shotera from Microsoft Store" />
   </a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self">
-    <img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="Download more versions from GitHub Releases" />
+    <img src="src/assets/images/readme/github-releases-badge.svg" height="44" alt="Download more versions from GitHub Releases" />
   </a>
 </p>
 
@@ -194,10 +194,10 @@ Shotera; Shotera AI; Mosuzo Studio; AI Cutout; AI image repair; offline OCR; scr
 
 <p align="center">
   <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer">
-    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="Get Shotera from Microsoft Store" />
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="Get Shotera from Microsoft Store" />
   </a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self">
-    <img src="https://img.shields.io/badge/Download%20more%20versions-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="Download more versions from GitHub Releases" />
+    <img src="src/assets/images/readme/github-releases-badge.svg" height="44" alt="Download more versions from GitHub Releases" />
   </a>
 </p>
 

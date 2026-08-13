@@ -38,10 +38,10 @@
 
 <p align="center">
   <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer">
-    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="从 Microsoft Store 获取 Shotera" />
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="从 Microsoft Store 获取 Shotera" />
   </a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self">
-    <img src="https://img.shields.io/badge/%E6%9B%B4%E5%A4%9A%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="从 GitHub Releases 下载更多版本" />
+    <img src="src/assets/images/readme/github-releases-badge.zh-CN.svg" height="44" alt="从 GitHub Releases 下载更多版本" />
   </a>
 </p>
 
@@ -194,10 +194,10 @@ Shotera；Shotera AI；Mosuzo Studio；AI 抠图；AI 修复；离线 OCR；截�
 
 <p align="center">
   <a href="https://apps.microsoft.com/detail/9n73ldhrmc8v?referrer=appbadge&amp;cid=743e47fd-8675-403d-9631-82e7e0&amp;mode=full" target="_blank" rel="noopener noreferrer">
-    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="48" alt="从 Microsoft Store 获取 Shotera" />
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" height="44" alt="从 Microsoft Store 获取 Shotera" />
   </a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases" target="_self">
-    <img src="https://img.shields.io/badge/%E6%9B%B4%E5%A4%9A%E7%89%88%E6%9C%AC%E4%B8%8B%E8%BD%BD-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white" height="48" alt="从 GitHub Releases 下载更多版本" />
+    <img src="src/assets/images/readme/github-releases-badge.zh-CN.svg" height="44" alt="从 GitHub Releases 下载更多版本" />
   </a>
 </p>
 
