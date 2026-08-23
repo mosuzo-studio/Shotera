@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { getSetupDownloadUrl } from '~/utils/download';
+import { getReleaseDownloads, RELEASES_URL } from '~/utils/download';
 
 interface Props {
   language?: string;
@@ -9,18 +9,34 @@ interface Props {
   storeAriaLabel?: string;
   downloadAriaLabel?: string;
   moreVersionsAriaLabel?: string;
+  msiLabel?: string;
+  portableLabel?: string;
+  allVersionsLabel?: string;
 }
 
 const {
   language = 'en-us',
-  downloadLabel = 'Download for Windows',
+  downloadLabel = 'Download',
   moreVersionsLabel = 'More versions',
   storeAriaLabel = 'Get Shotera from Microsoft Store',
   downloadAriaLabel = 'Download the latest Shotera installer for Windows',
-  moreVersionsAriaLabel = 'Download more versions from GitHub Releases',
+  moreVersionsAriaLabel = 'More download options',
+  msiLabel = 'MSI installer',
+  portableLabel = 'Portable (.7z)',
+  allVersionsLabel = 'All versions',
 } = Astro.props;
 
-const setupUrl = await getSetupDownloadUrl();
+const { urls, resolved } = await getReleaseDownloads();
+
+/* Only offer specific formats when the release actually resolved; otherwise the
+   menu links to the Releases page, where every asset is listed anyway. */
+const menuItems = resolved
+  ? [
+      { label: msiLabel, href: urls.msi, icon: 'tabler:package' },
+      { label: portableLabel, href: urls.portable, icon: 'tabler:file-zip' },
+      { label: allVersionsLabel, href: RELEASES_URL, icon: 'tabler:brand-github', external: true },
+    ]
+  : [{ label: allVersionsLabel, href: RELEASES_URL, icon: 'tabler:brand-github', external: true }];
 ---
 
 <div class="download-buttons">
@@ -37,21 +53,36 @@ const setupUrl = await getSetupDownloadUrl();
     </ms-store-badge>
   </div>
 
-  <a class="setup-download" href={setupUrl} aria-label={downloadAriaLabel}>
-    <Icon name="tabler:download" class="h-6 w-6" aria-hidden="true" />
-    <span>{downloadLabel}</span>
-  </a>
+  <div class="dropdown split">
+    <a class="btn-primary split-main" href={urls.setup} aria-label={downloadAriaLabel}>
+      <Icon name="tabler:download" class="h-6 w-6" aria-hidden="true" />
+      <span>{downloadLabel}</span>
+    </a>
 
-  <a
-    class="more-versions"
-    href="https://github.com/mosuzo-studio/Shotera/releases"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label={moreVersionsAriaLabel}
-  >
-    <Icon name="tabler:brand-github" class="h-6 w-6" aria-hidden="true" />
-    <span>{moreVersionsLabel}</span>
-  </a>
+    {/* The menu opens purely from CSS :hover / :focus-within, so there is no
+        state to sync into aria-expanded; aria-haspopup alone describes it
+        honestly. Hovering or tabbing to this control reveals the list. */}
+    <button type="button" class="btn-primary split-toggle" aria-haspopup="true" aria-label={moreVersionsAriaLabel}>
+      <Icon name="tabler:chevron-down" class="h-5 w-5" aria-hidden="true" />
+    </button>
+
+    <ul class="dropdown-menu split-menu" aria-label={moreVersionsLabel}>
+      {
+        menuItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noopener noreferrer' : undefined}
+            >
+              <Icon name={item.icon} class="h-5 w-5" aria-hidden="true" />
+              <span>{item.label}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </div>
 
 <style>
@@ -77,53 +108,99 @@ const setupUrl = await getSetupDownloadUrl();
     display: block;
   }
 
-  .setup-download,
-  .more-versions {
+  /* The two halves read as one control: the seam between them is squared off
+     and marked only by a hairline, while the outer corners keep the global
+     button radius. Colors and font come from .btn-primary. */
+  .split {
+    position: relative;
     display: inline-flex;
     flex: none;
-    min-width: 176px;
+    align-items: stretch;
+  }
+
+  .split-main,
+  .split-toggle {
     min-height: 60px;
-    align-items: center;
-    justify-content: center;
+    border-radius: 0;
+  }
+
+  .split-main {
     gap: 0.625rem;
-    border: 1px solid rgb(255 255 255 / 12%);
-    border-radius: 0.625rem;
-    background: #202020;
-    padding: 0.75rem 1.5rem;
-    color: #fff;
-    font-weight: 600;
-    line-height: 1.25;
-    text-decoration: none;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 18%);
-    transition:
-      transform 160ms ease,
-      background-color 160ms ease,
-      box-shadow 160ms ease;
+    min-width: 176px;
+    border-start-start-radius: 0.5rem;
+    border-end-start-radius: 0.5rem;
   }
 
-  .setup-download {
-    border-color: rgb(37 99 235 / 45%);
-    background: #2563eb;
+  .split-toggle {
+    padding-inline: 0.875rem;
+    border-inline-start: 1px solid rgb(255 255 255 / 25%);
+    border-start-end-radius: 0.5rem;
+    border-end-end-radius: 0.5rem;
   }
 
-  .setup-download:hover,
-  .more-versions:hover {
+  .split:hover .split-main,
+  .split:hover .split-toggle,
+  .split:focus-within .split-main,
+  .split:focus-within .split-toggle {
     box-shadow: 0 6px 18px rgb(0 0 0 / 18%);
-    transform: translateY(-1px);
   }
 
-  .setup-download:hover {
-    background: #1d4ed8;
-  }
-
-  .more-versions:hover {
-    background: #303030;
-  }
-
-  .setup-download:focus-visible,
-  .more-versions:focus-visible {
+  .split-main:focus-visible,
+  .split-toggle:focus-visible {
     outline: 3px solid rgb(59 130 246 / 55%);
     outline-offset: 3px;
+  }
+
+  .split-toggle :global(svg) {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .split:hover .split-toggle :global(svg),
+  .split:focus-within .split-toggle :global(svg) {
+    transform: rotate(180deg);
+  }
+
+  /* Hidden by default; the global .dropdown rules in tailwind.css flip this to
+     `display: block` on :hover and :focus-within, with no JavaScript. */
+  .split-menu {
+    display: none;
+    position: absolute;
+    inset-inline-end: 0;
+    top: 100%;
+    z-index: 20;
+    min-width: 100%;
+    padding-block: 0.375rem;
+    border-radius: 0.5rem;
+    background-color: rgb(255 255 255 / 97%);
+    box-shadow: 0 10px 30px rgb(0 0 0 / 18%);
+    backdrop-filter: blur(8px);
+    font-weight: 500;
+    text-align: start;
+    white-space: nowrap;
+  }
+
+  :global(.dark) .split-menu {
+    background-color: rgb(3 6 32 / 97%);
+    box-shadow: 0 10px 30px rgb(0 0 0 / 45%);
+  }
+
+  .split-menu a {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem 1.125rem;
+    color: var(--aw-color-text-page, inherit);
+    font-size: 0.9375rem;
+  }
+
+  .split-menu a:hover,
+  .split-menu a:focus-visible {
+    background-color: rgb(0 0 0 / 6%);
+  }
+
+  :global(.dark) .split-menu a:hover,
+  :global(.dark) .split-menu a:focus-visible {
+    background-color: rgb(255 255 255 / 10%);
   }
 
   @media (max-width: 639px) {
@@ -133,9 +210,36 @@ const setupUrl = await getSetupDownloadUrl();
       align-items: center;
     }
 
-    .setup-download,
-    .more-versions {
+    .split {
+      flex-direction: column;
       width: min(100%, 250px);
+    }
+
+    /* The menu is always open here, so the toggle has nothing left to do. */
+    .split-toggle {
+      display: none;
+    }
+
+    .split-main {
+      flex: 1 1 auto;
+      min-width: 0;
+      border-radius: 0.5rem;
+    }
+
+    /* No hover on touch, so the menu sits open beneath the button as a plain
+       list rather than hiding behind an unreachable interaction. */
+    .split-menu {
+      display: block;
+      position: static;
+      margin-block-start: 0.5rem;
+      background-color: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    :global(.dark) .split-menu {
+      background-color: transparent;
+      box-shadow: none;
     }
 
     .store-badge {
