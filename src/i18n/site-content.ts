@@ -208,7 +208,8 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
     pricing: {
       tagline: '價格方案',
       heroTitle: '免費開始，需要時再升級',
-      heroSubtitle: '日常截圖與標註永久免費。需要錄影、AI 去背、圖片翻譯等進階能力時，再升級到 Pro 或團隊版。',
+      heroSubtitle:
+        '日常截圖與標註永久免費。需要錄影、AI 去背、圖片翻譯等進階能力時，再升級到 Pro 或團隊版。目前僅為提前預覽，並非最終方案，功能與價格在正式發布前可能調整。',
       plansTitle: '選擇適合你的方案',
       plansSubtitle: '一次買斷，沒有隱藏費用',
       popularRibbon: '推薦',
@@ -444,7 +445,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: '料金プラン',
       heroTitle: '無料で始めて、必要になったらアップグレード',
       heroSubtitle:
-        '日々のキャプチャと注釈はずっと無料です。録画、AI切り抜き、画像翻訳が必要になったら、Proまたはチーム版をご検討ください。',
+        '日々のキャプチャと注釈はずっと無料です。録画、AI切り抜き、画像翻訳が必要になったら、Proまたはチーム版をご検討ください。現在は先行プレビューであり最終内容ではありません。機能と価格は正式リリースまでに変更される場合があります。',
       plansTitle: '用途に合うプランをお選びください',
       plansSubtitle: '買い切り、追加料金はありません',
       popularRibbon: 'おすすめ',
@@ -702,7 +703,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Planos e preços',
       heroTitle: 'Comece de graça e evolua quando precisar',
       heroSubtitle:
-        'Capturar e anotar no dia a dia é gratuito para sempre. Quando precisar de gravação, recorte com IA e tradução de imagens, escolha o Pro ou o plano Equipe.',
+        'Capturar e anotar no dia a dia é gratuito para sempre. Quando precisar de gravação, recorte com IA e tradução de imagens, escolha o Pro ou o plano Equipe. Esta é uma prévia antecipada, não a versão final: recursos e preços podem mudar antes do lançamento.',
       plansTitle: 'Escolha o plano ideal para você',
       plansSubtitle: 'Pagamento único, sem taxas escondidas',
       popularRibbon: 'Mais escolhido',
@@ -962,7 +963,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Planes y precios',
       heroTitle: 'Empieza gratis y mejora cuando lo necesites',
       heroSubtitle:
-        'Capturar y anotar a diario es gratis para siempre. Cuando necesites grabación, recorte con IA o traducción de imágenes, pasa a Pro o al plan Equipo.',
+        'Capturar y anotar a diario es gratis para siempre. Cuando necesites grabación, recorte con IA o traducción de imágenes, pasa a Pro o al plan Equipo. Esta es una vista previa anticipada, no la propuesta definitiva: las funciones y los precios pueden cambiar antes del lanzamiento.',
       plansTitle: 'Elige el plan que mejor te encaje',
       plansSubtitle: 'Pago único, sin cargos ocultos',
       popularRibbon: 'El más elegido',
@@ -1228,7 +1229,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Preise',
       heroTitle: 'Kostenlos starten, bei Bedarf erweitern',
       heroSubtitle:
-        'Aufnehmen und Kommentieren im Alltag bleibt dauerhaft kostenlos. Wenn Sie Bildschirmaufnahmen, KI-Freistellung oder Bildübersetzung brauchen, wechseln Sie zu Pro oder Team.',
+        'Aufnehmen und Kommentieren im Alltag bleibt dauerhaft kostenlos. Wenn Sie Bildschirmaufnahmen, KI-Freistellung oder Bildübersetzung brauchen, wechseln Sie zu Pro oder Team. Dies ist eine frühe Vorschau, nicht das endgültige Angebot: Funktionen und Preise können sich vor der Veröffentlichung ändern.',
       plansTitle: 'Wählen Sie die passende Edition',
       plansSubtitle: 'Einmalzahlung, keine versteckten Kosten',
       popularRibbon: 'Beliebt',
@@ -1493,7 +1494,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Tarifs',
       heroTitle: 'Gratuit pour commencer, évolutif si besoin',
       heroSubtitle:
-        'Capturer et annoter au quotidien reste gratuit à vie. Lorsque vous avez besoin d’enregistrement, de détourage IA ou de traduction d’images, passez à Pro ou au forfait Équipe.',
+        'Capturer et annoter au quotidien reste gratuit à vie. Lorsque vous avez besoin d’enregistrement, de détourage IA ou de traduction d’images, passez à Pro ou au forfait Équipe. Ceci est un aperçu anticipé, pas l’offre définitive : fonctionnalités et tarifs peuvent changer avant la sortie.',
       plansTitle: 'Choisissez le forfait qui vous convient',
       plansSubtitle: 'Paiement unique, aucun frais caché',
       popularRibbon: 'Le plus choisi',
@@ -1756,7 +1757,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Prezzi',
       heroTitle: 'Inizia gratis e passa al livello superiore quando serve',
       heroSubtitle:
-        'Catturare e annotare ogni giorno rimane gratis per sempre. Quando ti servono registrazione, scontorno IA o traduzione immagini, passa a Pro o al piano Team.',
+        'Catturare e annotare ogni giorno rimane gratis per sempre. Quando ti servono registrazione, scontorno IA o traduzione immagini, passa a Pro o al piano Team. Questa è un’anteprima in anticipo, non la proposta definitiva: funzioni e prezzi potrebbero cambiare prima del rilascio.',
       plansTitle: 'Scegli il piano più adatto',
       plansSubtitle: 'Acquisto unico, nessun costo nascosto',
       popularRibbon: 'Il più scelto',
@@ -1999,7 +2000,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: '요금제',
       heroTitle: '무료로 시작하고, 필요할 때 업그레이드',
       heroSubtitle:
-        '일상적인 캡처와 주석 기능은 영구 무료입니다. 녹화, AI 누끼 따기, 이미지 번역이 필요할 때 Pro나 팀 플랜으로 전환하세요.',
+        '일상적인 캡처와 주석 기능은 영구 무료입니다. 녹화, AI 누끼 따기, 이미지 번역이 필요할 때 Pro나 팀 플랜으로 전환하세요. 현재는 사전 미리보기이며 최종안이 아닙니다. 기능과 가격은 정식 출시 전에 변경될 수 있습니다.',
       plansTitle: '적합한 플랜을 선택하세요',
       plansSubtitle: '평생 라이선스, 숨겨진 비용 없음',
       popularRibbon: '추천',
@@ -2253,7 +2254,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Тарифы',
       heroTitle: 'Начните бесплатно и переходите на платную версию по необходимости',
       heroSubtitle:
-        'Ежедневный захват и аннотации бесплатны навсегда. Когда понадобится запись экрана, ИИ-вырезание или перевод изображений, выберите Pro или тариф для команды.',
+        'Ежедневный захват и аннотации бесплатны навсегда. Когда понадобится запись экрана, ИИ-вырезание или перевод изображений, выберите Pro или тариф для команды. Это предварительный просмотр, а не окончательный вариант: функции и цены могут измениться до релиза.',
       plansTitle: 'Выберите подходящий тариф',
       plansSubtitle: 'Разовый платёж, без скрытых списаний',
       popularRibbon: 'Популярный',
@@ -2495,7 +2496,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'الأسعار',
       heroTitle: 'ابدأ مجاناً وارتقِ عند الحاجة',
       heroSubtitle:
-        'الالتقاط والتعليق اليومي مجاني دائماً. وعندما تحتاج إلى تسجيل الشاشة أو القص بالذكاء الاصطناعي أو ترجمة الصور، انتقل إلى Pro أو خطة الفريق.',
+        'الالتقاط والتعليق اليومي مجاني دائماً. وعندما تحتاج إلى تسجيل الشاشة أو القص بالذكاء الاصطناعي أو ترجمة الصور، انتقل إلى Pro أو خطة الفريق. هذه معاينة مبكرة وليست الخطة النهائية، وقد تتغير الميزات والأسعار قبل الإصدار الرسمي.',
       plansTitle: 'اختر الخطة المناسبة لك',
       plansSubtitle: 'دفعة واحدة، بدون رسوم خفية',
       popularRibbon: 'الأكثر اختياراً',
@@ -2749,7 +2750,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Prijzen',
       heroTitle: 'Begin gratis en breid uit wanneer u dat nodig hebt',
       heroSubtitle:
-        'Dagelijks vastleggen en annoteren blijft altijd gratis. Hebt u schermopname, AI-uitknippen of beeldvertaling nodig? Stap dan over op Pro of het teamplan.',
+        'Dagelijks vastleggen en annoteren blijft altijd gratis. Hebt u schermopname, AI-uitknippen of beeldvertaling nodig? Stap dan over op Pro of het teamplan. Dit is een vroege preview en niet het definitieve aanbod: functies en prijzen kunnen voor de release nog wijzigen.',
       plansTitle: 'Kies het plan dat bij u past',
       plansSubtitle: 'Eenmalige aankoop, geen verborgen kosten',
       popularRibbon: 'Populair',
@@ -3001,7 +3002,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Cennik',
       heroTitle: 'Zacznij bezpłatnie, rozszerz gdy zajdzie potrzeba',
       heroSubtitle:
-        'Codzienne przechwytywanie i adnotacje pozostają bezpłatne na zawsze. Gdy potrzebujesz nagrywania ekranu, wycinania AI lub tłumaczenia obrazów, wybierz Pro albo plan zespołowy.',
+        'Codzienne przechwytywanie i adnotacje pozostają bezpłatne na zawsze. Gdy potrzebujesz nagrywania ekranu, wycinania AI lub tłumaczenia obrazów, wybierz Pro albo plan zespołowy. To wczesny podgląd, a nie ostateczna oferta — funkcje i ceny mogą się zmienić przed premierą.',
       plansTitle: 'Wybierz plan dopasowany do siebie',
       plansSubtitle: 'Jednorazowa płatność, bez ukrytych opłat',
       popularRibbon: 'Najczęściej wybierany',
@@ -3261,7 +3262,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Priser',
       heroTitle: 'Börja gratis och uppgradera när du behöver',
       heroSubtitle:
-        'Att fånga och kommentera i vardagen är gratis för alltid. När du behöver skärminspelning, AI-friläggning eller bildöversättning väljer du Pro eller teamplanen.',
+        'Att fånga och kommentera i vardagen är gratis för alltid. När du behöver skärminspelning, AI-friläggning eller bildöversättning väljer du Pro eller teamplanen. Detta är en tidig förhandsvisning och inte det slutgiltiga erbjudandet – funktioner och priser kan ändras före lanseringen.',
       plansTitle: 'Välj den plan som passar dig',
       plansSubtitle: 'Engångsköp, inga dolda avgifter',
       popularRibbon: 'Populärast',
