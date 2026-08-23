@@ -40,19 +40,6 @@ const menuItems = resolved
 ---
 
 <div class="download-buttons">
-  <div class="store-badge" role="group" aria-label={storeAriaLabel}>
-    <ms-store-badge
-      productid="9n73ldhrmc8v"
-      cid="743e47fd-8675-403d-9631-82e7e0"
-      window-mode="full"
-      theme="auto"
-      size="large"
-      language={language}
-      animation="on"
-    >
-    </ms-store-badge>
-  </div>
-
   <div class="dropdown split">
     <a class="btn-primary split-main" href={urls.setup} aria-label={downloadAriaLabel}>
       <Icon name="tabler:download" class="h-6 w-6" aria-hidden="true" />
@@ -82,6 +69,19 @@ const menuItems = resolved
         ))
       }
     </ul>
+  </div>
+
+  <div class="store-badge" role="group" aria-label={storeAriaLabel}>
+    <ms-store-badge
+      productid="9n73ldhrmc8v"
+      cid="743e47fd-8675-403d-9631-82e7e0"
+      window-mode="full"
+      theme="auto"
+      size="large"
+      language={language}
+      animation="on"
+    >
+    </ms-store-badge>
   </div>
 </div>
 
@@ -113,8 +113,12 @@ const menuItems = resolved
      button radius. Colors and font come from .btn-primary. */
   .split {
     position: relative;
+    z-index: 30;
     display: inline-flex;
     flex: none;
+    /* Matches the Microsoft Store badge (full window-mode, large size), which
+       renders at a fixed 381px across locales, so the two controls line up. */
+    width: 381px;
     align-items: stretch;
   }
 
@@ -125,6 +129,7 @@ const menuItems = resolved
   }
 
   .split-main {
+    flex: 1 1 auto;
     gap: 0.625rem;
     min-width: 176px;
     border-start-start-radius: 0.5rem;
@@ -165,9 +170,8 @@ const menuItems = resolved
   .split-menu {
     display: none;
     position: absolute;
-    inset-inline-end: 0;
+    inset-inline-start: 0;
     top: 100%;
-    z-index: 20;
     min-width: 100%;
     padding-block: 0.375rem;
     border-radius: 0.5rem;
@@ -243,7 +247,7 @@ const menuItems = resolved
     }
 
     .store-badge {
-      width: 100%;
+      width: min(100%, 250px);
       min-width: 0;
       min-height: 84px;
       overflow: hidden;
