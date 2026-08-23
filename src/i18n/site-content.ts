@@ -65,6 +65,29 @@ export interface LocalizedSiteContent {
     newLabel: string;
     announcement: string;
   };
+  pricing: {
+    tagline: string;
+    heroTitle: string;
+    heroSubtitle: string;
+    plansTitle: string;
+    plansSubtitle: string;
+    popularRibbon: string;
+    freePlan: { subtitle: string; period: string; items: string[]; cta: string };
+    proPlan: { subtitle: string; period: string; items: string[]; cta: string };
+    teamPlan: { title: string; subtitle: string; period: string; items: string[]; cta: string };
+    whyTitle: string;
+    whySubtitle: string;
+    why: Array<{ title: string; description: string }>;
+    stepsTitle: string;
+    stepsTagline: string;
+    steps: string[];
+    faqTitle: string;
+    faqSubtitle: string;
+    faqs: Array<{ title: string; answer: string }>;
+    ctaTitle: string;
+    ctaSubtitle: string;
+    ctaButton: string;
+  };
 }
 
 const scenarioKeys = [
@@ -180,6 +203,123 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: '讓每一次截圖與錄影都更有效率。',
       newLabel: '新功能',
       announcement: 'Shotera v7.2.0+：AI 影像工具、離線 OCR 與圖片翻譯現已推出。',
+    },
+    pricing: {
+      tagline: '價格方案',
+      heroTitle: '免費開始，需要時再升級',
+      heroSubtitle: '日常截圖與標註永久免費。需要錄影、AI 去背、圖片翻譯等進階能力時，再升級到 Pro 或團隊版。',
+      plansTitle: '選擇適合你的方案',
+      plansSubtitle: '一次買斷，沒有隱藏費用',
+      popularRibbon: '推薦',
+      freePlan: {
+        subtitle: '滿足每天的截圖需求',
+        period: '永久免費',
+        items: [
+          '區域 / 視窗 / 全螢幕擷取',
+          '智慧視窗與元素偵測',
+          '完整標註工具（箭頭、方框、文字、highlight、模糊）',
+          'Emoji 貼圖、放大鏡、步驟編號',
+          '桌面釘選',
+          '基本離線 OCR（每日限量）',
+          '持續維護與版本更新',
+        ],
+        cta: '免費下載',
+      },
+      proPlan: {
+        subtitle: '進階擷取與 AI 能力',
+        period: '一次買斷',
+        items: [
+          '包含基本版全部功能',
+          '高畫質錄影與 GIF 匯出',
+          'AI 去背無限使用',
+          'AI 消除 / 修圖無限使用',
+          '離線 OCR 無限使用',
+          '圖片翻譯',
+          '擷取紀錄雲端同步',
+          '一次買斷、終身使用、免費更新',
+        ],
+        cta: '立即購買',
+      },
+      teamPlan: {
+        title: '團隊版',
+        subtitle: '企業級服務與專屬支援',
+        period: '/ 每人',
+        items: [
+          '包含 Pro 版全部功能',
+          '可在公司與商業環境合法使用',
+          '團隊統一授權與管理',
+          '集中計費與開立發票',
+          '專屬問題回報與需求通道',
+          '最高等級技術支援與售後服務',
+          '大量採購享優惠價格',
+        ],
+        cta: '聯絡我們',
+      },
+      whyTitle: '為什麼值得升級',
+      whySubtitle: 'Pro 版讓你每天都在用的擷取、錄影與 AI 功能更快、更穩定。',
+      why: [
+        {
+          title: '一次買斷，終身使用',
+          description: 'Pro 版 $29 一次付清，沒有年費、沒有訂閱，後續版本更新也免費。',
+        },
+        {
+          title: '本機優先，隱私安心',
+          description: 'AI 去背、消除與 OCR 都在你的裝置上執行，不上傳任何內容，截圖只屬於你。',
+        },
+        {
+          title: '多台裝置授權',
+          description: '一組授權可在你自己的多台電腦上啟用，工作與家用之間自由切換。',
+        },
+        {
+          title: '幾秒就能開始用',
+          description: '安裝只要幾秒，開箱即用，不需要複雜設定。',
+        },
+        {
+          title: '持續進化',
+          description: '授權期間的所有新功能與版本升級都免費提供。',
+        },
+        {
+          title: '優先支援',
+          description: 'Pro 與團隊版使用者遇到問題時可獲得更快的回應。',
+        },
+      ],
+      stepsTitle: '三步升級 Pro',
+      stepsTagline: '簡單快速',
+      steps: ['下載並安裝 Shotera', '選擇 Pro 方案並完成購買', '啟用授權，解鎖全部功能', '開始更快地擷取與錄影'],
+      faqTitle: '價格常見問題',
+      faqSubtitle: '關於付款與授權，你可能想先了解這些。',
+      faqs: [
+        {
+          title: '基本版真的永久免費嗎？',
+          answer:
+            '是的。擷取、標註、桌面釘選與基本離線 OCR 永久免費，沒有使用期限，也不會強迫升級。免費使用者同樣能獲得後續的維護與版本更新。',
+        },
+        {
+          title: 'Pro 版是買斷還是訂閱？',
+          answer:
+            'Pro 版是 $29 一次買斷，終身使用，不需要每年續約。付款後你將永久擁有該授權，並可免費取得後續版本更新。Pro 版僅限個人使用。',
+        },
+        {
+          title: 'Pro 版和團隊版差在哪裡？',
+          answer:
+            '團隊版（每人 $39）是為公司與商業團隊設計的，可在商業環境中合法使用，並提供統一授權管理、集中計費與發票、專屬問題回報與需求通道，以及最高等級的技術支援與售後服務。大量採購另有優惠價格。',
+        },
+        {
+          title: '一組授權可以用在幾台裝置上？',
+          answer: 'Pro 授權可在你個人的多台裝置上使用。團隊版則以每人為單位授權，方便集中管理與計費。',
+        },
+        {
+          title: '支援哪些付款方式？',
+          answer: '我們支援主流信用卡與 PayPal，結帳流程安全便利。',
+        },
+        {
+          title: '可以退款嗎？',
+          answer: '團隊版授權提供 7 天退款保障。有任何問題歡迎隨時與我們聯絡。',
+        },
+      ],
+      ctaTitle: '今天就讓截圖工作更有效率',
+      ctaSubtitle: '免費下載，幾秒安裝，想升級時再升級。',
+      ctaButton: '免費下載 Shotera',
     },
   },
   ja: {
@@ -297,6 +437,132 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'キャプチャと録画を、もっと効率よく。',
       newLabel: '新着',
       announcement: 'Shotera v7.2.0+：AI画像ツール、オフラインOCR、画像翻訳が登場。',
+    },
+    pricing: {
+      tagline: '料金プラン',
+      heroTitle: '無料で始めて、必要になったらアップグレード',
+      heroSubtitle:
+        '日々のキャプチャと注釈はずっと無料です。録画、AI切り抜き、画像翻訳が必要になったら、Proまたはチーム版をご検討ください。',
+      plansTitle: '用途に合うプランをお選びください',
+      plansSubtitle: '買い切り、追加料金はありません',
+      popularRibbon: 'おすすめ',
+      freePlan: {
+        subtitle: '毎日の作業に必要な機能をひと通り',
+        period: 'ずっと無料',
+        items: [
+          '範囲・ウィンドウ・全画面のキャプチャ',
+          'ウィンドウとUI要素の自動検出',
+          '充実した注釈ツール（矢印、囲み、テキスト、蛍光ペン、ぼかし）',
+          '絵文字スタンプ、拡大鏡、手順番号',
+          '画面へのピン留め',
+          'オフラインOCRの基本利用（1日の上限あり）',
+          '継続的なメンテナンスとアップデート',
+        ],
+        cta: '無料ダウンロード',
+      },
+      proPlan: {
+        subtitle: '高度なキャプチャとAI機能',
+        period: '買い切り',
+        items: [
+          'ベーシックのすべての機能',
+          '高画質録画とGIF書き出し',
+          'AI切り抜きが無制限',
+          'AI消しゴム・修復が無制限',
+          'オフラインOCRが無制限',
+          '画像翻訳',
+          'キャプチャ履歴のクラウド同期',
+          '買い切りで永続利用、アップデートも無料',
+        ],
+        cta: '購入する',
+      },
+      teamPlan: {
+        title: 'チーム',
+        subtitle: '法人向けサービスと専任サポート',
+        period: '/ 1人',
+        items: [
+          'Proのすべての機能',
+          '社内および商用環境での利用が可能',
+          'ライセンスの一元管理',
+          '請求書の一括発行と支払いのまとめ',
+          '不具合報告・機能要望の専用窓口',
+          '最上位の技術サポートとアフターサービス',
+          'まとめ買いのボリューム割引',
+        ],
+        cta: 'お問い合わせ',
+      },
+      whyTitle: 'アップグレードする価値',
+      whySubtitle: 'Proなら、毎日使うキャプチャ、録画、AI機能がさらに速く、安定して使えます。',
+      why: [
+        {
+          title: '買い切りで永続利用',
+          description:
+            'Proは$29の一度のお支払いのみ。年額費用やサブスクリプションはなく、今後のアップデートも無料です。',
+        },
+        {
+          title: 'ローカル処理でプライバシーを確保',
+          description:
+            'AI切り抜き、消しゴム、OCRはすべて端末上で動作します。アップロードは行わず、画像はあなたのものです。',
+        },
+        {
+          title: '複数の端末で利用可能',
+          description: '1つのライセンスをご自身の複数のPCで有効化できます。仕事用と自宅用をそのまま行き来できます。',
+        },
+        {
+          title: '数秒で使い始められる',
+          description: 'インストールは数秒で完了し、そのまま使えます。面倒な初期設定は不要です。',
+        },
+        {
+          title: '進化を続けます',
+          description: 'ライセンス期間中の新機能とバージョンアップは、すべて無料でご利用いただけます。',
+        },
+        {
+          title: '優先サポート',
+          description: 'Proとチーム版のご利用者には、必要なときにより早く対応します。',
+        },
+      ],
+      stepsTitle: '3ステップでProへ',
+      stepsTagline: 'かんたん・すぐ完了',
+      steps: [
+        'Shoteraをダウンロードしてインストール',
+        'Proプランを選んで購入',
+        'ライセンスを認証してすべての機能を解放',
+        'キャプチャと録画がもっと速くなります',
+      ],
+      faqTitle: '料金に関するよくある質問',
+      faqSubtitle: 'お支払いとライセンスについて、よくいただく質問をまとめました。',
+      faqs: [
+        {
+          title: 'ベーシックは本当にずっと無料ですか？',
+          answer:
+            'はい。キャプチャ、注釈、ピン留め、オフラインOCRの基本機能は無期限で無料です。期限やアップグレードの強制はありません。無料でお使いの方にも、継続的なメンテナンスとアップデートを提供します。',
+        },
+        {
+          title: 'Proは買い切りですか、サブスクリプションですか？',
+          answer:
+            'Proは$29の買い切りで、ずっとお使いいただけます。毎年の更新は必要ありません。ご購入後はライセンスが永続的に有効で、今後のバージョンアップも無料です。Proは個人利用に限られます。',
+        },
+        {
+          title: 'Proとチーム版の違いは何ですか？',
+          answer:
+            'チーム版（1人あたり$39）は企業や商用チーム向けのプランで、社内および商用環境での利用が認められています。ライセンスの一元管理、請求書の一括発行、不具合・要望の専用窓口、最上位の技術サポートとアフターサービスが含まれます。まとめ買いにはボリューム割引もご用意しています。',
+        },
+        {
+          title: '1つのライセンスで何台まで使えますか？',
+          answer:
+            'Proライセンスはご自身の複数の端末でお使いいただけます。チーム版は1人単位のライセンスで、管理と請求をまとめやすくなっています。',
+        },
+        {
+          title: '利用できる支払い方法は？',
+          answer: '主要なクレジットカードとPayPalに対応しており、安全かつ簡単にお支払いいただけます。',
+        },
+        {
+          title: '返金はできますか？',
+          answer: 'チーム版ライセンスには7日間の返金保証が付いています。ご不明な点はお気軽にお問い合わせください。',
+        },
+      ],
+      ctaTitle: '今日から、スクリーンショットをもっと生産的に',
+      ctaSubtitle: '無料でダウンロードして数秒でインストール。アップグレードはいつでもできます。',
+      ctaButton: 'Shoteraを無料でダウンロード',
     },
   },
   'pt-br': {
@@ -429,6 +695,134 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       newLabel: 'NOVO',
       announcement: 'Shotera v7.2.0+: ferramentas de IA, OCR offline e tradução de imagens.',
     },
+    pricing: {
+      tagline: 'Planos e preços',
+      heroTitle: 'Comece de graça e evolua quando precisar',
+      heroSubtitle:
+        'Capturar e anotar no dia a dia é gratuito para sempre. Quando precisar de gravação, recorte com IA e tradução de imagens, escolha o Pro ou o plano Equipe.',
+      plansTitle: 'Escolha o plano ideal para você',
+      plansSubtitle: 'Pagamento único, sem taxas escondidas',
+      popularRibbon: 'Mais escolhido',
+      freePlan: {
+        subtitle: 'Tudo o que você usa no dia a dia',
+        period: 'Grátis para sempre',
+        items: [
+          'Captura de área, janela ou tela inteira',
+          'Detecção inteligente de janelas e elementos',
+          'Kit completo de anotações (setas, caixas, texto, destaque, desfoque)',
+          'Figurinhas de emoji, lupa e passos numerados',
+          'Fixar na tela',
+          'OCR offline básico (limite diário)',
+          'Manutenção e atualizações contínuas',
+        ],
+        cta: 'Baixar grátis',
+      },
+      proPlan: {
+        subtitle: 'Captura avançada e recursos de IA',
+        period: 'Pagamento único',
+        items: [
+          'Tudo do plano Básico',
+          'Gravação em alta definição e exportação em GIF',
+          'Remoção de fundo com IA ilimitada',
+          'Borracha e retoque com IA ilimitados',
+          'OCR offline ilimitado',
+          'Tradução de imagens',
+          'Sincronização do histórico na nuvem',
+          'Pague uma vez, use para sempre, com atualizações gratuitas',
+        ],
+        cta: 'Comprar agora',
+      },
+      teamPlan: {
+        title: 'Equipe',
+        subtitle: 'Serviço corporativo e suporte dedicado',
+        period: '/ por usuário',
+        items: [
+          'Tudo do plano Pro',
+          'Uso comercial autorizado dentro da empresa',
+          'Licenciamento centralizado e gestão de usuários',
+          'Faturamento consolidado com emissão de nota fiscal',
+          'Canal exclusivo para bugs e solicitações',
+          'Suporte técnico e pós-venda de nível máximo',
+          'Descontos progressivos em compras por volume',
+        ],
+        cta: 'Fale com a gente',
+      },
+      whyTitle: 'Por que vale a pena migrar para o Pro',
+      whySubtitle:
+        'O Pro deixa mais rápidos e confiáveis os recursos de captura, gravação e IA que você já usa todos os dias.',
+      why: [
+        {
+          title: 'Pague uma vez, use para sempre',
+          description:
+            'O Pro é um pagamento único de $29, sem mensalidade nem assinatura. As atualizações futuras são gratuitas.',
+        },
+        {
+          title: 'Processamento local e privado',
+          description:
+            'Recorte com IA, borracha e OCR rodam no seu dispositivo. Nada é enviado para a nuvem e suas capturas continuam suas.',
+        },
+        {
+          title: 'Licença para vários dispositivos',
+          description:
+            'Uma licença ativa em todos os seus computadores. Alterne entre trabalho e casa sem complicação.',
+        },
+        {
+          title: 'Pronto em segundos',
+          description: 'A instalação leva segundos e já funciona de primeira, sem configuração complicada.',
+        },
+        {
+          title: 'Sempre evoluindo',
+          description: 'Todos os novos recursos e versões lançados durante a sua licença estão inclusos.',
+        },
+        {
+          title: 'Atendimento prioritário',
+          description: 'Quem usa Pro ou Equipe recebe respostas mais rápidas quando realmente precisa.',
+        },
+      ],
+      stepsTitle: 'Três passos para usar o Pro',
+      stepsTagline: 'Rápido e sem complicação',
+      steps: [
+        'Baixe e instale o Shotera',
+        'Escolha o plano Pro e finalize a compra',
+        'Ative a licença e libere todos os recursos',
+        'Capture e grave com mais agilidade',
+      ],
+      faqTitle: 'Dúvidas sobre preços',
+      faqSubtitle: 'O que costumam perguntar sobre pagamento e licenciamento.',
+      faqs: [
+        {
+          title: 'O plano gratuito é realmente grátis?',
+          answer:
+            'Sim. Captura, anotações, fixar na tela e o OCR offline básico são gratuitos para sempre, sem prazo de validade e sem upgrade obrigatório. Quem usa a versão gratuita também recebe manutenção e atualizações.',
+        },
+        {
+          title: 'O Pro é compra única ou assinatura?',
+          answer:
+            'O Pro é uma compra única de $29 e é seu para sempre, sem renovação anual. Você tem acesso permanente à licença e recebe as atualizações futuras sem custo. O Pro é para uso pessoal.',
+        },
+        {
+          title: 'Qual a diferença entre Pro e Equipe?',
+          answer:
+            'O plano Equipe ($39 por usuário) foi feito para empresas e equipes comerciais e autoriza o uso profissional dentro da organização. Inclui licenciamento centralizado, faturamento consolidado com nota fiscal, canal exclusivo para bugs e solicitações, além de suporte técnico e pós-venda de nível máximo. Compras por volume têm desconto.',
+        },
+        {
+          title: 'Em quantos dispositivos posso usar uma licença?',
+          answer:
+            'A licença Pro funciona nos seus dispositivos pessoais. O plano Equipe é licenciado por usuário, o que facilita a gestão e o faturamento centralizados.',
+        },
+        {
+          title: 'Quais formas de pagamento vocês aceitam?',
+          answer: 'Aceitamos os principais cartões de crédito e PayPal, em um checkout seguro e prático.',
+        },
+        {
+          title: 'É possível pedir reembolso?',
+          answer: 'As licenças do plano Equipe têm política de reembolso de 7 dias. Fale com a gente se tiver dúvidas.',
+        },
+      ],
+      ctaTitle: 'Deixe suas capturas mais produtivas hoje',
+      ctaSubtitle: 'Baixe de graça, instale em segundos e evolua quando quiser.',
+      ctaButton: 'Baixar o Shotera grátis',
+    },
   },
   es: {
     storeLanguage: 'es-es',
@@ -559,6 +953,133 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Más eficiencia en cada captura y grabación.',
       newLabel: 'NUEVO',
       announcement: 'Shotera v7.2.0+: herramientas de IA, OCR sin conexión y traducción de imágenes.',
+    },
+    pricing: {
+      tagline: 'Planes y precios',
+      heroTitle: 'Empieza gratis y mejora cuando lo necesites',
+      heroSubtitle:
+        'Capturar y anotar a diario es gratis para siempre. Cuando necesites grabación, recorte con IA o traducción de imágenes, pasa a Pro o al plan Equipo.',
+      plansTitle: 'Elige el plan que mejor te encaje',
+      plansSubtitle: 'Pago único, sin cargos ocultos',
+      popularRibbon: 'El más elegido',
+      freePlan: {
+        subtitle: 'Todo lo que usas en el día a día',
+        period: 'Gratis para siempre',
+        items: [
+          'Captura de área, ventana o pantalla completa',
+          'Detección inteligente de ventanas y elementos',
+          'Kit completo de anotación (flechas, cajas, texto, resaltado, desenfoque)',
+          'Stickers de emoji, lupa y pasos numerados',
+          'Fijar en pantalla',
+          'OCR sin conexión básico (límite diario)',
+          'Mantenimiento y actualizaciones continuas',
+        ],
+        cta: 'Descargar gratis',
+      },
+      proPlan: {
+        subtitle: 'Captura avanzada y funciones de IA',
+        period: 'Pago único',
+        items: [
+          'Todo lo del plan Básico',
+          'Grabación en alta definición y exportación a GIF',
+          'Recorte de fondo con IA sin límite',
+          'Borrador y retoque con IA sin límite',
+          'OCR sin conexión ilimitado',
+          'Traducción de imágenes',
+          'Sincronización del historial en la nube',
+          'Pago único, uso de por vida y actualizaciones gratuitas',
+        ],
+        cta: 'Comprar ahora',
+      },
+      teamPlan: {
+        title: 'Equipo',
+        subtitle: 'Servicio para empresas y soporte dedicado',
+        period: '/ por usuario',
+        items: [
+          'Todo lo del plan Pro',
+          'Uso comercial autorizado dentro de la empresa',
+          'Licencias centralizadas y gestión de usuarios',
+          'Facturación unificada con emisión de factura',
+          'Canal exclusivo para incidencias y peticiones',
+          'Soporte técnico y posventa de máximo nivel',
+          'Descuentos por volumen en compras grandes',
+        ],
+        cta: 'Habla con nosotros',
+      },
+      whyTitle: 'Por qué merece la pena pasar a Pro',
+      whySubtitle: 'Pro hace más rápidas y fiables las funciones de captura, grabación e IA que ya utilizas cada día.',
+      why: [
+        {
+          title: 'Pago único, uso de por vida',
+          description:
+            'Pro es un pago único de $29: sin cuotas anuales ni suscripciones. Las futuras actualizaciones están incluidas.',
+        },
+        {
+          title: 'Procesamiento local y privado',
+          description:
+            'El recorte con IA, el borrador y el OCR funcionan en tu dispositivo. Nada se sube a la nube y tus capturas siguen siendo tuyas.',
+        },
+        {
+          title: 'Licencia para varios dispositivos',
+          description: 'Una licencia se activa en todos tus equipos. Pasa del trabajo a casa sin fricciones.',
+        },
+        {
+          title: 'Listo en segundos',
+          description: 'Se instala en segundos y funciona desde el primer momento, sin configuraciones complicadas.',
+        },
+        {
+          title: 'Siempre mejorando',
+          description: 'Todas las funciones y versiones que se publiquen durante tu licencia están incluidas.',
+        },
+        {
+          title: 'Soporte prioritario',
+          description: 'Los usuarios de Pro y Equipo reciben respuestas más rápidas cuando de verdad hace falta.',
+        },
+      ],
+      stepsTitle: 'Tres pasos para tener Pro',
+      stepsTagline: 'Rápido y sencillo',
+      steps: [
+        'Descarga e instala Shotera',
+        'Elige el plan Pro y completa la compra',
+        'Activa la licencia y desbloquea todo',
+        'Captura y graba con más agilidad',
+      ],
+      faqTitle: 'Preguntas sobre precios',
+      faqSubtitle: 'Lo que suele preguntarse sobre pagos y licencias.',
+      faqs: [
+        {
+          title: '¿El plan gratuito es realmente gratis?',
+          answer:
+            'Sí. La captura, las anotaciones, fijar en pantalla y el OCR sin conexión básico son gratis para siempre, sin límite de tiempo ni mejoras obligatorias. Quien usa la versión gratuita también recibe mantenimiento y actualizaciones.',
+        },
+        {
+          title: '¿Pro es pago único o suscripción?',
+          answer:
+            'Pro es un pago único de $29 y es tuyo de por vida, sin renovaciones anuales. Tienes acceso permanente a tu licencia y las actualizaciones futuras son gratuitas. Pro es solo para uso personal.',
+        },
+        {
+          title: '¿Qué diferencia hay entre Pro y Equipo?',
+          answer:
+            'El plan Equipo ($39 por usuario) está pensado para empresas y equipos comerciales, y autoriza el uso profesional dentro de la organización. Incluye licencias centralizadas, facturación unificada con factura, un canal exclusivo para incidencias y peticiones, y soporte técnico y posventa de máximo nivel. Las compras por volumen tienen descuento.',
+        },
+        {
+          title: '¿En cuántos dispositivos puedo usar una licencia?',
+          answer:
+            'La licencia Pro funciona en tus dispositivos personales. El plan Equipo se licencia por usuario, lo que facilita la gestión y la facturación centralizadas.',
+        },
+        {
+          title: '¿Qué métodos de pago aceptáis?',
+          answer: 'Aceptamos las principales tarjetas de crédito y PayPal, con un proceso de pago seguro y cómodo.',
+        },
+        {
+          title: '¿Puedo pedir un reembolso?',
+          answer:
+            'Las licencias del plan Equipo tienen una política de reembolso de 7 días. Escríbenos si tienes dudas.',
+        },
+      ],
+      ctaTitle: 'Haz que tus capturas rindan más desde hoy',
+      ctaSubtitle: 'Descárgalo gratis, instálalo en segundos y mejora cuando quieras.',
+      ctaButton: 'Descargar Shotera gratis',
     },
   },
   de: {
@@ -698,6 +1219,135 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       newLabel: 'NEU',
       announcement: 'Shotera v7.2.0+: KI-Bildwerkzeuge, Offline-OCR und Bildübersetzung.',
     },
+    pricing: {
+      tagline: 'Preise',
+      heroTitle: 'Kostenlos starten, bei Bedarf erweitern',
+      heroSubtitle:
+        'Aufnehmen und Kommentieren im Alltag bleibt dauerhaft kostenlos. Wenn Sie Bildschirmaufnahmen, KI-Freistellung oder Bildübersetzung brauchen, wechseln Sie zu Pro oder Team.',
+      plansTitle: 'Wählen Sie die passende Edition',
+      plansSubtitle: 'Einmalzahlung, keine versteckten Kosten',
+      popularRibbon: 'Beliebt',
+      freePlan: {
+        subtitle: 'Alles für die tägliche Arbeit',
+        period: 'Dauerhaft kostenlos',
+        items: [
+          'Bereich, Fenster oder ganzen Bildschirm aufnehmen',
+          'Intelligente Fenster- und Elementerkennung',
+          'Vollständige Anmerkungswerkzeuge (Pfeile, Rahmen, Text, Hervorhebung, Unschärfe)',
+          'Emoji-Sticker, Lupe und Schrittnummern',
+          'An Bildschirm anheften',
+          'Offline-OCR in der Basisversion (Tageslimit)',
+          'Laufende Pflege und Updates',
+        ],
+        cta: 'Kostenlos herunterladen',
+      },
+      proPlan: {
+        subtitle: 'Erweiterte Aufnahme und KI-Funktionen',
+        period: 'Einmalzahlung',
+        items: [
+          'Alle Funktionen der Basisversion',
+          'HD-Bildschirmaufnahme und GIF-Export',
+          'Unbegrenzte KI-Freistellung',
+          'Unbegrenzter KI-Radierer zum Entfernen von Objekten',
+          'Unbegrenzte Offline-OCR',
+          'Bildübersetzung',
+          'Cloud-Synchronisierung des Aufnahmeverlaufs',
+          'Einmal zahlen, dauerhaft nutzen, Updates inklusive',
+        ],
+        cta: 'Jetzt kaufen',
+      },
+      teamPlan: {
+        title: 'Team',
+        subtitle: 'Unternehmenslösung mit persönlichem Support',
+        period: '/ Platz',
+        items: [
+          'Alle Funktionen von Pro',
+          'Kommerzielle Nutzung im Unternehmen ausdrücklich erlaubt',
+          'Zentrale Lizenzverwaltung',
+          'Gesammelte Abrechnung und Rechnungsstellung',
+          'Direkter Kanal für Fehlermeldungen und Wünsche',
+          'Technischer Support und Kundendienst auf höchster Stufe',
+          'Mengenrabatte bei größeren Bestellungen',
+        ],
+        cta: 'Kontakt aufnehmen',
+      },
+      whyTitle: 'Warum sich Pro lohnt',
+      whySubtitle:
+        'Pro macht die Aufnahme-, Aufzeichnungs- und KI-Funktionen, die Sie täglich nutzen, schneller und verlässlicher.',
+      why: [
+        {
+          title: 'Einmal zahlen, dauerhaft nutzen',
+          description:
+            'Pro kostet einmalig $29 – keine Jahresgebühr, kein Abo. Alle künftigen Updates sind inbegriffen.',
+        },
+        {
+          title: 'Lokal und datenschutzfreundlich',
+          description:
+            'KI-Freistellung, Radierer und OCR laufen auf Ihrem Gerät. Es wird nichts hochgeladen, Ihre Aufnahmen bleiben bei Ihnen.',
+        },
+        {
+          title: 'Lizenz für mehrere Geräte',
+          description:
+            'Eine Lizenz lässt sich auf allen Ihren Rechnern aktivieren – zwischen Büro und Zuhause ohne Umstände.',
+        },
+        {
+          title: 'In Sekunden einsatzbereit',
+          description: 'Die Installation dauert Sekunden und läuft sofort, ohne aufwendige Einrichtung.',
+        },
+        {
+          title: 'Wird ständig besser',
+          description: 'Alle neuen Funktionen und Versionen während Ihrer Lizenz sind kostenlos enthalten.',
+        },
+        {
+          title: 'Vorrangiger Support',
+          description: 'Nutzer von Pro und Team erhalten schnellere Antworten, wenn es darauf ankommt.',
+        },
+      ],
+      stepsTitle: 'In drei Schritten zu Pro',
+      stepsTagline: 'Schnell und unkompliziert',
+      steps: [
+        'Shotera herunterladen und installieren',
+        'Pro-Edition auswählen und kaufen',
+        'Lizenz aktivieren und alle Funktionen freischalten',
+        'Schneller aufnehmen und aufzeichnen',
+      ],
+      faqTitle: 'Häufige Fragen zu Preisen',
+      faqSubtitle: 'Was Sie zu Zahlung und Lizenzierung wissen sollten.',
+      faqs: [
+        {
+          title: 'Ist die kostenlose Version wirklich kostenlos?',
+          answer:
+            'Ja. Aufnahme, Anmerkungen, Anheften und die Offline-OCR in der Basisversion bleiben dauerhaft kostenlos – ohne Zeitlimit und ohne Upgrade-Zwang. Auch kostenlose Nutzer erhalten weiterhin Pflege und Updates.',
+        },
+        {
+          title: 'Ist Pro eine Einmalzahlung oder ein Abo?',
+          answer:
+            'Pro ist eine Einmalzahlung von $29 und gehört Ihnen dauerhaft. Eine jährliche Verlängerung ist nicht nötig. Sie behalten Ihre Lizenz unbefristet und erhalten künftige Versionen kostenlos. Pro ist ausschließlich für die private Nutzung vorgesehen.',
+        },
+        {
+          title: 'Worin unterscheiden sich Pro und Team?',
+          answer:
+            'Team ($39 pro Platz) ist für Unternehmen und gewerbliche Teams gedacht und erlaubt die kommerzielle Nutzung im Unternehmen. Enthalten sind zentrale Lizenzverwaltung, gesammelte Abrechnung mit Rechnungsstellung, ein direkter Kanal für Fehlermeldungen und Wünsche sowie technischer Support und Kundendienst auf höchster Stufe. Bei größeren Bestellungen gibt es Mengenrabatte.',
+        },
+        {
+          title: 'Für wie viele Geräte gilt eine Lizenz?',
+          answer:
+            'Eine Pro-Lizenz gilt für Ihre persönlichen Geräte. Team wird pro Platz lizenziert, was die zentrale Verwaltung und Abrechnung erleichtert.',
+        },
+        {
+          title: 'Welche Zahlungsmethoden werden akzeptiert?',
+          answer: 'Wir akzeptieren die gängigen Kreditkarten und PayPal – sicher und bequem im Bezahlvorgang.',
+        },
+        {
+          title: 'Ist eine Rückerstattung möglich?',
+          answer:
+            'Für Team-Lizenzen gilt eine Rückerstattung innerhalb von 7 Tagen. Bei Fragen können Sie sich jederzeit an uns wenden.',
+        },
+      ],
+      ctaTitle: 'Machen Sie Ihre Screenshots ab heute produktiver',
+      ctaSubtitle: 'Kostenlos herunterladen, in Sekunden installieren und aufrüsten, wann Sie möchten.',
+      ctaButton: 'Shotera kostenlos herunterladen',
+    },
   },
   fr: {
     storeLanguage: 'fr-fr',
@@ -833,6 +1483,137 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       newLabel: 'NOUVEAU',
       announcement: 'Shotera v7.2.0+ : outils IA, OCR hors ligne et traduction d’images.',
     },
+    pricing: {
+      tagline: 'Tarifs',
+      heroTitle: 'Gratuit pour commencer, évolutif si besoin',
+      heroSubtitle:
+        'Capturer et annoter au quotidien reste gratuit à vie. Lorsque vous avez besoin d’enregistrement, de détourage IA ou de traduction d’images, passez à Pro ou au forfait Équipe.',
+      plansTitle: 'Choisissez le forfait qui vous convient',
+      plansSubtitle: 'Paiement unique, aucun frais caché',
+      popularRibbon: 'Le plus choisi',
+      freePlan: {
+        subtitle: 'Tout l’essentiel au quotidien',
+        period: 'Gratuit à vie',
+        items: [
+          'Capture de zone, fenêtre ou écran complet',
+          'Détection intelligente des fenêtres et éléments',
+          'Outils d’annotation complets (flèches, cadres, texte, surlignage, flou)',
+          'Autocollants emoji, loupe et numéros d’étape',
+          'Épinglage à l’écran',
+          'OCR hors ligne de base (limite quotidienne)',
+          'Maintenance et mises à jour continues',
+        ],
+        cta: 'Télécharger gratuitement',
+      },
+      proPlan: {
+        subtitle: 'Capture avancée et fonctions IA',
+        period: 'Paiement unique',
+        items: [
+          'Tout du forfait Essentiel',
+          'Enregistrement HD et export GIF',
+          'Détourage IA illimité',
+          'Gomme et retouche IA illimitées',
+          'OCR hors ligne illimité',
+          'Traduction d’images',
+          'Synchronisation de l’historique dans le cloud',
+          'Payez une fois, utilisez à vie, mises à jour incluses',
+        ],
+        cta: 'Acheter maintenant',
+      },
+      teamPlan: {
+        title: 'Équipe',
+        subtitle: 'Service entreprise et assistance dédiée',
+        period: '/ par utilisateur',
+        items: [
+          'Tout du forfait Pro',
+          'Usage commercial autorisé en entreprise',
+          'Gestion centralisée des licences',
+          'Facturation unifiée avec émission de factures',
+          'Canal exclusif pour incidents et demandes',
+          'Assistance technique et service après-vente de niveau maximum',
+          'Remises sur volume pour achats groupés',
+        ],
+        cta: 'Nous contacter',
+      },
+      whyTitle: 'Pourquoi passer à Pro',
+      whySubtitle:
+        'Pro rend plus rapides et fiables les fonctions de capture, enregistrement et IA que vous utilisez chaque jour.',
+      why: [
+        {
+          title: 'Payez une fois, utilisez à vie',
+          description:
+            'Pro est un paiement unique de $29, sans frais annuels ni abonnement. Les mises à jour futures sont incluses.',
+        },
+        {
+          title: 'Traitement local et privé',
+          description:
+            'Le détourage IA, la gomme et l’OCR fonctionnent sur votre appareil. Rien n’est téléversé, vos captures restent vôtres.',
+        },
+        {
+          title: 'Licence multi-appareils',
+          description:
+            'Une licence s’active sur tous vos ordinateurs. Alternez entre bureau et domicile sans contrainte.',
+        },
+        {
+          title: 'Prêt en quelques secondes',
+          description:
+            'L’installation prend quelques secondes et fonctionne immédiatement, sans configuration complexe.',
+        },
+        {
+          title: 'Toujours en évolution',
+          description: 'Toutes les nouvelles fonctions et versions publiées pendant votre licence sont incluses.',
+        },
+        {
+          title: 'Assistance prioritaire',
+          description: 'Les utilisateurs Pro et Équipe reçoivent des réponses plus rapides quand c’est nécessaire.',
+        },
+      ],
+      stepsTitle: 'Trois étapes vers Pro',
+      stepsTagline: 'Rapide et simple',
+      steps: [
+        'Téléchargez et installez Shotera',
+        'Choisissez le forfait Pro et finalisez l’achat',
+        'Activez la licence et débloquez tout',
+        'Capturez et enregistrez avec plus d’agilité',
+      ],
+      faqTitle: 'Questions sur les tarifs',
+      faqSubtitle: 'Ce qu’on nous demande souvent sur les paiements et les licences.',
+      faqs: [
+        {
+          title: 'Le forfait gratuit est-il vraiment gratuit ?',
+          answer:
+            'Oui. La capture, les annotations, l’épinglage et l’OCR hors ligne de base restent gratuits à vie, sans limite de temps ni upgrade forcé. Les utilisateurs gratuits bénéficient aussi de la maintenance et des mises à jour.',
+        },
+        {
+          title: 'Pro est-il un paiement unique ou un abonnement ?',
+          answer:
+            'Pro est un paiement unique de $29 et vous appartient à vie, sans renouvellement annuel. Vous conservez votre licence en permanence et recevez les mises à jour futures gratuitement. Pro est réservé à un usage personnel.',
+        },
+        {
+          title: 'Quelle est la différence entre Pro et Équipe ?',
+          answer:
+            'Le forfait Équipe ($39 par utilisateur) est conçu pour les entreprises et les équipes commerciales et autorise l’usage professionnel en entreprise. Il inclut la gestion centralisée des licences, la facturation unifiée avec émission de factures, un canal exclusif pour incidents et demandes, ainsi qu’une assistance technique et un service après-vente de niveau maximum. Les achats groupés bénéficient de remises.',
+        },
+        {
+          title: 'Sur combien d’appareils puis-je utiliser une licence ?',
+          answer:
+            'La licence Pro fonctionne sur vos appareils personnels. Le forfait Équipe est licencié par utilisateur, ce qui simplifie la gestion et la facturation centralisées.',
+        },
+        {
+          title: 'Quels modes de paiement acceptez-vous ?',
+          answer:
+            'Nous acceptons les principales cartes bancaires et PayPal, dans un processus de paiement sécurisé et pratique.',
+        },
+        {
+          title: 'Puis-je demander un remboursement ?',
+          answer:
+            'Les licences du forfait Équipe bénéficient d’une politique de remboursement de 7 jours. Contactez-nous si vous avez des questions.',
+        },
+      ],
+      ctaTitle: 'Rendez vos captures plus productives dès aujourd’hui',
+      ctaSubtitle: 'Téléchargez gratuitement, installez en secondes et passez à l’offre supérieure quand vous voulez.',
+      ctaButton: 'Télécharger Shotera gratuitement',
+    },
   },
   it: {
     storeLanguage: 'it-it',
@@ -964,6 +1745,133 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       newLabel: 'NOVITÀ',
       announcement: 'Shotera v7.2.0+: strumenti IA, OCR offline e traduzione immagini.',
     },
+    pricing: {
+      tagline: 'Prezzi',
+      heroTitle: 'Inizia gratis e passa al livello superiore quando serve',
+      heroSubtitle:
+        'Catturare e annotare ogni giorno rimane gratis per sempre. Quando ti servono registrazione, scontorno IA o traduzione immagini, passa a Pro o al piano Team.',
+      plansTitle: 'Scegli il piano più adatto',
+      plansSubtitle: 'Acquisto unico, nessun costo nascosto',
+      popularRibbon: 'Il più scelto',
+      freePlan: {
+        subtitle: 'Tutto ciò che serve ogni giorno',
+        period: 'Gratis per sempre',
+        items: [
+          'Cattura di area, finestra o schermo intero',
+          'Rilevamento intelligente di finestre ed elementi',
+          'Kit completo di annotazione (frecce, riquadri, testo, evidenziazioni, sfocatura)',
+          'Adesivi emoji, lente di ingrandimento e numeri di passo',
+          'Fissaggio sullo schermo',
+          'OCR offline di base (limite giornaliero)',
+          'Manutenzione e aggiornamenti continui',
+        ],
+        cta: 'Scarica gratis',
+      },
+      proPlan: {
+        subtitle: 'Cattura avanzata e funzioni IA',
+        period: 'Acquisto unico',
+        items: [
+          'Tutto del piano Base',
+          'Registrazione HD ed esportazione GIF',
+          'Scontorno IA illimitato',
+          'Gomma e ritocco IA illimitati',
+          'OCR offline illimitato',
+          'Traduzione immagini',
+          'Sincronizzazione cronologia su cloud',
+          'Paga una volta, usa per sempre, aggiornamenti inclusi',
+        ],
+        cta: 'Acquista ora',
+      },
+      teamPlan: {
+        title: 'Team',
+        subtitle: 'Servizio per aziende e supporto dedicato',
+        period: '/ per utente',
+        items: [
+          'Tutto del piano Pro',
+          'Uso commerciale autorizzato in azienda',
+          'Gestione centralizzata delle licenze',
+          'Fatturazione unificata con emissione fatture',
+          'Canale esclusivo per segnalazioni e richieste',
+          'Supporto tecnico e assistenza post-vendita di livello massimo',
+          'Sconti su volumi per acquisti di gruppo',
+        ],
+        cta: 'Contattaci',
+      },
+      whyTitle: 'Perché conviene passare a Pro',
+      whySubtitle: 'Pro rende più veloci e affidabili le funzioni di cattura, registrazione e IA che usi ogni giorno.',
+      why: [
+        {
+          title: 'Paga una volta, usa per sempre',
+          description:
+            'Pro è un acquisto unico di $29, senza costi annuali né abbonamento. I futuri aggiornamenti sono inclusi.',
+        },
+        {
+          title: 'Elaborazione locale e privata',
+          description:
+            'Scontorno IA, gomma e OCR funzionano sul tuo dispositivo. Nulla viene caricato, le tue catture restano tue.',
+        },
+        {
+          title: 'Licenza per più dispositivi',
+          description: 'Una licenza si attiva su tutti i tuoi computer. Passa dal lavoro a casa senza vincoli.',
+        },
+        {
+          title: 'Pronto in pochi secondi',
+          description: 'L’installazione richiede pochi secondi e funziona subito, senza configurazioni complicate.',
+        },
+        {
+          title: 'Sempre in evoluzione',
+          description: 'Tutte le nuove funzioni e versioni pubblicate durante la tua licenza sono incluse.',
+        },
+        {
+          title: 'Supporto prioritario',
+          description: 'Gli utenti Pro e Team ricevono risposte più rapide quando ne hanno bisogno.',
+        },
+      ],
+      stepsTitle: 'Tre passi verso Pro',
+      stepsTagline: 'Veloce e semplice',
+      steps: [
+        'Scarica e installa Shotera',
+        'Scegli il piano Pro e completa l’acquisto',
+        'Attiva la licenza e sblocca tutto',
+        'Cattura e registra con maggiore agilità',
+      ],
+      faqTitle: 'Domande sui prezzi',
+      faqSubtitle: 'Quello che ci viene chiesto su pagamenti e licenze.',
+      faqs: [
+        {
+          title: 'Il piano gratuito è davvero gratis?',
+          answer:
+            'Sì. Cattura, annotazioni, fissaggio e OCR offline di base rimangono gratis per sempre, senza limiti di tempo né aggiornamenti forzati. Anche gli utenti gratuiti ricevono manutenzione e aggiornamenti.',
+        },
+        {
+          title: 'Pro è un acquisto unico o un abbonamento?',
+          answer:
+            'Pro è un acquisto unico di $29 ed è tuo per sempre, senza rinnovo annuale. Mantieni la licenza in modo permanente e ricevi gli aggiornamenti futuri gratuitamente. Pro è riservato all’uso personale.',
+        },
+        {
+          title: 'Qual è la differenza tra Pro e Team?',
+          answer:
+            'Il piano Team ($39 per utente) è pensato per aziende e team commerciali e autorizza l’uso professionale in azienda. Include gestione centralizzata delle licenze, fatturazione unificata con emissione fatture, un canale esclusivo per segnalazioni e richieste, oltre a supporto tecnico e assistenza post-vendita di livello massimo. Gli acquisti di gruppo hanno sconti.',
+        },
+        {
+          title: 'Su quanti dispositivi posso usare una licenza?',
+          answer:
+            'La licenza Pro funziona sui tuoi dispositivi personali. Il piano Team è licenziato per utente, il che semplifica la gestione e la fatturazione centralizzate.',
+        },
+        {
+          title: 'Quali metodi di pagamento accettate?',
+          answer: 'Accettiamo le principali carte di credito e PayPal, con un processo di pagamento sicuro e pratico.',
+        },
+        {
+          title: 'Posso richiedere un rimborso?',
+          answer:
+            'Le licenze del piano Team hanno una politica di rimborso di 7 giorni. Contattaci per qualsiasi domanda.',
+        },
+      ],
+      ctaTitle: 'Rendi le tue catture più produttive oggi',
+      ctaSubtitle: 'Scarica gratis, installa in secondi e passa al livello superiore quando vuoi.',
+      ctaButton: 'Scarica Shotera gratis',
+    },
   },
   ko: {
     storeLanguage: 'ko-kr',
@@ -1078,6 +1986,131 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: '모든 캡처와 녹화를 더 효율적으로.',
       newLabel: '새 기능',
       announcement: 'Shotera v7.2.0+: AI 이미지 도구, 오프라인 OCR, 이미지 번역을 만나보세요.',
+    },
+    pricing: {
+      tagline: '요금제',
+      heroTitle: '무료로 시작하고, 필요할 때 업그레이드',
+      heroSubtitle:
+        '일상적인 캡처와 주석 기능은 영구 무료입니다. 녹화, AI 누끼 따기, 이미지 번역이 필요할 때 Pro나 팀 플랜으로 전환하세요.',
+      plansTitle: '적합한 플랜을 선택하세요',
+      plansSubtitle: '평생 라이선스, 숨겨진 비용 없음',
+      popularRibbon: '추천',
+      freePlan: {
+        subtitle: '매일 필요한 모든 기능',
+        period: '영구 무료',
+        items: [
+          '영역 / 창 / 전체 화면 캡처',
+          '창과 UI 요소 자동 감지',
+          '완벽한 주석 도구(화살표, 박스, 텍스트, 하이라이트, 흐림)',
+          '이모지 스티커, 돋보기, 단계 번호',
+          '화면 고정',
+          '기본 오프라인 OCR(일일 제한)',
+          '지속적인 유지보수와 업데이트',
+        ],
+        cta: '무료 다운로드',
+      },
+      proPlan: {
+        subtitle: '고급 캡처 및 AI 기능',
+        period: '평생 라이선스',
+        items: [
+          '기본 플랜의 모든 기능',
+          'HD 녹화 및 GIF 내보내기',
+          'AI 배경 제거 무제한',
+          'AI 지우개 / 복원 무제한',
+          '오프라인 OCR 무제한',
+          '이미지 번역',
+          '캡처 기록 클라우드 동기화',
+          '한 번 구매로 평생 사용, 무료 업데이트',
+        ],
+        cta: '지금 구매',
+      },
+      teamPlan: {
+        title: '팀',
+        subtitle: '기업용 서비스 및 전용 지원',
+        period: '/ 1인당',
+        items: [
+          'Pro 플랜의 모든 기능',
+          '회사 및 상업적 환경에서 사용 가능',
+          '중앙 집중식 라이선스 관리',
+          '통합 청구 및 세금계산서 발행',
+          '버그 및 기능 요청 전용 채널',
+          '최상급 기술 지원 및 A/S',
+          '대량 구매 시 할인',
+        ],
+        cta: '문의하기',
+      },
+      whyTitle: '업그레이드할 가치',
+      whySubtitle: 'Pro는 매일 사용하는 캡처, 녹화, AI 기능을 더 빠르고 안정적으로 만듭니다.',
+      why: [
+        {
+          title: '한 번 구매로 평생 사용',
+          description:
+            'Pro는 $29 단 한 번의 결제로 평생 사용할 수 있습니다. 연회비나 구독 없이 향후 업데이트도 무료입니다.',
+        },
+        {
+          title: '로컬 우선 및 프라이버시 보호',
+          description: 'AI 누끼 따기, 지우개, OCR은 모두 기기에서 실행됩니다. 업로드 없이 캡처는 오직 당신의 것입니다.',
+        },
+        {
+          title: '여러 기기에서 사용 가능',
+          description: '하나의 라이선스로 모든 PC에서 활성화할 수 있습니다. 업무용과 가정용 간 원활하게 전환하세요.',
+        },
+        {
+          title: '몇 초 만에 사용 가능',
+          description: '설치는 몇 초면 완료되며 복잡한 설정 없이 바로 사용할 수 있습니다.',
+        },
+        {
+          title: '지속적인 진화',
+          description: '라이선스 기간 중 출시되는 모든 신기능과 버전 업데이트가 무료로 제공됩니다.',
+        },
+        {
+          title: '우선 지원',
+          description: 'Pro와 팀 플랜 사용자는 필요할 때 더 빠른 응답을 받습니다.',
+        },
+      ],
+      stepsTitle: 'Pro로 가는 3단계',
+      stepsTagline: '빠르고 간단하게',
+      steps: [
+        'Shotera 다운로드 및 설치',
+        'Pro 플랜 선택 및 구매',
+        '라이선스 활성화로 모든 기능 해제',
+        '더 빠른 캡처와 녹화 시작',
+      ],
+      faqTitle: '가격 관련 자주 묻는 질문',
+      faqSubtitle: '결제와 라이선스에 대해 자주 묻는 질문입니다.',
+      faqs: [
+        {
+          title: '무료 플랜은 정말 무료인가요?',
+          answer:
+            '네. 캡처, 주석, 화면 고정, 기본 오프라인 OCR은 기한 없이 영구 무료이며 강제 업그레이드도 없습니다. 무료 사용자도 지속적인 유지보수와 업데이트를 받습니다.',
+        },
+        {
+          title: 'Pro는 평생 라이선스인가요, 아니면 구독인가요?',
+          answer:
+            'Pro는 $29의 평생 라이선스로 연간 갱신이 필요 없습니다. 구매 후 라이선스를 영구적으로 소유하며 향후 버전 업데이트도 무료로 받습니다. Pro는 개인 사용에만 해당됩니다.',
+        },
+        {
+          title: 'Pro와 팀 플랜의 차이는 무엇인가요?',
+          answer:
+            '팀 플랜($39/인)은 기업 및 상업 팀을 위한 것으로 회사 내 상업적 사용이 허용됩니다. 중앙 집중식 라이선스 관리, 통합 청구 및 세금계산서 발행, 전용 버그/기능 요청 채널, 최상급 기술 지원 및 A/S가 포함됩니다. 대량 구매 시 할인이 적용됩니다.',
+        },
+        {
+          title: '하나의 라이선스로 몇 대의 기기에서 사용할 수 있나요?',
+          answer:
+            'Pro 라이선스는 개인 소유의 여러 기기에서 사용할 수 있습니다. 팀 플랜은 1인당 라이선스로 중앙 관리와 청구가 용이합니다.',
+        },
+        {
+          title: '어떤 결제 수단을 지원하나요?',
+          answer: '주요 신용카드와 PayPal을 지원하며 안전하고 편리한 결제 과정을 제공합니다.',
+        },
+        {
+          title: '환불이 가능한가요?',
+          answer: '팀 플랜 라이선스는 7일 환불 정책이 적용됩니다. 궁금한 점이 있으면 언제든지 문의하세요.',
+        },
+      ],
+      ctaTitle: '오늘부터 스크린샷을 더 생산적으로 만드세요',
+      ctaSubtitle: '무료로 다운로드하고 몇 초 만에 설치하며 원할 때 업그레이드하세요.',
+      ctaButton: 'Shotera 무료 다운로드',
     },
   },
   ru: {
@@ -1207,6 +2240,135 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       newLabel: 'НОВОЕ',
       announcement: 'Shotera v7.2.0+: ИИ-инструменты, автономное OCR и перевод изображений.',
     },
+    pricing: {
+      tagline: 'Тарифы',
+      heroTitle: 'Начните бесплатно и переходите на платную версию по необходимости',
+      heroSubtitle:
+        'Ежедневный захват и аннотации бесплатны навсегда. Когда понадобится запись экрана, ИИ-вырезание или перевод изображений, выберите Pro или тариф для команды.',
+      plansTitle: 'Выберите подходящий тариф',
+      plansSubtitle: 'Разовый платёж, без скрытых списаний',
+      popularRibbon: 'Популярный',
+      freePlan: {
+        subtitle: 'Всё нужное для ежедневной работы',
+        period: 'Бесплатно навсегда',
+        items: [
+          'Захват области, окна или всего экрана',
+          'Умное определение окон и элементов интерфейса',
+          'Полный набор аннотаций (стрелки, рамки, текст, выделение, размытие)',
+          'Эмодзи-стикеры, лупа и нумерация шагов',
+          'Закрепление на экране',
+          'Базовое автономное OCR (суточный лимит)',
+          'Постоянная поддержка и обновления',
+        ],
+        cta: 'Скачать бесплатно',
+      },
+      proPlan: {
+        subtitle: 'Расширенный захват и функции ИИ',
+        period: 'Разовый платёж',
+        items: [
+          'Всё из базовой версии',
+          'Запись в высоком качестве и экспорт в GIF',
+          'Неограниченное ИИ-вырезание фона',
+          'Неограниченный ИИ-ластик и восстановление',
+          'Неограниченное автономное OCR',
+          'Перевод изображений',
+          'Синхронизация истории захвата с облаком',
+          'Оплата один раз, использование навсегда, обновления бесплатны',
+        ],
+        cta: 'Купить',
+      },
+      teamPlan: {
+        title: 'Команда',
+        subtitle: 'Корпоративное обслуживание и выделенная поддержка',
+        period: '/ за пользователя',
+        items: [
+          'Всё из тарифа Pro',
+          'Коммерческое использование в компании разрешено',
+          'Централизованное управление лицензиями',
+          'Единый счёт и оформление документов',
+          'Отдельный канал для сообщений об ошибках и пожеланий',
+          'Техническая поддержка и обслуживание высшего уровня',
+          'Скидки при закупке нескольких лицензий',
+        ],
+        cta: 'Связаться с нами',
+      },
+      whyTitle: 'Почему стоит перейти на Pro',
+      whySubtitle:
+        'Pro делает быстрее и надёжнее те функции захвата, записи и ИИ, которыми вы пользуетесь каждый день.',
+      why: [
+        {
+          title: 'Оплата один раз, использование навсегда',
+          description:
+            'Pro — это разовый платёж $29 без ежегодных взносов и подписки. Все будущие обновления входят в стоимость.',
+        },
+        {
+          title: 'Локальная обработка и конфиденциальность',
+          description:
+            'ИИ-вырезание, ластик и OCR работают на вашем устройстве. Ничего не загружается в сеть, ваши снимки остаются вашими.',
+        },
+        {
+          title: 'Лицензия для нескольких устройств',
+          description:
+            'Одну лицензию можно активировать на всех ваших компьютерах и свободно переключаться между работой и домом.',
+        },
+        {
+          title: 'Готово за несколько секунд',
+          description: 'Установка занимает секунды, программа работает сразу и не требует сложной настройки.',
+        },
+        {
+          title: 'Постоянное развитие',
+          description: 'Все новые функции и версии, выпущенные в период действия лицензии, предоставляются бесплатно.',
+        },
+        {
+          title: 'Приоритетная поддержка',
+          description: 'Пользователи Pro и тарифа для команды получают ответы быстрее, когда это действительно важно.',
+        },
+      ],
+      stepsTitle: 'Три шага до Pro',
+      stepsTagline: 'Быстро и просто',
+      steps: [
+        'Скачайте и установите Shotera',
+        'Выберите тариф Pro и оплатите',
+        'Активируйте лицензию и откройте все функции',
+        'Захватывайте и записывайте быстрее',
+      ],
+      faqTitle: 'Вопросы о тарифах',
+      faqSubtitle: 'Что чаще всего спрашивают об оплате и лицензировании.',
+      faqs: [
+        {
+          title: 'Бесплатная версия действительно бесплатна?',
+          answer:
+            'Да. Захват, аннотации, закрепление и базовое автономное OCR бесплатны навсегда — без ограничения по времени и без принудительного перехода на платный тариф. Пользователи бесплатной версии также получают поддержку и обновления.',
+        },
+        {
+          title: 'Pro — это разовая покупка или подписка?',
+          answer:
+            'Pro — это разовая покупка за $29, лицензия остаётся у вас навсегда, ежегодное продление не требуется. Вы получаете бессрочный доступ и бесплатные обновления будущих версий. Pro предназначен только для личного использования.',
+        },
+        {
+          title: 'Чем Pro отличается от тарифа для команды?',
+          answer:
+            'Тариф для команды ($39 за пользователя) предназначен для компаний и коммерческих коллективов и разрешает использование в рабочих целях внутри организации. В него входят централизованное управление лицензиями, единый счёт с оформлением документов, отдельный канал для сообщений об ошибках и пожеланий, а также техническая поддержка и обслуживание высшего уровня. При закупке нескольких лицензий действуют скидки.',
+        },
+        {
+          title: 'На сколько устройств распространяется одна лицензия?',
+          answer:
+            'Лицензия Pro действует на ваших личных устройствах. Тариф для команды лицензируется на пользователя, что упрощает централизованное управление и оплату.',
+        },
+        {
+          title: 'Какие способы оплаты вы принимаете?',
+          answer: 'Мы принимаем основные банковские карты и PayPal — оплата проходит безопасно и удобно.',
+        },
+        {
+          title: 'Можно ли вернуть деньги?',
+          answer:
+            'Для лицензий тарифа для команды действует возврат в течение 7 дней. Если возникнут вопросы, напишите нам.',
+        },
+      ],
+      ctaTitle: 'Сделайте работу со снимками экрана продуктивнее уже сегодня',
+      ctaSubtitle: 'Скачайте бесплатно, установите за секунды и переходите на Pro, когда будете готовы.',
+      ctaButton: 'Скачать Shotera бесплатно',
+    },
   },
   ar: {
     storeLanguage: 'ar-sa',
@@ -1318,6 +2480,131 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'كفاءة أكبر في كل لقطة وتسجيل.',
       newLabel: 'جديد',
       announcement: 'Shotera v7.2.0+: أدوات صور بالذكاء الاصطناعي وOCR دون اتصال وترجمة الصور.',
+    },
+    pricing: {
+      tagline: 'الأسعار',
+      heroTitle: 'ابدأ مجاناً وارتقِ عند الحاجة',
+      heroSubtitle:
+        'الالتقاط والتعليق اليومي مجاني دائماً. وعندما تحتاج إلى تسجيل الشاشة أو القص بالذكاء الاصطناعي أو ترجمة الصور، انتقل إلى Pro أو خطة الفريق.',
+      plansTitle: 'اختر الخطة المناسبة لك',
+      plansSubtitle: 'دفعة واحدة، بدون رسوم خفية',
+      popularRibbon: 'الأكثر اختياراً',
+      freePlan: {
+        subtitle: 'كل ما تحتاجه في عملك اليومي',
+        period: 'مجاني دائماً',
+        items: [
+          'التقاط منطقة أو نافذة أو الشاشة كاملة',
+          'اكتشاف ذكي للنوافذ وعناصر الواجهة',
+          'مجموعة تعليقات كاملة (أسهم، مستطيلات، نص، تظليل، تمويه)',
+          'ملصقات إيموجي وعدسة مكبرة وترقيم الخطوات',
+          'التثبيت على الشاشة',
+          'OCR أساسي دون اتصال (حد يومي)',
+          'صيانة وتحديثات مستمرة',
+        ],
+        cta: 'تنزيل مجاني',
+      },
+      proPlan: {
+        subtitle: 'التقاط متقدم وقدرات الذكاء الاصطناعي',
+        period: 'دفعة واحدة',
+        items: [
+          'كل ميزات الإصدار الأساسي',
+          'تسجيل بجودة عالية وتصدير GIF',
+          'إزالة الخلفية بالذكاء الاصطناعي بلا حدود',
+          'ممحاة وترميم بالذكاء الاصطناعي بلا حدود',
+          'OCR دون اتصال بلا حدود',
+          'ترجمة الصور',
+          'مزامنة سجل الالتقاط عبر السحابة',
+          'ادفع مرة واحدة واستخدم دائماً مع تحديثات مجانية',
+        ],
+        cta: 'اشترِ الآن',
+      },
+      teamPlan: {
+        title: 'الفريق',
+        subtitle: 'خدمة للمؤسسات ودعم مخصص',
+        period: '/ لكل مستخدم',
+        items: [
+          'كل ميزات خطة Pro',
+          'الاستخدام التجاري داخل الشركة مسموح',
+          'إدارة مركزية للتراخيص',
+          'فوترة موحدة وإصدار الفواتير',
+          'قناة مخصصة للإبلاغ عن الأخطاء والطلبات',
+          'دعم فني وخدمة بعد البيع بأعلى مستوى',
+          'خصومات على الشراء بالكميات',
+        ],
+        cta: 'تواصل معنا',
+      },
+      whyTitle: 'لماذا يستحق الترقية',
+      whySubtitle: 'يجعل Pro ميزات الالتقاط والتسجيل والذكاء الاصطناعي التي تستخدمها يومياً أسرع وأكثر موثوقية.',
+      why: [
+        {
+          title: 'ادفع مرة واحدة واستخدم دائماً',
+          description: 'خطة Pro بدفعة واحدة قيمتها $29 دون رسوم سنوية أو اشتراك، وجميع التحديثات القادمة مشمولة.',
+        },
+        {
+          title: 'معالجة محلية تحفظ خصوصيتك',
+          description:
+            'القص بالذكاء الاصطناعي والممحاة وOCR تعمل جميعها على جهازك. لا يُرفع أي شيء، ولقطاتك تبقى ملكك وحدك.',
+        },
+        {
+          title: 'ترخيص لعدة أجهزة',
+          description: 'ترخيص واحد يمكن تنشيطه على جميع أجهزتك، للتنقل بين العمل والمنزل بسهولة.',
+        },
+        {
+          title: 'جاهز في ثوانٍ',
+          description: 'التثبيت يستغرق ثوانٍ ويعمل فوراً دون إعدادات معقدة.',
+        },
+        {
+          title: 'تطوير مستمر',
+          description: 'جميع الميزات والإصدارات الجديدة الصادرة خلال فترة ترخيصك مشمولة مجاناً.',
+        },
+        {
+          title: 'دعم ذو أولوية',
+          description: 'يحصل مستخدمو Pro وخطة الفريق على ردود أسرع عند الحاجة.',
+        },
+      ],
+      stepsTitle: 'ثلاث خطوات إلى Pro',
+      stepsTagline: 'سريع وبسيط',
+      steps: [
+        'نزّل Shotera وثبّته',
+        'اختر خطة Pro وأكمل الشراء',
+        'نشّط الترخيص لتفتح كل الميزات',
+        'ابدأ الالتقاط والتسجيل بسرعة أكبر',
+      ],
+      faqTitle: 'أسئلة عن الأسعار',
+      faqSubtitle: 'أكثر ما يُسأل عنه بخصوص الدفع والترخيص.',
+      faqs: [
+        {
+          title: 'هل الخطة المجانية مجانية فعلاً؟',
+          answer:
+            'نعم. الالتقاط والتعليق والتثبيت وOCR الأساسي دون اتصال مجانية دائماً، بلا حد زمني وبلا ترقية إلزامية. ويحصل مستخدمو الإصدار المجاني كذلك على الصيانة والتحديثات.',
+        },
+        {
+          title: 'هل Pro دفعة واحدة أم اشتراك؟',
+          answer:
+            'خطة Pro دفعة واحدة قيمتها $29 وتبقى ملكك دائماً دون تجديد سنوي. تحصل على ترخيص دائم وتحديثات مجانية للإصدارات القادمة. وخطة Pro مخصصة للاستخدام الشخصي فقط.',
+        },
+        {
+          title: 'ما الفرق بين Pro وخطة الفريق؟',
+          answer:
+            'خطة الفريق ($39 لكل مستخدم) مصممة للشركات والفرق التجارية وتسمح بالاستخدام التجاري داخل المؤسسة. وتشمل إدارة مركزية للتراخيص وفوترة موحدة مع إصدار الفواتير وقناة مخصصة للأخطاء والطلبات، إضافة إلى دعم فني وخدمة بعد البيع بأعلى مستوى. وتتوفر خصومات على الشراء بالكميات.',
+        },
+        {
+          title: 'على كم جهاز يمكن استخدام الترخيص الواحد؟',
+          answer:
+            'يعمل ترخيص Pro على أجهزتك الشخصية. أما خطة الفريق فترخيصها لكل مستخدم، ما يسهّل الإدارة والفوترة المركزية.',
+        },
+        {
+          title: 'ما طرق الدفع المتاحة؟',
+          answer: 'نقبل بطاقات الائتمان الرئيسية وPayPal، بعملية دفع آمنة وسهلة.',
+        },
+        {
+          title: 'هل يمكن استرداد المبلغ؟',
+          answer: 'تراخيص خطة الفريق تشملها سياسة استرداد خلال 7 أيام. تواصل معنا إن كان لديك أي استفسار.',
+        },
+      ],
+      ctaTitle: 'اجعل لقطات شاشتك أكثر إنتاجية من اليوم',
+      ctaSubtitle: 'نزّله مجاناً وثبّته في ثوانٍ وارتقِ للخطة الأعلى وقتما تشاء.',
+      ctaButton: 'تنزيل Shotera مجاناً',
     },
   },
   nl: {
@@ -1447,6 +2734,133 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       newLabel: 'NIEUW',
       announcement: 'Shotera v7.2.0+: AI-beeldgereedschap, offline OCR en beeldvertaling.',
     },
+    pricing: {
+      tagline: 'Prijzen',
+      heroTitle: 'Begin gratis en breid uit wanneer u dat nodig hebt',
+      heroSubtitle:
+        'Dagelijks vastleggen en annoteren blijft altijd gratis. Hebt u schermopname, AI-uitknippen of beeldvertaling nodig? Stap dan over op Pro of het teamplan.',
+      plansTitle: 'Kies het plan dat bij u past',
+      plansSubtitle: 'Eenmalige aankoop, geen verborgen kosten',
+      popularRibbon: 'Populair',
+      freePlan: {
+        subtitle: 'Alles wat u dagelijks gebruikt',
+        period: 'Altijd gratis',
+        items: [
+          'Gebied, venster of volledig scherm vastleggen',
+          'Slimme detectie van vensters en interface-elementen',
+          'Volledige annotatieset (pijlen, kaders, tekst, markeren, vervagen)',
+          'Emoji-stickers, vergrootglas en stapnummers',
+          'Vastmaken op het scherm',
+          'Basis offline OCR (daglimiet)',
+          'Doorlopend onderhoud en updates',
+        ],
+        cta: 'Gratis downloaden',
+      },
+      proPlan: {
+        subtitle: 'Geavanceerd vastleggen en AI-functies',
+        period: 'Eenmalige aankoop',
+        items: [
+          'Alles uit het basisplan',
+          'HD-schermopname en GIF-export',
+          'Onbeperkt AI-achtergrond verwijderen',
+          'Onbeperkte AI-gum en retouche',
+          'Onbeperkte offline OCR',
+          'Beeldvertaling',
+          'Cloudsynchronisatie van de opnamegeschiedenis',
+          'Eenmalig betalen, altijd gebruiken, gratis updates',
+        ],
+        cta: 'Nu kopen',
+      },
+      teamPlan: {
+        title: 'Team',
+        subtitle: 'Zakelijke dienstverlening en toegewijde ondersteuning',
+        period: '/ per gebruiker',
+        items: [
+          'Alles uit het Pro-plan',
+          'Commercieel gebruik binnen het bedrijf toegestaan',
+          'Centraal licentiebeheer',
+          'Gebundelde facturatie met factuuruitgifte',
+          'Exclusief kanaal voor bugmeldingen en verzoeken',
+          'Technische ondersteuning en service op het hoogste niveau',
+          'Volumekorting bij grotere afnames',
+        ],
+        cta: 'Neem contact op',
+      },
+      whyTitle: 'Waarom upgraden de moeite waard is',
+      whySubtitle:
+        'Pro maakt de functies voor vastleggen, opnemen en AI die u dagelijks gebruikt sneller en betrouwbaarder.',
+      why: [
+        {
+          title: 'Eenmalig betalen, altijd gebruiken',
+          description:
+            'Pro is een eenmalige aankoop van $29, zonder jaarlijkse kosten of abonnement. Toekomstige updates zijn inbegrepen.',
+        },
+        {
+          title: 'Lokaal en privacyvriendelijk',
+          description:
+            'AI-uitknippen, de gum en OCR werken op uw apparaat. Er wordt niets geüpload en uw schermafbeeldingen blijven van u.',
+        },
+        {
+          title: 'Licentie voor meerdere apparaten',
+          description: 'Eén licentie activeert u op al uw computers, zodat u vlot wisselt tussen werk en thuis.',
+        },
+        {
+          title: 'Binnen enkele seconden klaar',
+          description: 'De installatie duurt seconden en werkt direct, zonder ingewikkelde configuratie.',
+        },
+        {
+          title: 'Blijft verbeteren',
+          description: 'Alle nieuwe functies en versies die tijdens uw licentie uitkomen, zijn gratis inbegrepen.',
+        },
+        {
+          title: 'Ondersteuning met prioriteit',
+          description: 'Gebruikers van Pro en Team krijgen sneller antwoord wanneer dat echt nodig is.',
+        },
+      ],
+      stepsTitle: 'In drie stappen naar Pro',
+      stepsTagline: 'Snel en eenvoudig',
+      steps: [
+        'Download en installeer Shotera',
+        'Kies het Pro-plan en rond de aankoop af',
+        'Activeer de licentie en ontgrendel alles',
+        'Leg sneller vast en neem sneller op',
+      ],
+      faqTitle: 'Veelgestelde vragen over prijzen',
+      faqSubtitle: 'Wat u wilt weten over betaling en licenties.',
+      faqs: [
+        {
+          title: 'Is het gratis plan echt gratis?',
+          answer:
+            'Ja. Vastleggen, annoteren, vastmaken en de basis offline OCR blijven altijd gratis, zonder tijdslimiet en zonder verplichte upgrade. Ook gratis gebruikers ontvangen onderhoud en updates.',
+        },
+        {
+          title: 'Is Pro een eenmalige aankoop of een abonnement?',
+          answer:
+            'Pro is een eenmalige aankoop van $29 en blijft voorgoed van u, zonder jaarlijkse verlenging. U houdt permanent toegang tot uw licentie en ontvangt toekomstige versies gratis. Pro is uitsluitend bedoeld voor persoonlijk gebruik.',
+        },
+        {
+          title: 'Wat is het verschil tussen Pro en Team?',
+          answer:
+            'Team ($39 per gebruiker) is bedoeld voor bedrijven en commerciële teams en staat zakelijk gebruik binnen de organisatie toe. Het omvat centraal licentiebeheer, gebundelde facturatie met factuuruitgifte, een exclusief kanaal voor bugmeldingen en verzoeken, en technische ondersteuning en service op het hoogste niveau. Bij grotere afnames geldt volumekorting.',
+        },
+        {
+          title: 'Voor hoeveel apparaten geldt één licentie?',
+          answer:
+            'Een Pro-licentie werkt op uw persoonlijke apparaten. Team wordt per gebruiker gelicentieerd, wat centraal beheer en facturatie eenvoudiger maakt.',
+        },
+        {
+          title: 'Welke betaalmethoden accepteert u?',
+          answer: 'Wij accepteren de bekende creditcards en PayPal, met een veilig en gemakkelijk afrekenproces.',
+        },
+        {
+          title: 'Kan ik geld terugvragen?',
+          answer: 'Voor Team-licenties geldt een terugbetalingstermijn van 7 dagen. Neem gerust contact op bij vragen.',
+        },
+      ],
+      ctaTitle: 'Maak uw schermafbeeldingen vanaf vandaag productiever',
+      ctaSubtitle: 'Gratis downloaden, in seconden installeren en upgraden wanneer u wilt.',
+      ctaButton: 'Shotera gratis downloaden',
+    },
   },
   pl: {
     storeLanguage: 'pl-pl',
@@ -1570,6 +2984,137 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Większa wydajność każdego zrzutu i nagrania.',
       newLabel: 'NOWOŚĆ',
       announcement: 'Shotera v7.2.0+: narzędzia AI, OCR offline i tłumaczenie obrazów.',
+    },
+    pricing: {
+      tagline: 'Cennik',
+      heroTitle: 'Zacznij bezpłatnie, rozszerz gdy zajdzie potrzeba',
+      heroSubtitle:
+        'Codzienne przechwytywanie i adnotacje pozostają bezpłatne na zawsze. Gdy potrzebujesz nagrywania ekranu, wycinania AI lub tłumaczenia obrazów, wybierz Pro albo plan zespołowy.',
+      plansTitle: 'Wybierz plan dopasowany do siebie',
+      plansSubtitle: 'Jednorazowa płatność, bez ukrytych opłat',
+      popularRibbon: 'Najczęściej wybierany',
+      freePlan: {
+        subtitle: 'Wszystko, czego używasz codziennie',
+        period: 'Bezpłatnie na zawsze',
+        items: [
+          'Przechwytywanie obszaru, okna lub całego ekranu',
+          'Inteligentne wykrywanie okien i elementów interfejsu',
+          'Pełny zestaw adnotacji (strzałki, ramki, tekst, zakreślanie, rozmycie)',
+          'Naklejki emoji, lupa i numery kroków',
+          'Przypinanie na ekranie',
+          'Podstawowy OCR offline (limit dzienny)',
+          'Bieżąca opieka i aktualizacje',
+        ],
+        cta: 'Pobierz bezpłatnie',
+      },
+      proPlan: {
+        subtitle: 'Zaawansowane przechwytywanie i funkcje AI',
+        period: 'Jednorazowa płatność',
+        items: [
+          'Wszystko z planu podstawowego',
+          'Nagrywanie w jakości HD i eksport do GIF',
+          'Nieograniczone usuwanie tła przez AI',
+          'Nieograniczona gumka i retusz AI',
+          'Nieograniczony OCR offline',
+          'Tłumaczenie obrazów',
+          'Synchronizacja historii przechwytywania w chmurze',
+          'Płacisz raz, korzystasz zawsze, aktualizacje bezpłatne',
+        ],
+        cta: 'Kup teraz',
+      },
+      teamPlan: {
+        title: 'Zespół',
+        subtitle: 'Obsługa dla firm i dedykowane wsparcie',
+        period: '/ za stanowisko',
+        items: [
+          'Wszystko z planu Pro',
+          'Użytek komercyjny w firmie jest dozwolony',
+          'Centralne zarządzanie licencjami',
+          'Zbiorcze rozliczenia i wystawianie faktur',
+          'Dedykowany kanał zgłaszania błędów i potrzeb',
+          'Wsparcie techniczne i obsługa posprzedażowa najwyższego poziomu',
+          'Rabaty przy zakupie większej liczby stanowisk',
+        ],
+        cta: 'Skontaktuj się z nami',
+      },
+      whyTitle: 'Dlaczego warto przejść na Pro',
+      whySubtitle:
+        'Pro sprawia, że funkcje przechwytywania, nagrywania i AI, z których korzystasz codziennie, działają szybciej i pewniej.',
+      why: [
+        {
+          title: 'Płacisz raz, korzystasz zawsze',
+          description:
+            'Pro to jednorazowa płatność $29 — bez opłat rocznych i bez subskrypcji. Przyszłe aktualizacje są w cenie.',
+        },
+        {
+          title: 'Działa lokalnie, dba o prywatność',
+          description:
+            'Wycinanie AI, gumka i OCR działają na Twoim urządzeniu. Nic nie jest przesyłane, a Twoje zrzuty pozostają tylko Twoje.',
+        },
+        {
+          title: 'Licencja na wiele urządzeń',
+          description:
+            'Jedną licencję aktywujesz na wszystkich swoich komputerach i swobodnie przechodzisz między pracą a domem.',
+        },
+        {
+          title: 'Gotowe w kilka sekund',
+          description: 'Instalacja trwa kilka sekund i działa od razu, bez skomplikowanej konfiguracji.',
+        },
+        {
+          title: 'Stale się rozwija',
+          description:
+            'Wszystkie nowe funkcje i wersje wydane w okresie obowiązywania licencji otrzymujesz bezpłatnie.',
+        },
+        {
+          title: 'Wsparcie priorytetowe',
+          description: 'Użytkownicy planów Pro i Zespół otrzymują szybsze odpowiedzi, gdy naprawdę tego potrzebują.',
+        },
+      ],
+      stepsTitle: 'Trzy kroki do Pro',
+      stepsTagline: 'Szybko i prosto',
+      steps: [
+        'Pobierz i zainstaluj Shotera',
+        'Wybierz plan Pro i dokonaj zakupu',
+        'Aktywuj licencję i odblokuj wszystko',
+        'Przechwytuj i nagrywaj sprawniej',
+      ],
+      faqTitle: 'Pytania o cennik',
+      faqSubtitle: 'O co najczęściej pytacie w sprawie płatności i licencji.',
+      faqs: [
+        {
+          title: 'Czy plan bezpłatny naprawdę jest darmowy?',
+          answer:
+            'Tak. Przechwytywanie, adnotacje, przypinanie i podstawowy OCR offline są bezpłatne na zawsze — bez limitu czasu i bez wymuszanej aktualizacji. Użytkownicy wersji bezpłatnej również otrzymują opiekę i aktualizacje.',
+        },
+        {
+          title: 'Czy Pro to zakup jednorazowy czy subskrypcja?',
+          answer:
+            'Pro to jednorazowy zakup za $29 i pozostaje Twój na zawsze — bez corocznego odnawiania. Zachowujesz bezterminowy dostęp do licencji i otrzymujesz przyszłe wersje bezpłatnie. Plan Pro jest przeznaczony wyłącznie do użytku osobistego.',
+        },
+        {
+          title: 'Czym różnią się plany Pro i Zespół?',
+          answer:
+            'Plan Zespół ($39 za stanowisko) jest przeznaczony dla firm i zespołów komercyjnych oraz zezwala na użytek służbowy w organizacji. Obejmuje centralne zarządzanie licencjami, zbiorcze rozliczenia z wystawianiem faktur, dedykowany kanał zgłaszania błędów i potrzeb, a także wsparcie techniczne i obsługę posprzedażową najwyższego poziomu. Przy większych zakupach obowiązują rabaty.',
+        },
+        {
+          title: 'Na ilu urządzeniach obowiązuje jedna licencja?',
+          answer:
+            'Licencja Pro działa na Twoich urządzeniach osobistych. Plan Zespół jest licencjonowany na stanowisko, co upraszcza centralne zarządzanie i rozliczenia.',
+        },
+        {
+          title: 'Jakie metody płatności są dostępne?',
+          answer:
+            'Przyjmujemy najpopularniejsze karty płatnicze oraz PayPal — płatność przebiega bezpiecznie i wygodnie.',
+        },
+        {
+          title: 'Czy mogę otrzymać zwrot pieniędzy?',
+          answer:
+            'Licencje planu Zespół objęte są zwrotem w ciągu 7 dni. W razie pytań chętnie pomożemy — napisz do nas.',
+        },
+      ],
+      ctaTitle: 'Spraw, by Twoje zrzuty ekranu pracowały wydajniej już dziś',
+      ctaSubtitle: 'Pobierz bezpłatnie, zainstaluj w kilka sekund i przejdź na wyższy plan, kiedy zechcesz.',
+      ctaButton: 'Pobierz Shotera bezpłatnie',
     },
   },
   sv: {
@@ -1698,6 +3243,133 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Effektivare vid varje skärmbild och inspelning.',
       newLabel: 'NYTT',
       announcement: 'Shotera v7.2.0+: AI-bildverktyg, offline-OCR och bildöversättning.',
+    },
+    pricing: {
+      tagline: 'Priser',
+      heroTitle: 'Börja gratis och uppgradera när du behöver',
+      heroSubtitle:
+        'Att fånga och kommentera i vardagen är gratis för alltid. När du behöver skärminspelning, AI-friläggning eller bildöversättning väljer du Pro eller teamplanen.',
+      plansTitle: 'Välj den plan som passar dig',
+      plansSubtitle: 'Engångsköp, inga dolda avgifter',
+      popularRibbon: 'Populärast',
+      freePlan: {
+        subtitle: 'Allt du använder varje dag',
+        period: 'Gratis för alltid',
+        items: [
+          'Fånga område, fönster eller hela skärmen',
+          'Smart identifiering av fönster och gränssnittselement',
+          'Komplett verktygslåda för anteckningar (pilar, ramar, text, överstrykning, oskärpa)',
+          'Emoji-dekaler, förstoringsglas och stegnummer',
+          'Fäst på skärmen',
+          'Grundläggande offline-OCR (daglig gräns)',
+          'Löpande underhåll och uppdateringar',
+        ],
+        cta: 'Ladda ned gratis',
+      },
+      proPlan: {
+        subtitle: 'Avancerad fångst och AI-funktioner',
+        period: 'Engångsköp',
+        items: [
+          'Allt i basplanen',
+          'HD-inspelning och GIF-export',
+          'Obegränsad AI-borttagning av bakgrund',
+          'Obegränsat AI-suddgummi och retusch',
+          'Obegränsad offline-OCR',
+          'Bildöversättning',
+          'Molnsynkronisering av fångsthistoriken',
+          'Betala en gång, använd för alltid, uppdateringar utan kostnad',
+        ],
+        cta: 'Köp nu',
+      },
+      teamPlan: {
+        title: 'Team',
+        subtitle: 'Företagstjänst och dedikerad support',
+        period: '/ per licens',
+        items: [
+          'Allt i Pro-planen',
+          'Kommersiell användning inom företaget är tillåten',
+          'Central licenshantering',
+          'Samlad fakturering med fakturaunderlag',
+          'Egen kanal för felrapporter och önskemål',
+          'Teknisk support och eftermarknadsservice på högsta nivå',
+          'Volymrabatt vid köp av flera licenser',
+        ],
+        cta: 'Kontakta oss',
+      },
+      whyTitle: 'Därför är det värt att uppgradera',
+      whySubtitle:
+        'Pro gör de funktioner för fångst, inspelning och AI som du använder varje dag snabbare och mer tillförlitliga.',
+      why: [
+        {
+          title: 'Betala en gång, använd för alltid',
+          description:
+            'Pro är ett engångsköp på $29 — inga årsavgifter och ingen prenumeration. Kommande uppdateringar ingår.',
+        },
+        {
+          title: 'Lokalt och integritetsvänligt',
+          description:
+            'AI-friläggning, suddgummi och OCR körs på din enhet. Ingenting laddas upp och dina skärmbilder förblir dina.',
+        },
+        {
+          title: 'Licens för flera enheter',
+          description: 'En licens aktiverar du på alla dina datorer och växlar smidigt mellan arbete och hemma.',
+        },
+        {
+          title: 'Klart på några sekunder',
+          description: 'Installationen tar sekunder och fungerar direkt, utan krånglig konfiguration.',
+        },
+        {
+          title: 'Blir hela tiden bättre',
+          description: 'Alla nya funktioner och versioner som släpps under din licens ingår utan kostnad.',
+        },
+        {
+          title: 'Prioriterad support',
+          description: 'Användare av Pro och Team får snabbare svar när det verkligen behövs.',
+        },
+      ],
+      stepsTitle: 'Tre steg till Pro',
+      stepsTagline: 'Snabbt och enkelt',
+      steps: [
+        'Ladda ned och installera Shotera',
+        'Välj Pro-planen och slutför köpet',
+        'Aktivera licensen och lås upp allt',
+        'Fånga och spela in snabbare',
+      ],
+      faqTitle: 'Vanliga frågor om priser',
+      faqSubtitle: 'Det som brukar dyka upp kring betalning och licenser.',
+      faqs: [
+        {
+          title: 'Är gratisplanen verkligen gratis?',
+          answer:
+            'Ja. Fångst, anteckningar, fästning och grundläggande offline-OCR är gratis för alltid, utan tidsgräns och utan tvingande uppgradering. Även den som använder gratisversionen får underhåll och uppdateringar.',
+        },
+        {
+          title: 'Är Pro ett engångsköp eller en prenumeration?',
+          answer:
+            'Pro är ett engångsköp på $29 och är ditt för alltid, utan årlig förnyelse. Du behåller licensen permanent och får kommande versioner utan kostnad. Pro gäller endast för personligt bruk.',
+        },
+        {
+          title: 'Vad skiljer Pro från Team?',
+          answer:
+            'Team ($39 per licens) är avsedd för företag och kommersiella team och tillåter yrkesmässig användning inom organisationen. Den innehåller central licenshantering, samlad fakturering med fakturaunderlag, en egen kanal för felrapporter och önskemål samt teknisk support och eftermarknadsservice på högsta nivå. Vid köp av flera licenser gäller volymrabatt.',
+        },
+        {
+          title: 'Hur många enheter gäller en licens för?',
+          answer:
+            'En Pro-licens fungerar på dina personliga enheter. Team licensieras per licens, vilket förenklar central hantering och fakturering.',
+        },
+        {
+          title: 'Vilka betalsätt tar ni emot?',
+          answer: 'Vi tar emot de vanligaste kreditkorten och PayPal, med en säker och smidig kassa.',
+        },
+        {
+          title: 'Kan jag få pengarna tillbaka?',
+          answer: 'Team-licenser omfattas av 7 dagars återbetalningsrätt. Hör av dig om du har frågor.',
+        },
+      ],
+      ctaTitle: 'Gör dina skärmbilder mer produktiva redan i dag',
+      ctaSubtitle: 'Ladda ned gratis, installera på några sekunder och uppgradera när du vill.',
+      ctaButton: 'Ladda ned Shotera gratis',
     },
   },
 };

@@ -1,6 +1,7 @@
 ---
 import LocalizedHome from '~/components/localization/LocalizedHome.astro';
 import LocalizedPage from '~/components/localization/LocalizedPage.astro';
+import LocalizedPricing from '~/components/localization/LocalizedPricing.astro';
 import { publishedLocales } from '~/i18n/locales';
 import { localizedSiteContent, type LocalizedLocale } from '~/i18n/site-content';
 
@@ -49,6 +50,8 @@ const content = localizedSiteContent[locale];
 {
   path === '' ? (
     <LocalizedHome locale={locale} content={content} />
+  ) : path === 'pricing' ? (
+    <LocalizedPricing locale={locale} content={content} />
   ) : (
     <LocalizedPage locale={locale} path={path} content={content} />
   )

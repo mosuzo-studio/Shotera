@@ -1,0 +1,102 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import type { LocalizedSiteContent, LocalizedLocale } from '~/i18n/site-content';
+
+interface Props {
+  locale: LocalizedLocale;
+  content: LocalizedSiteContent;
+}
+
+const { locale, content } = Astro.props;
+const pricing = content.pricing;
+
+const releasesUrl = 'https://github.com/mosuzo-studio/Shotera/releases';
+
+// Icons mirror the English pricing page so localized copy stays icon-free.
+const whyIcons = [
+  'tabler:receipt',
+  'tabler:shield-lock',
+  'tabler:devices',
+  'tabler:download',
+  'tabler:refresh',
+  'tabler:headset',
+];
+const stepIcons = ['tabler:number-1', 'tabler:number-2', 'tabler:number-3', 'tabler:check'];
+
+const metadata = {
+  title: `${content.labels.pricing} — Shotera`,
+  description: content.pages.pricing[1],
+};
+---
+
+<PageLayout metadata={metadata} lang={locale}>
+  <HeroText tagline={pricing.tagline} title={pricing.heroTitle} subtitle={pricing.heroSubtitle} />
+
+  <Prices
+    title={pricing.plansTitle}
+    subtitle={pricing.plansSubtitle}
+    prices={[
+      {
+        title: content.labels.free,
+        subtitle: pricing.freePlan.subtitle,
+        price: 0,
+        period: pricing.freePlan.period,
+        items: pricing.freePlan.items.map((description) => ({ description })),
+        callToAction: { text: pricing.freePlan.cta, href: releasesUrl },
+      },
+      {
+        title: content.labels.pro,
+        subtitle: pricing.proPlan.subtitle,
+        price: 29,
+        period: pricing.proPlan.period,
+        items: pricing.proPlan.items.map((description) => ({ description })),
+        callToAction: { text: pricing.proPlan.cta, href: releasesUrl },
+        hasRibbon: true,
+        ribbonTitle: pricing.popularRibbon,
+      },
+      {
+        title: pricing.teamPlan.title,
+        subtitle: pricing.teamPlan.subtitle,
+        price: 39,
+        period: pricing.teamPlan.period,
+        items: pricing.teamPlan.items.map((description) => ({ description })),
+        callToAction: { text: pricing.teamPlan.cta, href: `/${locale}/contact` },
+      },
+    ]}
+  />
+
+  <Features3
+    title={pricing.whyTitle}
+    subtitle={pricing.whySubtitle}
+    columns={2}
+    items={pricing.why.map((item, index) => ({ ...item, icon: whyIcons[index] }))}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <Steps
+    title={pricing.stepsTitle}
+    tagline={pricing.stepsTagline}
+    isReversed={true}
+    items={pricing.steps.map((step, index) => ({ title: step, icon: stepIcons[index] }))}
+    image={{ src: '~/assets/images/workflow.png', alt: pricing.stepsTitle }}
+  />
+
+  <FAQs
+    title={pricing.faqTitle}
+    subtitle={pricing.faqSubtitle}
+    columns={1}
+    items={pricing.faqs.map((faq) => ({ title: faq.title, description: faq.answer }))}
+  />
+
+  <CallToAction
+    title={pricing.ctaTitle}
+    subtitle={pricing.ctaSubtitle}
+    actions={[{ variant: 'primary', text: pricing.ctaButton, href: releasesUrl, icon: 'tabler:download' }]}
+  />
+</PageLayout>
