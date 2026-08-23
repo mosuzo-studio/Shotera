@@ -29,7 +29,7 @@ const metadata = {
 <PageLayout metadata={metadata} lang={locale}>
   <script is:inline type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
 
-  <section class="relative overflow-hidden px-5 pb-20 pt-20 sm:pt-28">
+  <section class="relative px-5 pb-20 pt-20 sm:pt-28">
     <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.14),transparent_50%)]"></div>
     <div class="mx-auto max-w-5xl text-center">
       <p class="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-blue-600">Shotera for Windows</p>
@@ -41,13 +41,13 @@ const metadata = {
         {content.heroSubtitle}
       </p>
       <p class="mx-auto mt-4 max-w-2xl text-sm font-medium text-gray-500 dark:text-gray-400">{content.philosophy}</p>
-      <div class="mt-10 flex justify-center">
+      <div class="relative z-10 mt-10 flex justify-center">
         <DownloadButtons
           language={content.storeLanguage}
-          downloadLabel={content.labels.download}
+          downloadLabel={content.labels.freeDownload}
           moreVersionsLabel={content.moreVersions}
           storeAriaLabel={content.storeAria}
-          downloadAriaLabel={content.labels.download}
+          downloadAriaLabel={content.labels.freeDownload}
           moreVersionsAriaLabel={content.moreVersions}
         />
       </div>
@@ -136,10 +136,10 @@ const metadata = {
       <div class="mt-8 flex justify-center">
         <DownloadButtons
           language={content.storeLanguage}
-          downloadLabel={content.labels.download}
+          downloadLabel={content.labels.freeDownload}
           moreVersionsLabel={content.moreVersions}
           storeAriaLabel={content.storeAria}
-          downloadAriaLabel={content.labels.download}
+          downloadAriaLabel={content.labels.freeDownload}
           moreVersionsAriaLabel={content.moreVersions}
         />
       </div>
