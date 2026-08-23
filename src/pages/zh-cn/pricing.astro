@@ -7,8 +7,10 @@ import Steps from '~/components/widgets/Steps.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
+import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
 
 const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+const setupUrl = await getSetupDownloadUrl();
 
 const metadata = {
   title: '价格 — Shotera',
@@ -46,7 +48,7 @@ const metadata = {
         ],
         callToAction: {
           text: '免费下载',
-          href: 'https://github.com/mosuzo-studio/Shotera/releases',
+          href: setupUrl,
         },
       },
       {
@@ -66,7 +68,7 @@ const metadata = {
         ],
         callToAction: {
           text: '立即购买',
-          href: 'https://github.com/mosuzo-studio/Shotera/releases',
+          href: RELEASES_URL,
         },
         hasRibbon: true,
         ribbonTitle: '推荐',
@@ -209,7 +211,7 @@ const metadata = {
       {
         variant: 'primary',
         text: '免费下载 Shotera',
-        href: 'https://github.com/mosuzo-studio/Shotera/releases',
+        href: setupUrl,
         icon: 'tabler:download',
       },
     ]}

@@ -1,19 +1,26 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { getSetupDownloadUrl } from '~/utils/download';
 
 interface Props {
   language?: string;
+  downloadLabel?: string;
   moreVersionsLabel?: string;
   storeAriaLabel?: string;
+  downloadAriaLabel?: string;
   moreVersionsAriaLabel?: string;
 }
 
 const {
   language = 'en-us',
+  downloadLabel = 'Download for Windows',
   moreVersionsLabel = 'More versions',
   storeAriaLabel = 'Get Shotera from Microsoft Store',
+  downloadAriaLabel = 'Download the latest Shotera installer for Windows',
   moreVersionsAriaLabel = 'Download more versions from GitHub Releases',
 } = Astro.props;
+
+const setupUrl = await getSetupDownloadUrl();
 ---
 
 <div class="download-buttons">
@@ -29,6 +36,11 @@ const {
     >
     </ms-store-badge>
   </div>
+
+  <a class="setup-download" href={setupUrl} aria-label={downloadAriaLabel}>
+    <Icon name="tabler:download" class="h-6 w-6" aria-hidden="true" />
+    <span>{downloadLabel}</span>
+  </a>
 
   <a
     class="more-versions"
@@ -65,6 +77,7 @@ const {
     display: block;
   }
 
+  .setup-download,
   .more-versions {
     display: inline-flex;
     flex: none;
@@ -88,12 +101,26 @@ const {
       box-shadow 160ms ease;
   }
 
+  .setup-download {
+    border-color: rgb(37 99 235 / 45%);
+    background: #2563eb;
+  }
+
+  .setup-download:hover,
   .more-versions:hover {
-    background: #303030;
     box-shadow: 0 6px 18px rgb(0 0 0 / 18%);
     transform: translateY(-1px);
   }
 
+  .setup-download:hover {
+    background: #1d4ed8;
+  }
+
+  .more-versions:hover {
+    background: #303030;
+  }
+
+  .setup-download:focus-visible,
   .more-versions:focus-visible {
     outline: 3px solid rgb(59 130 246 / 55%);
     outline-offset: 3px;
@@ -106,6 +133,7 @@ const {
       align-items: center;
     }
 
+    .setup-download,
     .more-versions {
       width: min(100%, 250px);
     }

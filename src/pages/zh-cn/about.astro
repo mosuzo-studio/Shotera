@@ -5,9 +5,9 @@ import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
+import { getSetupDownloadUrl } from '~/utils/download';
 
-const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+const setupUrl = await getSetupDownloadUrl();
 
 const metadata = {
   title: '关于 Shotera',
@@ -57,20 +57,17 @@ const metadata = {
     items={[
       {
         title: '快，是第一位的',
-        description:
-          '一个快捷键唤起，窗口与元素自动识别，框选即所得。从想截图到截完图，不超过一秒。',
+        description: '一个快捷键唤起，窗口与元素自动识别，框选即所得。从想截图到截完图，不超过一秒。',
         icon: 'tabler:bolt',
       },
       {
         title: '本地优先，隐私安心',
-        description:
-          'OCR、抠图等能力尽可能在本地完成，你的截图默认不上传云端。敏感内容，留在你自己的电脑里。',
+        description: 'OCR、抠图等能力尽可能在本地完成，你的截图默认不上传云端。敏感内容，留在你自己的电脑里。',
         icon: 'tabler:lock',
       },
       {
         title: '克制的设计',
-        description:
-          '不堆砌功能，不打扰工作流。常用的一键可达，进阶的需要时才出现。',
+        description: '不堆砌功能，不打扰工作流。常用的一键可达，进阶的需要时才出现。',
         icon: 'tabler:sparkles',
       },
     ]}
@@ -84,38 +81,32 @@ const metadata = {
     items={[
       {
         title: '截图',
-        description:
-          '智能识别窗口与界面元素，支持滚动长截图，一次截下整个网页或聊天记录。',
+        description: '智能识别窗口与界面元素，支持滚动长截图，一次截下整个网页或聊天记录。',
         icon: 'tabler:capture',
       },
       {
         title: '录屏 & GIF',
-        description:
-          '录制屏幕并一键导出轻量 GIF，光标高亮、按键提示，演示教程格外清晰。',
+        description: '录制屏幕并一键导出轻量 GIF，光标高亮、按键提示，演示教程格外清晰。',
         icon: 'tabler:video',
       },
       {
         title: 'AI 抠图',
-        description:
-          '一键智能识别主体、去除背景，导出透明底图片，无需 PS。',
+        description: '一键智能识别主体、去除背景，导出透明底图片，无需 PS。',
         icon: 'tabler:wand',
       },
       {
         title: '离线 OCR',
-        description:
-          '本地识别截图中的文字，中英日等多语言，复制粘贴即用，无需联网。',
+        description: '本地识别截图中的文字，中英日等多语言，复制粘贴即用，无需联网。',
         icon: 'tabler:text-recognition',
       },
       {
         title: '图片翻译',
-        description:
-          '识别图片中的文字并即时翻译，看外文文档、图表、界面不再有障碍。',
+        description: '识别图片中的文字并即时翻译，看外文文档、图表、界面不再有障碍。',
         icon: 'tabler:language',
       },
       {
         title: '贴图 / 钉图',
-        description:
-          '把截图钉在屏幕最上层，随时对照参考，多图排布也不乱。',
+        description: '把截图钉在屏幕最上层，随时对照参考，多图排布也不乱。',
         icon: 'tabler:pin',
       },
     ]}
@@ -138,13 +129,11 @@ const metadata = {
       },
       {
         title: '持续打磨',
-        description:
-          '快捷键的手感、框选的边缘吸附、录屏的体积与清晰度——这些细节我们会一直调，直到顺手为止。',
+        description: '快捷键的手感、框选的边缘吸附、录屏的体积与清晰度——这些细节我们会一直调，直到顺手为止。',
       },
       {
         title: '尊重用户',
-        description:
-          '不捆绑、不弹窗骚扰、不偷偷上传数据。核心功能长期免费，是我们对用户的承诺。',
+        description: '不捆绑、不弹窗骚扰、不偷偷上传数据。核心功能长期免费，是我们对用户的承诺。',
       },
     ]}
   />
@@ -157,7 +146,7 @@ const metadata = {
     isReversed={true}
     callToAction={{
       text: '免费下载 Shotera',
-      href: 'https://github.com/mosuzo-studio/Shotera/releases',
+      href: setupUrl,
     }}
     items={[
       {
@@ -167,14 +156,12 @@ const metadata = {
       },
       {
         title: '被用户推着长大',
-        description:
-          '长截图、AI 抠图、离线 OCR、图片翻译……很多功能，都是用户在反馈里「点」出来的。',
+        description: '长截图、AI 抠图、离线 OCR、图片翻译……很多功能，都是用户在反馈里「点」出来的。',
         icon: 'tabler:users',
       },
       {
         title: '走向更多人',
-        description:
-          '如今 Shotera 支持多语言、多平台，但初心没变：让截图更简单。',
+        description: '如今 Shotera 支持多语言、多平台，但初心没变：让截图更简单。',
         icon: 'tabler:world',
       },
     ]}
@@ -189,14 +176,12 @@ const metadata = {
     items={[
       {
         title: '用户社群',
-        description:
-          '加入 Shotera 用户群，第一时间获取新版本、使用技巧，也能直接把想法告诉我们。',
+        description: '加入 Shotera 用户群，第一时间获取新版本、使用技巧，也能直接把想法告诉我们。',
         icon: 'tabler:messages',
       },
       {
         title: '邮件支持',
-        description:
-          '遇到问题或有功能建议？发邮件到 support@shotera.app，我们会认真回复每一封。',
+        description: '遇到问题或有功能建议？发邮件到 support@shotera.app，我们会认真回复每一封。',
         icon: 'tabler:mail',
       },
     ]}

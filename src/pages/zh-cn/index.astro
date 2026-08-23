@@ -24,14 +24,14 @@ const metadata = {
 
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera 截图录屏工具界面' }}
-  >
+  <Hero image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera 截图录屏工具界面' }}>
     <DownloadButtons
       slot="actions"
       language="zh-cn"
+      downloadLabel="下载 Windows 版"
       moreVersionsLabel="更多版本"
       storeAriaLabel="从 Microsoft Store 获取 Shotera"
+      downloadAriaLabel="下载最新的 Shotera Windows 安装包"
       moreVersionsAriaLabel="从 GitHub Releases 下载更多版本"
     />
 
@@ -42,8 +42,8 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Shotera</span> 是一款为效率而生的桌面截图与录屏工具，集截图标注、录屏导出 GIF、AI
-        抠图、AI 擦图（修图）、离线 OCR、图片翻译、贴图钉图于一身。</span
+        <span class="font-semibold">Shotera</span> 是一款为效率而生的桌面截图与录屏工具，集截图标注、录屏导出 GIF、AI 抠图、AI
+        擦图（修图）、离线 OCR、图片翻译、贴图钉图于一身。</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Shotera：截图录屏，一步到位。</span>
       让每一次「截个图」都又快又顺手。
@@ -64,8 +64,7 @@ const metadata = {
     items={[
       {
         title: '智能截图',
-        description:
-          '一键区域、窗口、全屏截图，自动检测窗口与界面元素，边缘对齐精准到像素。',
+        description: '一键区域、窗口、全屏截图，自动检测窗口与界面元素，边缘对齐精准到像素。',
         icon: 'tabler:capture',
       },
       {
@@ -82,26 +81,22 @@ const metadata = {
       },
       {
         title: 'AI 擦图 / 修图',
-        description:
-          '智能擦除图片中的多余物体、水印或瑕疵，AI 自动填充背景，效果自然无痕。全程本地离线，隐私无忧。',
+        description: '智能擦除图片中的多余物体、水印或瑕疵，AI 自动填充背景，效果自然无痕。全程本地离线，隐私无忧。',
         icon: 'tabler:eraser',
       },
       {
         title: '离线 OCR 文字识别',
-        description:
-          '本地识别截图中的文字，无需联网、不上传云端，隐私更安心。中英文混排、代码、表格都能精准提取。',
+        description: '本地识别截图中的文字，无需联网、不上传云端，隐私更安心。中英文混排、代码、表格都能精准提取。',
         icon: 'tabler:text-recognition',
       },
       {
         title: '图片翻译',
-        description:
-          '识别图中文字并即时翻译，外文文档、截图、菜单一看就懂。译文可直接复制，跨语言阅读毫无障碍。',
+        description: '识别图中文字并即时翻译，外文文档、截图、菜单一看就懂。译文可直接复制，跨语言阅读毫无障碍。',
         icon: 'tabler:language',
       },
       {
         title: '贴图 / 钉图',
-        description:
-          '把截图钉在屏幕最上层，随时对照参考。多图并排、缩放、半透明，边看边做，再也不用来回切窗口。',
+        description: '把截图钉在屏幕最上层，随时对照参考。多图并排、缩放、半透明，边看边做，再也不用来回切窗口。',
         icon: 'tabler:pin',
       },
     ]}
@@ -116,8 +111,7 @@ const metadata = {
     items={[
       {
         title: '智能窗口 / 元素检测',
-        description:
-          '鼠标划过即自动识别窗口与界面元素边界，无需手动框选，一秒锁定要截的内容。',
+        description: '鼠标划过即自动识别窗口与界面元素边界，无需手动框选，一秒锁定要截的内容。',
       },
       {
         title: '丰富的标注工具',
@@ -126,8 +120,7 @@ const metadata = {
       },
       {
         title: '马赛克与高亮',
-        description:
-          '一键模糊敏感信息或高亮重点区域，隐私保护和重点展示两不误。',
+        description: '一键模糊敏感信息或高亮重点区域，隐私保护和重点展示两不误。',
       },
     ]}
     image={{
@@ -158,18 +151,15 @@ const metadata = {
       },
       {
         title: '导出轻量 GIF',
-        description:
-          '把操作过程压成体积小巧的 GIF，贴进文档、聊天、Issue，无需播放器，打开即看。',
+        description: '把操作过程压成体积小巧的 GIF，贴进文档、聊天、Issue，无需播放器，打开即看。',
       },
       {
         title: '录制光标与点击',
-        description:
-          '高亮显示鼠标轨迹与点击动作，让每一步演示都清晰易懂。',
+        description: '高亮显示鼠标轨迹与点击动作，让每一步演示都清晰易懂。',
       },
       {
         title: '灵活的输出格式',
-        description:
-          '支持 MP4 / GIF 多种格式与清晰度，兼顾画质与文件大小，按需选择。',
+        description: '支持 MP4 / GIF 多种格式与清晰度，兼顾画质与文件大小，按需选择。',
       },
     ]}
     image={{
@@ -194,18 +184,15 @@ const metadata = {
     items={[
       {
         title: 'AI 智能抠图',
-        description:
-          '自动识别主体、一键去背景，人像与商品图秒变透明底。全程本地离线处理，做图、拼图、配图都更省事。',
+        description: '自动识别主体、一键去背景，人像与商品图秒变透明底。全程本地离线处理，做图、拼图、配图都更省事。',
       },
       {
         title: 'AI 擦图 / 修图',
-        description:
-          '智能擦除多余物体、水印或瑕疵，AI 自动补全背景，效果自然无痕。同样本地运行，不联网、不上传。',
+        description: '智能擦除多余物体、水印或瑕疵，AI 自动补全背景，效果自然无痕。同样本地运行，不联网、不上传。',
       },
       {
         title: '离线 OCR 提取文字',
-        description:
-          '本地识别、不联网、不上云，截图里的文字一键变成可复制文本，隐私与效率兼得。',
+        description: '本地识别、不联网、不上云，截图里的文字一键变成可复制文本，隐私与效率兼得。',
       },
       {
         title: '模型灵活切换',
@@ -231,20 +218,17 @@ const metadata = {
     items={[
       {
         title: '第 1 步：<span class="font-medium">按下快捷键</span>',
-        description:
-          '随时随地一键唤起 Shotera，鼠标划过自动识别窗口与元素，精准框选你要的画面。',
+        description: '随时随地一键唤起 Shotera，鼠标划过自动识别窗口与元素，精准框选你要的画面。',
         icon: 'tabler:keyboard',
       },
       {
         title: '第 2 步：<span class="font-medium">标注 / 识别 / 处理</span>',
-        description:
-          '截完立刻标注重点，或一键 OCR 提取文字、AI 抠图、翻译，所有操作都在同一个界面完成。',
+        description: '截完立刻标注重点，或一键 OCR 提取文字、AI 抠图、翻译，所有操作都在同一个界面完成。',
         icon: 'tabler:wand',
       },
       {
         title: '第 3 步：<span class="font-medium">复制 / 保存 / 钉图</span>',
-        description:
-          '一键复制到剪贴板、保存到本地，或把截图钉在屏幕上随时对照，分享无缝衔接。',
+        description: '一键复制到剪贴板、保存到本地，或把截图钉在屏幕上随时对照，分享无缝衔接。',
         icon: 'tabler:share',
       },
       {
@@ -366,8 +350,7 @@ const metadata = {
       },
       {
         title: '会占用很多系统资源吗？',
-        description:
-          '不会。Shotera 以轻量为设计目标，常驻内存极小、启动迅速，即使长期后台待命也几乎无感。',
+        description: '不会。Shotera 以轻量为设计目标，常驻内存极小、启动迅速，即使长期后台待命也几乎无感。',
       },
     ]}
   />
@@ -389,12 +372,16 @@ const metadata = {
     <DownloadButtons
       slot="actions"
       language="zh-cn"
+      downloadLabel="下载 Windows 版"
       moreVersionsLabel="更多版本"
       storeAriaLabel="从 Microsoft Store 获取 Shotera"
+      downloadAriaLabel="下载最新的 Shotera Windows 安装包"
       moreVersionsAriaLabel="从 GitHub Releases 下载更多版本"
     />
 
-    <Fragment slot="title">现在就让截图变得<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">又快又聪明</span></Fragment>
+    <Fragment slot="title"
+      >现在就让截图变得<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">又快又聪明</span></Fragment
+    >
 
     <Fragment slot="subtitle">
       免费下载，几秒安装，立刻上手。<br class="hidden md:inline" />把每天都要做的「截个图」，交给更懂你的工具。

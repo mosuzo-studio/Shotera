@@ -24,27 +24,29 @@ const metadata = {
 
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera capture and screen recording interface' }}
-  >
+  <Hero image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera capture and screen recording interface' }}>
     <DownloadButtons
       slot="actions"
       language="en-us"
+      downloadLabel="Download for Windows"
       moreVersionsLabel="More versions"
       storeAriaLabel="Get Shotera from Microsoft Store"
+      downloadAriaLabel="Download the latest Shotera installer for Windows"
       moreVersionsAriaLabel="Download more versions from GitHub Releases"
     />
 
     <Fragment slot="title">
-      Screenshots, screen recording, <span class="text-accent dark:text-white">AI magic</span><br class="hidden md:inline" />
+      Screenshots, screen recording, <span class="text-accent dark:text-white">AI magic</span><br
+        class="hidden md:inline"
+      />
       all from a single shortcut
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Shotera</span> is a desktop capture tool built for people who screenshot all day.
-        Annotate, record to GIF, AI cutout, AI eraser (inpainting), offline OCR, image translation, and pin references —
-        without leaving your flow.</span
+        <span class="font-semibold">Shotera</span> is a desktop capture tool built for people who screenshot all day. Annotate,
+        record to GIF, AI cutout, AI eraser (inpainting), offline OCR, image translation, and pin references — without leaving
+        your flow.</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Shotera: capture, record, done.</span>
       Everything you reach for a dozen times a day, a little faster.
@@ -159,8 +161,7 @@ const metadata = {
       },
       {
         title: 'Export to lightweight GIF',
-        description:
-          'Drop it into docs, chats, or issues. No player needed — it plays the moment it loads.',
+        description: 'Drop it into docs, chats, or issues. No player needed — it plays the moment it loads.',
       },
       {
         title: 'Capture cursor & clicks',
@@ -168,8 +169,7 @@ const metadata = {
       },
       {
         title: 'Flexible output',
-        description:
-          'MP4 or GIF at the resolution you choose, balancing quality and file size for the job at hand.',
+        description: 'MP4 or GIF at the resolution you choose, balancing quality and file size for the job at hand.',
       },
     ]}
     image={{
@@ -217,7 +217,9 @@ const metadata = {
       alt: 'AI background removal and OCR demo',
     }}
   >
-    <Fragment slot="content">AI cutout, eraser, and OCR all run locally — intelligence without sacrificing privacy.</Fragment>
+    <Fragment slot="content"
+      >AI cutout, eraser, and OCR all run locally — intelligence without sacrificing privacy.</Fragment
+    >
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -237,14 +239,12 @@ const metadata = {
       },
       {
         title: 'Step 2: <span class="font-medium">Annotate, extract, or edit</span>',
-        description:
-          'Mark up the important parts, or run OCR, AI cutout, and translation — all in the same window.',
+        description: 'Mark up the important parts, or run OCR, AI cutout, and translation — all in the same window.',
         icon: 'tabler:wand',
       },
       {
         title: 'Step 3: <span class="font-medium">Copy, save, or pin</span>',
-        description:
-          'Copy to the clipboard, save locally, or pin it on top for reference. Sharing is seamless.',
+        description: 'Copy to the clipboard, save locally, or pin it on top for reference. Sharing is seamless.',
         icon: 'tabler:share',
       },
       {
@@ -267,7 +267,8 @@ const metadata = {
     items={[
       {
         title: 'Emoji stickers',
-        description: 'Add emoji stickers and fun annotations to your screenshots in one click. Make your captures more expressive.',
+        description:
+          'Add emoji stickers and fun annotations to your screenshots in one click. Make your captures more expressive.',
         icon: 'tabler:mood-happy',
       },
       {
@@ -277,7 +278,8 @@ const metadata = {
       },
       {
         title: 'Step numbers',
-        description: 'Guide viewers through your screenshots with numbered step annotations — perfect for tutorials and how-to guides.',
+        description:
+          'Guide viewers through your screenshots with numbered step annotations — perfect for tutorials and how-to guides.',
         icon: 'tabler:list-numbers',
       },
       {
@@ -302,7 +304,8 @@ const metadata = {
       },
       {
         title: 'Local-first & private',
-        description: 'OCR, AI cutout, and AI eraser all run on your device — nothing uploaded. Your screenshots are yours alone.',
+        description:
+          'OCR, AI cutout, and AI eraser all run on your device — nothing uploaded. Your screenshots are yours alone.',
         icon: 'tabler:lock',
       },
       {
@@ -342,7 +345,7 @@ const metadata = {
       {
         title: 'Which operating systems does Shotera support?',
         description:
-          "Shotera currently supports Windows desktop with a small, fast-launching installer that works offline — download and start right away. macOS, Linux, and more platforms are on the roadmap.",
+          'Shotera currently supports Windows desktop with a small, fast-launching installer that works offline — download and start right away. macOS, Linux, and more platforms are on the roadmap.',
       },
       {
         title: 'Which interface languages does Shotera support?',
@@ -352,7 +355,7 @@ const metadata = {
       {
         title: 'Do OCR and AI cutout need an internet connection?',
         description:
-          'No. OCR text recognition, AI background removal, and AI eraser (inpainting) all run entirely offline on your device — nothing is uploaded, keeping your data private. Image translation uses cloud APIs and complies with the respective cloud providers\' privacy policies.',
+          "No. OCR text recognition, AI background removal, and AI eraser (inpainting) all run entirely offline on your device — nothing is uploaded, keeping your data private. Image translation uses cloud APIs and complies with the respective cloud providers' privacy policies.",
       },
       {
         title: 'Is Shotera free?',
@@ -389,12 +392,18 @@ const metadata = {
     <DownloadButtons
       slot="actions"
       language="en-us"
+      downloadLabel="Download for Windows"
       moreVersionsLabel="More versions"
       storeAriaLabel="Get Shotera from Microsoft Store"
+      downloadAriaLabel="Download the latest Shotera installer for Windows"
       moreVersionsAriaLabel="Download more versions from GitHub Releases"
     />
 
-    <Fragment slot="title">Make your everyday<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> screenshots faster</span></Fragment>
+    <Fragment slot="title"
+      >Make your everyday<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">
+        screenshots faster</span
+      ></Fragment
+    >
 
     <Fragment slot="subtitle">
       Download free, install in seconds.<br class="hidden md:inline" />Core features are free forever.

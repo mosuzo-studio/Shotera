@@ -19,7 +19,7 @@ const metadata = {
 };
 
 const lang = (Astro.currentLocale ?? defaultLang) as Lang;
-const headerData = getHeaderData(lang);
+const headerData = await getHeaderData(lang);
 ---
 
 <Layout metadata={metadata}>

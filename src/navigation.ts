@@ -1,10 +1,12 @@
 import { getBlogPermalink, getAsset } from './utils/permalinks';
 import { localizedPath, useTranslations, type Lang } from './i18n/utils';
+import { getSetupDownloadUrl } from './utils/download';
 
-export const getHeaderData = (lang: Lang) => {
+export const getHeaderData = async (lang: Lang) => {
   const t = useTranslations(lang);
   const l = (path: string) => localizedPath(lang, path);
   const blogHref = lang === 'en' || lang === 'zh-cn' ? getBlogPermalink() : l('/blog');
+  const setupUrl = await getSetupDownloadUrl();
 
   return {
     links: [
@@ -13,16 +15,17 @@ export const getHeaderData = (lang: Lang) => {
       { text: t('nav.blog'), href: blogHref },
       { text: t('nav.about'), href: l('/about') },
     ],
-    actions: [{ text: t('nav.download'), href: 'https://github.com/mosuzo-studio/Shotera/releases', icon: 'tabler:download' }],
+    actions: [{ text: t('action.download'), href: setupUrl, icon: 'tabler:download' }],
   };
 };
 
-export const getFooterData = (lang: Lang) => {
+export const getFooterData = async (lang: Lang) => {
   const t = useTranslations(lang);
   const l = (path: string) => localizedPath(lang, path);
   const hasLocalizedLegalPages = lang === 'en' || lang === 'zh-cn';
   const legal = (path: '/terms' | '/privacy') => (hasLocalizedLegalPages ? l(path) : path);
   const blogHref = lang === 'en' || lang === 'zh-cn' ? getBlogPermalink() : l('/blog');
+  const setupUrl = await getSetupDownloadUrl();
 
   return {
     links: [
@@ -40,7 +43,7 @@ export const getFooterData = (lang: Lang) => {
       {
         title: t('footer.support'),
         links: [
-          { text: t('footer.download'), href: 'https://github.com/mosuzo-studio/Shotera/releases' },
+          { text: t('footer.download'), href: setupUrl },
           { text: t('footer.faq'), href: l('/#faqs') },
           { text: t('footer.changelog'), href: l('/changelog') },
           { text: t('footer.feedback'), href: l('/contact') },

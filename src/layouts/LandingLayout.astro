@@ -3,6 +3,7 @@ import PageLayout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 
 import { getHeaderData } from '~/navigation';
+import { getSetupDownloadUrl } from '~/utils/download';
 import { useTranslations, defaultLang, type Lang } from '~/i18n/utils';
 import type { MetaData } from '~/types';
 
@@ -14,7 +15,7 @@ const { metadata } = Astro.props;
 
 const lang = (Astro.currentLocale ?? defaultLang) as Lang;
 const t = useTranslations(lang);
-const headerData = getHeaderData(lang);
+const [headerData, setupUrl] = await Promise.all([getHeaderData(lang), getSetupDownloadUrl()]);
 ---
 
 <PageLayout metadata={metadata}>
@@ -28,7 +29,7 @@ const headerData = getHeaderData(lang);
         actions={[
           {
             text: t('action.download'),
-            href: 'https://github.com/mosuzo-studio/Shotera/releases',
+            href: setupUrl,
           },
         ]}
         showToggleTheme

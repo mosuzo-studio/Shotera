@@ -7,6 +7,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import type { LocalizedSiteContent, LocalizedLocale } from '~/i18n/site-content';
+import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
 
 interface Props {
   locale: LocalizedLocale;
@@ -16,7 +17,7 @@ interface Props {
 const { locale, content } = Astro.props;
 const pricing = content.pricing;
 
-const releasesUrl = 'https://github.com/mosuzo-studio/Shotera/releases';
+const setupUrl = await getSetupDownloadUrl();
 
 // Icons mirror the English pricing page so localized copy stays icon-free.
 const whyIcons = [
@@ -48,7 +49,7 @@ const metadata = {
         price: 0,
         period: pricing.freePlan.period,
         items: pricing.freePlan.items.map((description) => ({ description })),
-        callToAction: { text: pricing.freePlan.cta, href: releasesUrl },
+        callToAction: { text: pricing.freePlan.cta, href: setupUrl },
       },
       {
         title: content.labels.pro,
@@ -56,7 +57,7 @@ const metadata = {
         price: 29,
         period: pricing.proPlan.period,
         items: pricing.proPlan.items.map((description) => ({ description })),
-        callToAction: { text: pricing.proPlan.cta, href: releasesUrl },
+        callToAction: { text: pricing.proPlan.cta, href: RELEASES_URL },
         hasRibbon: true,
         ribbonTitle: pricing.popularRibbon,
       },
@@ -97,6 +98,6 @@ const metadata = {
   <CallToAction
     title={pricing.ctaTitle}
     subtitle={pricing.ctaSubtitle}
-    actions={[{ variant: 'primary', text: pricing.ctaButton, href: releasesUrl, icon: 'tabler:download' }]}
+    actions={[{ variant: 'primary', text: pricing.ctaButton, href: setupUrl, icon: 'tabler:download' }]}
   />
 </PageLayout>

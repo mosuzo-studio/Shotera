@@ -18,8 +18,7 @@ export interface Props {
 const { metadata, lang: explicitLang } = Astro.props;
 
 const lang = explicitLang ?? ((Astro.currentLocale ?? defaultLang) as Lang);
-const headerData = getHeaderData(lang);
-const footerData = getFooterData(lang);
+const [headerData, footerData] = await Promise.all([getHeaderData(lang), getFooterData(lang)]);
 ---
 
 <Layout metadata={metadata} language={lang}>

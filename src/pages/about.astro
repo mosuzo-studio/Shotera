@@ -5,9 +5,9 @@ import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
+import { getSetupDownloadUrl } from '~/utils/download';
 
-const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+const setupUrl = await getSetupDownloadUrl();
 
 const metadata = {
   title: 'About Shotera',
@@ -97,7 +97,8 @@ const metadata = {
       },
       {
         title: 'AI cutout',
-        description: 'Detect the subject and drop the background in one click, exporting transparent PNGs. No Photoshop.',
+        description:
+          'Detect the subject and drop the background in one click, exporting transparent PNGs. No Photoshop.',
         icon: 'tabler:wand',
       },
       {
@@ -143,7 +144,7 @@ const metadata = {
       {
         title: 'Respect for users',
         description:
-          'No bundleware, no nagging popups, no quietly uploading your data. Core features stay free — that\'s our promise.',
+          "No bundleware, no nagging popups, no quietly uploading your data. Core features stay free — that's our promise.",
       },
     ]}
   />
@@ -156,12 +157,12 @@ const metadata = {
     isReversed={true}
     callToAction={{
       text: 'Download Shotera free',
-      href: 'https://github.com/mosuzo-studio/Shotera/releases',
+      href: setupUrl,
     }}
     items={[
       {
         title: 'Started with our own need',
-        description: 'We couldn\'t find a capture tool that was fast and smooth enough, so we wrote one.',
+        description: "We couldn't find a capture tool that was fast and smooth enough, so we wrote one.",
         icon: 'tabler:seeding',
       },
       {
@@ -188,13 +189,13 @@ const metadata = {
     items={[
       {
         title: 'Community',
-        description:
-          'Join the Shotera community for new releases, tips, and a direct line to tell us what you think.',
+        description: 'Join the Shotera community for new releases, tips, and a direct line to tell us what you think.',
         icon: 'tabler:brand-discord',
       },
       {
         title: 'Email support',
-        description: 'Hit a problem or have a feature idea? Email support@shotera.app — we read and reply to every one.',
+        description:
+          'Hit a problem or have a feature idea? Email support@shotera.app — we read and reply to every one.',
         icon: 'tabler:mail',
       },
     ]}
