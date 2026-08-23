@@ -93,7 +93,8 @@ const baseUi = {
     'footer.tagline': 'Make every screenshot and recording more efficient.',
 
     'announcement.new': 'NEW',
-    'announcement.text': 'Shotera v7.2.0+ is here — AI cutout, illustration, offline OCR & image translation! (Site under construction) »',
+    'announcement.text':
+      'Shotera v7.3.0+ is here — AI cutout, illustration, offline OCR & image translation! (Site in progress; preview only, final release prevails) »',
 
     'blog.readMore': 'Read more',
     'blog.backToList': '← Back to Blog',
@@ -180,7 +181,8 @@ const baseUi = {
     'footer.tagline': '让每一次截图与录屏都更高效。',
 
     'announcement.new': '新',
-    'announcement.text': 'Shotera v7.2.0+ 发布 —— 新增 AI 抠图、插图、本地离线 OCR 与图片翻译！（同时本官网正在建设中）»',
+    'announcement.text':
+      'Shotera v7.3.0+ 发布 —— 新增 AI 抠图、插图、本地离线 OCR 与图片翻译！（官网建设中，当前为预览版，以最终发布为准）»',
 
     'blog.readMore': '阅读更多',
     'blog.backToList': '← 返回博客',
