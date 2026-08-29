@@ -1,5 +1,6 @@
 ---
 import { localizedPath, useTranslations, defaultLang, type Lang } from '~/i18n/utils';
+import { getLatestVersion } from '~/utils/download';
 
 interface Props {
   lang?: Lang;
@@ -8,6 +9,7 @@ interface Props {
 const { lang: explicitLang } = Astro.props;
 const lang = explicitLang ?? ((Astro.currentLocale ?? defaultLang) as Lang);
 const t = useTranslations(lang);
+const version = await getLatestVersion();
 ---
 
 <div
@@ -18,7 +20,7 @@ const t = useTranslations(lang);
     >{t('announcement.new')}</span
   >
   <a href={localizedPath(lang, '/#features')} class="text-slate-300 hover:underline dark:text-slate-400 font-medium"
-    >{t('announcement.text')}</a
+    >{t('announcement.text', { version })}</a
   >
   <a
     target="_blank"

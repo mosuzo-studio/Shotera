@@ -94,7 +94,7 @@ const baseUi = {
 
     'announcement.new': 'NEW',
     'announcement.text':
-      'Shotera v7.3.0+ is here — AI cutout, illustration, offline OCR & image translation! (Site in progress; preview only, final release prevails) »',
+      'Shotera v{version}+ is here — AI cutout, illustration, offline OCR & image translation! (Site in progress; preview only, final release prevails) »',
 
     'blog.readMore': 'Read more',
     'blog.backToList': '← Back to Blog',
@@ -182,7 +182,7 @@ const baseUi = {
 
     'announcement.new': '新',
     'announcement.text':
-      'Shotera v7.3.0+ 发布 —— 新增 AI 抠图、插图、本地离线 OCR 与图片翻译！（官网建设中，当前为预览版，以最终发布为准）»',
+      'Shotera v{version}+ 发布 —— 新增 AI 抠图、插图、本地离线 OCR 与图片翻译！（官网建设中，当前为预览版，以最终发布为准）»',
 
     'blog.readMore': '阅读更多',
     'blog.backToList': '← 返回博客',

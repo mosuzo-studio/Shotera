@@ -30,8 +30,16 @@ export function getLangFromUrl(url: URL): Lang {
  * for any key missing in that locale.
  */
 export function useTranslations(lang: Lang) {
-  return function t(key: UIKey): string {
-    return ui[lang][key] ?? (ui[defaultLang][key] as string);
+  return function t(key: UIKey, replacements?: Record<string, string>): string {
+    let text = ui[lang][key] ?? (ui[defaultLang][key] as string);
+    // `split`/`join` rather than `replace`, so neither the placeholder name nor
+    // the value is treated as a pattern (`$&` and friends stay literal).
+    if (replacements) {
+      for (const [placeholder, value] of Object.entries(replacements)) {
+        text = text.split(`{${placeholder}}`).join(value);
+      }
+    }
+    return text;
   };
 }
 

@@ -27,6 +27,9 @@ const DOWNLOAD_BASE = `${RELEASES_URL}/download`;
 
 const FETCH_TIMEOUT_MS = 8000;
 
+/** Shown in copy when the release lookup fails; bump alongside real releases. */
+const FALLBACK_DISPLAY_VERSION = '7.3.1';
+
 /** Asset kinds exposed on the site, in the order they should be offered. */
 const ASSET_SUFFIXES = {
   setup: '-windows-x64-setup.exe',
@@ -119,3 +122,15 @@ export const getReleaseDownloads = (): Promise<ReleaseDownloads> => {
  * Resolves to {@link RELEASES_URL} when the asset cannot be determined.
  */
 export const getSetupDownloadUrl = async (): Promise<string> => (await getReleaseDownloads()).urls.setup;
+
+/**
+ * Latest release version for display, e.g. `7.3.1`.
+ *
+ * Callers interpolate this into copy that already supplies the surrounding
+ * `v` and `+`, so this returns the bare number. Falls back to the last known
+ * release when the lookup fails, keeping the announcement readable offline.
+ */
+export const getLatestVersion = async (): Promise<string> => {
+  const { version } = await getReleaseDownloads();
+  return version ?? FALLBACK_DISPLAY_VERSION;
+};

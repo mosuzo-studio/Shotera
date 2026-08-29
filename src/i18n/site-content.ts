@@ -205,7 +205,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: '讓每一次截圖與錄影都更有效率。',
       newLabel: '新功能',
       announcement:
-        'Shotera v7.3.0+ 發布 —— 新增 AI 去背、插圖、離線 OCR 與圖片翻譯！（官網建置中，目前為預覽，以正式發布為準）»',
+        'Shotera v{version}+ 發布 —— 新增 AI 去背、插圖、離線 OCR 與圖片翻譯！（官網建置中，目前為預覽，以正式發布為準）»',
     },
     pricing: {
       tagline: '價格方案',
@@ -442,7 +442,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'キャプチャと録画を、もっと効率よく。',
       newLabel: '新着',
       announcement:
-        'Shotera v7.3.0+ 公開 —— AI切り抜き、イラスト、オフラインOCR、画像翻訳を新搭載！（本サイトは制作中のプレビューです。正式リリース内容が優先されます）»',
+        'Shotera v{version}+ 公開 —— AI切り抜き、イラスト、オフラインOCR、画像翻訳を新搭載！（本サイトは制作中のプレビューです。正式リリース内容が優先されます）»',
     },
     pricing: {
       tagline: '料金プラン',
@@ -701,7 +701,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Mais eficiência em cada captura e gravação.',
       newLabel: 'NOVO',
       announcement:
-        'Shotera v7.3.0+ chegou — recorte com IA, ilustração, OCR offline e tradução de imagens! (Site em construção; esta é apenas uma prévia, vale a versão final) »',
+        'Shotera v{version}+ chegou — recorte com IA, ilustração, OCR offline e tradução de imagens! (Site em construção; esta é apenas uma prévia, vale a versão final) »',
     },
     pricing: {
       tagline: 'Planos e preços',
@@ -962,7 +962,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Más eficiencia en cada captura y grabación.',
       newLabel: 'NUEVO',
       announcement:
-        'Shotera v7.3.0+ ya está aquí: recorte con IA, ilustración, OCR sin conexión y traducción de imágenes. (Sitio en construcción; solo una vista previa, prevalece la versión final) »',
+        'Shotera v{version}+ ya está aquí: recorte con IA, ilustración, OCR sin conexión y traducción de imágenes. (Sitio en construcción; solo una vista previa, prevalece la versión final) »',
     },
     pricing: {
       tagline: 'Planes y precios',
@@ -1229,7 +1229,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Effizienter bei jedem Screenshot und jeder Aufnahme.',
       newLabel: 'NEU',
       announcement:
-        'Shotera v7.3.0+ ist da — KI-Freistellung, Illustration, Offline-OCR und Bildübersetzung! (Website im Aufbau; derzeit nur eine Vorschau, maßgeblich ist die finale Veröffentlichung) »',
+        'Shotera v{version}+ ist da — KI-Freistellung, Illustration, Offline-OCR und Bildübersetzung! (Website im Aufbau; derzeit nur eine Vorschau, maßgeblich ist die finale Veröffentlichung) »',
     },
     pricing: {
       tagline: 'Preise',
@@ -1495,7 +1495,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Plus d’efficacité à chaque capture et enregistrement.',
       newLabel: 'NOUVEAU',
       announcement:
-        'Shotera v7.3.0+ est disponible — détourage IA, illustration, OCR hors ligne et traduction d’images ! (Site en construction, simple aperçu pour l’instant : la version finale prévaut) »',
+        'Shotera v{version}+ est disponible — détourage IA, illustration, OCR hors ligne et traduction d’images ! (Site en construction, simple aperçu pour l’instant : la version finale prévaut) »',
     },
     pricing: {
       tagline: 'Tarifs',
@@ -1759,7 +1759,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Più efficienza in ogni cattura e registrazione.',
       newLabel: 'NOVITÀ',
       announcement:
-        'Shotera v7.3.0+ è disponibile — ritaglio con IA, illustrazione, OCR offline e traduzione immagini! (Sito in costruzione, per ora solo un’anteprima: fa fede la versione finale) »',
+        'Shotera v{version}+ è disponibile — ritaglio con IA, illustrazione, OCR offline e traduzione immagini! (Sito in costruzione, per ora solo un’anteprima: fa fede la versione finale) »',
     },
     pricing: {
       tagline: 'Prezzi',
@@ -2003,7 +2003,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: '모든 캡처와 녹화를 더 효율적으로.',
       newLabel: '새 기능',
       announcement:
-        'Shotera v7.3.0+ 출시 — AI 배경 제거, 일러스트, 오프라인 OCR, 이미지 번역 추가! (사이트 준비 중이라 현재는 미리보기이며, 최종 출시 내용이 기준입니다) »',
+        'Shotera v{version}+ 출시 — AI 배경 제거, 일러스트, 오프라인 OCR, 이미지 번역 추가! (사이트 준비 중이라 현재는 미리보기이며, 최종 출시 내용이 기준입니다) »',
     },
     pricing: {
       tagline: '요금제',
@@ -2258,7 +2258,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Больше эффективности в каждом снимке и записи.',
       newLabel: 'НОВОЕ',
       announcement:
-        'Shotera v7.3.0+ уже доступен — ИИ-удаление фона, иллюстрации, автономное OCR и перевод изображений! (Сайт в разработке, сейчас это лишь предпросмотр: приоритет за финальным релизом) »',
+        'Shotera v{version}+ уже доступен — ИИ-удаление фона, иллюстрации, автономное OCR и перевод изображений! (Сайт в разработке, сейчас это лишь предпросмотр: приоритет за финальным релизом) »',
     },
     pricing: {
       tagline: 'Тарифы',
@@ -2501,7 +2501,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'كفاءة أكبر في كل لقطة وتسجيل.',
       newLabel: 'جديد',
       announcement:
-        'Shotera v7.3.0+ متوفّر الآن — إزالة الخلفية بالذكاء الاصطناعي والرسوم التوضيحية وOCR دون اتصال وترجمة الصور! (الموقع قيد الإنشاء، وهذه معاينة فقط، والإصدار النهائي هو المرجع) «',
+        'Shotera v{version}+ متوفّر الآن — إزالة الخلفية بالذكاء الاصطناعي والرسوم التوضيحية وOCR دون اتصال وترجمة الصور! (الموقع قيد الإنشاء، وهذه معاينة فقط، والإصدار النهائي هو المرجع) «',
     },
     pricing: {
       tagline: 'الأسعار',
@@ -2756,7 +2756,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Efficiënter bij elke screenshot en opname.',
       newLabel: 'NIEUW',
       announcement:
-        'Shotera v7.3.0+ is hier — AI-uitsnijden, illustratie, offline OCR en beeldvertaling! (Site in opbouw, dit is slechts een preview: definitieve release is leidend) »',
+        'Shotera v{version}+ is hier — AI-uitsnijden, illustratie, offline OCR en beeldvertaling! (Site in opbouw, dit is slechts een preview: definitieve release is leidend) »',
     },
     pricing: {
       tagline: 'Prijzen',
@@ -3009,7 +3009,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Większa wydajność każdego zrzutu i nagrania.',
       newLabel: 'NOWOŚĆ',
       announcement:
-        'Shotera v7.3.0+ już dostępna — wycinanie AI, ilustracje, OCR offline i tłumaczenie obrazów! (Strona w budowie, to tylko podgląd: liczy się wersja finalna) »',
+        'Shotera v{version}+ już dostępna — wycinanie AI, ilustracje, OCR offline i tłumaczenie obrazów! (Strona w budowie, to tylko podgląd: liczy się wersja finalna) »',
     },
     pricing: {
       tagline: 'Cennik',
@@ -3270,7 +3270,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Effektivare vid varje skärmbild och inspelning.',
       newLabel: 'NYTT',
       announcement:
-        'Shotera v7.3.0+ är här — AI-utklipp, illustration, offline-OCR och bildöversättning! (Webbplatsen byggs, detta är bara förhandsgranskning: slutgiltig version gäller) »',
+        'Shotera v{version}+ är här — AI-utklipp, illustration, offline-OCR och bildöversättning! (Webbplatsen byggs, detta är bara förhandsgranskning: slutgiltig version gäller) »',
     },
     pricing: {
       tagline: 'Priser',
