@@ -28,7 +28,7 @@ const DOWNLOAD_BASE = `${RELEASES_URL}/download`;
 const FETCH_TIMEOUT_MS = 8000;
 
 /** Shown in copy when the release lookup fails; bump alongside real releases. */
-const FALLBACK_DISPLAY_VERSION = '7.4.0';
+const FALLBACK_DISPLAY_VERSION = '7.4.1';
 
 /** Asset kinds exposed on the site, in the order they should be offered. */
 const ASSET_SUFFIXES = {
