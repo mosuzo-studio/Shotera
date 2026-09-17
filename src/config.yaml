@@ -33,7 +33,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false  # 临时屏蔽博客功能
     postsPerPage: 6
 
     post:

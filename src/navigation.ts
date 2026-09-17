@@ -12,7 +12,7 @@ export const getHeaderData = async (lang: Lang) => {
     links: [
       { text: t('nav.features'), href: l('/#features') },
       { text: t('nav.pricing'), href: l('/pricing') },
-      { text: t('nav.blog'), href: blogHref },
+      // { text: t('nav.blog'), href: blogHref },  // 临时屏蔽博客链接
       { text: t('nav.about'), href: l('/about') },
     ],
     actions: [{ text: t('action.download'), href: setupUrl, icon: 'tabler:download' }],
@@ -53,7 +53,7 @@ export const getFooterData = async (lang: Lang) => {
         title: t('footer.company'),
         links: [
           { text: t('footer.about'), href: l('/about') },
-          { text: t('footer.blog'), href: blogHref },
+          // { text: t('footer.blog'), href: blogHref },  // 临时屏蔽博客链接
           { text: t('footer.contact'), href: l('/contact') },
         ],
       },
