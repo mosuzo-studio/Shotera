@@ -33,7 +33,8 @@
 <p align="center">
   <a href="https://shotera.mosuzo.com"><img src="https://img.shields.io/badge/%E5%AE%98%E7%BD%91-shotera.mosuzo.com-7c3aed" alt="官方网站" /></a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/v/release/mosuzo-studio/Shotera?display_name=tag&label=Release&color=2563eb" alt="最新版本" /></a>
-  <img src="https://img.shields.io/badge/platform-Windows-0078D4?logo=windows&logoColor=white" alt="Windows" />
+  <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/downloads/mosuzo-studio/Shotera/total?label=%E4%B8%8B%E8%BD%BD%E9%87%8F&color=d97706" alt="累计下载量" /></a>
+  <img src="https://img.shields.io/badge/platform-Windows_10%2F11%2B-0078D4?logo=windows&logoColor=white" alt="Windows 10/11+" />
   <img src="https://img.shields.io/badge/languages-15-16a34a" alt="支持 15 种界面语言" />
 </p>
 

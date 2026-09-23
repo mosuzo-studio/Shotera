@@ -33,7 +33,8 @@
 <p align="center">
   <a href="https://shotera.mosuzo.com"><img src="https://img.shields.io/badge/website-shotera.mosuzo.com-7c3aed" alt="Official website" /></a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/v/release/mosuzo-studio/Shotera?display_name=tag&label=Release&color=2563eb" alt="Latest release" /></a>
-  <img src="https://img.shields.io/badge/platform-Windows-0078D4?logo=windows&logoColor=white" alt="Windows" />
+  <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/downloads/mosuzo-studio/Shotera/total?label=downloads&color=d97706" alt="Total downloads" /></a>
+  <img src="https://img.shields.io/badge/platform-Windows_10%2F11%2B-0078D4?logo=windows&logoColor=white" alt="Windows 10/11+" />
   <img src="https://img.shields.io/badge/languages-15-16a34a" alt="15 interface languages" />
 </p>
 

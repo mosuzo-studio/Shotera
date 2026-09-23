@@ -2,7 +2,7 @@
 <p align="center"><strong>التقط بدقة. اشرح بوضوح. واصل العمل.</strong></p>
 <p align="center">تطبيق Windows للقطات الشاشة والتعليقات والتثبيت على سطح المكتب، مع أدوات صور بالذكاء الاصطناعي وOCR دون اتصال وتحديد ذكي وترجمة الصور ووضع العرض.</p>
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.es.md">Español</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.it.md">Italiano</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a> · <strong><a href="README.ar.md">العربية</a></strong> · <a href="README.nl.md">Nederlands</a> · <a href="README.pl.md">Polski</a> · <a href="README.sv.md">Svenska</a></p>
-<p align="center"><a href="https://shotera.mosuzo.com"><img src="https://img.shields.io/badge/website-shotera.mosuzo.com-7c3aed" alt="الموقع" /></a></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="https://img.shields.io/badge/website-shotera.mosuzo.com-7c3aed" alt="الموقع" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/downloads/mosuzo-studio/Shotera/total?label=downloads&color=d97706" alt="إجمالي التنزيلات" /></a></p>
 <br/>
 
 <h3 align="center">تنزيل Shotera</h3>
