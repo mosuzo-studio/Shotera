@@ -50,6 +50,7 @@ const baseUi = {
     'nav.features': 'Features',
     'nav.pricing': 'Pricing',
     'nav.versions': 'Versions',
+    'nav.changelog': 'Changelog',
     'nav.about': 'About',
     'nav.download': 'More versions',
 
@@ -139,6 +140,7 @@ const baseUi = {
     'nav.features': '功能',
     'nav.pricing': '价格',
     'nav.versions': '版本对比',
+    'nav.changelog': '更新日志',
     'nav.about': '关于',
     'nav.download': '更多版本',
 
@@ -199,6 +201,15 @@ const baseUi = {
 
 export type UIKey = keyof (typeof baseUi)[typeof defaultLang];
 
+/**
+ * Nav-only label overrides, for locales whose regular label is long enough to
+ * push the header nav into the language switcher on narrow desktop widths.
+ */
+const navLabelOverrides: Partial<Record<Exclude<Lang, 'en' | 'zh-cn'>, string>> = {
+  de: 'Änderungen',
+  fr: 'Nouveautés',
+};
+
 const localizedUi = Object.fromEntries(
   Object.entries(localizedSiteContent).map(([locale, content]) => [
     locale,
@@ -207,6 +218,7 @@ const localizedUi = Object.fromEntries(
       'nav.features': content.labels.features,
       'nav.pricing': content.labels.pricing,
       'nav.versions': versionsContent[locale as LocalizedLocale].metaTitle,
+      'nav.changelog': navLabelOverrides[locale as LocalizedLocale] ?? content.labels.changelog,
       'nav.blog': content.labels.blog,
       'nav.about': content.labels.about,
       'nav.download': content.moreVersions,

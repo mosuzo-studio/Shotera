@@ -13,6 +13,7 @@ export const getHeaderData = async (lang: Lang) => {
       { text: t('nav.features'), href: l('/#features') },
       // { text: t('nav.pricing'), href: l('/pricing') },  // 临时屏蔽价格链接
       { text: t('nav.versions'), href: l('/versions') },
+      { text: t('nav.changelog'), href: l('/changelog') },
       // { text: t('nav.blog'), href: blogHref },  // 临时屏蔽博客链接
       { text: t('nav.about'), href: l('/about') },
     ],
