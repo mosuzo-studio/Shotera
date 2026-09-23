@@ -21,7 +21,6 @@ const page =
 const [title, intro] = page;
 const isPricing = path === 'pricing';
 const isContact = path === 'contact';
-const isChangelog = path === 'changelog';
 const isAboutOrServices = path === 'about' || path === 'services';
 const metadata = { title, description: intro };
 ---
@@ -69,20 +68,6 @@ const metadata = { title, description: intro };
               </a>
             </div>
           </div>
-        ) : isChangelog ? (
-          <article class="rounded-3xl border border-gray-200 p-8 dark:border-gray-800 sm:p-12">
-            <div class="flex items-center gap-3">
-              <Icon name="tabler:sparkles" class="h-8 w-8 text-blue-600" />
-              <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Shotera v7.2.0+</h2>
-            </div>
-            <p class="mt-5 leading-8 text-gray-600 dark:text-gray-300">{content.labels.releaseText}</p>
-            <a
-              class="mt-6 inline-flex font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300"
-              href="https://github.com/mosuzo-studio/Shotera/releases"
-            >
-              GitHub Releases
-            </a>
-          </article>
         ) : (
           <div class="grid gap-6 md:grid-cols-3">
             {content.features.slice(0, isAboutOrServices ? 6 : 3).map((feature) => (
