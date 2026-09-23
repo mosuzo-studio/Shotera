@@ -1,8 +1,10 @@
 ---
-import { Icon } from 'astro-icon/components';
-
 import PageLayout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import DownloadButtons from '~/components/ui/DownloadButtons.astro';
+import { homeFeaturesContent } from '~/i18n/home-features';
 import type { LocalizedSiteContent, LocalizedLocale } from '~/i18n/site-content';
 
 interface Props {
@@ -11,14 +13,31 @@ interface Props {
 }
 
 const { locale, content } = Astro.props;
-const featureIcons = [
+const features = homeFeaturesContent[locale];
+
+// Icons mirror the English homepage so localized copy stays icon-free.
+const coreFeatureIcons = [
   'tabler:capture',
-  'tabler:pencil',
-  'tabler:sparkles',
+  'tabler:video',
+  'tabler:scissors',
+  'tabler:eraser',
   'tabler:text-recognition',
   'tabler:language',
   'tabler:pin',
 ];
+const moreFeatureIcons = [
+  'tabler:mood-happy',
+  'tabler:zoom-in',
+  'tabler:list-numbers',
+  'tabler:pin',
+  'tabler:keyboard',
+  'tabler:history',
+  'tabler:devices',
+  'tabler:lock',
+  'tabler:bolt',
+  'tabler:moon',
+];
+
 const metadata = {
   title: content.metaTitle,
   description: content.metaDescription,
@@ -54,27 +73,59 @@ const metadata = {
     </div>
   </section>
 
-  <section id="features" class="px-5 py-20 sm:py-24">
-    <div class="mx-auto max-w-6xl">
-      <div class="mx-auto mb-12 max-w-3xl text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-          {content.featuresTitle}
-        </h2>
-        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">{content.featuresSubtitle}</p>
-      </div>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {
-          content.features.map((feature, index) => (
-            <article class="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm dark:border-gray-800 dark:bg-gray-900">
-              <Icon name={featureIcons[index]} class="mb-5 h-8 w-8 text-blue-600 dark:text-blue-400" />
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
-              <p class="mt-3 leading-7 text-gray-600 dark:text-gray-300">{feature.description}</p>
-            </article>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  <Features
+    id="features"
+    tagline={features.features.tagline}
+    title={features.features.title}
+    subtitle={features.features.subtitle}
+    items={features.features.items.map((item, index) => ({ ...item, icon: coreFeatureIcons[index] }))}
+  />
+
+  <Content
+    isReversed
+    tagline={features.capture.tagline}
+    title={features.capture.title}
+    items={features.capture.items}
+    image={{ src: '~/assets/images/capture-demo.png', alt: features.capture.title }}
+  >
+    <Fragment slot="content">
+      <h3 class="mb-2 text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">{features.capture.heading}</h3>
+      {features.capture.text}
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    tagline={features.recording.tagline}
+    title={features.recording.title}
+    items={features.recording.items}
+    image={{ src: '~/assets/images/recording-demo.png', alt: features.recording.title }}
+  >
+    <Fragment slot="content">{features.recording.text}</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    isAfterContent
+    tagline={features.ai.tagline}
+    title={features.ai.title}
+    items={features.ai.items}
+    image={{ src: '~/assets/images/ai-demo.png', alt: features.ai.title }}
+  >
+    <Fragment slot="content">{features.ai.text}</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <section class="bg-gray-50 px-5 py-20 dark:bg-gray-900/50 sm:py-24">
     <div class="mx-auto max-w-5xl">
@@ -96,38 +147,16 @@ const metadata = {
     </div>
   </section>
 
-  <section id="faqs" class="px-5 py-20 sm:py-24">
-    <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
-      <article
-        class="rounded-3xl border border-emerald-200 bg-emerald-50 p-8 dark:border-emerald-900 dark:bg-emerald-950/30"
-      >
-        <Icon name="tabler:shield-lock" class="h-9 w-9 text-emerald-700 dark:text-emerald-400" />
-        <h2 class="mt-5 text-2xl font-bold text-gray-900 dark:text-white">{content.privacyTitle}</h2>
-        <p class="mt-4 leading-7 text-gray-700 dark:text-gray-200">{content.privacyText}</p>
-        <a
-          class="mt-5 inline-flex font-semibold text-emerald-800 underline underline-offset-4 dark:text-emerald-300"
-          href="/privacy"
-        >
-          {content.privacyLink}
-        </a>
-      </article>
-      <div>
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">{content.faqTitle}</h2>
-        <div class="mt-6 space-y-4">
-          {
-            content.faqs.map((item) => (
-              <details class="group rounded-2xl border border-gray-200 p-5 dark:border-gray-800">
-                <summary class="cursor-pointer list-none font-semibold text-gray-900 dark:text-white">
-                  {item.title}
-                </summary>
-                <p class="mt-3 leading-7 text-gray-600 dark:text-gray-300">{item.answer}</p>
-              </details>
-            ))
-          }
-        </div>
-      </div>
-    </div>
-  </section>
+  <Features2
+    title={features.more.title}
+    subtitle={features.more.subtitle}
+    tagline={features.more.tagline}
+    items={features.more.items.map((item, index) => ({ ...item, icon: moreFeatureIcons[index] }))}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 
   <section class="px-5 pb-24">
     <div class="mx-auto max-w-5xl rounded-3xl bg-gray-950 px-6 py-14 text-center text-white sm:px-12">
