@@ -92,10 +92,10 @@ const footnotes = Array.isArray(footnote) ? footnote : footnote ? [footnote] : [
   </div>
 
   <div class="mt-12 overflow-x-auto md:mt-16">
-    <table class="mx-auto w-full min-w-[520px] max-w-4xl border-collapse text-left text-sm md:text-base">
+    <table class="mx-auto w-full min-w-[520px] max-w-4xl border-collapse text-start text-sm md:text-base">
       <thead>
         <tr>
-          <th scope="col" class="px-4 py-3 font-semibold text-heading">
+          <th scope="col" class="px-4 py-3 text-start font-semibold text-heading">
             {featureHeader}
           </th>
           {
@@ -115,14 +115,14 @@ const footnotes = Array.isArray(footnote) ? footnote : footnote ? [footnote] : [
                 <th
                   scope="colgroup"
                   colspan={cards.length + 1}
-                  class="bg-gray-50 px-4 py-2.5 text-left text-xs font-semibold uppercase tracking-wider text-muted dark:bg-slate-800/60"
+                  class="bg-gray-50 px-4 py-2.5 text-start text-xs font-semibold uppercase tracking-wider text-muted dark:bg-slate-800/60"
                 >
                   {group.title}
                 </th>
               </tr>
               {group.rows.map((row) => (
                 <tr class="border-t border-gray-200 dark:border-gray-700">
-                  <th scope="row" class="px-4 py-3 font-normal text-default">
+                  <th scope="row" class="px-4 py-3 text-start font-normal text-default">
                     {row.feature}
                   </th>
                   {row.support.map((included) => (
@@ -153,7 +153,7 @@ const footnotes = Array.isArray(footnote) ? footnote : footnote ? [footnote] : [
     (note || footnotes.length > 0) && (
       <div class="mx-auto mt-12 max-w-4xl space-y-12 px-4 text-xs text-muted">
         {footnotes.length > 0 && (
-          <div class="space-y-1 text-right">
+          <div class="space-y-1 text-end">
             {footnotes.map((line) => (
               <p>{line}</p>
             ))}

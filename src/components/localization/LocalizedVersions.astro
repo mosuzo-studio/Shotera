@@ -1,0 +1,54 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import VersionCompare from '~/components/widgets/VersionCompare.astro';
+import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
+import type { LocalizedLocale } from '~/i18n/site-content';
+import type { VersionsPageContent } from '~/i18n/versions-content';
+
+interface Props {
+  locale: LocalizedLocale;
+  content: VersionsPageContent;
+}
+
+const { locale, content } = Astro.props;
+const setupUrl = await getSetupDownloadUrl();
+
+const metadata = {
+  title: content.metaTitle,
+  description: content.metaDescription,
+};
+---
+
+<PageLayout metadata={metadata} lang={locale}>
+  <HeroText tagline={content.hero.tagline} title={content.hero.title} subtitle={content.hero.subtitle} />
+
+  <VersionCompare
+    title={content.section.title}
+    subtitle={content.section.subtitle}
+    cards={[
+      {
+        title: content.cards.lite.title,
+        tagline: content.cards.lite.tagline,
+        badge: content.cards.lite.badge,
+        description: content.cards.lite.description,
+        cta: { text: content.cards.lite.cta, href: RELEASES_URL, icon: 'tabler:external-link' },
+      },
+      {
+        title: content.cards.standard.title,
+        tagline: content.cards.standard.tagline,
+        description: content.cards.standard.description,
+        cta: { text: content.cards.standard.cta, href: setupUrl, variant: 'primary', icon: 'tabler:download' },
+      },
+    ]}
+    groups={content.table.groups.map((group) => ({
+      title: group.title,
+      rows: group.rows.map((feature) => ({ feature, support: group.support })),
+    }))}
+    featureHeader={content.table.featureHeader}
+    includedLabel={content.table.includedLabel}
+    excludedLabel={content.table.excludedLabel}
+    note={content.note}
+    footnote={content.footnote}
+  />
+</PageLayout>

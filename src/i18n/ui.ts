@@ -1,5 +1,6 @@
 import { defaultLocale, localeRegistry, publishedLocales, type PublishedLocale } from './locales';
-import { localizedSiteContent } from './site-content';
+import { localizedSiteContent, type LocalizedLocale } from './site-content';
+import { versionsContent } from './versions-content';
 
 export const languages = Object.fromEntries(
   publishedLocales.map((locale) => [locale, localeRegistry[locale].label])
@@ -205,6 +206,7 @@ const localizedUi = Object.fromEntries(
       'action.download': content.labels.download,
       'nav.features': content.labels.features,
       'nav.pricing': content.labels.pricing,
+      'nav.versions': versionsContent[locale as LocalizedLocale].metaTitle,
       'nav.blog': content.labels.blog,
       'nav.about': content.labels.about,
       'nav.download': content.moreVersions,
