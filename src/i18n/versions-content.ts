@@ -53,7 +53,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite 版',
         tagline: '輕量精簡版',
-        badge: '即將推出',
+        badge: '正式發布',
         description: '輕量精簡版本，專注截圖與基礎繪圖標註，不含 AI、錄製螢幕與長截圖等進階能力。',
         cta: '前往發佈頁',
       },
@@ -69,16 +69,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: '包含',
       excludedLabel: '不包含',
       groups: [
-        {
-          title: 'AI 能力 · 僅完整版',
-          support: [false, true],
-          rows: ['AI 去背', 'AI 擦除', '圖片翻譯（線上）', '離線 OCR（擷取文字）', 'AI 能力設定（模型切換、翻譯服務）'],
-        },
-        {
-          title: '進階能力 · 僅完整版',
-          support: [false, true],
-          rows: ['錄製螢幕', 'GIF 錄製', 'QR Code 辨識', '長截圖（捲動截圖）'],
-        },
         {
           title: '基礎功能 · 兩版都有',
           support: [true, true],
@@ -99,6 +89,16 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             '放大鏡',
             '橡皮擦',
           ],
+        },
+        {
+          title: 'AI 能力 · 僅完整版',
+          support: [false, true],
+          rows: ['AI 去背', 'AI 擦除', '圖片翻譯（線上）', '離線 OCR（擷取文字）', 'AI 能力設定（模型切換、翻譯服務）'],
+        },
+        {
+          title: '進階能力 · 僅完整版',
+          support: [false, true],
+          rows: ['錄製螢幕', 'GIF 錄製', 'QR Code 辨識', '長截圖（捲動截圖）'],
         },
       ],
     },
@@ -122,7 +122,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite版',
         tagline: '軽量エディション',
-        badge: '近日公開',
+        badge: '正式リリース',
         description:
           '軽量なエディション。スクリーンショットと基本的な注釈に絞り、AI や画面録画、長尺キャプチャなどの高度な機能は含みません。',
         cta: 'リリースページへ',
@@ -140,22 +140,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: '対応',
       excludedLabel: '未対応',
       groups: [
-        {
-          title: 'AI 機能 · フル版のみ',
-          support: [false, true],
-          rows: [
-            'AI 切り抜き',
-            'AI 消去',
-            '画像翻訳（オンライン）',
-            'オフライン OCR（テキスト抽出）',
-            'AI 設定（モデル切り替え、翻訳サービス）',
-          ],
-        },
-        {
-          title: '高度な機能 · フル版のみ',
-          support: [false, true],
-          rows: ['画面録画', 'GIF 録画', 'QR コード認識', '長尺キャプチャ（スクロールキャプチャ）'],
-        },
         {
           title: '基本機能 · 両バージョン共通',
           support: [true, true],
@@ -176,6 +160,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'ルーペ',
             '消しゴム',
           ],
+        },
+        {
+          title: 'AI 機能 · フル版のみ',
+          support: [false, true],
+          rows: [
+            'AI 切り抜き',
+            'AI 消去',
+            '画像翻訳（オンライン）',
+            'オフライン OCR（テキスト抽出）',
+            'AI 設定（モデル切り替え、翻訳サービス）',
+          ],
+        },
+        {
+          title: '高度な機能 · フル版のみ',
+          support: [false, true],
+          rows: ['画面録画', 'GIF 録画', 'QR コード認識', '長尺キャプチャ（スクロールキャプチャ）'],
         },
       ],
     },
@@ -199,7 +199,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Edição leve',
-        badge: 'Em breve',
+        badge: 'Lançamento oficial',
         description: 'Versão leve, focada em captura e anotação básica — sem AI, gravação de tela e captura longa.',
         cta: 'Ver versões',
       },
@@ -216,22 +216,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: 'Incluído',
       excludedLabel: 'Não incluído',
       groups: [
-        {
-          title: 'Recursos de AI · Somente versão completa',
-          support: [false, true],
-          rows: [
-            'Recorte com AI',
-            'Apagar com AI',
-            'Tradução de imagens (online)',
-            'OCR offline (extrair texto)',
-            'Configurações de AI (troca de modelo, serviço de tradução)',
-          ],
-        },
-        {
-          title: 'Recursos avançados · Somente versão completa',
-          support: [false, true],
-          rows: ['Gravar tela', 'Gravar GIF', 'Ler QR Code', 'Captura longa (rolagem)'],
-        },
         {
           title: 'Recursos básicos · Nas duas versões',
           support: [true, true],
@@ -257,6 +241,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'Borracha',
           ],
         },
+        {
+          title: 'Recursos de AI · Somente versão completa',
+          support: [false, true],
+          rows: [
+            'Recorte com AI',
+            'Apagar com AI',
+            'Tradução de imagens (online)',
+            'OCR offline (extrair texto)',
+            'Configurações de AI (troca de modelo, serviço de tradução)',
+          ],
+        },
+        {
+          title: 'Recursos avançados · Somente versão completa',
+          support: [false, true],
+          rows: ['Gravar tela', 'Gravar GIF', 'Ler QR Code', 'Captura longa (rolagem)'],
+        },
       ],
     },
     note: 'Nota: o instalador da Lite tem apenas cerca de 17 MB.',
@@ -279,7 +279,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Edición ligera',
-        badge: 'Próximamente',
+        badge: 'Lanzamiento oficial',
         description:
           'Versión ligera centrada en la captura y la anotación básica, sin IA, grabación de pantalla ni captura larga.',
         cta: 'Ver versiones',
@@ -297,22 +297,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: 'Incluido',
       excludedLabel: 'No incluido',
       groups: [
-        {
-          title: 'Funciones de IA · Solo versión completa',
-          support: [false, true],
-          rows: [
-            'Recorte con IA',
-            'Borrado con IA',
-            'Traducción de imágenes (en línea)',
-            'OCR sin conexión (extraer texto)',
-            'Ajustes de IA (cambio de modelo, servicio de traducción)',
-          ],
-        },
-        {
-          title: 'Funciones avanzadas · Solo versión completa',
-          support: [false, true],
-          rows: ['Grabar pantalla', 'Grabar GIF', 'Leer código QR', 'Captura larga (desplazamiento)'],
-        },
         {
           title: 'Funciones básicas · En ambas versiones',
           support: [true, true],
@@ -338,6 +322,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'Borrador',
           ],
         },
+        {
+          title: 'Funciones de IA · Solo versión completa',
+          support: [false, true],
+          rows: [
+            'Recorte con IA',
+            'Borrado con IA',
+            'Traducción de imágenes (en línea)',
+            'OCR sin conexión (extraer texto)',
+            'Ajustes de IA (cambio de modelo, servicio de traducción)',
+          ],
+        },
+        {
+          title: 'Funciones avanzadas · Solo versión completa',
+          support: [false, true],
+          rows: ['Grabar pantalla', 'Grabar GIF', 'Leer código QR', 'Captura larga (desplazamiento)'],
+        },
       ],
     },
     note: 'Nota: el instalador de Lite pesa solo unos 17 MB.',
@@ -360,7 +360,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Leichte Edition',
-        badge: 'Bald verfügbar',
+        badge: 'Offiziell verfügbar',
         description:
           'Schlanke Version für Screenshots und grundlegende Anmerkungen — ohne AI, Bildschirmaufnahme und lange Screenshots.',
         cta: 'Releases ansehen',
@@ -378,22 +378,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: 'Enthalten',
       excludedLabel: 'Nicht enthalten',
       groups: [
-        {
-          title: 'AI-Funktionen · Nur Vollversion',
-          support: [false, true],
-          rows: [
-            'AI-Freistellen',
-            'AI-Radierer',
-            'Bildübersetzung (online)',
-            'Offline-OCR (Text extrahieren)',
-            'AI-Einstellungen (Modellwechsel, Übersetzungsdienst)',
-          ],
-        },
-        {
-          title: 'Erweiterte Funktionen · Nur Vollversion',
-          support: [false, true],
-          rows: ['Bildschirmaufnahme', 'GIF-Aufnahme', 'QR-Code-Erkennung', 'Langer Screenshot (Scrollen)'],
-        },
         {
           title: 'Basisfunktionen · In beiden Versionen',
           support: [true, true],
@@ -414,6 +398,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'Lupe',
             'Radiergummi',
           ],
+        },
+        {
+          title: 'AI-Funktionen · Nur Vollversion',
+          support: [false, true],
+          rows: [
+            'AI-Freistellen',
+            'AI-Radierer',
+            'Bildübersetzung (online)',
+            'Offline-OCR (Text extrahieren)',
+            'AI-Einstellungen (Modellwechsel, Übersetzungsdienst)',
+          ],
+        },
+        {
+          title: 'Erweiterte Funktionen · Nur Vollversion',
+          support: [false, true],
+          rows: ['Bildschirmaufnahme', 'GIF-Aufnahme', 'QR-Code-Erkennung', 'Langer Screenshot (Scrollen)'],
         },
       ],
     },
@@ -439,7 +439,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Édition légère',
-        badge: 'Bientôt disponible',
+        badge: 'Sortie officielle',
         description:
           "Version légère dédiée à la capture et à l'annotation de base — sans AI, enregistrement d'écran ni longue capture.",
         cta: 'Voir les versions',
@@ -457,22 +457,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: 'Inclus',
       excludedLabel: 'Non inclus',
       groups: [
-        {
-          title: 'Fonctions AI · Version complète uniquement',
-          support: [false, true],
-          rows: [
-            'Détourage AI',
-            'Effacement AI',
-            "Traduction d'images (en ligne)",
-            'OCR hors ligne (extraire le texte)',
-            'Réglages AI (changement de modèle, service de traduction)',
-          ],
-        },
-        {
-          title: 'Fonctions avancées · Version complète uniquement',
-          support: [false, true],
-          rows: ["Enregistrement d'écran", 'Enregistrement GIF', 'Lecture de QR Code', 'Longue capture (défilement)'],
-        },
         {
           title: 'Fonctions de base · Dans les deux versions',
           support: [true, true],
@@ -493,6 +477,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'Loupe',
             'Gomme',
           ],
+        },
+        {
+          title: 'Fonctions AI · Version complète uniquement',
+          support: [false, true],
+          rows: [
+            'Détourage AI',
+            'Effacement AI',
+            "Traduction d'images (en ligne)",
+            'OCR hors ligne (extraire le texte)',
+            'Réglages AI (changement de modèle, service de traduction)',
+          ],
+        },
+        {
+          title: 'Fonctions avancées · Version complète uniquement',
+          support: [false, true],
+          rows: ["Enregistrement d'écran", 'Enregistrement GIF', 'Lecture de QR Code', 'Longue capture (défilement)'],
         },
       ],
     },
@@ -516,7 +516,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Edizione leggera',
-        badge: 'In arrivo',
+        badge: 'Uscita ufficiale',
         description:
           'Versione leggera dedicata a cattura e annotazione di base — senza AI, registrazione schermo e screenshot lungo.',
         cta: 'Vedi le release',
@@ -534,22 +534,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: 'Incluso',
       excludedLabel: 'Non incluso',
       groups: [
-        {
-          title: 'Funzioni AI · Solo versione completa',
-          support: [false, true],
-          rows: [
-            'Scontorno AI',
-            'Cancellazione AI',
-            'Traduzione immagini (online)',
-            'OCR offline (estrai testo)',
-            'Impostazioni AI (cambio modello, servizio di traduzione)',
-          ],
-        },
-        {
-          title: 'Funzioni avanzate · Solo versione completa',
-          support: [false, true],
-          rows: ['Registra schermo', 'Registrazione GIF', 'Lettura codice QR', 'Screenshot lungo (scorrimento)'],
-        },
         {
           title: 'Funzioni di base · In entrambe le versioni',
           support: [true, true],
@@ -575,6 +559,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'Gomma',
           ],
         },
+        {
+          title: 'Funzioni AI · Solo versione completa',
+          support: [false, true],
+          rows: [
+            'Scontorno AI',
+            'Cancellazione AI',
+            'Traduzione immagini (online)',
+            'OCR offline (estrai testo)',
+            'Impostazioni AI (cambio modello, servizio di traduzione)',
+          ],
+        },
+        {
+          title: 'Funzioni avanzate · Solo versione completa',
+          support: [false, true],
+          rows: ['Registra schermo', 'Registrazione GIF', 'Lettura codice QR', 'Screenshot lungo (scorrimento)'],
+        },
       ],
     },
     note: "Nota: l'installer di Lite pesa solo circa 17 MB.",
@@ -597,7 +597,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite 버전',
         tagline: '경량 에디션',
-        badge: '출시 예정',
+        badge: '정식 출시',
         description:
           '캡처와 기본 주석에 집중한 경량 버전으로, AI·화면 녹화·스크롤 캡처 등의 고급 기능은 포함하지 않습니다.',
         cta: '릴리스 보기',
@@ -615,22 +615,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: '지원',
       excludedLabel: '미지원',
       groups: [
-        {
-          title: 'AI 기능 · 전체 버전 전용',
-          support: [false, true],
-          rows: [
-            'AI 배경 제거',
-            'AI 지우기',
-            '이미지 번역(온라인)',
-            '오프라인 OCR(텍스트 추출)',
-            'AI 설정(모델 전환, 번역 서비스)',
-          ],
-        },
-        {
-          title: '고급 기능 · 전체 버전 전용',
-          support: [false, true],
-          rows: ['화면 녹화', 'GIF 녹화', 'QR 코드 인식', '스크롤 캡처(긴 이미지)'],
-        },
         {
           title: '기본 기능 · 두 버전 모두 포함',
           support: [true, true],
@@ -651,6 +635,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             '돋보기',
             '지우개',
           ],
+        },
+        {
+          title: 'AI 기능 · 전체 버전 전용',
+          support: [false, true],
+          rows: [
+            'AI 배경 제거',
+            'AI 지우기',
+            '이미지 번역(온라인)',
+            '오프라인 OCR(텍스트 추출)',
+            'AI 설정(모델 전환, 번역 서비스)',
+          ],
+        },
+        {
+          title: '고급 기능 · 전체 버전 전용',
+          support: [false, true],
+          rows: ['화면 녹화', 'GIF 녹화', 'QR 코드 인식', '스크롤 캡처(긴 이미지)'],
         },
       ],
     },
@@ -674,7 +674,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Лёгкая версия',
-        badge: 'Скоро',
+        badge: 'Официальный релиз',
         description: 'Лёгкая версия для захвата и базовых аннотаций — без AI, записи экрана и длинных снимков.',
         cta: 'Открыть релизы',
       },
@@ -691,22 +691,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: 'Есть',
       excludedLabel: 'Нет',
       groups: [
-        {
-          title: 'AI-функции · Только полная версия',
-          support: [false, true],
-          rows: [
-            'AI-удаление фона',
-            'AI-стирание',
-            'Перевод изображений (онлайн)',
-            'Офлайн-OCR (извлечь текст)',
-            'Настройки AI (смена модели, служба перевода)',
-          ],
-        },
-        {
-          title: 'Дополнительные функции · Только полная версия',
-          support: [false, true],
-          rows: ['Запись экрана', 'Запись GIF', 'Распознавание QR-кода', 'Длинный снимок (прокрутка)'],
-        },
         {
           title: 'Базовые функции · В обеих версиях',
           support: [true, true],
@@ -727,6 +711,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'Лупа',
             'Ластик',
           ],
+        },
+        {
+          title: 'AI-функции · Только полная версия',
+          support: [false, true],
+          rows: [
+            'AI-удаление фона',
+            'AI-стирание',
+            'Перевод изображений (онлайн)',
+            'Офлайн-OCR (извлечь текст)',
+            'Настройки AI (смена модели, служба перевода)',
+          ],
+        },
+        {
+          title: 'Дополнительные функции · Только полная версия',
+          support: [false, true],
+          rows: ['Запись экрана', 'Запись GIF', 'Распознавание QR-кода', 'Длинный снимок (прокрутка)'],
         },
       ],
     },
@@ -750,7 +750,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'نسخة خفيفة',
-        badge: 'قريبًا',
+        badge: 'الإصدار الرسمي',
         description:
           'نسخة خفيفة تركز على الالتقاط والتعليق الأساسي، دون ميزات الذكاء الاصطناعي أو تسجيل الشاشة أو اللقطة الطويلة.',
         cta: 'عرض الإصدارات',
@@ -768,22 +768,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: 'متوفر',
       excludedLabel: 'غير متوفر',
       groups: [
-        {
-          title: 'ميزات الذكاء الاصطناعي · في النسخة الكاملة فقط',
-          support: [false, true],
-          rows: [
-            'إزالة الخلفية بالذكاء الاصطناعي',
-            'محو بالذكاء الاصطناعي',
-            'ترجمة الصور (عبر الإنترنت)',
-            'OCR دون اتصال (استخراج النص)',
-            'إعدادات الذكاء الاصطناعي (تبديل الطراز، خدمة الترجمة)',
-          ],
-        },
-        {
-          title: 'ميزات متقدمة · في النسخة الكاملة فقط',
-          support: [false, true],
-          rows: ['تسجيل الشاشة', 'تسجيل GIF', 'قراءة رمز QR', 'لقطة طويلة (تمرير)'],
-        },
         {
           title: 'ميزات أساسية · في كلا النسختين',
           support: [true, true],
@@ -804,6 +788,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'مكبّر',
             'ممحاة',
           ],
+        },
+        {
+          title: 'ميزات الذكاء الاصطناعي · في النسخة الكاملة فقط',
+          support: [false, true],
+          rows: [
+            'إزالة الخلفية بالذكاء الاصطناعي',
+            'محو بالذكاء الاصطناعي',
+            'ترجمة الصور (عبر الإنترنت)',
+            'OCR دون اتصال (استخراج النص)',
+            'إعدادات الذكاء الاصطناعي (تبديل الطراز، خدمة الترجمة)',
+          ],
+        },
+        {
+          title: 'ميزات متقدمة · في النسخة الكاملة فقط',
+          support: [false, true],
+          rows: ['تسجيل الشاشة', 'تسجيل GIF', 'قراءة رمز QR', 'لقطة طويلة (تمرير)'],
         },
       ],
     },
@@ -827,7 +827,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Lichte editie',
-        badge: 'Binnenkort beschikbaar',
+        badge: 'Officiële release',
         description:
           'Lichte versie voor capture en basisannotatie — zonder AI, schermopname en lange schermafbeelding.',
         cta: 'Bekijk releases',
@@ -845,22 +845,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: 'Inbegrepen',
       excludedLabel: 'Niet inbegrepen',
       groups: [
-        {
-          title: 'AI-functies · Alleen volledige versie',
-          support: [false, true],
-          rows: [
-            'AI-uitsnede',
-            'AI-gum',
-            'Beeldvertaling (online)',
-            'Offline OCR (tekst extraheren)',
-            'AI-instellingen (modelwissel, vertaaldienst)',
-          ],
-        },
-        {
-          title: 'Geavanceerde functies · Alleen volledige versie',
-          support: [false, true],
-          rows: ['Schermopname', 'GIF-opname', 'QR-code scannen', 'Lange schermafbeelding (scrollen)'],
-        },
         {
           title: 'Basisfuncties · In beide versies',
           support: [true, true],
@@ -886,6 +870,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'Gum',
           ],
         },
+        {
+          title: 'AI-functies · Alleen volledige versie',
+          support: [false, true],
+          rows: [
+            'AI-uitsnede',
+            'AI-gum',
+            'Beeldvertaling (online)',
+            'Offline OCR (tekst extraheren)',
+            'AI-instellingen (modelwissel, vertaaldienst)',
+          ],
+        },
+        {
+          title: 'Geavanceerde functies · Alleen volledige versie',
+          support: [false, true],
+          rows: ['Schermopname', 'GIF-opname', 'QR-code scannen', 'Lange schermafbeelding (scrollen)'],
+        },
       ],
     },
     note: 'Let op: de Lite-installer is slechts ongeveer 17 MB.',
@@ -909,7 +909,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Lekka edycja',
-        badge: 'Wkrótce',
+        badge: 'Oficjalna premiera',
         description:
           'Lekka wersja skupiona na przechwytywaniu i podstawowych adnotacjach — bez AI, nagrywania ekranu i długich zrzutów.',
         cta: 'Zobacz wydania',
@@ -927,22 +927,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: 'Dostępne',
       excludedLabel: 'Niedostępne',
       groups: [
-        {
-          title: 'Funkcje AI · Tylko pełna wersja',
-          support: [false, true],
-          rows: [
-            'Wycinanie AI',
-            'Wymazywanie AI',
-            'Tłumaczenie obrazów (online)',
-            'OCR offline (wyodrębnij tekst)',
-            'Ustawienia AI (zmiana modelu, usługa tłumaczenia)',
-          ],
-        },
-        {
-          title: 'Funkcje zaawansowane · Tylko pełna wersja',
-          support: [false, true],
-          rows: ['Nagrywanie ekranu', 'Nagrywanie GIF', 'Rozpoznawanie QR', 'Długi zrzut (przewijanie)'],
-        },
         {
           title: 'Funkcje podstawowe · W obu wersjach',
           support: [true, true],
@@ -963,6 +947,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'Lupa',
             'Gumka',
           ],
+        },
+        {
+          title: 'Funkcje AI · Tylko pełna wersja',
+          support: [false, true],
+          rows: [
+            'Wycinanie AI',
+            'Wymazywanie AI',
+            'Tłumaczenie obrazów (online)',
+            'OCR offline (wyodrębnij tekst)',
+            'Ustawienia AI (zmiana modelu, usługa tłumaczenia)',
+          ],
+        },
+        {
+          title: 'Funkcje zaawansowane · Tylko pełna wersja',
+          support: [false, true],
+          rows: ['Nagrywanie ekranu', 'Nagrywanie GIF', 'Rozpoznawanie QR', 'Długi zrzut (przewijanie)'],
         },
       ],
     },
@@ -986,7 +986,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Lättviktig version',
-        badge: 'Kommer snart',
+        badge: 'Officiellt tillgänglig',
         description:
           'Lättviktig version för skärmbilder och grundläggande anteckningar — utan AI, skärminspelning och rullande skärmbild.',
         cta: 'Se utgåvor',
@@ -1004,22 +1004,6 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       includedLabel: 'Ingår',
       excludedLabel: 'Ingår inte',
       groups: [
-        {
-          title: 'AI-funktioner · Endast fullversion',
-          support: [false, true],
-          rows: [
-            'AI-frilägg',
-            'AI-radering',
-            'Bildöversättning (online)',
-            'Offline-OCR (extrahera text)',
-            'AI-inställningar (modellbyte, översättningstjänst)',
-          ],
-        },
-        {
-          title: 'Avancerade funktioner · Endast fullversion',
-          support: [false, true],
-          rows: ['Skärminspelning', 'GIF-inspelning', 'QR-kodsläsning', 'Rullande skärmbild (skrollning)'],
-        },
         {
           title: 'Basfunktioner · I båda versionerna',
           support: [true, true],
@@ -1040,6 +1024,22 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
             'Förstoringsglas',
             'Suddgummi',
           ],
+        },
+        {
+          title: 'AI-funktioner · Endast fullversion',
+          support: [false, true],
+          rows: [
+            'AI-frilägg',
+            'AI-radering',
+            'Bildöversättning (online)',
+            'Offline-OCR (extrahera text)',
+            'AI-inställningar (modellbyte, översättningstjänst)',
+          ],
+        },
+        {
+          title: 'Avancerade funktioner · Endast fullversion',
+          support: [false, true],
+          rows: ['Skärminspelning', 'GIF-inspelning', 'QR-kodsläsning', 'Rullande skärmbild (skrollning)'],
         },
       ],
     },

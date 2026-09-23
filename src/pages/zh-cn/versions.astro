@@ -26,7 +26,7 @@ const metadata = {
       {
         title: 'Shotera Lite 版',
         tagline: '轻量精简版',
-        badge: '即将发布',
+        badge: '正式发布',
         description: '轻量精简版本，专注截图与基础绘画标注，不含 AI、录屏与长截图等进阶能力。',
         cta: { text: '前往发布页', href: RELEASES_URL, icon: 'tabler:external-link' },
       },
@@ -38,25 +38,6 @@ const metadata = {
       },
     ]}
     groups={[
-      {
-        title: 'AI 能力 · 仅标准版',
-        rows: [
-          { feature: 'AI 抠图', support: [false, true] },
-          { feature: 'AI 擦图', support: [false, true] },
-          { feature: '图片翻译（在线）', support: [false, true] },
-          { feature: '离线 OCR（提取文字）', support: [false, true] },
-          { feature: 'AI 能力设置（模型切换、翻译服务）', support: [false, true] },
-        ],
-      },
-      {
-        title: '进阶能力 · 仅标准版',
-        rows: [
-          { feature: '录屏', support: [false, true] },
-          { feature: 'GIF 录制', support: [false, true] },
-          { feature: '二维码识别', support: [false, true] },
-          { feature: '长截图（滚动截图）', support: [false, true] },
-        ],
-      },
       {
         title: '基础功能 · 两版都有',
         rows: [
@@ -78,6 +59,25 @@ const metadata = {
           { feature: '表情贴纸', support: [true, true] },
           { feature: '放大镜', support: [true, true] },
           { feature: '橡皮擦', support: [true, true] },
+        ],
+      },
+      {
+        title: 'AI 能力 · 仅标准版',
+        rows: [
+          { feature: 'AI 抠图', support: [false, true] },
+          { feature: 'AI 擦图', support: [false, true] },
+          { feature: '图片翻译（在线）', support: [false, true] },
+          { feature: '离线 OCR（提取文字）', support: [false, true] },
+          { feature: 'AI 能力设置（模型切换、翻译服务）', support: [false, true] },
+        ],
+      },
+      {
+        title: '进阶能力 · 仅标准版',
+        rows: [
+          { feature: '录屏', support: [false, true] },
+          { feature: 'GIF 录制', support: [false, true] },
+          { feature: '二维码识别', support: [false, true] },
+          { feature: '长截图（滚动截图）', support: [false, true] },
         ],
       },
     ]}

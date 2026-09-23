@@ -27,7 +27,7 @@ const metadata = {
       {
         title: 'Shotera Lite',
         tagline: 'Lightweight edition',
-        badge: 'Coming soon',
+        badge: 'Available now',
         description:
           'A lightweight build for everyday capture and annotation — without AI, screen recording, or scrolling capture.',
         cta: { text: 'View releases', href: RELEASES_URL, icon: 'tabler:external-link' },
@@ -41,25 +41,6 @@ const metadata = {
       },
     ]}
     groups={[
-      {
-        title: 'AI features · Standard only',
-        rows: [
-          { feature: 'AI cutout', support: [false, true] },
-          { feature: 'AI eraser', support: [false, true] },
-          { feature: 'Image translation (online)', support: [false, true] },
-          { feature: 'Offline OCR (extract text)', support: [false, true] },
-          { feature: 'AI settings (model switching, translation service)', support: [false, true] },
-        ],
-      },
-      {
-        title: 'Advanced features · Standard only',
-        rows: [
-          { feature: 'Screen recording', support: [false, true] },
-          { feature: 'GIF recording', support: [false, true] },
-          { feature: 'QR code recognition', support: [false, true] },
-          { feature: 'Scrolling capture (long screenshot)', support: [false, true] },
-        ],
-      },
       {
         title: 'Core features · Both editions',
         rows: [
@@ -81,6 +62,25 @@ const metadata = {
           { feature: 'Emoji sticker', support: [true, true] },
           { feature: 'Magnifier', support: [true, true] },
           { feature: 'Eraser', support: [true, true] },
+        ],
+      },
+      {
+        title: 'AI features · Standard only',
+        rows: [
+          { feature: 'AI cutout', support: [false, true] },
+          { feature: 'AI eraser', support: [false, true] },
+          { feature: 'Image translation (online)', support: [false, true] },
+          { feature: 'Offline OCR (extract text)', support: [false, true] },
+          { feature: 'AI settings (model switching, translation service)', support: [false, true] },
+        ],
+      },
+      {
+        title: 'Advanced features · Standard only',
+        rows: [
+          { feature: 'Screen recording', support: [false, true] },
+          { feature: 'GIF recording', support: [false, true] },
+          { feature: 'QR code recognition', support: [false, true] },
+          { feature: 'Scrolling capture (long screenshot)', support: [false, true] },
         ],
       },
     ]}
