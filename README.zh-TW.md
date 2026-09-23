@@ -11,6 +11,7 @@
 </p>
 
 <p align="center">
+  <a href="https://shotera.mosuzo.com"><img src="https://img.shields.io/badge/%E5%AE%98%E7%B6%B2-shotera.mosuzo.com-7c3aed" alt="官方網站" /></a>
   <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/v/release/mosuzo-studio/Shotera?display_name=tag&amp;label=Release&amp;color=2563eb" alt="最新版本" /></a>
   <img src="https://img.shields.io/badge/platform-Windows-0078D4?logo=windows&amp;logoColor=white" alt="Windows" />
   <img src="https://img.shields.io/badge/languages-15-16a34a" alt="支援 15 種介面語言" />

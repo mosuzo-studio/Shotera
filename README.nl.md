@@ -2,6 +2,7 @@
 <p align="center"><strong>Leg nauwkeurig vast. Leg helder uit. Blijf doorwerken.</strong></p>
 <p align="center">Een Windows-app voor schermafbeeldingen, annotaties en bureaubladpinnen, met AI-beeldtools, offline OCR, slimme selectie, beeldvertaling en Presentatiemodus.</p>
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.es.md">Español</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.it.md">Italiano</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <strong><a href="README.nl.md">Nederlands</a></strong> · <a href="README.pl.md">Polski</a> · <a href="README.sv.md">Svenska</a></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="https://img.shields.io/badge/Website-shotera.mosuzo.com-7c3aed" alt="Website" /></a></p>
 <br/>
 
 <h3 align="center">Shotera downloaden</h3>

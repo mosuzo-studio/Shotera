@@ -10,7 +10,7 @@
   <a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <strong><a href="README.ja.md">日本語</a></strong> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.es.md">Español</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.it.md">Italiano</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.nl.md">Nederlands</a> · <a href="README.pl.md">Polski</a> · <a href="README.sv.md">Svenska</a>
 </p>
 
-<p align="center"><a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/v/release/mosuzo-studio/Shotera?display_name=tag&amp;label=Release&amp;color=2563eb" alt="最新リリース" /></a> <img src="https://img.shields.io/badge/platform-Windows-0078D4?logo=windows&amp;logoColor=white" alt="Windows" /> <img src="https://img.shields.io/badge/languages-15-16a34a" alt="15 のインターフェイス言語" /></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="https://img.shields.io/badge/%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88-shotera.mosuzo.com-7c3aed" alt="公式サイト" /></a> <a href="https://github.com/mosuzo-studio/Shotera/releases"><img src="https://img.shields.io/github/v/release/mosuzo-studio/Shotera?display_name=tag&amp;label=Release&amp;color=2563eb" alt="最新リリース" /></a> <img src="https://img.shields.io/badge/platform-Windows-0078D4?logo=windows&amp;logoColor=white" alt="Windows" /> <img src="https://img.shields.io/badge/languages-15-16a34a" alt="15 のインターフェイス言語" /></p>
 
 <br/>
 

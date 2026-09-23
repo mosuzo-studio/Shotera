@@ -2,6 +2,7 @@
 <p align="center"><strong>Fånga exakt. Förklara tydligt. Fortsätt arbeta.</strong></p>
 <p align="center">En Windows-app för skärmbilder, anteckningar och skrivbordsnålar, med AI-bildverktyg, offline-OCR, smart markering, bildöversättning och Presentationsläge.</p>
 <p align="center"><a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.pt-BR.md">Português (Brasil)</a> · <a href="README.es.md">Español</a> · <a href="README.de.md">Deutsch</a> · <a href="README.fr.md">Français</a> · <a href="README.it.md">Italiano</a> · <a href="README.ko.md">한국어</a> · <a href="README.ru.md">Русский</a> · <a href="README.ar.md">العربية</a> · <a href="README.nl.md">Nederlands</a> · <a href="README.pl.md">Polski</a> · <strong><a href="README.sv.md">Svenska</a></strong></p>
+<p align="center"><a href="https://shotera.mosuzo.com"><img src="https://img.shields.io/badge/Webbplats-shotera.mosuzo.com-7c3aed" alt="Webbplats" /></a></p>
 <br/>
 
 <h3 align="center">Ladda ned Shotera</h3>
