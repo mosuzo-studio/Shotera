@@ -37,7 +37,10 @@ export interface Props {
   featureHeader?: string;
   includedLabel?: string;
   excludedLabel?: string;
-  footnote?: string;
+  /** Small print under the table, aligned to the left. */
+  note?: string;
+  /** Small print under the table, aligned to the right; each entry renders on its own line. */
+  footnote?: string | string[];
   id?: string;
   classes?: { container?: string };
 }
@@ -51,10 +54,13 @@ const {
   featureHeader = '',
   includedLabel = '',
   excludedLabel = '',
+  note = '',
   footnote = '',
   id,
   classes = {},
 } = Astro.props;
+
+const footnotes = Array.isArray(footnote) ? footnote : footnote ? [footnote] : [];
 ---
 
 <WidgetWrapper id={id} containerClass={classes?.container ?? ''}>
@@ -143,5 +149,18 @@ const {
     </table>
   </div>
 
-  {footnote && <p class="mx-auto mt-4 max-w-4xl pr-4 text-right text-xs text-muted">{footnote}</p>}
+  {
+    (note || footnotes.length > 0) && (
+      <div class="mx-auto mt-12 max-w-4xl space-y-12 px-4 text-xs text-muted">
+        {footnotes.length > 0 && (
+          <div class="space-y-1 text-right">
+            {footnotes.map((line) => (
+              <p>{line}</p>
+            ))}
+          </div>
+        )}
+        {note && <p>{note}</p>}
+      </div>
+    )
+  }
 </WidgetWrapper>
