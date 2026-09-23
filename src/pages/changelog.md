@@ -9,6 +9,25 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Settings → About → Feedback
 
+**🔗 Version index**
+
+<ul class="version-index">
+  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li><a href="#shotera-v760">v7.6.0</a></li>
+  <li><a href="#shotera-v751">v7.5.1</a></li>
+  <li><a href="#shotera-v750">v7.5.0</a></li>
+  <li><a href="#shotera-v742">v7.4.2</a></li>
+  <li><a href="#shotera-v741">v7.4.1</a></li>
+  <li><a href="#shotera-v740">v7.4.0</a></li>
+  <li><a href="#shotera-v731">v7.3.1</a></li>
+  <li><a href="#shotera-v730">v7.3.0</a></li>
+  <li><a href="#shotera-v722">v7.2.2</a></li>
+  <li><a href="#shotera-v721">v7.2.1</a></li>
+  <li><a href="#shotera-v720">v7.2.0</a></li>
+  <li><a href="#shotera-v710">v7.1.0</a></li>
+  <li><a href="#shotera-v700">v7.0.0</a></li>
+</ul>
+
 ---
 
 ## Shotera v7.7.0
@@ -103,7 +122,7 @@ QR code scanning was added in response to feedback from Horihons.
 
 ## Shotera v7.5.1
 
-**Released:** 2024-09-14
+**Released:** 2026-09-14
 
 Elegant capture mode, instant pin, copy shortcuts.
 
@@ -140,7 +159,7 @@ Thanks to @Const-me, @LightQuanta, and @wherewhere for feature suggestions that 
 
 ## Shotera v7.5.0
 
-**Released:** 2024-09-11
+**Released:** 2026-09-12
 
 Full image editor, capture modes, extended CPU support.
 
@@ -180,7 +199,7 @@ Full image editor, capture modes, extended CPU support.
 
 ## Shotera v7.4.2
 
-**Released:** 2024-09-07
+**Released:** 2026-09-07
 
 In-app feedback, 22-language installer, performance improvements.
 
@@ -212,7 +231,7 @@ In-app feedback, 22-language installer, performance improvements.
 
 ## Shotera v7.4.1
 
-**Released:** 2024-09-04
+**Released:** 2026-09-04
 
 Model comparison, consistent naming, inline help.
 
@@ -226,7 +245,7 @@ Model comparison, consistent naming, inline help.
 
 ## Shotera v7.4.0
 
-**Released:** 2024-09-02
+**Released:** 2026-09-03
 
 Update experience redesign, Microsoft Store support, AI fixes.
 
@@ -244,7 +263,7 @@ Update experience redesign, Microsoft Store support, AI fixes.
 
 ## Shotera v7.3.1
 
-**Released:** 2024-08-29
+**Released:** 2026-08-29
 
 Dark mode support.
 
@@ -256,7 +275,7 @@ Dark mode support.
 
 ## Shotera v7.3.0
 
-**Released:** 2024-08-23
+**Released:** 2026-08-23
 
 Automatic OCR, partial copy, linked highlighting.
 
@@ -278,7 +297,7 @@ Automatic OCR, partial copy, linked highlighting.
 
 ## Shotera v7.2.2
 
-**Released:** 2024-08-20
+**Released:** 2026-08-20
 
 Image translation providers, test key, high-DPI fixes.
 
@@ -300,7 +319,7 @@ Image translation providers, test key, high-DPI fixes.
 
 ## Shotera v7.2.1
 
-**Released:** 2024-08-18
+**Released:** 2026-08-18
 
 Capture to clipboard, movable toolbars.
 
@@ -313,7 +332,7 @@ Capture to clipboard, movable toolbars.
 
 ## Shotera v7.2.0
 
-**Released:** 2024-08-02
+**Released:** 2026-08-02
 
 Faster capture startup, custom capture, 15 languages.
 
@@ -337,7 +356,7 @@ Faster capture startup, custom capture, 15 languages.
 
 ## Shotera v7.1.0
 
-**Released:** 2024-07-29
+**Released:** 2026-07-29
 
 Window detection, annotation tools, enhanced pins.
 
@@ -361,7 +380,7 @@ Window detection, annotation tools, enhanced pins.
 
 ## Shotera v7.0.0
 
-**Released:** 2024-07-23
+**Released:** 2026-07-23
 
 Capture what matters. Explain it clearly. Keep it where you can see it.
 

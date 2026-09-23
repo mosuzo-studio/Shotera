@@ -115,3 +115,19 @@
 .dd *:first-child {
   margin-top: 0;
 }
+
+/* Anchor jumps (e.g. changelog version links) should clear the sticky header. */
+:is(h1, h2, h3, h4, h5, h6)[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Changelog version index: a compact two-column list of version links. */
+.version-index {
+  columns: 2;
+  column-gap: 3rem;
+}
+@media (max-width: 640px) {
+  .version-index {
+    columns: 1;
+  }
+}
