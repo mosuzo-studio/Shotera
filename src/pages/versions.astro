@@ -1,0 +1,92 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import VersionCompare from '~/components/widgets/VersionCompare.astro';
+import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
+
+const setupUrl = await getSetupDownloadUrl();
+
+const metadata = {
+  title: 'Versions',
+  description:
+    'Compare Shotera Lite and Shotera Standard: what each edition includes and which one fits the way you work.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Versions"
+    title="Lite or Standard — pick the build that fits"
+    subtitle="Both editions share the same capture and annotation toolkit. Lite stays lean; Standard adds AI, image translation, screen recording, GIF, QR code recognition and scrolling capture."
+  />
+
+  <VersionCompare
+    title="Compare the editions"
+    subtitle="Everything that differs between Lite and Standard, at a glance."
+    cards={[
+      {
+        title: 'Shotera Lite',
+        tagline: 'Lightweight edition',
+        badge: 'Coming soon',
+        description:
+          'A lightweight build for everyday capture and annotation — without AI, screen recording, or scrolling capture.',
+        cta: { text: 'View releases', href: RELEASES_URL, icon: 'tabler:external-link' },
+      },
+      {
+        title: 'Shotera Standard',
+        tagline: 'Full-featured edition',
+        description:
+          'Everything in Lite, plus AI cutout, AI eraser, offline OCR, image translation, screen recording, GIF, QR code recognition and scrolling capture.',
+        cta: { text: 'Download Standard', href: setupUrl, variant: 'primary', icon: 'tabler:download' },
+      },
+    ]}
+    groups={[
+      {
+        title: 'AI features · Standard only',
+        rows: [
+          { feature: 'AI cutout', support: [false, true] },
+          { feature: 'AI eraser', support: [false, true] },
+          { feature: 'Image translation (online)', support: [false, true] },
+          { feature: 'Offline OCR (extract text)', support: [false, true] },
+          { feature: 'AI settings (model switching, translation service)', support: [false, true] },
+        ],
+      },
+      {
+        title: 'Advanced features · Standard only',
+        rows: [
+          { feature: 'Screen recording', support: [false, true] },
+          { feature: 'GIF recording', support: [false, true] },
+          { feature: 'QR code recognition', support: [false, true] },
+          { feature: 'Scrolling capture (long screenshot)', support: [false, true] },
+        ],
+      },
+      {
+        title: 'Core features · Both editions',
+        rows: [
+          { feature: 'Screenshot (region / window / full screen)', support: [true, true] },
+          { feature: 'Pin to screen', support: [true, true] },
+          { feature: 'Standalone editor window', support: [true, true] },
+        ],
+      },
+      {
+        title: 'Annotation tools · Both editions',
+        rows: [
+          { feature: 'Rectangle / Ellipse', support: [true, true] },
+          { feature: 'Line / Arrow', support: [true, true] },
+          { feature: 'Pen', support: [true, true] },
+          { feature: 'Highlighter', support: [true, true] },
+          { feature: 'Mosaic / Blur', support: [true, true] },
+          { feature: 'Text', support: [true, true] },
+          { feature: 'Step number', support: [true, true] },
+          { feature: 'Emoji sticker', support: [true, true] },
+          { feature: 'Magnifier', support: [true, true] },
+          { feature: 'Eraser', support: [true, true] },
+        ],
+      },
+    ]}
+    featureHeader="Capability"
+    includedLabel="Included"
+    excludedLabel="Not included"
+    footnote="Still in preview — differences between editions are subject to the final release."
+  />
+</Layout>

@@ -48,6 +48,7 @@ const baseUi = {
 
     'nav.features': 'Features',
     'nav.pricing': 'Pricing',
+    'nav.versions': 'Versions',
     'nav.about': 'About',
     'nav.download': 'More versions',
 
@@ -136,6 +137,7 @@ const baseUi = {
 
     'nav.features': '功能',
     'nav.pricing': '价格',
+    'nav.versions': '版本对比',
     'nav.about': '关于',
     'nav.download': '更多版本',
 

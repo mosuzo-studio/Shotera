@@ -1,0 +1,89 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import VersionCompare from '~/components/widgets/VersionCompare.astro';
+import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
+
+const setupUrl = await getSetupDownloadUrl();
+
+const metadata = {
+  title: '版本对比',
+  description: '对比 Shotera Lite 版与标准版的功能差异与定位，帮你选到合适的版本。',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="版本对比"
+    title="Lite 还是标准版？选适合你的那一款"
+    subtitle="两个版本共享同一套截图与绘画标注体验：Lite 版更轻量，标准版补齐 AI、图片翻译、录屏、GIF、二维码识别与长截图等能力。"
+  />
+
+  <VersionCompare
+    title="两个版本，各有所长"
+    subtitle="Lite 与标准版的全部差异，一眼看清。"
+    cards={[
+      {
+        title: 'Shotera Lite 版',
+        tagline: '轻量精简版',
+        badge: '即将发布',
+        description: '轻量精简版本，专注截图与基础绘画标注，不含 AI、录屏与长截图等进阶能力。',
+        cta: { text: '前往发布页', href: RELEASES_URL, icon: 'tabler:external-link' },
+      },
+      {
+        title: 'Shotera 标准版',
+        tagline: '完整能力版本',
+        description: '完整能力版本：AI 抠图、擦图、离线 OCR、图片翻译，以及录屏、GIF、二维码识别与长截图。',
+        cta: { text: '下载标准版', href: setupUrl, variant: 'primary', icon: 'tabler:download' },
+      },
+    ]}
+    groups={[
+      {
+        title: 'AI 能力 · 仅标准版',
+        rows: [
+          { feature: 'AI 抠图', support: [false, true] },
+          { feature: 'AI 擦图', support: [false, true] },
+          { feature: '图片翻译（在线）', support: [false, true] },
+          { feature: '离线 OCR（提取文字）', support: [false, true] },
+          { feature: 'AI 能力设置（模型切换、翻译服务）', support: [false, true] },
+        ],
+      },
+      {
+        title: '进阶能力 · 仅标准版',
+        rows: [
+          { feature: '录屏', support: [false, true] },
+          { feature: 'GIF 录制', support: [false, true] },
+          { feature: '二维码识别', support: [false, true] },
+          { feature: '长截图（滚动截图）', support: [false, true] },
+        ],
+      },
+      {
+        title: '基础功能 · 两版都有',
+        rows: [
+          { feature: '截图（区域 / 窗口 / 全屏）', support: [true, true] },
+          { feature: '贴图钉屏', support: [true, true] },
+          { feature: '独立编辑窗口', support: [true, true] },
+        ],
+      },
+      {
+        title: '标注工具 · 两版都有',
+        rows: [
+          { feature: '矩形 / 椭圆', support: [true, true] },
+          { feature: '直线 / 箭头', support: [true, true] },
+          { feature: '画笔', support: [true, true] },
+          { feature: '荧光笔', support: [true, true] },
+          { feature: '马赛克 / 模糊', support: [true, true] },
+          { feature: '文字', support: [true, true] },
+          { feature: '序号', support: [true, true] },
+          { feature: '表情贴纸', support: [true, true] },
+          { feature: '放大镜', support: [true, true] },
+          { feature: '橡皮擦', support: [true, true] },
+        ],
+      },
+    ]}
+    featureHeader="能力"
+    includedLabel="包含"
+    excludedLabel="不包含"
+    footnote="当前还在预发布阶段，两者差异请以最终的真实发布为准。"
+  />
+</Layout>
