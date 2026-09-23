@@ -12,6 +12,11 @@ interface Props {
   msiLabel?: string;
   portableLabel?: string;
   allVersionsLabel?: string;
+  /** Show both editions: Standard and Lite, each with all three formats. */
+  showLite?: boolean;
+  setupLabel?: string;
+  standardGroupLabel?: string;
+  liteGroupLabel?: string;
 }
 
 const {
@@ -24,19 +29,53 @@ const {
   msiLabel = 'MSI installer',
   portableLabel = 'Portable (.7z)',
   allVersionsLabel = 'All versions',
+  showLite = false,
+  setupLabel = 'Installer (.exe)',
+  standardGroupLabel = 'Standard',
+  liteGroupLabel = 'Lite',
 } = Astro.props;
 
-const { urls, resolved } = await getReleaseDownloads();
+const { urls, liteUrls, resolved } = await getReleaseDownloads();
+
+type MenuEntry =
+  | { kind: 'group'; label: string }
+  | { kind: 'link'; label: string; href: string; icon: string; external?: boolean };
+
+const setupItem = (href: string): MenuEntry => ({ kind: 'link', label: setupLabel, href, icon: 'tabler:download' });
+const msiItem = (href: string): MenuEntry => ({ kind: 'link', label: msiLabel, href, icon: 'tabler:package' });
+const portableItem = (href: string): MenuEntry => ({
+  kind: 'link',
+  label: portableLabel,
+  href,
+  icon: 'tabler:file-zip',
+});
 
 /* Only offer specific formats when the release actually resolved; otherwise the
    menu links to the Releases page, where every asset is listed anyway. */
-const menuItems = resolved
-  ? [
-      { label: msiLabel, href: urls.msi, icon: 'tabler:package' },
-      { label: portableLabel, href: urls.portable, icon: 'tabler:file-zip' },
-      { label: allVersionsLabel, href: RELEASES_URL, icon: 'tabler:brand-github', external: true },
-    ]
-  : [{ label: allVersionsLabel, href: RELEASES_URL, icon: 'tabler:brand-github', external: true }];
+const menuItems: MenuEntry[] = [];
+if (resolved) {
+  if (showLite) {
+    menuItems.push(
+      { kind: 'group', label: standardGroupLabel },
+      setupItem(urls.setup),
+      msiItem(urls.msi),
+      portableItem(urls.portable),
+      { kind: 'group', label: liteGroupLabel },
+      setupItem(liteUrls.setup),
+      msiItem(liteUrls.msi),
+      portableItem(liteUrls.portable)
+    );
+  } else {
+    menuItems.push(msiItem(urls.msi), portableItem(urls.portable));
+  }
+}
+menuItems.push({
+  kind: 'link',
+  label: allVersionsLabel,
+  href: RELEASES_URL,
+  icon: 'tabler:brand-github',
+  external: true,
+});
 ---
 
 <div class="download-buttons">
@@ -46,27 +85,33 @@ const menuItems = resolved
       <span>{downloadLabel}</span>
     </a>
 
-    {/* The menu opens purely from CSS :hover / :focus-within, so there is no
+    {
+      /* The menu opens purely from CSS :hover / :focus-within, so there is no
         state to sync into aria-expanded; aria-haspopup alone describes it
-        honestly. Hovering or tabbing to this control reveals the list. */}
+        honestly. Hovering or tabbing to this control reveals the list. */
+    }
     <button type="button" class="btn-primary split-toggle" aria-haspopup="true" aria-label={moreVersionsAriaLabel}>
       <Icon name="tabler:chevron-down" class="h-5 w-5" aria-hidden="true" />
     </button>
 
     <ul class="dropdown-menu split-menu" aria-label={moreVersionsLabel}>
       {
-        menuItems.map((item) => (
-          <li>
-            <a
-              href={item.href}
-              target={item.external ? '_blank' : undefined}
-              rel={item.external ? 'noopener noreferrer' : undefined}
-            >
-              <Icon name={item.icon} class="h-5 w-5" aria-hidden="true" />
-              <span>{item.label}</span>
-            </a>
-          </li>
-        ))
+        menuItems.map((item) =>
+          item.kind === 'group' ? (
+            <li class="menu-group">{item.label}</li>
+          ) : (
+            <li>
+              <a
+                href={item.href}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noopener noreferrer' : undefined}
+              >
+                <Icon name={item.icon} class="h-5 w-5" aria-hidden="true" />
+                <span>{item.label}</span>
+              </a>
+            </li>
+          )
+        )
       }
     </ul>
   </div>
@@ -201,6 +246,25 @@ const menuItems = resolved
   .split-menu a:hover,
   .split-menu a:focus-visible {
     background-color: rgb(0 0 0 / 6%);
+  }
+
+  /* Edition caption rows inside the menu (Standard / Lite). */
+  .split-menu .menu-group {
+    padding: 0.5rem 1.125rem 0.25rem;
+    color: var(--aw-color-text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .split-menu .menu-group:not(:first-child) {
+    margin-block-start: 0.25rem;
+    border-block-start: 1px solid rgb(0 0 0 / 7%);
+    padding-block-start: 0.625rem;
+  }
+
+  :global(.dark) .split-menu .menu-group:not(:first-child) {
+    border-block-start-color: rgb(255 255 255 / 12%);
   }
 
   :global(.dark) .split-menu a:hover,
