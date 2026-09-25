@@ -85,6 +85,7 @@ export const content: LocaleExtras = {
   },
 
   about: {
+    statsTitle: 'Shotera i korthet',
     metaDescription:
       'Om teamet bakom Shotera och varför vi bygger snabba, enkla och diskreta skärmbilder.',
     hero: {

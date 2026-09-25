@@ -84,6 +84,7 @@ export const content: LocaleExtras = {
   },
 
   about: {
+    statsTitle: 'Shotera en un coup d’œil',
     metaDescription:
       'À propos de Shotera : pourquoi nous avons créé un outil de capture rapide et discret pour Windows, et ce qui guide chacune de nos décisions.',
     hero: {

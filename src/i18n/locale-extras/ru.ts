@@ -82,6 +82,7 @@ export const content: LocaleExtras = {
   },
 
   about: {
+    statsTitle: 'Shotera в цифрах',
     metaDescription:
       'Мы создаём быстрый, точный и ненавязчивый инструмент для тех, кто ежедневно работает со снимками экрана.',
     hero: {

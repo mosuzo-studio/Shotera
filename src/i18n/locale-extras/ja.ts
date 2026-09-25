@@ -82,6 +82,7 @@ export const content: LocaleExtras = {
   },
 
   about: {
+    statsTitle: 'Shotera を数字で見る',
     metaDescription: 'Shotera の成り立ちと、ものづくりで大切にしている価値観、これまでの歩みをご紹介します。',
     hero: {
       tagline: '私たちについて',

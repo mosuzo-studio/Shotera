@@ -85,6 +85,7 @@ export const content: LocaleExtras = {
   },
 
   about: {
+    statsTitle: 'Shotera w skrócie',
     metaDescription:
       'Poznaj zespół stojący za Shoterą i powody, dla których tworzymy szybkie, proste i dyskretne zrzuty ekranu.',
     hero: {

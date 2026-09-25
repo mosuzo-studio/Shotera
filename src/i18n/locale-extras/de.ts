@@ -85,6 +85,7 @@ export const content: LocaleExtras = {
   },
 
   about: {
+    statsTitle: 'Shotera auf einen Blick',
     metaDescription:
       'Über Shotera: warum wir ein schnelles, unaufdringliches Screenshot-Tool für Windows entwickelt haben – und was uns dabei leitet.',
     hero: {

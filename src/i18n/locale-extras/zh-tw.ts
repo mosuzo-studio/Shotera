@@ -77,6 +77,7 @@ export const content: LocaleExtras = {
   },
 
   about: {
+    statsTitle: 'Shotera 數據一覽',
     metaDescription: 'Shotera 的故事：我們為什麼打造這款螢幕擷取工具，以及背後堅持的原則與價值。',
     hero: {
       tagline: '關於我們',

@@ -82,6 +82,7 @@ export const content: LocaleExtras = {
   },
 
   about: {
+    statsTitle: 'Shotera 한눈에 보기',
     metaDescription:
       '빠르고 정확한 캡처 도구를 만드는 Shotera 팀의 이야기와 우리가 지켜 온 원칙을 소개합니다.',
     hero: {

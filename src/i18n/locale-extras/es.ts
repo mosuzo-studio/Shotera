@@ -84,6 +84,7 @@ export const content: LocaleExtras = {
   },
 
   about: {
+    statsTitle: 'Shotera en cifras',
     metaDescription:
       'Conoce al equipo detrás de Shotera y los principios que guían cada atajo, cada selección y cada captura.',
     hero: {

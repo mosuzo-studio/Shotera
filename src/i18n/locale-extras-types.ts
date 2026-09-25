@@ -45,6 +45,7 @@ export interface LocaleExtras {
 
   about: {
     metaDescription: string;
+    statsTitle: string;
     hero: {
       tagline: string;
       title: string;

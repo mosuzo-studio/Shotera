@@ -79,6 +79,7 @@ export const content: LocaleExtras = {
   },
 
   about: {
+    statsTitle: 'Shotera في لمحة',
     metaDescription: 'نطوّر تجربة التقاط سريعة ودقيقة وغير مشتتة لمن يعتمدون على لقطات الشاشة يومياً.',
     hero: {
       tagline: 'من نحن',
