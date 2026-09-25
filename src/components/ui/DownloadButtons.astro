@@ -12,11 +12,7 @@ interface Props {
   msiLabel?: string;
   portableLabel?: string;
   allVersionsLabel?: string;
-  /** Show both editions: Standard and Lite, each with all three formats. */
-  showLite?: boolean;
   setupLabel?: string;
-  standardGroupLabel?: string;
-  liteGroupLabel?: string;
   /** Small muted line rendered under the buttons, e.g. a link to the versions page. */
   footnoteLabel?: string;
   footnoteHref?: string;
@@ -34,16 +30,13 @@ const {
   msiLabel = 'MSI installer',
   portableLabel = 'Portable (.7z)',
   allVersionsLabel = 'All versions',
-  showLite = false,
   setupLabel = 'Installer (.exe)',
-  standardGroupLabel = 'Standard',
-  liteGroupLabel = 'Lite',
   footnoteLabel,
   footnoteHref,
   recommendLabel,
 } = Astro.props;
 
-const { urls, liteUrls, resolved } = await getReleaseDownloads();
+const { urls, resolved } = await getReleaseDownloads();
 
 type MenuEntry =
   | { kind: 'group'; label: string }
@@ -68,22 +61,9 @@ const portableItem = (href: string): MenuEntry => ({
    menu links to the Releases page, where every asset is listed anyway. */
 const menuItems: MenuEntry[] = [];
 if (resolved) {
-  if (showLite) {
-    menuItems.push(
-      { kind: 'group', label: standardGroupLabel },
-      setupItem(urls.setup),
-      msiItem(urls.msi),
-      portableItem(urls.portable),
-      { kind: 'group', label: liteGroupLabel },
-      setupItem(liteUrls.setup),
-      msiItem(liteUrls.msi),
-      portableItem(liteUrls.portable)
-    );
-  } else {
-    // Installer first: most visitors just want the one-click `.exe`, so it
-    // leads the list and carries the recommendation pill when one is given.
-    menuItems.push(setupItem(urls.setup, true), portableItem(urls.portable), msiItem(urls.msi));
-  }
+  // Installer first: most visitors just want the one-click `.exe`, so it leads
+  // the list and carries the recommendation pill when one is given.
+  menuItems.push(setupItem(urls.setup, true), portableItem(urls.portable), msiItem(urls.msi));
 }
 menuItems.push({
   kind: 'link',

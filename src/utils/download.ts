@@ -11,8 +11,6 @@
  *   Shotera-7.3.0-windows-x64-setup.exe
  *   Shotera-7.3.0-windows-x64.msi
  *   Shotera-7.3.0-windows-x64-portable.7z
- * Lite-edition assets insert `-Lite` before the platform suffix:
- *   Shotera-7.3.0-Lite-windows-x64-setup.exe (and .msi / -portable.7z)
  *
  * This runs at build time only (the site is `output: 'static'`), so visitors
  * never touch GitHub metadata — their button href is a baked-in literal that
@@ -41,11 +39,6 @@ const ASSET_SUFFIXES = {
 
 export type AssetKind = keyof typeof ASSET_SUFFIXES;
 
-/** Lite-edition assets carry a `-Lite` marker before the platform suffix. */
-const LITE_ASSET_SUFFIXES = Object.fromEntries(
-  Object.entries(ASSET_SUFFIXES).map(([kind, suffix]) => [kind, `-Lite${suffix}`])
-) as Record<AssetKind, string>;
-
 export interface ReleaseDownloads {
   /** Release tag, e.g. `v7.3.0`; null when it could not be resolved. */
   tag: string | null;
@@ -53,8 +46,6 @@ export interface ReleaseDownloads {
   version: string | null;
   /** Direct asset URLs, falling back to the Releases page when unresolved. */
   urls: Record<AssetKind, string>;
-  /** Direct asset URLs for the Lite edition, same fallback behaviour. */
-  liteUrls: Record<AssetKind, string>;
   /** True when `urls` are real asset links rather than the fallback page. */
   resolved: boolean;
 }
@@ -63,7 +54,6 @@ const FALLBACK: ReleaseDownloads = {
   tag: null,
   version: null,
   urls: { setup: RELEASES_URL, msi: RELEASES_URL, portable: RELEASES_URL },
-  liteUrls: { setup: RELEASES_URL, msi: RELEASES_URL, portable: RELEASES_URL },
   resolved: false,
 };
 
@@ -114,7 +104,6 @@ const fetchLatestRelease = async (): Promise<ReleaseDownloads> => {
       tag,
       version,
       urls: buildUrls(tag, version, ASSET_SUFFIXES),
-      liteUrls: buildUrls(tag, version, LITE_ASSET_SUFFIXES),
       resolved: true,
     };
   } catch (error) {

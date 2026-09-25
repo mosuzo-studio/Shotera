@@ -2,7 +2,9 @@
 import PageLayout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import VersionCompare from '~/components/widgets/VersionCompare.astro';
+import DownloadFormats from '~/components/widgets/DownloadFormats.astro';
 import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
+import { downloadFormatsContent } from '~/i18n/download-formats';
 import type { LocalizedLocale } from '~/i18n/site-content';
 import type { VersionsPageContent } from '~/i18n/versions-content';
 
@@ -13,6 +15,10 @@ interface Props {
 
 const { locale, content } = Astro.props;
 const setupUrl = await getSetupDownloadUrl();
+const formats = downloadFormatsContent[locale];
+
+// Icons belong to the component, not to the copy: they follow the row order.
+const formatIcons = ['tabler:download', 'tabler:file-zip', 'tabler:package', 'tabler:brand-windows'];
 
 const metadata = {
   title: content.metaTitle,
@@ -50,5 +56,15 @@ const metadata = {
     excludedLabel={content.table.excludedLabel}
     note={content.note}
     footnote={content.footnote}
+  />
+
+  <DownloadFormats
+    id="download-formats"
+    tagline={formats.tagline}
+    title={formats.title}
+    subtitle={formats.subtitle}
+    headers={formats.headers}
+    recommendLabel={formats.recommendLabel}
+    rows={formats.rows.map((row, index) => ({ ...row, icon: formatIcons[index], recommended: index === 0 }))}
   />
 </PageLayout>
