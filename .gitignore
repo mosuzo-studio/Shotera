@@ -26,3 +26,6 @@ pnpm-lock.yaml
 
 # local debug logs
 debug.log
+
+# local scratch: image candidates, copy previews and audit scripts
+vibe_images/
