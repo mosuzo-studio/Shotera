@@ -26,7 +26,7 @@ export const content: HomeFeaturesContent = {
           '一鍵分離主體、去掉背景，人像、商品、Logo 都能立刻去背直接使用。全程在裝置上處理，不需要 Photoshop。',
       },
       {
-        title: 'AI 擦除 / 修圖',
+        title: 'AI 擦除',
         description: '智慧移除圖片中多餘的物件、浮水印或瑕疵，AI 會自然補上背景。全程離線、隱私無虞。',
       },
       {
@@ -92,11 +92,11 @@ export const content: HomeFeaturesContent = {
     text: 'AI 去背、擦除與 OCR 全程在本機執行——智慧不打折，隱私不妥協。',
     items: [
       {
-        title: 'AI 智慧去背',
+        title: 'AI 去背',
         description: '自動偵測主體並一鍵去掉背景，人像與商品照幾秒內變成透明 PNG。全程在裝置上執行。',
       },
       {
-        title: 'AI 擦除 / 修圖',
+        title: 'AI 擦除',
         description: '智慧移除多餘物件、浮水印或瑕疵，AI 會自然補上背景。同樣在本機執行，不上傳、不上雲。',
       },
       {

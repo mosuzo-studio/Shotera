@@ -23,7 +23,7 @@ export const content: HomeFeaturesContent = {
           'Isolez le sujet et supprimez l’arrière-plan en un clic. Personnes, produits, logos : détourés et prêts à l’emploi, traités entièrement en local. Pas besoin de Photoshop.',
       },
       {
-        title: 'Effacement IA / retouche',
+        title: 'Effacement IA',
         description:
           'Supprimez intelligemment les objets indésirables, les filigranes ou les imperfections d’une image. L’IA reconstitue l’arrière-plan naturellement. Entièrement hors ligne, entièrement privé.',
       },
@@ -105,7 +105,7 @@ export const content: HomeFeaturesContent = {
           'Détectez le sujet et supprimez l’arrière-plan en un clic — des PNG transparents de personnes et de produits en quelques secondes. Tourne entièrement sur votre appareil.',
       },
       {
-        title: 'Effacement IA / retouche',
+        title: 'Effacement IA',
         description:
           'Supprimez intelligemment objets indésirables, filigranes ou imperfections. L’IA reconstitue l’arrière-plan naturellement. Fonctionne aussi en local — aucun envoi, aucun cloud.',
       },

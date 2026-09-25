@@ -23,7 +23,7 @@ export const content: HomeFeaturesContent = {
           'Isole o assunto e remova o fundo com um clique. Pessoas, produtos, logos — recortados e prontos para usar, com processamento totalmente local. Não precisa do Photoshop.',
       },
       {
-        title: 'Apagar com IA / preenchimento',
+        title: 'Apagar com IA',
         description:
           "Remova objetos indesejados, marcas d'água ou imperfeições das imagens de forma inteligente. A IA preenche o fundo naturalmente. Totalmente offline e privado.",
       },
@@ -103,7 +103,7 @@ export const content: HomeFeaturesContent = {
           'Detecte o assunto e remova o fundo em um clique — PNGs transparentes de pessoas e produtos em segundos. Roda inteiramente no dispositivo.',
       },
       {
-        title: 'Apagar com IA / preenchimento',
+        title: 'Apagar com IA',
         description:
           "Remova objetos indesejados, marcas d'água ou imperfeições de forma inteligente. A IA preenche o fundo naturalmente. Também roda localmente — sem upload, sem nuvem.",
       },

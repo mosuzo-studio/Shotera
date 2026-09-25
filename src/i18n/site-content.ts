@@ -205,7 +205,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: '讓每一次截圖與錄影都更有效率。',
       newLabel: '新功能',
       announcement:
-        'Shotera v{version}+ 發布 —— 新增 AI 去背、插圖、離線 OCR 與圖片翻譯！（官網建置中，目前為預覽，以正式發布為準）»',
+        'Shotera v{version}+ 發布 —— 新增 AI 去背、AI 擦除、離線 OCR 與圖片翻譯！（官網建置中，目前為預覽，以正式發布為準）»',
     },
     pricing: {
       tagline: '價格方案',
@@ -268,7 +268,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         },
         {
           title: '本機優先，隱私安心',
-          description: 'AI 去背、消除與 OCR 都在你的裝置上執行，不上傳任何內容，截圖只屬於你。',
+          description: 'AI 去背、AI 擦除與 OCR 都在你的裝置上執行，不上傳任何內容，截圖只屬於你。',
         },
         {
           title: '多台裝置授權',
@@ -442,7 +442,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'キャプチャと録画を、もっと効率よく。',
       newLabel: '新着',
       announcement:
-        'Shotera v{version}+ 公開 —— AI切り抜き、イラスト、オフラインOCR、画像翻訳を新搭載！（本サイトは制作中のプレビューです。正式リリース内容が優先されます）»',
+        'Shotera v{version}+ 公開 —— AI切り抜き、AI消去、オフラインOCR、画像翻訳を新搭載！（本サイトは制作中のプレビューです。正式リリース内容が優先されます）»',
     },
     pricing: {
       tagline: '料金プラン',
@@ -473,7 +473,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
           'ベーシックのすべての機能',
           '高画質録画とGIF書き出し',
           'AI切り抜きが無制限',
-          'AI消しゴム・修復が無制限',
+          'AI消去が無制限',
           'オフラインOCRが無制限',
           '画像翻訳',
           'キャプチャ履歴のクラウド同期',
@@ -507,7 +507,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         {
           title: 'ローカル処理でプライバシーを確保',
           description:
-            'AI切り抜き、消しゴム、OCRはすべて端末上で動作します。アップロードは行わず、画像はあなたのものです。',
+            'AI切り抜き、AI消去、OCRはすべて端末上で動作します。アップロードは行わず、画像はあなたのものです。',
         },
         {
           title: '複数の端末で利用可能',
@@ -701,7 +701,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Mais eficiência em cada captura e gravação.',
       newLabel: 'NOVO',
       announcement:
-        'Shotera v{version}+ chegou — recorte com IA, ilustração, OCR offline e tradução de imagens! (Site em construção; esta é apenas uma prévia, vale a versão final) »',
+        'Shotera v{version}+ chegou — recorte com IA, apagar com IA, OCR offline e tradução de imagens! (Site em construção; esta é apenas uma prévia, vale a versão final) »',
     },
     pricing: {
       tagline: 'Planos e preços',
@@ -731,8 +731,8 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         items: [
           'Tudo do plano Básico',
           'Gravação em alta definição e exportação em GIF',
-          'Remoção de fundo com IA ilimitada',
-          'Borracha e retoque com IA ilimitados',
+          'Recorte com IA ilimitado',
+          'Apagamento com IA ilimitado',
           'OCR offline ilimitado',
           'Tradução de imagens',
           'Sincronização do histórico na nuvem',
@@ -767,7 +767,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         {
           title: 'Processamento local e privado',
           description:
-            'Recorte com IA, borracha e OCR rodam no seu dispositivo. Nada é enviado para a nuvem e suas capturas continuam suas.',
+            'Recorte com IA, apagamento com IA e OCR rodam no seu dispositivo. Nada é enviado para a nuvem e suas capturas continuam suas.',
         },
         {
           title: 'Licença para vários dispositivos',
@@ -962,7 +962,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Más eficiencia en cada captura y grabación.',
       newLabel: 'NUEVO',
       announcement:
-        'Shotera v{version}+ ya está aquí: recorte con IA, ilustración, OCR sin conexión y traducción de imágenes. (Sitio en construcción; solo una vista previa, prevalece la versión final) »',
+        'Shotera v{version}+ ya está aquí: recorte con IA, borrado con IA, OCR sin conexión y traducción de imágenes. (Sitio en construcción; solo una vista previa, prevalece la versión final) »',
     },
     pricing: {
       tagline: 'Planes y precios',
@@ -992,8 +992,8 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         items: [
           'Todo lo del plan Básico',
           'Grabación en alta definición y exportación a GIF',
-          'Recorte de fondo con IA sin límite',
-          'Borrador y retoque con IA sin límite',
+          'Recorte con IA sin límite',
+          'Borrado con IA sin límite',
           'OCR sin conexión ilimitado',
           'Traducción de imágenes',
           'Sincronización del historial en la nube',
@@ -1027,7 +1027,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         {
           title: 'Procesamiento local y privado',
           description:
-            'El recorte con IA, el borrador y el OCR funcionan en tu dispositivo. Nada se sube a la nube y tus capturas siguen siendo tuyas.',
+            'El recorte con IA, el borrado con IA y el OCR funcionan en tu dispositivo. Nada se sube a la nube y tus capturas siguen siendo tuyas.',
         },
         {
           title: 'Licencia para varios dispositivos',
@@ -1229,7 +1229,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Effizienter bei jedem Screenshot und jeder Aufnahme.',
       newLabel: 'NEU',
       announcement:
-        'Shotera v{version}+ ist da — KI-Freistellung, Illustration, Offline-OCR und Bildübersetzung! (Website im Aufbau; derzeit nur eine Vorschau, maßgeblich ist die finale Veröffentlichung) »',
+        'Shotera v{version}+ ist da — KI-Freistellung, KI-Radierer, Offline-OCR und Bildübersetzung! (Website im Aufbau; derzeit nur eine Vorschau, maßgeblich ist die finale Veröffentlichung) »',
     },
     pricing: {
       tagline: 'Preise',
@@ -1260,7 +1260,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
           'Alle Funktionen der Basisversion',
           'HD-Bildschirmaufnahme und GIF-Export',
           'Unbegrenzte KI-Freistellung',
-          'Unbegrenzter KI-Radierer zum Entfernen von Objekten',
+          'Unbegrenzter KI-Radierer',
           'Unbegrenzte Offline-OCR',
           'Bildübersetzung',
           'Cloud-Synchronisierung des Aufnahmeverlaufs',
@@ -1495,7 +1495,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Plus d’efficacité à chaque capture et enregistrement.',
       newLabel: 'NOUVEAU',
       announcement:
-        'Shotera v{version}+ est disponible — détourage IA, illustration, OCR hors ligne et traduction d’images ! (Site en construction, simple aperçu pour l’instant : la version finale prévaut) »',
+        'Shotera v{version}+ est disponible — détourage IA, effacement IA, OCR hors ligne et traduction d’images ! (Site en construction, simple aperçu pour l’instant : la version finale prévaut) »',
     },
     pricing: {
       tagline: 'Tarifs',
@@ -1526,7 +1526,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
           'Tout du forfait Essentiel',
           'Enregistrement HD et export GIF',
           'Détourage IA illimité',
-          'Gomme et retouche IA illimitées',
+          'Effacement IA illimité',
           'OCR hors ligne illimité',
           'Traduction d’images',
           'Synchronisation de l’historique dans le cloud',
@@ -1561,7 +1561,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         {
           title: 'Traitement local et privé',
           description:
-            'Le détourage IA, la gomme et l’OCR fonctionnent sur votre appareil. Rien n’est téléversé, vos captures restent vôtres.',
+            'Le détourage IA, l’effacement IA et l’OCR fonctionnent sur votre appareil. Rien n’est téléversé, vos captures restent vôtres.',
         },
         {
           title: 'Licence multi-appareils',
@@ -1759,7 +1759,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Più efficienza in ogni cattura e registrazione.',
       newLabel: 'NOVITÀ',
       announcement:
-        'Shotera v{version}+ è disponibile — ritaglio con IA, illustrazione, OCR offline e traduzione immagini! (Sito in costruzione, per ora solo un’anteprima: fa fede la versione finale) »',
+        'Shotera v{version}+ è disponibile — scontorno IA, cancellazione IA, OCR offline e traduzione immagini! (Sito in costruzione, per ora solo un’anteprima: fa fede la versione finale) »',
     },
     pricing: {
       tagline: 'Prezzi',
@@ -1790,7 +1790,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
           'Tutto del piano Base',
           'Registrazione HD ed esportazione GIF',
           'Scontorno IA illimitato',
-          'Gomma e ritocco IA illimitati',
+          'Cancellazione IA illimitata',
           'OCR offline illimitato',
           'Traduzione immagini',
           'Sincronizzazione cronologia su cloud',
@@ -1824,7 +1824,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         {
           title: 'Elaborazione locale e privata',
           description:
-            'Scontorno IA, gomma e OCR funzionano sul tuo dispositivo. Nulla viene caricato, le tue catture restano tue.',
+            'Scontorno IA, cancellazione IA e OCR funzionano sul tuo dispositivo. Nulla viene caricato, le tue catture restano tue.',
         },
         {
           title: 'Licenza per più dispositivi',
@@ -1897,7 +1897,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
     heroTitle: '캡처와 녹화,',
     heroAccent: 'AI 편집까지 한곳에서',
     heroSubtitle:
-      'Shotera는 스크린샷, 주석, GIF 녹화, AI 누끼 따기, 오프라인 OCR, 이미지 번역, 화면 고정을 하나의 매끄러운 Windows 작업 흐름으로 연결합니다.',
+      'Shotera는 스크린샷, 주석, GIF 녹화, AI 배경 제거, 오프라인 OCR, 이미지 번역, 화면 고정을 하나의 매끄러운 Windows 작업 흐름으로 연결합니다.',
     philosophy: '빠르고 정확하게, 작업 흐름은 방해하지 않도록.',
     featuresTitle: '캡처 이후의 작업까지 한 번에',
     featuresSubtitle: '여러 앱을 오가지 않고 캡처하고 설명하고 공유하세요.',
@@ -1991,7 +1991,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       privacy: '개인정보',
       screenshot: '스크린샷',
       recording: '화면 및 GIF 녹화',
-      cutout: 'AI 누끼 따기',
+      cutout: 'AI 배경 제거',
       ocr: '오프라인 OCR',
       translation: '이미지 번역',
       pin: '화면 고정',
@@ -2003,13 +2003,13 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: '모든 캡처와 녹화를 더 효율적으로.',
       newLabel: '새 기능',
       announcement:
-        'Shotera v{version}+ 출시 — AI 배경 제거, 일러스트, 오프라인 OCR, 이미지 번역 추가! (사이트 준비 중이라 현재는 미리보기이며, 최종 출시 내용이 기준입니다) »',
+        'Shotera v{version}+ 출시 — AI 배경 제거, AI 지우기, 오프라인 OCR, 이미지 번역 추가! (사이트 준비 중이라 현재는 미리보기이며, 최종 출시 내용이 기준입니다) »',
     },
     pricing: {
       tagline: '요금제',
       heroTitle: '무료로 시작하고, 필요할 때 업그레이드',
       heroSubtitle:
-        '일상적인 캡처와 주석 기능은 영구 무료입니다. 녹화, AI 누끼 따기, 이미지 번역이 필요할 때 Pro나 팀 플랜으로 전환하세요. 현재는 사전 미리보기이며 최종안이 아닙니다. 기능과 가격은 정식 출시 전에 변경될 수 있습니다.',
+        '일상적인 캡처와 주석 기능은 영구 무료입니다. 녹화, AI 배경 제거, 이미지 번역이 필요할 때 Pro나 팀 플랜으로 전환하세요. 현재는 사전 미리보기이며 최종안이 아닙니다. 기능과 가격은 정식 출시 전에 변경될 수 있습니다.',
       plansTitle: '적합한 플랜을 선택하세요',
       plansSubtitle: '평생 라이선스, 숨겨진 비용 없음',
       popularRibbon: '추천',
@@ -2034,7 +2034,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
           '기본 플랜의 모든 기능',
           'HD 녹화 및 GIF 내보내기',
           'AI 배경 제거 무제한',
-          'AI 지우개 / 복원 무제한',
+          'AI 지우기 무제한',
           '오프라인 OCR 무제한',
           '이미지 번역',
           '캡처 기록 클라우드 동기화',
@@ -2067,7 +2067,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         },
         {
           title: '로컬 우선 및 프라이버시 보호',
-          description: 'AI 누끼 따기, 지우개, OCR은 모두 기기에서 실행됩니다. 업로드 없이 캡처는 오직 당신의 것입니다.',
+          description: 'AI 배경 제거, AI 지우기, OCR은 모두 기기에서 실행됩니다. 업로드 없이 캡처는 오직 당신의 것입니다.',
         },
         {
           title: '여러 기기에서 사용 가능',
@@ -2258,7 +2258,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Больше эффективности в каждом снимке и записи.',
       newLabel: 'НОВОЕ',
       announcement:
-        'Shotera v{version}+ уже доступен — ИИ-удаление фона, иллюстрации, автономное OCR и перевод изображений! (Сайт в разработке, сейчас это лишь предпросмотр: приоритет за финальным релизом) »',
+        'Shotera v{version}+ уже доступен — AI-удаление фона, AI-стирание, автономное OCR и перевод изображений! (Сайт в разработке, сейчас это лишь предпросмотр: приоритет за финальным релизом) »',
     },
     pricing: {
       tagline: 'Тарифы',
@@ -2288,8 +2288,8 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         items: [
           'Всё из базовой версии',
           'Запись в высоком качестве и экспорт в GIF',
-          'Неограниченное ИИ-вырезание фона',
-          'Неограниченный ИИ-ластик и восстановление',
+          'Неограниченное AI-удаление фона',
+          'Неограниченное AI-стирание',
           'Неограниченное автономное OCR',
           'Перевод изображений',
           'Синхронизация истории захвата с облаком',
@@ -2501,7 +2501,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'كفاءة أكبر في كل لقطة وتسجيل.',
       newLabel: 'جديد',
       announcement:
-        'Shotera v{version}+ متوفّر الآن — إزالة الخلفية بالذكاء الاصطناعي والرسوم التوضيحية وOCR دون اتصال وترجمة الصور! (الموقع قيد الإنشاء، وهذه معاينة فقط، والإصدار النهائي هو المرجع) «',
+        'Shotera v{version}+ متوفّر الآن — إزالة الخلفية بالذكاء الاصطناعي والمحو بالذكاء الاصطناعي وOCR دون اتصال وترجمة الصور! (الموقع قيد الإنشاء، وهذه معاينة فقط، والإصدار النهائي هو المرجع) «',
     },
     pricing: {
       tagline: 'الأسعار',
@@ -2532,7 +2532,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
           'كل ميزات الإصدار الأساسي',
           'تسجيل بجودة عالية وتصدير GIF',
           'إزالة الخلفية بالذكاء الاصطناعي بلا حدود',
-          'ممحاة وترميم بالذكاء الاصطناعي بلا حدود',
+          'محو بالذكاء الاصطناعي بلا حدود',
           'OCR دون اتصال بلا حدود',
           'ترجمة الصور',
           'مزامنة سجل الالتقاط عبر السحابة',
@@ -2565,7 +2565,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         {
           title: 'معالجة محلية تحفظ خصوصيتك',
           description:
-            'القص بالذكاء الاصطناعي والممحاة وOCR تعمل جميعها على جهازك. لا يُرفع أي شيء، ولقطاتك تبقى ملكك وحدك.',
+            'إزالة الخلفية والمحو بالذكاء الاصطناعي وOCR تعمل جميعها على جهازك. لا يُرفع أي شيء، ولقطاتك تبقى ملكك وحدك.',
         },
         {
           title: 'ترخيص لعدة أجهزة',
@@ -2637,7 +2637,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
     heroTitle: 'Leg vast, neem op en bewerk met',
     heroAccent: 'AI op één plek',
     heroSubtitle:
-      'Shotera brengt screenshots, annotaties, GIF-opname, AI-uitknippen, offline OCR, beeldvertaling en vastgepinde referenties samen in één vlotte Windows-workflow.',
+      'Shotera brengt screenshots, annotaties, GIF-opname, AI-uitsnede, offline OCR, beeldvertaling en vastgepinde referenties samen in één vlotte Windows-workflow.',
     philosophy: 'Snel, nauwkeurig en zonder je concentratie te onderbreken.',
     featuresTitle: 'Alles voor het werk na een screenshot',
     featuresSubtitle: 'Leg vast, leg uit en deel zonder steeds van app te wisselen.',
@@ -2744,7 +2744,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       privacy: 'Privacy',
       screenshot: 'Screenshot',
       recording: 'Scherm- en GIF-opname',
-      cutout: 'AI-uitknippen',
+      cutout: 'AI-uitsnede',
       ocr: 'Offline OCR',
       translation: 'Beeldvertaling',
       pin: 'Vastmaken op scherm',
@@ -2756,13 +2756,13 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Efficiënter bij elke screenshot en opname.',
       newLabel: 'NIEUW',
       announcement:
-        'Shotera v{version}+ is hier — AI-uitsnijden, illustratie, offline OCR en beeldvertaling! (Site in opbouw, dit is slechts een preview: definitieve release is leidend) »',
+        'Shotera v{version}+ is hier — AI-uitsnede, AI-gum, offline OCR en beeldvertaling! (Site in opbouw, dit is slechts een preview: definitieve release is leidend) »',
     },
     pricing: {
       tagline: 'Prijzen',
       heroTitle: 'Begin gratis en breid uit wanneer u dat nodig hebt',
       heroSubtitle:
-        'Dagelijks vastleggen en annoteren blijft altijd gratis. Hebt u schermopname, AI-uitknippen of beeldvertaling nodig? Stap dan over op Pro of het teamplan. Dit is een vroege preview en niet het definitieve aanbod: functies en prijzen kunnen voor de release nog wijzigen.',
+        'Dagelijks vastleggen en annoteren blijft altijd gratis. Hebt u schermopname, AI-uitsnede of beeldvertaling nodig? Stap dan over op Pro of het teamplan. Dit is een vroege preview en niet het definitieve aanbod: functies en prijzen kunnen voor de release nog wijzigen.',
       plansTitle: 'Kies het plan dat bij u past',
       plansSubtitle: 'Eenmalige aankoop, geen verborgen kosten',
       popularRibbon: 'Populair',
@@ -2786,8 +2786,8 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         items: [
           'Alles uit het basisplan',
           'HD-schermopname en GIF-export',
-          'Onbeperkt AI-achtergrond verwijderen',
-          'Onbeperkte AI-gum en retouche',
+          'Onbeperkte AI-uitsnede',
+          'Onbeperkte AI-gum',
           'Onbeperkte offline OCR',
           'Beeldvertaling',
           'Cloudsynchronisatie van de opnamegeschiedenis',
@@ -2822,7 +2822,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         {
           title: 'Lokaal en privacyvriendelijk',
           description:
-            'AI-uitknippen, de gum en OCR werken op uw apparaat. Er wordt niets geüpload en uw schermafbeeldingen blijven van u.',
+            'AI-uitsnede, AI-gum en OCR werken op uw apparaat. Er wordt niets geüpload en uw schermafbeeldingen blijven van u.',
         },
         {
           title: 'Licentie voor meerdere apparaten',
@@ -3009,7 +3009,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Większa wydajność każdego zrzutu i nagrania.',
       newLabel: 'NOWOŚĆ',
       announcement:
-        'Shotera v{version}+ już dostępna — wycinanie AI, ilustracje, OCR offline i tłumaczenie obrazów! (Strona w budowie, to tylko podgląd: liczy się wersja finalna) »',
+        'Shotera v{version}+ już dostępna — wycinanie AI, wymazywanie AI, OCR offline i tłumaczenie obrazów! (Strona w budowie, to tylko podgląd: liczy się wersja finalna) »',
     },
     pricing: {
       tagline: 'Cennik',
@@ -3039,8 +3039,8 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         items: [
           'Wszystko z planu podstawowego',
           'Nagrywanie w jakości HD i eksport do GIF',
-          'Nieograniczone usuwanie tła przez AI',
-          'Nieograniczona gumka i retusz AI',
+          'Nieograniczone wycinanie AI',
+          'Nieograniczone wymazywanie AI',
           'Nieograniczony OCR offline',
           'Tłumaczenie obrazów',
           'Synchronizacja historii przechwytywania w chmurze',
@@ -3075,7 +3075,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         {
           title: 'Działa lokalnie, dba o prywatność',
           description:
-            'Wycinanie AI, gumka i OCR działają na Twoim urządzeniu. Nic nie jest przesyłane, a Twoje zrzuty pozostają tylko Twoje.',
+            'Wycinanie AI, wymazywanie AI i OCR działają na Twoim urządzeniu. Nic nie jest przesyłane, a Twoje zrzuty pozostają tylko Twoje.',
         },
         {
           title: 'Licencja na wiele urządzeń',
@@ -3270,7 +3270,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       tagline: 'Effektivare vid varje skärmbild och inspelning.',
       newLabel: 'NYTT',
       announcement:
-        'Shotera v{version}+ är här — AI-utklipp, illustration, offline-OCR och bildöversättning! (Webbplatsen byggs, detta är bara förhandsgranskning: slutgiltig version gäller) »',
+        'Shotera v{version}+ är här — AI-frilägg, AI-radering, offline-OCR och bildöversättning! (Webbplatsen byggs, detta är bara förhandsgranskning: slutgiltig version gäller) »',
     },
     pricing: {
       tagline: 'Priser',
@@ -3300,8 +3300,8 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         items: [
           'Allt i basplanen',
           'HD-inspelning och GIF-export',
-          'Obegränsad AI-borttagning av bakgrund',
-          'Obegränsat AI-suddgummi och retusch',
+          'Obegränsat AI-frilägg',
+          'Obegränsad AI-radering',
           'Obegränsad offline-OCR',
           'Bildöversättning',
           'Molnsynkronisering av fångsthistoriken',
@@ -3336,7 +3336,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
         {
           title: 'Lokalt och integritetsvänligt',
           description:
-            'AI-friläggning, suddgummi och OCR körs på din enhet. Ingenting laddas upp och dina skärmbilder förblir dina.',
+            'AI-friläggning, AI-radering och OCR körs på din enhet. Ingenting laddas upp och dina skärmbilder förblir dina.',
         },
         {
           title: 'Licens för flera enheter',

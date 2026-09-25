@@ -18,12 +18,12 @@ export const content: HomeFeaturesContent = {
           'Nehmen Sie in bis zu 4K Ultra-HD mit hoher Bildrate auf und exportieren Sie als MP4 oder leichtes GIF. Keine Zeitbegrenzung – nehmen Sie so lange auf, wie Sie möchten.',
       },
       {
-        title: 'AI-Freistellen',
+        title: 'KI-Freistellung',
         description:
           'Motiv isolieren und Hintergrund mit einem Klick entfernen. Personen, Produkte, Logos – freigestellt und sofort einsatzbereit, vollständig auf dem Gerät verarbeitet. Photoshop nicht erforderlich.',
       },
       {
-        title: 'AI-Radierer / Inpainting',
+        title: 'KI-Radierer',
         description:
           'Entfernen Sie unerwünschte Objekte, Wasserzeichen oder Flecken intelligent aus Bildern. Die KI füllt den Hintergrund natürlich auf. Vollständig offline, vollständig privat.',
       },
@@ -95,16 +95,16 @@ export const content: HomeFeaturesContent = {
   },
   ai: {
     tagline: 'AI-Funktionen',
-    title: 'AI, die über den Screenshot hinausgeht',
-    text: 'AI-Freistellen, AI-Radierer und OCR laufen alle lokal – Intelligenz ohne Kompromisse beim Datenschutz.',
+    title: 'KI, die über den Screenshot hinausgeht',
+    text: 'KI-Freistellung, KI-Radierer und OCR laufen alle lokal – Intelligenz ohne Kompromisse beim Datenschutz.',
     items: [
       {
-        title: 'AI-Freistellen',
+        title: 'KI-Freistellung',
         description:
           'Motiv erkennen und Hintergrund mit einem Klick entfernen – transparente PNGs von Personen und Produkten in Sekunden. Läuft vollständig auf dem Gerät.',
       },
       {
-        title: 'AI-Radierer / Inpainting',
+        title: 'KI-Radierer',
         description:
           'Entfernen Sie unerwünschte Objekte, Wasserzeichen oder Flecken intelligent. Die KI füllt den Hintergrund natürlich auf. Läuft ebenfalls lokal – kein Upload, keine Cloud.',
       },
@@ -116,7 +116,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Flexibler Modellwechsel',
         description:
-          'AI-Freistellen und AI-Radierer unterstützen den Wechsel benutzerdefinierter Modelle. Nutzen Sie jederzeit das aktuell beste Modell und bleiben Sie der Entwicklung voraus.',
+          'KI-Freistellung und KI-Radierer unterstützen den Wechsel benutzerdefinierter Modelle. Nutzen Sie jederzeit das aktuell beste Modell und bleiben Sie der Entwicklung voraus.',
       },
     ],
   },
@@ -161,7 +161,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Lokal zuerst & privat',
         description:
-          'OCR, AI-Freistellen und AI-Radierer laufen alle auf Ihrem Gerät – nichts wird hochgeladen. Ihre Screenshots gehören Ihnen allein.',
+          'OCR, KI-Freistellung und KI-Radierer laufen alle auf Ihrem Gerät – nichts wird hochgeladen. Ihre Screenshots gehören Ihnen allein.',
       },
       {
         title: 'Ressourcenschonend',

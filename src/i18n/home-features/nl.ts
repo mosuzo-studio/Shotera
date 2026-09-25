@@ -23,7 +23,7 @@ export const content: HomeFeaturesContent = {
           'Isoleer het onderwerp en verwijder de achtergrond met één klik. Personen, producten, logo’s: uitgesneden en klaar voor gebruik, volledig op het apparaat verwerkt. Photoshop niet nodig.',
       },
       {
-        title: 'AI-gum / inpainting',
+        title: 'AI-gum',
         description:
           'Verwijder ongewenste objecten, watermerken of vlekken op intelligente wijze uit afbeeldingen. De AI vult de achtergrond natuurlijk aan. Volledig offline, volledig privé.',
       },
@@ -98,12 +98,12 @@ export const content: HomeFeaturesContent = {
     text: 'AI-uitsnede, AI-gum en OCR draaien allemaal lokaal: intelligentie zonder in te leveren op privacy.',
     items: [
       {
-        title: 'Achtergrond verwijderen met AI',
+        title: 'AI-uitsnede',
         description:
           'Detecteer het onderwerp en verwijder de achtergrond met één klik: transparante PNG’s van personen en producten in seconden. Draait volledig op het apparaat.',
       },
       {
-        title: 'AI-gum / inpainting',
+        title: 'AI-gum',
         description:
           'Verwijder ongewenste objecten, watermerken of vlekken intelligent. De AI vult de achtergrond natuurlijk aan. Draait ook lokaal: geen upload, geen cloud.',
       },

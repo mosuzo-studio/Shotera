@@ -23,7 +23,7 @@ export const content: HomeFeaturesContent = {
           'Isolera motivet och ta bort bakgrunden med ett klick. Personer, produkter, logotyper: frilagda och redo att använda, helt bearbetade på enheten. Ingen Photoshop behövs.',
       },
       {
-        title: 'AI-radering / inpainting',
+        title: 'AI-radering',
         description:
           'Ta bort oönskade objekt, vattenstämplar eller fläckar intelligent från bilder. AI:n fyller i bakgrunden naturligt. Helt offline, helt privat.',
       },
@@ -98,12 +98,12 @@ export const content: HomeFeaturesContent = {
     text: 'AI-frilägg, AI-radering och OCR körs alla lokalt: intelligens utan att offra integriteten.',
     items: [
       {
-        title: 'Ta bort bakgrund med AI',
+        title: 'AI-frilägg',
         description:
           'Identifiera motivet och ta bort bakgrunden med ett klick: genomskinliga PNG:er av personer och produkter på sekunder. Körs helt på enheten.',
       },
       {
-        title: 'AI-radering / inpainting',
+        title: 'AI-radering',
         description:
           'Ta bort oönskade objekt, vattenstämplar eller fläckar intelligent. AI:n fyller i bakgrunden naturligt. Körs också lokalt: ingen uppladdning, inget moln.',
       },

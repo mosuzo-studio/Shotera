@@ -23,7 +23,7 @@ export const content: HomeFeaturesContent = {
           'Aísla el sujeto y quita el fondo con un clic. Personas, productos, logotipos: recortados y listos para usar, con procesamiento totalmente local. Sin necesidad de Photoshop.',
       },
       {
-        title: 'Borrado con IA / retoque',
+        title: 'Borrado con IA',
         description:
           'Elimina de forma inteligente objetos no deseados, marcas de agua o imperfecciones de las imágenes. La IA rellena el fondo de forma natural. Totalmente sin conexión y privado.',
       },
@@ -103,7 +103,7 @@ export const content: HomeFeaturesContent = {
           'Detecta el sujeto y quita el fondo con un clic: PNG transparentes de personas y productos en segundos. Se ejecuta por completo en tu dispositivo.',
       },
       {
-        title: 'Borrado con IA / retoque',
+        title: 'Borrado con IA',
         description:
           'Elimina objetos no deseados, marcas de agua o imperfecciones de forma inteligente. La IA rellena el fondo de forma natural. También se ejecuta en local: sin subidas ni nube.',
       },

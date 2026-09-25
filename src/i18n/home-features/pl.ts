@@ -18,12 +18,12 @@ export const content: HomeFeaturesContent = {
           'Nagrywaj w rozdzielczości do 4K ultra-HD z wysoką liczbą klatek i eksportuj do MP4 lub lekkiego GIF-a. Bez limitu czasu — nagrywaj tak długo, jak potrzebujesz.',
       },
       {
-        title: 'Usuwanie tła AI',
+        title: 'Wycinanie AI',
         description:
           'Wyodrębnij obiekt i jednym kliknięciem usuń tło. Ludzie, produkty, logotypy — od razu gotowe do użycia, a przetwarzanie odbywa się w całości na urządzeniu. Photoshop nie jest potrzebny.',
       },
       {
-        title: 'Gumka AI / retusz',
+        title: 'Wymazywanie AI',
         description:
           'Inteligentnie usuwaj niechciane obiekty, znaki wodne lub skazy ze zdjęć. AI naturalnie wypełnia tło. W pełni offline i w pełni prywatnie.',
       },
@@ -99,12 +99,12 @@ export const content: HomeFeaturesContent = {
     text: 'Wycinanie AI, gumka i OCR działają lokalnie — inteligencja bez kompromisów dla prywatności.',
     items: [
       {
-        title: 'Usuwanie tła AI',
+        title: 'Wycinanie AI',
         description:
           'Wykryj obiekt i jednym kliknięciem usuń tło — przezroczyste PNG z ludźmi i produktami w kilka sekund. Działa w całości na urządzeniu.',
       },
       {
-        title: 'Gumka AI / retusz',
+        title: 'Wymazywanie AI',
         description:
           'Usuwaj niechciane obiekty, znaki wodne lub skazy inteligentnie — AI naturalnie wypełnia tło. Również lokalnie: bez wysyłania i bez chmury.',
       },
@@ -116,7 +116,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Elastyczna zmiana modeli',
         description:
-          'Wycinanie AI i gumka obsługują zmianę modeli. Korzystaj w każdej chwili z aktualnie najlepszego modelu i wyprzedzaj innych.',
+          'Wycinanie AI i wymazywanie AI obsługują zmianę modeli. Korzystaj w każdej chwili z aktualnie najlepszego modelu i wyprzedzaj innych.',
       },
     ],
   },
@@ -159,7 +159,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Lokalnie i prywatnie',
         description:
-          'OCR, wycinanie AI i gumka AI działają na Twoim urządzeniu — nic nie jest wysyłane. Twoje zrzuty należą wyłącznie do Ciebie.',
+          'OCR, wycinanie AI i wymazywanie AI działają na Twoim urządzeniu — nic nie jest wysyłane. Twoje zrzuty należą wyłącznie do Ciebie.',
       },
       {
         title: 'Lekko dla zasobów',
