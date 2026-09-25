@@ -52,8 +52,8 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Shotera</span> 是一款为效率而生的桌面截图与录屏工具，集截图标注、录屏导出 GIF、AI 抠图、AI
-        擦图（修图）、离线 OCR、图片翻译、贴图钉图于一身。</span
+        <span class="font-semibold">Shotera</span> 是一款桌面截图与录屏工具：截图标注、滚动截图、录屏导 GIF、AI 抠图、AI
+        擦图、离线 OCR、图片翻译、贴图钉图，一个窗口全都能干。</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Shotera：截图录屏，一步到位。</span>
       让每一次「截个图」都又快又顺手。
@@ -70,36 +70,36 @@ const metadata = {
     id="features"
     tagline="核心功能"
     title="一个快捷键，搞定所有截图任务"
-    subtitle="截图、录屏、读字、抠图、翻译，不用再开第二个软件——全部在本机完成，还很快。"
+    subtitle="截图、滚动截图、录屏、读字、抠图、翻译，不用再开第二个软件；全部在本机完成，速度还快。"
     items={[
       {
         title: '智能截图',
-        description: '按下快捷键，要截的东西已经选中了。窗口与界面元素自动识别到像素级，基本不用手动拖框。',
+        description: '按下快捷键，要截的窗口或元素已经选好了。识别精确到像素，基本不用手动拖框。',
         icon: 'tabler:capture',
       },
       {
         title: '滚动截图',
-        description: '页面比屏幕长也能一张装下——手动滚或自动滚，拼接过程实时预览，越滚越长。',
+        description: '页面再长也能一张装下：自动滚或自己滚，边滚边拼，长图实时可见。',
         icon: 'local:longshot',
       },
       {
         title: '录屏 & GIF',
-        description: '最高 4K、无时长限制，录完直接导出 MP4 或轻量 GIF，发出去就能播。',
+        description: '最高 4K、30/60 fps、不限时长，录完直接导出 MP4 或轻量 GIF，发出去就能播。',
         icon: 'tabler:video',
       },
       {
         title: 'AI 抠图',
-        description: '一键把主体从画面里提出来——人像、商品、Logo，导出透明 PNG。不用 PS，也不上传。',
+        description: '一键把主体从画面里提出来：人像、商品、Logo，导出透明 PNG。不用 PS，也不上传。',
         icon: 'tabler:scissors',
       },
       {
-        title: 'AI 擦图 / 修图',
-        description: '多余物体、水印、瑕疵刷一下就没了，AI 自动补上背景。全程离线，隐私无忧。',
+        title: 'AI 擦图',
+        description: '多余物体、水印、瑕疵，刷一下就消失，AI 自动补上背景。全程离线。',
         icon: 'tabler:eraser',
       },
       {
         title: '离线 OCR 文字识别',
-        description: '截图里的字直接变成可选中、可复制的文本，中英混排、代码、表格都行，全程不联网。',
+        description: '截图里的字直接变成可选中、可复制的文本：中英混排、代码、表格都行，全程不联网。',
         icon: 'tabler:text-recognition',
       },
       {
@@ -109,18 +109,18 @@ const metadata = {
       },
       {
         title: '图片翻译',
-        description: '截图里的外文就地翻译成你的语言，译文可以直接复制走。',
+        description: '截图里的外文就地翻成你的语言，译文直接复制走。',
         icon: 'tabler:language',
       },
       {
         title: '贴图 / 钉图',
-        description: '把截图钉在屏幕最上层，边打字、边对照、边滚动，不用来回切窗口。',
+        description: '把截图钉在屏幕最上层：边打字、边对照、边滚动，不用来回切窗口。',
         icon: 'tabler:pin',
       },
       {
         title: '图片查看',
         description:
-          '截图和图片文件能在独立查看窗口里打开——同目录翻页、缩放细看，顺手改两笔，不用再开别的软件；常见格式都能直接读。',
+          '截图和图片文件可以在独立查看窗口里打开：同目录翻页、缩放细看、顺手改两笔，常见格式都能直接读。',
         icon: 'tabler:photo',
       },
     ]}
@@ -171,7 +171,7 @@ const metadata = {
     items={[
       {
         title: '自动滚 / 自己滚',
-        description: '让 Shotera 自动往下滚，或者你自己滚——两种方式都会边滚边采集。',
+        description: '让 Shotera 自动往下滚，或自己动手滚；两种方式都会边滚边拼。',
       },
       {
         title: '拼接过程实时可见',
@@ -264,7 +264,7 @@ const metadata = {
       alt: 'AI 抠图与 OCR 演示',
     }}
   >
-    <Fragment slot="content">AI 抠图、修图、OCR 全程本地运行，隐私与智能兼得。</Fragment>
+    <Fragment slot="content">AI 抠图、擦图、OCR 全程本地运行，隐私与智能兼得。</Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -325,7 +325,7 @@ const metadata = {
         icon: 'tabler:list-numbers',
       },
       {
-        title: '贴图钉屏',
+        title: '贴图 / 钉图',
         description: '参考图浮在最上层，边看边做，不用来回切窗口。',
         icon: 'tabler:pin',
       },

@@ -30,9 +30,9 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Shotera started with a simple frustration: the screenshots and recordings we take dozens of times a day should be
-      faster and smoother. We're a small group of product folks and engineers who lean on capture tools as heavily as
-      anyone — and we built that obsession into every shortcut, every selection, every frame.
+      Shotera started with a simple frustration: the captures we take dozens of times a day should feel faster and
+      smoother. We're a small team of product people and engineers who lean on capture tools as heavily as anyone — and we
+      built that obsession into every shortcut, every selection, every frame.
     </Fragment>
   </Hero>
 
@@ -52,14 +52,14 @@ const metadata = {
 
   <Features3
     title="What we stand by"
-    subtitle="The better a tool feels, the less you notice it. That principle sits behind every decision we make."
+    subtitle="The better a tool feels, the less you notice it — that idea sits behind every decision we make."
     columns={3}
     isBeforeContent={true}
     items={[
       {
         title: 'Speed comes first',
         description:
-          'One shortcut to summon it, automatic window and element detection, what-you-select-is-what-you-get. Under a second from intent to capture.',
+          'One shortcut to summon it, automatic window and element detection, and exactly the frame you meant. Under a second from intent to capture.',
         icon: 'tabler:bolt',
       },
       {
@@ -86,13 +86,19 @@ const metadata = {
       {
         title: 'Capture',
         description:
-          'Smart window and element detection, plus scrolling capture that grabs an entire page or chat in one shot.',
+          'Smart window and element detection — the frame you want is already picked, so you rarely drag a box by hand.',
         icon: 'tabler:capture',
+      },
+      {
+        title: 'Scrolling capture',
+        description:
+          'Scroll a page or a long chat and let Shotera stitch it into one long shot — auto-scroll or by hand, with a live preview.',
+        icon: 'local:longshot',
       },
       {
         title: 'Recording & GIF',
         description:
-          'Record your screen and export to a lightweight GIF — cursor highlights and click cues make demos crystal clear.',
+          'Record your screen and export to a lightweight GIF; cursor highlights and click cues keep demos clear.',
         icon: 'tabler:video',
       },
       {
@@ -104,7 +110,7 @@ const metadata = {
       {
         title: 'Offline OCR',
         description:
-          'Extract text from any screenshot on-device, across multiple languages. Copy and paste, no internet required.',
+          'Extract text from any screenshot, on your device, in several languages. Copy and paste — no internet needed.',
         icon: 'tabler:text-recognition',
       },
       {
@@ -117,6 +123,12 @@ const metadata = {
         title: 'Pin to screen',
         description: 'Keep any screenshot floating on top for reference, arranged side by side without the clutter.',
         icon: 'tabler:pin',
+      },
+      {
+        title: 'Image viewer',
+        description:
+          'Open a shot or any image file in its own viewer window — browse a folder, zoom in, and touch up what you need.',
+        icon: 'tabler:photo',
       },
     ]}
     image={{
@@ -174,7 +186,7 @@ const metadata = {
       {
         title: 'Reaching more people',
         description:
-          'Today Shotera runs on multiple languages and platforms — with the same goal: make screenshots simple.',
+          'Today Shotera speaks 15 interface languages and keeps growing — with the same goal: make screenshots simple.',
         icon: 'tabler:world',
       },
     ]}

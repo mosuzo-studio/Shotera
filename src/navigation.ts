@@ -36,6 +36,7 @@ export const getFooterData = async (lang: Lang) => {
         title: t('footer.product'),
         links: [
           { text: t('footer.feat.screenshot'), href: l('/#features') },
+          ...(hasLocalizedLegalPages ? [{ text: t('footer.feat.scrolling'), href: l('/#features') }] : []),
           { text: t('footer.feat.record'), href: l('/#features') },
           { text: t('footer.feat.cutout'), href: l('/#features') },
           { text: t('footer.feat.ocr'), href: l('/#features') },

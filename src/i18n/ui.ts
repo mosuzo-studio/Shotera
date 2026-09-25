@@ -84,7 +84,8 @@ const baseUi = {
     'footer.contact': 'Contact',
 
     'footer.feat.screenshot': 'Screenshot',
-    'footer.feat.record': 'Screen & GIF Recording',
+    'footer.feat.scrolling': 'Scrolling Capture',
+    'footer.feat.record': 'Recording & GIF',
     'footer.feat.cutout': 'AI Cutout',
     'footer.feat.ocr': 'Offline OCR',
     'footer.feat.translate': 'Image Translation',
@@ -174,11 +175,12 @@ const baseUi = {
     'footer.contact': '联系我们',
 
     'footer.feat.screenshot': '截图',
+    'footer.feat.scrolling': '滚动截图',
     'footer.feat.record': '录屏 & GIF',
     'footer.feat.cutout': 'AI 抠图',
     'footer.feat.ocr': '离线 OCR',
     'footer.feat.translate': '图片翻译',
-    'footer.feat.pin': '贴图钉图',
+    'footer.feat.pin': '贴图 / 钉图',
     'footer.download': '下载',
     'footer.faq': '常见问题',
     'footer.changelog': '更新日志',
