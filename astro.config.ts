@@ -20,6 +20,18 @@ import { defaultLocale, publishedLocales } from './src/i18n/locales';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+// The pricing page carried a plan model (Free / Pro / Team) that no longer
+// matches the site's Lite / Standard framing, so it now points at the edition
+// comparison instead.
+const redirects = {
+  '/pricing': '/versions',
+  ...Object.fromEntries(
+    publishedLocales
+      .filter((locale) => locale !== defaultLocale)
+      .map((locale) => [`/${locale}/pricing`, `/${locale}/versions`])
+  ),
+};
+
 const hasExternalScripts = false;
 const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
@@ -28,6 +40,7 @@ export default defineConfig({
   output: 'static',
   site: 'https://shotera.mosuzo.com',
   base: '/',
+  redirects,
 
   i18n: {
     locales: [...publishedLocales],

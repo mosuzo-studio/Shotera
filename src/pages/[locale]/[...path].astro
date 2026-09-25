@@ -2,7 +2,6 @@
 import LocalizedAbout from '~/components/localization/LocalizedAbout.astro';
 import LocalizedHome from '~/components/localization/LocalizedHome.astro';
 import LocalizedPage from '~/components/localization/LocalizedPage.astro';
-import LocalizedPricing from '~/components/localization/LocalizedPricing.astro';
 import LocalizedVersions from '~/components/localization/LocalizedVersions.astro';
 import { publishedLocales } from '~/i18n/locales';
 import { localizedSiteContent, type LocalizedLocale } from '~/i18n/site-content';
@@ -12,26 +11,7 @@ export function getStaticPaths() {
   const localizedLocales = publishedLocales.filter(
     (locale): locale is LocalizedLocale => locale !== 'en' && locale !== 'zh-cn'
   );
-  const localizedPaths = [
-    '',
-    '404',
-    'about',
-    'contact',
-    'blog',
-    'pricing',
-    'services',
-    'versions',
-    'homes/mobile-app',
-    'homes/personal',
-    'homes/saas',
-    'homes/startup',
-    'landing/click-through',
-    'landing/lead-generation',
-    'landing/pre-launch',
-    'landing/product',
-    'landing/sales',
-    'landing/subscription',
-  ] as const;
+  const localizedPaths = ['', '404', 'about', 'contact', 'blog', 'versions'] as const;
 
   return localizedLocales.flatMap((locale) =>
     localizedPaths.map((path) => ({
@@ -55,8 +35,6 @@ const content = localizedSiteContent[locale];
     <LocalizedHome locale={locale} content={content} />
   ) : path === 'about' ? (
     <LocalizedAbout locale={locale} content={content} />
-  ) : path === 'pricing' ? (
-    <LocalizedPricing locale={locale} content={content} />
   ) : path === 'versions' ? (
     <LocalizedVersions locale={locale} content={versionsContent[locale]} />
   ) : (
