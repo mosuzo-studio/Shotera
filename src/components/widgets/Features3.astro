@@ -46,12 +46,14 @@ const columnsClass =
   <div aria-hidden="true" class="aspect-w-16 aspect-h-7">
     {
       image && (
-        <div class="w-full h-80 object-cover rounded-xl mx-auto bg-gray-500 shadow-lg">
+        /* No fixed height here: the image sets its own pixel height, so a
+           rem-based one would disagree whenever the root font size differs. */
+        <div class="w-full overflow-hidden rounded-xl mx-auto bg-gray-500 shadow-lg">
           {typeof image === 'string' ? (
             <Fragment set:html={image} />
           ) : (
             <Image
-              class="w-full h-80 object-cover rounded-xl mx-auto bg-gray-500 shadow-lg"
+              class="w-full object-cover"
               width={768}
               height={320}
               widths={[400, 768, 1280, 1792]}
