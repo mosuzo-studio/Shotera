@@ -17,7 +17,7 @@ const metadata = {
   <HeroText
     tagline="版本对比"
     title="Lite 还是标准版？选适合你的那一款"
-    subtitle="两个版本共享同一套截图与绘画标注体验：Lite 版更轻量，标准版补齐 AI、图片翻译、录屏、GIF、二维码识别与长截图等能力。"
+    subtitle="两个版本共享同一套截图与绘画标注体验：Lite 版更轻量，标准版补齐 AI、图片翻译、录屏、GIF、二维码 / 条码识别与滚动截图等能力。"
   />
 
   <VersionCompare
@@ -29,7 +29,7 @@ const metadata = {
         title: 'Shotera Lite 版',
         tagline: '轻量精简版',
         badge: '新',
-        description: '轻量精简版本，专注截图与基础绘画标注，不含 AI、录屏与长截图等进阶能力。',
+        description: '轻量精简版本，专注截图与基础绘画标注，不含 AI、录屏与滚动截图等进阶能力。',
         cta: { text: '下载 Lite 版', href: liteUrls.setup, icon: 'tabler:download' },
         extra: {
           label: '其它格式',
@@ -45,7 +45,7 @@ const metadata = {
         tagline: '完整能力版本',
         badge: '推荐',
         badgeTone: 'primary',
-        description: '完整能力版本：AI 抠图、擦图、离线 OCR、图片翻译，以及录屏、GIF、二维码识别与长截图。',
+        description: '完整能力版本：AI 抠图、擦图、离线 OCR、图片翻译，以及录屏、GIF、二维码 / 条码识别与滚动截图。',
         cta: { text: '下载标准版', href: urls.setup, variant: 'primary', icon: 'tabler:download' },
         extra: {
           label: '其它格式',
@@ -62,7 +62,7 @@ const metadata = {
         title: '基础功能 · 两版都有',
         rows: [
           { feature: '截图（区域 / 窗口 / 全屏）', support: [true, true] },
-          { feature: '贴图钉屏', support: [true, true] },
+          { feature: '贴图 / 钉图', support: [true, true] },
           { feature: '独立编辑窗口', support: [true, true] },
         ],
       },
@@ -96,8 +96,8 @@ const metadata = {
         rows: [
           { feature: '录屏', support: [false, true] },
           { feature: 'GIF 录制', support: [false, true] },
-          { feature: '二维码识别', support: [false, true] },
-          { feature: '长截图（滚动截图）', support: [false, true] },
+          { feature: '二维码 / 条码识别', support: [false, true] },
+          { feature: '滚动截图', support: [false, true] },
         ],
       },
     ]}

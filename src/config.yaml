@@ -11,7 +11,7 @@ metadata:
   title:
     default: Shotera — Faster, smarter screenshots and screen recording
     template: '%s — Shotera'
-  description: 'Shotera is a Windows desktop productivity tool for smart screenshots, screen and GIF recording, AI cutout, offline OCR, image translation, annotation, pinning, and precise window and UI element detection.'
+  description: 'Shotera is a Windows capture tool for smart screenshots, scrolling capture, screen and GIF recording, AI cutout, AI eraser, offline OCR, image translation, QR and barcode recognition, annotation, pinning, and an image viewer.'
   robots:
     index: true
     follow: true

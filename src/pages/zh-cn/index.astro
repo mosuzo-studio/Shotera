@@ -26,7 +26,7 @@ const metadata = {
   <Hero
     image={{
       src: '~/assets/images/hero-image.png',
-      alt: 'Shotera 工具箱：截图、滚动截图、标注、录屏、AI 抠图、文字与二维码识别、图片翻译',
+      alt: 'Shotera 工具箱：截图、滚动截图、标注、录屏、AI 抠图、离线 OCR、二维码 / 条码识别、图片翻译与贴图 / 钉图',
     }}
   >
     <DownloadButtons
@@ -46,23 +46,23 @@ const metadata = {
     />
 
     <Fragment slot="title">
-      截图、录屏、<span class="text-accent dark:text-white">AI 识图</span><br class="hidden md:inline" />
+      截图、录屏、<span class="text-accent dark:text-white">AI 能力</span><br class="hidden md:inline" />
       一个快捷键全搞定
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Shotera</span> 是一款桌面截图与录屏工具：截图标注、滚动截图、录屏导 GIF、AI 抠图、AI
-        擦图、离线 OCR、图片翻译、贴图钉图，一个窗口全都能干。</span
+        <span class="font-semibold">Shotera</span> 将截图标注、滚动截图、录屏、AI 抠图、AI 擦图、离线 OCR、图片翻译与贴图钉图
+        整合于同一窗口，一次快捷键即可完成整段流程。</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Shotera：截图录屏，一步到位。</span>
-      让每一次「截个图」都又快又顺手。
+      让每天要重复许多次的截图与录屏，更迅速，也更省事。
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note title="产品理念：" description="又快、又准、又顺手——把截图这件小事做到极致" />
+  <Note title="产品理念：" description="又快、又准、又顺手——Shotera 的全部设计理念。" />
 
   <!-- Features Widget *************** -->
 
@@ -70,7 +70,7 @@ const metadata = {
     id="features"
     tagline="核心功能"
     title="一个快捷键，搞定所有截图任务"
-    subtitle="截图、滚动截图、录屏、读字、抠图、翻译，不用再开第二个软件；全部在本机完成，速度还快。"
+    subtitle="截图、滚动截图、录屏、文字识别、抠图、翻译，无需再打开其他软件，同一窗口即可完成全部处理。"
     items={[
       {
         title: '智能截图',
@@ -381,7 +381,7 @@ const metadata = {
     stats={[
       { title: '界面语言', amount: '15 种' },
       { title: '好评率', amount: '4.9 / 5' },
-      { title: 'AI 离线处理', amount: '100%' },
+      { title: '离线 AI 处理', amount: '100%' },
       { title: '快捷键唤起', amount: '<0.1s' },
     ]}
   />
@@ -406,11 +406,11 @@ const metadata = {
     />
 
     <Fragment slot="title"
-      >现在就让截图变得<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">又快又聪明</span></Fragment
+      >让每天的截图，<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">都更快一步</span></Fragment
     >
 
     <Fragment slot="subtitle">
-      免费下载，几秒安装，立刻上手。<br class="hidden md:inline" />把每天都要做的「截个图」，交给更懂你的工具。
+      免费下载，几秒安装。<br class="hidden md:inline" />核心功能永久免费。
     </Fragment>
   </CallToAction>
 </Layout>

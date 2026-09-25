@@ -26,7 +26,7 @@ const metadata = {
   <Hero
     image={{
       src: '~/assets/images/hero-image.png',
-      alt: 'Shotera tools on screen: capture, scrolling capture, annotation, recording, AI cutout, text and QR reading, translation',
+      alt: 'Shotera tools on screen: capture, scrolling capture, annotation, recording, AI cutout, offline OCR, QR and barcode recognition, translation, and pinning',
     }}
   >
     <DownloadButtons
@@ -46,7 +46,7 @@ const metadata = {
     />
 
     <Fragment slot="title">
-      Screenshots, screen recording, <span class="text-accent dark:text-white">AI magic</span><br
+      Screenshots, screen recording, and <span class="text-accent dark:text-white">AI</span><br
         class="hidden md:inline"
       />
       all from a single shortcut
@@ -54,12 +54,11 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Shotera</span> is the capture tool for people who screenshot all day. Annotate, capture
-        long pages, record to GIF, cut a subject out, erase what shouldn't be there, read text offline, translate an image, pin
-        it on screen — and never leave what you were doing.</span
+        <span class="font-semibold">Shotera</span> brings annotation, scrolling capture, recording, AI cutout, AI eraser,
+        offline OCR, image translation, and pin-to-screen into one window — a single shortcut covers the whole workflow.</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Shotera: capture, record, done.</span>
-      Everything you reach for a dozen times a day, a little faster.
+      For the captures you take a dozen times a day, the whole process gets shorter.
     </Fragment>
   </Hero>
 
@@ -73,7 +72,7 @@ const metadata = {
     id="features"
     tagline="Core features"
     title="Every screenshot task, one shortcut away"
-    subtitle="Capture, scroll, record, read text, cut out a subject, translate — one window, no switching apps. It all runs on your PC, and it stays fast."
+    subtitle="Capture, scrolling capture, recording, text recognition, cutout, translation — handled in one window, with no second app to open."
     items={[
       {
         title: 'Smart capture',
@@ -112,7 +111,7 @@ const metadata = {
         icon: 'tabler:text-recognition',
       },
       {
-        title: 'QR & barcode scanning',
+        title: 'QR & barcode recognition',
         description:
           'Read the code inside a screenshot — links, Wi-Fi, contacts, barcodes — and copy what it holds. All offline.',
         icon: 'tabler:qrcode',
@@ -156,7 +155,7 @@ const metadata = {
           'Arrows, boxes, text, highlights, blur, step numbers, emoji, magnifier — annotate the moment you capture, so the point lands instantly.',
       },
       {
-        title: 'Blur and highlight',
+        title: 'Mosaic and highlight',
         description: 'Hide the sensitive parts and point at the important ones in the same motion.',
       },
     ]}
@@ -404,7 +403,7 @@ const metadata = {
       { title: 'Languages', amount: '15' },
       { title: 'Rating', amount: '4.9 / 5' },
       { title: 'Offline AI', amount: '100%' },
-      { title: 'Launch time', amount: '<0.1s' },
+      { title: 'Shortcut launch', amount: '<0.1s' },
     ]}
   />
 
