@@ -5,6 +5,7 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import DownloadButtons from '~/components/ui/DownloadButtons.astro';
 import { homeFeaturesContent } from '~/i18n/home-features';
+import { downloadMenuContent } from '~/i18n/download-menu-content';
 import type { LocalizedSiteContent, LocalizedLocale } from '~/i18n/site-content';
 
 interface Props {
@@ -14,6 +15,7 @@ interface Props {
 
 const { locale, content } = Astro.props;
 const features = homeFeaturesContent[locale];
+const downloadMenu = downloadMenuContent[locale];
 
 // Icons mirror the English homepage so localized copy stays icon-free.
 const coreFeatureIcons = [
@@ -68,6 +70,13 @@ const metadata = {
           storeAriaLabel={content.storeAria}
           downloadAriaLabel={content.labels.freeDownload}
           moreVersionsAriaLabel={content.moreVersions}
+          msiLabel={downloadMenu.msi}
+          portableLabel={downloadMenu.portable}
+          allVersionsLabel={downloadMenu.allVersions}
+          showLite
+          setupLabel={downloadMenu.setup}
+          standardGroupLabel={downloadMenu.standard}
+          liteGroupLabel={downloadMenu.lite}
         />
       </div>
     </div>
@@ -170,6 +179,13 @@ const metadata = {
           storeAriaLabel={content.storeAria}
           downloadAriaLabel={content.labels.freeDownload}
           moreVersionsAriaLabel={content.moreVersions}
+          msiLabel={downloadMenu.msi}
+          portableLabel={downloadMenu.portable}
+          allVersionsLabel={downloadMenu.allVersions}
+          showLite
+          setupLabel={downloadMenu.setup}
+          standardGroupLabel={downloadMenu.standard}
+          liteGroupLabel={downloadMenu.lite}
         />
       </div>
     </div>
