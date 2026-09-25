@@ -24,7 +24,12 @@ const metadata = {
 
   <!-- Hero Widget ******************* -->
 
-  <Hero image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera capture and screen recording interface' }}>
+  <Hero
+    image={{
+      src: '~/assets/images/hero-image.png',
+      alt: 'Shotera tools on screen: capture, scrolling capture, annotation, recording, AI cutout, text and QR reading, translation',
+    }}
+  >
     <DownloadButtons
       slot="actions"
       language="en-us"
@@ -78,6 +83,12 @@ const metadata = {
         icon: 'tabler:capture',
       },
       {
+        title: 'Scrolling capture',
+        description:
+          'A page taller than the screen still fits in one shot — scroll by hand or let Shotera auto-scroll, and watch the long image stitch together as it grows.',
+        icon: 'tabler:arrows-down',
+      },
+      {
         title: 'Screen recording & GIF',
         description:
           'Record up to 4K with no time limit, then export MP4 or a lightweight GIF that plays the moment it loads.',
@@ -100,6 +111,12 @@ const metadata = {
         description:
           'Turn any screenshot into selectable text — mixed languages, code, and tables included. Nothing leaves your device.',
         icon: 'tabler:text-recognition',
+      },
+      {
+        title: 'QR & barcode scanning',
+        description:
+          'Decode the code inside any screenshot — links, Wi-Fi, contacts, product barcodes — and copy what it holds. All offline.',
+        icon: 'tabler:qrcode',
       },
       {
         title: 'Image translation',

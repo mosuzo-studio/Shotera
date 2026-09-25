@@ -24,7 +24,12 @@ const metadata = {
 
   <!-- Hero Widget ******************* -->
 
-  <Hero image={{ src: '~/assets/images/hero-image.png', alt: 'Shotera 截图录屏工具界面' }}>
+  <Hero
+    image={{
+      src: '~/assets/images/hero-image.png',
+      alt: 'Shotera 工具箱：截图、滚动截图、标注、录屏、AI 抠图、文字与二维码识别、图片翻译',
+    }}
+  >
     <DownloadButtons
       slot="actions"
       language="zh-cn"
@@ -74,6 +79,11 @@ const metadata = {
         icon: 'tabler:capture',
       },
       {
+        title: '滚动截图',
+        description: '页面比屏幕长也能一张装下——手动滚或自动滚，拼接过程实时预览，越滚越长。',
+        icon: 'tabler:arrows-down',
+      },
+      {
         title: '录屏 & GIF',
         description: '最高 4K、无时长限制，录完直接导出 MP4 或轻量 GIF，发出去就能播。',
         icon: 'tabler:video',
@@ -92,6 +102,11 @@ const metadata = {
         title: '离线 OCR 文字识别',
         description: '截图里的字直接变成可选中、可复制的文本，中英混排、代码、表格都行，全程不联网。',
         icon: 'tabler:text-recognition',
+      },
+      {
+        title: '二维码 / 条码识别',
+        description: '截图里的二维码、条码就地识别：链接、WiFi、联系人、商品条码，结果一键复制，全程离线。',
+        icon: 'tabler:qrcode',
       },
       {
         title: '图片翻译',
