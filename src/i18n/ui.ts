@@ -1,6 +1,7 @@
 import { defaultLocale, localeRegistry, publishedLocales, type PublishedLocale } from './locales';
 import { localizedSiteContent, type LocalizedLocale } from './site-content';
 import { versionsContent } from './versions-content';
+import { localeExtras } from './locale-extras';
 
 export const languages = Object.fromEntries(
   publishedLocales.map((locale) => [locale, localeRegistry[locale].label])
@@ -233,6 +234,7 @@ const localizedUi = Object.fromEntries(
       'footer.blog': content.labels.blog,
       'footer.contact': content.pages.contact[0],
       'footer.feat.screenshot': content.labels.screenshot,
+      'footer.feat.scrolling': localeExtras[locale as LocalizedLocale].footerScrolling,
       'footer.feat.record': content.labels.recording,
       'footer.feat.cutout': content.labels.cutout,
       'footer.feat.ocr': content.labels.ocr,

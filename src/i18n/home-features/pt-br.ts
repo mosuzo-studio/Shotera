@@ -18,7 +18,7 @@ export const content: HomeFeaturesContent = {
           'Grave em resolução ultra-HD de até 4K com alta taxa de quadros e exporte para MP4 ou GIF leve. Sem limite de tempo de gravação — grave o quanto precisar.',
       },
       {
-        title: 'Remoção de fundo com IA',
+        title: 'Recorte com IA',
         description:
           'Isole o assunto e remova o fundo com um clique. Pessoas, produtos, logos — recortados e prontos para usar, com processamento totalmente local. Não precisa do Photoshop.',
       },
@@ -98,7 +98,7 @@ export const content: HomeFeaturesContent = {
     text: 'Recorte, apagamento e OCR com IA rodam localmente — inteligência sem abrir mão da privacidade.',
     items: [
       {
-        title: 'Remoção de fundo com IA',
+        title: 'Recorte com IA',
         description:
           'Detecte o assunto e remova o fundo em um clique — PNGs transparentes de pessoas e produtos em segundos. Roda inteiramente no dispositivo.',
       },

@@ -1,4 +1,5 @@
 ---
+import LocalizedAbout from '~/components/localization/LocalizedAbout.astro';
 import LocalizedHome from '~/components/localization/LocalizedHome.astro';
 import LocalizedPage from '~/components/localization/LocalizedPage.astro';
 import LocalizedPricing from '~/components/localization/LocalizedPricing.astro';
@@ -52,6 +53,8 @@ const content = localizedSiteContent[locale];
 {
   path === '' ? (
     <LocalizedHome locale={locale} content={content} />
+  ) : path === 'about' ? (
+    <LocalizedAbout locale={locale} content={content} />
   ) : path === 'pricing' ? (
     <LocalizedPricing locale={locale} content={content} />
   ) : path === 'versions' ? (

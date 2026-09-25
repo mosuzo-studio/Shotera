@@ -1,0 +1,112 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getSetupDownloadUrl } from '~/utils/download';
+import { localeExtras } from '~/i18n/locale-extras';
+import type { LocalizedSiteContent, LocalizedLocale } from '~/i18n/site-content';
+
+interface Props {
+  locale: LocalizedLocale;
+  content: LocalizedSiteContent;
+}
+
+const { locale, content } = Astro.props;
+const extra = localeExtras[locale];
+const setupUrl = await getSetupDownloadUrl();
+
+// Same layout as the English about page: text-only cards on the left, the
+// illustrated toolbox on the right.
+const standIcons = ['tabler:bolt', 'tabler:lock', 'tabler:sparkles'];
+const toolboxIcons = [
+  'tabler:capture',
+  'local:longshot',
+  'tabler:video',
+  'tabler:wand',
+  'tabler:text-recognition',
+  'tabler:language',
+  'tabler:pin',
+  'tabler:photo',
+];
+const historyIcons = ['tabler:seeding', 'tabler:users', 'tabler:world'];
+const contactIcons = ['tabler:brand-discord', 'tabler:mail'];
+
+const metadata = {
+  title: content.pages.about[0],
+  description: extra.about.metaDescription,
+};
+---
+
+<PageLayout metadata={metadata} lang={locale}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline={extra.about.hero.tagline}
+    image={{
+      src: '~/assets/images/about-hero.png',
+      alt: extra.about.hero.alt,
+    }}
+  >
+    <Fragment slot="title">
+      {extra.about.hero.title} <br />
+      <span class="text-accent dark:text-white">{extra.about.hero.accent}</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">{extra.about.hero.subtitle}</Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats stats={extra.about.stats} />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title={extra.about.stand.title}
+    subtitle={extra.about.stand.subtitle}
+    columns={3}
+    isBeforeContent={true}
+    items={extra.about.stand.items.map((item, index) => ({ ...item, icon: standIcons[index] }))}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={extra.about.toolbox.items.map((item, index) => ({ ...item, icon: toolboxIcons[index] }))}
+    image={{
+      src: '~/assets/images/about-features.png',
+      alt: extra.about.toolbox.alt,
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2 title={extra.about.values.title} subtitle={extra.about.values.subtitle} items={extra.about.values.items} />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title={extra.about.history.title}
+    subtitle={extra.about.history.subtitle}
+    isReversed={true}
+    callToAction={{
+      text: extra.about.history.cta,
+      href: setupUrl,
+    }}
+    items={extra.about.history.items.map((item, index) => ({ ...item, icon: historyIcons[index] }))}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title={extra.about.contact.title}
+    tagline={extra.about.contact.tagline}
+    columns={2}
+    items={extra.about.contact.items.map((item, index) => ({ ...item, icon: contactIcons[index] }))}
+  />
+</PageLayout>
