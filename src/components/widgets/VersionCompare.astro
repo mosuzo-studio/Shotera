@@ -9,12 +9,19 @@ export interface VersionCompareCard {
   tagline: string;
   description: string;
   badge?: string;
+  /** Pill colour: `sky` for status labels, `primary` for the recommendation. */
+  badgeTone?: 'sky' | 'primary';
   cta: {
     text: string;
     href: string;
     variant?: 'primary' | 'secondary' | 'tertiary' | 'link';
     icon?: string;
   };
+  /**
+   * The edition's other download formats, collapsed under the CTA so the card
+   * keeps a single dominant action.
+   */
+  extra?: { label: string; links: Array<{ text: string; href: string }> };
 }
 
 export interface VersionCompareRow {
@@ -71,12 +78,21 @@ const footnotes = Array.isArray(footnote) ? footnote : footnote ? [footnote] : [
       cards.map((card) => (
         <div class="flex flex-col rounded-2xl border border-gray-200 bg-white px-6 py-8 text-center shadow dark:border-gray-700 dark:bg-slate-900">
           <h3 class="text-xl font-semibold uppercase leading-6 tracking-wide">{card.title}</h3>
-          <p class="mt-1 text-sm font-medium text-secondary dark:text-blue-200">{card.tagline}</p>
-          {card.badge && (
-            <span class="mx-auto mt-3 inline-flex items-center rounded-full bg-sky-100 px-2.5 py-0.5 text-xs font-semibold text-sky-800 dark:bg-sky-900/40 dark:text-sky-200">
-              {card.badge}
-            </span>
-          )}
+          <p class="mt-1 flex flex-wrap items-center justify-center gap-2 text-sm font-medium text-secondary dark:text-blue-200">
+            <span>{card.tagline}</span>
+            {card.badge && (
+              <span
+                class:list={[
+                  'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold',
+                  card.badgeTone === 'primary'
+                    ? 'bg-primary/10 text-primary'
+                    : 'bg-sky-100 text-sky-800 dark:bg-sky-900/40 dark:text-sky-200',
+                ]}
+              >
+                {card.badge}
+              </span>
+            )}
+          </p>
           <p class="mt-4 grow leading-7 text-gray-600 dark:text-slate-400">{card.description}</p>
           <div class="mt-6 flex justify-center">
             <Button
@@ -86,68 +102,86 @@ const footnotes = Array.isArray(footnote) ? footnote : footnote ? [footnote] : [
               icon={card.cta.icon}
             />
           </div>
+          {card.extra && (
+            <details class="group mt-3 text-center text-xs text-muted">
+              <summary class="inline-flex cursor-pointer items-center gap-1 underline decoration-dotted underline-offset-2 marker:content-none hover:text-default">
+                {card.extra.label}
+                <Icon name="tabler:chevron-down" class="h-3.5 w-3.5 transition group-open:rotate-180" aria-hidden="true" />
+              </summary>
+              <p class="mt-2 flex flex-wrap items-center justify-center gap-x-1.5">
+                {card.extra.links.map((link, index) => (
+                  <>
+                    {index > 0 && <span aria-hidden="true">·</span>}
+                    <a href={link.href} class="underline decoration-dotted underline-offset-2 hover:text-default">
+                      {link.text}
+                    </a>
+                  </>
+                ))}
+              </p>
+            </details>
+          )}
         </div>
       ))
     }
   </div>
 
-  <div class="mt-12 overflow-x-auto md:mt-16">
-    <table class="mx-auto w-full min-w-[520px] max-w-4xl border-collapse text-start text-sm md:text-base">
-      <thead>
-        <tr>
-          <th scope="col" class="px-4 py-3 text-start font-semibold text-heading">
-            {featureHeader}
-          </th>
-          {
-            cards.map((card) => (
-              <th scope="col" class="w-28 px-4 py-3 text-center font-semibold text-heading md:w-36">
-                {card.title}
+  {
+    groups.length > 0 && (
+      <div class="mt-12 overflow-x-auto md:mt-16">
+        <table class="mx-auto w-full min-w-[520px] max-w-4xl border-collapse text-start text-sm md:text-base">
+          <thead>
+            <tr>
+              <th scope="col" class="px-4 py-3 text-start font-semibold text-heading">
+                {featureHeader}
               </th>
-            ))
-          }
-        </tr>
-      </thead>
-      <tbody>
-        {
-          groups.map((group) => (
-            <>
-              <tr>
-                <th
-                  scope="colgroup"
-                  colspan={cards.length + 1}
-                  class="bg-gray-50 px-4 py-2.5 text-start text-xs font-semibold uppercase tracking-wider text-muted dark:bg-slate-800/60"
-                >
-                  {group.title}
+              {cards.map((card) => (
+                <th scope="col" class="w-28 px-4 py-3 text-center font-semibold text-heading md:w-36">
+                  {card.title}
                 </th>
-              </tr>
-              {group.rows.map((row) => (
-                <tr class="border-t border-gray-200 dark:border-gray-700">
-                  <th scope="row" class="px-4 py-3 text-start font-normal text-default">
-                    {row.feature}
-                  </th>
-                  {row.support.map((included) => (
-                    <td class="px-4 py-3 text-center">
-                      {included ? (
-                        <span class="mx-auto inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary">
-                          <Icon name="tabler:check" class="h-4 w-4 text-white" />
-                          <span class="sr-only">{includedLabel}</span>
-                        </span>
-                      ) : (
-                        <span class="mx-auto inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700">
-                          <Icon name="tabler:minus" class="h-4 w-4 text-gray-500 dark:text-gray-300" />
-                          <span class="sr-only">{excludedLabel}</span>
-                        </span>
-                      )}
-                    </td>
-                  ))}
-                </tr>
               ))}
-            </>
-          ))
-        }
-      </tbody>
-    </table>
-  </div>
+            </tr>
+          </thead>
+          <tbody>
+            {groups.map((group) => (
+              <>
+                <tr>
+                  <th
+                    scope="colgroup"
+                    colspan={cards.length + 1}
+                    class="bg-gray-50 px-4 py-2.5 text-start text-xs font-semibold uppercase tracking-wider text-muted dark:bg-slate-800/60"
+                  >
+                    {group.title}
+                  </th>
+                </tr>
+                {group.rows.map((row) => (
+                  <tr class="border-t border-gray-200 dark:border-gray-700">
+                    <th scope="row" class="px-4 py-3 text-start font-normal text-default">
+                      {row.feature}
+                    </th>
+                    {row.support.map((included) => (
+                      <td class="px-4 py-3 text-center">
+                        {included ? (
+                          <span class="mx-auto inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary">
+                            <Icon name="tabler:check" class="h-4 w-4 text-white" />
+                            <span class="sr-only">{includedLabel}</span>
+                          </span>
+                        ) : (
+                          <span class="mx-auto inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700">
+                            <Icon name="tabler:minus" class="h-4 w-4 text-gray-500 dark:text-gray-300" />
+                            <span class="sr-only">{excludedLabel}</span>
+                          </span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )
+  }
 
   {
     (note || footnotes.length > 0) && (

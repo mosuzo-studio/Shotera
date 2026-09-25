@@ -39,6 +39,11 @@ const ASSET_SUFFIXES = {
 
 export type AssetKind = keyof typeof ASSET_SUFFIXES;
 
+/** Lite-edition assets carry a `-Lite` marker before the platform suffix. */
+const LITE_ASSET_SUFFIXES = Object.fromEntries(
+  Object.entries(ASSET_SUFFIXES).map(([kind, suffix]) => [kind, `-Lite${suffix}`])
+) as Record<AssetKind, string>;
+
 export interface ReleaseDownloads {
   /** Release tag, e.g. `v7.3.0`; null when it could not be resolved. */
   tag: string | null;
@@ -46,6 +51,8 @@ export interface ReleaseDownloads {
   version: string | null;
   /** Direct asset URLs, falling back to the Releases page when unresolved. */
   urls: Record<AssetKind, string>;
+  /** Direct asset URLs for the Lite edition, same fallback behaviour. */
+  liteUrls: Record<AssetKind, string>;
   /** True when `urls` are real asset links rather than the fallback page. */
   resolved: boolean;
 }
@@ -54,6 +61,7 @@ const FALLBACK: ReleaseDownloads = {
   tag: null,
   version: null,
   urls: { setup: RELEASES_URL, msi: RELEASES_URL, portable: RELEASES_URL },
+  liteUrls: { setup: RELEASES_URL, msi: RELEASES_URL, portable: RELEASES_URL },
   resolved: false,
 };
 
@@ -63,12 +71,12 @@ const tagFromLocation = (location: string): string | null => {
   return match ? decodeURIComponent(match[1]) : null;
 };
 
+const buildAssetUrl = (tag: string, version: string, suffix: string): string =>
+  `${DOWNLOAD_BASE}/${encodeURIComponent(tag)}/Shotera-${version}${suffix}`;
+
 const buildUrls = (tag: string, version: string, suffixes: Record<AssetKind, string>): Record<AssetKind, string> =>
   Object.fromEntries(
-    Object.entries(suffixes).map(([kind, suffix]) => [
-      kind,
-      `${DOWNLOAD_BASE}/${encodeURIComponent(tag)}/Shotera-${version}${suffix}`,
-    ])
+    Object.entries(suffixes).map(([kind, suffix]) => [kind, buildAssetUrl(tag, version, suffix)])
   ) as Record<AssetKind, string>;
 
 const fetchLatestRelease = async (): Promise<ReleaseDownloads> => {
@@ -104,6 +112,7 @@ const fetchLatestRelease = async (): Promise<ReleaseDownloads> => {
       tag,
       version,
       urls: buildUrls(tag, version, ASSET_SUFFIXES),
+      liteUrls: buildUrls(tag, version, LITE_ASSET_SUFFIXES),
       resolved: true,
     };
   } catch (error) {

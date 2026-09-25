@@ -1,8 +1,9 @@
 import type { LocalizedLocale } from './site-content';
 
 /**
- * Labels for the homepage download area (`DownloadButtons`): the format menu
- * and the small line pointing at that locale's versions page.
+ * Download vocabulary shared by the homepage download area (`DownloadButtons`)
+ * and the editions page cards: the format menu, the formats collapsed under a
+ * card, the recommendation pill and the line pointing at the versions page.
  *
  * Format wording follows the localized changelogs, where the same packages are
  * named; edition names stay in `versions-content.ts` for the versions page.
@@ -14,6 +15,8 @@ export interface DownloadMenuLabels {
   portable: string;
   allVersions: string;
   recommended: string;
+  /** Summary of the collapsed format list on a versions page card. */
+  otherFormats: string;
   /** Small line under the buttons, linking to the versions page. */
   footnote: string;
 }
@@ -25,6 +28,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: '免安裝版（.7z）',
     allVersions: '在 GitHub 查看全部版本',
     recommended: '推薦',
+    otherFormats: '其他格式',
     footnote: '想要更輕量？了解 Shotera Lite（約 17 MB）→',
   },
   ja: {
@@ -33,6 +37,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'ポータブル版（.7z）',
     allVersions: 'GitHub で全バージョンを見る',
     recommended: 'おすすめ',
+    otherFormats: 'その他の形式',
     footnote: 'もっと軽量なものが欲しい？Shotera Lite を見る（約 17 MB）→',
   },
   ko: {
@@ -41,6 +46,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: '포터블 버전(.7z)',
     allVersions: 'GitHub에서 모든 버전 보기',
     recommended: '추천',
+    otherFormats: '다른 형식',
     footnote: '더 가벼운 버전을 찾으시나요? Shotera Lite 알아보기(약 17 MB) →',
   },
   'pt-br': {
@@ -49,6 +55,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'Versão portátil (.7z)',
     allVersions: 'Ver todas as versões no GitHub',
     recommended: 'Recomendado',
+    otherFormats: 'Outros formatos',
     footnote: 'Prefere algo mais leve? Conheça o Shotera Lite (~17 MB) →',
   },
   es: {
@@ -57,6 +64,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'Versión portátil (.7z)',
     allVersions: 'Ver todas las versiones en GitHub',
     recommended: 'Recomendado',
+    otherFormats: 'Otros formatos',
     footnote: '¿Prefieres algo más ligero? Descubre Shotera Lite (~17 MB) →',
   },
   de: {
@@ -65,6 +73,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'Portable-Version (.7z)',
     allVersions: 'Alle Versionen auf GitHub',
     recommended: 'Empfohlen',
+    otherFormats: 'Weitere Formate',
     footnote: 'Lieber leichter? Shotera Lite entdecken (~17 MB) →',
   },
   fr: {
@@ -73,6 +82,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'Version portable (.7z)',
     allVersions: 'Toutes les versions sur GitHub',
     recommended: 'Recommandé',
+    otherFormats: 'Autres formats',
     footnote: 'Envie de plus léger ? Découvrez Shotera Lite (~17 MB) →',
   },
   it: {
@@ -81,6 +91,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'Versione portatile (.7z)',
     allVersions: 'Tutte le versioni su GitHub',
     recommended: 'Consigliato',
+    otherFormats: 'Altri formati',
     footnote: 'Preferisci qualcosa di più leggero? Scopri Shotera Lite (~17 MB) →',
   },
   nl: {
@@ -89,6 +100,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'Draagbare versie (.7z)',
     allVersions: 'Alle versies op GitHub',
     recommended: 'Aanbevolen',
+    otherFormats: 'Andere formaten',
     footnote: 'Liever lichter? Ontdek Shotera Lite (~17 MB) →',
   },
   pl: {
@@ -97,6 +109,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'Wersja przenośna (.7z)',
     allVersions: 'Wszystkie wersje na GitHubie',
     recommended: 'Zalecany',
+    otherFormats: 'Inne formaty',
     footnote: 'Wolisz coś lżejszego? Poznaj Shotera Lite (~17 MB) →',
   },
   ru: {
@@ -105,6 +118,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'Портативная версия (.7z)',
     allVersions: 'Все версии на GitHub',
     recommended: 'Рекомендуется',
+    otherFormats: 'Другие форматы',
     footnote: 'Нужно легче? Посмотрите Shotera Lite (~17 MB) →',
   },
   sv: {
@@ -113,6 +127,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'Portabel version (.7z)',
     allVersions: 'Alla versioner på GitHub',
     recommended: 'Rekommenderas',
+    otherFormats: 'Andra format',
     footnote: 'Vill du ha något lättare? Upptäck Shotera Lite (~17 MB) →',
   },
   ar: {
@@ -121,6 +136,7 @@ export const downloadMenuContent: Record<LocalizedLocale, DownloadMenuLabels> = 
     portable: 'النسخة المحمولة (.7z)',
     allVersions: 'كل الإصدارات على GitHub',
     recommended: 'موصى به',
+    otherFormats: 'صيغ أخرى',
     footnote: 'تريد نسخة أخف؟ تعرّف على Shotera Lite ‏(~17 MB) ←',
   },
 };

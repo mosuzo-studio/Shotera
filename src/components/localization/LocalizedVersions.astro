@@ -3,8 +3,9 @@ import PageLayout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import VersionCompare from '~/components/widgets/VersionCompare.astro';
 import DownloadFormats from '~/components/widgets/DownloadFormats.astro';
-import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
+import { getReleaseDownloads } from '~/utils/download';
 import { downloadFormatsContent } from '~/i18n/download-formats';
+import { downloadMenuContent } from '~/i18n/download-menu-content';
 import type { LocalizedLocale } from '~/i18n/site-content';
 import type { VersionsPageContent } from '~/i18n/versions-content';
 
@@ -14,8 +15,9 @@ interface Props {
 }
 
 const { locale, content } = Astro.props;
-const setupUrl = await getSetupDownloadUrl();
+const { urls, liteUrls } = await getReleaseDownloads();
 const formats = downloadFormatsContent[locale];
+const menu = downloadMenuContent[locale];
 
 // Icons belong to the component, not to the copy: they follow the row order.
 const formatIcons = ['tabler:download', 'tabler:file-zip', 'tabler:package', 'tabler:brand-windows'];
@@ -30,6 +32,7 @@ const metadata = {
   <HeroText tagline={content.hero.tagline} title={content.hero.title} subtitle={content.hero.subtitle} />
 
   <VersionCompare
+    id="compare-editions"
     title={content.section.title}
     subtitle={content.section.subtitle}
     cards={[
@@ -38,13 +41,31 @@ const metadata = {
         tagline: content.cards.lite.tagline,
         badge: content.cards.lite.badge,
         description: content.cards.lite.description,
-        cta: { text: content.cards.lite.cta, href: RELEASES_URL, icon: 'tabler:external-link' },
+        cta: { text: content.cards.lite.cta, href: liteUrls.setup, icon: 'tabler:download' },
+        extra: {
+          label: menu.otherFormats,
+          links: [
+            { text: menu.setup, href: liteUrls.setup },
+            { text: menu.portable, href: liteUrls.portable },
+            { text: menu.msi, href: liteUrls.msi },
+          ],
+        },
       },
       {
         title: content.cards.standard.title,
         tagline: content.cards.standard.tagline,
+        badge: menu.recommended,
+        badgeTone: 'primary' as const,
         description: content.cards.standard.description,
-        cta: { text: content.cards.standard.cta, href: setupUrl, variant: 'primary', icon: 'tabler:download' },
+        cta: { text: content.cards.standard.cta, href: urls.setup, variant: 'primary' as const, icon: 'tabler:download' },
+        extra: {
+          label: menu.otherFormats,
+          links: [
+            { text: menu.setup, href: urls.setup },
+            { text: menu.portable, href: urls.portable },
+            { text: menu.msi, href: urls.msi },
+          ],
+        },
       },
     ]}
     groups={content.table.groups.map((group) => ({

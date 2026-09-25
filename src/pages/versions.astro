@@ -3,9 +3,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import VersionCompare from '~/components/widgets/VersionCompare.astro';
 import DownloadFormats from '~/components/widgets/DownloadFormats.astro';
-import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
+import { getReleaseDownloads } from '~/utils/download';
 
-const setupUrl = await getSetupDownloadUrl();
+const { urls, liteUrls } = await getReleaseDownloads();
 
 const metadata = {
   title: 'Versions',
@@ -22,23 +22,42 @@ const metadata = {
   />
 
   <VersionCompare
+    id="compare-editions"
     title="Compare the editions"
     subtitle="Everything that differs between Lite and Standard, at a glance."
     cards={[
       {
         title: 'Shotera Lite',
         tagline: 'Lightweight edition',
-        badge: 'Available now',
+        badge: 'New',
         description:
           'A lightweight build for everyday capture and annotation — without AI, screen recording, or scrolling capture.',
-        cta: { text: 'View releases', href: RELEASES_URL, icon: 'tabler:external-link' },
+        cta: { text: 'Download Lite', href: liteUrls.setup, icon: 'tabler:download' },
+        extra: {
+          label: 'Other formats',
+          links: [
+            { text: 'Installer (.exe)', href: liteUrls.setup },
+            { text: 'Portable (.7z)', href: liteUrls.portable },
+            { text: 'MSI installer', href: liteUrls.msi },
+          ],
+        },
       },
       {
         title: 'Shotera Standard',
         tagline: 'Full-featured edition',
+        badge: 'Recommended',
+        badgeTone: 'primary',
         description:
           'Everything in Lite, plus AI cutout, AI eraser, offline OCR, image translation, screen recording, GIF, QR code recognition and scrolling capture.',
-        cta: { text: 'Download Standard', href: setupUrl, variant: 'primary', icon: 'tabler:download' },
+        cta: { text: 'Download Standard', href: urls.setup, variant: 'primary', icon: 'tabler:download' },
+        extra: {
+          label: 'Other formats',
+          links: [
+            { text: 'Installer (.exe)', href: urls.setup },
+            { text: 'Portable (.7z)', href: urls.portable },
+            { text: 'MSI installer', href: urls.msi },
+          ],
+        },
       },
     ]}
     groups={[

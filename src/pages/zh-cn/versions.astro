@@ -3,9 +3,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import VersionCompare from '~/components/widgets/VersionCompare.astro';
 import DownloadFormats from '~/components/widgets/DownloadFormats.astro';
-import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
+import { getReleaseDownloads } from '~/utils/download';
 
-const setupUrl = await getSetupDownloadUrl();
+const { urls, liteUrls } = await getReleaseDownloads();
 
 const metadata = {
   title: '版本对比',
@@ -21,21 +21,40 @@ const metadata = {
   />
 
   <VersionCompare
+    id="compare-editions"
     title="两个版本，各有所长"
     subtitle="Lite 与标准版的全部差异，一眼看清。"
     cards={[
       {
         title: 'Shotera Lite 版',
         tagline: '轻量精简版',
-        badge: '正式发布',
+        badge: '新',
         description: '轻量精简版本，专注截图与基础绘画标注，不含 AI、录屏与长截图等进阶能力。',
-        cta: { text: '前往发布页', href: RELEASES_URL, icon: 'tabler:external-link' },
+        cta: { text: '下载 Lite 版', href: liteUrls.setup, icon: 'tabler:download' },
+        extra: {
+          label: '其它格式',
+          links: [
+            { text: '安装版（.exe）', href: liteUrls.setup },
+            { text: '免安装版（.7z）', href: liteUrls.portable },
+            { text: 'MSI 安装包', href: liteUrls.msi },
+          ],
+        },
       },
       {
         title: 'Shotera 标准版',
         tagline: '完整能力版本',
+        badge: '推荐',
+        badgeTone: 'primary',
         description: '完整能力版本：AI 抠图、擦图、离线 OCR、图片翻译，以及录屏、GIF、二维码识别与长截图。',
-        cta: { text: '下载标准版', href: setupUrl, variant: 'primary', icon: 'tabler:download' },
+        cta: { text: '下载标准版', href: urls.setup, variant: 'primary', icon: 'tabler:download' },
+        extra: {
+          label: '其它格式',
+          links: [
+            { text: '安装版（.exe）', href: urls.setup },
+            { text: '免安装版（.7z）', href: urls.portable },
+            { text: 'MSI 安装包', href: urls.msi },
+          ],
+        },
       },
     ]}
     groups={[

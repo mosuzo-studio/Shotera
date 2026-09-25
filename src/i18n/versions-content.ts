@@ -53,9 +53,9 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite 版',
         tagline: '輕量精簡版',
-        badge: '正式發布',
+        badge: '新',
         description: '輕量精簡版本，專注截圖與基礎繪圖標註，不含 AI、錄製螢幕與長截圖等進階能力。',
-        cta: '前往發佈頁',
+        cta: '下載 Lite 版',
       },
       standard: {
         title: 'Shotera 完整版',
@@ -122,10 +122,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite版',
         tagline: '軽量エディション',
-        badge: '正式リリース',
+        badge: '新',
         description:
           '軽量なエディション。スクリーンショットと基本的な注釈に絞り、AI や画面録画、長尺キャプチャなどの高度な機能は含みません。',
-        cta: 'リリースページへ',
+        cta: 'Lite版をダウンロード',
       },
       standard: {
         title: 'Shotera フル版',
@@ -199,9 +199,9 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Edição leve',
-        badge: 'Lançamento oficial',
+        badge: 'Novo',
         description: 'Versão leve, focada em captura e anotação básica — sem AI, gravação de tela e captura longa.',
-        cta: 'Ver versões',
+        cta: 'Baixar Lite',
       },
       standard: {
         title: 'Shotera Versão completa',
@@ -279,10 +279,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Edición ligera',
-        badge: 'Lanzamiento oficial',
+        badge: 'Nuevo',
         description:
           'Versión ligera centrada en la captura y la anotación básica, sin IA, grabación de pantalla ni captura larga.',
-        cta: 'Ver versiones',
+        cta: 'Descargar Lite',
       },
       standard: {
         title: 'Shotera Versión completa',
@@ -360,10 +360,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Leichte Edition',
-        badge: 'Offiziell verfügbar',
+        badge: 'Neu',
         description:
           'Schlanke Version für Screenshots und grundlegende Anmerkungen — ohne AI, Bildschirmaufnahme und lange Screenshots.',
-        cta: 'Releases ansehen',
+        cta: 'Lite herunterladen',
       },
       standard: {
         title: 'Shotera Vollversion',
@@ -439,10 +439,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Édition légère',
-        badge: 'Sortie officielle',
+        badge: 'Nouveau',
         description:
           "Version légère dédiée à la capture et à l'annotation de base — sans AI, enregistrement d'écran ni longue capture.",
-        cta: 'Voir les versions',
+        cta: 'Télécharger Lite',
       },
       standard: {
         title: 'Shotera Version complète',
@@ -516,10 +516,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Edizione leggera',
-        badge: 'Uscita ufficiale',
+        badge: 'Nuovo',
         description:
           'Versione leggera dedicata a cattura e annotazione di base — senza AI, registrazione schermo e screenshot lungo.',
-        cta: 'Vedi le release',
+        cta: 'Scarica Lite',
       },
       standard: {
         title: 'Shotera Versione completa',
@@ -597,10 +597,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite 버전',
         tagline: '경량 에디션',
-        badge: '정식 출시',
+        badge: '신규',
         description:
           '캡처와 기본 주석에 집중한 경량 버전으로, AI·화면 녹화·스크롤 캡처 등의 고급 기능은 포함하지 않습니다.',
-        cta: '릴리스 보기',
+        cta: 'Lite 버전 다운로드',
       },
       standard: {
         title: 'Shotera 전체 버전',
@@ -674,9 +674,9 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Лёгкая версия',
-        badge: 'Официальный релиз',
+        badge: 'Новинка',
         description: 'Лёгкая версия для захвата и базовых аннотаций — без AI, записи экрана и длинных снимков.',
-        cta: 'Открыть релизы',
+        cta: 'Скачать Lite',
       },
       standard: {
         title: 'Shotera Полная версия',
@@ -750,10 +750,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'نسخة خفيفة',
-        badge: 'الإصدار الرسمي',
+        badge: 'جديد',
         description:
           'نسخة خفيفة تركز على الالتقاط والتعليق الأساسي، دون ميزات الذكاء الاصطناعي أو تسجيل الشاشة أو اللقطة الطويلة.',
-        cta: 'عرض الإصدارات',
+        cta: 'تنزيل Lite',
       },
       standard: {
         title: 'Shotera النسخة الكاملة',
@@ -827,10 +827,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Lichte editie',
-        badge: 'Officiële release',
+        badge: 'Nieuw',
         description:
           'Lichte versie voor capture en basisannotatie — zonder AI, schermopname en lange schermafbeelding.',
-        cta: 'Bekijk releases',
+        cta: 'Lite downloaden',
       },
       standard: {
         title: 'Shotera Volledige versie',
@@ -909,10 +909,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Lekka edycja',
-        badge: 'Oficjalna premiera',
+        badge: 'Nowość',
         description:
           'Lekka wersja skupiona na przechwytywaniu i podstawowych adnotacjach — bez AI, nagrywania ekranu i długich zrzutów.',
-        cta: 'Zobacz wydania',
+        cta: 'Pobierz Lite',
       },
       standard: {
         title: 'Shotera Pełna wersja',
@@ -986,10 +986,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Lättviktig version',
-        badge: 'Officiellt tillgänglig',
+        badge: 'Ny',
         description:
           'Lättviktig version för skärmbilder och grundläggande anteckningar — utan AI, skärminspelning och rullande skärmbild.',
-        cta: 'Se utgåvor',
+        cta: 'Ladda ner Lite',
       },
       standard: {
         title: 'Shotera Fullversion',

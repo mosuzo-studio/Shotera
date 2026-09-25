@@ -162,6 +162,20 @@ import { UI } from 'astrowind:config';
     onLoad();
     onPageShow();
   });
+
+  /* Deep links such as /versions/#download-formats: the view-transition router
+     restores scroll instead of honouring the hash, so scroll to it ourselves. */
+  document.addEventListener('astro:page-load', function () {
+    if (!location.hash) {
+      return;
+    }
+    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target) {
+      /* Instant, not smooth: the page is still settling, so an animated scroll
+         would land wherever the target sat when the animation started. */
+      target.scrollIntoView({ behavior: 'instant' });
+    }
+  });
 </script>
 
 <script is:inline>
