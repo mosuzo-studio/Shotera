@@ -17,6 +17,11 @@ interface Props {
   setupLabel?: string;
   standardGroupLabel?: string;
   liteGroupLabel?: string;
+  /** Small muted line rendered under the buttons, e.g. a link to the versions page. */
+  footnoteLabel?: string;
+  footnoteHref?: string;
+  /** Pill on the `.exe` row, marking the format most people should pick. */
+  recommendLabel?: string;
 }
 
 const {
@@ -33,15 +38,24 @@ const {
   setupLabel = 'Installer (.exe)',
   standardGroupLabel = 'Standard',
   liteGroupLabel = 'Lite',
+  footnoteLabel,
+  footnoteHref,
+  recommendLabel,
 } = Astro.props;
 
 const { urls, liteUrls, resolved } = await getReleaseDownloads();
 
 type MenuEntry =
   | { kind: 'group'; label: string }
-  | { kind: 'link'; label: string; href: string; icon: string; external?: boolean };
+  | { kind: 'link'; label: string; href: string; icon: string; external?: boolean; recommended?: boolean };
 
-const setupItem = (href: string): MenuEntry => ({ kind: 'link', label: setupLabel, href, icon: 'tabler:download' });
+const setupItem = (href: string, recommended = false): MenuEntry => ({
+  kind: 'link',
+  label: setupLabel,
+  href,
+  icon: 'tabler:download',
+  recommended,
+});
 const msiItem = (href: string): MenuEntry => ({ kind: 'link', label: msiLabel, href, icon: 'tabler:package' });
 const portableItem = (href: string): MenuEntry => ({
   kind: 'link',
@@ -66,7 +80,9 @@ if (resolved) {
       portableItem(liteUrls.portable)
     );
   } else {
-    menuItems.push(msiItem(urls.msi), portableItem(urls.portable));
+    // Installer first: most visitors just want the one-click `.exe`, so it
+    // leads the list and carries the recommendation pill when one is given.
+    menuItems.push(setupItem(urls.setup, true), portableItem(urls.portable), msiItem(urls.msi));
   }
 }
 menuItems.push({
@@ -78,61 +94,104 @@ menuItems.push({
 });
 ---
 
-<div class="download-buttons">
-  <div class="dropdown split">
-    <a class="btn-primary split-main" href={urls.setup} aria-label={downloadAriaLabel}>
-      <Icon name="tabler:download" class="h-6 w-6" aria-hidden="true" />
-      <span>{downloadLabel}</span>
-    </a>
+<div class="download-area">
+  <div class="download-buttons">
+    <div class="dropdown split">
+      <a class="btn-primary split-main" href={urls.setup} aria-label={downloadAriaLabel}>
+        <Icon name="tabler:download" class="h-6 w-6" aria-hidden="true" />
+        <span>{downloadLabel}</span>
+      </a>
 
-    {
-      /* The menu opens purely from CSS :hover / :focus-within, so there is no
-        state to sync into aria-expanded; aria-haspopup alone describes it
-        honestly. Hovering or tabbing to this control reveals the list. */
-    }
-    <button type="button" class="btn-primary split-toggle" aria-haspopup="true" aria-label={moreVersionsAriaLabel}>
-      <Icon name="tabler:chevron-down" class="h-5 w-5" aria-hidden="true" />
-    </button>
-
-    <ul class="dropdown-menu split-menu" aria-label={moreVersionsLabel}>
       {
-        menuItems.map((item) =>
-          item.kind === 'group' ? (
-            <li class="menu-group">{item.label}</li>
-          ) : (
-            <li>
-              <a
-                href={item.href}
-                target={item.external ? '_blank' : undefined}
-                rel={item.external ? 'noopener noreferrer' : undefined}
-              >
-                <Icon name={item.icon} class="h-5 w-5" aria-hidden="true" />
-                <span>{item.label}</span>
-              </a>
-            </li>
-          )
-        )
+        /* The menu opens purely from CSS :hover / :focus-within, so there is no
+          state to sync into aria-expanded; aria-haspopup alone describes it
+          honestly. Hovering or tabbing to this control reveals the list. */
       }
-    </ul>
+      <button type="button" class="btn-primary split-toggle" aria-haspopup="true" aria-label={moreVersionsAriaLabel}>
+        <Icon name="tabler:chevron-down" class="h-5 w-5" aria-hidden="true" />
+      </button>
+
+      <ul class="dropdown-menu split-menu" aria-label={moreVersionsLabel}>
+        {
+          menuItems.map((item) =>
+            item.kind === 'group' ? (
+              <li class="menu-group">{item.label}</li>
+            ) : (
+              <li>
+                <a
+                  href={item.href}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noopener noreferrer' : undefined}
+                >
+                  <Icon name={item.icon} class="h-5 w-5" aria-hidden="true" />
+                  <span>{item.label}</span>
+                  {item.recommended && recommendLabel && <span class="menu-recommend">{recommendLabel}</span>}
+                </a>
+              </li>
+            )
+          )
+        }
+      </ul>
+    </div>
+
+    <div class="store-badge" role="group" aria-label={storeAriaLabel}>
+      <ms-store-badge
+        productid="9n73ldhrmc8v"
+        cid="743e47fd-8675-403d-9631-82e7e0"
+        window-mode="full"
+        theme="auto"
+        size="large"
+        language={language}
+        animation="on"
+      >
+      </ms-store-badge>
+    </div>
   </div>
 
-  <div class="store-badge" role="group" aria-label={storeAriaLabel}>
-    <ms-store-badge
-      productid="9n73ldhrmc8v"
-      cid="743e47fd-8675-403d-9631-82e7e0"
-      window-mode="full"
-      theme="auto"
-      size="large"
-      language={language}
-      animation="on"
-    >
-    </ms-store-badge>
-  </div>
+  {
+    footnoteLabel && footnoteHref && (
+      <p class="download-footnote">
+        <a href={footnoteHref}>{footnoteLabel}</a>
+      </p>
+    )
+  }
 </div>
 
 <style>
+  .download-area {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    max-width: 100%;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  /* Inherits the surrounding text color, so the line stays legible both on the
+     light hero and inside the dark closing section. */
+  .download-footnote {
+    margin: 0;
+    opacity: 0.72;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .download-footnote a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .download-footnote a:hover {
+    opacity: 1;
+  }
+
   .download-buttons {
     display: flex;
+    /* Below ~810px the fixed-width split button and the Store badge no longer
+       fit side by side, so the badge drops onto its own centered line instead
+       of pushing the row past the viewport. */
+    flex-wrap: wrap;
     width: max-content;
     max-width: 100%;
     align-items: stretch;
@@ -248,6 +307,19 @@ menuItems.push({
     background-color: rgb(0 0 0 / 6%);
   }
 
+  /* Sits at the far end of its row, so the pill reads as a tag on the format
+     rather than part of the label. */
+  .split-menu .menu-recommend {
+    margin-inline-start: auto;
+    padding: 0.0625rem 0.4375rem;
+    border-radius: 9999px;
+    background-color: color-mix(in srgb, var(--aw-color-primary) 12%, transparent);
+    color: var(--aw-color-primary);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
   /* Edition caption rows inside the menu (Standard / Lite). */
   .split-menu .menu-group {
     padding: 0.5rem 1.125rem 0.25rem;
@@ -273,6 +345,10 @@ menuItems.push({
   }
 
   @media (max-width: 639px) {
+    .download-area {
+      width: 100%;
+    }
+
     .download-buttons {
       width: 100%;
       flex-direction: column;
