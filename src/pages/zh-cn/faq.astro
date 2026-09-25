@@ -1,0 +1,101 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
+
+const lang = (Astro.currentLocale ?? defaultLang) as Lang;
+
+const metadata = {
+  title: '常见问题',
+  description: '关于 Shotera 的常见问题：支持哪些平台与界面语言、哪些功能离线可用、哪些免费，以及导出与性能。',
+};
+
+const groups = [
+  {
+    id: 'platform',
+    label: '平台与语言',
+    items: [
+      {
+        q: 'Shotera 支持哪些操作系统？',
+        a: '目前支持 Windows 桌面平台，安装包体积小、启动快、离线可用，下载后即可使用。更多 macOS、Linux 等平台正在规划中。',
+      },
+      {
+        q: 'Shotera 支持哪些界面语言？',
+        a: '已新增繁体中文、日语、巴西葡萄牙语、西班牙语、德语、法语、意大利语、韩语、俄语、阿拉伯语、荷兰语、波兰语和瑞典语。加上英语和简体中文，Shotera 目前共支持 15 种界面语言。',
+      },
+    ],
+  },
+  {
+    id: 'offline',
+    label: '离线与隐私',
+    items: [
+      {
+        q: 'OCR 和 AI 抠图需要联网吗？',
+        a: '不需要。OCR 文字识别、AI 抠图、AI 擦图（修图）均为离线本地运行，不联网、不上传，隐私更有保障。图片翻译功能走云端 API，遵守对应云厂商的隐私协议。',
+      },
+      {
+        q: '完全断网还能用吗？',
+        a: '可以。截图、标注、录屏、OCR、AI 抠图、AI 擦图和图片查看都能离线使用，你截到的内容也不会离开本机。只有图片翻译会调用云端接口，这一项需要联网。',
+      },
+    ],
+  },
+  {
+    id: 'plans',
+    label: '价格、导出与性能',
+    items: [
+      {
+        q: 'Shotera 是免费的吗？',
+        a: '核心的截图、标注、贴图功能免费使用；如果你只需要轻量的截图标注，还可以选体积更小的 Shotera Lite（不含录屏与 AI）。录屏、AI 抠图、AI 擦图、图片翻译等进阶能力在标准版中提供，具体可查看价格页面或版本对比。',
+      },
+      {
+        q: '录屏支持哪些分辨率和帧率？',
+        a: '录制画质从 480p、720p 一直到 1080p、2K、4K，帧率支持 30 fps 和 60 fps，不限录制时长；可导出 MP4，也可以另存为 GIF（GIF 帧率可单独调低以控制体积）。',
+      },
+      {
+        q: '录屏可以导出成 GIF 吗？',
+        a: '可以。录屏可导出为 MP4（480p 至 4K、30/60 fps）或体积小巧的 GIF，两种格式都不限录制时长，方便贴进文档、聊天工具和问题反馈中。',
+      },
+      {
+        q: '会占用很多系统资源吗？',
+        a: '不会。Shotera 以轻量为设计目标，常驻内存极小、启动迅速，即使长期后台待命也几乎无感。',
+      },
+    ],
+  },
+];
+
+const linkClass = 'font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300';
+---
+
+<Layout metadata={metadata}>
+  <section class="relative md:-mt-[76px]">
+    <div class="pt-0 md:pt-[76px]">
+      <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6 md:py-16">
+        <p class="text-sm font-bold tracking-wide text-secondary uppercase dark:text-blue-200">FAQ</p>
+        <h1 class="mt-3 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+          常见问题
+        </h1>
+        <p class="mt-3 text-lg text-muted">平台与语言、离线与隐私、价格与导出——这里都是简短答案。</p>
+
+        {
+          groups.map((group) => (
+            <section id={group.id} class="mt-12">
+              <h2 class="text-sm font-semibold tracking-wide text-muted uppercase">{group.label}</h2>
+              <dl class="mt-3 border-t border-gray-200 dark:border-slate-700">
+                {group.items.map((item) => (
+                  <div class="border-b border-gray-200 py-6 dark:border-slate-700">
+                    <dt class="text-lg font-semibold text-gray-900 dark:text-white">{item.q}</dt>
+                    <dd class="text-muted mt-2 leading-relaxed">{item.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          ))
+        }
+
+        <p class="text-muted mt-12">
+          还有疑问？<a class={linkClass} href={localizedPath(lang, '/contact')}>联系我们</a
+          >，通常 24 个工作小时内回复。
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

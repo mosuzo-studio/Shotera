@@ -8,7 +8,6 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import DownloadButtons from '~/components/ui/DownloadButtons.astro';
@@ -81,7 +80,7 @@ const metadata = {
       {
         title: '滚动截图',
         description: '页面比屏幕长也能一张装下——手动滚或自动滚，拼接过程实时预览，越滚越长。',
-        icon: 'tabler:arrows-down',
+        icon: 'local:longshot',
       },
       {
         title: '录屏 & GIF',
@@ -117,6 +116,12 @@ const metadata = {
         title: '贴图 / 钉图',
         description: '把截图钉在屏幕最上层，边打字、边对照、边滚动，不用来回切窗口。',
         icon: 'tabler:pin',
+      },
+      {
+        title: '图片查看',
+        description:
+          '截图和图片文件能在独立查看窗口里打开——同目录翻页、缩放细看，顺手改两笔，不用再开别的软件；常见格式都能直接读。',
+        icon: 'tabler:photo',
       },
     ]}
   />
@@ -161,12 +166,49 @@ const metadata = {
 
   <Content
     isAfterContent
+    tagline="滚动截图"
+    title="页面再长，也一张装下"
+    items={[
+      {
+        title: '自动滚 / 自己滚',
+        description: '让 Shotera 自动往下滚，或者你自己滚——两种方式都会边滚边采集。',
+      },
+      {
+        title: '拼接过程实时可见',
+        description: '选区旁边有个预览小窗随拼接一起变长，看到想要的长度就停。',
+      },
+      {
+        title: '拼接看不出接缝',
+        description: '相邻画面自动对齐、融合，拼出来的长图像原本就是一整页。',
+      },
+      {
+        title: '复制或存盘',
+        description: '拼好直接复制到剪贴板或存成文件，贴进文档、聊天、工单都行。',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/longshot-demo.png',
+      alt: '滚动截图把长页面拼接成一张长图',
+    }}
+  >
+    <Fragment slot="content">长网页、长聊天记录、整份文档——从上到下一张截全。</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
     tagline="录屏"
     title="4K 录屏，想录多久录多久"
     items={[
       {
-        title: '1080p / 2K / 4K',
-        description: '按需选分辨率，高帧率输出，录制时长不设限制。',
+        title: '480p 到 4K',
+        description: '按任务挑分辨率：480p、720p、1080p、2K、4K 都行，帧率 30 / 60 fps，且不限录制时长。',
       },
       {
         title: '导出轻量 GIF',
@@ -196,7 +238,6 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
-    isReversed
     isAfterContent
     tagline="AI 能力"
     title="AI 帮你把截图收尾"
@@ -332,46 +373,6 @@ const metadata = {
     information={`在博客里，我们会分享 Shotera 的使用技巧、快捷键玩法、版本更新与效率工作流，
                         帮你把这款小工具的价值榨到最大。
                 `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="常见问题"
-    subtitle="关于 Shotera 你可能想知道的那些事。"
-    tagline="常见问题"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Shotera 支持哪些操作系统？',
-        description:
-          '目前支持 Windows 桌面平台，安装包体积小、启动快、离线可用，下载后即可使用。更多 macOS、Linux 等平台正在规划中。',
-      },
-      {
-        title: 'Shotera 支持哪些界面语言？',
-        description:
-          '已新增繁体中文、日语、巴西葡萄牙语、西班牙语、德语、法语、意大利语、韩语、俄语、阿拉伯语、荷兰语、波兰语和瑞典语。加上英语和简体中文，Shotera 目前共支持 15 种界面语言。',
-      },
-      {
-        title: 'OCR 和 AI 抠图需要联网吗？',
-        description:
-          '不需要。OCR 文字识别、AI 抠图、AI 擦图（修图）均为离线本地运行，不联网、不上传，隐私更有保障。图片翻译功能走云端 API，遵守对应云厂商的隐私协议。',
-      },
-      {
-        title: 'Shotera 是免费的吗？',
-        description:
-          '核心的截图、标注、贴图功能免费使用。录屏、AI 抠图、AI 擦图、图片翻译等进阶能力提供更完整的体验，具体可查看价格页面。',
-      },
-      {
-        title: '录屏可以导出成 GIF 吗？',
-        description:
-          '可以。录制完成后可一键导出为 MP4 或体积小巧的 GIF，支持 1080p 至 4K 超清分辨率，无录制时长限制，方便贴进文档、聊天工具和问题反馈中。',
-      },
-      {
-        title: '会占用很多系统资源吗？',
-        description: '不会。Shotera 以轻量为设计目标，常驻内存极小、启动迅速，即使长期后台待命也几乎无感。',
-      },
-    ]}
   />
 
   <!-- Stats Widget ****************** -->

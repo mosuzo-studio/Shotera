@@ -1,0 +1,101 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'FAQ',
+  description:
+    'Short answers about Shotera: which platforms and interface languages it supports, what runs offline, what stays free, and how exports and performance work.',
+};
+
+const groups = [
+  {
+    id: 'platform',
+    label: 'Platform and languages',
+    items: [
+      {
+        q: 'Which operating systems does Shotera support?',
+        a: 'Shotera currently supports Windows desktop with a small, fast-launching installer that works offline — download and start right away. macOS, Linux, and more platforms are on the roadmap.',
+      },
+      {
+        q: 'Which interface languages does Shotera support?',
+        a: 'Shotera now supports Traditional Chinese, Japanese, Brazilian Portuguese, Spanish, German, French, Italian, Korean, Russian, Arabic, Dutch, Polish, and Swedish. Together with English and Simplified Chinese, Shotera supports 15 interface languages.',
+      },
+    ],
+  },
+  {
+    id: 'offline',
+    label: 'Offline and privacy',
+    items: [
+      {
+        q: 'Do OCR and AI cutout need an internet connection?',
+        a: "No. OCR text recognition, AI background removal, and AI eraser (inpainting) all run entirely offline on your device — nothing is uploaded, keeping your data private. Image translation uses cloud APIs and complies with the respective cloud providers' privacy policies.",
+      },
+      {
+        q: 'Can I use Shotera with no connection at all?',
+        a: 'Yes. Capturing, annotating, recording, OCR, cutout, the eraser, and the image viewer all work offline, and nothing you capture leaves your PC. Image translation is the one feature that calls a cloud API, so it needs a connection.',
+      },
+    ],
+  },
+  {
+    id: 'plans',
+    label: 'Plans, exports and performance',
+    items: [
+      {
+        q: 'Is Shotera free?',
+        a: 'Core capture, annotation, and pinning are free forever. If all you need is everyday capture and annotation, Shotera Lite is there as a smaller build — it leaves out screen recording and AI. Recording, AI cutout, AI eraser, and image translation come with Shotera Standard — see the pricing page or the edition comparison for details.',
+      },
+      {
+        q: 'What resolutions and frame rates can recordings use?',
+        a: 'Recording quality runs from 480p and 720p up through 1080p, 2K and 4K, at 30 fps or 60 fps — with no time limit. Export to MP4, or to a GIF whose frame rate you can dial down to keep the file small.',
+      },
+      {
+        q: 'Can recordings be exported as GIF?',
+        a: 'Yes. Export any recording to MP4 — from 480p up to 4K, at 30 or 60 fps — or to a compact GIF for docs, chat, and bug reports. Neither option limits how long you record.',
+      },
+      {
+        q: 'Will it slow down my computer?',
+        a: 'No. Shotera is built to stay light — minimal memory and instant startup, unnoticeable even when running in the background.',
+      },
+    ],
+  },
+];
+
+const linkClass = 'font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300';
+---
+
+<Layout metadata={metadata}>
+  <section class="relative md:-mt-[76px]">
+    <div class="pt-0 md:pt-[76px]">
+      <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6 md:py-16">
+        <p class="text-sm font-bold tracking-wide text-secondary uppercase dark:text-blue-200">FAQ</p>
+        <h1 class="mt-3 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+          Frequently asked questions
+        </h1>
+        <p class="mt-3 text-lg text-muted">
+          Platforms, languages, offline privacy, plans, and exports — the short version.
+        </p>
+
+        {
+          groups.map((group) => (
+            <section id={group.id} class="mt-12">
+              <h2 class="text-sm font-semibold tracking-wide text-muted uppercase">{group.label}</h2>
+              <dl class="mt-3 border-t border-gray-200 dark:border-slate-700">
+                {group.items.map((item) => (
+                  <div class="border-b border-gray-200 py-6 dark:border-slate-700">
+                    <dt class="text-lg font-semibold text-gray-900 dark:text-white">{item.q}</dt>
+                    <dd class="text-muted mt-2 leading-relaxed">{item.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          ))
+        }
+
+        <p class="text-muted mt-12">
+          Still have a question? <a class={linkClass} href="/contact">Contact us</a> — we usually reply within 24 business
+          hours.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

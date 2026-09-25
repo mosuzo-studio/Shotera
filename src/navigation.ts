@@ -26,6 +26,7 @@ export const getFooterData = async (lang: Lang) => {
   const l = (path: string) => localizedPath(lang, path);
   const hasLocalizedLegalPages = lang === 'en' || lang === 'zh-cn';
   const legal = (path: '/terms' | '/privacy') => (hasLocalizedLegalPages ? l(path) : path);
+  const faqHref = hasLocalizedLegalPages ? l('/faq') : l('/#faqs');
   const blogHref = lang === 'en' || lang === 'zh-cn' ? getBlogPermalink() : l('/blog');
   const setupUrl = await getSetupDownloadUrl();
 
@@ -46,7 +47,7 @@ export const getFooterData = async (lang: Lang) => {
         title: t('footer.support'),
         links: [
           { text: t('footer.download'), href: setupUrl },
-          { text: t('footer.faq'), href: l('/#faqs') },
+          { text: t('footer.faq'), href: faqHref },
           { text: t('footer.changelog'), href: l('/changelog') },
           { text: t('footer.feedback'), href: l('/contact') },
         ],

@@ -8,7 +8,6 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import DownloadButtons from '~/components/ui/DownloadButtons.astro';
@@ -86,7 +85,7 @@ const metadata = {
         title: 'Scrolling capture',
         description:
           'A page taller than the screen still fits in one shot — scroll by hand or let Shotera auto-scroll, and watch the long image stitch together as it grows.',
-        icon: 'tabler:arrows-down',
+        icon: 'local:longshot',
       },
       {
         title: 'Screen recording & GIF',
@@ -129,6 +128,12 @@ const metadata = {
         description:
           'Keep the shot floating on top while you type, compare, or scroll. Resize and arrange it without juggling windows.',
         icon: 'tabler:pin',
+      },
+      {
+        title: 'Image viewer',
+        description:
+          'Open any shot or image file in its own viewer window — step through the folder, zoom in, and touch up what you need without launching another app. The common formats open straight away.',
+        icon: 'tabler:photo',
       },
     ]}
   />
@@ -174,12 +179,54 @@ const metadata = {
 
   <Content
     isAfterContent
+    tagline="Scrolling capture"
+    title="A page taller than the screen, in one shot"
+    items={[
+      {
+        title: 'Auto-scroll, or scroll it yourself',
+        description:
+          'Let Shotera walk the page down for you, or scroll by hand — either way the frames are captured as you go.',
+      },
+      {
+        title: 'Watch it stitch as it grows',
+        description:
+          'A live preview sits beside the selection and gets longer with every frame, so you can stop the moment the whole page is in.',
+      },
+      {
+        title: 'No visible seams',
+        description:
+          'Neighbouring frames are matched and blended together, so the finished long shot reads as one continuous page.',
+      },
+      {
+        title: 'Copy it or save it',
+        description:
+          'Send the long shot straight to the clipboard or save it to disk — ready for docs, chat, and bug reports.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/longshot-demo.png',
+      alt: 'Scrolling capture stitching a long page into a single image',
+    }}
+  >
+    <Fragment slot="content">Whole pages, long chats, and full documents — captured top to bottom in one image.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
     tagline="Recording"
     title="Record in 4K, for as long as it takes"
     items={[
       {
-        title: '1080p, 2K, or 4K',
-        description: 'Pick the resolution that fits the job, at a high frame rate — with no recording time limit.',
+        title: '480p through 4K',
+        description:
+          'Pick the resolution that fits the job — 480p, 720p, 1080p, 2K, or 4K — at 30 or 60 fps, with no recording time limit.',
       },
       {
         title: 'Export to GIF',
@@ -209,7 +256,6 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
-    isReversed
     isAfterContent
     tagline="AI features"
     title="AI that finishes the screenshot for you"
@@ -352,47 +398,6 @@ const metadata = {
                 `}
   />
   -->
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently asked questions"
-    subtitle="A few things you might be wondering about Shotera."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Which operating systems does Shotera support?',
-        description:
-          'Shotera currently supports Windows desktop with a small, fast-launching installer that works offline — download and start right away. macOS, Linux, and more platforms are on the roadmap.',
-      },
-      {
-        title: 'Which interface languages does Shotera support?',
-        description:
-          'Shotera now supports Traditional Chinese, Japanese, Brazilian Portuguese, Spanish, German, French, Italian, Korean, Russian, Arabic, Dutch, Polish, and Swedish. Together with English and Simplified Chinese, Shotera supports 15 interface languages.',
-      },
-      {
-        title: 'Do OCR and AI cutout need an internet connection?',
-        description:
-          "No. OCR text recognition, AI background removal, and AI eraser (inpainting) all run entirely offline on your device — nothing is uploaded, keeping your data private. Image translation uses cloud APIs and complies with the respective cloud providers' privacy policies.",
-      },
-      {
-        title: 'Is Shotera free?',
-        description:
-          'Core capture, annotation, and pinning are free forever. Recording, AI cutout, AI eraser, and image translation are part of Pro — see the pricing page for details.',
-      },
-      {
-        title: 'Can recordings be exported as GIF?',
-        description:
-          'Yes. Export any recording to MP4 or a compact GIF, supporting 1080p to 4K ultra-HD resolution with no time limit — ideal for dropping into docs, chat, and bug reports.',
-      },
-      {
-        title: 'Will it slow down my computer?',
-        description:
-          'No. Shotera is built to stay light — minimal memory and instant startup, unnoticeable even when running in the background.',
-      },
-    ]}
-  />
 
   <!-- Stats Widget ****************** -->
 
