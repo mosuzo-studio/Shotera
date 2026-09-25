@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import VersionCompare from '~/components/widgets/VersionCompare.astro';
+import DownloadFormats from '~/components/widgets/DownloadFormats.astro';
 import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
 
 const setupUrl = await getSetupDownloadUrl();
@@ -86,5 +87,41 @@ const metadata = {
     excludedLabel="不包含"
     note="注：Lite 版安装包仅约 17 MB。"
     footnote="当前还在预发布阶段，两者差异请以最终的真实发布为准。"
+  />
+
+  <DownloadFormats
+    id="download-formats"
+    tagline="下载格式"
+    title="该下载哪个文件？"
+    subtitle="四种格式都是同一个 Shotera，只是安装与更新方式不同。"
+    headers={['格式', '安装与更新', '适合谁']}
+    recommendLabel="推荐"
+    rows={[
+      {
+        icon: 'tabler:download',
+        format: '安装版（.exe）',
+        install: '双击安装，应用内自动更新',
+        bestFor: '大多数人的选择',
+        recommended: true,
+      },
+      {
+        icon: 'tabler:file-zip',
+        format: '免安装版（.7z）',
+        install: '解压即用，应用内自动更新',
+        bestFor: '想放 U 盘随身带',
+      },
+      {
+        icon: 'tabler:package',
+        format: 'MSI 安装包（.msi）',
+        install: '双击或静默安装，应用内自动更新',
+        bestFor: '企业批量部署',
+      },
+      {
+        icon: 'tabler:brand-windows',
+        format: '微软商店版',
+        install: '从商店安装并更新',
+        bestFor: '想省心交给系统',
+      },
+    ]}
   />
 </Layout>

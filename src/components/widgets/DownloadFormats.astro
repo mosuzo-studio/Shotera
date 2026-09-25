@@ -1,0 +1,84 @@
+---
+import { Icon } from 'astro-icon/components';
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+export interface DownloadFormatRow {
+  icon: string;
+  format: string;
+  install: string;
+  bestFor: string;
+  /** Marks the format most people should pick, matching the download menu. */
+  recommended?: boolean;
+}
+
+export interface Props {
+  tagline?: string;
+  title?: string;
+  subtitle?: string;
+  headers?: [string, string, string];
+  rows?: DownloadFormatRow[];
+  recommendLabel?: string;
+  id?: string;
+}
+
+const {
+  tagline = '',
+  title = '',
+  subtitle = '',
+  headers = ['Format', 'Install & updates', 'Best for'],
+  rows = [],
+  recommendLabel,
+  id,
+} = Astro.props;
+---
+
+<WidgetWrapper id={id}>
+  <Headline tagline={tagline} title={title} subtitle={subtitle} />
+
+  <div class="mt-12 overflow-x-auto md:mt-16">
+    <table class="mx-auto w-full min-w-[520px] max-w-3xl border-collapse text-start text-sm md:text-base">
+      <thead>
+        <tr>
+          {
+            headers.map((header) => (
+              <th scope="col" class="px-4 py-3 text-start font-semibold text-heading">
+                {header}
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map((row) => (
+            <tr class="border-t border-gray-200 align-top dark:border-gray-700">
+              <th scope="row" class="px-4 py-3 text-start font-medium text-default">
+                <span class="flex items-center gap-2 whitespace-nowrap">
+                  <Icon name={row.icon} class="h-5 w-5 text-muted" aria-hidden="true" />
+                  {row.format}
+                  {row.recommended && recommendLabel && <span class="format-recommend">{recommendLabel}</span>}
+                </span>
+              </th>
+              <td class="px-4 py-3 text-gray-600 dark:text-slate-400">{row.install}</td>
+              <td class="px-4 py-3 text-gray-600 dark:text-slate-400">{row.bestFor}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</WidgetWrapper>
+
+<style>
+  /* Same pill as the homepage download menu, minus its row-end alignment. */
+  .format-recommend {
+    padding: 0.0625rem 0.4375rem;
+    border-radius: 9999px;
+    background-color: color-mix(in srgb, var(--aw-color-primary) 12%, transparent);
+    color: var(--aw-color-primary);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+</style>

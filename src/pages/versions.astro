@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import VersionCompare from '~/components/widgets/VersionCompare.astro';
+import DownloadFormats from '~/components/widgets/DownloadFormats.astro';
 import { getSetupDownloadUrl, RELEASES_URL } from '~/utils/download';
 
 const setupUrl = await getSetupDownloadUrl();
@@ -89,5 +90,41 @@ const metadata = {
     excludedLabel="Not included"
     note="Note: the Lite installer is only about 17 MB."
     footnote="Still in preview — differences between editions are subject to the final release."
+  />
+
+  <DownloadFormats
+    id="download-formats"
+    tagline="Download formats"
+    title="Which file should you download?"
+    subtitle="Same Shotera in every format — they differ only in how they install and update."
+    headers={['Format', 'Install & updates', 'Best for']}
+    recommendLabel="Recommended"
+    rows={[
+      {
+        icon: 'tabler:download',
+        format: 'Installer (.exe)',
+        install: 'Wizard install; updates itself in the app',
+        bestFor: 'Most people',
+        recommended: true,
+      },
+      {
+        icon: 'tabler:file-zip',
+        format: 'Portable (.7z)',
+        install: 'Unzip and run; updates itself in the app',
+        bestFor: 'Carrying it on a USB drive',
+      },
+      {
+        icon: 'tabler:package',
+        format: 'MSI package (.msi)',
+        install: 'Double-click or silent install; updates itself in the app',
+        bestFor: 'Bulk deployment at work',
+      },
+      {
+        icon: 'tabler:brand-windows',
+        format: 'Microsoft Store',
+        install: 'Installs and updates through the Store',
+        bestFor: 'Set-and-forget',
+      },
+    ]}
   />
 </Layout>
