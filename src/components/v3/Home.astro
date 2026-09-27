@@ -8,7 +8,7 @@ import captureDemo from '~/assets/images/capture-demo.png';
 import longshotDemo from '~/assets/images/longshot-demo.png';
 import recordingDemo from '~/assets/images/recording-demo.png';
 import aiDemo from '~/assets/images/ai-demo.png';
-import heroImage from '~/assets/images/hero-image.png';
+import pinDemo from '~/assets/images/pin-demo.png';
 
 export interface Props {
   lang: Lang;
@@ -23,7 +23,7 @@ const l = (path: string) => localizedPath(lang, path);
 const shotSources = {
   capture: captureDemo,
   long: longshotDemo,
-  pin: heroImage,
+  pin: pinDemo,
   record: recordingDemo,
   ai: aiDemo,
 } as const;
@@ -31,6 +31,7 @@ const shotSources = {
 const featureSources = {
   capture: captureDemo,
   longshot: longshotDemo,
+  pin: pinDemo,
   recording: recordingDemo,
   ai: aiDemo,
 } as const;

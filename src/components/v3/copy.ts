@@ -29,7 +29,7 @@ export interface V3FeatureSection {
   lead: string;
   rows: string[];
   items: { title: string; note: string }[];
-  image: 'capture' | 'longshot' | 'recording' | 'ai';
+  image: 'capture' | 'longshot' | 'pin' | 'recording' | 'ai';
   reversed?: boolean;
 }
 
@@ -186,6 +186,22 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         reversed: true,
       },
       {
+        eyebrow: 'Pin',
+        title: 'Pin references on top, work beside them',
+        lead: 'Paste a capture on top of everything else — compare, reference and keep working without switching windows.',
+        rows: [
+          'Pin a capture to the top of the screen without breaking your flow',
+          'Resize from any edge or corner with the aspect ratio locked; double-click toggles the original size and the thumbnail',
+        ],
+        items: [
+          { title: 'Several pins at once', note: 'compare side by side' },
+          { title: 'Thumbnail mode', note: 'double-click to shrink it' },
+          { title: 'Click-through', note: 'never blocks the window below' },
+          { title: 'Restore the last pin', note: 'one key brings it back' },
+        ],
+        image: 'pin',
+      },
+      {
         eyebrow: 'Recording',
         title: 'Record in 4K, for as long as it takes',
         lead: 'Turn “hard to explain” into a clip anyone can follow.',
@@ -200,6 +216,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
           { title: 'History', note: 'find your last take' },
         ],
         image: 'recording',
+        reversed: true,
       },
       {
         eyebrow: 'AI features',
@@ -356,6 +373,22 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         reversed: true,
       },
       {
+        eyebrow: '贴图',
+        title: '参考贴在屏幕最上层，边看边做',
+        lead: '把截图贴到屏幕最上层，随时对照参考，多图并排也不乱。',
+        rows: [
+          '截图后一键贴到屏幕最上层，不打断手上的操作',
+          '拖拽边缘或四角缩放并锁定宽高比；双击在原尺寸与缩略图之间切换',
+        ],
+        items: [
+          { title: '多图并排', note: '几张参考同时对照' },
+          { title: '缩略图模式', note: '双击收起，不挡视线' },
+          { title: '点击穿透', note: '不挡住下面的窗口' },
+          { title: '一键找回', note: '恢复上一次关闭的贴图' },
+        ],
+        image: 'pin',
+      },
+      {
         eyebrow: '录屏',
         title: '4K 录屏，想录多久录多久',
         lead: '把「说不清」的操作，变成一段一看就懂的演示。',
@@ -367,6 +400,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
           { title: '历史记录', note: '随时翻回上一次录制' },
         ],
         image: 'recording',
+        reversed: true,
       },
       {
         eyebrow: 'AI 能力',
