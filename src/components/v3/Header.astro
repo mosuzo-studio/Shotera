@@ -1,6 +1,7 @@
 ---
 import { localizedPath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
+import appMark from '~/assets/favicons/favicon.svg';
 import { v3Copy, type V3Lang } from './copy';
 
 export interface Props {
@@ -22,21 +23,7 @@ const otherHref = isZh ? localizedPath('en', '/') : localizedPath('zh-cn', '/');
 <header class="v3-header">
   <div class="v3-wrap v3-nav">
     <a class="v3-logo" href={l('/')} aria-label="Shotera">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="v3-mark" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#4a9eff"></stop>
-            <stop offset="1" stop-color="#0d44e8"></stop>
-          </linearGradient>
-        </defs>
-        <rect width="26" height="26" rx="7" fill="url(#v3-mark)"></rect>
-        <path
-          d="M8.4 10.6V9.4a1 1 0 0 1 1-1h1.2M16.4 8.4h1.2a1 1 0 0 1 1 1v1.2M18.6 15.4v1.2a1 1 0 0 1-1 1h-1.2M9.6 17.6H8.4a1 1 0 0 1-1-1v-1.2"
-          stroke="#fff"
-          stroke-width="1.5"
-          stroke-linecap="round"></path>
-        <circle cx="13" cy="13" r="1.7" fill="#fff"></circle>
-      </svg>
+      <img src={appMark.src} width="26" height="26" alt="" />
       Shotera
     </a>
 

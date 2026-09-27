@@ -253,21 +253,20 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
           links: [
             { text: 'Features', path: '/', hash: 'features' },
             { text: 'Versions', path: '/versions' },
-            { text: 'Changelog', path: '/changelog' },
           ],
         },
         {
           title: 'Support',
           links: [
             { text: 'FAQ', path: '/faq' },
-            { text: 'Contact', path: '/contact' },
+            { text: 'Changelog', path: '/changelog' },
           ],
         },
         {
           title: 'About',
           links: [
-            { text: 'About Shotera', path: '/about' },
-            { text: 'All releases', path: '/versions' },
+            { text: 'About us', path: '/about' },
+            { text: 'Contact us', path: '/contact' },
           ],
         },
       ],
@@ -434,22 +433,21 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
           title: '产品',
           links: [
             { text: '功能', path: '/', hash: 'features' },
-            { text: '版本', path: '/versions' },
-            { text: '更新日志', path: '/changelog' },
+            { text: '版本对比', path: '/versions' },
           ],
         },
         {
           title: '支持',
           links: [
             { text: '常见问题', path: '/faq' },
-            { text: '联系我们', path: '/contact' },
+            { text: '更新日志', path: '/changelog' },
           ],
         },
         {
           title: '关于',
           links: [
-            { text: '关于 Shotera', path: '/about' },
-            { text: '全部版本', path: '/versions' },
+            { text: '关于我们', path: '/about' },
+            { text: '联系我们', path: '/contact' },
           ],
         },
       ],
