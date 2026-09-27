@@ -140,11 +140,14 @@ const shotData = JSON.stringify({
         </button>
         <div class="v3-split-menu" aria-label={c.download.menu}>
           <p class="v3-split-cap">{c.download.edition}</p>
-          <a href={downloadUrls.setup}>
+          <a href={downloadUrls.setup} data-v3-tip={c.download.setupTip}>
             <span>{c.download.setup}</span><b>{c.download.recommend}</b>
           </a>
-          <a href={downloadUrls.portable}>{c.download.portable}</a>
-          <a href={downloadUrls.msi}>{c.download.msi}</a>
+          <a href={downloadUrls.portable} data-v3-tip={c.download.portableTip}>{c.download.portable}</a>
+          <a href={downloadUrls.msi} data-v3-tip={c.download.msiTip}>{c.download.msi}</a>
+          <a href={STORE_URL} target="_blank" rel="noopener noreferrer" data-v3-tip={c.download.storeTip}
+            >{c.download.store}</a
+          >
           <a class="v3-split-all" href={RELEASES_URL} target="_blank" rel="noopener noreferrer"
             >{c.download.allVersions}</a
           >
@@ -353,11 +356,14 @@ const shotData = JSON.stringify({
           </button>
           <div class="v3-split-menu" aria-label={c.download.menu}>
             <p class="v3-split-cap">{c.download.edition}</p>
-            <a href={downloadUrls.setup}>
+            <a href={downloadUrls.setup} data-v3-tip={c.download.setupTip}>
               <span>{c.download.setup}</span><b>{c.download.recommend}</b>
             </a>
-            <a href={downloadUrls.portable}>{c.download.portable}</a>
-            <a href={downloadUrls.msi}>{c.download.msi}</a>
+            <a href={downloadUrls.portable} data-v3-tip={c.download.portableTip}>{c.download.portable}</a>
+            <a href={downloadUrls.msi} data-v3-tip={c.download.msiTip}>{c.download.msi}</a>
+            <a href={STORE_URL} target="_blank" rel="noopener noreferrer" data-v3-tip={c.download.storeTip}>
+              {c.download.store}
+            </a>
             <a class="v3-split-all" href={RELEASES_URL} target="_blank" rel="noopener noreferrer">
               {c.download.allVersions}
             </a>

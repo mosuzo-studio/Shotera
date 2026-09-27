@@ -92,6 +92,11 @@ export interface V3Copy {
     setup: string;
     portable: string;
     msi: string;
+    store: string;
+    setupTip: string;
+    portableTip: string;
+    msiTip: string;
+    storeTip: string;
     recommend: string;
     allVersions: string;
   };
@@ -178,6 +183,11 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       setup: 'Installer (.exe)',
       portable: 'Portable (.7z)',
       msi: 'MSI installer',
+      store: 'Microsoft Store',
+      setupTip: 'Double-click to install and keep it on your PC. What most people want.',
+      portableTip: 'Unzip and run - nothing goes into the system. Handy on a USB stick.',
+      msiTip: 'Double-click or install silently; used to roll the app out across a company.',
+      storeTip: 'The build listed on the Microsoft Store - pick it if you usually install apps from there.',
       recommend: 'Recommended',
       allVersions: 'All versions on GitHub',
     },
@@ -470,6 +480,11 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       setup: '安装版（.exe）',
       portable: '免安装版（.7z）',
       msi: 'MSI 安装包',
+      store: 'Microsoft Store 版',
+      setupTip: '双击安装，装进系统长期使用，大多数人的选择。',
+      portableTip: '解压就能用，不写入系统，可以放进 U 盘随身带。',
+      msiTip: '双击或静默安装，公司给多台电脑批量部署时用。',
+      storeTip: '微软商店上架的版本，习惯用商店装软件的话可以选它。',
       recommend: '推荐',
       allVersions: '全部版本（GitHub）',
     },
