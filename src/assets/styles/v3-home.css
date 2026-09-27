@@ -690,8 +690,9 @@
 
 .v3-shot {
   margin: 42px auto 0;
-  width: fit-content;
-  max-width: 100%;
+  /* Sized by the frame, not by the image's intrinsic width: fit-content would
+     resolve against the full-size source and leave the right bezel empty. */
+  width: min(1064px, 100%);
 }
 
 .v3-screen {
@@ -702,11 +703,10 @@
 }
 
 .v3-shot img {
-  border-radius: 10px;
-  width: auto;
-  max-width: min(680px, 100%);
-  max-height: 520px;
+  display: block;
+  width: 100%;
   height: auto;
+  border-radius: 10px;
   background: #fff;
 }
 

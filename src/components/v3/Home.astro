@@ -11,6 +11,14 @@ import recordingDemo from '~/assets/images/recording-demo.png';
 import aiDemo from '~/assets/images/ai-demo.png';
 import pinDemo from '~/assets/images/pin-demo.png';
 
+/* Landscape cuts of the same renders for the hero (7:4); the feature sections
+   below keep the square ones. */
+import captureWide from '~/assets/images/capture-wide.png';
+import longshotWide from '~/assets/images/longshot-wide.png';
+import recordingWide from '~/assets/images/recording-wide.png';
+import aiWide from '~/assets/images/ai-wide.png';
+import pinWide from '~/assets/images/pin-wide.png';
+
 export interface Props {
   lang: Lang;
   downloadUrl: string;
@@ -24,11 +32,11 @@ const l = (path: string) => localizedPath(lang, path);
 const { urls: downloadUrls } = await getReleaseDownloads();
 
 const shotSources = {
-  capture: captureDemo,
-  long: longshotDemo,
-  pin: pinDemo,
-  record: recordingDemo,
-  ai: aiDemo,
+  capture: captureWide,
+  long: longshotWide,
+  pin: pinWide,
+  record: recordingWide,
+  ai: aiWide,
 } as const;
 
 const featureSources = {
