@@ -81,7 +81,7 @@ const metadata = {
 
   <Features3
     title="Core capabilities"
-    subtitle="Capture, scrolling capture, pin, recording and on-device AI - the five things you reach for all day, one shortcut away."
+    subtitle="Capture, scrolling capture, pin, recording, offline OCR and on-device AI - the six things you reach for all day, one shortcut away."
     columns={3}
     isAfterContent={true}
     items={[
@@ -103,15 +103,21 @@ const metadata = {
         icon: 'tabler:pin',
       },
       {
-        title: 'Recording',
+        title: 'Recording & GIF',
         description:
           'Record your screen and export a lightweight GIF; cursor highlights and click cues keep demos clear.',
         icon: 'tabler:video',
       },
       {
-        title: 'AI features',
+        title: 'Offline OCR',
         description:
-          'AI cutout, AI eraser and offline OCR run on your device and never upload; image translation reads foreign screenshots for you.',
+          'Turn the text inside a screenshot into editable copy, in several languages - recognised on your device, ready to paste.',
+        icon: 'tabler:text-recognition',
+      },
+      {
+        title: 'AI cutout & eraser',
+        description:
+          'AI cutout drops the background in one click and exports a transparent PNG; AI eraser clears away clutter and watermarks. Both run on local models - nothing is uploaded.',
         icon: 'tabler:wand',
       },
     ]}
@@ -125,18 +131,36 @@ const metadata = {
 
   <Features3
     title="More capabilities"
-    subtitle="Annotation, recognition, viewing and customisation - the details that make it stick."
+    subtitle="The details that make it stick - annotation, recognition, viewing and the settings around them."
     columns={3}
     items={[
       {
-        title: 'Annotation toolkit',
+        title: 'Annotation tools',
         description:
-          'Rectangle, arrow, pen, highlighter, mosaic, text, step numbers, emoji stickers, magnifier and eraser - annotate the moment you capture.',
+          'Rectangle/ellipse, line/arrow, pen, highlighter, mosaic/blur, text, step number, emoji sticker, magnifier and eraser - annotate the moment you capture.',
         icon: 'tabler:pencil',
       },
       {
-        title: 'QR and barcode recognition',
-        description: 'Read the code inside a screenshot and copy what it holds.',
+        title: 'Emoji stickers',
+        description:
+          'Hundreds of emoji stickers - thumbs up, hearts, laughs, confetti - scale and place them anywhere to add a bit of fun.',
+        icon: 'tabler:mood-smile',
+      },
+      {
+        title: 'Image viewer & editor',
+        description:
+          'Open a shot or any image file in its own window - flip through the folder, zoom in, and touch up what you need. Common formats open as they are.',
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Image translation',
+        description: 'Foreign text inside a screenshot, translated in place - copy the translation and carry on.',
+        icon: 'tabler:language',
+      },
+      {
+        title: 'QR & barcode scanning',
+        description:
+          'QR codes and barcodes read in place: links, Wi-Fi, contacts, product codes - copy the result in one click, entirely offline.',
         icon: 'tabler:qrcode',
       },
       {
@@ -145,9 +169,15 @@ const metadata = {
         icon: 'tabler:crop',
       },
       {
-        title: 'Image editor',
-        description: 'Open a shot in its own editor window: browse the folder, zoom in, and touch up what you need.',
-        icon: 'tabler:photo',
+        title: 'Multi-monitor',
+        description:
+          'Every screen in one coordinate space, so secondary and extended displays select correctly - and captures stay sharp on high-DPI panels.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Dark mode',
+        description: 'Follow the system, or switch between light and dark by hand.',
+        icon: 'tabler:moon',
       },
       {
         title: 'Presentation mode',

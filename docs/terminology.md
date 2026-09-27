@@ -16,6 +16,8 @@
 
 首屏胶囊取 L1 五项；判断规则：**能各自用「一张图 + 一句话」讲清、且不是别的功能的一小步** 才进胶囊。
 
+关于页的版式例外：「核心能力」（L1 区）把 离线 OCR 单列一张卡，AI 一张收窄为「AI 抠图与擦图 / AI cutout & eraser」；「更多能力」（L2 区）在 L2 之外再给 图片翻译 一张独立卡片，并把 多显示器、深色模式（L3）也收进同一区。其余页面仍按本表分层。
+
 ## 2. 核心功能（L1）
 
 | 站点名词   | English                      | 允许的动作词                   | 不再使用                               | App 键名（zh / en）                                                                    |
@@ -33,7 +35,7 @@
 
 英文口径：站点名词沿用 App 的英文标签（Title Case，如 Pin to Desktop / AI Cutout / Scrolling Capture）；正文里可用句首大写与短形式（pin、AI cutout、AI eraser）；changelog 保留 App 自己的英文说法（long screenshot、pin window）。中文侧同理：名词唯一（贴图 / 长截图 / AI 擦图 / 离线 OCR），动词自由。
 
-**录屏与 GIF 的呈现规则**：App 里这是模式栏的两个独立模式（`modebar.rec` = 录屏、`modebar.gif` = GIF 录制），两个名字都保留；但**站点的标题位（首屏胶囊、模式卡标题、关于页功能标题、页脚链接）只写「录屏」**，GIF 放到正文里讲（如「一键导出 MP4 或 GIF」）。
+**录屏与 GIF 的呈现规则**：App 里这是模式栏的两个独立模式（`modebar.rec` = 录屏、`modebar.gif` = GIF 录制），两个名字都保留；但**站点的标题位（首屏胶囊、模式卡标题、页脚链接）只写「录屏」**，GIF 放到正文里讲（如「一键导出 MP4 或 GIF」）。**例外（2026-09-28 起，仅此一处）**：关于页 L1「核心能力」里的卡片标题写作「录屏 & GIF / Recording & GIF」。
 
 「离线 OCR」的措辞边界：可以说 OCR、AI 抠图、AI 擦图**本地处理、不上传**；**不得**泛化成「截图和录屏数据都不会离开电脑」——图片翻译会把图像发给第三方服务（详见 §5）。
 
@@ -51,8 +53,9 @@
 | 站点名词                                  | English                                                    | 备注 / App 键名                                                                                                                 |
 | ----------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | 标注工具                                  | annotation tools                                           | `toolbar.*`：矩形/椭圆、直线/箭头、画笔、荧光笔、马赛克/模糊、文字、序号、表情贴纸、放大镜、橡皮擦（顺序与 App 一级工具栏一致） |
+| 表情贴纸                                  | Emoji stickers                                             | `toolbar.emoji` = 表情贴纸 / Emoji Sticker（标注十件套之一）；关于页单独成卡「Emoji 表情贴纸 / Emoji stickers」                 |
 | 自定义截图                                | Custom capture                                             | `customShot.title`                                                                                                              |
-| 图片编辑                                  | Image editor                                               | `editor.windowTitle` = 图片编辑器                                                                                               |
+| 图片编辑                                  | Image editor                                               | `editor.windowTitle` = 图片编辑器；关于页标题写作「图片查看与编辑 / Image viewer & editor」                                     |
 | 演示模式                                  | Presentation Mode                                          | `settings.hotkey.demoKey`                                                                                                       |
 | 历史记录                                  | History                                                    | `history`                                                                                                                       |
 | 二维码识别                                | QR & barcode scanning                                      | 见 §2（受众窄，不进首屏胶囊）                                                                                                   |
