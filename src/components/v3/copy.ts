@@ -68,6 +68,7 @@ export interface V3Copy {
     about: string;
     faq: string;
     menu: string;
+    language: string;
     cta: string;
   };
   hero: {
@@ -126,6 +127,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       about: 'About',
       faq: 'FAQ',
       menu: 'Menu',
+      language: 'Language',
       cta: 'Download free',
     },
     hero: {
@@ -434,6 +436,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       about: '关于',
       faq: '常见问题',
       menu: '菜单',
+      language: '语言',
       cta: '免费下载',
     },
     hero: {

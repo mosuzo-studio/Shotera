@@ -144,23 +144,68 @@
 }
 
 .v3-lang {
+  position: relative;
+}
+
+.v3-lang-btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 5px;
+  padding: 6px 2px;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 15px;
+  color: var(--v3-ink);
+  cursor: pointer;
+}
+
+.v3-lang-btn svg {
+  width: 15px;
+  height: 15px;
+  color: rgba(17, 17, 17, 0.4);
+  transition: transform 0.18s ease;
+}
+
+.v3-lang.is-open .v3-lang-btn svg {
+  transform: rotate(180deg);
+}
+
+.v3-lang-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 40;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  padding: 8px;
+  min-width: 268px;
+  background: #fff;
+  border: 1px solid var(--v3-border);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px -24px rgba(16, 24, 40, 0.45);
+}
+
+.v3-lang.is-open .v3-lang-menu {
+  display: grid;
+}
+
+.v3-lang-menu a {
+  padding: 8px 10px;
+  border-radius: 9px;
   font-size: 14px;
-  color: var(--v3-muted);
+  color: rgba(17, 17, 17, 0.78);
+  white-space: nowrap;
 }
 
-.v3-lang a {
-  color: var(--v3-muted);
-}
-
-.v3-lang a:hover {
+.v3-lang-menu a:hover {
+  background: #f2f4f7;
   color: var(--v3-ink);
 }
 
-.v3-lang b {
-  color: var(--v3-ink);
+.v3-lang-menu a[aria-current='true'] {
+  color: var(--v3-blue);
   font-weight: 600;
 }
 
@@ -499,8 +544,9 @@
 }
 
 /* Split download control: the main half is the Standard installer, the toggle
-   reveals the other formats. Opens on hover / focus, no JavaScript; on touch
-   the tap on the toggle leaves it focused, which keeps the menu open.
+   reveals the other formats. Home.astro opens it when the pointer enters the
+   toggle (never the download half) and closes it once the pointer leaves the
+   control; touch and keyboard toggle it on click.
    Selectors are doubled up (.v3-btn.v3-split-*) so they outrank the base
    .v3-btn radii and keep the two halves reading as one pill. */
 .v3-split {

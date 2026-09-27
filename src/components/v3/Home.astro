@@ -378,6 +378,10 @@ const shotData = JSON.stringify({
   initV3ShotSwitcher();
   document.addEventListener('astro:page-load', initV3ShotSwitcher);
   function initV3SplitMenus() {
+    // The hover path below only makes sense where a real pointer exists; touch
+    // devices keep the tap-to-toggle behaviour.
+    const canHover = window.matchMedia('(hover: hover)').matches;
+
     document.querySelectorAll<HTMLElement>('[data-v3-split]').forEach((split) => {
       if (split.dataset.wired === '1') return;
       split.dataset.wired = '1';
@@ -390,9 +394,36 @@ const shotData = JSON.stringify({
         toggle.setAttribute('aria-expanded', String(open));
       };
 
-      // The menu opens on the chevron alone - hovering the button no longer
-      // reveals it - and closes on a second click, an outside click or Esc.
-      toggle.addEventListener('click', () => setOpen(!split.classList.contains('is-open')));
+      let closeTimer: number | undefined;
+      const cancelClose = () => {
+        if (closeTimer !== undefined) {
+          window.clearTimeout(closeTimer);
+          closeTimer = undefined;
+        }
+      };
+
+      if (canHover) {
+        // Only the chevron opens the list; sliding onto the download half leaves
+        // it closed. Leaving the control closes it again after a short grace
+        // period, so the pointer can cross the gap down into the list.
+        split.addEventListener('pointerenter', cancelClose);
+        toggle.addEventListener('pointerenter', () => {
+          cancelClose();
+          setOpen(true);
+        });
+        split.addEventListener('pointerleave', () => {
+          cancelClose();
+          closeTimer = window.setTimeout(() => setOpen(false), 160);
+        });
+      }
+
+      toggle.addEventListener('click', (event) => {
+        // With a mouse the hover handlers already own the open state, so a click
+        // there must not close the menu the pointer just opened. Keyboard
+        // activation (detail 0) and touch taps still toggle.
+        if (canHover && event.detail > 0) return;
+        setOpen(!split.classList.contains('is-open'));
+      });
 
       document.addEventListener('click', (event) => {
         if (!split.classList.contains('is-open')) return;

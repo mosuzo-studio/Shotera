@@ -1,5 +1,5 @@
 ---
-import { localizedPath } from '~/i18n/utils';
+import { languages, localizedPath, switchLocalePath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
 import appMark from '~/assets/favicons/favicon.svg';
 import { v3Copy, type V3Lang } from './copy';
@@ -14,10 +14,26 @@ const key = (lang === 'zh-cn' ? 'zh-cn' : 'en') as V3Lang;
 const c = v3Copy[key];
 const l = (path: string) => localizedPath(lang, path);
 
-const isZh = key === 'zh-cn';
-const currentLabel = isZh ? '中文' : 'EN';
-const otherLabel = isZh ? 'EN' : '中文';
-const otherHref = isZh ? localizedPath('en', '/') : localizedPath('zh-cn', '/');
+/* The trigger carries a short code; the menu spells each language out. */
+const shortLabels: Record<Lang, string> = {
+  en: 'EN',
+  'zh-cn': '中文',
+  'zh-tw': '繁中',
+  ja: '日本語',
+  'pt-br': 'PT',
+  es: 'ES',
+  de: 'DE',
+  fr: 'FR',
+  it: 'IT',
+  ko: '한국어',
+  ru: 'RU',
+  ar: 'AR',
+  nl: 'NL',
+  pl: 'PL',
+  sv: 'SV',
+};
+
+const localeEntries = Object.entries(languages) as [Lang, string][];
 ---
 
 <header class="v3-header">
@@ -34,9 +50,36 @@ const otherHref = isZh ? localizedPath('en', '/') : localizedPath('zh-cn', '/');
     <a class="v3-navlink" href={l('/about')}>{c.nav.about}</a>
 
     <div class="v3-nav-right">
-      <span class="v3-lang">
-        <b>{currentLabel}</b><span aria-hidden="true">/</span><a href={otherHref}>{otherLabel}</a>
-      </span>
+      <div class="v3-lang" data-v3-lang>
+        <button
+          class="v3-lang-btn"
+          type="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-label={c.nav.language}
+          data-v3-lang-toggle
+        >
+          {shortLabels[lang] ?? shortLabels.en}
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6 9.5l6 6 6-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="v3-lang-menu" data-v3-lang-menu>
+          {
+            localeEntries.map(([code, label]) => (
+              <a href={switchLocalePath(Astro.url, code)} lang={code} aria-current={code === lang ? 'true' : undefined}>
+                {label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
       <a
         class="v3-ghost-icon"
         href="https://github.com/mosuzo-studio/Shotera"
@@ -102,4 +145,62 @@ const otherHref = isZh ? localizedPath('en', '/') : localizedPath('zh-cn', '/');
 
   initV3MobileMenu();
   document.addEventListener('astro:page-load', initV3MobileMenu);
+
+  function initV3LangMenu() {
+    const wrapper = document.querySelector<HTMLElement>('[data-v3-lang]');
+    const toggle = wrapper?.querySelector<HTMLButtonElement>('[data-v3-lang-toggle]');
+    if (!wrapper || !toggle || toggle.dataset.wired === '1') return;
+    toggle.dataset.wired = '1';
+
+    const canHover = window.matchMedia('(hover: hover)').matches;
+
+    const setOpen = (open: boolean) => {
+      wrapper.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+
+    let closeTimer: number | undefined;
+    const cancelClose = () => {
+      if (closeTimer !== undefined) {
+        window.clearTimeout(closeTimer);
+        closeTimer = undefined;
+      }
+    };
+
+    if (canHover) {
+      // Same contract as the download split in Home.astro: hovering the trigger
+      // opens the list; leaving the control closes it after a grace period long
+      // enough for the pointer to cross the gap down into the list.
+      wrapper.addEventListener('pointerenter', cancelClose);
+      toggle.addEventListener('pointerenter', () => {
+        cancelClose();
+        setOpen(true);
+      });
+      wrapper.addEventListener('pointerleave', () => {
+        cancelClose();
+        closeTimer = window.setTimeout(() => setOpen(false), 160);
+      });
+    }
+
+    toggle.addEventListener('click', (event) => {
+      // With a mouse the hover handlers already own the open state, so a click
+      // there must not close the menu the pointer just opened. Keyboard
+      // activation (detail 0) and touch taps still toggle.
+      if (canHover && event.detail > 0) return;
+      setOpen(!wrapper.classList.contains('is-open'));
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!wrapper.classList.contains('is-open') || !(event.target instanceof Node)) return;
+      if (wrapper.contains(event.target)) return;
+      setOpen(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    });
+  }
+
+  initV3LangMenu();
+  document.addEventListener('astro:page-load', initV3LangMenu);
 </script>
