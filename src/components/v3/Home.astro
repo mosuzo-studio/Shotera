@@ -10,6 +10,7 @@ import longshotDemo from '~/assets/images/longshot-demo.png';
 import recordingDemo from '~/assets/images/recording-demo.png';
 import aiDemo from '~/assets/images/ai-demo.png';
 import pinDemo from '~/assets/images/pin-demo.png';
+import taskbarStripSrc from '~/assets/images/taskbar.png';
 
 /* Landscape cuts of the same renders for the hero (7:4); the feature sections
    below keep the square ones. */
@@ -59,6 +60,11 @@ for (const shotKey of Object.keys(shotSources) as ShotKey[]) {
     height: optimized.attributes.height,
   };
 }
+
+/* One taskbar for all five shots: the renders each carry their own, and the
+   pinned tile in them doesn't sit where it should, so the hero lays this strip
+   over the taskbar band instead of re-rendering every image. */
+const taskbarStrip = await getImage({ src: taskbarStripSrc, width: 1792, format: 'webp', quality: 92 });
 
 const featureImages: Record<string, { src: string; width: number; height: number }> = {};
 for (const featureKey of Object.keys(featureSources) as FeatureKey[]) {
@@ -163,25 +169,49 @@ const shotData = JSON.stringify({
     </a>
 
     <figure class="v3-shot">
-      <div class="v3-display">
+      {/* data-shell="laptop" swaps the aluminium monitor for the laptop shell */}
+      <div class="v3-display" data-shell="monitor">
         <div class="v3-bezel">
           <span class="v3-cam" aria-hidden="true"></span>
-          <div class="v3-inner">
-            <div class="v3-desktop">
-              <img
-                id="v3-shot"
-                src={initialShot.src}
-                width={initialShot.width}
-                height={initialShot.height}
-                alt={initialMode.label}
-              />
-            </div>
+          <div class="v3-desktop">
+            <img
+              id="v3-shot"
+              class="v3-shot-img"
+              src={initialShot.src}
+              width={initialShot.width}
+              height={initialShot.height}
+              alt={initialMode.label}
+            />
+            <img
+              class="v3-tb"
+              src={taskbarStrip.src}
+              width={taskbarStrip.attributes.width}
+              height={taskbarStrip.attributes.height}
+              alt=""
+              aria-hidden="true"
+            />
           </div>
         </div>
-        <div class="v3-neck" aria-hidden="true"></div>
+        <div class="v3-arm" aria-hidden="true"></div>
         <div class="v3-base" aria-hidden="true"></div>
       </div>
-      <figcaption class="v3-shot-cap" id="v3-shot-cap">{initialMode.caption}</figcaption>
+      <figcaption class="v3-shot-cap" id="v3-shot-cap">
+        <span id="v3-shot-cap-text">{initialMode.caption}</span>
+        <span class="v3-shell-dots">
+          <button
+            type="button"
+            class="v3-shell-dot"
+            data-shell-target="monitor"
+            aria-pressed="true"
+            aria-label={c.hero.shellMonitor}></button>
+          <button
+            type="button"
+            class="v3-shell-dot"
+            data-shell-target="laptop"
+            aria-pressed="false"
+            aria-label={c.hero.shellLaptop}></button>
+        </span>
+      </figcaption>
     </figure>
     <div class="v3-tail"></div>
   </div>
@@ -345,7 +375,7 @@ const shotData = JSON.stringify({
   function initV3ShotSwitcher() {
     const dataEl = document.getElementById('v3-shot-data');
     const img = document.getElementById('v3-shot') as HTMLImageElement | null;
-    const caption = document.getElementById('v3-shot-cap');
+    const caption = document.getElementById('v3-shot-cap-text');
     if (!dataEl || !img || !caption || dataEl.dataset.wired === '1') return;
     dataEl.dataset.wired = '1';
 
@@ -377,6 +407,55 @@ const shotData = JSON.stringify({
 
   initV3ShotSwitcher();
   document.addEventListener('astro:page-load', initV3ShotSwitcher);
+
+  /* The hero alternates between the two CSS shells - the aluminium monitor and
+     the laptop, one switch every 20s on a loop - and the two dots under its
+     left corner switch them by hand. Picking a shell restarts that window. */
+  let shellCycleTimer: number | undefined;
+
+  function initV3ShellCycle() {
+    window.clearInterval(shellCycleTimer);
+    const display = document.querySelector<HTMLElement>('.v3-display');
+    if (!display) return;
+
+    const shells = ['monitor', 'laptop'] as const;
+    type Shell = (typeof shells)[number];
+    const dots = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-shell-target]'));
+
+    const setShell = (shell: Shell) => {
+      display.dataset.shell = shell;
+      dots.forEach((dot) => dot.setAttribute('aria-pressed', String(dot.dataset.shellTarget === shell)));
+    };
+
+    let index = Math.max(0, shells.indexOf((display.dataset.shell ?? 'monitor') as Shell));
+
+    const startCycle = () => {
+      window.clearInterval(shellCycleTimer);
+      // Reduced motion: no auto-rotation; the dots still switch on click.
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      shellCycleTimer = window.setInterval(() => {
+        index = (index + 1) % shells.length;
+        setShell(shells[index]);
+      }, 20000);
+    };
+
+    dots.forEach((dot) => {
+      if (dot.dataset.wired === '1') return;
+      dot.dataset.wired = '1';
+      dot.addEventListener('click', () => {
+        const target = dot.dataset.shellTarget as Shell | undefined;
+        if (!target || !shells.includes(target)) return;
+        index = shells.indexOf(target);
+        setShell(target);
+        startCycle();
+      });
+    });
+
+    startCycle();
+  }
+
+  initV3ShellCycle();
+  document.addEventListener('astro:page-load', initV3ShellCycle);
   function initV3SplitMenus() {
     // The hover path below only makes sense where a real pointer exists; touch
     // devices keep the tap-to-toggle behaviour.

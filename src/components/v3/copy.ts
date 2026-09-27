@@ -82,6 +82,8 @@ export interface V3Copy {
     metaStrong: string;
     metaRest: string;
     store: string;
+    shellMonitor: string;
+    shellLaptop: string;
   };
   download: {
     more: string;
@@ -166,6 +168,8 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       metaStrong: 'Windows 10/11+',
       metaRest: 'Installer / portable / MSI',
       store: 'Also available on the Microsoft Store',
+      shellMonitor: 'Aluminium monitor shell',
+      shellLaptop: 'Laptop shell',
     },
     download: {
       more: 'More download options',
@@ -456,6 +460,8 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       metaStrong: 'Windows 10/11+',
       metaRest: '安装版 / 便携版 / MSI',
       store: '也可从 Microsoft Store 获取',
+      shellMonitor: '铝壳显示器',
+      shellLaptop: '笔记本外壳',
     },
     download: {
       more: '更多下载选项',

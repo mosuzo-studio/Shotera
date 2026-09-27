@@ -742,55 +742,118 @@
 }
 
 /* ---------- hero display shell ----------
-   A slim aluminium monitor (Studio Display proportions) showing the per-mode
-   render full-bleed: each shot is a complete Windows 11 desktop (wallpaper,
-   taskbar, tray), so the screen is nothing but the image. */
+   Two CSS shells share one screen (the per-mode render is a complete Windows 11
+   desktop, so the screen is nothing but the image): the default aluminium
+   monitor - light bezel, trapezoid neck, pill base - and a laptop with a
+   near-black bezel, a camera notch and an aluminium hinge. Flip `data-shell` on
+   .v3-display to switch. Every size is in cqw against the shell width, so the
+   proportions hold at any hero width. */
 .v3-display {
   display: flex;
   flex-direction: column;
   align-items: center;
+  container-type: inline-size;
+}
+
+/* Shell picker: two dots on the caption's line, pinned to the left edge of the
+   shell. Fixed sizes on purpose - they are a control, so they stay tappable at
+   narrow hero widths. */
+.v3-shell-dots {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.v3-shell-dot {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  place-items: center;
+}
+
+.v3-shell-dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(22, 22, 24, 0.22);
+  transition:
+    background-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.v3-shell-dot:hover::after {
+  background: rgba(22, 22, 24, 0.45);
+}
+
+.v3-shell-dot[aria-pressed='true']::after {
+  background: var(--v3-blue);
+  transform: scale(1.15);
+}
+
+.v3-shell-dot:focus-visible {
+  outline: 2px solid rgb(54 137 251 / 55%);
+  outline-offset: 1px;
+  border-radius: 50%;
 }
 
 .v3-bezel {
   position: relative;
   width: 100%;
-  padding: 10px;
-  border-radius: 12px;
-  background: linear-gradient(180deg, #f0f2f4 0%, #dcdfe3 40%, #c6cbd1 100%);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.95) inset,
-    0 42px 70px -40px rgba(16, 24, 40, 0.6);
+  padding: 1.44cqw;
+  border-radius: 1.44cqw;
+  background: linear-gradient(180deg, #e4e7ea, #c9ced3);
+  box-shadow: 0 3.6cqw 7.2cqw -3.6cqw rgba(16, 24, 40, 0.5);
+  z-index: 3;
 }
 
-.v3-inner {
-  border-radius: 6px;
-  padding: 3px;
-  background: #23282d;
-}
-
+/* Above the screen, so the laptop's notch hangs over the wallpaper the way the
+   sheet drew it. */
 .v3-cam {
   position: absolute;
-  top: 3px;
+  top: 0.6cqw;
   left: 50%;
   transform: translateX(-50%);
-  width: 7px;
-  height: 7px;
+  width: 0.72cqw;
+  height: 0.72cqw;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #8b949d, #171c21);
+  background: #8f969c;
+  z-index: 2;
 }
 
 .v3-desktop {
   position: relative;
   aspect-ratio: 7 / 4;
-  border-radius: 4px;
+  border-radius: 0.36cqw;
   overflow: hidden;
   background-color: #0a1740;
 }
 
-.v3-desktop img {
+.v3-shot-img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+/* The taskbar the hero lays over every shot. The renders no longer carry one —
+   their bottom band is wallpaper again — so this strip is the only taskbar on
+   screen: 89/1024 of the screen height, flush with its bottom edge, drawn at
+   the source's own size. */
+.v3-tb {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8.69%;
+  pointer-events: none;
 }
 
 .v3-desktop::after {
@@ -803,43 +866,78 @@
     radial-gradient(120% 100% at 50% 0%, rgba(255, 255, 255, 0.05), transparent 60%);
 }
 
-/* Stand: a slim aluminium column that flares slightly at the bottom, sitting
-   on a flat plate — the plate reads as a rounded tray: a light top surface
-   band above a darker front edge, with a soft contact shadow. */
-.v3-neck {
-  width: 58px;
-  height: 58px;
-  margin-top: -4px;
-  background: linear-gradient(90deg, #eef1f4 0%, #d6dbe0 42%, #b7bdc4 100%);
-  clip-path: polygon(6% 0, 94% 0, 100% 100%, 0 100%);
+/* Neck and base of the monitor: a trapezoid that widens towards the pill base,
+   both in the same light aluminium. */
+.v3-arm {
+  width: 9.14cqw;
+  height: 7.45cqw;
+  margin-top: -0.1cqw;
+  background: linear-gradient(180deg, #d5dade, #b4bac0);
+  clip-path: polygon(26% 0, 74% 0, 100% 100%, 0 100%);
 }
 
 .v3-base {
-  position: relative;
-  width: 246px;
-  height: 17px;
-  margin-top: -1px;
-  border-radius: 50% / 38%;
-  background: linear-gradient(180deg, #eef1f4 0%, #d2d7dc 55%, #b4bac1 100%);
+  width: 28.8cqw;
+  height: 1.08cqw;
+  margin-top: -0.12cqw;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #d7dbdf, #b0b6bc);
 }
 
-.v3-base::after {
-  content: '';
-  position: absolute;
-  left: 6%;
-  right: 6%;
-  bottom: -3px;
-  height: 12px;
-  border-radius: 50%;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(16, 24, 40, 0.28), rgba(16, 24, 40, 0) 72%);
-  filter: blur(3px);
+/* Laptop: the camera dot widens into a notch, the neck becomes the hinge bar
+   and the base goes away. */
+.v3-display[data-shell='laptop'] .v3-bezel {
+  padding: 1.44cqw 1.44cqw 2.16cqw;
+  border-radius: 1.92cqw 1.92cqw 0.72cqw 0.72cqw;
+  background: #0a0a0b;
+  box-shadow: 0 3.6cqw 7.2cqw -4.1cqw rgba(16, 24, 40, 0.6);
+}
+
+.v3-display[data-shell='laptop'] .v3-cam {
+  top: 0;
+  width: 14.18cqw;
+  height: 2.04cqw;
+  border-radius: 0 0 1.08cqw 1.08cqw;
+  background: #0a0a0b;
+}
+
+.v3-display[data-shell='laptop'] .v3-desktop {
+  border-radius: 0.96cqw 0.96cqw 0.48cqw 0.48cqw;
+}
+
+.v3-display[data-shell='laptop'] .v3-arm {
+  width: 104%;
+  height: 0.84cqw;
+  margin: 0 -2%;
+  border-radius: 0 0 0.96cqw 0.96cqw;
+  background: linear-gradient(180deg, #c3c8ce, #9aa1a8);
+  clip-path: none;
+}
+
+/* Not `display: none`: the laptop has no stand, so the box keeps the monitor's
+   footprint (neck 7.45 - 0.1 + base 1.08 - 0.12 = 8.31cqw, minus the 0.84cqw
+   hinge and the 0.72cqw thicker bezel lip that stay) and the cycle never
+   shifts the page. */
+.v3-display[data-shell='laptop'] .v3-base {
+  visibility: hidden;
+  height: 6.75cqw;
+  margin-top: 0;
 }
 
 .v3-shot-cap {
+  position: relative;
   margin: 14px 0 0;
   font-size: 14px;
   color: var(--v3-muted);
   text-align: center;
+}
+
+/* Narrow heroes wrap the caption across the full width, so keep its centred
+   text clear of the dots on the left. */
+@media (max-width: 639px) {
+  .v3-shot-cap {
+    padding-inline: 62px;
+  }
 }
 
 .v3-tail {
