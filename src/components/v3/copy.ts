@@ -1,0 +1,416 @@
+/**
+ * Copy for the v3 (Cap-flavoured) homepage.
+ *
+ * Only EN and zh-CN are wired up for now; the 13 other locales keep the
+ * previous homepage. Wording mirrors the existing pages so the terminology
+ * stays consistent across the site.
+ */
+
+export type V3Lang = 'en' | 'zh-cn';
+
+export type V3ShotKey = 'capture' | 'pin' | 'record' | 'ai';
+
+export interface V3Segment {
+  text: string;
+  hl?: boolean;
+}
+
+export interface V3ModeCard {
+  icon: 'capture' | 'pin' | 'record';
+  title: string;
+  one: string;
+  steps: string[];
+  bestFor: string;
+}
+
+export interface V3FeatureSection {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  rows: string[];
+  items: { title: string; note: string }[];
+  image: 'capture' | 'longshot' | 'recording' | 'ai';
+  reversed?: boolean;
+}
+
+export interface V3Copy {
+  home: string;
+  nav: {
+    features: string;
+    download: string;
+    versions: string;
+    faq: string;
+    moreVersions: string;
+    cta: string;
+  };
+  hero: {
+    badge: string;
+    announce: string;
+    modes: { key: V3ShotKey; label: string; caption: string }[];
+    h1: V3Segment[][];
+    sub: string;
+    primary: string;
+    secondary: string;
+    metaStrong: string;
+    metaRest: string;
+    store: string;
+  };
+  trust: { value: string; label: string }[];
+  modesSection: { eyebrow: string; title: string; lead: string; cards: V3ModeCard[] };
+  features: V3FeatureSection[];
+  cta: { eyebrow: string; title: string; lead: string; primary: string; secondary: string; note: string };
+  footer: {
+    blurb: string;
+    cols: { title: string; links: { text: string; path: string; hash?: string }[] }[];
+    legal: { text: string; path: string }[];
+    rights: string;
+    system: string;
+  };
+}
+
+export const v3Copy: Record<V3Lang, V3Copy> = {
+  en: {
+    home: 'Shotera — Faster, smarter screenshots and screen recording',
+    nav: {
+      features: 'Features',
+      download: 'Download',
+      versions: 'Versions',
+      faq: 'FAQ',
+      moreVersions: 'More versions',
+      cta: 'Download free',
+    },
+    hero: {
+      badge: 'New',
+      announce: 'Lite edition: just ~17 MB to install',
+      modes: [
+        {
+          key: 'capture',
+          label: 'Capture',
+          caption: 'Windows and UI elements are detected as you hover — the right region, first try.',
+        },
+        {
+          key: 'pin',
+          label: 'Pin',
+          caption: 'Pin captures on top of your screen — scale, fade, compare side by side.',
+        },
+        {
+          key: 'record',
+          label: 'Record',
+          caption: '720p to 4K at high frame rate, cursor and click highlights, export MP4 or GIF.',
+        },
+        { key: 'ai', label: 'AI', caption: 'AI cutout, eraser and offline OCR — all processed on your device.' },
+      ],
+      h1: [
+        [{ text: 'Screenshots, screen recording, ' }, { text: 'AI magic', hl: true }],
+        [{ text: 'all from a single shortcut' }],
+      ],
+      sub: 'Shotera is a desktop capture tool built for people who screenshot all day: annotate, scroll-capture long pages, record to GIF, cut out subjects with AI, run offline OCR, translate images, and pin references — without leaving your flow.',
+      primary: 'Download free (Windows)',
+      secondary: 'See how it works',
+      metaStrong: 'Windows 10/11+',
+      metaRest: 'Installer / portable / MSI',
+      store: 'Also available on the Microsoft Store',
+    },
+    trust: [
+      { value: '15', label: 'UI languages' },
+      { value: '4.9 / 5', label: 'user rating' },
+      { value: '100%', label: 'on-device AI' },
+      { value: '<0.1s', label: 'to summon' },
+    ],
+    modesSection: {
+      eyebrow: 'Three modes',
+      title: 'One shortcut for every capture task',
+      lead: 'Capture, pin, record, read text, cut out, translate — the everyday work happens in one window, without opening anything else.',
+      cards: [
+        {
+          icon: 'capture',
+          title: 'Smart capture',
+          one: 'Region, window or full screen in one keystroke — windows and UI elements are detected for you.',
+          steps: ['Press the shortcut', 'Hover to snap the bounds', 'Annotate, copy or save'],
+          bestFor: 'everyday sharing and docs',
+        },
+        {
+          icon: 'pin',
+          title: 'Pin to screen',
+          one: 'Float a capture on top of everything else for as long as you need it.',
+          steps: ['Pin right after capturing', 'Scale, fade, compare', 'Work without window juggling'],
+          bestFor: 'reference and side-by-side work',
+        },
+        {
+          icon: 'record',
+          title: 'Recording & GIF',
+          one: '720p through 4K at 30 or 60 fps, with no recording time limit.',
+          steps: ['Pick a region and record', 'Show cursor and clicks', 'Export MP4 or GIF'],
+          bestFor: 'tutorials and bug reports',
+        },
+      ],
+    },
+    features: [
+      {
+        eyebrow: 'Capture',
+        title: 'Grab it in one press, frame it exactly',
+        lead: 'Trigger it with a shortcut, then capture, annotate and copy in one uninterrupted motion.',
+        rows: [
+          'Hover, and Shotera locks onto the window or element underneath',
+          'Arrows, boxes, text, step numbers, emoji, magnifier — annotate the moment you capture',
+        ],
+        items: [
+          { title: 'Emoji stickers', note: 'say more in one click' },
+          { title: 'Magnifier', note: 'zoom into the detail' },
+          { title: 'Step numbers', note: 'guide the reading order' },
+          { title: 'Mosaic & highlight', note: 'privacy and emphasis' },
+        ],
+        image: 'capture',
+      },
+      {
+        eyebrow: 'Scrolling capture',
+        title: 'A page taller than the screen, in one shot',
+        lead: 'Long pages, long chats and whole documents — captured top to bottom as a single image.',
+        rows: [
+          'Auto-scroll, or scroll it yourself — every frame is captured as you go',
+          'Adjacent frames are matched and blended, so the finished long shot has no visible seams',
+        ],
+        items: [
+          { title: 'Live stitching preview', note: 'stop the moment it is whole' },
+          { title: 'No visible seams', note: 'reads as one continuous page' },
+          { title: 'Long chats', note: 'the whole thread in one image' },
+          { title: 'Copy or save', note: 'ready for docs and issues' },
+        ],
+        image: 'longshot',
+        reversed: true,
+      },
+      {
+        eyebrow: 'Recording',
+        title: 'Record in 4K, for as long as it takes',
+        lead: 'Turn “hard to explain” into a clip anyone can follow.',
+        rows: [
+          '720p / 1080p / 2K / 4K at 30 or 60 fps, no recording time limit',
+          'Drop a lightweight GIF into docs, chats or issues — no player needed',
+        ],
+        items: [
+          { title: 'Show cursor and clicks', note: 'every step stays obvious' },
+          { title: 'MP4 or GIF', note: 'quality or file size, your call' },
+          { title: '4K ready', note: 'made for HiDPI displays' },
+          { title: 'History', note: 'find your last take' },
+        ],
+        image: 'recording',
+      },
+      {
+        eyebrow: 'AI features',
+        title: 'AI that finishes the screenshot for you',
+        lead: 'AI cutout, eraser and OCR all run locally: smart, without giving up privacy.',
+        rows: [
+          'People, products, logos: a transparent PNG in seconds — no upload, no waiting on a server',
+          'OCR runs on your device and hands back editable, copyable text in one click',
+        ],
+        items: [
+          { title: 'Cut out a subject', note: 'transparent background in a click' },
+          { title: 'Erase what shouldn’t be there', note: 'AI rebuilds what was behind it' },
+          { title: 'Offline OCR', note: 'mixed languages, code, tables' },
+          { title: 'Image translation', note: 'read foreign screenshots instantly' },
+        ],
+        image: 'ai',
+      },
+    ],
+    cta: {
+      eyebrow: 'Free to start',
+      title: 'Make every screenshot faster and smarter',
+      lead: 'Free download, a few seconds to install. Hand the daily “just grab a screenshot” to a tool that gets it.',
+      primary: 'Download free',
+      secondary: 'More versions',
+      note: 'Standard and Lite editions; Windows 10/11+. Installer / portable / MSI available.',
+    },
+    footer: {
+      blurb: 'Faster, smarter screenshots and screen recording — pinned, annotated and understood in one shortcut.',
+      cols: [
+        {
+          title: 'Product',
+          links: [
+            { text: 'Features', path: '/', hash: 'features' },
+            { text: 'Versions', path: '/versions' },
+            { text: 'Changelog', path: '/changelog' },
+          ],
+        },
+        {
+          title: 'Support',
+          links: [
+            { text: 'FAQ', path: '/faq' },
+            { text: 'Contact', path: '/contact' },
+          ],
+        },
+        {
+          title: 'About',
+          links: [
+            { text: 'About Shotera', path: '/about' },
+            { text: 'All releases', path: '/versions' },
+          ],
+        },
+      ],
+      legal: [
+        { text: 'Terms', path: '/terms' },
+        { text: 'Privacy', path: '/privacy' },
+      ],
+      rights: '© 2026 Shotera',
+      system: 'Windows 10/11+ · 15 UI languages',
+    },
+  },
+
+  'zh-cn': {
+    home: 'Shotera — 更快、更聪明的截图与录屏工具',
+    nav: {
+      features: '功能',
+      download: '下载',
+      versions: '版本',
+      faq: '常见问题',
+      moreVersions: '更多版本',
+      cta: '免费下载',
+    },
+    hero: {
+      badge: '新增',
+      announce: 'Lite 版：安装包仅约 17 MB',
+      modes: [
+        { key: 'capture', label: '截图', caption: '鼠标划过即自动识别窗口与界面元素，秒锁要截的内容。' },
+        { key: 'pin', label: '贴图', caption: '截图钉在屏幕最上层，缩放、半透明、多图并排对照。' },
+        { key: 'record', label: '录屏', caption: '720p–4K 高帧率录制，光标点击高亮，一键导出 MP4 或 GIF。' },
+        { key: 'ai', label: 'AI 能力', caption: 'AI 抠图、擦图、离线 OCR —— 全程本地处理。' },
+      ],
+      h1: [[{ text: '截图、录屏、' }, { text: 'AI 能力', hl: true }], [{ text: '一个快捷键全搞定' }]],
+      sub: '为效率而生的桌面截图与录屏工具：截图标注、滚动截图、录屏导出 GIF、AI 抠图、AI 擦图、离线 OCR、图片翻译、贴图钉图——不用离开手头的事。',
+      primary: '免费下载（Windows）',
+      secondary: '看看怎么用',
+      metaStrong: 'Windows 10/11+',
+      metaRest: '安装版 / 便携版 / MSI',
+      store: '也可从 Microsoft Store 获取',
+    },
+    trust: [
+      { value: '15 种', label: '界面语言' },
+      { value: '4.9 / 5', label: '好评率' },
+      { value: '100%', label: '离线 AI 处理' },
+      { value: '<0.1s', label: '快捷键唤起' },
+    ],
+    modesSection: {
+      eyebrow: '三种模式',
+      title: '一个快捷键，搞定所有截图任务',
+      lead: '截图、贴图、录屏、文字识别、抠图、翻译，无需再打开其他软件，同一窗口即可完成全部处理。',
+      cards: [
+        {
+          icon: 'capture',
+          title: '智能截图',
+          one: '一键区域、窗口、全屏截图，自动检测窗口与界面元素。',
+          steps: ['按下快捷键唤起', '鼠标划过自动识别边界', '标注、复制或保存'],
+          bestFor: '日常沟通与文档配图',
+        },
+        {
+          icon: 'pin',
+          title: '贴图 · 钉图',
+          one: '把截图钉在屏幕最上层，随时对照参考，多图并排。',
+          steps: ['截图后一键钉屏', '缩放、半透明对照', '边看边做，不切窗口'],
+          bestFor: '对照参考与多图并排',
+        },
+        {
+          icon: 'record',
+          title: '录屏 & GIF',
+          one: '720p 到 4K 超清录制、30 / 60 帧，且无录制时长限制。',
+          steps: ['选区域开始录制', '光标与点击高亮', '导出 MP4 或 GIF'],
+          bestFor: '教程演示与 Bug 复现',
+        },
+      ],
+    },
+    features: [
+      {
+        eyebrow: '截图',
+        title: '一按就到手，边界刚刚好',
+        lead: '快捷键随手唤起，截图、标注、复制一气呵成，把打断思路的操作降到最低。',
+        rows: ['鼠标划过即吸附窗口与元素边界，无需手动框选', '箭头 / 方框 / 序号 / 文字 / 高亮 / 马赛克，截完即标'],
+        items: [
+          { title: '表情贴纸与 Emoji', note: '让截图更生动' },
+          { title: '放大镜', note: '局部放大关键细节' },
+          { title: '序号标注', note: '引导阅读顺序' },
+          { title: '马赛克与高亮', note: '隐私与重点两不误' },
+        ],
+        image: 'capture',
+      },
+      {
+        eyebrow: '滚动截图',
+        title: '页面再长，也一张装下',
+        lead: '长网页、长聊天记录、整份文档——从上到下一张截全。',
+        rows: ['自动滚动，或自己手动滚，每一帧都被捕捉', '相邻帧自动匹配与融合，成品长图看不出接缝'],
+        items: [
+          { title: '拼接实时可见', note: '凑齐整页就停手' },
+          { title: '拼接看不出接缝', note: '像一页连续的长图' },
+          { title: '长聊天记录', note: '整段对话一张装下' },
+          { title: '复制或存盘', note: '直接进文档与 Issue' },
+        ],
+        image: 'longshot',
+        reversed: true,
+      },
+      {
+        eyebrow: '录屏',
+        title: '4K 录屏，想录多久录多久',
+        lead: '把「说不清」的操作，变成一段一看就懂的演示。',
+        rows: ['720p / 1080p / 2K / 4K，30 或 60 帧，无录制时长限制', '压成体积小巧的 GIF，贴进文档与 Issue 即看'],
+        items: [
+          { title: '记录光标与点击', note: '每步演示都清晰' },
+          { title: 'MP4 还是 GIF', note: '按需兼顾画质与体积' },
+          { title: '4K 超清', note: '高分辨率屏也够用' },
+          { title: '历史记录', note: '随时翻回上一次录制' },
+        ],
+        image: 'recording',
+      },
+      {
+        eyebrow: 'AI 能力',
+        title: 'AI 帮你把截图收尾',
+        lead: 'AI 抠图、擦图、OCR 全程本地运行，隐私与智能兼得。',
+        rows: ['人像、商品、Logo：几秒钟拿到透明底，不上传、不等待', '离线 OCR 把截图里的字变成可复制的文本'],
+        items: [
+          { title: '一键抠出主体', note: '点击即得透明背景' },
+          { title: '擦掉不该有的东西', note: 'AI 自动补全背景' },
+          { title: '离线 OCR', note: '中英混排、代码、表格' },
+          { title: '图片翻译', note: '外文截图一看就懂' },
+        ],
+        image: 'ai',
+      },
+    ],
+    cta: {
+      eyebrow: '免费开始',
+      title: '现在就让截图变得又快又聪明',
+      lead: '免费下载，几秒安装，立刻上手。把每天都要做的「截个图」，交给更懂你的工具。',
+      primary: '免费下载',
+      secondary: '更多版本',
+      note: '提供标准版与 Lite 版；支持 Windows 10/11 及以上。安装版 / 便携版 / MSI 可选。',
+    },
+    footer: {
+      blurb: '更快、更聪明的截图与录屏工具——截图、钉图、识别，一个快捷键全搞定。',
+      cols: [
+        {
+          title: '产品',
+          links: [
+            { text: '功能', path: '/', hash: 'features' },
+            { text: '版本', path: '/versions' },
+            { text: '更新日志', path: '/changelog' },
+          ],
+        },
+        {
+          title: '支持',
+          links: [
+            { text: '常见问题', path: '/faq' },
+            { text: '联系我们', path: '/contact' },
+          ],
+        },
+        {
+          title: '关于',
+          links: [
+            { text: '关于 Shotera', path: '/about' },
+            { text: '全部版本', path: '/versions' },
+          ],
+        },
+      ],
+      legal: [
+        { text: '服务条款', path: '/terms' },
+        { text: '隐私政策', path: '/privacy' },
+      ],
+      rights: '© 2026 Shotera',
+      system: 'Windows 10/11+ · 15 种界面语言',
+    },
+  },
+};

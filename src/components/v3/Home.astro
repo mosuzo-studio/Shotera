@@ -1,0 +1,284 @@
+---
+import { getImage } from 'astro:assets';
+import { localizedPath } from '~/i18n/utils';
+import type { Lang } from '~/i18n/utils';
+import { v3Copy, type V3Lang } from './copy';
+
+import captureDemo from '~/assets/images/capture-demo.png';
+import longshotDemo from '~/assets/images/longshot-demo.png';
+import recordingDemo from '~/assets/images/recording-demo.png';
+import aiDemo from '~/assets/images/ai-demo.png';
+import heroImage from '~/assets/images/hero-image.png';
+
+export interface Props {
+  lang: Lang;
+  downloadUrl: string;
+}
+
+const { lang, downloadUrl } = Astro.props;
+const key = (lang === 'zh-cn' ? 'zh-cn' : 'en') as V3Lang;
+const c = v3Copy[key];
+const l = (path: string) => localizedPath(lang, path);
+
+const shotSources = {
+  capture: captureDemo,
+  pin: heroImage,
+  record: recordingDemo,
+  ai: aiDemo,
+} as const;
+
+const featureSources = {
+  capture: captureDemo,
+  longshot: longshotDemo,
+  recording: recordingDemo,
+  ai: aiDemo,
+} as const;
+
+type ShotKey = keyof typeof shotSources;
+type FeatureKey = keyof typeof featureSources;
+
+const heroShots: Record<string, { src: string; width: number; height: number }> = {};
+for (const shotKey of Object.keys(shotSources) as ShotKey[]) {
+  const optimized = await getImage({ src: shotSources[shotKey], width: 1200, format: 'webp' });
+  heroShots[shotKey] = {
+    src: optimized.src,
+    width: optimized.attributes.width,
+    height: optimized.attributes.height,
+  };
+}
+
+const featureImages: Record<string, { src: string; width: number; height: number }> = {};
+for (const featureKey of Object.keys(featureSources) as FeatureKey[]) {
+  const optimized = await getImage({ src: featureSources[featureKey], width: 920, format: 'webp' });
+  featureImages[featureKey] = {
+    src: optimized.src,
+    width: optimized.attributes.width,
+    height: optimized.attributes.height,
+  };
+}
+
+const initialMode = c.hero.modes[0];
+const initialShot = heroShots[initialMode.key];
+const shotData = JSON.stringify({
+  shots: heroShots,
+  modes: c.hero.modes.map((mode) => ({ key: mode.key, caption: mode.caption })),
+});
+---
+
+<section class="v3-stage">
+  <div class="v3-sky">
+    <span class="v3-sun"></span>
+    <i class="v3-cloud c1"></i><i class="v3-cloud c2"></i><i class="v3-cloud c3"></i><i class="v3-cloud c4"></i>
+    <i class="v3-cloud c5"></i>
+
+    <div class="v3-announce">
+      <b>{c.hero.badge}</b><span>{c.hero.announce}</span><em aria-hidden="true">→</em>
+    </div>
+
+    <div class="v3-modes" role="tablist" aria-label={c.nav.features}>
+      {
+        c.hero.modes.map((mode, index) => (
+          <button type="button" role="tab" aria-selected={index === 0 ? 'true' : 'false'} data-v3-mode={mode.key}>
+            {mode.label}
+          </button>
+        ))
+      }
+    </div>
+
+    <h1 class="v3-h1">
+      {
+        c.hero.h1.map((line, lineIndex) => (
+          <>
+            {line.map((segment) => (segment.hl ? <span class="hl">{segment.text}</span> : <span>{segment.text}</span>))}
+            {lineIndex < c.hero.h1.length - 1 && <br />}
+          </>
+        ))
+      }
+    </h1>
+
+    <p class="v3-sub">{c.hero.sub}</p>
+
+    <div class="v3-cta">
+      <a class="v3-btn v3-btn-main" href={downloadUrl}><i></i>{c.hero.primary}</a>
+      <a class="v3-btn v3-btn-sub" href={l('/#features')}>{c.hero.secondary} <em aria-hidden="true">▾</em></a>
+    </div>
+
+    <p class="v3-meta"><b>{c.hero.metaStrong}</b> · {c.hero.metaRest}</p>
+    <p class="v3-ontop"><i></i>{c.hero.store}</p>
+
+    <figure class="v3-shot">
+      <div class="v3-screen">
+        <img
+          id="v3-shot"
+          src={initialShot.src}
+          width={initialShot.width}
+          height={initialShot.height}
+          alt={initialMode.label}
+        />
+      </div>
+      <figcaption class="v3-shot-cap" id="v3-shot-cap">{initialMode.caption}</figcaption>
+    </figure>
+    <div class="v3-tail"></div>
+  </div>
+</section>
+
+<div class="v3-trust">
+  <div class="v3-wrap v3-trust-row">
+    {
+      c.trust.map((item) => (
+        <span>
+          <b>{item.value}</b> {item.label}
+        </span>
+      ))
+    }
+  </div>
+</div>
+
+<section class="v3-section v3-center" id="features">
+  <div class="v3-wrap">
+    <div class="v3-eyebrow">{c.modesSection.eyebrow}</div>
+    <h2 class="v3-h2">{c.modesSection.title}</h2>
+    <p class="v3-lead">{c.modesSection.lead}</p>
+
+    <div class="v3-cards">
+      {
+        c.modesSection.cards.map((card) => (
+          <div class="v3-mcard">
+            <div class="v3-chip">
+              {card.icon === 'capture' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16M4 12h16" />
+                </svg>
+              )}
+              {card.icon === 'pin' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9.5 3h5l-.8 5.2 3.3 3.3v2H7v-2l3.3-3.3L9.5 3Z" />
+                  <path d="M12 13.5V21" />
+                </svg>
+              )}
+              {card.icon === 'record' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="6" width="13" height="12" rx="2" />
+                  <path d="M16 11.5 21 8.5v7L16 12.5" />
+                </svg>
+              )}
+            </div>
+            <h3>{card.title}</h3>
+            <p class="v3-one">{card.one}</p>
+            <ol class="v3-steps">
+              {card.steps.map((step) => (
+                <li>{step}</li>
+              ))}
+            </ol>
+            <p class="v3-bf">
+              <b>BEST FOR</b>
+              {card.bestFor}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+{
+  c.features.map((section) => (
+    <section class="v3-section is-tight">
+      <div class={`v3-wrap v3-feat${section.reversed ? ' is-rev' : ''}`}>
+        <div class="v3-txt">
+          <div class="v3-eyebrow">{section.eyebrow}</div>
+          <h2 class="v3-h2">{section.title}</h2>
+          <p class="v3-lead">{section.lead}</p>
+          <div class="v3-rows">
+            {section.rows.map((row) => (
+              <div class="v3-row">
+                <i />
+                <span>{row}</span>
+                <em aria-hidden="true">›</em>
+              </div>
+            ))}
+          </div>
+          <div class="v3-list2">
+            {section.items.map((item) => (
+              <div class="v3-it">
+                <div class="v3-d">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m5 13 4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <b>{item.title}</b>
+                  <i>{item.note}</i>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="v3-panel">
+          <img
+            src={featureImages[section.image].src}
+            width={featureImages[section.image].width}
+            height={featureImages[section.image].height}
+            alt={section.title}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+  ))
+}
+
+<section class="v3-section is-tight" id="download">
+  <div class="v3-wrap">
+    <div class="v3-dl">
+      <span class="v3-sun"></span>
+      <div class="v3-eyebrow">{c.cta.eyebrow}</div>
+      <h2 class="v3-h2">{c.cta.title}</h2>
+      <p class="v3-lead" style="margin:0 auto 28px">{c.cta.lead}</p>
+      <div class="v3-cta">
+        <a class="v3-btn v3-btn-main" href={downloadUrl}><i></i>{c.cta.primary}</a>
+        <a class="v3-btn v3-btn-sub" href={l('/versions')}>{c.cta.secondary}</a>
+      </div>
+      <div class="v3-other"><i></i>{c.cta.note}</div>
+    </div>
+  </div>
+</section>
+
+<script is:inline type="application/json" id="v3-shot-data" set:html={shotData} />
+<script>
+  function initV3ShotSwitcher() {
+    const dataEl = document.getElementById('v3-shot-data');
+    const img = document.getElementById('v3-shot') as HTMLImageElement | null;
+    const caption = document.getElementById('v3-shot-cap');
+    if (!dataEl || !img || !caption || dataEl.dataset.wired === '1') return;
+    dataEl.dataset.wired = '1';
+
+    const data = JSON.parse(dataEl.textContent || '{}') as {
+      shots: Record<string, { src: string; width: number; height: number }>;
+      modes: { key: string; caption: string }[];
+    };
+
+    const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-v3-mode]'));
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const modeKey = button.dataset.v3Mode;
+        if (!modeKey) return;
+        buttons.forEach((other) => other.setAttribute('aria-selected', String(other === button)));
+
+        const shot = data.shots[modeKey];
+        if (shot) {
+          img.src = shot.src;
+          img.width = shot.width;
+          img.height = shot.height;
+        }
+
+        const mode = data.modes.find((entry) => entry.key === modeKey);
+        if (mode) caption.textContent = mode.caption;
+      });
+    });
+  }
+
+  initV3ShotSwitcher();
+  document.addEventListener('astro:page-load', initV3ShotSwitcher);
+</script>

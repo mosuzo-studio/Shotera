@@ -1,0 +1,43 @@
+---
+/**
+ * v3 (Cap-flavoured) page shell.
+ *
+ * Same slot interface as `PageLayout`, but renders the v3 header/footer inside a
+ * `.v3` wrapper. Used by the EN and zh-CN pages for now; the other locales keep
+ * the AstroWind look until they are migrated too.
+ */
+import Layout from '~/layouts/Layout.astro';
+import Header from '~/components/v3/Header.astro';
+import Footer from '~/components/v3/Footer.astro';
+
+import { defaultLang, type Lang } from '~/i18n/utils';
+import { getSetupDownloadUrl } from '~/utils/download';
+
+import type { MetaData } from '~/types';
+
+import '~/assets/styles/v3-home.css';
+
+export interface Props {
+  metadata?: MetaData;
+  lang?: Lang;
+}
+
+const { metadata, lang: explicitLang } = Astro.props;
+
+const lang = explicitLang ?? ((Astro.currentLocale ?? defaultLang) as Lang);
+const downloadUrl = await getSetupDownloadUrl();
+---
+
+<Layout metadata={metadata} language={lang}>
+  <div class="v3">
+    <slot name="header">
+      <Header lang={lang} downloadUrl={downloadUrl} />
+    </slot>
+    <main>
+      <slot />
+    </main>
+    <slot name="footer">
+      <Footer lang={lang} />
+    </slot>
+  </div>
+</Layout>
