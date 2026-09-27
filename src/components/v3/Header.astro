@@ -203,4 +203,27 @@ const localeEntries = Object.entries(languages) as [Lang, string][];
 
   initV3LangMenu();
   document.addEventListener('astro:page-load', initV3LangMenu);
+
+  function initV3LangHash() {
+    const menu = document.querySelector<HTMLElement>('[data-v3-lang-menu]');
+    if (!menu || menu.dataset.hashWired === '1') return;
+    menu.dataset.hashWired = '1';
+
+    /* A fragment never reaches the build, so the rendered language links carry
+       none and a switch from `/#features` would land at the top of the
+       translated page. Re-attach the live fragment to the link about to be
+       followed - in the capture phase, before the router reads the href. */
+    menu.addEventListener(
+      'click',
+      (event) => {
+        const link = (event.target as Element | null)?.closest<HTMLAnchorElement>('a');
+        if (!link || !window.location.hash) return;
+        link.setAttribute('href', link.href.split('#')[0] + window.location.hash);
+      },
+      true
+    );
+  }
+
+  initV3LangHash();
+  document.addEventListener('astro:page-load', initV3LangHash);
 </script>
