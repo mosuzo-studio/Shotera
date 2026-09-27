@@ -8,7 +8,7 @@
 
 export type V3Lang = 'en' | 'zh-cn';
 
-export type V3ShotKey = 'capture' | 'pin' | 'record' | 'ai';
+export type V3ShotKey = 'capture' | 'long' | 'pin' | 'record' | 'ai';
 
 export interface V3Segment {
   text: string;
@@ -89,6 +89,11 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
           caption: 'Windows and UI elements are detected as you hover — the right region, first try.',
         },
         {
+          key: 'long',
+          label: 'Scrolling',
+          caption: 'Long pages and long chats — stitched into one image, automatically or by hand.',
+        },
+        {
           key: 'pin',
           label: 'Pin',
           caption: 'Pin captures on top of your screen — scale, fade, compare side by side.',
@@ -131,14 +136,14 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         },
         {
           icon: 'pin',
-          title: 'Pin to screen',
+          title: 'Pin to Desktop',
           one: 'Float a capture on top of everything else for as long as you need it.',
           steps: ['Pin right after capturing', 'Scale, fade, compare', 'Work without window juggling'],
           bestFor: 'reference and side-by-side work',
         },
         {
           icon: 'record',
-          title: 'Recording & GIF',
+          title: 'Recording',
           one: '720p through 4K at 30 or 60 fps, with no recording time limit.',
           steps: ['Pick a region and record', 'Show cursor and clicks', 'Export MP4 or GIF'],
           bestFor: 'tutorials and bug reports',
@@ -153,12 +158,13 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         rows: [
           'Hover, and Shotera locks onto the window or element underneath',
           'Arrows, boxes, text, step numbers, emoji, magnifier — annotate the moment you capture',
+          'Two ways to finish: copy straight to the clipboard, or annotate right away (Elegant / Live annotate)',
         ],
         items: [
           { title: 'Emoji stickers', note: 'say more in one click' },
           { title: 'Magnifier', note: 'zoom into the detail' },
           { title: 'Step numbers', note: 'guide the reading order' },
-          { title: 'Mosaic & highlight', note: 'privacy and emphasis' },
+          { title: 'Mosaic & highlighter', note: 'privacy and emphasis' },
         ],
         image: 'capture',
       },
@@ -270,12 +276,13 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       announce: 'Lite 版：安装包仅约 17 MB',
       modes: [
         { key: 'capture', label: '截图', caption: '鼠标划过即自动识别窗口与界面元素，秒锁要截的内容。' },
+        { key: 'long', label: '长截图', caption: '长网页、长聊天记录——自动滚动拼接，一张装下。' },
         { key: 'pin', label: '贴图', caption: '截图钉在屏幕最上层，缩放、半透明、多图并排对照。' },
         { key: 'record', label: '录屏', caption: '720p–4K 高帧率录制，光标点击高亮，一键导出 MP4 或 GIF。' },
         { key: 'ai', label: 'AI 能力', caption: 'AI 抠图、擦图、离线 OCR —— 全程本地处理。' },
       ],
       h1: [[{ text: '截图、录屏、' }, { text: 'AI 能力', hl: true }], [{ text: '一个快捷键全搞定' }]],
-      sub: '为效率而生的桌面截图与录屏工具：截图标注、滚动截图、录屏导出 GIF、AI 抠图、AI 擦图、离线 OCR、图片翻译、贴图钉图——不用离开手头的事。',
+      sub: '为效率而生的桌面截图与录屏工具：截图标注、长截图、录屏导出 GIF、AI 抠图、AI 擦图、离线 OCR、图片翻译、贴图——不用离开手头的事。',
       primary: '免费下载（Windows）',
       secondary: '看看怎么用',
       metaStrong: 'Windows 10/11+',
@@ -302,14 +309,14 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         },
         {
           icon: 'pin',
-          title: '贴图 · 钉图',
+          title: '贴图',
           one: '把截图钉在屏幕最上层，随时对照参考，多图并排。',
           steps: ['截图后一键钉屏', '缩放、半透明对照', '边看边做，不切窗口'],
           bestFor: '对照参考与多图并排',
         },
         {
           icon: 'record',
-          title: '录屏 & GIF',
+          title: '录屏',
           one: '720p 到 4K 超清录制、30 / 60 帧，且无录制时长限制。',
           steps: ['选区域开始录制', '光标与点击高亮', '导出 MP4 或 GIF'],
           bestFor: '教程演示与 Bug 复现',
@@ -321,17 +328,21 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         eyebrow: '截图',
         title: '一按就到手，边界刚刚好',
         lead: '快捷键随手唤起，截图、标注、复制一气呵成，把打断思路的操作降到最低。',
-        rows: ['鼠标划过即吸附窗口与元素边界，无需手动框选', '箭头 / 方框 / 序号 / 文字 / 高亮 / 马赛克，截完即标'],
+        rows: [
+          '鼠标划过即吸附窗口与元素边界，无需手动框选',
+          '箭头 / 方框 / 序号 / 文字 / 荧光笔 / 马赛克，截完即标',
+          '两种完成模式：优雅简洁（截完即复制）或所见即所得（立即打开标注工具栏）',
+        ],
         items: [
           { title: '表情贴纸与 Emoji', note: '让截图更生动' },
           { title: '放大镜', note: '局部放大关键细节' },
           { title: '序号标注', note: '引导阅读顺序' },
-          { title: '马赛克与高亮', note: '隐私与重点两不误' },
+          { title: '马赛克与荧光笔', note: '隐私与重点两不误' },
         ],
         image: 'capture',
       },
       {
-        eyebrow: '滚动截图',
+        eyebrow: '长截图',
         title: '页面再长，也一张装下',
         lead: '长网页、长聊天记录、整份文档——从上到下一张截全。',
         rows: ['自动滚动，或自己手动滚，每一帧都被捕捉', '相邻帧自动匹配与融合，成品长图看不出接缝'],
@@ -380,7 +391,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       note: '提供标准版与 Lite 版；支持 Windows 10/11 及以上。安装版 / 便携版 / MSI 可选。',
     },
     footer: {
-      blurb: '更快、更聪明的截图与录屏工具——截图、钉图、识别，一个快捷键全搞定。',
+      blurb: '更快、更聪明的截图与录屏工具——截图、贴图、识别，一个快捷键全搞定。',
       cols: [
         {
           title: '产品',

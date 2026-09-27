@@ -30,7 +30,7 @@ const groups = [
     items: [
       {
         q: 'OCR 和 AI 抠图需要联网吗？',
-        a: '不需要。OCR 文字识别、AI 抠图、AI 擦图均为离线本地运行，不联网、不上传，隐私更有保障。图片翻译功能走云端 API，遵守对应云厂商的隐私协议。',
+        a: '不需要。离线 OCR、AI 抠图、AI 擦图均在本地运行，不上传，隐私更有保障。图片翻译功能走云端 API，遵守对应云厂商的隐私协议。',
       },
       {
         q: '完全断网还能用吗？',
@@ -92,8 +92,7 @@ const linkClass = 'font-semibold text-blue-700 underline underline-offset-4 dark
         }
 
         <p class="text-muted mt-12">
-          还有疑问？<a class={linkClass} href={localizedPath(lang, '/contact')}>联系我们</a
-          >，通常 24 个工作小时内回复。
+          还有疑问？<a class={linkClass} href={localizedPath(lang, '/contact')}>联系我们</a>，通常 24 个工作小时内回复。
         </p>
       </div>
     </div>

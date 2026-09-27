@@ -24,7 +24,7 @@ The following AI features run **entirely on your device**, with no internet conn
 | Feature | Processing | Privacy Impact |
 |---------|-----------|----------------|
 | **AI Background Removal** | On-device | Your images never leave your computer |
-| **AI Eraser** (object removal / inpainting) | On-device | Fully offline, zero data transmission |
+| **AI Eraser** (object removal / watermark removal) | On-device | Fully offline, zero data transmission |
 | **Offline OCR** (text recognition) | On-device | Recognition happens entirely locally |
 
 This means even if you're working with confidential contracts, personal IDs, medical records, or other highly sensitive content, there is no risk of data leakage — because the data never left your device in the first place.

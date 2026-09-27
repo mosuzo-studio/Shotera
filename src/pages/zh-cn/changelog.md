@@ -34,7 +34,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 **发布日期:** 2026-09-24
 
-Lite 版、长截图、可缩放钉图，以及更轻量的构建。
+Lite 版、长截图、可缩放贴图，以及更轻量的构建。
 
 **🆚 Lite 版与标准版差异：** 详见[版本对比](/zh-cn/versions)。
 
@@ -43,7 +43,7 @@ Lite 版、长截图、可缩放钉图，以及更轻量的构建。
 - 新增 Lite 版本：仅 17MB 安装包，包含核心截图与标注功能。设置页升级横幅链接到官网完整版。
 - [Shotera 官方网站](https://shotera.mosuzo.com/)内容与样式调整。
 - 新增长截图（预览版，灰度测试）：自动滚动与手动滚动双模式，实时预览小窗。智能拼接算法检测到顶边界并处理混合布局。首次使用教学提示引导操作。加入内测团队体验。
-- 钉图窗口增强：双击可在原尺寸与缩略图+关闭模式之间切换。拖拽边缘或四角调整尺寸，锁定宽高比。原生右键菜单突破窗口边界。工具栏显隐状态跨会话持久化 ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14))。
+- 贴图窗口增强：双击可在原尺寸与缩略图+关闭模式之间切换。拖拽边缘或四角调整尺寸，锁定宽高比。原生右键菜单突破窗口边界。工具栏显隐状态跨会话持久化 ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14))。
 - AI 抠图模型切换为内置 u2netp，速度极快。rmbg-1.4 改为按需下载，首次使用附引导说明。
 - 编辑器新增打印命令：右键菜单与文件菜单可打开系统打印对话框 ([#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8))。
 - 编辑器右键菜单可打开文件所在文件夹并高亮选中当前文件 ([#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10))。
@@ -62,15 +62,15 @@ Lite 版、长截图、可缩放钉图，以及更轻量的构建。
 **🐞 问题修复**
 
 - 修复双屏场景下标注窗口初始定位错误。
-- 修复钉图窗口拖拽缩放比例计算错误与边框抖动。
-- 修复钉图窗口双击行为选中后不生效、切不回原尺寸。
+- 修复贴图窗口拖拽缩放比例计算错误与边框抖动。
+- 修复贴图窗口双击行为选中后不生效、切不回原尺寸。
 - 修复长截图拼接失败弹窗被穿透规则挡住点击。
 - 修复编辑器加载图片后凭空出现滚动条与缩放比显示为 0% 或 1%。
 - 修复编辑器标题栏叠出多个图片名。
 
 **🙏 致谢名单**
 
-感谢社区成员提出的 issue 反馈与功能建议，这些建议塑造了本次版本。长截图与钉图窗口增强由用户反馈驱动。
+感谢社区成员提出的 issue 反馈与功能建议，这些建议塑造了本次版本。长截图与贴图窗口增强由用户反馈驱动。
 
 ---
 
@@ -78,7 +78,7 @@ Lite 版、长截图、可缩放钉图，以及更轻量的构建。
 
 **发布日期:** 2026-09-21
 
-功能介绍窗、二维码识别、GIF 动图播放，以及更多图片格式支持。
+功能介绍窗、二维码识别、GIF 播放，以及更多图片格式支持。
 
 **✨ 新增功能**
 
@@ -90,7 +90,7 @@ Lite 版、长截图、可缩放钉图，以及更轻量的构建。
 - 状态栏显示缩放比、图片尺寸、文件体积与文件路径。路径支持隐藏、面包屑、完整三档显示。
 - 编辑器标题栏显示当前图片名。画布右键菜单可打开文件所在目录并高亮选中当前图片 ([#1](https://github.com/mosuzo-studio/Shotera/issues/1))。
 - 覆盖保存前弹确认弹窗，勾选「以后不再提醒」可跳过。
-- 钉图窗口：右键菜单可隐藏右上角工具栏，设置会被记住 ([#4](https://github.com/mosuzo-studio/Shotera/issues/4))。
+- 贴图窗口：右键菜单可隐藏右上角工具栏，设置会被记住 ([#4](https://github.com/mosuzo-studio/Shotera/issues/4))。
 
 **🚀 改进优化**
 
