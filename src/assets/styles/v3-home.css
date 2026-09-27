@@ -978,3 +978,34 @@
     max-height: 380px;
   }
 }
+
+/* ---------- inner pages: map the AstroWind tokens onto the v3 palette ----------
+   The EN and zh-CN inner pages (about, versions, faq, changelog, privacy, terms)
+   still use the AstroWind widgets; re-pointing these variables inside `.v3` makes
+   their colours, fonts and radii follow the v3 language. The light values are
+   forced even under `.dark`, because the v3 pages are light-only by design. */
+.v3,
+.dark .v3 {
+  --aw-font-sans: 'Instrument Sans';
+  --aw-font-serif: 'Instrument Sans';
+  --aw-font-heading: 'Instrument Sans';
+
+  --aw-color-primary: #0a7cff;
+  --aw-color-secondary: #0d44e8;
+  --aw-color-accent: #3689fb;
+
+  --aw-color-text-heading: #14161c;
+  --aw-color-text-default: rgba(22, 22, 24, 0.86);
+  --aw-color-text-muted: rgba(22, 22, 24, 0.6);
+  --aw-color-bg-page: #f2f2f2;
+}
+
+.v3 ::selection {
+  background-color: rgba(10, 124, 255, 0.18);
+}
+
+/* Keep the buttons in the same shape as the v3 homepage ones. */
+.v3 .btn {
+  border-radius: 12px;
+  font-weight: 550;
+}
