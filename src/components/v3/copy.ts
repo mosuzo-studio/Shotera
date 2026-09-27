@@ -145,13 +145,13 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       { value: '<0.1s', label: 'to summon' },
     ],
     modesSection: {
-      eyebrow: 'Three modes',
+      eyebrow: 'Three everyday flows',
       title: 'One shortcut for every capture task',
-      lead: 'Capture, pin, record, read text, cut out, translate — the everyday work happens in one window, without opening anything else.',
+      lead: 'Capture, pin, record and GIF — the three jobs you reach for all day, behind one shortcut.',
       cards: [
         {
           icon: 'capture',
-          title: 'Smart capture',
+          title: 'Capture',
           one: 'Region, window or full screen in one keystroke — windows and UI elements are detected for you.',
           steps: ['Press the shortcut', 'Hover to snap the bounds', 'Annotate, copy or save'],
           bestFor: 'everyday sharing and docs',
@@ -165,7 +165,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         },
         {
           icon: 'record',
-          title: 'Recording',
+          title: 'Recording & GIF',
           one: '720p through 4K at 30 or 60 fps, with no recording time limit.',
           steps: ['Pick a region and record', 'Show cursor and clicks', 'Export MP4 or GIF'],
           bestFor: 'tutorials and bug reports',
@@ -345,13 +345,13 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       { value: '<0.1s', label: '快捷键唤起' },
     ],
     modesSection: {
-      eyebrow: '三种模式',
+      eyebrow: '日常三件事',
       title: '一个快捷键，搞定所有截图任务',
-      lead: '截图、贴图、录屏、文字识别、抠图、翻译，无需再打开其他软件，同一窗口即可完成全部处理。',
+      lead: '截图、贴图、录屏与 GIF——每天用得最多的三件事，一个快捷键全都在。',
       cards: [
         {
           icon: 'capture',
-          title: '智能截图',
+          title: '截图',
           one: '一键区域、窗口、全屏截图，自动检测窗口与界面元素。',
           steps: ['按下快捷键唤起', '鼠标划过自动识别边界', '标注、复制或保存'],
           bestFor: '日常沟通与文档配图',
@@ -365,7 +365,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         },
         {
           icon: 'record',
-          title: '录屏',
+          title: '录屏 & GIF',
           one: '720p 到 4K 超清录制、30 / 60 帧，且无录制时长限制。',
           steps: ['选区域开始录制', '光标与点击高亮', '导出 MP4 或 GIF'],
           bestFor: '教程演示与 Bug 复现',

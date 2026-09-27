@@ -35,7 +35,7 @@
 
 英文口径：站点名词沿用 App 的英文标签（Title Case，如 Pin to Desktop / AI Cutout / Scrolling Capture）；正文里可用句首大写与短形式（pin、AI cutout、AI eraser）；changelog 保留 App 自己的英文说法（long screenshot、pin window）。中文侧同理：名词唯一（贴图 / 长截图 / AI 擦图 / 离线 OCR），动词自由。
 
-**录屏与 GIF 的呈现规则**：App 里这是模式栏的两个独立模式（`modebar.rec` = 录屏、`modebar.gif` = GIF 录制），两个名字都保留；但**站点的标题位（首屏胶囊、模式卡标题、页脚链接）只写「录屏」**，GIF 放到正文里讲（如「一键导出 MP4 或 GIF」）。**例外（2026-09-28 起，仅此一处）**：关于页 L1「核心能力」里的卡片标题写作「录屏 & GIF / Recording & GIF」。
+**录屏与 GIF 的呈现规则**：App 里这是模式栏的两个独立模式（`modebar.rec` = 录屏、`modebar.gif` = GIF 录制），两个名字都保留；但**站点的标题位（首屏胶囊、模式卡标题、页脚链接）只写「录屏」**，GIF 放到正文里讲（如「一键导出 MP4 或 GIF」）。**例外（2026-09-28 起，仅两处）**：关于页 L1「核心能力」的卡片、首页「日常三件事」区块的录屏卡，标题写作「录屏 & GIF / Recording & GIF」。
 
 「离线 OCR」的措辞边界：可以说 OCR、AI 抠图、AI 擦图**本地处理、不上传**；**不得**泛化成「截图和录屏数据都不会离开电脑」——图片翻译会把图像发给第三方服务（详见 §5）。
 
