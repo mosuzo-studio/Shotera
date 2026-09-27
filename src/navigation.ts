@@ -68,10 +68,9 @@ export const getFooterData = async (lang: Lang) => {
       { text: t('footer.terms'), href: legal('/terms') },
       { text: t('footer.privacy'), href: legal('/privacy') },
     ],
+    // Brand accounts (X / Bilibili / WeChat) join this list once they are live;
+    // the site does not ship links that go nowhere.
     socialLinks: [
-      { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-      { ariaLabel: 'Bilibili', icon: 'tabler:brand-bilibili', href: '#' },
-      { ariaLabel: 'WeChat', icon: 'tabler:brand-wechat', href: '#' },
       { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
       { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/mosuzo-studio/Shotera' },
     ],

@@ -33,6 +33,32 @@ export interface V3FeatureSection {
   reversed?: boolean;
 }
 
+export interface V3Channel {
+  key: string;
+  name: string;
+  /** Shown under the name once the channel is live. */
+  handle?: string;
+  note: string;
+  icon: string;
+  /** No href yet = the channel is not open, and the card renders as a placeholder. */
+  href?: string;
+  tint: string;
+}
+
+export interface V3ChannelGroup {
+  key: string;
+  title: string;
+  note: string;
+  channels: V3Channel[];
+}
+
+export interface V3MailTemplate {
+  subject: string;
+  /** Plain text, \n separated; the component turns it into a mailto body. */
+  body: string;
+  copied: string;
+}
+
 export interface V3Copy {
   home: string;
   nav: {
@@ -70,6 +96,17 @@ export interface V3Copy {
   modesSection: { eyebrow: string; title: string; lead: string; cards: V3ModeCard[] };
   features: V3FeatureSection[];
   cta: { eyebrow: string; title: string; lead: string; primary: string; secondary: string; note: string };
+  contact: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    replyNote: string;
+    faqNote: string;
+    faqLink: string;
+    soon: string;
+    mail: V3MailTemplate;
+    groups: V3ChannelGroup[];
+  };
   footer: {
     blurb: string;
     cols: { title: string; links: { text: string; path: string; hash?: string }[] }[];
@@ -265,6 +302,95 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       secondary: 'More versions',
       note: 'Standard and Lite editions; Windows 10/11+. Installer / portable / MSI available.',
     },
+    contact: {
+      eyebrow: 'Contact',
+      title: 'Got a question or an idea? Tell us.',
+      lead: 'Hit a problem, want a feature, or just want to say hi — pick whichever channel suits you.',
+      replyNote: 'Email and GitHub are read every day; we usually reply within 24 business hours.',
+      faqNote: 'Stuck on something? Most answers are already in the FAQ.',
+      faqLink: 'Read the FAQ',
+      soon: 'Coming soon',
+      mail: {
+        subject: 'Shotera feedback — ',
+        body: [
+          'Hi,',
+          '',
+          '(Describe the problem you ran into, or the feature you have in mind.)',
+          '',
+          '',
+          'If you can, these details help us get there faster:',
+          '',
+          '\u00b7 Shotera edition (Lite / Standard):',
+          '\u00b7 Windows version:',
+          '\u00b7 Steps to reproduce:',
+          '',
+          'Thanks!',
+        ].join('\n'),
+        copied: 'Email copied — opening your mail app…',
+      },
+      groups: [
+        {
+          key: 'talk',
+          title: 'Talk to us',
+          note: 'We read every piece of feedback carefully.',
+          channels: [
+            {
+              key: 'email',
+              name: 'Email',
+              handle: 'mosuzo.studio@gmail.com',
+              note: 'Support, licensing, partnerships.',
+              icon: 'tabler:mail',
+              href: 'mailto:mosuzo.studio@gmail.com',
+              tint: '#0a7cff',
+            },
+            {
+              key: 'github',
+              name: 'GitHub',
+              handle: 'mosuzo-studio/Shotera',
+              note: 'Bug reports, feature requests, older releases.',
+              icon: 'tabler:brand-github',
+              href: 'https://github.com/mosuzo-studio/Shotera',
+              tint: '#24292f',
+            },
+            {
+              key: 'discord',
+              name: 'Discord',
+              note: 'Chat with other Shotera users.',
+              icon: 'tabler:brand-discord',
+              tint: '#5865f2',
+            },
+          ],
+        },
+        {
+          key: 'follow',
+          title: 'Follow along',
+          note: 'Release notes, tips and behind-the-scenes.',
+          channels: [
+            {
+              key: 'x',
+              name: 'X',
+              note: 'Release notes and quick tips.',
+              icon: 'tabler:brand-x',
+              tint: '#111111',
+            },
+            {
+              key: 'bilibili',
+              name: 'Bilibili',
+              note: 'Tutorials and feature walkthroughs.',
+              icon: 'tabler:brand-bilibili',
+              tint: '#00a1d6',
+            },
+            {
+              key: 'telegram',
+              name: 'Telegram',
+              note: 'Release announcements.',
+              icon: 'tabler:brand-telegram',
+              tint: '#229ed9',
+            },
+          ],
+        },
+      ],
+    },
     footer: {
       blurb: 'Faster, smarter screenshots and screen recording — pinned, annotated and understood in one shortcut.',
       cols: [
@@ -455,6 +581,95 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       primary: '免费下载',
       secondary: '更多版本',
       note: '提供标准版与 Lite 版；支持 Windows 10/11 及以上。安装版 / 便携版 / MSI 可选。',
+    },
+    contact: {
+      eyebrow: '联系我们',
+      title: '有问题或建议？告诉我们。',
+      lead: '遇到问题、想要新功能，或者只是想聊聊——用你觉得顺手的方式找我们。',
+      replyNote: '邮箱和 GitHub 每天都看，通常 24 个工作小时内回复。',
+      faqNote: '卡在某个问题上？大部分答案已经在常见问题里了。',
+      faqLink: '看看常见问题',
+      soon: '即将开放',
+      mail: {
+        subject: 'Shotera 反馈 — ',
+        body: [
+          '你好，',
+          '',
+          '（在这里描述你遇到的问题，或者你想要的功能）',
+          '',
+          '',
+          '如果方便，补充下面这些信息会帮我们更快定位：',
+          '',
+          '· Shotera 版本（Lite 版 / 标准版）：',
+          '· Windows 版本：',
+          '· 复现步骤：',
+          '',
+          '谢谢！',
+        ].join('\n'),
+        copied: '邮箱已复制，正在打开邮件客户端…',
+      },
+      groups: [
+        {
+          key: 'talk',
+          title: '直接找我们',
+          note: '您的每一条反馈我们都会认真读。',
+          channels: [
+            {
+              key: 'email',
+              name: '邮箱',
+              handle: 'mosuzo.studio@gmail.com',
+              note: '使用问题、授权、商务合作。',
+              icon: 'tabler:mail',
+              href: 'mailto:mosuzo.studio@gmail.com',
+              tint: '#0a7cff',
+            },
+            {
+              key: 'github',
+              name: 'GitHub',
+              handle: 'mosuzo-studio/Shotera',
+              note: '提交问题、功能建议、历史版本。',
+              icon: 'tabler:brand-github',
+              href: 'https://github.com/mosuzo-studio/Shotera',
+              tint: '#24292f',
+            },
+            {
+              key: 'wechat',
+              name: '微信群',
+              note: '和其他用户一起交流。',
+              icon: 'tabler:brand-wechat',
+              tint: '#07c160',
+            },
+          ],
+        },
+        {
+          key: 'follow',
+          title: '关注我们',
+          note: '更新日志、使用技巧和幕后花絮。',
+          channels: [
+            {
+              key: 'xiaohongshu',
+              name: '小红书',
+              note: '使用技巧与更新速览。',
+              icon: 'tabler:book-2',
+              tint: '#ff2442',
+            },
+            {
+              key: 'weibo',
+              name: '微博',
+              note: '版本发布与日常动态。',
+              icon: 'tabler:brand-weibo',
+              tint: '#e6162d',
+            },
+            {
+              key: 'x',
+              name: 'X',
+              note: '版本发布与使用技巧。',
+              icon: 'tabler:brand-x',
+              tint: '#111111',
+            },
+          ],
+        },
+      ],
     },
     footer: {
       blurb: '更快、更聪明的截图与录屏工具——截图、贴图、识别，一个快捷键全搞定。',

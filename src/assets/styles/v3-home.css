@@ -829,20 +829,36 @@
   background: #2168b5;
 }
 
+/* Stand: a slim aluminium column that flares slightly at the bottom, sitting
+   on a flat plate — the plate reads as a rounded tray: a light top surface
+   band above a darker front edge, with a soft contact shadow. */
 .v3-neck {
-  width: 104px;
-  height: 62px;
-  margin-top: -3px;
-  background: linear-gradient(180deg, #e2e6ea, #bcc2c8 68%, #a7aeb5);
-  clip-path: polygon(32% 0, 68% 0, 100% 100%, 0 100%);
+  width: 58px;
+  height: 58px;
+  margin-top: -4px;
+  background: linear-gradient(90deg, #eef1f4 0%, #d6dbe0 42%, #b7bdc4 100%);
+  clip-path: polygon(6% 0, 94% 0, 100% 100%, 0 100%);
 }
 
 .v3-base {
-  width: 262px;
-  height: 10px;
-  border-radius: 7px;
-  background: linear-gradient(180deg, #e8ecf0, #b3b9bf);
-  box-shadow: 0 14px 24px -16px rgba(16, 24, 40, 0.65);
+  position: relative;
+  width: 246px;
+  height: 17px;
+  margin-top: -1px;
+  border-radius: 50% / 38%;
+  background: linear-gradient(180deg, #eef1f4 0%, #d2d7dc 55%, #b4bac1 100%);
+}
+
+.v3-base::after {
+  content: '';
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: -3px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(16, 24, 40, 0.28), rgba(16, 24, 40, 0) 72%);
+  filter: blur(3px);
 }
 
 .v3-shot-cap {
@@ -1280,6 +1296,232 @@
   margin-top: 10px;
 }
 
+/* ---------- contact page ---------- */
+/* A channel is either live (an <a> with an href) or still coming (a grey
+   placeholder with no link at all) - never a link that goes nowhere. */
+.v3-contact-head {
+  max-width: 700px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.v3-contact-head .v3-h1 {
+  font-size: clamp(34px, 4.4vw, 52px);
+  margin-bottom: 18px;
+}
+
+.v3-contact-head .v3-lead {
+  margin: 0 auto;
+}
+
+.v3-chgroup + .v3-chgroup {
+  margin-top: 46px;
+}
+
+.v3-chgroup-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.v3-chgroup-head h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.v3-chgroup-head p {
+  font-size: 14px;
+  color: var(--v3-muted);
+  margin: 0;
+}
+
+.v3-chgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.v3-chcard {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: start;
+  background: #fff;
+  border: 1px solid var(--v3-border);
+  border-radius: var(--v3-card-r);
+  padding: 20px 22px;
+}
+
+a.v3-chcard {
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+a.v3-chcard:hover {
+  border-color: color-mix(in srgb, var(--ch-tint) 42%, #fff);
+  box-shadow: 0 18px 34px -22px rgba(16, 24, 40, 0.55);
+  transform: translateY(-2px);
+}
+
+.v3-chicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #eef0f3;
+  color: rgba(17, 17, 17, 0.34);
+  transition: transform 0.18s ease;
+}
+
+a.v3-chcard .v3-chicon {
+  background: var(--ch-tint);
+  color: #fff;
+  box-shadow: 0 8px 18px -10px color-mix(in srgb, var(--ch-tint) 75%, transparent);
+}
+
+a.v3-chcard:hover .v3-chicon {
+  transform: scale(1.05);
+}
+
+.v3-chicon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Platforms that ship their own artwork (Xiaohongshu) fill the chip instead. */
+.v3-chicon.is-logo,
+a.v3-chcard .v3-chicon.is-logo {
+  background: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.v3-chicon.is-logo img {
+  width: 46px;
+  height: 46px;
+}
+
+.v3-chcard.is-soon .v3-chicon.is-logo img {
+  filter: grayscale(1);
+  opacity: 0.4;
+}
+
+.v3-chtxt {
+  min-width: 0;
+}
+
+.v3-chcard b {
+  display: block;
+  font-size: 16.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.v3-chcard i {
+  display: block;
+  font-style: normal;
+  font-size: 13.5px;
+  color: var(--ch-tint);
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+}
+
+.v3-chcard em {
+  display: block;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--v3-muted);
+  margin-top: 7px;
+}
+
+.v3-chgo {
+  display: flex;
+  margin-top: 2px;
+  color: rgba(17, 17, 17, 0.22);
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.v3-chgo svg {
+  width: 16px;
+  height: 16px;
+}
+
+a.v3-chcard:hover .v3-chgo {
+  color: var(--ch-tint);
+  transform: translate(2px, -2px);
+}
+
+.v3-chcard.is-soon {
+  background: #fbfbfc;
+  border-style: dashed;
+  border-color: rgba(17, 17, 17, 0.16);
+}
+
+.v3-chcard.is-soon b {
+  color: rgba(17, 17, 17, 0.42);
+}
+
+.v3-chsoon {
+  align-self: start;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(17, 17, 17, 0.38);
+  background: #fff;
+  border: 1px solid var(--v3-border);
+  border-radius: 999px;
+  padding: 2px 9px;
+  white-space: nowrap;
+}
+
+.v3-contact-foot {
+  margin-top: 46px;
+  text-align: center;
+}
+
+.v3-contact-foot p {
+  font-size: 14px;
+  color: var(--v3-muted);
+  margin: 6px 0 0;
+}
+
+.v3-contact-foot a {
+  color: var(--v3-blue);
+  font-weight: 600;
+}
+
+.v3-contact-foot a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Confirms the clipboard half of the mail click; the mail client opens on its own. */
+.v3-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  z-index: 60;
+  transform: translateX(-50%);
+  background: rgba(17, 17, 17, 0.92);
+  color: #fff;
+  font-size: 13.5px;
+  letter-spacing: 0.01em;
+  padding: 10px 18px;
+  border-radius: 999px;
+  box-shadow: 0 16px 32px -14px rgba(16, 24, 40, 0.6);
+}
+
 /* ---------- responsive ---------- */
 @media (max-width: 480px) {
   .v3-wrap {
@@ -1314,6 +1556,18 @@
 
   .v3-list2 {
     grid-template-columns: 1fr;
+  }
+
+  .v3-chgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .v3-chgroup + .v3-chgroup {
+    margin-top: 34px;
+  }
+
+  .v3-contact-head {
+    margin-bottom: 36px;
   }
 
   .v3-navlink,
