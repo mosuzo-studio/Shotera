@@ -843,10 +843,9 @@
   height: 100%;
 }
 
-/* The taskbar the hero lays over every shot. The renders no longer carry one —
-   their bottom band is wallpaper again — so this strip is the only taskbar on
-   screen: 89/1024 of the screen height, flush with its bottom edge, drawn at
-   the source's own size. */
+/* The taskbar the hero lays over every shot: 89/1024 of the screen, flush with
+   its bottom edge, drawn at the source's own size. The renders keep no taskbar
+   of their own — their bottom band is wallpaper — so nothing else shows. */
 .v3-tb {
   position: absolute;
   left: 0;
