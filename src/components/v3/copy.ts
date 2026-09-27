@@ -37,10 +37,11 @@ export interface V3Copy {
   home: string;
   nav: {
     features: string;
-    download: string;
     versions: string;
+    changelog: string;
+    about: string;
     faq: string;
-    moreVersions: string;
+    menu: string;
     cta: string;
   };
   hero: {
@@ -73,10 +74,11 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
     home: 'Shotera — Faster, smarter screenshots and screen recording',
     nav: {
       features: 'Features',
-      download: 'Download',
       versions: 'Versions',
+      changelog: 'Changelog',
+      about: 'About',
       faq: 'FAQ',
-      moreVersions: 'More versions',
+      menu: 'Menu',
       cta: 'Download free',
     },
     hero: {
@@ -273,7 +275,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         { text: 'Terms', path: '/terms' },
         { text: 'Privacy', path: '/privacy' },
       ],
-      rights: '© 2026 Shotera',
+      rights: '© 2026 Mosuzo Studio',
       system: 'Windows 10/11+ · 15 UI languages',
     },
   },
@@ -282,10 +284,11 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
     home: 'Shotera — 更快、更聪明的截图与录屏工具',
     nav: {
       features: '功能',
-      download: '下载',
-      versions: '版本',
+      versions: '版本对比',
+      changelog: '更新日志',
+      about: '关于',
       faq: '常见问题',
-      moreVersions: '更多版本',
+      menu: '菜单',
       cta: '免费下载',
     },
     hero: {
@@ -454,7 +457,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         { text: '服务条款', path: '/terms' },
         { text: '隐私政策', path: '/privacy' },
       ],
-      rights: '© 2026 Shotera',
+      rights: '© 2026 Mosuzo Studio',
       system: 'Windows 10/11+ · 15 种界面语言',
     },
   },

@@ -21,7 +21,7 @@ const metadata = {
     tagline="About us"
     image={{
       src: '~/assets/images/about-hero.png',
-      alt: 'Shotera annotation tools over a Windows desktop',
+      alt: 'Shotera at a glance: capture and annotation, stitched long screenshots, pinned references and AI cutout',
     }}
   >
     <Fragment slot="title">
@@ -77,47 +77,25 @@ const metadata = {
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Features3 Widget - L1 core capabilities ************** -->
 
   <Features3
+    title="Core capabilities"
+    subtitle="Capture, scrolling capture, pin, recording and on-device AI - the five things you reach for all day, one shortcut away."
     columns={3}
     isAfterContent={true}
     items={[
       {
         title: 'Capture',
         description:
-          'Smart window and element detection — the frame you want is already picked, so you rarely drag a box by hand.',
+          'Smart window and element detection, so the frame is ready before you drag. Finish by copying straight away, or open the annotation toolbar - two completion modes, your call.',
         icon: 'tabler:capture',
       },
       {
         title: 'Scrolling capture',
         description:
-          'Scroll a page or a long chat and let Shotera stitch it into one long shot — auto-scroll or by hand, with a live preview.',
+          'Scroll a page or a long chat and let Shotera stitch it into one long shot - auto-scroll or by hand, with a live preview.',
         icon: 'local:longshot',
-      },
-      {
-        title: 'Recording',
-        description:
-          'Record your screen and export to a lightweight GIF; cursor highlights and click cues keep demos clear.',
-        icon: 'tabler:video',
-      },
-      {
-        title: 'AI cutout',
-        description:
-          'Detect the subject and drop the background in one click, exporting transparent PNGs. No Photoshop.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Offline OCR',
-        description:
-          'Extract text from any screenshot, on your device, in several languages. Copy and paste — no internet needed.',
-        icon: 'tabler:text-recognition',
-      },
-      {
-        title: 'Image translation',
-        description:
-          'Recognize and translate text inside any image on the spot — foreign docs, charts, and interfaces made readable.',
-        icon: 'tabler:language',
       },
       {
         title: 'Pin to Desktop',
@@ -125,16 +103,59 @@ const metadata = {
         icon: 'tabler:pin',
       },
       {
-        title: 'Image viewer',
+        title: 'Recording',
         description:
-          'Open a shot or any image file in its own viewer window — browse a folder, zoom in, and touch up what you need.',
-        icon: 'tabler:photo',
+          'Record your screen and export a lightweight GIF; cursor highlights and click cues keep demos clear.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'AI features',
+        description:
+          'AI cutout, AI eraser and offline OCR run on your device and never upload; image translation reads foreign screenshots for you.',
+        icon: 'tabler:wand',
       },
     ]}
     image={{
       src: '~/assets/images/about-features.png',
-      alt: 'Shotera toolbox: capture, scrolling capture, recording, AI cutout, offline OCR, image translation, pinning and the image viewer',
+      alt: 'Shotera annotation tools over a Windows desktop: selection, toolbar and glass tiles',
     }}
+  />
+
+  <!-- Features3 Widget - L2 more capabilities ************** -->
+
+  <Features3
+    title="More capabilities"
+    subtitle="Annotation, recognition, viewing and customisation - the details that make it stick."
+    columns={3}
+    items={[
+      {
+        title: 'Annotation toolkit',
+        description:
+          'Rectangle, arrow, pen, highlighter, mosaic, text, step numbers, emoji stickers, magnifier and eraser - annotate the moment you capture.',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: 'QR and barcode recognition',
+        description: 'Read the code inside a screenshot and copy what it holds.',
+        icon: 'tabler:qrcode',
+      },
+      {
+        title: 'Custom capture',
+        description: 'Fixed size, ratio, delay and screen coordinates - handy for assets and batch shots.',
+        icon: 'tabler:crop',
+      },
+      {
+        title: 'Image editor',
+        description: 'Open a shot in its own editor window: browse the folder, zoom in, and touch up what you need.',
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Presentation mode',
+        description:
+          'Tidy the desktop in one keystroke - windows, icons and wallpaper - and put it all back afterwards.',
+        icon: 'tabler:presentation',
+      },
+    ]}
   />
 
   <!-- Steps2 Widget ****************** -->

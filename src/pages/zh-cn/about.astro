@@ -21,7 +21,7 @@ const metadata = {
     tagline="关于我们"
     image={{
       src: '~/assets/images/about-hero.png',
-      alt: 'Windows 桌面上的 Shotera 标注工具',
+      alt: 'Shotera 能力全景：截图与标注、长截图拼接、贴图并排与 AI 抠图',
     }}
   >
     <Fragment slot="title">
@@ -73,15 +73,18 @@ const metadata = {
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Features3 Widget — L1 核心能力 ************** -->
 
   <Features3
+    title="核心能力"
+    subtitle="从截图到录屏，从贴图到 AI——每天高频用到的那五件事，一个快捷键全都在。"
     columns={3}
     isAfterContent={true}
     items={[
       {
         title: '截图',
-        description: '智能识别窗口与界面元素，要截的范围自动选好，基本不用手动拖框。',
+        description:
+          '智能识别窗口与界面元素，要截的范围自动选好。框选完成后可以自动复制，也可以立刻打开标注工具栏——两种完成模式随你挑。',
         icon: 'tabler:capture',
       },
       {
@@ -90,40 +93,61 @@ const metadata = {
         icon: 'local:longshot',
       },
       {
-        title: '录屏',
-        description: '录制屏幕并一键导出轻量 GIF，光标高亮、按键提示，演示教程格外清晰。',
-        icon: 'tabler:video',
-      },
-      {
-        title: 'AI 抠图',
-        description: '一键智能识别主体、去除背景，导出透明底图片，无需 PS。',
-        icon: 'tabler:wand',
-      },
-      {
-        title: '离线 OCR',
-        description: '本地识别截图中的文字，中英日等多语言，复制粘贴即用，无需联网。',
-        icon: 'tabler:text-recognition',
-      },
-      {
-        title: '图片翻译',
-        description: '识别图片中的文字并即时翻译，看外文文档、图表、界面不再有障碍。',
-        icon: 'tabler:language',
-      },
-      {
         title: '贴图',
         description: '把截图钉在屏幕最上层，随时对照参考，多图排布也不乱。',
         icon: 'tabler:pin',
       },
       {
-        title: '图片查看',
-        description: '截图和图片文件在独立查看窗口里打开：同目录翻页、缩放细看、顺手改两笔。',
-        icon: 'tabler:photo',
+        title: '录屏',
+        description: '录制屏幕并一键导出轻量 GIF，光标高亮、点击提示，演示教程格外清晰。',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'AI 能力',
+        description: 'AI 抠图、AI 擦图、离线 OCR 在本地运行，不上传；图片翻译帮你读外文截图。',
+        icon: 'tabler:wand',
       },
     ]}
     image={{
       src: '~/assets/images/about-features.png',
-      alt: 'Shotera 工具箱：截图、长截图、录屏、AI 抠图、离线 OCR、图片翻译、贴图与图片查看',
+      alt: 'Windows 桌面上的 Shotera 标注工具：选区、工具条与贴片',
     }}
+  />
+
+  <!-- Features3 Widget — L2 更多能力 ************** -->
+
+  <Features3
+    title="更多能力"
+    subtitle="工具感藏在细节里：标注、识别、查看与自定义。"
+    columns={3}
+    items={[
+      {
+        title: '标注十件套',
+        description:
+          '矩形/椭圆、直线/箭头、画笔、荧光笔、马赛克/模糊、文字、序号、表情贴纸、放大镜、橡皮擦——截完即标。',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: '二维码识别',
+        description: '截图里的二维码与条码，框选即识别，复制结果直接用。',
+        icon: 'tabler:qrcode',
+      },
+      {
+        title: '自定义截图',
+        description: '固定尺寸、比例、延迟与屏幕坐标，做素材和批量截图更省事。',
+        icon: 'tabler:crop',
+      },
+      {
+        title: '图片编辑',
+        description: '截图在独立编辑器窗口打开：同目录翻页、缩放细看、顺手改两笔。',
+        icon: 'tabler:photo',
+      },
+      {
+        title: '演示模式',
+        description: '一键收起杂乱窗口、隐藏桌面图标、切换干净壁纸；收工后原样还给你。',
+        icon: 'tabler:presentation',
+      },
+    ]}
   />
 
   <!-- Steps2 Widget ****************** -->

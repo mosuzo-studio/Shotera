@@ -130,6 +130,20 @@
   color: var(--v3-ink);
 }
 
+.v3-ghost-icon {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(17, 17, 17, 0.55);
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.v3-ghost-icon:hover {
+  color: var(--v3-ink);
+  transform: translateY(-1px);
+}
+
 .v3-lang {
   display: inline-flex;
   align-items: center;
@@ -169,6 +183,80 @@
 .v3-pill-dark:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 20px -10px rgba(17, 17, 17, 0.6);
+}
+
+/* Mobile menu: the nav links collapse into a burger below 960px. */
+.v3-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 40px;
+  height: 40px;
+  padding: 0 9px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.v3-burger span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--v3-ink);
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.v3-burger[aria-expanded='true'] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.v3-burger[aria-expanded='true'] span:nth-child(2) {
+  opacity: 0;
+}
+
+.v3-burger[aria-expanded='true'] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.v3-mobile-menu {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: calc(100% - 8px);
+  z-index: 30;
+  padding: 8px;
+  border: 1px solid var(--v3-border);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 24px 48px -24px rgba(16, 24, 40, 0.45);
+}
+
+.v3-mobile-menu a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.v3-mobile-menu a:hover {
+  background: #f2f4f7;
+}
+
+/* Headings break more gracefully (e.g. the /versions hero). */
+.v3 h1,
+.v3 h2 {
+  text-wrap: balance;
+}
+
+/* Card scale on the inner pages (the widgets ship 8-12px radii; v3 uses 16px).
+   Small chips and pills keep their own radii. */
+.v3 .rounded-lg,
+.v3 .rounded-xl,
+.v3 .rounded-2xl {
+  border-radius: 16px;
 }
 
 /* ---------- hero stage ---------- */
@@ -944,6 +1032,21 @@
 }
 
 /* ---------- responsive ---------- */
+@media (max-width: 480px) {
+  .v3-wrap {
+    padding: 0 18px;
+  }
+
+  .v3-logo {
+    font-size: 17px;
+  }
+
+  .v3-pill-dark {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 960px) {
   .v3-section {
     padding: 66px 0;
@@ -967,6 +1070,23 @@
   .v3-navlink,
   .v3-ghost {
     display: none;
+  }
+
+  /* Make room for the burger on small screens. */
+  .v3-nav {
+    gap: 14px;
+  }
+
+  .v3-nav-right {
+    gap: 10px;
+  }
+
+  .v3-ghost-icon {
+    display: none;
+  }
+
+  .v3-burger {
+    display: flex;
   }
 
   .v3-footer-cols {
@@ -1004,8 +1124,39 @@
   background-color: rgba(10, 124, 255, 0.18);
 }
 
-/* Keep the buttons in the same shape as the v3 homepage ones. */
-.v3 .btn {
+/* Buttons: same shape and finish as the v3 homepage ones. The split download
+   control keeps its one-piece look (square seam, rounded outer corners), so it
+   is excluded here and re-rounded separately below. */
+.v3 .btn:not(.split-main):not(.split-toggle) {
   border-radius: 12px;
   font-weight: 550;
+}
+
+.v3 .split-main {
+  border-start-start-radius: 12px;
+  border-end-start-radius: 12px;
+}
+
+.v3 .split-toggle {
+  border-start-end-radius: 12px;
+  border-end-end-radius: 12px;
+}
+
+.v3 .btn-primary {
+  background-image: linear-gradient(180deg, #2f95ff 0%, #0a7cff 100%);
+  border-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  box-shadow:
+    0 0 0 1px rgba(47, 149, 255, 0.35),
+    0 12px 26px -10px rgba(63, 127, 205, 0.75);
+}
+
+.v3 .btn-primary:hover {
+  background-image: linear-gradient(180deg, #46a0ff 0%, #0d84ff 100%);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 1px rgba(47, 149, 255, 0.42),
+    0 16px 30px -12px rgba(63, 127, 205, 0.85);
 }
