@@ -695,19 +695,154 @@
   width: min(1064px, 100%);
 }
 
-.v3-screen {
-  border-radius: 18px;
-  background: #0f1115;
-  padding: 12px;
-  box-shadow: 0 40px 80px -40px rgba(16, 24, 40, 0.6);
+/* ---------- hero display shell ----------
+   A slim aluminium monitor (Studio Display proportions) running a Windows 11
+   desktop: wallpaper screen, the demo render as the running app window, and a
+   centred taskbar with the app pinned. Every size inside the screen is in cqw
+   so the whole picture keeps its proportions at any hero width. */
+.v3-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.v3-shot img {
+.v3-bezel {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f0f2f4 0%, #dcdfe3 40%, #c6cbd1 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 42px 70px -40px rgba(16, 24, 40, 0.6);
+}
+
+.v3-inner {
+  border-radius: 6px;
+  padding: 3px;
+  background: #23282d;
+}
+
+.v3-cam {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #8b949d, #171c21);
+}
+
+.v3-desktop {
+  position: relative;
+  container-type: inline-size;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #0a1740;
+  background-size: cover;
+  background-position: center;
+}
+
+.v3-desktop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 32%),
+    radial-gradient(120% 100% at 50% 0%, rgba(255, 255, 255, 0.05), transparent 60%);
+}
+
+.v3-appwin {
+  position: absolute;
+  left: 50%;
+  top: 1.7%;
+  transform: translateX(-50%);
+  width: 74%;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.38),
+    0 34px 58px -20px rgba(3, 10, 26, 0.85);
+}
+
+.v3-appwin img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  background: #fff;
+}
+
+.v3-taskbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 58px;
+  height: max(20px, 6.2cqw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  gap: max(3px, 0.6cqw);
+  background: rgba(232, 240, 250, 0.6);
+  backdrop-filter: blur(20px) saturate(1.35);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.v3-tb {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  width: max(20px, 4.4cqw);
+  height: max(20px, 4.4cqw);
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #14304d;
+}
+
+.v3-tb svg,
+.v3-tb img {
+  width: 21px;
+  height: 21px;
+  width: max(12px, 2.2cqw);
+  height: max(12px, 2.2cqw);
+}
+
+.v3-tb.is-running {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 1px 2px rgba(9, 24, 48, 0.18);
+}
+
+.v3-tb.is-running::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  width: max(8px, 1.5cqw);
+  height: 3px;
+  border-radius: 999px;
+  background: #2168b5;
+}
+
+.v3-neck {
+  width: 104px;
+  height: 62px;
+  margin-top: -3px;
+  background: linear-gradient(180deg, #e2e6ea, #bcc2c8 68%, #a7aeb5);
+  clip-path: polygon(32% 0, 68% 0, 100% 100%, 0 100%);
+}
+
+.v3-base {
+  width: 262px;
+  height: 10px;
+  border-radius: 7px;
+  background: linear-gradient(180deg, #e8ecf0, #b3b9bf);
+  box-shadow: 0 14px 24px -16px rgba(16, 24, 40, 0.65);
 }
 
 .v3-shot-cap {
