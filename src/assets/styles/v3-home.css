@@ -696,10 +696,9 @@
 }
 
 /* ---------- hero display shell ----------
-   A slim aluminium monitor (Studio Display proportions) running a Windows 11
-   desktop: wallpaper screen, the demo render as the running app window, and a
-   centred taskbar with the app pinned. Every size inside the screen is in cqw
-   so the whole picture keeps its proportions at any hero width. */
+   A slim aluminium monitor (Studio Display proportions) showing the per-mode
+   render full-bleed: each shot is a complete Windows 11 desktop (wallpaper,
+   taskbar, tray), so the screen is nothing but the image. */
 .v3-display {
   display: flex;
   flex-direction: column;
@@ -736,13 +735,16 @@
 
 .v3-desktop {
   position: relative;
-  container-type: inline-size;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 7 / 4;
   border-radius: 4px;
   overflow: hidden;
   background-color: #0a1740;
-  background-size: cover;
-  background-position: center;
+}
+
+.v3-desktop img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .v3-desktop::after {
@@ -753,80 +755,6 @@
   background:
     linear-gradient(115deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 32%),
     radial-gradient(120% 100% at 50% 0%, rgba(255, 255, 255, 0.05), transparent 60%);
-}
-
-.v3-appwin {
-  position: absolute;
-  left: 50%;
-  top: 1.7%;
-  transform: translateX(-50%);
-  width: 74%;
-  border-radius: 9px;
-  overflow: hidden;
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.38),
-    0 34px 58px -20px rgba(3, 10, 26, 0.85);
-}
-
-.v3-appwin img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.v3-taskbar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 58px;
-  height: max(20px, 6.2cqw);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  gap: max(3px, 0.6cqw);
-  background: rgba(232, 240, 250, 0.6);
-  backdrop-filter: blur(20px) saturate(1.35);
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.v3-tb {
-  position: relative;
-  width: 42px;
-  height: 42px;
-  width: max(20px, 4.4cqw);
-  height: max(20px, 4.4cqw);
-  border-radius: 6px;
-  display: grid;
-  place-items: center;
-  color: #14304d;
-}
-
-.v3-tb svg,
-.v3-tb img {
-  width: 21px;
-  height: 21px;
-  width: max(12px, 2.2cqw);
-  height: max(12px, 2.2cqw);
-}
-
-.v3-tb.is-running {
-  background: rgba(255, 255, 255, 0.55);
-  box-shadow: 0 1px 2px rgba(9, 24, 48, 0.18);
-}
-
-.v3-tb.is-running::after {
-  content: '';
-  position: absolute;
-  bottom: 1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 15px;
-  width: max(8px, 1.5cqw);
-  height: 3px;
-  border-radius: 999px;
-  background: #2168b5;
 }
 
 /* Stand: a slim aluminium column that flares slightly at the bottom, sitting
@@ -1594,11 +1522,6 @@ a.v3-chcard:hover .v3-chgo {
 
   .v3-footer-cols {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .v3-shot img {
-    max-width: 100%;
-    max-height: 380px;
   }
 }
 
