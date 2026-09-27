@@ -21,6 +21,9 @@
 /** Releases list page — also the fallback target when resolution fails. */
 export const RELEASES_URL = 'https://github.com/mosuzo-studio/Shotera/releases';
 
+/** Microsoft Store listing for the app. */
+export const STORE_URL = 'https://apps.microsoft.com/detail/9n73ldhrmc8v';
+
 const LATEST_RELEASE_URL = `${RELEASES_URL}/latest`;
 
 const DOWNLOAD_BASE = `${RELEASES_URL}/download`;
@@ -79,47 +82,81 @@ const buildUrls = (tag: string, version: string, suffixes: Record<AssetKind, str
     Object.entries(suffixes).map(([kind, suffix]) => [kind, buildAssetUrl(tag, version, suffix)])
   ) as Record<AssetKind, string>;
 
-const fetchLatestRelease = async (): Promise<ReleaseDownloads> => {
+/**
+ * Node's `fetch` ignores the usual proxy env vars, so on a build machine that
+ * reaches GitHub through a proxy the lookup would time out and every button
+ * would fall back to the Releases page. When a proxy is configured, route the
+ * lookup through it; without undici installed, keep going direct.
+ */
+const installProxyDispatcher = async (): Promise<void> => {
+  const proxy = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
+  if (!proxy) return;
+
   try {
-    // `manual` keeps the 302 so the tag can be read from Location without
-    // downloading the release page itself.
-    const response = await fetch(LATEST_RELEASE_URL, {
-      redirect: 'manual',
-      headers: { 'User-Agent': 'shotera-site-build' },
-      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
-    });
+    const { ProxyAgent, setGlobalDispatcher } = await import('undici');
+    setGlobalDispatcher(new ProxyAgent(proxy));
+    console.info(`[download] Routing the release lookup through ${proxy}.`);
+  } catch {
+    console.warn(`[download] ${proxy} is set but undici is unavailable; trying a direct connection.`);
+  }
+};
 
-    const location = response.headers.get('location');
+const resolveLatestRelease = async (): Promise<ReleaseDownloads> => {
+  // `manual` keeps the 302 so the tag can be read from Location without
+  // downloading the release page itself.
+  const response = await fetch(LATEST_RELEASE_URL, {
+    redirect: 'manual',
+    headers: { 'User-Agent': 'shotera-site-build' },
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+  });
 
-    if (!location) {
-      console.warn(
-        `[download] /releases/latest did not redirect (status ${response.status}); linking to the Releases page instead.`
-      );
-      return FALLBACK;
-    }
+  const location = response.headers.get('location');
 
-    const tag = tagFromLocation(location);
-
-    if (!tag) {
-      console.warn(`[download] Could not read a release tag from "${location}"; linking to the Releases page instead.`);
-      return FALLBACK;
-    }
-
-    const version = tag.replace(/^v/i, '');
-    console.info(`[download] Resolved release ${tag}; linking assets for ${version}.`);
-
-    return {
-      tag,
-      version,
-      urls: buildUrls(tag, version, ASSET_SUFFIXES),
-      liteUrls: buildUrls(tag, version, LITE_ASSET_SUFFIXES),
-      resolved: true,
-    };
-  } catch (error) {
-    const reason = error instanceof Error ? error.message : String(error);
-    console.warn(`[download] Could not resolve the latest release (${reason}); linking to the Releases page instead.`);
+  if (!location) {
+    console.warn(
+      `[download] /releases/latest did not redirect (status ${response.status}); linking to the Releases page instead.`
+    );
     return FALLBACK;
   }
+
+  const tag = tagFromLocation(location);
+
+  if (!tag) {
+    console.warn(`[download] Could not read a release tag from "${location}"; linking to the Releases page instead.`);
+    return FALLBACK;
+  }
+
+  const version = tag.replace(/^v/i, '');
+  console.info(`[download] Resolved release ${tag}; linking assets for ${version}.`);
+
+  return {
+    tag,
+    version,
+    urls: buildUrls(tag, version, ASSET_SUFFIXES),
+    liteUrls: buildUrls(tag, version, LITE_ASSET_SUFFIXES),
+    resolved: true,
+  };
+};
+
+const fetchLatestRelease = async (): Promise<ReleaseDownloads> => {
+  await installProxyDispatcher();
+
+  let lastReason = 'unknown error';
+
+  // Two attempts: a single timeout on a slow network should not cost the
+  // buttons their direct asset links.
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      return await resolveLatestRelease();
+    } catch (error) {
+      lastReason = error instanceof Error ? error.message : String(error);
+    }
+  }
+
+  console.warn(
+    `[download] Could not resolve the latest release (${lastReason}); linking to the Releases page instead.`
+  );
+  return FALLBACK;
 };
 
 /** Build-time cache: resolved once, not once per page. */

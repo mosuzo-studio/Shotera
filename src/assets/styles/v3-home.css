@@ -498,6 +498,115 @@
   flex-wrap: wrap;
 }
 
+/* Split download control: the main half is the Standard installer, the toggle
+   reveals the other formats. Opens on hover / focus, no JavaScript; on touch
+   the tap on the toggle leaves it focused, which keeps the menu open.
+   Selectors are doubled up (.v3-btn.v3-split-*) so they outrank the base
+   .v3-btn radii and keep the two halves reading as one pill. */
+.v3-split {
+  position: relative;
+  z-index: 20;
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.v3-btn.v3-split-main {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+  /* Holds the label clear of the toggle: the button stays long enough to read
+     as the primary action even when the label is short. */
+  justify-content: center;
+  min-width: 240px;
+}
+
+.v3-btn.v3-split-toggle {
+  padding: 0 13px;
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+  border-inline-start: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+.v3-split-toggle svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.18s ease;
+}
+
+.v3-split.is-open .v3-split-toggle svg {
+  transform: rotate(180deg);
+}
+
+/* Hovering either half lights up the whole control; the individual lift is
+   off so the halves never drift apart. */
+.v3-split .v3-btn-main:hover {
+  transform: none;
+}
+
+.v3-split:hover .v3-btn-main,
+.v3-split:focus-within .v3-btn-main {
+  box-shadow:
+    0 0 0 1px rgba(47, 149, 255, 0.4),
+    0 16px 30px -12px rgba(63, 127, 205, 0.85);
+}
+
+.v3-split-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 40;
+  /* At least as wide as the button: the toggle sits at the right end, so a
+     narrower list would leave the pointer's way down outside the menu. */
+  min-width: 100%;
+  padding: 8px;
+  border: 1px solid var(--v3-border);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 24px 48px -22px rgba(16, 24, 40, 0.4);
+  text-align: start;
+}
+
+.v3-split.is-open .v3-split-menu {
+  display: block;
+}
+
+.v3-split-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: var(--v3-ink);
+}
+
+.v3-split-menu a:hover {
+  background: #f2f4f7;
+}
+
+.v3-split-cap {
+  margin: 4px 12px 6px;
+  color: var(--v3-muted);
+  font-size: 12px;
+}
+
+.v3-split-menu b {
+  margin-inline-start: auto;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: rgba(10, 124, 255, 0.12);
+  color: var(--v3-blue);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.v3-split-all {
+  margin-top: 4px;
+  border-top: 1px solid var(--v3-border);
+  border-radius: 0;
+  color: var(--v3-muted);
+}
+
 .v3-btn {
   display: inline-flex;
   align-items: center;
@@ -526,14 +635,6 @@
   box-shadow:
     0 0 0 1px rgba(47, 149, 255, 0.4),
     0 16px 30px -12px rgba(63, 127, 205, 0.85);
-}
-
-.v3-btn-main i {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.92);
-  display: block;
 }
 
 .v3-btn-sub {
@@ -576,13 +677,15 @@
   gap: 8px;
 }
 
-.v3-ontop i {
-  width: 18px;
-  height: 18px;
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: 0 0 0 1px var(--v3-border);
-  display: inline-block;
+.v3-ontop:hover {
+  color: var(--v3-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.v3-ontop-logo {
+  width: 15px;
+  height: 15px;
 }
 
 .v3-shot {
@@ -935,6 +1038,18 @@
   padding: 72px 24px;
   text-align: center;
   position: relative;
+  /* Visible so the download menu can hang past the panel's edge; the glow is
+     clipped inside .v3-dl-glow instead. */
+  overflow: visible;
+}
+
+/* Clipping layer for the panel's sun: it keeps the rounded silhouette without
+   clipping the menu that opens below the buttons. */
+.v3-dl > .v3-dl-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
   overflow: hidden;
 }
 

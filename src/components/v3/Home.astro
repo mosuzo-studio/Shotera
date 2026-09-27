@@ -2,6 +2,7 @@
 import { getImage } from 'astro:assets';
 import { localizedPath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
+import { getReleaseDownloads, RELEASES_URL, STORE_URL } from '~/utils/download';
 import { v3Copy, type V3Lang } from './copy';
 
 import captureDemo from '~/assets/images/capture-demo.png';
@@ -19,6 +20,8 @@ const { lang, downloadUrl } = Astro.props;
 const key = (lang === 'zh-cn' ? 'zh-cn' : 'en') as V3Lang;
 const c = v3Copy[key];
 const l = (path: string) => localizedPath(lang, path);
+
+const { urls: downloadUrls } = await getReleaseDownloads();
 
 const shotSources = {
   capture: captureDemo,
@@ -101,12 +104,55 @@ const shotData = JSON.stringify({
     <p class="v3-sub">{c.hero.sub}</p>
 
     <div class="v3-cta">
-      <a class="v3-btn v3-btn-main" href={downloadUrl}><i></i>{c.hero.primary}</a>
+      <div class="v3-split" data-v3-split>
+        <a class="v3-btn v3-btn-main v3-split-main" href={downloadUrl}>{c.hero.primary}</a>
+        <button
+          class="v3-btn v3-btn-main v3-split-toggle"
+          type="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-label={c.download.more}
+          data-v3-split-toggle
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6 9.5l6 6 6-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="v3-split-menu" aria-label={c.download.menu}>
+          <p class="v3-split-cap">{c.download.edition}</p>
+          <a href={downloadUrls.setup}>
+            <span>{c.download.setup}</span><b>{c.download.recommend}</b>
+          </a>
+          <a href={downloadUrls.portable}>{c.download.portable}</a>
+          <a href={downloadUrls.msi}>{c.download.msi}</a>
+          <a class="v3-split-all" href={RELEASES_URL} target="_blank" rel="noopener noreferrer"
+            >{c.download.allVersions}</a
+          >
+        </div>
+      </div>
       <a class="v3-btn v3-btn-sub" href={l('/#features')}>{c.hero.secondary} <em aria-hidden="true">▾</em></a>
     </div>
 
     <p class="v3-meta"><b>{c.hero.metaStrong}</b> · {c.hero.metaRest}</p>
-    <p class="v3-ontop"><i></i>{c.hero.store}</p>
+    <a class="v3-ontop" href={STORE_URL} target="_blank" rel="noopener noreferrer">
+      {c.hero.store}
+      <svg class="v3-ontop-logo" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m17.8 20l-12-1.5c-1-.1-1.8-.9-1.8-1.9V7.4c0-1 .8-1.8 1.8-1.9l12-1.5c1.2-.1 2.2.8 2.2 1.9V18c0 1.2-1.1 2.1-2.2 1.9zM12 5v14m-8-7h16"
+        ></path>
+      </svg>
+    </a>
 
     <figure class="v3-shot">
       <div class="v3-screen">
@@ -233,12 +279,43 @@ const shotData = JSON.stringify({
 <section class="v3-section is-tight" id="download">
   <div class="v3-wrap">
     <div class="v3-dl">
-      <span class="v3-sun"></span>
+      <div class="v3-dl-glow"><span class="v3-sun"></span></div>
       <div class="v3-eyebrow">{c.cta.eyebrow}</div>
       <h2 class="v3-h2">{c.cta.title}</h2>
       <p class="v3-lead" style="margin:0 auto 28px">{c.cta.lead}</p>
       <div class="v3-cta">
-        <a class="v3-btn v3-btn-main" href={downloadUrl}><i></i>{c.cta.primary}</a>
+        <div class="v3-split" data-v3-split>
+          <a class="v3-btn v3-btn-main v3-split-main" href={downloadUrl}>{c.cta.primary}</a>
+          <button
+            class="v3-btn v3-btn-main v3-split-toggle"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-label={c.download.more}
+            data-v3-split-toggle
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 9.5l6 6 6-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <div class="v3-split-menu" aria-label={c.download.menu}>
+            <p class="v3-split-cap">{c.download.edition}</p>
+            <a href={downloadUrls.setup}>
+              <span>{c.download.setup}</span><b>{c.download.recommend}</b>
+            </a>
+            <a href={downloadUrls.portable}>{c.download.portable}</a>
+            <a href={downloadUrls.msi}>{c.download.msi}</a>
+            <a class="v3-split-all" href={RELEASES_URL} target="_blank" rel="noopener noreferrer">
+              {c.download.allVersions}
+            </a>
+          </div>
+        </div>
         <a class="v3-btn v3-btn-sub" href={l('/versions')}>{c.cta.secondary}</a>
       </div>
       <div class="v3-other"><i></i>{c.cta.note}</div>
@@ -283,4 +360,36 @@ const shotData = JSON.stringify({
 
   initV3ShotSwitcher();
   document.addEventListener('astro:page-load', initV3ShotSwitcher);
+  function initV3SplitMenus() {
+    document.querySelectorAll<HTMLElement>('[data-v3-split]').forEach((split) => {
+      if (split.dataset.wired === '1') return;
+      split.dataset.wired = '1';
+
+      const toggle = split.querySelector<HTMLButtonElement>('[data-v3-split-toggle]');
+      if (!toggle) return;
+
+      const setOpen = (open: boolean) => {
+        split.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+      };
+
+      // The menu opens on the chevron alone - hovering the button no longer
+      // reveals it - and closes on a second click, an outside click or Esc.
+      toggle.addEventListener('click', () => setOpen(!split.classList.contains('is-open')));
+
+      document.addEventListener('click', (event) => {
+        if (!split.classList.contains('is-open')) return;
+        const target = event.target as Node | null;
+        if (target && split.contains(target)) return;
+        setOpen(false);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setOpen(false);
+      });
+    });
+  }
+
+  initV3SplitMenus();
+  document.addEventListener('astro:page-load', initV3SplitMenus);
 </script>

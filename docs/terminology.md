@@ -50,16 +50,16 @@
 
 ## 4. 二级与三级功能
 
-| 站点名词                                  | English                                                    | 备注 / App 键名                                                                                                                 |
-| ----------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| 标注工具                                  | annotation tools                                           | `toolbar.*`：矩形/椭圆、直线/箭头、画笔、荧光笔、马赛克/模糊、文字、序号、表情贴纸、放大镜、橡皮擦（顺序与 App 一级工具栏一致） |
-| 表情贴纸                                  | Emoji stickers                                             | `toolbar.emoji` = 表情贴纸 / Emoji Sticker（标注十件套之一）；关于页单独成卡「Emoji 表情贴纸 / Emoji stickers」                 |
-| 自定义截图                                | Custom capture                                             | `customShot.title`                                                                                                              |
-| 图片编辑                                  | Image editor                                               | `editor.windowTitle` = 图片编辑器；关于页标题写作「图片查看与编辑 / Image viewer & editor」                                     |
-| 演示模式                                  | Presentation Mode                                          | `settings.hotkey.demoKey`                                                                                                       |
-| 历史记录                                  | History                                                    | `history`                                                                                                                       |
-| 二维码识别                                | QR & barcode scanning                                      | 见 §2（受众窄，不进首屏胶囊）                                                                                                   |
-| 快捷键自定义 / 多显示器 / 深色模式 / 轻量 | custom shortcuts / multi-monitor / dark mode / lightweight | 站点侧表述，App 内见「设置 → 通用 / 桌面」                                                                                      |
+| 站点名词                                  | English                                                    | 备注 / App 键名                                                                                                                         |
+| ----------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 标注工具                                  | annotation tools                                           | `toolbar.*`：矩形/椭圆、直线/箭头、画笔、荧光笔、马赛克/模糊、文字、序号、表情贴纸、放大镜、橡皮擦（顺序与 App 一级工具栏一致）         |
+| 表情贴纸                                  | Emoji stickers                                             | `toolbar.emoji` = 表情贴纸 / Emoji Sticker（标注十件套之一）；站点标题位（关于页卡片、首页能力清单）写作「Emoji 贴纸 / Emoji stickers」 |
+| 自定义截图                                | Custom capture                                             | `customShot.title`                                                                                                                      |
+| 图片编辑                                  | Image editor                                               | `editor.windowTitle` = 图片编辑器；关于页标题写作「图片查看与编辑 / Image viewer & editor」                                             |
+| 演示模式                                  | Presentation Mode                                          | `settings.hotkey.demoKey`                                                                                                               |
+| 历史记录                                  | History                                                    | `history`                                                                                                                               |
+| 二维码识别                                | QR & barcode scanning                                      | 见 §2（受众窄，不进首屏胶囊）                                                                                                           |
+| 快捷键自定义 / 多显示器 / 深色模式 / 轻量 | custom shortcuts / multi-monitor / dark mode / lightweight | 站点侧表述，App 内见「设置 → 通用 / 桌面」                                                                                              |
 
 ## 5. 对外表述红线（违反即回退）
 

@@ -7,12 +7,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 **📫 Feedback**
 
-Settings → About → Feedback
-
-**🔗 Version index**
+Settings → About → Feedback & suggestions
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">New</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>

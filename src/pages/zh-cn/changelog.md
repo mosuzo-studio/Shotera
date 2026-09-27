@@ -7,12 +7,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 **📫 反馈入口**
 
-设置 → 关于 → 反馈
-
-**🔗 版本导航**
+设置 → 关于 → 反馈与建议
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">新</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>

@@ -56,6 +56,16 @@ export interface V3Copy {
     metaRest: string;
     store: string;
   };
+  download: {
+    more: string;
+    menu: string;
+    edition: string;
+    setup: string;
+    portable: string;
+    msi: string;
+    recommend: string;
+    allVersions: string;
+  };
   trust: { value: string; label: string }[];
   modesSection: { eyebrow: string; title: string; lead: string; cards: V3ModeCard[] };
   features: V3FeatureSection[];
@@ -112,11 +122,21 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         [{ text: 'all from a single shortcut' }],
       ],
       sub: 'Shotera is a desktop capture tool built for people who screenshot all day: annotate, scroll-capture long pages, record to GIF, cut out subjects with AI, run offline OCR, translate images, and pin references — without leaving your flow.',
-      primary: 'Download free (Windows)',
+      primary: 'Download free',
       secondary: 'See how it works',
       metaStrong: 'Windows 10/11+',
       metaRest: 'Installer / portable / MSI',
       store: 'Also available on the Microsoft Store',
+    },
+    download: {
+      more: 'More download options',
+      menu: 'Download options',
+      edition: 'Shotera Standard',
+      setup: 'Installer (.exe)',
+      portable: 'Portable (.7z)',
+      msi: 'MSI installer',
+      recommend: 'Recommended',
+      allVersions: 'All versions on GitHub',
     },
     trust: [
       { value: '15', label: 'UI languages' },
@@ -302,11 +322,21 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       ],
       h1: [[{ text: '截图、录屏、' }, { text: 'AI 能力', hl: true }], [{ text: '一个快捷键全搞定' }]],
       sub: '为效率而生的桌面截图与录屏工具：截图标注、长截图、录屏导出 GIF、AI 抠图、AI 擦图、离线 OCR、图片翻译、贴图——不用离开手头的事。',
-      primary: '免费下载（Windows）',
+      primary: '免费下载',
       secondary: '看看怎么用',
       metaStrong: 'Windows 10/11+',
       metaRest: '安装版 / 便携版 / MSI',
       store: '也可从 Microsoft Store 获取',
+    },
+    download: {
+      more: '更多下载选项',
+      menu: '下载选项',
+      edition: 'Shotera 标准版',
+      setup: '安装版（.exe）',
+      portable: '免安装版（.7z）',
+      msi: 'MSI 安装包',
+      recommend: '推荐',
+      allVersions: '全部版本（GitHub）',
     },
     trust: [
       { value: '15 种', label: '界面语言' },
@@ -353,7 +383,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
           '两种完成模式：优雅简洁（截完即复制）或所见即所得（立即打开标注工具栏）',
         ],
         items: [
-          { title: '表情贴纸与 Emoji', note: '让截图更生动' },
+          { title: 'Emoji 贴纸', note: '让截图更生动' },
           { title: '放大镜', note: '局部放大关键细节' },
           { title: '序号标注', note: '引导阅读顺序' },
           { title: '马赛克与荧光笔', note: '隐私与重点两不误' },
