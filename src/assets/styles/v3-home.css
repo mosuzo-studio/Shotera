@@ -114,7 +114,7 @@
 }
 
 .v3-nav-right {
-  margin-left: auto;
+  margin-inline-start: auto;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -174,7 +174,7 @@
 .v3-lang-menu {
   position: absolute;
   top: calc(100% + 10px);
-  right: 0;
+  inset-inline-end: 0;
   z-index: 40;
   display: none;
   grid-template-columns: 1fr 1fr;
@@ -599,7 +599,7 @@
   display: none;
   position: absolute;
   top: calc(100% + 10px);
-  left: 0;
+  inset-inline-start: 0;
   z-index: 40;
   /* At least as wide as the button: the toggle sits at the right end, so a
      narrower list would leave the pointer's way down outside the menu. */
@@ -662,7 +662,7 @@
 .v3-split-menu a[data-v3-tip]::after {
   content: attr(data-v3-tip);
   position: absolute;
-  left: calc(100% + 12px);
+  inset-inline-start: calc(100% + 12px);
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
@@ -795,7 +795,7 @@
    narrow hero widths. */
 .v3-shell-dots {
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -1061,7 +1061,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 14px;
-  text-align: left;
+  text-align: start;
 }
 
 .v3-mcard {
@@ -1134,7 +1134,7 @@
 .v3-steps li {
   counter-increment: v3s;
   position: relative;
-  padding-left: 28px;
+  padding-inline-start: 28px;
   font-size: 14px;
   color: var(--v3-muted);
   margin: 10px 0;
@@ -1217,7 +1217,7 @@
 }
 
 .v3-row em {
-  margin-left: auto;
+  margin-inline-start: auto;
   font-style: normal;
   color: rgba(17, 17, 17, 0.3);
   font-size: 13px;
@@ -1393,7 +1393,7 @@
 }
 
 .v3-footer-base .v3-sp {
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 
 .v3-foot-note {

@@ -78,6 +78,7 @@ export default {
     { value: '<0.1s', label: 'Oproepen via sneltoets' },
   ],
   modesSection: {
+    bestFor: 'IDEAAL VOOR',
     eyebrow: 'Drie dagelijkse taken',
     title: 'Eén sneltoets voor alles wat je vastlegt',
     lead: 'Vastleggen, vastpinnen, opnemen en GIF — de drie taken die je de hele dag door doet, achter één sneltoets.',

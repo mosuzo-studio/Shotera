@@ -1,8 +1,8 @@
 ---
-import { languages, localizedPath, switchLocalePath } from '~/i18n/utils';
+import { languages, localizedPagePath, switchLocalePath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
 import appMark from '~/assets/favicons/favicon.svg';
-import { v3Copy, type V3Lang } from './copy';
+import { getV3Copy } from './copy-intl';
 
 export interface Props {
   lang: Lang;
@@ -10,9 +10,8 @@ export interface Props {
 }
 
 const { lang, downloadUrl } = Astro.props;
-const key = (lang === 'zh-cn' ? 'zh-cn' : 'en') as V3Lang;
-const c = v3Copy[key];
-const l = (path: string) => localizedPath(lang, path);
+const c = getV3Copy(lang);
+const l = (path: string) => localizedPagePath(lang, path);
 
 /* The trigger carries a short code; the menu spells each language out. */
 const shortLabels: Record<Lang, string> = {

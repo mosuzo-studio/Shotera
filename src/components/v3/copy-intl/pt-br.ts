@@ -81,6 +81,7 @@ export default {
     { value: '<0.1s', label: 'para chamar' },
   ],
   modesSection: {
+    bestFor: 'IDEAL PARA',
     eyebrow: 'Três fluxos do dia a dia',
     title: 'Um atalho para cada tarefa de captura',
     lead: 'Capturar, fixar, gravar e GIF — as três tarefas que você mais usa, em um único atalho.',

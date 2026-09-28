@@ -82,6 +82,7 @@ export default {
     { value: '<0.1s', label: 'lancement par raccourci' },
   ],
   modesSection: {
+    bestFor: 'IDÉAL POUR',
     eyebrow: 'Trois gestes du quotidien',
     title: 'Un raccourci pour chaque tâche de capture',
     lead: 'Capture, épingle, enregistrement et GIF — les trois gestes que vous répétez toute la journée, derrière un seul raccourci.',

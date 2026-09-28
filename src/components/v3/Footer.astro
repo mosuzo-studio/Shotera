@@ -1,16 +1,15 @@
 ---
-import { localizedPath } from '~/i18n/utils';
+import { localizedPagePath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
-import { v3Copy, type V3Lang } from './copy';
+import { getV3Copy } from './copy-intl';
 
 export interface Props {
   lang: Lang;
 }
 
 const { lang } = Astro.props;
-const key = (lang === 'zh-cn' ? 'zh-cn' : 'en') as V3Lang;
-const c = v3Copy[key];
-const l = (path: string, hash?: string) => `${localizedPath(lang, path)}${hash ? `#${hash}` : ''}`;
+const c = getV3Copy(lang);
+const l = (path: string, hash?: string) => `${localizedPagePath(lang, path)}${hash ? `#${hash}` : ''}`;
 ---
 
 <footer class="v3-footer">
@@ -33,7 +32,7 @@ const l = (path: string, hash?: string) => `${localizedPath(lang, path)}${hash ?
     </div>
 
     <div class="v3-footer-base">
-      <span>{c.footer.rights}</span>
+      <span dir="ltr">{c.footer.rights}</span>
       {c.footer.legal.map((link) => <a href={l(link.path)}>{link.text}</a>)}
       <span class="v3-sp">{c.footer.system}</span>
     </div>

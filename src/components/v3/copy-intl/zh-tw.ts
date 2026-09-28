@@ -78,6 +78,7 @@ export default {
     { value: '<0.1s', label: '快速鍵喚起' },
   ],
   modesSection: {
+    bestFor: '最適合',
     eyebrow: '日常三件事',
     title: '一個快速鍵，搞定所有截圖任務',
     lead: '截圖、釘在桌面、錄製螢幕與 GIF——每天最常用的三件事，都在同一個快速鍵裡。',

@@ -74,6 +74,7 @@ export default {
     { value: '<0.1s', label: '단축키 실행' },
   ],
   modesSection: {
+    bestFor: '추천 용도',
     eyebrow: '매일 쓰는 세 가지 흐름',
     title: '모든 캡처 작업을 단축키 하나로',
     lead: '스크린샷, 고정, 녹화 & GIF — 하루에도 몇 번씩 찾게 되는 세 가지 작업을 단축키 하나로 끝냅니다.',

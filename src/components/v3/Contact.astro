@@ -2,9 +2,9 @@
 import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import { Icon } from 'astro-icon/components';
-import { localizedPath } from '~/i18n/utils';
+import { localizedPagePath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
-import { v3Copy, type V3Lang } from './copy';
+import { getV3Copy } from './copy-intl';
 
 import xiaohongshuLogo from '~/assets/images/brand-xiaohongshu.png';
 
@@ -13,9 +13,8 @@ export interface Props {
 }
 
 const { lang } = Astro.props;
-const key = (lang === 'zh-cn' ? 'zh-cn' : 'en') as V3Lang;
-const c = v3Copy[key];
-const faqHref = localizedPath(lang, '/faq');
+const c = getV3Copy(lang);
+const faqHref = localizedPagePath(lang, '/faq');
 
 // Marks that are not in the tabler set ship their own artwork instead.
 const brandLogos: Record<string, ImageMetadata> = { xiaohongshu: xiaohongshuLogo };

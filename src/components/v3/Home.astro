@@ -3,7 +3,7 @@ import { getImage } from 'astro:assets';
 import { localizedPath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
 import { getReleaseDownloads, RELEASES_URL, STORE_URL } from '~/utils/download';
-import { v3Copy, type V3Lang } from './copy';
+import { getV3Copy } from './copy-intl';
 
 import captureDemo from '~/assets/images/capture-demo.png';
 import longshotDemo from '~/assets/images/longshot-demo.png';
@@ -26,8 +26,7 @@ export interface Props {
 }
 
 const { lang, downloadUrl } = Astro.props;
-const key = (lang === 'zh-cn' ? 'zh-cn' : 'en') as V3Lang;
-const c = v3Copy[key];
+const c = getV3Copy(lang);
 const l = (path: string) => localizedPath(lang, path);
 
 const { urls: downloadUrls } = await getReleaseDownloads();
@@ -156,7 +155,11 @@ const shotData = JSON.stringify({
       <a class="v3-btn v3-btn-sub" href={l('/#features')}>{c.hero.secondary} <em aria-hidden="true">▾</em></a>
     </div>
 
-    <p class="v3-meta"><b>{c.hero.metaStrong}</b> · {c.hero.metaRest}</p>
+    {
+      /* The platform line is a Latin token in every locale, so keep its own
+        direction in RTL pages (`+Windows 10/11` would otherwise flip). */
+    }
+    <p class="v3-meta"><b dir="ltr">{c.hero.metaStrong}</b> · {c.hero.metaRest}</p>
     <a class="v3-ontop" href={STORE_URL} target="_blank" rel="noopener noreferrer">
       {c.hero.store}
       <svg class="v3-ontop-logo" viewBox="0 0 24 24" aria-hidden="true">
@@ -269,7 +272,7 @@ const shotData = JSON.stringify({
               ))}
             </ol>
             <p class="v3-bf">
-              <b>BEST FOR</b>
+              <b>{c.modesSection.bestFor}</b>
               {card.bestFor}
             </p>
           </div>

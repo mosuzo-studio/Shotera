@@ -76,6 +76,15 @@ export function localizedPath(lang: Lang, path = '/'): string {
 const ENGLISH_ONLY_PATHS = new Set(['/privacy', '/terms', '/faq']);
 
 /**
+ * Locale-aware path for a page that every locale publishes, falling back to the
+ * English route for the three that only EN and zh-CN carry.
+ */
+export function localizedPagePath(lang: Lang, path: string): string {
+  if (ENGLISH_ONLY_PATHS.has(path) && lang !== 'en' && lang !== 'zh-cn') return path;
+  return localizedPath(lang, path);
+}
+
+/**
  * Given the current URL, return the equivalent path in `targetLang`, used by
  * the language switcher. Strips any existing locale prefix, then re-localizes.
  */
@@ -97,8 +106,5 @@ export function switchLocalePath(url: URL, targetLang: Lang): string {
   const appPath = '/' + segments.join('/');
   // The 13 other locales publish neither the legal pages nor an FAQ of their
   // own, so those links fall back to the English ones (the footer does the same).
-  if (ENGLISH_ONLY_PATHS.has(appPath) && targetLang !== 'en' && targetLang !== 'zh-cn') {
-    return appPath;
-  }
-  return localizedPath(targetLang, appPath === '/' ? '/' : appPath);
+  return localizedPagePath(targetLang, appPath === '/' ? '/' : appPath);
 }

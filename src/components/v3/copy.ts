@@ -101,7 +101,7 @@ export interface V3Copy {
     allVersions: string;
   };
   trust: { value: string; label: string }[];
-  modesSection: { eyebrow: string; title: string; lead: string; cards: V3ModeCard[] };
+  modesSection: { eyebrow: string; title: string; lead: string; bestFor: string; cards: V3ModeCard[] };
   features: V3FeatureSection[];
   cta: { eyebrow: string; title: string; lead: string; primary: string; secondary: string; note: string };
   contact: {
@@ -201,6 +201,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       eyebrow: 'Three everyday flows',
       title: 'One shortcut for every capture task',
       lead: 'Capture, pin, record and GIF — the three jobs you reach for all day, behind one shortcut.',
+      bestFor: 'BEST FOR',
       cards: [
         {
           icon: 'capture',
@@ -498,6 +499,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       eyebrow: '日常三件事',
       title: '一个快捷键，搞定所有截图任务',
       lead: '截图、贴图、录屏与 GIF——每天用得最多的三件事，一个快捷键全都在。',
+      bestFor: '最適合',
       cards: [
         {
           icon: 'capture',

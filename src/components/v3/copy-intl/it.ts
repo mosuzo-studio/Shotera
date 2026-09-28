@@ -82,6 +82,7 @@ export default {
     { value: '<0.1s', label: 'per richiamarlo' },
   ],
   modesSection: {
+    bestFor: 'IDEALE PER',
     eyebrow: 'Tre gesti quotidiani',
     title: 'Una sola scorciatoia per ogni cattura',
     lead: 'Screenshot, fissa, registra e GIF — le tre attività che usi tutto il giorno, dietro una sola scorciatoia.',

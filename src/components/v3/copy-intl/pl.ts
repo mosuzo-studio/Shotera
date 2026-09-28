@@ -82,6 +82,7 @@ export default {
     { value: '<0.1s', label: 'start ze skrótu' },
   ],
   modesSection: {
+    bestFor: 'NAJLEPSZE DO',
     eyebrow: 'Trzy codzienne zadania',
     title: 'Jeden skrót do każdego zadania z przechwytywaniem',
     lead: 'Przechwytywanie, przypinanie, nagrywanie i GIF — trzy zadania, po które sięgasz przez cały dzień, wszystkie pod jednym skrótem.',

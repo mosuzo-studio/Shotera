@@ -83,6 +83,7 @@ export default {
     { value: '<0.1s', label: 'para invocarlo' },
   ],
   modesSection: {
+    bestFor: 'IDEAL PARA',
     eyebrow: 'Tres tareas cotidianas',
     title: 'Un atajo para cada tarea de captura',
     lead: 'Capturar, fijar, grabar y exportar GIF: las tres tareas a las que recurres todo el día, con un solo atajo.',

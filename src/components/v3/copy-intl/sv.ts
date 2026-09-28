@@ -81,6 +81,7 @@ export default {
     { value: '<0.1s', label: 'start via snabbtangent' },
   ],
   modesSection: {
+    bestFor: 'BÄST FÖR',
     eyebrow: 'Tre vardagsflöden',
     title: 'En snabbtangent för varje fångst',
     lead: 'Skärmbild, fäst bild, skärminspelning och GIF — de tre jobben du gör varje dag, med en och samma snabbtangent.',
