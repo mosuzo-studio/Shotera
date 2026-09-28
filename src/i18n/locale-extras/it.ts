@@ -5,14 +5,14 @@ import type { LocaleExtras } from '../locale-extras-types';
  * English pages. Terminology follows the Shotera app's Italian language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: 'Screenshot con scorrimento',
+  footerScrolling: 'Screenshot lungo',
 
   home: {
     heroAlt:
-      'Strumenti Shotera sullo schermo: cattura, screenshot con scorrimento, annotazione, registrazione, scontorno IA, OCR offline, lettura di codici QR e a barre, traduzione e fissaggio',
+      'Strumenti Shotera sullo schermo: cattura, screenshot lungo, annotazione, registrazione, scontorno AI, OCR offline, lettura di codici QR e a barre, traduzione e fissaggio',
     cards: [
       {
-        title: 'Screenshot con scorrimento',
+        title: 'Screenshot lungo',
         description:
           'Una pagina più alta dello schermo entra comunque in una sola cattura. Scorri manualmente o lascia che Shotera scorra da sola: lo screenshot lungo si compone mentre cresce.',
       },
@@ -28,10 +28,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: 'Screenshot con scorrimento',
+      tagline: 'Screenshot lungo',
       title: 'Una pagina più alta dello schermo, in una sola cattura',
       text: 'Pagine intere, chat lunghe e documenti completi — catturati dall’alto verso il basso in un’unica immagine.',
-      alt: 'Screenshot con scorrimento che unisce una pagina lunga in un’unica immagine',
+      alt: 'Screenshot lungo che unisce una pagina lunga in un’unica immagine',
       items: [
         {
           title: 'In automatico o a mano',
@@ -58,7 +58,7 @@ export const content: LocaleExtras = {
     stats: [
       { title: 'Lingue', amount: '15' },
       { title: 'Valutazione', amount: '4.9 / 5' },
-      { title: 'IA offline', amount: '100%' },
+      { title: 'AI offline', amount: '100%' },
       { title: 'Avvio da scorciatoia', amount: '<0.1s' },
     ],
     workflow: {
@@ -98,7 +98,7 @@ export const content: LocaleExtras = {
     stats: [
       { title: 'Lingue', amount: '15' },
       { title: 'Valutazione', amount: '4.9 / 5' },
-      { title: 'IA offline', amount: '100%' },
+      { title: 'AI offline', amount: '100%' },
       { title: 'Avvio da scorciatoia', amount: '<0.1s' },
     ],
     stand: {
@@ -246,7 +246,7 @@ export const content: LocaleExtras = {
         {
           title: 'Cresciuto grazie agli utenti',
           description:
-            'Screenshot con scorrimento, scontorno IA, OCR offline, traduzione immagini: tante funzioni arrivano direttamente dal feedback degli utenti.',
+            'Screenshot lungo, scontorno AI, OCR offline, traduzione immagini: tante funzioni arrivano direttamente dal feedback degli utenti.',
         },
         {
           title: 'Verso sempre più persone',

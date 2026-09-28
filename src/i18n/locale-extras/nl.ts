@@ -5,14 +5,14 @@ import type { LocaleExtras } from '../locale-extras-types';
  * English pages. Terminology follows the Shotera app's Dutch language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: 'Scrollende schermafbeelding',
+  footerScrolling: 'Lange schermafbeelding',
 
   home: {
     heroAlt:
-      'Shotera-gereedschap op het scherm: vastleggen, scrollende schermafbeelding, annoteren, opnemen, AI-uitsnede, offline OCR, QR- en barcodes scannen, vertaling en vastpinnen',
+      'Shotera-gereedschap op het scherm: vastleggen, lange schermafbeelding, annoteren, opnemen, AI-uitsnede, offline OCR, QR- en barcodes scannen, vertaling en vastpinnen',
     cards: [
       {
-        title: 'Scrollende schermafbeelding',
+        title: 'Lange schermafbeelding',
         description:
           'Een pagina die langer is dan het scherm past toch in één opname. Scroll zelf of laat Shotera automatisch scrollen en zie de lange opname al groeiend aan elkaar worden gezet.',
       },
@@ -28,10 +28,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: 'Scrollende schermafbeelding',
+      tagline: 'Lange schermafbeelding',
       title: 'Een pagina die langer is dan het scherm, in één opname',
       text: 'Hele pagina’s, lange chats en volledige documenten — van boven tot onder vastgelegd in één afbeelding.',
-      alt: 'Scrollende schermafbeelding voegt een lange pagina samen tot één afbeelding',
+      alt: 'Lange schermafbeelding voegt een lange pagina samen tot één afbeelding',
       items: [
         {
           title: 'Automatisch scrollen of zelf scrollen',
@@ -243,7 +243,7 @@ export const content: LocaleExtras = {
         {
           title: 'Gegroeid door onze gebruikers',
           description:
-            'Scrollende schermafbeelding, AI-uitsnede, offline OCR, beeldvertaling — heel wat functies kwamen rechtstreeks uit gebruikersfeedback.',
+            'Lange schermafbeelding, AI-uitsnede, offline OCR, beeldvertaling — heel wat functies kwamen rechtstreeks uit gebruikersfeedback.',
         },
         {
           title: 'Steeds meer mensen bereiken',

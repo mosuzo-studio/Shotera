@@ -58,7 +58,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Een complete annotatiekit',
         description:
-          'Emoji-stickers, loep, stapnummers, pijlen, kaders, tekst, markeringen en vervaging: markeer direct bij het vastleggen, zodat je punt meteen overkomt.',
+          'Emoji-stickers, loep, nummering, pijlen, kaders, tekst, markeringen en vervaging: markeer direct bij het vastleggen, zodat je punt meteen overkomt.',
       },
       {
         title: 'Vervagen en markeren',
@@ -134,12 +134,12 @@ export const content: HomeFeaturesContent = {
         description: 'Zoom in op belangrijke details, zodat je publiek precies ziet wat je wilt benadrukken.',
       },
       {
-        title: 'Stapnummers',
+        title: 'Nummering',
         description:
           'Leid kijkers met genummerde stappen door je screenshots: perfect voor tutorials en handleidingen.',
       },
       {
-        title: 'Vastpinnen op scherm',
+        title: 'Vastpinnen op bureaublad',
         description:
           'Houd referentieafbeeldingen bovenop zweven zodat je ernaast kunt werken, zonder gesleep met vensters.',
       },

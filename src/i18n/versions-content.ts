@@ -38,30 +38,31 @@ export interface VersionsPageContent {
 export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   'zh-tw': {
     metaTitle: '版本對比',
-    metaDescription: '對比 Shotera Lite 版與完整版的功能差異與定位，幫你選到合適的版本。',
+    metaDescription: '對比 Shotera Lite 版與標準版的功能差異與定位，幫你選到合適的版本。',
     hero: {
       tagline: '版本對比',
-      title: 'Lite 還是完整版？選最適合你的那一款',
+      title: 'Lite 還是標準版？選最適合你的那一款',
       subtitle:
-        '兩個版本共享同一套截圖與繪圖標註體驗：Lite 版更輕量，完整版補齊 AI、圖片翻譯、錄製螢幕、GIF 錄製、QR Code / 條碼辨識與滾動截圖等能力。',
+        '兩個版本共享同一套截圖與繪圖標註體驗：Lite 版更輕量，標準版補齊 AI、圖片翻譯、錄製螢幕、GIF 錄製、QR Code / 條碼辨識與長截圖等能力。',
     },
     section: {
       title: '兩個版本，各有所長',
-      subtitle: 'Lite 與完整版的所有差異，一眼看清。',
+      subtitle: 'Lite 與標準版的所有差異，一眼看清。',
     },
     cards: {
       lite: {
         title: 'Shotera Lite 版',
         tagline: '輕量精簡版',
         badge: '新',
-        description: '輕量精簡版本，專注截圖與基礎繪圖標註，不含 AI、錄製螢幕與滾動截圖等進階能力。',
+        description: '輕量精簡版本，專注截圖與基礎繪圖標註，不含 AI、錄製螢幕與長截圖等進階能力。',
         cta: '下載 Lite 版',
       },
       standard: {
-        title: 'Shotera 完整版',
+        title: 'Shotera 標準版',
         tagline: '完整能力版本',
-        description: '完整能力版本：AI 去背、擦除、離線 OCR、圖片翻譯，以及錄製螢幕、GIF 錄製、QR Code / 條碼辨識與滾動截圖。',
-        cta: '下載完整版',
+        description:
+          '完整能力版本：AI 去背、擦除、離線 OCR、圖片翻譯，以及錄製螢幕、GIF 錄製、QR Code / 條碼辨識與長截圖。',
+        cta: '下載標準版',
       },
     },
     table: {
@@ -91,14 +92,14 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'AI 能力 · 僅完整版',
+          title: 'AI 能力 · 僅標準版',
           support: [false, true],
           rows: ['AI 去背', 'AI 擦除', '圖片翻譯（線上）', '離線 OCR（擷取文字）', 'AI 能力設定（模型切換、翻譯服務）'],
         },
         {
-          title: '進階能力 · 僅完整版',
+          title: '進階能力 · 僅標準版',
           support: [false, true],
-          rows: ['錄製螢幕', 'GIF 錄製', 'QR Code / 條碼辨識', '滾動截圖'],
+          rows: ['錄製螢幕', 'GIF 錄製', 'QR Code / 條碼辨識', '長截圖'],
         },
       ],
     },
@@ -107,16 +108,16 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   },
   ja: {
     metaTitle: 'バージョン比較',
-    metaDescription: 'Shotera Lite版とフル版の機能差と位置づけを比較して、あなたに合うバージョンを選べます。',
+    metaDescription: 'Shotera Lite版と Standard 版の機能差と位置づけを比較して、あなたに合うバージョンを選べます。',
     hero: {
       tagline: 'バージョン比較',
-      title: 'Lite版とフル版、あなたに合うのはどっち？',
+      title: 'Lite版と Standard 版、あなたに合うのはどっち？',
       subtitle:
-        '両バージョンは同じスクリーンショットと注釈の操作感を共有します。Lite版はより軽量で、フル版は AI、画像翻訳、画面録画、GIF 録画、QR コード・バーコード認識、スクロールキャプチャなどを追加します。',
+        '両バージョンは同じスクリーンショットと注釈の操作感を共有します。Lite版はより軽量で、Standard 版は AI、画像翻訳、画面録画、GIF 録画、QR コード・バーコード認識、長尺キャプチャなどを追加します。',
     },
     section: {
       title: '2つのバージョン、それぞれの強み',
-      subtitle: 'Lite版とフル版の違いがひと目でわかります。',
+      subtitle: 'Lite版と Standard 版の違いがひと目でわかります。',
     },
     cards: {
       lite: {
@@ -124,15 +125,15 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         tagline: '軽量エディション',
         badge: '新',
         description:
-          '軽量なエディション。スクリーンショットと基本的な注釈に絞り、AI や画面録画、スクロールキャプチャなどの高度な機能は含みません。',
+          '軽量なエディション。スクリーンショットと基本的な注釈に絞り、AI や画面録画、長尺キャプチャなどの高度な機能は含みません。',
         cta: 'Lite版をダウンロード',
       },
       standard: {
-        title: 'Shotera フル版',
+        title: 'Shotera Standard 版',
         tagline: 'フル機能エディション',
         description:
-          'フル機能エディション：AI 切り抜き、AI 消去、オフライン OCR、画像翻訳に加え、画面録画、GIF 録画、QR コード・バーコード認識、スクロールキャプチャを搭載。',
-        cta: 'フル版をダウンロード',
+          'フル機能エディション：AI 切り抜き、AI 消去、オフライン OCR、画像翻訳に加え、画面録画、GIF 録画、QR コード・バーコード認識、長尺キャプチャを搭載。',
+        cta: 'Standard 版をダウンロード',
       },
     },
     table: {
@@ -162,7 +163,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'AI 機能 · フル版のみ',
+          title: 'AI 機能 · Standard 版のみ',
           support: [false, true],
           rows: [
             'AI 切り抜き',
@@ -173,9 +174,9 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: '高度な機能 · フル版のみ',
+          title: '高度な機能 · Standard 版のみ',
           support: [false, true],
-          rows: ['画面録画', 'GIF 録画', 'QR コード・バーコード認識', 'スクロールキャプチャ'],
+          rows: ['画面録画', 'GIF 録画', 'QR コード・バーコード認識', '長尺キャプチャ'],
         },
       ],
     },
@@ -184,31 +185,31 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   },
   'pt-br': {
     metaTitle: 'Versões',
-    metaDescription: 'Compare o Shotera Lite e a versão completa: o que cada edição inclui e qual combina com você.',
+    metaDescription: 'Compare o Shotera Lite e a versão Standard: o que cada edição inclui e qual combina com você.',
     hero: {
       tagline: 'Versões',
-      title: 'Lite ou versão completa? Escolha a que combina com você',
+      title: 'Lite ou versão Standard? Escolha a que combina com você',
       subtitle:
-        'As duas versões compartilham a mesma experiência de captura e anotação. A Lite é mais leve; a versão completa adiciona IA, tradução de imagens, gravação de tela, GIF, leitura de QR Code e código de barras, e captura com rolagem.',
+        'As duas versões compartilham a mesma experiência de captura e anotação. A Lite é mais leve; a versão Standard adiciona AI, tradução de imagens, gravação de tela, GIF, leitura de QR Code e código de barras, e captura longa.',
     },
     section: {
       title: 'Duas versões, cada uma com seus pontos fortes',
-      subtitle: 'Todas as diferenças entre a Lite e a versão completa, num relance.',
+      subtitle: 'Todas as diferenças entre a Lite e a versão Standard, num relance.',
     },
     cards: {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Edição leve',
         badge: 'Novo',
-        description: 'Versão leve, focada em captura e anotação básica — sem AI, gravação de tela e captura com rolagem.',
+        description: 'Versão leve, focada em captura e anotação básica — sem AI, gravação de tela e captura longa.',
         cta: 'Baixar Lite',
       },
       standard: {
-        title: 'Shotera Versão completa',
+        title: 'Shotera Standard',
         tagline: 'Edição completa',
         description:
-          'Edição completa: recorte e apagamento com IA, OCR offline, tradução de imagens, além de gravação de tela, GIF, leitura de QR Code e código de barras, e captura com rolagem.',
-        cta: 'Baixar versão completa',
+          'Tudo o que há na Lite, e mais: recorte e apagamento com AI, OCR offline, tradução de imagens, além de gravação de tela, GIF, leitura de QR Code e código de barras, e captura longa.',
+        cta: 'Baixar a versão Standard',
       },
     },
     table: {
@@ -242,20 +243,20 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'Recursos de AI · Somente versão completa',
+          title: 'Recursos de AI · Somente na versão Standard',
           support: [false, true],
           rows: [
-            'Recorte com IA',
-            'Apagar com IA',
+            'Recorte com AI',
+            'Apagar com AI',
             'Tradução de imagens (online)',
             'OCR offline (extrair texto)',
             'Configurações de AI (troca de modelo, serviço de tradução)',
           ],
         },
         {
-          title: 'Recursos avançados · Somente versão completa',
+          title: 'Recursos avançados · Somente na versão Standard',
           support: [false, true],
-          rows: ['Gravar tela', 'Gravar GIF', 'Ler QR Code e código de barras', 'Captura com rolagem'],
+          rows: ['Gravar tela', 'Gravar GIF', 'Ler QR Code e código de barras', 'Captura longa'],
         },
       ],
     },
@@ -264,16 +265,16 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   },
   es: {
     metaTitle: 'Versiones',
-    metaDescription: 'Compara Shotera Lite y la versión completa: qué incluye cada edición y cuál encaja contigo.',
+    metaDescription: 'Compara Shotera Lite y la versión Estándar: qué incluye cada edición y cuál encaja contigo.',
     hero: {
       tagline: 'Versiones',
-      title: '¿Lite o versión completa? Elige la que mejor te encaje',
+      title: '¿Lite o versión Estándar? Elige la que mejor te encaje',
       subtitle:
-        'Ambas versiones comparten la misma experiencia de captura y anotación. La Lite es más ligera; la versión completa añade IA, traducción de imágenes, grabación de pantalla, GIF, lectura de códigos QR y de barras, y captura con desplazamiento.',
+        'Ambas versiones comparten la misma experiencia de captura y anotación. La Lite es más ligera; la versión Estándar añade IA, traducción de imágenes, grabación de pantalla, GIF, lectura de códigos QR y de barras, y captura larga.',
     },
     section: {
       title: 'Dos versiones, cada una con sus ventajas',
-      subtitle: 'Todas las diferencias entre Lite y la versión completa, de un vistazo.',
+      subtitle: 'Todas las diferencias entre Lite y la versión Estándar, de un vistazo.',
     },
     cards: {
       lite: {
@@ -281,15 +282,15 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         tagline: 'Edición ligera',
         badge: 'Nuevo',
         description:
-          'Versión ligera centrada en la captura y la anotación básica, sin IA, grabación de pantalla ni captura con desplazamiento.',
+          'Versión ligera centrada en la captura y la anotación básica, sin IA, grabación de pantalla ni captura larga.',
         cta: 'Descargar Lite',
       },
       standard: {
-        title: 'Shotera Versión completa',
+        title: 'Shotera Estándar',
         tagline: 'Edición completa',
         description:
-          'Edición completa: recorte y borrado con IA, OCR sin conexión, traducción de imágenes, además de grabación de pantalla, GIF, lectura de códigos QR y de barras, y captura con desplazamiento.',
-        cta: 'Descargar versión completa',
+          'Todo lo de Lite, y además: recorte y borrado con IA, OCR sin conexión, traducción de imágenes, además de grabación de pantalla, GIF, lectura de códigos QR y de barras, y captura larga.',
+        cta: 'Descargar la versión Estándar',
       },
     },
     table: {
@@ -323,7 +324,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'Funciones de IA · Solo versión completa',
+          title: 'Funciones de IA · Solo en la versión Estándar',
           support: [false, true],
           rows: [
             'Recorte con IA',
@@ -334,9 +335,9 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'Funciones avanzadas · Solo versión completa',
+          title: 'Funciones avanzadas · Solo en la versión Estándar',
           support: [false, true],
-          rows: ['Grabar pantalla', 'Grabar GIF', 'Leer códigos QR y de barras', 'Captura con desplazamiento'],
+          rows: ['Grabar pantalla', 'Grabar GIF', 'Leer códigos QR y de barras', 'Captura larga'],
         },
       ],
     },
@@ -345,16 +346,17 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   },
   de: {
     metaTitle: 'Versionen',
-    metaDescription: 'Vergleiche Shotera Lite und die Vollversion: Was jede Edition bietet und welche zu dir passt.',
+    metaDescription:
+      'Vergleiche Shotera Lite und die Standard-Edition: Was jede Edition bietet und welche zu dir passt.',
     hero: {
       tagline: 'Versionen',
-      title: 'Lite oder Vollversion? Wähle die passende Edition',
+      title: 'Lite oder Standard-Edition? Wähle die passende Edition',
       subtitle:
-        'Beide Versionen teilen dieselbe Aufnahme- und Anmerkungserfahrung. Lite ist schlanker; die Vollversion ergänzt KI, Bildübersetzung, Bildschirmaufnahme, GIF, QR- und Barcode-Erkennung und Scrolling-Capture.',
+        'Beide Versionen teilen dieselbe Aufnahme- und Anmerkungserfahrung. Lite ist schlanker; die Standard-Edition ergänzt AI, Bildübersetzung, Bildschirmaufnahme, GIF, QR- und Barcode-Erkennung und langen Screenshot.',
     },
     section: {
       title: 'Zwei Versionen, jede mit ihren Stärken',
-      subtitle: 'Alle Unterschiede zwischen Lite und Vollversion auf einen Blick.',
+      subtitle: 'Alle Unterschiede zwischen Lite und Standard-Edition auf einen Blick.',
     },
     cards: {
       lite: {
@@ -362,15 +364,15 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         tagline: 'Leichte Edition',
         badge: 'Neu',
         description:
-          'Schlanke Version für Screenshots und grundlegende Anmerkungen — ohne KI, Bildschirmaufnahme und Scrolling-Capture.',
+          'Schlanke Version für Screenshots und grundlegende Anmerkungen — ohne AI, Bildschirmaufnahme und langen Screenshot.',
         cta: 'Lite herunterladen',
       },
       standard: {
-        title: 'Shotera Vollversion',
+        title: 'Shotera Standard',
         tagline: 'Voll ausgestattete Edition',
         description:
-          'Voll ausgestattete Edition: KI-Freistellung, KI-Radierer, Offline-OCR, Bildübersetzung sowie Bildschirmaufnahme, GIF, QR- und Barcode-Erkennung und Scrolling-Capture.',
-        cta: 'Vollversion herunterladen',
+          'Alles aus Lite, plus: AI-Freistellen, AI-Radierer, Offline-OCR, Bildübersetzung sowie Bildschirmaufnahme, GIF, QR- und Barcode-Erkennung und langen Screenshot.',
+        cta: 'Standard herunterladen',
       },
     },
     table: {
@@ -400,20 +402,20 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'AI-Funktionen · Nur Vollversion',
+          title: 'AI-Funktionen · Nur Standard-Edition',
           support: [false, true],
           rows: [
-            'KI-Freistellung',
-            'KI-Radierer',
+            'AI-Freistellen',
+            'AI-Radierer',
             'Bildübersetzung (online)',
             'Offline-OCR (Text extrahieren)',
             'AI-Einstellungen (Modellwechsel, Übersetzungsdienst)',
           ],
         },
         {
-          title: 'Erweiterte Funktionen · Nur Vollversion',
+          title: 'Erweiterte Funktionen · Nur Standard-Edition',
           support: [false, true],
-          rows: ['Bildschirmaufnahme', 'GIF-Aufnahme', 'QR- und Barcode-Erkennung', 'Scrolling-Capture'],
+          rows: ['Bildschirmaufnahme', 'GIF-Aufnahme', 'QR- und Barcode-Erkennung', 'Langer Screenshot'],
         },
       ],
     },
@@ -424,16 +426,16 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   fr: {
     metaTitle: 'Versions',
     metaDescription:
-      'Comparez Shotera Lite et la version complète : ce que chaque édition propose et laquelle vous convient.',
+      'Comparez Shotera Lite et la version Standard : ce que chaque édition propose et laquelle vous convient.',
     hero: {
       tagline: 'Versions',
-      title: 'Lite ou version complète ? Choisissez celle qui vous convient',
+      title: 'Lite ou version Standard ? Choisissez celle qui vous convient',
       subtitle:
-        "Les deux versions partagent la même expérience de capture et d'annotation. Lite est plus légère ; la version complète ajoute l’IA, la traduction d'images, l'enregistrement d'écran, le GIF, la lecture de QR Code et la capture avec défilement.",
+        "Les deux versions partagent la même expérience de capture et d'annotation. Lite est plus légère ; la version Standard ajoute l’IA, la traduction d'images, l'enregistrement d'écran, le GIF, la lecture de QR Code et la longue capture.",
     },
     section: {
       title: 'Deux versions, chacune ses atouts',
-      subtitle: "Toutes les différences entre Lite et la version complète, en un coup d'œil.",
+      subtitle: "Toutes les différences entre Lite et la version Standard, en un coup d'œil.",
     },
     cards: {
       lite: {
@@ -441,15 +443,15 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         tagline: 'Édition légère',
         badge: 'Nouveau',
         description:
-          "Version légère dédiée à la capture et à l'annotation de base — sans IA, enregistrement d'écran ni capture avec défilement.",
+          "Version légère dédiée à la capture et à l'annotation de base — sans IA, enregistrement d'écran ni longue capture.",
         cta: 'Télécharger Lite',
       },
       standard: {
-        title: 'Shotera Version complète',
+        title: 'Shotera Standard',
         tagline: 'Édition complète',
         description:
-          "Édition complète : détourage et effacement IA, OCR hors ligne, traduction d'images, plus enregistrement d'écran, GIF, lecture de QR Code et capture avec défilement.",
-        cta: 'Télécharger la version complète',
+          "Tout ce que propose Lite, et en plus : détourage et effacement AI, OCR hors ligne, traduction d'images, plus enregistrement d'écran, GIF, lecture de QR Code et longue capture.",
+        cta: 'Télécharger la version Standard',
       },
     },
     table: {
@@ -479,20 +481,25 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'Fonctions AI · Version complète uniquement',
+          title: 'Fonctions AI · Version Standard uniquement',
           support: [false, true],
           rows: [
-            'Détourage IA',
-            'Effacement IA',
+            'Détourage AI',
+            'Effacement AI',
             "Traduction d'images (en ligne)",
             'OCR hors ligne (extraire le texte)',
             'Réglages AI (changement de modèle, service de traduction)',
           ],
         },
         {
-          title: 'Fonctions avancées · Version complète uniquement',
+          title: 'Fonctions avancées · Version Standard uniquement',
           support: [false, true],
-          rows: ["Enregistrement d'écran", 'Enregistrement GIF', 'Lecture de QR Code et de codes-barres', 'Capture avec défilement'],
+          rows: [
+            "Enregistrement d'écran",
+            'Enregistrement GIF',
+            'Lecture de QR Code et de codes-barres',
+            'Longue capture',
+          ],
         },
       ],
     },
@@ -501,16 +508,16 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   },
   it: {
     metaTitle: 'Versioni',
-    metaDescription: 'Confronta Shotera Lite e la versione completa: cosa include ogni edizione e quale fa per te.',
+    metaDescription: 'Confronta Shotera Lite e la versione Standard: cosa include ogni edizione e quale fa per te.',
     hero: {
       tagline: 'Versioni',
-      title: 'Lite o versione completa? Scegli quella giusta per te',
+      title: 'Lite o versione Standard? Scegli quella giusta per te',
       subtitle:
-        'Entrambe le versioni condividono la stessa esperienza di cattura e annotazione. Lite è più leggera; la versione completa aggiunge l’IA, traduzione immagini, registrazione schermo, GIF, lettura di codici QR e a barre e screenshot con scorrimento.',
+        'Entrambe le versioni condividono la stessa esperienza di cattura e annotazione. Lite è più leggera; la versione Standard aggiunge l’IA, traduzione immagini, registrazione schermo, GIF, lettura di codici QR e a barre e screenshot lungo.',
     },
     section: {
       title: 'Due versioni, ognuna con i suoi punti di forza',
-      subtitle: "Tutte le differenze tra Lite e versione completa, a colpo d'occhio.",
+      subtitle: "Tutte le differenze tra Lite e versione Standard, a colpo d'occhio.",
     },
     cards: {
       lite: {
@@ -518,15 +525,15 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         tagline: 'Edizione leggera',
         badge: 'Nuovo',
         description:
-          'Versione leggera dedicata a cattura e annotazione di base — senza IA, registrazione schermo e screenshot con scorrimento.',
+          'Versione leggera dedicata a cattura e annotazione di base — senza IA, registrazione schermo e screenshot lungo.',
         cta: 'Scarica Lite',
       },
       standard: {
-        title: 'Shotera Versione completa',
+        title: 'Shotera Standard',
         tagline: 'Edizione completa',
         description:
-          'Edizione completa: scontorno e cancellazione IA, OCR offline, traduzione immagini, oltre a registrazione schermo, GIF, lettura di codici QR e a barre e screenshot con scorrimento.',
-        cta: 'Scarica versione completa',
+          'Tutto quello che offre Lite, e in più: scontorno e cancellazione IA, OCR offline, traduzione immagini, oltre a registrazione schermo, GIF, lettura di codici QR e a barre e screenshot lungo.',
+        cta: 'Scarica la versione Standard',
       },
     },
     table: {
@@ -560,10 +567,10 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'Funzioni AI · Solo versione completa',
+          title: 'Funzioni AI · Solo nella versione Standard',
           support: [false, true],
           rows: [
-            'Scontorno IA',
+            'Scontorno AI',
             'Cancellazione IA',
             'Traduzione immagini (online)',
             'OCR offline (estrai testo)',
@@ -571,9 +578,9 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'Funzioni avanzate · Solo versione completa',
+          title: 'Funzioni avanzate · Solo nella versione Standard',
           support: [false, true],
-          rows: ['Registra schermo', 'Registrazione GIF', 'Lettura di codici QR e a barre', 'Screenshot con scorrimento'],
+          rows: ['Registra schermo', 'Registrazione GIF', 'Lettura di codici QR e a barre', 'Screenshot lungo'],
         },
       ],
     },
@@ -582,16 +589,16 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   },
   ko: {
     metaTitle: '버전 비교',
-    metaDescription: 'Shotera Lite 버전과 전체 버전의 기능 차이를 비교하고 나에게 맞는 버전을 선택하세요.',
+    metaDescription: 'Shotera Lite 버전과 Standard 버전의 기능 차이를 비교하고 나에게 맞는 버전을 선택하세요.',
     hero: {
       tagline: '버전 비교',
-      title: 'Lite 버전과 전체 버전, 어떤 걸 선택할까요?',
+      title: 'Lite 버전과 Standard 버전, 어떤 걸 선택할까요?',
       subtitle:
-        '두 버전은 동일한 캡처·주석 경험을 공유합니다. Lite 버전은 더 가볍고, 전체 버전은 AI, 이미지 번역, 화면 녹화, GIF, QR 코드·바코드 인식, 스크롤 캡처를 추가로 제공합니다.',
+        '두 버전은 동일한 캡처·주석 경험을 공유합니다. Lite 버전은 더 가볍고, Standard 버전은 AI, 이미지 번역, 화면 녹화, GIF, QR 코드·바코드 인식, 스크롤 캡처를 추가로 제공합니다.',
     },
     section: {
       title: '두 버전, 각자의 강점',
-      subtitle: 'Lite 버전과 전체 버전의 모든 차이를 한눈에 확인하세요.',
+      subtitle: 'Lite 버전과 Standard 버전의 모든 차이를 한눈에 확인하세요.',
     },
     cards: {
       lite: {
@@ -603,11 +610,11 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         cta: 'Lite 버전 다운로드',
       },
       standard: {
-        title: 'Shotera 전체 버전',
+        title: 'Shotera Standard 버전',
         tagline: '전체 기능 에디션',
         description:
-          '전체 기능 에디션: AI 배경 제거·지우기, 오프라인 OCR, 이미지 번역은 물론 화면 녹화, GIF, QR 코드·바코드 인식, 스크롤 캡처까지 제공합니다.',
-        cta: '전체 버전 다운로드',
+          'Lite의 모든 기능에 더해: AI 배경 제거·지우기, 오프라인 OCR, 이미지 번역은 물론 화면 녹화, GIF, QR 코드·바코드 인식, 스크롤 캡처까지 제공합니다.',
+        cta: 'Standard 버전 다운로드',
       },
     },
     table: {
@@ -637,7 +644,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'AI 기능 · 전체 버전 전용',
+          title: 'AI 기능 · Standard 버전 전용',
           support: [false, true],
           rows: [
             'AI 배경 제거',
@@ -648,7 +655,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: '고급 기능 · 전체 버전 전용',
+          title: '고급 기능 · Standard 버전 전용',
           support: [false, true],
           rows: ['화면 녹화', 'GIF 녹화', 'QR 코드·바코드 인식', '스크롤 캡처'],
         },
@@ -659,31 +666,31 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   },
   ru: {
     metaTitle: 'Версии',
-    metaDescription: 'Сравните Shotera Lite и полную версию: что входит в каждую и какая подходит вам.',
+    metaDescription: 'Сравните Shotera Lite и Стандартную версию: что входит в каждую и какая подходит вам.',
     hero: {
       tagline: 'Версии',
-      title: 'Lite или полная версия? Выберите подходящую',
+      title: 'Lite или Стандартная версия? Выберите подходящую',
       subtitle:
-        'Обе версии используют один и тот же набор инструментов захвата и аннотаций. Lite легче; полная версия добавляет AI, перевод изображений, запись экрана, GIF, распознавание QR- и штрихкодов и снимки с прокруткой.',
+        'Обе версии используют один и тот же набор инструментов захвата и аннотаций. Lite легче; Стандартная версия добавляет AI, перевод изображений, запись экрана, GIF, распознавание QR- и штрихкодов и длинные снимки.',
     },
     section: {
       title: 'Две версии — у каждой свои сильные стороны',
-      subtitle: 'Все различия между Lite и полной версией — с первого взгляда.',
+      subtitle: 'Все различия между Lite и Стандартной версией — с первого взгляда.',
     },
     cards: {
       lite: {
         title: 'Shotera Lite',
         tagline: 'Лёгкая версия',
         badge: 'Новинка',
-        description: 'Лёгкая версия для захвата и базовых аннотаций — без AI, записи экрана и снимков с прокруткой.',
+        description: 'Лёгкая версия для захвата и базовых аннотаций — без AI, записи экрана и длинных снимков.',
         cta: 'Скачать Lite',
       },
       standard: {
-        title: 'Shotera Полная версия',
+        title: 'Shotera Стандартная версия',
         tagline: 'Полнофункциональная версия',
         description:
-          'Полнофункциональная версия: AI-удаление фона, AI-стирание, офлайн-OCR, перевод изображений, а также запись экрана, GIF, распознавание QR- и штрихкодов и снимки с прокруткой.',
-        cta: 'Скачать полную версию',
+          'Всё из Lite, плюс: AI-удаление фона, AI-стирание, офлайн-OCR, перевод изображений, а также запись экрана, GIF, распознавание QR- и штрихкодов и длинные снимки.',
+        cta: 'Скачать Стандартную версию',
       },
     },
     table: {
@@ -713,7 +720,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'AI-функции · Только полная версия',
+          title: 'AI-функции · Только в Стандартной версии',
           support: [false, true],
           rows: [
             'AI-удаление фона',
@@ -724,9 +731,9 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'Дополнительные функции · Только полная версия',
+          title: 'Дополнительные функции · Только в Стандартной версии',
           support: [false, true],
-          rows: ['Запись экрана', 'Запись GIF', 'Распознавание QR- и штрихкодов', 'Снимок с прокруткой'],
+          rows: ['Запись экрана', 'Запись GIF', 'Распознавание QR- и штрихкодов', 'Длинный снимок'],
         },
       ],
     },
@@ -735,16 +742,16 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   },
   ar: {
     metaTitle: 'الإصدارات',
-    metaDescription: 'قارن بين نسخة Shotera Lite والنسخة الكاملة: ما تتضمنه كل نسخة وأيها يناسبك.',
+    metaDescription: 'قارن بين نسخة Shotera Lite والنسخة القياسية: ما تتضمنه كل نسخة وأيها يناسبك.',
     hero: {
       tagline: 'الإصدارات',
-      title: 'نسخة Lite أم النسخة الكاملة؟ اختر ما يناسبك',
+      title: 'نسخة Lite أم النسخة القياسية؟ اختر ما يناسبك',
       subtitle:
-        'تشترك النسختان في تجربة الالتقاط والتعليق نفسها. نسخة Lite أخف، بينما تضيف النسخة الكاملة ميزات الذكاء الاصطناعي وترجمة الصور وتسجيل الشاشة وGIF وقراءة رمز QR والباركود ولقطة بالتمرير.',
+        'تشترك النسختان في تجربة الالتقاط والتعليق نفسها. نسخة Lite أخف، بينما تضيف النسخة القياسية ميزات الذكاء الاصطناعي وترجمة الصور وتسجيل الشاشة وGIF وقراءة رمز QR والباركود ولقطة طويلة.',
     },
     section: {
       title: 'نسختان، ولكل منهما مزاياها',
-      subtitle: 'كل الفروق بين نسخة Lite والنسخة الكاملة في لمحة.',
+      subtitle: 'كل الفروق بين نسخة Lite والنسخة القياسية في لمحة.',
     },
     cards: {
       lite: {
@@ -752,15 +759,15 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         tagline: 'نسخة خفيفة',
         badge: 'جديد',
         description:
-          'نسخة خفيفة تركز على الالتقاط والتعليق الأساسي، دون ميزات الذكاء الاصطناعي أو تسجيل الشاشة أو لقطة بالتمرير.',
+          'نسخة خفيفة تركز على الالتقاط والتعليق الأساسي، دون ميزات الذكاء الاصطناعي أو تسجيل الشاشة أو لقطة طويلة.',
         cta: 'تنزيل Lite',
       },
       standard: {
-        title: 'Shotera النسخة الكاملة',
+        title: 'Shotera النسخة القياسية',
         tagline: 'نسخة كاملة الميزات',
         description:
-          'نسخة كاملة الميزات: إزالة الخلفية ومحو بالذكاء الاصطناعي، وOCR دون اتصال، وترجمة الصور، إضافة إلى تسجيل الشاشة وGIF وقراءة رمز QR والباركود ولقطة بالتمرير.',
-        cta: 'تنزيل النسخة الكاملة',
+          'نسخة كاملة الميزات: إزالة الخلفية ومحو بالذكاء الاصطناعي، وOCR دون اتصال، وترجمة الصور، إضافة إلى تسجيل الشاشة وGIF وقراءة رمز QR والباركود ولقطة طويلة.',
+        cta: 'تنزيل النسخة القياسية',
       },
     },
     table: {
@@ -790,7 +797,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'ميزات الذكاء الاصطناعي · في النسخة الكاملة فقط',
+          title: 'ميزات الذكاء الاصطناعي · في النسخة القياسية فقط',
           support: [false, true],
           rows: [
             'إزالة الخلفية بالذكاء الاصطناعي',
@@ -801,9 +808,9 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'ميزات متقدمة · في النسخة الكاملة فقط',
+          title: 'ميزات متقدمة · في النسخة القياسية فقط',
           support: [false, true],
-          rows: ['تسجيل الشاشة', 'تسجيل GIF', 'قراءة رمز QR والباركود', 'لقطة بالتمرير'],
+          rows: ['تسجيل الشاشة', 'تسجيل GIF', 'قراءة رمز QR والباركود', 'لقطة طويلة'],
         },
       ],
     },
@@ -817,7 +824,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
       tagline: 'Versies',
       title: 'Lite of volledige versie? Kies wat bij je past',
       subtitle:
-        'Beide versies delen dezelfde capture- en annotatie-ervaring. Lite is lichter; de volledige versie voegt AI, beeldvertaling, schermopname, GIF, QR- en barcodes scannen en scrollende schermafbeelding toe.',
+        'Beide versies delen dezelfde capture- en annotatie-ervaring. Lite is lichter; de volledige versie voegt AI, beeldvertaling, schermopname, GIF, QR- en barcodes scannen en lange schermafbeelding toe.',
     },
     section: {
       title: 'Twee versies, elk met eigen sterke punten',
@@ -829,15 +836,15 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         tagline: 'Lichte editie',
         badge: 'Nieuw',
         description:
-          'Lichte versie voor capture en basisannotatie — zonder AI, schermopname en scrollende schermafbeelding.',
+          'Lichte versie voor capture en basisannotatie — zonder AI, schermopname en lange schermafbeelding.',
         cta: 'Lite downloaden',
       },
       standard: {
-        title: 'Shotera Volledige versie',
+        title: 'Shotera Standard',
         tagline: 'Volledige editie',
         description:
-          'Volledige editie: AI-uitsnede, AI-gum, offline OCR, beeldvertaling, plus schermopname, GIF, QR- en barcodes scannen en scrollende schermafbeelding.',
-        cta: 'Volledige versie downloaden',
+          'Alles uit Lite, en meer: AI-uitsnede, AI-gum, offline OCR, beeldvertaling, plus schermopname, GIF, QR- en barcodes scannen en lange schermafbeelding.',
+        cta: 'Standard downloaden',
       },
     },
     table: {
@@ -884,7 +891,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         {
           title: 'Geavanceerde functies · Alleen volledige versie',
           support: [false, true],
-          rows: ['Schermopname', 'GIF-opname', 'QR- en barcodes scannen', 'Scrollende schermafbeelding'],
+          rows: ['Schermopname', 'GIF-opname', 'QR- en barcodes scannen', 'Lange schermafbeelding'],
         },
       ],
     },
@@ -894,16 +901,16 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   },
   pl: {
     metaTitle: 'Wersje',
-    metaDescription: 'Porównaj Shotera Lite i pełną wersję: co zawiera każda edycja i która jest dla Ciebie.',
+    metaDescription: 'Porównaj Shotera Lite i wersję Standard: co zawiera każda edycja i która jest dla Ciebie.',
     hero: {
       tagline: 'Wersje',
       title: 'Lite czy pełna wersja? Wybierz tę, która Ci odpowiada',
       subtitle:
-        'Obie wersje mają ten sam zestaw narzędzi do przechwytywania i adnotacji. Lite jest lżejsza; pełna wersja dodaje AI, tłumaczenie obrazów, nagrywanie ekranu, GIF, rozpoznawanie kodów QR i kreskowych oraz przechwytywanie z przewijaniem.',
+        'Obie wersje mają ten sam zestaw narzędzi do przechwytywania i adnotacji. Lite jest lżejsza; pełna wersja dodaje AI, tłumaczenie obrazów, nagrywanie ekranu, GIF, rozpoznawanie kodów QR i kreskowych oraz długi zrzut.',
     },
     section: {
       title: 'Dwie wersje, każda z własnymi atutami',
-      subtitle: 'Wszystkie różnice między Lite a pełną wersją na pierwszy rzut oka.',
+      subtitle: 'Wszystkie różnice między Lite a wersją Standard na pierwszy rzut oka.',
     },
     cards: {
       lite: {
@@ -911,15 +918,15 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         tagline: 'Lekka edycja',
         badge: 'Nowość',
         description:
-          'Lekka wersja skupiona na przechwytywaniu i podstawowych adnotacjach — bez AI, nagrywania ekranu i przechwytywania z przewijaniem.',
+          'Lekka wersja skupiona na przechwytywaniu i podstawowych adnotacjach — bez AI, nagrywania ekranu i długiego zrzutu.',
         cta: 'Pobierz Lite',
       },
       standard: {
-        title: 'Shotera Pełna wersja',
-        tagline: 'Pełna wersja',
+        title: 'Shotera Standard',
+        tagline: 'W pełni wyposażona edycja',
         description:
-          'Pełna wersja: wycinanie i wymazywanie AI, OCR offline, tłumaczenie obrazów oraz nagrywanie ekranu, GIF, rozpoznawanie kodów QR i kreskowych oraz przechwytywanie z przewijaniem.',
-        cta: 'Pobierz pełną wersję',
+          'Wszystko, co oferuje Lite, plus: wycinanie i wymazywanie AI, OCR offline, tłumaczenie obrazów oraz nagrywanie ekranu, GIF, rozpoznawanie kodów QR i kreskowych oraz długi zrzut.',
+        cta: 'Pobierz wersję Standard',
       },
     },
     table: {
@@ -962,7 +969,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         {
           title: 'Funkcje zaawansowane · Tylko pełna wersja',
           support: [false, true],
-          rows: ['Nagrywanie ekranu', 'Nagrywanie GIF', 'Rozpoznawanie kodów QR i kreskowych', 'Przechwytywanie z przewijaniem'],
+          rows: ['Nagrywanie ekranu', 'Nagrywanie GIF', 'Rozpoznawanie kodów QR i kreskowych', 'Długi zrzut'],
         },
       ],
     },
@@ -971,16 +978,16 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
   },
   sv: {
     metaTitle: 'Versioner',
-    metaDescription: 'Jämför Shotera Lite och fullversionen: vad varje version innehåller och vilken som passar dig.',
+    metaDescription: 'Jämför Shotera Lite och Standard: vad varje version innehåller och vilken som passar dig.',
     hero: {
       tagline: 'Versioner',
-      title: 'Lite eller fullversion? Välj den som passar dig',
+      title: 'Lite eller Standard? Välj den som passar dig',
       subtitle:
-        'Båda versionerna delar samma upplevelse för skärmbilder och anteckningar. Lite är lättare; fullversionen lägger till AI, bildöversättning, skärminspelning, GIF, QR- och streckkodsläsning och rullande skärmbild.',
+        'Båda versionerna delar samma upplevelse för skärmbilder och anteckningar. Lite är lättare; Standard lägger till AI, bildöversättning, skärminspelning, GIF, QR- och streckkodsläsning och rullande skärmbild.',
     },
     section: {
       title: 'Två versioner, var och en med sina styrkor',
-      subtitle: 'Alla skillnader mellan Lite och fullversionen i ett ögonkast.',
+      subtitle: 'Alla skillnader mellan Lite och Standard i ett ögonkast.',
     },
     cards: {
       lite: {
@@ -992,11 +999,11 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
         cta: 'Ladda ner Lite',
       },
       standard: {
-        title: 'Shotera Fullversion',
+        title: 'Shotera Standard',
         tagline: 'Fullutrustad version',
         description:
-          'Fullutrustad version: AI-frilägg, AI-radering, offline-OCR, bildöversättning samt skärminspelning, GIF, QR- och streckkodsläsning och rullande skärmbild.',
-        cta: 'Ladda ner fullversionen',
+          'Allt i Lite, plus: AI-frilägg, AI-radering, offline-OCR, bildöversättning samt skärminspelning, GIF, QR- och streckkodsläsning och rullande skärmbild.',
+        cta: 'Ladda ner Standard',
       },
     },
     table: {
@@ -1026,7 +1033,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'AI-funktioner · Endast fullversion',
+          title: 'AI-funktioner · Endast Standard',
           support: [false, true],
           rows: [
             'AI-frilägg',
@@ -1037,7 +1044,7 @@ export const versionsContent: Record<LocalizedLocale, VersionsPageContent> = {
           ],
         },
         {
-          title: 'Avancerade funktioner · Endast fullversion',
+          title: 'Avancerade funktioner · Endast Standard',
           support: [false, true],
           rows: ['Skärminspelning', 'GIF-inspelning', 'QR- och streckkodsläsning', 'Rullande skärmbild'],
         },

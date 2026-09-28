@@ -82,7 +82,7 @@ Ett fönster med nyheter, QR-kodsläsning, GIF-uppspelning och fler bildformat.
 
 **✨ Nya funktioner**
 
-- Nytt fönster med nyheter vid start: det jämför de två avslutningslägena för skärmdumpen, visar var QR-kodsläsningen finns och bjuder in till att betygsätta Shotera. Markera ”Visa inte igen”, eller klicka på ”Uppfattat” tre gånger, för att stänga av det.
+- Nytt fönster med nyheter vid start: det jämför de två avslutningslägena för skärmbilden, visar var QR-kodsläsningen finns och bjuder in till att betygsätta Shotera. Markera ”Visa inte igen”, eller klicka på ”Uppfattat” tre gånger, för att stänga av det.
 - Ny QR-kodsläsning: Micro QR, Data Matrix, Aztec, PDF417, Code128, EAN13, Code39, ITF och UPCA, plus GS1 Digital Link. Resultatpanelen kan storleksändras och flyttas, med numrerad historik.
 - Öppnar PNG, JPG, JPEG, WebP, BMP, GIF, SVG, ICO, AVIF och TIFF (tif/tiff). SVG, ICO, AVIF och TIFF är nya i den här versionen. Öppna från Arkiv-menyn eller dra in bilder.
 - Ny uppspelning av GIF-animeringar. Statusfältet och panelen Bildinformation visar antal bildrutor och total längd.
@@ -129,7 +129,7 @@ Elegant fångstläge, omedelbar fästning, kopieringsgenvägar.
 **✨ Nya funktioner**
 
 - Nytt fångstläge ”Elegant”: markera området, klart. Bilden kopieras med förhandsvisning i aviseringen. Ingen overlay. Mörkt läge stöds ([#1](https://github.com/mosuzo-studio/Shotera/issues/1)).
-- Ny snabbtangent F3 för omedelbar fästning under eller efter fångsten. Anpassas i Inställningar → Snabbtangenter ([#3](https://github.com/mosuzo-studio/Shotera/issues/3), [#4](https://github.com/mosuzo-studio/Shotera/issues/4)).
+- Ny snabbtangent F3 för omedelbar fästning under eller efter skärmbilden. Anpassas i Inställningar → Snabbtangenter ([#3](https://github.com/mosuzo-studio/Shotera/issues/3), [#4](https://github.com/mosuzo-studio/Shotera/issues/4)).
 - Ctrl+C kopierar skärmbilden och stänger overlayen i ett steg.
 - Dubbelklick bekräftar fångsten direkt.
 - Högerklick avbryter fångsten.
@@ -161,13 +161,13 @@ Tack till @Const-me, @LightQuanta och @wherewhere för funktionsförslag som for
 
 **Släppt:** 2026-09-12
 
-Fullständig bildredigerare, fångstlägen, utökat CPU-stöd.
+Fullständig bildredigerare, avslutningslägen, utökat CPU-stöd.
 
 **✨ Nya funktioner**
 
-- Ny fullständig bildredigerare i ett eget fönster, nås via ”Redigera bild…” i systemfältet. Stöder öppna/spara/spara som, dra och släpp, Ctrl+rullhjulet zoom 10–400 %, annoteringsverktyg, OCR, AI-frilägg och AI-suddgummi.
+- Ny fullständig bildredigerare i ett eget fönster, nås via ”Redigera bild…” i systemfältet. Stöder öppna/spara/spara som, dra och släpp, Ctrl+rullhjulet zoom 10–400 %, annoteringsverktyg, OCR, AI-frilägg och AI-radering.
 - Ny pilstil ”Enkel pil” (avsmalnande) i pilens underverktygsfält.
-- Ny inställning ”Efter skärmdumpen”: välj ”Elegant” för att kopiera markeringen med förhandsvisning i aviseringen (klick öppnar redigeraren), eller behåll standardläget ”Direktanteckna”.
+- Ny inställning ”Efter skärmbilden”: välj ”Elegant” för att kopiera markeringen med förhandsvisning i aviseringen (klick öppnar redigeraren), eller behåll standardläget ”Direktanteckna”.
 - Nya inställningarna ”Extrahera text automatiskt efter skärmdump” och ”Dölj AI-knapparna”.
 - Översättningens målspråk följer gränssnittets språk.
 
@@ -186,10 +186,10 @@ Fullständig bildredigerare, fångstlägen, utökat CPU-stöd.
 - OCR misslyckades vid kinesiska och icke-engelska installationssökvägar – åtgärdat.
 - Bilder med icke-ASCII-tecken i sökvägen kunde inte läsas in via dra och släpp – åtgärdat.
 - Redigerarfönstret laddade ibland inte skärmbilden från aviseringen – åtgärdat.
-- AI-frilägg och AI-suddgummi lämnade förskjutna bilder och ostädade remsor – åtgärdat.
+- AI-frilägg och AI-radering lämnade förskjutna bilder och ostädade remsor – åtgärdat.
 - Redigerarens statusfält uppdaterades inte efter inläsning av en bild – åtgärdat.
 - Markeringarna för textextrahering hamnade snett i redigeraren – åtgärdat.
-- Siffer- och emojiklistermärken drev nedåt vid storleksändring – åtgärdat.
+- Siffer- och emoji-klistermärken drev nedåt vid storleksändring – åtgärdat.
 
 **🗑️ Borttaget**
 
@@ -313,7 +313,7 @@ Tjänster för bildöversättning, testa nyckel, åtgärder för hög DPI.
 - Tjänsternas länkar till API-dokumentationen öppnades felaktigt – åtgärdat.
 - Att dra markeringen använde en högfrekvent indataväg för pekaren – åtgärdat.
 - Markeringskoordinater för hög DPI konverterades via scenens koordinatsystem – åtgärdat.
-- Vid blandad DPI och flera skärmar anpassades den frysta fångstoverlayen till den virtuella skrivbordets inbyggda koordinater – åtgärdat.
+- Vid blandad DPI och flera skärmar anpassades den frysta skärmbildsoverlayen till den virtuella skrivbordets inbyggda koordinater – åtgärdat.
 
 ---
 
@@ -325,7 +325,7 @@ Direkt till urklippet, flyttbara verktygsfält.
 
 **✨ Nya funktioner**
 
-- Ny fångst direkt till urklippet: tryck Alt+C eller välj ”Ta skärmbild och kopiera” i systemfältets meny för att hoppa över annoteringen. Skärmbilden hamnar i urklippet.
+- Ny skärmbild direkt till urklippet: tryck Alt+C eller välj ”Ta skärmbild och kopiera” i systemfältets meny för att hoppa över annoteringen. Skärmbilden hamnar i urklippet.
 - Det sexpunktsiga draghandtaget på det primära och sekundära annoteringsverktygsfältet är tillbaka. Synligheten kan ställas in i Inställningar.
 
 ---
@@ -334,7 +334,7 @@ Direkt till urklippet, flyttbara verktygsfält.
 
 **Släppt:** 2026-08-02
 
-Snabbare start av fångst, anpassad fångst, 15 språk.
+Snabbare start av skärmbilden, anpassad skärmbild, 15 språk.
 
 **✨ Nya funktioner**
 
@@ -358,12 +358,12 @@ Snabbare start av fångst, anpassad fångst, 15 språk.
 
 **Släppt:** 2026-07-29
 
-Fönsterigenkänning, annoteringsverktyg, förbättrade fästningar.
+Fönsterigenkänning, annoteringsverktyg, förbättrade fästa bilder.
 
 **✨ Nya funktioner**
 
 - Förbättrad igenkänning av fönster och kontroller med enklare val av nästlade mål.
-- Förfinat fångstförstoringsglas med tydligare kanter, större storlekshandtag och förbättrat hårkors.
+- Förfinat skärmbildsförstoringsglas med tydligare kanter, större storlekshandtag och förbättrat hårkors.
 - Stöd för former, pilar, text, klistermärken, markeringar och lokalt förstoringsglas har lagts till.
 - Förbättrad redigering med mjukare storleksändring, rotation, formatering och ångra/gör om.
 - Uppdaterad layout för verktygsfältet.
@@ -387,15 +387,15 @@ Fånga det som är viktigt. Förklara det tydligt. Håll det synligt.
 **✨ Nya funktioner**
 
 - Snabbt skärmbildsflöde med F1-snabbtangent, igenkänning av fönster och kontroller och förstoringsglas på skärmen.
-- Annoteringsverktyg: rektanglar, ellipser, linjer, pilar, frihandspenna, överstrykningspenna, formaterad text, automatisk stegnumrering, mosaik/oskärpa, emojiklistermärken och lokalt förstoringsglas.
-- F3 skapar fästningar som alltid ligger överst för skärmbilder eller urklippsinnehåll. Fästningar stöder flytt, storleksändring, rotation, spegling och transparens.
+- Annoteringsverktyg: rektanglar, ellipser, linjer, pilar, frihandspenna, överstrykningspenna, formaterad text, automatisk stegnumrering, mosaik/oskärpa, emoji-klistermärken och lokalt förstoringsglas.
+- F3 skapar fästa bilder som alltid ligger överst för skärmbilder eller urklippsinnehåll. Fästa bilder stöder flytt, storleksändring, rotation, spegling och transparens.
 - Presentationsläget hjälper dig att städa skrivbordet före skärmbilder och möten genom att dölja ikoner och tillämpa förinställningar för tema och bakgrund.
 
 **🚀 Förbättringar**
 
 - Mer konsekvent upplevelse med tydligare återkoppling vid markering.
 - Synliga storlekshandtag.
-- Renare fångstförstoringsglas.
+- Renare skärmbildsförstoringsglas.
 - Justerade annoteringsverktygsfält.
 - Förfinad textredigering.
 - Förbättrad introduktion.

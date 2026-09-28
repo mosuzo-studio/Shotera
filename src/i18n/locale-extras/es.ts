@@ -5,14 +5,14 @@ import type { LocaleExtras } from '../locale-extras-types';
  * English pages. Terminology follows the Shotera app's es language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: 'Captura con desplazamiento',
+  footerScrolling: 'Captura larga',
 
   home: {
     heroAlt:
-      'Herramientas de Shotera en pantalla: captura, captura con desplazamiento, anotación, grabación de pantalla, recorte con IA, OCR sin conexión, lectura de códigos QR y de barras, traducción de imágenes y fijar en pantalla',
+      'Herramientas de Shotera en pantalla: captura, captura larga, anotación, grabación de pantalla, recorte con IA, OCR sin conexión, lectura de códigos QR y de barras, traducción de imágenes y fijar en el escritorio',
     cards: [
       {
-        title: 'Captura con desplazamiento',
+        title: 'Captura larga',
         description:
           'Una página más alta que la pantalla cabe igualmente en una sola imagen. Desplázate tú o deja que Shotera lo haga solo, y mira cómo se une la imagen larga mientras crece.',
       },
@@ -28,10 +28,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: 'Captura con desplazamiento',
+      tagline: 'Captura larga',
       title: 'Una página más alta que la pantalla, en una sola imagen',
       text: 'Páginas completas, chats largos y documentos enteros: capturados de arriba abajo en una sola imagen.',
-      alt: 'Captura con desplazamiento uniendo una página larga en una sola imagen',
+      alt: 'Captura larga uniendo una página larga en una sola imagen',
       items: [
         {
           title: 'Desplazamiento automático o manual',
@@ -125,7 +125,7 @@ export const content: LocaleExtras = {
     core: {
       title: 'Capacidades principales',
       subtitle:
-        'Captura, captura con desplazamiento, fijar en el escritorio, grabación, OCR sin conexión e IA en el dispositivo: las seis cosas que usas todo el día, a un atajo de distancia.',
+        'Captura, captura larga, fijar en el escritorio, grabación, OCR sin conexión e IA en el dispositivo: las seis cosas que usas todo el día, a un atajo de distancia.',
       alt: 'Caja de herramientas de Shotera sobre un escritorio de Windows: selección en pantalla y barra de anotación',
       items: [
         {
@@ -134,7 +134,7 @@ export const content: LocaleExtras = {
             'Detección inteligente de ventanas y elementos: el encuadre que quieres ya está elegido, así que casi nunca dibujas el recuadro a mano. Dos formas de terminar, tú eliges: copiar directamente al portapapeles o anotar al momento.',
         },
         {
-          title: 'Captura con desplazamiento',
+          title: 'Captura larga',
           description:
             'Desplázate por una página o un chat largo y deja que Shotera lo una en una sola imagen: desplazamiento automático o manual, con vista previa en vivo.',
         },
@@ -244,7 +244,7 @@ export const content: LocaleExtras = {
         {
           title: 'Crecimos con nuestros usuarios',
           description:
-            'Captura con desplazamiento, recorte con IA, OCR sin conexión, traducción de imágenes: muchas funciones salieron directamente de los comentarios de los usuarios.',
+            'Captura larga, recorte con IA, OCR sin conexión, traducción de imágenes: muchas funciones salieron directamente de los comentarios de los usuarios.',
         },
         {
           title: 'Llegando a más personas',

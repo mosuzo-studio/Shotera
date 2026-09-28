@@ -6,14 +6,13 @@ import type { LocaleExtras } from '../locale-extras-types';
  * language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: '滾動截圖',
+  footerScrolling: '長截圖',
 
   home: {
-    heroAlt:
-      'Shotera 工具箱：螢幕擷取、滾動截圖、標註、螢幕錄製、AI 去背、離線 OCR、QR Code / 條碼辨識、圖片翻譯與釘選到螢幕',
+    heroAlt: 'Shotera 工具箱：截圖、長截圖、標註、錄製螢幕、AI 去背、離線 OCR、QR Code / 條碼辨識、圖片翻譯與釘在桌面',
     cards: [
       {
-        title: '滾動截圖',
+        title: '長截圖',
         description: '頁面再長也能一張裝下：自動滾或自己滾，邊滾邊拼，長圖即時可見。',
       },
       {
@@ -26,10 +25,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: '滾動截圖',
+      tagline: '長截圖',
       title: '頁面再長，也一張裝下',
       text: '長網頁、長聊天記錄、整份文件——從上到下一張截全。',
-      alt: '滾動截圖將長頁面拼接成一張長圖',
+      alt: '長截圖將長頁面拼接成一張長圖',
       items: [
         {
           title: '自動滾，或自己動手滾',
@@ -68,7 +67,7 @@ export const content: LocaleExtras = {
           description: '標出重點、執行 OCR、去背、翻譯，都在同一個視窗裡完成。',
         },
         {
-          title: '複製、儲存或釘選',
+          title: '複製、儲存或釘在桌面',
           description: '複製到剪貼簿、存到本機，或釘在最上層隨時對照。',
         },
       ],
@@ -77,7 +76,7 @@ export const content: LocaleExtras = {
 
   about: {
     statsTitle: 'Shotera 數據一覽',
-    metaDescription: 'Shotera 的故事：我們為什麼打造這款螢幕擷取工具，以及背後堅持的原則與價值。',
+    metaDescription: 'Shotera 的故事：我們為什麼打造這款截圖工具，以及背後堅持的原則與價值。',
     hero: {
       tagline: '關於我們',
       title: '把截圖這件小事，',
@@ -112,7 +111,7 @@ export const content: LocaleExtras = {
     },
     core: {
       title: '核心能力',
-      subtitle: '從截圖到螢幕錄製，從貼圖到離線 OCR 與 AI——六件天天用得上的能力，一個快速鍵全都在。',
+      subtitle: '從截圖到錄製螢幕，從釘在桌面到離線 OCR 與 AI——六件天天用得上的能力，一個快速鍵全都在。',
       alt: 'Windows 桌面上的 Shotera 標註工具：選區、工具列與玻璃貼片',
       items: [
         {
@@ -125,11 +124,11 @@ export const content: LocaleExtras = {
           description: '網頁或長聊天記錄一次截全：自動滾或自己滾，邊滾邊拼成一張長圖，拼接過程即時可見。',
         },
         {
-          title: '貼圖',
+          title: '釘在桌面',
           description: '把任何截圖貼在最上層隨時對照，多張並排也不凌亂。',
         },
         {
-          title: '螢幕錄製 & GIF',
+          title: '錄製螢幕 & GIF',
           description: '錄製螢幕並匯出輕巧的 GIF，游標高亮與點擊提示讓示範一看就懂。',
         },
         {
@@ -152,8 +151,8 @@ export const content: LocaleExtras = {
             '矩形/橢圓、直線/箭頭、畫筆、螢光筆、馬賽克/模糊、文字、編號、表情貼圖、放大鏡、橡皮擦——截完圖立刻就能標。',
         },
         {
-          title: 'Emoji 貼紙',
-          description: '數百種表情貼紙隨手貼上：按讚、比心、吐槽、慶祝，隨意縮放、任意擺放，替截圖添點趣味。',
+          title: 'Emoji 貼圖',
+          description: '數百種表情貼圖隨手貼上：按讚、比心、吐槽、慶祝，隨意縮放、任意擺放，替截圖添點趣味。',
         },
         {
           title: '圖片查看與編輯',
@@ -215,7 +214,7 @@ export const content: LocaleExtras = {
         },
         {
           title: '被使用者推著長大',
-          description: '滾動截圖、AI 去背、離線 OCR、圖片翻譯……許多功能，都是使用者在回饋裡「點」出來的。',
+          description: '長截圖、AI 去背、離線 OCR、圖片翻譯……許多功能，都是使用者在回饋裡「點」出來的。',
         },
         {
           title: '走向更多人',

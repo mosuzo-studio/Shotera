@@ -12,11 +12,11 @@ export const content: HomeFeaturesContent = {
     subtitle: '從隨手一截到專業創作，Shotera 把日常最常用的擷取、錄製、OCR 與標註需求，全都整合進一款輕巧的應用程式。',
     items: [
       {
-        title: '智慧擷取',
+        title: '智慧截圖',
         description: '按一次快速鍵就能框選區域、視窗或全螢幕。Shotera 自動偵測視窗與介面元素，精準對齊到像素。',
       },
       {
-        title: '螢幕錄製與 GIF',
+        title: '錄製螢幕與 GIF',
         description:
           '支援最高 4K 超高畫質與高影格率錄製，並可匯出 MP4 或輕巧的 GIF。沒有錄製時長限制，想錄多久就錄多久。',
       },
@@ -38,13 +38,13 @@ export const content: HomeFeaturesContent = {
         description: '即時辨識並翻譯任何圖片裡的文字。外文文件、截圖、菜單一看就懂，譯文還能直接複製帶走。',
       },
       {
-        title: '釘選到螢幕',
+        title: '釘在桌面',
         description: '把任何截圖釘在螢幕最上層，工作時隨時對照。可縮放、排列、並排參考，不必切換視窗。',
       },
     ],
   },
   capture: {
-    tagline: '螢幕擷取',
+    tagline: '截圖',
     title: '截得快，更要截得準',
     heading: '為高頻使用而設計',
     text: '快速鍵隨手喚起，擷取、標註、複製一氣呵成，不中斷你的工作節奏。',
@@ -55,7 +55,8 @@ export const content: HomeFeaturesContent = {
       },
       {
         title: '完整的標註工具組',
-        description: '表情貼圖、放大鏡、編號、箭頭、方框、文字、螢光標示與模糊一應俱全，截完立刻標註，重點馬上到位。',
+        description:
+          '表情貼圖、放大鏡、編號、直線/箭頭、矩形/橢圓、文字、螢光筆與馬賽克/模糊一應俱全，截完立刻標註，重點馬上到位。',
       },
       {
         title: '模糊與重點標示',
@@ -64,8 +65,8 @@ export const content: HomeFeaturesContent = {
     ],
   },
   recording: {
-    tagline: '螢幕錄製',
-    title: '錄影與 GIF，超高畫質、不限時長',
+    tagline: '錄製螢幕',
+    title: '錄製螢幕與 GIF，超高畫質、不限時長',
     text: '把「說不清楚」的操作，變成一段誰都能看懂的短片。',
     items: [
       {
@@ -100,7 +101,7 @@ export const content: HomeFeaturesContent = {
         description: '智慧移除多餘物件、浮水印或瑕疵，AI 會自然補上背景。同樣在本機執行，不上傳、不上雲。',
       },
       {
-        title: '離線文字擷取',
+        title: '離線 OCR',
         description: 'OCR 在本機執行，完全不碰雲端。一鍵把截圖中的文字變成可編輯、可複製的內容。',
       },
       {
@@ -127,7 +128,7 @@ export const content: HomeFeaturesContent = {
         description: '用編號一步步引導閱讀順序，最適合教學與操作說明。',
       },
       {
-        title: '釘選到螢幕',
+        title: '釘在桌面',
         description: '把參考圖片釘在最上層，邊看邊做，不必再跟視窗玩捉迷藏。',
       },
       {
@@ -136,7 +137,7 @@ export const content: HomeFeaturesContent = {
       },
       {
         title: '歷史紀錄',
-        description: '每次截圖與錄影都會自動儲存，手滑也不怕心血白費。',
+        description: '每次截圖與錄製都會自動儲存，手滑也不怕心血白費。',
       },
       {
         title: '多螢幕支援',

@@ -28,7 +28,7 @@ export default {
       },
       {
         key: 'long',
-        label: 'Desplazamiento',
+        label: 'Captura larga',
         caption: 'Páginas largas y chats largos — unidos en una sola imagen, con desplazamiento automático o manual.',
       },
       {
@@ -52,7 +52,7 @@ export default {
       [{ text: 'Capturas, grabación de pantalla y ' }, { text: 'magia de la IA', hl: true }],
       [{ text: 'todo con un solo atajo' }],
     ],
-    sub: 'Shotera es una herramienta de captura de escritorio pensada para quienes hacen capturas todo el día: anota, haz capturas con desplazamiento de páginas largas, graba en GIF, recorta sujetos con IA, extrae texto con OCR sin conexión, traduce imágenes y fija referencias, todo sin salir de tu flujo de trabajo.',
+    sub: 'Shotera es una herramienta de captura de escritorio pensada para quienes hacen capturas todo el día: anota, captura páginas largas de arriba abajo, graba en GIF, recorta sujetos con IA, extrae texto con OCR sin conexión, traduce imágenes y fija referencias, todo sin salir de tu flujo de trabajo.',
     primary: 'Descargar gratis',
     secondary: 'Ver cómo funciona',
     metaStrong: 'Windows 10/11+',
@@ -130,7 +130,7 @@ export default {
       image: 'capture',
     },
     {
-      eyebrow: 'Captura con desplazamiento',
+      eyebrow: 'Captura larga',
       title: 'Una página más alta que la pantalla, en una sola imagen',
       lead: 'Páginas largas, chats largos y documentos enteros — capturados de arriba abajo en una sola imagen.',
       rows: [

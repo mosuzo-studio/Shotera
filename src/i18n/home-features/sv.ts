@@ -5,10 +5,10 @@ export const content: HomeFeaturesContent = {
     tagline: 'Kärnfunktioner',
     title: 'En app för alla typer av skärmbilder',
     subtitle:
-      'Från en snabb fångst till seriöst kreativt arbete: Shotera samlar dina vanligaste behov av fångst, inspelning, OCR och anteckningar i en enda lätt app.',
+      'Från en snabb skärmbild till seriöst kreativt arbete: Shotera samlar dina vanligaste behov av skärmbild, skärminspelning, OCR och anteckningar i en enda lätt app.',
     items: [
       {
-        title: 'Smart fångst',
+        title: 'Smart skärmbild',
         description:
           'Fånga ett område, ett fönster eller hela skärmen med ett tangenttryck. Shotera identifierar fönster och gränssnittselement in på pixeln.',
       },
@@ -45,7 +45,7 @@ export const content: HomeFeaturesContent = {
     ],
   },
   capture: {
-    tagline: 'Fångst',
+    tagline: 'Skärmbild',
     title: 'Snabbt att fånga, exakt att rama in',
     heading: 'Byggd för ständig användning',
     text: 'Växla fram den med en snabbtangent och fånga, anteckna och kopiera i en obruten rörelse.',
@@ -68,7 +68,7 @@ export const content: HomeFeaturesContent = {
     ],
   },
   recording: {
-    tagline: 'Inspelning',
+    tagline: 'Skärminspelning',
     title: 'Inspelningar och GIF:ar i ultra-HD utan tidsgräns',
     text: 'Förvandla ”svårt att förklara” till ett klipp som alla kan följa.',
     items: [
@@ -108,7 +108,7 @@ export const content: HomeFeaturesContent = {
           'Ta bort oönskade objekt, vattenstämplar eller fläckar intelligent. AI:n fyller i bakgrunden naturligt. Körs också lokalt: ingen uppladdning, inget moln.',
       },
       {
-        title: 'Offline-textextrahering',
+        title: 'Offline-OCR',
         description:
           'OCR körs lokalt och rör aldrig molnet. Gör text i skärmbilder till redigerbar, kopierbar text med ett klick.',
       },
@@ -127,18 +127,18 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Emoji-klistermärken',
         description:
-          'Lägg till emoji-klistermärken och roliga anteckningar i dina skärmbilder med ett klick. Gör dina fångster mer uttrycksfulla.',
+          'Lägg till emoji-klistermärken och roliga anteckningar i dina skärmbilder med ett klick. Gör dina skärmbilder mer uttrycksfulla.',
       },
       {
         title: 'Förstoringsglas',
         description: 'Zooma in viktiga detaljer så att publiken ser exakt vad du vill betona.',
       },
       {
-        title: 'Stegnummer',
+        title: 'Numrering',
         description: 'Guida tittaren genom dina skärmbilder med numrerade steg: perfekt för handledningar och guider.',
       },
       {
-        title: 'Fäst på skärmen',
+        title: 'Fäst på skrivbordet',
         description: 'Håll referensbilder flytande ovanpå så att du kan arbeta vid sidan av dem, utan fönsterkaos.',
       },
       {

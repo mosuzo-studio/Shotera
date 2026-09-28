@@ -5,14 +5,14 @@ import type { LocaleExtras } from '../locale-extras-types';
  * English pages. Terminology follows the Shotera app's German language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: 'Scrolling-Capture',
+  footerScrolling: 'Langer Screenshot',
 
   home: {
     heroAlt:
-      'Shotera-Werkzeuge auf dem Bildschirm: Aufnahme, Scrolling-Capture, Anmerkungen, Bildschirmaufnahme, KI-Freistellung, Offline-OCR, QR- und Barcode-Erkennung, Übersetzung und Anheften',
+      'Shotera-Werkzeuge auf dem Bildschirm: Aufnahme, Langer Screenshot, Anmerkungen, Bildschirmaufnahme, AI-Freistellen, Offline-OCR, QR- und Barcode-Erkennung, Übersetzung und Anheften',
     cards: [
       {
-        title: 'Scrolling-Capture',
+        title: 'Langer Screenshot',
         description:
           'Eine Seite, die höher ist als der Bildschirm, passt trotzdem in eine Aufnahme. Scrollen Sie selbst oder lassen Sie Shotera automatisch scrollen – der lange Screenshot wird dabei Stück für Stück zusammengesetzt.',
       },
@@ -28,10 +28,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: 'Scrolling-Capture',
+      tagline: 'Langer Screenshot',
       title: 'Eine Seite, höher als der Bildschirm – in einer Aufnahme',
       text: 'Ganze Webseiten, lange Chats und komplette Dokumente – von oben bis unten in einem Bild festgehalten.',
-      alt: 'Scrolling-Capture fügt eine lange Seite zu einem einzigen Bild zusammen',
+      alt: 'Langer Screenshot fügt eine lange Seite zu einem einzigen Bild zusammen',
       items: [
         {
           title: 'Automatisch oder selbst scrollen',
@@ -58,7 +58,7 @@ export const content: LocaleExtras = {
     stats: [
       { title: 'Sprachen', amount: '15' },
       { title: 'Bewertung', amount: '4.9 / 5' },
-      { title: 'Offline-KI', amount: '100%' },
+      { title: 'Offline-AI', amount: '100%' },
       { title: 'Start per Tastenkürzel', amount: '<0.1s' },
     ],
     workflow: {
@@ -99,7 +99,7 @@ export const content: LocaleExtras = {
     stats: [
       { title: 'Sprachen', amount: '15' },
       { title: 'Bewertung', amount: '4.9 / 5' },
-      { title: 'Offline-KI', amount: '100%' },
+      { title: 'Offline-AI', amount: '100%' },
       { title: 'Start per Tastenkürzel', amount: '<0.1s' },
     ],
     stand: {
@@ -127,7 +127,7 @@ export const content: LocaleExtras = {
     core: {
       title: 'Kernfunktionen',
       subtitle:
-        'Screenshot, Langer Screenshot, Anheften, Bildschirmaufnahme, Offline-OCR und KI auf dem Gerät – die sechs Dinge für den Alltag, nur ein Tastenkürzel entfernt.',
+        'Screenshot, Langer Screenshot, Anheften, Bildschirmaufnahme, Offline-OCR und AI auf dem Gerät – die sechs Dinge für den Alltag, nur ein Tastenkürzel entfernt.',
       alt: 'Shotera-Anmerkungswerkzeuge auf einem Windows-Desktop: Auswahl, Werkzeugleiste und schwebende Kacheln',
       items: [
         {
@@ -248,7 +248,7 @@ export const content: LocaleExtras = {
         {
           title: 'Von Nutzern vorangebracht',
           description:
-            'Scrolling-Capture, KI-Freistellung, Offline-OCR, Bildübersetzung – viele Funktionen stammen direkt aus Nutzerfeedback.',
+            'Langer Screenshot, AI-Freistellen, Offline-OCR, Bildübersetzung – viele Funktionen stammen direkt aus Nutzerfeedback.',
         },
         {
           title: 'Mehr Menschen erreichen',

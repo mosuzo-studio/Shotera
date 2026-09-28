@@ -5,14 +5,14 @@ import type { LocaleExtras } from '../locale-extras-types';
  * English pages. Terminology follows the Shotera app's Polish language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: 'Przechwytywanie z przewijaniem',
+  footerScrolling: 'Długi zrzut',
 
   home: {
     heroAlt:
-      'Narzędzia Shotera na ekranie: przechwytywanie, przechwytywanie z przewijaniem, adnotacje, nagrywanie, wycinanie AI, OCR offline, rozpoznawanie kodów QR i kreskowych, tłumaczenie i przypinanie',
+      'Narzędzia Shotera na ekranie: przechwytywanie, długi zrzut, adnotacje, nagrywanie, wycinanie AI, OCR offline, rozpoznawanie kodów QR i kreskowych, tłumaczenie i przypinanie',
     cards: [
       {
-        title: 'Przechwytywanie z przewijaniem',
+        title: 'Długi zrzut',
         description:
           'Strona wyższa niż ekran wciąż mieści się na jednym zrzucie. Przewijaj ją ręcznie albo pozwól Shoterze przewijać automatycznie i patrz, jak długi zrzut scala się w całość.',
       },
@@ -28,10 +28,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: 'Przechwytywanie z przewijaniem',
+      tagline: 'Długi zrzut',
       title: 'Strona wyższa niż ekran — na jednym zrzucie',
       text: 'Całe strony, długie czaty i pełne dokumenty — przechwycone od góry do dołu na jednym obrazie.',
-      alt: 'Przechwytywanie z przewijaniem scala długą stronę w jeden obraz',
+      alt: 'Długi zrzut scala długą stronę w jeden obraz',
       items: [
         {
           title: 'Przewijanie automatyczne albo ręczne',
@@ -242,7 +242,7 @@ export const content: LocaleExtras = {
         {
           title: 'Rozwijane przez użytkowników',
           description:
-            'Przechwytywanie z przewijaniem, wycinanie AI, OCR offline, tłumaczenie obrazów — wiele funkcji powstało wprost z opinii użytkowników.',
+            'Długi zrzut, wycinanie AI, OCR offline, tłumaczenie obrazów — wiele funkcji powstało wprost z opinii użytkowników.',
         },
         {
           title: 'Docieramy do coraz większej liczby osób',

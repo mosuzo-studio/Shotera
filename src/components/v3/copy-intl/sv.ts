@@ -50,7 +50,7 @@ export default {
       [{ text: 'Skärmbilder, skärminspelning, ' }, { text: 'AI-magi', hl: true }],
       [{ text: 'allt med en enda snabbtangent' }],
     ],
-    sub: 'Shotera är ett fångstverktyg för skrivbordet, byggt för dig som tar skärmbilder hela dagen: anteckna, rulla långa sidor, spela in till GIF, frilägg motiv med AI, kör offline-OCR, översätt bilder och fäst referenser — utan att lämna flödet.',
+    sub: 'Shotera är ett skärmbildsverktyg för skrivbordet, byggt för dig som tar skärmbilder hela dagen: anteckna, rulla långa sidor, spela in till GIF, frilägg motiv med AI, kör offline-OCR, översätt bilder och fäst referenser — utan att lämna flödet.',
     primary: 'Ladda ned gratis',
     secondary: 'Se hur det fungerar',
     metaStrong: 'Windows 10/11+',
@@ -83,7 +83,7 @@ export default {
   modesSection: {
     bestFor: 'BÄST FÖR',
     eyebrow: 'Tre vardagsflöden',
-    title: 'En snabbtangent för varje fångst',
+    title: 'En snabbtangent för varje skärmbild',
     lead: 'Skärmbild, fäst bild, skärminspelning och GIF — de tre jobben du gör varje dag, med en och samma snabbtangent.',
     cards: [
       {
@@ -97,7 +97,7 @@ export default {
         icon: 'pin',
         title: 'Fäst på skrivbordet',
         one: 'Låt en skärmbild flyta ovanpå allt annat så länge du behöver den.',
-        steps: ['Fäst direkt efter fångsten', 'Skala, tona, jämför', 'Slipp jonglera med fönster'],
+        steps: ['Fäst direkt efter skärmbilden', 'Skala, tona, jämför', 'Slipp jonglera med fönster'],
         bestFor: 'referenser och arbete sida vid sida',
       },
       {

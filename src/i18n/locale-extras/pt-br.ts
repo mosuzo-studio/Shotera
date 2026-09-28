@@ -6,14 +6,14 @@ import type { LocaleExtras } from '../locale-extras-types';
  * language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: 'Captura com rolagem',
+  footerScrolling: 'Captura longa',
 
   home: {
     heroAlt:
-      'Ferramentas do Shotera na tela: captura, captura com rolagem, anotação, gravação de tela, recorte com IA, OCR offline, leitura de QR Code e código de barras, tradução de imagens e fixação na tela',
+      'Ferramentas do Shotera na tela: captura, captura longa, anotação, gravação de tela, recorte com AI, OCR offline, leitura de QR Code e código de barras, tradução de imagens e fixação na área de trabalho',
     cards: [
       {
-        title: 'Captura com rolagem',
+        title: 'Captura longa',
         description:
           'Uma página mais alta que a tela ainda cabe em uma única imagem. Role você mesmo ou deixe o Shotera rolar sozinho e veja a imagem longa se montar enquanto cresce.',
       },
@@ -29,10 +29,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: 'Captura com rolagem',
+      tagline: 'Captura longa',
       title: 'Uma página mais alta que a tela, em uma só imagem',
       text: 'Páginas inteiras, conversas longas e documentos completos — capturados de ponta a ponta em uma única imagem.',
-      alt: 'Captura com rolagem montando uma página longa em uma única imagem',
+      alt: 'Captura longa montando uma página longa em uma única imagem',
       items: [
         {
           title: 'Rolagem automática ou manual',
@@ -59,7 +59,7 @@ export const content: LocaleExtras = {
     stats: [
       { title: 'Idiomas', amount: '15' },
       { title: 'Avaliação', amount: '4.9 / 5' },
-      { title: 'IA offline', amount: '100%' },
+      { title: 'AI offline', amount: '100%' },
       { title: 'Abertura por atalho', amount: '<0.1s' },
     ],
     workflow: {
@@ -78,7 +78,7 @@ export const content: LocaleExtras = {
         {
           title: 'Copie, salve ou fixe',
           description:
-            'Envie para a área de transferência, salve no computador ou fixe na tela para consultar rapidamente.',
+            'Envie para a área de transferência, salve no computador ou fixe na área de trabalho para consultar rapidamente.',
         },
       ],
     },
@@ -99,7 +99,7 @@ export const content: LocaleExtras = {
     stats: [
       { title: 'Idiomas', amount: '15' },
       { title: 'Avaliação', amount: '4.9 / 5' },
-      { title: 'IA offline', amount: '100%' },
+      { title: 'AI offline', amount: '100%' },
       { title: 'Abertura por atalho', amount: '<0.1s' },
     ],
     stand: {
@@ -126,7 +126,7 @@ export const content: LocaleExtras = {
     core: {
       title: 'Capacidades principais',
       subtitle:
-        'Captura, captura longa, fixar na área de trabalho, gravação de tela, OCR offline e IA no dispositivo — as seis coisas que você usa o dia todo, a um atalho de distância.',
+        'Captura, captura longa, fixar na área de trabalho, gravação de tela, OCR offline e AI no dispositivo — as seis coisas que você usa o dia todo, a um atalho de distância.',
       alt: 'Ferramentas de anotação do Shotera sobre uma área de trabalho do Windows: seleção, barra de ferramentas e blocos de vidro',
       items: [
         {
@@ -155,9 +155,9 @@ export const content: LocaleExtras = {
             'Transforme o texto dentro de uma captura em texto editável, em vários idiomas — reconhecido no seu dispositivo e pronto para colar.',
         },
         {
-          title: 'Recorte e apagamento com IA',
+          title: 'Recorte e apagamento com AI',
           description:
-            "O recorte com IA remove o fundo com um clique e exporta um PNG transparente; o apagamento com IA elimina objetos indesejados e marcas d'água. Ambos rodam em modelos locais — nada é enviado.",
+            "O recorte com AI remove o fundo com um clique e exporta um PNG transparente; o apagamento com AI elimina objetos indesejados e marcas d'água. Ambos rodam em modelos locais — nada é enviado.",
         },
       ],
     },
@@ -247,7 +247,7 @@ export const content: LocaleExtras = {
         {
           title: 'Crescemos com nossos usuários',
           description:
-            'Captura com rolagem, recorte com IA, OCR offline, tradução de imagens — muitos recursos vieram direto do feedback dos usuários.',
+            'Captura longa, recorte com AI, OCR offline, tradução de imagens — muitos recursos vieram direto do feedback dos usuários.',
         },
         {
           title: 'Alcançando mais pessoas',

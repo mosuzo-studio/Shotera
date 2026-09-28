@@ -5,14 +5,14 @@ import type { LocaleExtras } from '../locale-extras-types';
  * English pages. Terminology follows the Shotera app's French language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: 'Capture avec défilement',
+  footerScrolling: 'Longue capture',
 
   home: {
     heroAlt:
-      'Outils Shotera à l’écran : capture, capture avec défilement, annotation, enregistrement, détourage IA, OCR hors ligne, lecture de QR Code et de codes-barres, traduction et épinglage',
+      'Outils Shotera à l’écran : capture, longue capture, annotation, enregistrement, détourage AI, OCR hors ligne, lecture de QR Code et de codes-barres, traduction et épinglage',
     cards: [
       {
-        title: 'Capture avec défilement',
+        title: 'Longue capture',
         description:
           'Une page plus haute que l’écran tient quand même en une seule capture. Faites défiler vous-même ou laissez Shotera défiler automatiquement : la longue capture s’assemble au fil du défilement.',
       },
@@ -28,10 +28,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: 'Capture avec défilement',
+      tagline: 'Longue capture',
       title: 'Une page plus haute que l’écran, en une seule capture',
       text: 'Pages entières, longues discussions et documents complets — capturés de haut en bas en une seule image.',
-      alt: 'Capture avec défilement assemblant une longue page en une seule image',
+      alt: 'Longue capture assemblant toute une page en une seule image',
       items: [
         {
           title: 'Défilement automatique ou à la main',
@@ -245,7 +245,7 @@ export const content: LocaleExtras = {
         {
           title: 'Grandi grâce à nos utilisateurs',
           description:
-            'Capture avec défilement, détourage IA, OCR hors ligne, traduction d’images — tant de fonctions viennent directement des retours des utilisateurs.',
+            'Longue capture, détourage AI, OCR hors ligne, traduction d’images — tant de fonctions viennent directement des retours des utilisateurs.',
         },
         {
           title: 'Toucher plus de monde',

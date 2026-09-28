@@ -5,14 +5,14 @@ import type { LocaleExtras } from '../locale-extras-types';
  * pages. Terminology follows the Shotera app's ja language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: 'スクロールキャプチャ',
+  footerScrolling: '長尺キャプチャ',
 
   home: {
     heroAlt:
-      'Shotera のツール画面：キャプチャ、スクロールキャプチャ、注釈、画面録画、AI 切り抜き、オフライン OCR、QR コード・バーコード認識、画像翻訳、画面への固定',
+      'Shotera のツール画面：スクリーンショット、長尺キャプチャ、注釈、画面録画、AI 切り抜き、オフライン OCR、QR コード・バーコード認識、画像翻訳、画面に固定',
     cards: [
       {
-        title: 'スクロールキャプチャ',
+        title: '長尺キャプチャ',
         description:
           '画面より長いページも1枚に収まります。自分でスクロールしても、Shotera の自動スクロールでも、長い画像がつながっていく様子をその場で確認できます。',
       },
@@ -28,10 +28,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: 'スクロールキャプチャ',
+      tagline: '長尺キャプチャ',
       title: '画面より長いページも、1枚で',
       text: 'ウェブページ全体、長いチャット、文書まるごとを、上から下まで1枚の画像に収めます。',
-      alt: 'スクロールキャプチャで長いページを1枚の画像につなぎ合わせる様子',
+      alt: '長尺キャプチャで長いページを1枚の画像につなぎ合わせる様子',
       items: [
         {
           title: '自動スクロールでも、手動でも',
@@ -240,7 +240,7 @@ export const content: LocaleExtras = {
         {
           title: 'ユーザーとともに成長',
           description:
-            'スクロールキャプチャ、AI 切り抜き、オフライン OCR、画像翻訳——多くの機能は、ユーザーの声からそのまま生まれました。',
+            '長尺キャプチャ、AI 切り抜き、オフライン OCR、画像翻訳——多くの機能は、ユーザーの声からそのまま生まれました。',
         },
         {
           title: 'より多くの人へ',

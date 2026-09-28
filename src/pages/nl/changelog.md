@@ -189,7 +189,7 @@ Volledige afbeeldingseditor, opnamemodi, uitgebreide CPU-ondersteuning.
 - AI-uitsnijden en AI-gum lieten verschoven afbeeldingen en niet-gewiste stroken achter: opgelost.
 - De statusbalk van de editor werkte niet bij na het laden van een afbeelding: opgelost.
 - De markeringen van tekstextractie stonden verschoven in de editor: opgelost.
-- Cijfer- en emojistickers zakten naar beneden bij het schalen: opgelost.
+- Cijfer- en emoji-stickers zakten naar beneden bij het schalen: opgelost.
 
 **🗑️ Verwijderd**
 
@@ -387,7 +387,7 @@ Leg vast wat belangrijk is. Leg het duidelijk uit. Houd het in zicht.
 **✨ Nieuwe functies**
 
 - Snelle schermafbeelding met F1-hotkey, detectie van vensters en bedieningselementen en een loep op het scherm.
-- Annotatietools: rechthoeken, ellipsen, lijnen, pijlen, vrije pen, markeerstift, rich text, automatische stapnummers, mozaïek/vervaging, emojistickers en lokale loep.
+- Annotatietools: rechthoeken, ellipsen, lijnen, pijlen, vrije pen, markeerstift, rich text, automatische nummering, mozaïek/vervaging, emoji-stickers en lokale loep.
 - F3 maakt pins die altijd bovenop blijven voor schermafbeeldingen of klembordinhoud. Pins ondersteunen verplaatsen, schalen, roteren, spiegelen en transparantie.
 - De presentatiemodus helpt om het bureaublad op te schonen voor schermafbeeldingen en vergaderingen door pictogrammen te verbergen en thema- en achtergrondvoorinstellingen toe te passen.
 

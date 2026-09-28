@@ -9,7 +9,7 @@ export const content: LocaleExtras = {
 
   home: {
     heroAlt:
-      '화면 위의 Shotera 도구: 캡처, 스크롤 캡처, 주석, 화면 녹화, AI 배경 제거, 오프라인 OCR, QR 코드·바코드 인식, 이미지 번역, 화면 고정',
+      '화면 위의 Shotera 도구: 캡처, 스크롤 캡처, 주석, 화면 녹화, AI 배경 제거, 오프라인 OCR, QR 코드·바코드 인식, 이미지 번역, 바탕 화면에 고정',
     cards: [
       {
         title: '스크롤 캡처',

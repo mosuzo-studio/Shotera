@@ -18,14 +18,14 @@ export const content: HomeFeaturesContent = {
           'Nehmen Sie in bis zu 4K Ultra-HD mit hoher Bildrate auf und exportieren Sie als MP4 oder leichtes GIF. Keine Zeitbegrenzung – nehmen Sie so lange auf, wie Sie möchten.',
       },
       {
-        title: 'KI-Freistellung',
+        title: 'AI-Freistellen',
         description:
           'Motiv isolieren und Hintergrund mit einem Klick entfernen. Personen, Produkte, Logos – freigestellt und sofort einsatzbereit, vollständig auf dem Gerät verarbeitet. Photoshop nicht erforderlich.',
       },
       {
-        title: 'KI-Radierer',
+        title: 'AI-Radierer',
         description:
-          'Entfernen Sie unerwünschte Objekte, Wasserzeichen oder Flecken intelligent aus Bildern. Die KI füllt den Hintergrund natürlich auf. Vollständig offline, vollständig privat.',
+          'Entfernen Sie unerwünschte Objekte, Wasserzeichen oder Flecken intelligent aus Bildern. Die AI füllt den Hintergrund natürlich auf. Vollständig offline, vollständig privat.',
       },
       {
         title: 'Offline-OCR',
@@ -58,7 +58,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Eine komplette Annotationsausstattung',
         description:
-          'Emoji-Sticker, Lupe, Schrittnummern, Pfeile, Rahmen, Text, Hervorhebungen und Unschärfe – markieren Sie direkt beim Aufnehmen, damit die Aussage sofort ankommt.',
+          'Emoji-Sticker, Lupe, Nummerierung, Pfeile, Rahmen, Text, Hervorhebungen und Unschärfe – markieren Sie direkt beim Aufnehmen, damit die Aussage sofort ankommt.',
       },
       {
         title: 'Unschärfe & Hervorhebung',
@@ -95,28 +95,28 @@ export const content: HomeFeaturesContent = {
   },
   ai: {
     tagline: 'AI-Funktionen',
-    title: 'KI, die über den Screenshot hinausgeht',
-    text: 'KI-Freistellung, KI-Radierer und OCR laufen alle lokal – Intelligenz ohne Kompromisse beim Datenschutz.',
+    title: 'AI, die über den Screenshot hinausgeht',
+    text: 'AI-Freistellen, AI-Radierer und OCR laufen alle lokal – Intelligenz ohne Kompromisse beim Datenschutz.',
     items: [
       {
-        title: 'KI-Freistellung',
+        title: 'AI-Freistellen',
         description:
           'Motiv erkennen und Hintergrund mit einem Klick entfernen – transparente PNGs von Personen und Produkten in Sekunden. Läuft vollständig auf dem Gerät.',
       },
       {
-        title: 'KI-Radierer',
+        title: 'AI-Radierer',
         description:
-          'Entfernen Sie unerwünschte Objekte, Wasserzeichen oder Flecken intelligent. Die KI füllt den Hintergrund natürlich auf. Läuft ebenfalls lokal – kein Upload, keine Cloud.',
+          'Entfernen Sie unerwünschte Objekte, Wasserzeichen oder Flecken intelligent. Die AI füllt den Hintergrund natürlich auf. Läuft ebenfalls lokal – kein Upload, keine Cloud.',
       },
       {
-        title: 'Offline-Textextraktion',
+        title: 'Offline-OCR',
         description:
           'OCR läuft lokal und berührt nie die Cloud. Screenshot-Text mit einem Klick in editierbaren, kopierbaren Text verwandeln.',
       },
       {
         title: 'Flexibler Modellwechsel',
         description:
-          'KI-Freistellung und KI-Radierer unterstützen den Wechsel benutzerdefinierter Modelle. Nutzen Sie jederzeit das aktuell beste Modell und bleiben Sie der Entwicklung voraus.',
+          'AI-Freistellen und AI-Radierer unterstützen den Wechsel benutzerdefinierter Modelle. Nutzen Sie jederzeit das aktuell beste Modell und bleiben Sie der Entwicklung voraus.',
       },
     ],
   },
@@ -161,7 +161,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Lokal zuerst & privat',
         description:
-          'OCR, KI-Freistellung und KI-Radierer laufen alle auf Ihrem Gerät – nichts wird hochgeladen. Ihre Screenshots gehören Ihnen allein.',
+          'OCR, AI-Freistellen und AI-Radierer laufen alle auf Ihrem Gerät – nichts wird hochgeladen. Ihre Screenshots gehören Ihnen allein.',
       },
       {
         title: 'Ressourcenschonend',

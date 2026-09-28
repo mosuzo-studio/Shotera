@@ -9,7 +9,7 @@ export const content: LocaleExtras = {
 
   home: {
     heroAlt:
-      'Shoteras verktyg på skärmen: fångst, rullande skärmbild, anteckningar, inspelning, AI-frilägg, offline-OCR, QR- och streckkodsläsning, översättning och fästning',
+      'Shoteras verktyg på skärmen: skärmbild, rullande skärmbild, anteckningar, skärminspelning, AI-frilägg, offline-OCR, QR- och streckkodsläsning, översättning och fäst på skrivbordet',
     cards: [
       {
         title: 'Rullande skärmbild',
@@ -90,7 +90,7 @@ export const content: LocaleExtras = {
       title: 'Gör skärmbilder',
       accent: 'så bra att de försvinner',
       subtitle:
-        'Shotera började med en enkel frustration: skärmbilderna vi tar dussintals gånger om dagen borde kännas snabbare och smidigare. Vi är ett litet team av produktmänniskor och ingenjörer som lutar oss mot fångstverktyg lika mycket som någon annan — och den besattheten byggde vi in i varje snabbtangent, varje markering, varje bildruta.',
+        'Shotera började med en enkel frustration: skärmbilderna vi tar dussintals gånger om dagen borde kännas snabbare och smidigare. Vi är ett litet team av produktmänniskor och ingenjörer som lutar oss mot skärmbildsverktyg lika mycket som någon annan — och den besattheten byggde vi in i varje snabbtangent, varje markering, varje bildruta.',
       alt: 'Shoteras anteckningsverktyg över ett Windows-skrivbord',
     },
     stats: [
@@ -107,7 +107,7 @@ export const content: LocaleExtras = {
         {
           title: 'Snabbhet kommer först',
           description:
-            'En snabbtangent räcker för att väcka den, fönster och element identifieras automatiskt och du får exakt den bildruta du menade. Under en sekund från avsikt till fångst.',
+            'En snabbtangent räcker för att väcka den, fönster och element identifieras automatiskt och du får exakt den bildruta du menade. Under en sekund från avsikt till skärmbild.',
         },
         {
           title: 'Lokalt först och privat som standard',
@@ -124,7 +124,7 @@ export const content: LocaleExtras = {
     core: {
       title: 'Kärnfunktioner',
       subtitle:
-        'Skärmbild, rullande skärmbild, fästning, inspelning, offline-OCR och AI — de sex sakerna du använder hela dagen, bara en snabbtangent bort.',
+        'Skärmbild, rullande skärmbild, fäst på skrivbordet, skärminspelning, offline-OCR och AI — de sex sakerna du använder hela dagen, bara en snabbtangent bort.',
       alt: 'Shoteras anteckningsverktyg över ett Windows-skrivbord: markering, verktygsfält och glaspaneler',
       items: [
         {
@@ -236,7 +236,7 @@ export const content: LocaleExtras = {
       items: [
         {
           title: 'Började med vårt eget behov',
-          description: 'Vi hittade inget fångstverktyg som var snabbt och smidigt nog, så vi skrev ett eget.',
+          description: 'Vi hittade inget skärmbildsverktyg som var snabbt och smidigt nog, så vi skrev ett eget.',
         },
         {
           title: 'Växt genom våra användare',
