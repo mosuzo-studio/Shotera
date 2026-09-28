@@ -24,9 +24,8 @@ export const getFooterData = async (lang: Lang) => {
   const l = (path: string) => localizedPath(lang, path);
   const hasLocalizedLegalPages = lang === 'en' || lang === 'zh-cn';
   const legal = (path: '/terms' | '/privacy') => (hasLocalizedLegalPages ? l(path) : path);
-  // The 13 locales have no FAQ page of their own, so they fall back to the
-  // English one, the same way their legal pages do.
-  const faqHref = hasLocalizedLegalPages ? l('/faq') : '/faq';
+  // Unlike the legal pages, the FAQ exists for every published locale.
+  const faqHref = l('/faq');
   const setupUrl = await getSetupDownloadUrl();
 
   return {
