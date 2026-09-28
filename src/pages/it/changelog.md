@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Impostazioni → Info → Feedback e suggerimenti
 
-**🔗 Indice delle versioni**
+**ℹ️ Le prossime note di versione saranno solo in inglese e cinese: vedi il [changelog in inglese](/changelog).**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nuovo</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -36,11 +36,11 @@ Impostazioni → Info → Feedback e suggerimenti
 
 Versione Lite, screenshot lungo, finestre fissate ridimensionabili e build più leggere.
 
-**🆚 Lite vs. versione completa:** le differenze tra le funzioni sono elencate nel [confronto versioni](/it/versions).
+**🆚 Lite vs. versione Standard:** le differenze tra le funzioni sono elencate nel [confronto versioni](/it/versions).
 
 **✨ Novità**
 
-- Nuova versione Lite: installer da 17 MB con le funzioni principali di cattura e annotazione. Un banner di upgrade nelle Impostazioni rimanda alla versione completa sul sito.
+- Nuova versione Lite: installer da 17 MB con le funzioni principali di cattura e annotazione. Un banner di upgrade nelle Impostazioni rimanda alla versione Standard sul sito.
 - Il [sito ufficiale](https://shotera.mosuzo.com/) è stato aggiornato nei contenuti e nello stile.
 - Nuovo screenshot lungo (anteprima, test in beta): modalità automatica e manuale con finestra di anteprima in tempo reale. L'algoritmo di unione intelligente rileva il bordo superiore e gestisce layout misti. Suggerimenti guidano al primo utilizzo. Unisciti al gruppo beta per provarlo.
 - Migliorie alle finestre fissate: il doppio clic alterna tra dimensioni originali e modalità miniatura con pulsante di chiusura. Trascinando bordi o angoli si ridimensiona mantenendo le proporzioni. Il menu contestuale nativo può uscire dai limiti della finestra. La visibilità della barra degli strumenti viene ricordata tra le sessioni ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14)).

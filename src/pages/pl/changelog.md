@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Ustawienia → O programie → Opinie i sugestie
 
-**🔗 Indeks wersji**
+**ℹ️ Kolejne informacje o wersjach będą tylko po angielsku i chińsku: zobacz [angielski changelog](/changelog).**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nowość</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -36,11 +36,11 @@ Ustawienia → O programie → Opinie i sugestie
 
 Wersja Lite, długi zrzut, przypinki ze zmianą rozmiaru i lżejsze kompilacje.
 
-**🆚 Lite vs pełna wersja:** różnice w funkcjach znajdziesz w [porównaniu wersji](/pl/versions).
+**🆚 Lite vs wersja Standard:** różnice w funkcjach znajdziesz w [porównaniu wersji](/pl/versions).
 
 **✨ Nowe funkcje**
 
-- Dodano wersję Lite: instalator o rozmiarze 17 MB z podstawowymi funkcjami zrzutu i adnotacji. Baner aktualizacji w ustawieniach prowadzi do pełnej wersji na stronie.
+- Dodano wersję Lite: instalator o rozmiarze 17 MB z podstawowymi funkcjami zrzutu i adnotacji. Baner aktualizacji w ustawieniach prowadzi do wersji Standard na stronie.
 - Zaktualizowano [oficjalną stronę](https://shotera.mosuzo.com/) — nowa treść i styl.
 - Dodano długi zrzut (wersja zapoznawcza, testy beta): tryb przewijania automatycznego i ręcznego z oknem podglądu na żywo. Inteligentny algorytm łączenia wykrywa górną granicę i obsługuje mieszane układy. Podpowiedzi instruktażowe prowadzą przy pierwszym użyciu. Dołącz do grupy beta, aby przetestować.
 - Ulepszenia okna przypinki: dwuklik przełącza między oryginalnym rozmiarem a trybem miniatury z przyciskiem zamykania. Przeciągaj krawędzie lub narożniki, aby zmienić rozmiar z zachowaniem proporcji. Natywne menu kontekstowe wykracza poza granice okna. Widoczność paska narzędzi jest zachowywana między sesjami ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14)).

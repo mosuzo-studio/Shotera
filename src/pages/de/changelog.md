@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Einstellungen → Über → Feedback & Vorschläge
 
-**🔗 Versionsindex**
+**ℹ️ Künftige Release Notes erscheinen nur noch auf Englisch und Chinesisch: siehe [englischer Changelog](/changelog).**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Neu</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -36,11 +36,11 @@ Einstellungen → Über → Feedback & Vorschläge
 
 Lite-Version, langer Screenshot, skalierbare Anheft-Fenster und schlankere Builds.
 
-**🆚 Lite vs. Vollversion:** Die Funktionsunterschiede finden Sie im [Versionsvergleich](/de/versions).
+**🆚 Lite vs. Standard-Edition:** Die Funktionsunterschiede finden Sie im [Versionsvergleich](/de/versions).
 
 **✨ Neue Funktionen**
 
-- Neue Lite-Version: 17 MB großes Installationspaket mit den zentralen Funktionen für Screenshots und Anmerkungen. Ein Upgrade-Banner in den Einstellungen verlinkt auf die Vollversion der Website.
+- Neue Lite-Version: 17 MB großes Installationspaket mit den zentralen Funktionen für Screenshots und Anmerkungen. Ein Upgrade-Banner in den Einstellungen verlinkt auf die Standard-Edition der Website.
 - Die [offizielle Website](https://shotera.mosuzo.com/) wurde inhaltlich und gestalterisch überarbeitet.
 - Neuer langer Screenshot (Vorschau, Beta-Test): automatischer und manueller Scrollmodus mit Echtzeit-Vorschaufenster. Ein intelligenter Stitching-Algorithmus erkennt die obere Begrenzung und verarbeitet gemischte Layouts. Hinweise beim ersten Einsatz führen durch die Bedienung. Treten Sie der Beta-Gruppe bei, um mitzutesten.
 - Erweiterte Anheft-Fenster: Ein Doppelklick wechselt zwischen Originalgröße und Miniaturansicht mit Schließen-Schaltfläche. Das Ziehen an Kanten oder Ecken ändert die Größe bei gesperrtem Seitenverhältnis. Das native Kontextmenü reicht über die Fenstergrenzen hinaus. Die Sichtbarkeit der Werkzeugleiste bleibt über Sitzungen hinweg erhalten ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14)).

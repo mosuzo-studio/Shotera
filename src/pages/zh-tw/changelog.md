@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 設定 → 關於 → 回饋與建議
 
-**🔗 版本導覽**
+**ℹ️ 之後的版本說明只提供中英文：請見[英文版更新日誌](/changelog)。**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">新</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -36,11 +36,11 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Lite 版、長截圖、可縮放的貼圖，以及更輕量的建置。
 
-**🆚 Lite 版與完整版差異：** 詳見[版本對比](/zh-tw/versions)。
+**🆚 Lite 版與標準版差異：** 詳見[版本對比](/zh-tw/versions)。
 
 **✨ 新增功能**
 
-- 新增 Lite 版：安裝程式僅 17MB，包含核心截圖與標註功能。設定頁的升級橫幅連結至官網的完整版。
+- 新增 Lite 版：安裝程式僅 17MB，包含核心截圖與標註功能。設定頁的升級橫幅連結至官網的標準版。
 - [Shotera 官方網站](https://shotera.mosuzo.com/)內容與樣式更新。
 - 新成長截圖（預覽版、Beta 測試）：提供自動與手動滾動兩種模式，附即時預覽小窗。智慧拼接演算法會偵測頂部邊界並處理混合版面。首次使用有教學提示引導操作。歡迎加入測試團隊體驗。
 - 貼圖視窗增強：雙擊可在原始尺寸與縮圖+關閉模式之間切換。拖曳邊緣或四角調整尺寸，並鎖定長寬比。原生右鍵選單可超出視窗邊界。工具列顯示狀態可跨工作階段保留 ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14))。

@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 設定 → について → フィードバックと提案
 
-**🔗 バージョン一覧**
+**ℹ️ 今後のリリースノートは英語と中国語のみです：[英語版の更新履歴](/changelog)をご覧ください。**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">新着</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -36,11 +36,11 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Lite版、長尺キャプチャ、サイズ変更できる固定ウィンドウ、そしてより軽量なビルド。
 
-**🆚 Lite版とフル版の違い：** 機能の違いは[バージョン比較](/ja/versions)をご覧ください。
+**🆚 Lite版と Standard 版の違い：** 機能の違いは[バージョン比較](/ja/versions)をご覧ください。
 
 **✨ 新機能**
 
-- Lite版を追加：インストーラーはわずか17MBで、コアとなるスクリーンショットと注釈機能を搭載しています。設定のアップグレードバナーから公式サイトのフル版へ移動できます。
+- Lite版を追加：インストーラーはわずか17MBで、コアとなるスクリーンショットと注釈機能を搭載しています。設定のアップグレードバナーから公式サイトの Standard 版へ移動できます。
 - [Shotera 公式サイト](https://shotera.mosuzo.com/)の内容とデザインを更新しました。
 - 長尺キャプチャ（プレビュー版、ベータテスト）を追加：自動スクロールと手動スクロールの2モードに対応し、リアルタイムのプレビューウィンドウを表示します。インテリジェントな結合アルゴリズムが上部の境界を検出し、混在したレイアウトにも対応します。初回利用時はチュートリアルヒントで操作を案内します。ベータテストグループに参加してぜひお試しください。
 - 固定ウィンドウを強化：ダブルクリックで元のサイズと「サムネイル＋閉じる」モードを切り替えられます。端や四隅をドラッグしてサイズを変更でき、縦横比は固定されます。ネイティブのコンテキストメニューはウィンドウの境界を越えて表示されます。ツールバーの表示状態はセッションをまたいで保持されます ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14))。

@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Inställningar → Om → Feedback & förslag
 
-**🔗 Versionsindex**
+**ℹ️ Framtida versionsnyheter publiceras bara på engelska och kinesiska: se den [engelska ändringsloggen](/changelog).**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Ny</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -36,11 +36,11 @@ Inställningar → Om → Feedback & förslag
 
 Lite-version, rullande skärmbild, skalbara fästa bilder och lättare byggen.
 
-**🆚 Lite vs. fullversion:** funktionsskillnaderna finns i [versionsjämförelsen](/sv/versions).
+**🆚 Lite vs. Standard:** funktionsskillnaderna finns i [versionsjämförelsen](/sv/versions).
 
 **✨ Nya funktioner**
 
-- Ny Lite-version: installationspaket på 17 MB med de viktigaste funktionerna för skärmbild och annotering. En uppgraderingsbanner i Inställningar länkar till fullversionen på webbplatsen.
+- Ny Lite-version: installationspaket på 17 MB med de viktigaste funktionerna för skärmbild och annotering. En uppgraderingsbanner i Inställningar länkar till Standard på webbplatsen.
 - Den [officiella webbplatsen](https://shotera.mosuzo.com/) har uppdaterats i innehåll och form.
 - Ny rullande skärmbild (förhandsversion, betatest): automatiskt och manuellt rullningsläge med fönster för förhandsvisning i realtid. En intelligent sammanfogningsalgoritm hittar överkanten och hanterar blandade layouter. Vägledning visas vid första användningen. Gå med i betagruppen för att testa.
 - Förbättrade fästa fönster: dubbelklick växlar mellan originalstorlek och miniatyrläge med stängningsknapp. Dra i kanter eller hörn för att ändra storlek med låsta proportioner. Den inbyggda snabbmenyn går utanför fönstrets gränser. Verktygsfältets synlighet sparas mellan sessioner ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14)).
