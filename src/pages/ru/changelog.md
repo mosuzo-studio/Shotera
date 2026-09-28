@@ -9,7 +9,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Настройки → О программе → Отзывы и предложения
 
-**ℹ️ Дальнейшие списки изменений выходят только на английском и китайском: см. [английский changelog](/changelog).**
+**ℹ️ Самые свежие списки изменений появляются сначала в [английском changelog](/changelog); эта языковая версия обновляется чуть позже.**
 
 <ul class="version-index">
   <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Новое</span></a></li>

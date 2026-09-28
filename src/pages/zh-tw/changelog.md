@@ -9,7 +9,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 設定 → 關於 → 回饋與建議
 
-**ℹ️ 之後的版本說明只提供中英文：請見[英文版更新日誌](/changelog)。**
+**ℹ️ 最新說明請先看[英文版更新日誌](/changelog)，本語言的版本會稍晚一些更新。**
 
 <ul class="version-index">
   <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">新</span></a></li>

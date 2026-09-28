@@ -9,7 +9,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Instellingen → Over → Feedback en suggesties
 
-**ℹ️ Release notes van nieuwe versies komen alleen in het Engels en Chinees: zie de [Engelse changelog](/changelog).**
+**ℹ️ De nieuwste release notes staan eerst in de [Engelse changelog](/changelog); deze taalversie wordt iets later bijgewerkt.**
 
 <ul class="version-index">
   <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nieuw</span></a></li>

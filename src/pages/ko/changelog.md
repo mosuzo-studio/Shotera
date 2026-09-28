@@ -9,7 +9,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 설정 → 정보 → 피드백 및 제안
 
-**ℹ️ 앞으로의 릴리스 노트는 영어·중국어로만 제공됩니다: [영문 업데이트 내역](/changelog)을 확인하세요.**
+**ℹ️ 최신 릴리스 노트는 [영문 업데이트 내역](/changelog)에서 먼저 확인할 수 있습니다. 이 언어판은 조금 뒤에 업데이트됩니다.**
 
 <ul class="version-index">
   <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">신규</span></a></li>

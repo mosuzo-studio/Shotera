@@ -9,7 +9,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Impostazioni → Info → Feedback e suggerimenti
 
-**ℹ️ Le prossime note di versione saranno solo in inglese e cinese: vedi il [changelog in inglese](/changelog).**
+**ℹ️ Le note più recenti compaiono prima nel [changelog in inglese](/changelog); questa versione linguistica viene aggiornata poco dopo.**
 
 <ul class="version-index">
   <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nuovo</span></a></li>

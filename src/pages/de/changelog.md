@@ -9,7 +9,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Einstellungen → Über → Feedback & Vorschläge
 
-**ℹ️ Künftige Release Notes erscheinen nur noch auf Englisch und Chinesisch: siehe [englischer Changelog](/changelog).**
+**ℹ️ Die neuesten Release Notes finden Sie zuerst im [englischen Changelog](/changelog); diese Sprachfassung wird etwas später aktualisiert.**
 
 <ul class="version-index">
   <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Neu</span></a></li>
