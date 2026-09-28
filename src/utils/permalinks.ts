@@ -1,6 +1,6 @@
 import slugify from 'limax';
 
-import { SITE, APP_BLOG } from 'astrowind:config';
+import { SITE } from 'astrowind:config';
 
 import { trim } from '~/utils/utils';
 
@@ -20,12 +20,6 @@ export const cleanSlug = (text = '') =>
     .split('/')
     .map((slug) => slugify(slug))
     .join('/');
-
-export const BLOG_BASE = cleanSlug(APP_BLOG?.list?.pathname);
-export const CATEGORY_BASE = cleanSlug(APP_BLOG?.category?.pathname);
-export const TAG_BASE = cleanSlug(APP_BLOG?.tag?.pathname) || 'tag';
-
-export const POST_PERMALINK_PATTERN = trimSlash(APP_BLOG?.post?.permalink || `${BLOG_BASE}/%slug%`);
 
 /** */
 export const getCanonical = (path = ''): string | URL => {
@@ -57,24 +51,8 @@ export const getPermalink = (slug = '', type = 'page'): string => {
       permalink = getHomePermalink();
       break;
 
-    case 'blog':
-      permalink = getBlogPermalink();
-      break;
-
     case 'asset':
       permalink = getAsset(slug);
-      break;
-
-    case 'category':
-      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
-      break;
-
-    case 'tag':
-      permalink = createPath(TAG_BASE, trimSlash(slug));
-      break;
-
-    case 'post':
-      permalink = createPath(trimSlash(slug));
       break;
 
     case 'page':
@@ -88,9 +66,6 @@ export const getPermalink = (slug = '', type = 'page'): string => {
 
 /** */
 export const getHomePermalink = (): string => getPermalink('/');
-
-/** */
-export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
 
 /** */
 export const getAsset = (path: string): string =>
@@ -120,8 +95,6 @@ export const applyGetPermalinks = (menu: unknown = {}): unknown => {
           const href = value as MenuHref;
           if (href.type === 'home') {
             result[key] = getHomePermalink();
-          } else if (href.type === 'blog') {
-            result[key] = getBlogPermalink();
           } else if (href.type === 'asset') {
             result[key] = getAsset(href.url ?? '');
           } else if (href.url) {

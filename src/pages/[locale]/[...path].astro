@@ -20,7 +20,7 @@ export function getStaticPaths() {
   const localizedLocales = publishedLocales.filter(
     (locale): locale is LocalizedLocale => locale !== 'en' && locale !== 'zh-cn'
   );
-  const localizedPaths = ['', '404', 'about', 'contact', 'blog', 'versions'] as const;
+  const localizedPaths = ['', '404', 'about', 'contact', 'versions'] as const;
 
   return localizedLocales.flatMap((locale) =>
     localizedPaths.map((path) => ({

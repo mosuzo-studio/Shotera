@@ -1,11 +1,10 @@
-import { getBlogPermalink, getAsset } from './utils/permalinks';
+import { getAsset } from './utils/permalinks';
 import { localizedPath, useTranslations, type Lang } from './i18n/utils';
 import { getSetupDownloadUrl } from './utils/download';
 
 export const getHeaderData = async (lang: Lang) => {
   const t = useTranslations(lang);
   const l = (path: string) => localizedPath(lang, path);
-  const blogHref = lang === 'en' || lang === 'zh-cn' ? getBlogPermalink() : l('/blog');
   const setupUrl = await getSetupDownloadUrl();
 
   return {
@@ -14,7 +13,6 @@ export const getHeaderData = async (lang: Lang) => {
       // { text: t('nav.pricing'), href: l('/pricing') },  // 临时屏蔽价格链接
       { text: t('nav.versions'), href: l('/versions') },
       { text: t('nav.changelog'), href: l('/changelog') },
-      // { text: t('nav.blog'), href: blogHref },  // 临时屏蔽博客链接
       { text: t('nav.about'), href: l('/about') },
     ],
     actions: [{ text: t('action.download'), href: setupUrl, icon: 'tabler:download' }],
@@ -29,7 +27,6 @@ export const getFooterData = async (lang: Lang) => {
   // The 13 locales have no FAQ page of their own, so they fall back to the
   // English one, the same way their legal pages do.
   const faqHref = hasLocalizedLegalPages ? l('/faq') : '/faq';
-  const blogHref = lang === 'en' || lang === 'zh-cn' ? getBlogPermalink() : l('/blog');
   const setupUrl = await getSetupDownloadUrl();
 
   return {
@@ -59,7 +56,6 @@ export const getFooterData = async (lang: Lang) => {
         title: t('footer.company'),
         links: [
           { text: t('footer.about'), href: l('/about') },
-          // { text: t('footer.blog'), href: blogHref },  // 临时屏蔽博客链接
           { text: t('footer.contact'), href: l('/contact') },
         ],
       },
@@ -71,7 +67,6 @@ export const getFooterData = async (lang: Lang) => {
     // Brand accounts (X / Bilibili / WeChat) join this list once they are live;
     // the site does not ship links that go nowhere.
     socialLinks: [
-      { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
       { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/mosuzo-studio/Shotera' },
     ],
     footNote: `

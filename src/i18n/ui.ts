@@ -39,12 +39,6 @@ const baseUi = {
     'nav.landing.product': 'Product Details (or Services)',
     'nav.landing.preLaunch': 'Coming Soon or Pre-Launch',
     'nav.landing.subscription': 'Subscription',
-    'nav.blog': 'Blog',
-    'nav.blog.list': 'Blog List',
-    'nav.blog.article': 'Article',
-    'nav.blog.articleMdx': 'Article (with MDX)',
-    'nav.blog.category': 'Category Page',
-    'nav.blog.tag': 'Tag Page',
     'nav.widgets': 'Widgets',
     'action.download': 'Download',
 
@@ -76,7 +70,6 @@ const baseUi = {
     'footer.skills': 'Skills',
     'footer.status': 'Status',
     'footer.about': 'About',
-    'footer.blog': 'Blog',
     'footer.careers': 'Careers',
     'footer.press': 'Press',
     'footer.inclusion': 'Inclusion',
@@ -101,11 +94,6 @@ const baseUi = {
     'announcement.text':
       'Shotera v{version}+ is here — AI cutout, AI eraser, offline OCR, and image translation. (Site in progress; preview only — the final release prevails.) »',
 
-    'blog.readMore': 'Read more',
-    'blog.backToList': '← Back to Blog',
-    'blog.relatedPosts': 'Related Posts',
-    'blog.categories': 'Search by Categories:',
-    'blog.tags': 'Search by Tags:',
 
     'lang.label': 'Language',
   },
@@ -130,12 +118,6 @@ const baseUi = {
     'nav.landing.product': '产品详情（或服务）',
     'nav.landing.preLaunch': '即将上线 / 预发布',
     'nav.landing.subscription': '订阅',
-    'nav.blog': '博客',
-    'nav.blog.list': '博客列表',
-    'nav.blog.article': '文章',
-    'nav.blog.articleMdx': '文章（MDX）',
-    'nav.blog.category': '分类页',
-    'nav.blog.tag': '标签页',
     'nav.widgets': '组件',
     'action.download': '下载',
 
@@ -167,7 +149,6 @@ const baseUi = {
     'footer.skills': '技能',
     'footer.status': '状态',
     'footer.about': '关于',
-    'footer.blog': '博客',
     'footer.careers': '招聘',
     'footer.press': '媒体',
     'footer.inclusion': '包容',
@@ -192,11 +173,6 @@ const baseUi = {
     'announcement.text':
       'Shotera v{version}+ 发布 —— 新增 AI 抠图、AI 擦图、离线 OCR 与图片翻译。（官网建设中，当前为预览版，以最终发布为准）»',
 
-    'blog.readMore': '阅读更多',
-    'blog.backToList': '← 返回博客',
-    'blog.relatedPosts': '相关文章',
-    'blog.categories': '按分类查找：',
-    'blog.tags': '按标签查找：',
 
     'lang.label': '语言',
   },
@@ -222,7 +198,6 @@ const localizedUi = Object.fromEntries(
       'nav.pricing': content.labels.pricing,
       'nav.versions': versionsContent[locale as LocalizedLocale].metaTitle,
       'nav.changelog': navLabelOverrides[locale as LocalizedLocale] ?? content.labels.changelog,
-      'nav.blog': content.labels.blog,
       'nav.about': content.labels.about,
       'nav.download': content.moreVersions,
       'footer.product': content.labels.product,
@@ -231,7 +206,6 @@ const localizedUi = Object.fromEntries(
       'footer.terms': content.labels.terms,
       'footer.privacy': content.labels.privacy,
       'footer.about': content.labels.about,
-      'footer.blog': content.labels.blog,
       'footer.contact': content.pages.contact[0],
       'footer.feat.screenshot': content.labels.screenshot,
       'footer.feat.scrolling': localeExtras[locale as LocalizedLocale].footerScrolling,

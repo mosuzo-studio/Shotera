@@ -13,11 +13,9 @@ interface Props {
 const { locale, path, content } = Astro.props;
 const pageKey = path === '404' ? 'notFound' : path;
 const page =
-  path === 'blog'
-    ? [content.labels.blog, content.labels.releaseText]
-    : pageKey in content.pages
-      ? content.pages[pageKey as keyof typeof content.pages]
-      : (content.scenarios[path] ?? [content.featuresTitle, content.featuresSubtitle]);
+  pageKey in content.pages
+    ? content.pages[pageKey as keyof typeof content.pages]
+    : (content.scenarios[path] ?? [content.featuresTitle, content.featuresSubtitle]);
 const [title, intro] = page;
 const isPricing = path === 'pricing';
 const isContact = path === 'contact';

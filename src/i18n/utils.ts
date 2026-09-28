@@ -75,18 +75,13 @@ export function localizedPath(lang: Lang, path = '/'): string {
 /** Routes only EN and zh-CN publish; every other locale links to the English one. */
 const ENGLISH_ONLY_PATHS = new Set(['/privacy', '/terms', '/faq']);
 
-/** Routes only the other locales publish; EN and zh-CN fall back to their home. */
-const LOCALIZED_ONLY_PATHS = new Set(['/blog']);
-
 /**
  * Locale-aware path for a page, honouring the split routes: the legal pages and
- * the FAQ exist for EN and zh-CN only, while the blog page exists for the other
- * locales only. Switching into a locale that does not publish the page lands on
- * that locale's home instead of a 404.
+ * the FAQ exist for EN and zh-CN only, so the other locales link to the English
+ * ones instead of a 404.
  */
 export function localizedPagePath(lang: Lang, path: string): string {
   if (ENGLISH_ONLY_PATHS.has(path) && lang !== 'en' && lang !== 'zh-cn') return path;
-  if (LOCALIZED_ONLY_PATHS.has(path) && (lang === 'en' || lang === 'zh-cn')) return localizedPath(lang, '/');
   return localizedPath(lang, path);
 }
 
