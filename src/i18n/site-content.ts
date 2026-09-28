@@ -188,7 +188,8 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
   ja: {
     storeLanguage: 'ja-jp',
     metaTitle: 'Shotera — スクリーンショットと録画を、もっと速くスマートに',
-    metaDescription: 'Windows向けの高精度キャプチャ、画面録画、AI画像編集、オフラインOCR、画像翻訳、画面に固定できるツール。',
+    metaDescription:
+      'Windows向けの高精度キャプチャ、画面録画、AI画像編集、オフラインOCR、画像翻訳、画面に固定できるツール。',
     heroTitle: 'キャプチャも録画も、',
     heroAccent: 'AI編集もひとつに',
     heroSubtitle:
@@ -993,8 +994,8 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
     featuresTitle: '캡처 이후의 작업까지 한 번에',
     featuresSubtitle: '여러 앱을 오가지 않고 캡처하고 설명하고 공유하세요.',
     features: [
-      { title: '스마트 캡처', description: '창과 UI 요소를 자동 감지하고 픽셀 단위로 영역을 다듬습니다.' },
-      { title: '명확한 주석', description: '화살표, 텍스트, 단계 번호, 확대 및 흐림 효과로 핵심을 쉽게 전달합니다.' },
+      { title: '스크린샷', description: '창과 UI 요소를 자동 감지하고 픽셀 단위로 영역을 다듬습니다.' },
+      { title: '명확한 주석', description: '화살표, 텍스트, 번호, 확대 및 흐림 효과로 핵심을 쉽게 전달합니다.' },
       { title: 'AI 이미지 편집', description: 'Shotera 안에서 피사체를 분리하고 불필요한 요소를 지웁니다.' },
       { title: '오프라인 OCR', description: '스크린샷을 업로드하지 않고 기기에서 바로 텍스트를 추출합니다.' },
       { title: '이미지 번역', description: '캡처 흐름 안에서 이미지 속 문자를 인식하고 번역합니다.' },
@@ -1081,7 +1082,7 @@ export const localizedSiteContent: Record<LocalizedLocale, LocalizedSiteContent>
       terms: '이용약관',
       privacy: '개인정보',
       screenshot: '스크린샷',
-      recording: '화면 및 GIF 녹화',
+      recording: '화면 녹화',
       cutout: 'AI 배경 제거',
       ocr: '오프라인 OCR',
       translation: '이미지 번역',
