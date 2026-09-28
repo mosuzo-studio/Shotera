@@ -76,8 +76,7 @@ export const content: LocaleExtras = {
         },
         {
           title: 'Copia, guarda o fija',
-          description:
-            'Envíalo al portapapeles, guárdalo en local o fíjalo encima para consultarlo al instante.',
+          description: 'Envíalo al portapapeles, guárdalo en local o fíjalo encima para consultarlo al instante.',
         },
       ],
     },
@@ -123,15 +122,16 @@ export const content: LocaleExtras = {
         },
       ],
     },
-    toolbox: {
-      title: '',
-      subtitle: '',
-      alt: 'Caja de herramientas de Shotera: captura, captura con desplazamiento, grabación, recorte con IA, OCR sin conexión, traducción de imágenes, fijar en pantalla y el visor de imágenes',
+    core: {
+      title: 'Capacidades principales',
+      subtitle:
+        'Captura, captura con desplazamiento, fijar en el escritorio, grabación, OCR sin conexión e IA en el dispositivo: las seis cosas que usas todo el día, a un atajo de distancia.',
+      alt: 'Caja de herramientas de Shotera sobre un escritorio de Windows: selección en pantalla y barra de anotación',
       items: [
         {
           title: 'Captura',
           description:
-            'Detección inteligente de ventanas y elementos: el encuadre que quieres ya está elegido, así que casi nunca dibujas el recuadro a mano.',
+            'Detección inteligente de ventanas y elementos: el encuadre que quieres ya está elegido, así que casi nunca dibujas el recuadro a mano. Dos formas de terminar, tú eliges: copiar directamente al portapapeles o anotar al momento.',
         },
         {
           title: 'Captura con desplazamiento',
@@ -139,14 +139,13 @@ export const content: LocaleExtras = {
             'Desplázate por una página o un chat largo y deja que Shotera lo una en una sola imagen: desplazamiento automático o manual, con vista previa en vivo.',
         },
         {
-          title: 'Grabación de pantalla y GIF',
-          description:
-            'Graba la pantalla y exporta a GIF ligero; los realces del cursor y las marcas de clic mantienen clara la demostración.',
+          title: 'Fijar en el escritorio',
+          description: 'Mantén cualquier captura flotando encima como referencia, colocada al lado sin desorden.',
         },
         {
-          title: 'Recorte con IA',
+          title: 'Grabación y GIF',
           description:
-            'Detecta el sujeto y quita el fondo con un clic, exportando PNG transparentes. Sin Photoshop.',
+            'Graba la pantalla y exporta a GIF ligero; los realces del cursor y las marcas de clic mantienen clara la demostración.',
         },
         {
           title: 'OCR sin conexión',
@@ -154,26 +153,66 @@ export const content: LocaleExtras = {
             'Extrae texto de cualquier captura en tu dispositivo, en varios idiomas. Copia y pega, sin necesidad de internet.',
         },
         {
+          title: 'Recorte y borrado con IA',
+          description:
+            'El recorte con IA detecta el sujeto y quita el fondo con un clic, exportando PNG transparentes; el borrado con IA elimina el desorden y las marcas de agua. Ambos usan modelos locales: no se sube nada.',
+        },
+      ],
+    },
+    more: {
+      title: 'Más capacidades',
+      subtitle:
+        'Los detalles que la hacen difícil de dejar: anotación, reconocimiento, visualización y los ajustes que los rodean.',
+      items: [
+        {
+          title: 'Herramientas de anotación',
+          description:
+            'Rectángulo/elipse, línea/flecha, pincel, resaltador, mosaico/desenfoque, texto, numeración, pegatinas emoji, lupa y borrador: anota en el momento de capturar.',
+        },
+        {
+          title: 'Pegatinas emoji',
+          description:
+            'Cientos de pegatinas emoji — pulgares arriba, corazones, risas, confeti — que puedes escalar y colocar donde quieras para darle un toque de diversión a la captura.',
+        },
+        {
+          title: 'Visor y editor de imágenes',
+          description:
+            'Abre una captura o cualquier archivo de imagen en su propia ventana: recorre la carpeta, amplía y retoca lo que necesites. Los formatos habituales se abren directamente.',
+        },
+        {
           title: 'Traducción de imágenes',
           description:
-            'Reconoce y traduce el texto de cualquier imagen al instante: documentos, gráficos e interfaces en otro idioma se vuelven legibles.',
+            'Reconoce y traduce el texto de cualquier imagen al instante: documentos, gráficos e interfaces en otro idioma se vuelven legibles. Copia la traducción y sigue.',
         },
         {
-          title: 'Fijar en pantalla',
+          title: 'Lectura de códigos QR y de barras',
           description:
-            'Mantén cualquier captura flotando encima como referencia, colocada al lado sin desorden.',
+            'Lee el código que aparece en una captura — enlaces, Wi-Fi, contactos, códigos de barras — y copia su contenido. Todo sin conexión.',
         },
         {
-          title: 'Visor de imágenes',
+          title: 'Captura personalizada',
           description:
-            'Abre una captura o cualquier archivo de imagen en su propia ventana: recorre la carpeta, amplía y retoca lo que necesites.',
+            'Tamaño, proporción, retardo y coordenadas de pantalla fijos: práctico para preparar recursos y hacer capturas por lotes.',
+        },
+        {
+          title: 'Varios monitores',
+          description:
+            'Todas las pantallas comparten un mismo sistema de coordenadas, así la secundaria y las extendidas se seleccionan correctamente; las capturas siguen nítidas en paneles de alto DPI.',
+        },
+        {
+          title: 'Modo oscuro',
+          description: 'Sigue el sistema o cambia entre claro y oscuro a mano.',
+        },
+        {
+          title: 'Modo presentación',
+          description:
+            'Ordena el escritorio con una sola tecla — ventanas, iconos y fondo de pantalla — y lo devuelve todo a su sitio al terminar.',
         },
       ],
     },
     values: {
       title: 'Nuestros valores',
-      subtitle:
-        'Crear una herramienta y usarla son lo mismo para nosotros. Trabajamos cada día con lo que hacemos.',
+      subtitle: 'Crear una herramienta y usarla son lo mismo para nosotros. Trabajamos cada día con lo que hacemos.',
       items: [
         {
           title: 'Hecho para el trabajo real',

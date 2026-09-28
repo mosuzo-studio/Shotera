@@ -4,7 +4,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
-import PageLayout from '~/layouts/PageLayout.astro';
+import PageLayoutV3 from '~/layouts/PageLayoutV3.astro';
 import { getSetupDownloadUrl } from '~/utils/download';
 import { localeExtras } from '~/i18n/locale-extras';
 import type { LocalizedSiteContent, LocalizedLocale } from '~/i18n/site-content';
@@ -18,18 +18,28 @@ const { locale, content } = Astro.props;
 const extra = localeExtras[locale];
 const setupUrl = await getSetupDownloadUrl();
 
-// Same layout as the English about page: text-only cards on the left, the
-// illustrated toolbox on the right.
+// Same structure as the English about page: the capability grid is split into
+// L1 core capabilities (six text cards) and L2 more capabilities (nine cards
+// beside the illustration); icons follow the card order, not the copy.
 const standIcons = ['tabler:bolt', 'tabler:lock', 'tabler:sparkles'];
-const toolboxIcons = [
+const coreIcons = [
   'tabler:capture',
   'local:longshot',
-  'tabler:video',
-  'tabler:wand',
-  'tabler:text-recognition',
-  'tabler:language',
   'tabler:pin',
+  'tabler:video',
+  'tabler:text-recognition',
+  'tabler:wand',
+];
+const moreIcons = [
+  'tabler:pencil',
+  'tabler:mood-smile',
   'tabler:photo',
+  'tabler:language',
+  'tabler:qrcode',
+  'tabler:crop',
+  'tabler:devices',
+  'tabler:moon',
+  'tabler:presentation',
 ];
 const historyIcons = ['tabler:seeding', 'tabler:users', 'tabler:world'];
 const contactIcons = ['tabler:brand-discord', 'tabler:mail'];
@@ -40,7 +50,7 @@ const metadata = {
 };
 ---
 
-<PageLayout metadata={metadata} lang={locale}>
+<PageLayoutV3 metadata={metadata} lang={locale}>
   <!-- Hero Widget ******************* -->
 
   <Hero
@@ -72,16 +82,27 @@ const metadata = {
     items={extra.about.stand.items.map((item, index) => ({ ...item, icon: standIcons[index] }))}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Features3 Widget: L1 core capabilities ************** -->
 
   <Features3
+    title={extra.about.core.title}
+    subtitle={extra.about.core.subtitle}
     columns={3}
     isAfterContent={true}
-    items={extra.about.toolbox.items.map((item, index) => ({ ...item, icon: toolboxIcons[index] }))}
+    items={extra.about.core.items.map((item, index) => ({ ...item, icon: coreIcons[index] }))}
     image={{
       src: '~/assets/images/about-features.png',
-      alt: extra.about.toolbox.alt,
+      alt: extra.about.core.alt,
     }}
+  />
+
+  <!-- Features3 Widget: L2 more capabilities ************** -->
+
+  <Features3
+    title={extra.about.more.title}
+    subtitle={extra.about.more.subtitle}
+    columns={3}
+    items={extra.about.more.items.map((item, index) => ({ ...item, icon: moreIcons[index] }))}
   />
 
   <!-- Steps2 Widget ****************** -->
@@ -109,4 +130,4 @@ const metadata = {
     columns={2}
     items={extra.about.contact.items.map((item, index) => ({ ...item, icon: contactIcons[index] }))}
   />
-</PageLayout>
+</PageLayoutV3>

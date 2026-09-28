@@ -122,36 +122,63 @@ export const content: LocaleExtras = {
         },
       ],
     },
-    toolbox: {
-      title: '',
-      subtitle: '',
-      alt:
-        'Boîte à outils Shotera : capture, capture avec défilement, enregistrement, détourage IA, OCR hors ligne, traduction d’images, épinglage et visionneuse d’images',
+    core: {
+      title: 'Capacités essentielles',
+      subtitle:
+        'Capture, longue capture, épingler au bureau, enregistrement, OCR hors ligne et IA sur l’appareil — les six gestes du quotidien, à un raccourci près.',
+      alt: 'Outils d’annotation Shotera sur un bureau Windows\u00A0: sélection, barre d’outils et vignettes en verre',
       items: [
         {
           title: 'Capture',
           description:
-            'Détection intelligente des fenêtres et des éléments — le cadrage voulu est déjà choisi, vous ne tracez presque jamais de cadre à la main.',
+            'Détection intelligente des fenêtres et des éléments\u00A0: le cadrage voulu est prêt avant même de tracer. Terminez par une copie directe ou ouvrez la barre d’annotation — deux façons de terminer la capture, à vous de choisir.',
         },
         {
-          title: 'Capture avec défilement',
+          title: 'Longue capture',
           description:
             'Faites défiler une page ou une longue discussion et laissez Shotera l’assembler en une longue capture — automatiquement ou à la main, avec un aperçu en direct.',
         },
         {
-          title: 'Enregistrement d’écran et GIF',
+          title: 'Épingler au bureau',
           description:
-            'Enregistrez votre écran et exportez un GIF léger ; surbrillance du curseur et indices de clic gardent les démos claires.',
+            'Gardez n’importe quelle capture flottante au-dessus comme référence — plusieurs épingles se disposent côte à côte sans désordre.',
         },
         {
-          title: 'Détourage IA',
+          title: 'Enregistrement & GIF',
           description:
-            'Détectez le sujet et supprimez l’arrière-plan en un clic, avec export en PNG transparent. Sans Photoshop.',
+            'Enregistrez votre écran et exportez un GIF léger\u00A0; la surbrillance du curseur et les indices de clic gardent les démos claires.',
         },
         {
           title: 'OCR hors ligne',
           description:
-            'Extrayez le texte de n’importe quelle capture, sur votre appareil, en plusieurs langues. Copiez-collez — sans internet.',
+            'Extrayez le texte de n’importe quelle capture en texte modifiable, sur votre appareil, en plusieurs langues. Copiez-collez — sans internet.',
+        },
+        {
+          title: 'Détourage AI et effacement AI',
+          description:
+            'Le détourage AI supprime l’arrière-plan en un clic et exporte un PNG transparent\u00A0; l’effacement AI retire les éléments parasites et les filigranes. Les deux tournent sur des modèles locaux — rien n’est envoyé.',
+        },
+      ],
+    },
+    more: {
+      title: 'Capacités supplémentaires',
+      subtitle:
+        'Les détails qui font la différence\u00A0: annotation, reconnaissance, consultation et les réglages qui les accompagnent.',
+      items: [
+        {
+          title: 'Outils d’annotation',
+          description:
+            'Rectangle/ellipse, ligne/flèche, pinceau, surligneur, mosaïque/flou, texte, numérotation, autocollants emoji, loupe et gomme — annotez au moment de la capture.',
+        },
+        {
+          title: 'Autocollants emoji',
+          description:
+            'Des centaines d’autocollants emoji — pouce en l’air, cœurs, rires, confettis — à redimensionner et à placer où vous voulez, pour ajouter une touche d’humour.',
+        },
+        {
+          title: 'Visionneuse et éditeur d’images',
+          description:
+            'Ouvrez une capture ou n’importe quel fichier image dans sa propre fenêtre\u00A0: parcourez le dossier, zoomez et retouchez ce qu’il faut. Les formats courants s’ouvrent directement.',
         },
         {
           title: 'Traduction d’images',
@@ -159,14 +186,28 @@ export const content: LocaleExtras = {
             'Reconnaissez et traduisez le texte de n’importe quelle image sur-le-champ — documents, graphiques et interfaces étrangers deviennent lisibles.',
         },
         {
-          title: 'Épingler à l’écran',
+          title: 'Lecture de QR Code et de codes-barres',
           description:
-            'Gardez n’importe quelle capture flottant au-dessus comme référence, disposée côte à côte sans désordre.',
+            'QR Codes et codes-barres reconnus sur place\u00A0: liens, Wi-Fi, contacts, codes produit — copiez le résultat en un clic, entièrement hors ligne.',
         },
         {
-          title: 'Visionneuse d’images',
+          title: 'Capture personnalisée',
           description:
-            'Ouvrez une capture ou n’importe quel fichier image dans sa propre fenêtre : parcourez un dossier, zoomez et retouchez ce qu’il faut.',
+            'Taille fixe, proportions, délai et coordonnées d’écran — pratique pour les visuels et les captures en série.',
+        },
+        {
+          title: 'Multi-écrans',
+          description:
+            'Tous vos écrans dans un même espace de coordonnées\u00A0: les écrans secondaires et étendus se sélectionnent correctement, et les captures restent nettes sur les écrans à DPI élevé.',
+        },
+        {
+          title: 'Mode sombre',
+          description: 'Suivez le réglage du système, ou basculez vous-même entre clair et sombre.',
+        },
+        {
+          title: 'Mode présentation',
+          description:
+            'Rangez le bureau d’une seule touche — fenêtres, icônes et fond d’écran — puis restaurez tout d’un geste.',
         },
       ],
     },

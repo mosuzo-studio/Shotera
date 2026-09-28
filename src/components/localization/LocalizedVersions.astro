@@ -1,5 +1,5 @@
 ---
-import PageLayout from '~/layouts/PageLayout.astro';
+import PageLayoutV3 from '~/layouts/PageLayoutV3.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import VersionCompare from '~/components/widgets/VersionCompare.astro';
 import DownloadFormats from '~/components/widgets/DownloadFormats.astro';
@@ -28,7 +28,7 @@ const metadata = {
 };
 ---
 
-<PageLayout metadata={metadata} lang={locale}>
+<PageLayoutV3 metadata={metadata} lang={locale}>
   <HeroText tagline={content.hero.tagline} title={content.hero.title} subtitle={content.hero.subtitle} />
 
   <VersionCompare
@@ -88,4 +88,4 @@ const metadata = {
     recommendLabel={formats.recommendLabel}
     rows={formats.rows.map((row, index) => ({ ...row, icon: formatIcons[index], recommended: index === 0 }))}
   />
-</PageLayout>
+</PageLayoutV3>

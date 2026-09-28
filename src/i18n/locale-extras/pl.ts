@@ -72,13 +72,11 @@ export const content: LocaleExtras = {
         },
         {
           title: 'Dodaj adnotacje, wyodrębnij lub edytuj',
-          description:
-            'Zaznacz to, co ważne, uruchom OCR, wytnij obiekt, przetłumacz — w tym samym oknie.',
+          description: 'Zaznacz to, co ważne, uruchom OCR, wytnij obiekt, przetłumacz — w tym samym oknie.',
         },
         {
           title: 'Skopiuj, zapisz lub przypnij',
-          description:
-            'Wyślij do schowka, zapisz lokalnie albo przypnij na wierzchu, aby mieć pod ręką.',
+          description: 'Wyślij do schowka, zapisz lokalnie albo przypnij na wierzchu, aby mieć pod ręką.',
         },
       ],
     },
@@ -104,8 +102,7 @@ export const content: LocaleExtras = {
     ],
     stand: {
       title: 'Na czym się opieramy',
-      subtitle:
-        'Im lepiej narzędzie się sprawdza, tym mniej je zauważasz — ta myśl stoi za każdą naszą decyzją.',
+      subtitle: 'Im lepiej narzędzie się sprawdza, tym mniej je zauważasz — ta myśl stoi za każdą naszą decyzją.',
       items: [
         {
           title: 'Szybkość przede wszystkim',
@@ -124,57 +121,96 @@ export const content: LocaleExtras = {
         },
       ],
     },
-    toolbox: {
-      title: '',
-      subtitle: '',
-      alt: 'Zestaw narzędzi Shotera: przechwytywanie, przechwytywanie z przewijaniem, nagrywanie, wycinanie AI, OCR offline, tłumaczenie obrazów, przypinanie i przeglądarka obrazów',
+    core: {
+      title: 'Możliwości podstawowe',
+      subtitle:
+        'Zrzut ekranu, długi zrzut, przypinanie, nagrywanie, OCR offline i AI na urządzeniu — sześć rzeczy, po które sięgasz każdego dnia, dostępne pod jednym skrótem.',
+      alt: 'Narzędzia do adnotacji Shotera na pulpicie Windows: zaznaczenie, pasek narzędzi i przypięte kafelki',
       items: [
         {
-          title: 'Przechwytywanie',
+          title: 'Zrzut ekranu',
           description:
-            'Inteligentne wykrywanie okien i elementów — właściwa ramka jest już wybrana, więc rzadko rysujesz ją ręcznie.',
+            'Inteligentne wykrywanie okien i elementów — właściwa ramka czeka gotowa, zanim zaczniesz przeciągać. Zdecyduj, czy zrzut trafia od razu do schowka, czy otwiera się pasek narzędzi adnotacji: dwa tryby zakończenia przechwytywania, Twój wybór.',
         },
         {
-          title: 'Przechwytywanie z przewijaniem',
+          title: 'Długi zrzut',
           description:
-            'Przewiń stronę lub długi czat i pozwól Shoterze scalić go w jeden długi zrzut — automatycznie albo ręcznie, z podglądem na żywo.',
+            'Przewiń stronę lub długi czat, a Shotera scali całość w jeden długi zrzut — automatycznie albo ręcznie, z podglądem na żywo.',
         },
         {
-          title: 'Nagrywanie ekranu i GIF',
-          description:
-            'Nagrywaj ekran i eksportuj do lekkiego GIF-a; podświetlenia kursora i kliknięć utrzymują przejrzystość prezentacji.',
+          title: 'Przypnij do pulpitu',
+          description: 'Trzymaj dowolny zrzut na wierzchu jako odniesienie, ułożony obok siebie bez bałaganu.',
         },
         {
-          title: 'Wycinanie AI',
+          title: 'Nagrywanie i GIF',
           description:
-            'Wykryj obiekt i jednym kliknięciem usuń tło, eksportując przezroczyste PNG. Bez Photoshopa.',
+            'Nagrywaj ekran i eksportuj lekki GIF; podświetlenia kursora i kliknięć sprawiają, że demonstracje są czytelne.',
         },
         {
           title: 'OCR offline',
           description:
-            'Wyodrębniaj tekst z dowolnego zrzutu, na swoim urządzeniu, w wielu językach. Kopiuj i wklejaj — w pełni offline.',
+            'Wyodrębnij tekst ze zrzutu jako edytowalną treść, w wielu językach — rozpoznanie na Twoim urządzeniu, wynik gotowy do wklejenia.',
+        },
+        {
+          title: 'Wycinanie i wymazywanie AI',
+          description:
+            'Wycinanie AI jednym kliknięciem usuwa tło i eksportuje przezroczysty PNG; wymazywanie AI usuwa zbędne elementy i znaki wodne. Oba działają na modelach lokalnych — nic nie jest wysyłane.',
+        },
+      ],
+    },
+    more: {
+      title: 'Więcej możliwości',
+      subtitle:
+        'Szczegóły, które dopełniają całość — adnotacje, rozpoznawanie, przeglądanie obrazów i otaczające je ustawienia.',
+      items: [
+        {
+          title: 'Narzędzia adnotacji',
+          description:
+            'Prostokąt/elipsa, linia/strzałka, pędzel, zakreślacz, mozaika/rozmycie, tekst, numeracja, naklejki emoji, lupa i gumka — adnotuj zaraz po przechwyceniu.',
+        },
+        {
+          title: 'Naklejki emoji',
+          description:
+            'Setki naklejek emoji — kciuk w górę, serca, śmiech, konfetti — skaluj je i umieszczaj gdziekolwiek, żeby dodać odrobinę zabawy.',
+        },
+        {
+          title: 'Przeglądarka i edytor obrazów',
+          description:
+            'Otwórz zrzut albo dowolny plik graficzny we własnym oknie — przeglądaj folder, powiększaj i poprawiaj, co trzeba. Popularne formaty otwierają się od razu.',
         },
         {
           title: 'Tłumaczenie obrazów',
-          description:
-            'Rozpoznawaj i tłumacz tekst w dowolnym obrazie od ręki — obcojęzyczne dokumenty, wykresy i interfejsy stają się czytelne.',
+          description: 'Obcy tekst na zrzucie, przetłumaczony w miejscu — skopiuj tłumaczenie i działaj dalej.',
         },
         {
-          title: 'Przypinanie na ekranie',
+          title: 'Rozpoznawanie kodów QR i kreskowych',
           description:
-            'Trzymaj dowolny zrzut na wierzchu jako odniesienie, ułożony obok siebie bez bałaganu.',
+            'Kody QR i kreskowe odczytane w miejscu: linki, Wi-Fi, kontakty, kody produktów — skopiuj wynik jednym kliknięciem, w pełni offline.',
         },
         {
-          title: 'Przeglądarka obrazów',
+          title: 'Niestandardowy zrzut ekranu',
           description:
-            'Otwórz zrzut lub dowolny plik graficzny we własnym oknie — przeglądaj folder, powiększaj i poprawiaj, co potrzebne.',
+            'Stały rozmiar, proporcje, opóźnienie i współrzędne ekranu — przydatne przy materiałach graficznych i zrzutach seryjnych.',
+        },
+        {
+          title: 'Wiele monitorów',
+          description:
+            'Każdy ekran w jednym układzie współrzędnych, więc dodatkowe i rozszerzone monitory zaznacza się poprawnie — a zrzuty pozostają ostre na ekranach HiDPI.',
+        },
+        {
+          title: 'Tryb ciemny',
+          description: 'Zgodnie z systemem albo ręcznie — przełączaj między jasnym i ciemnym motywem.',
+        },
+        {
+          title: 'Tryb prezentacji',
+          description:
+            'Jednym klawiszem porządkujesz pulpit — okna, ikony i tapetę — a po zakończeniu przywracasz wszystko tak, jak było.',
         },
       ],
     },
     values: {
       title: 'Nasze wartości',
-      subtitle:
-        'Tworzenie narzędzia i korzystanie z niego to dla nas to samo. Codziennie pracujemy w tym, co robimy.',
+      subtitle: 'Tworzenie narzędzia i korzystanie z niego to dla nas to samo. Codziennie pracujemy w tym, co robimy.',
       items: [
         {
           title: 'Stworzone do prawdziwej pracy',
@@ -195,8 +231,7 @@ export const content: LocaleExtras = {
     },
     history: {
       title: 'Jak tu dotarliśmy',
-      subtitle:
-        'Od narzędzia, które zbudowaliśmy dla siebie, po takie, na którym ludzie polegają każdego dnia.',
+      subtitle: 'Od narzędzia, które zbudowaliśmy dla siebie, po takie, na którym ludzie polegają każdego dnia.',
       cta: 'Pobierz Shotera za darmo',
       items: [
         {

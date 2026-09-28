@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-import PageLayout from '~/layouts/PageLayout.astro';
+import PageLayoutV3 from '~/layouts/PageLayoutV3.astro';
 import type { LocalizedSiteContent, LocalizedLocale } from '~/i18n/site-content';
 
 interface Props {
@@ -25,7 +25,7 @@ const isAboutOrServices = path === 'about' || path === 'services';
 const metadata = { title, description: intro };
 ---
 
-<PageLayout metadata={metadata} lang={locale}>
+<PageLayoutV3 metadata={metadata} lang={locale}>
   <section class="px-5 pb-16 pt-20 sm:pb-20 sm:pt-28">
     <div class="mx-auto max-w-4xl text-center">
       <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">Shotera</p>
@@ -91,4 +91,4 @@ const metadata = { title, description: intro };
       </div>
     </div>
   </section>
-</PageLayout>
+</PageLayoutV3>

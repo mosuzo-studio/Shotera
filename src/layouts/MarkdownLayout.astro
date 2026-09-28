@@ -1,5 +1,4 @@
 ---
-import PageLayout from '~/layouts/PageLayout.astro';
 import PageLayoutV3 from '~/layouts/PageLayoutV3.astro';
 
 import type { MetaData } from '~/types';
@@ -12,17 +11,12 @@ export interface Props {
 
 const { frontmatter } = Astro.props;
 
-// EN and zh-CN already run on the v3 (Cap-flavoured) shell; the other locales
-// keep the AstroWind one until they are migrated too.
-const locale = Astro.currentLocale ?? 'en';
-const Layout = locale === 'en' || locale === 'zh-cn' ? PageLayoutV3 : PageLayout;
-
 const metadata: MetaData = {
   title: frontmatter?.title,
 };
 ---
 
-<Layout metadata={metadata}>
+<PageLayoutV3 metadata={metadata}>
   <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
     <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">{frontmatter.title}</h1>
     <div
@@ -31,4 +25,4 @@ const metadata: MetaData = {
       <slot />
     </div>
   </section>
-</Layout>
+</PageLayoutV3>

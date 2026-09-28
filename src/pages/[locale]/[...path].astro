@@ -1,8 +1,10 @@
 ---
 import Layout from '~/layouts/Layout.astro';
+import PageLayoutV3 from '~/layouts/PageLayoutV3.astro';
 import Header from '~/components/v3/Header.astro';
 import Home from '~/components/v3/Home.astro';
 import Footer from '~/components/v3/Footer.astro';
+import Contact from '~/components/v3/Contact.astro';
 import { getV3Copy } from '~/components/v3/copy-intl';
 import LocalizedAbout from '~/components/localization/LocalizedAbout.astro';
 import LocalizedPage from '~/components/localization/LocalizedPage.astro';
@@ -54,6 +56,10 @@ const v3 = getV3Copy(locale);
     </Layout>
   ) : path === 'about' ? (
     <LocalizedAbout locale={locale} content={content} />
+  ) : path === 'contact' ? (
+    <PageLayoutV3 metadata={{ title: `${v3.contact.title} — Shotera` }} lang={locale}>
+      <Contact lang={locale} />
+    </PageLayoutV3>
   ) : path === 'versions' ? (
     <LocalizedVersions locale={locale} content={versionsContent[locale]} />
   ) : (

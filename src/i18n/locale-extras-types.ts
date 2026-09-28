@@ -59,20 +59,19 @@ export interface LocaleExtras {
       subtitle: string;
       items: [LocaleExtrasItem, LocaleExtrasItem, LocaleExtrasItem];
     };
-    toolbox: {
+    /* The about page's capability grid, split the way EN and zh-CN split it:
+       L1 core capabilities (six cards, carrying the section image) and L2 more
+       capabilities (nine text-only cards). */
+    core: {
       title: string;
       subtitle: string;
       alt: string;
-      items: [
-        LocaleExtrasItem,
-        LocaleExtrasItem,
-        LocaleExtrasItem,
-        LocaleExtrasItem,
-        LocaleExtrasItem,
-        LocaleExtrasItem,
-        LocaleExtrasItem,
-        LocaleExtrasItem,
-      ];
+      items: LocaleExtrasItem[];
+    };
+    more: {
+      title: string;
+      subtitle: string;
+      items: LocaleExtrasItem[];
     };
     values: {
       title: string;

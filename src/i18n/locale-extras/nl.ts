@@ -77,8 +77,7 @@ export const content: LocaleExtras = {
         },
         {
           title: 'Kopieer, sla op of pin vast',
-          description:
-            'Stuur het naar het klembord, sla het lokaal op of pin het bovenaan voor snelle referentie.',
+          description: 'Stuur het naar het klembord, sla het lokaal op of pin het bovenaan voor snelle referentie.',
         },
       ],
     },
@@ -86,8 +85,7 @@ export const content: LocaleExtras = {
 
   about: {
     statsTitle: 'Shotera in één oogopslag',
-    metaDescription:
-      'Over het team achter Shotera en waarom we snelle, eenvoudige en onopvallende screenshots bouwen.',
+    metaDescription: 'Over het team achter Shotera en waarom we snelle, eenvoudige en onopvallende screenshots bouwen.',
     hero: {
       tagline: 'Over ons',
       title: 'Maak screenshots',
@@ -124,30 +122,30 @@ export const content: LocaleExtras = {
         },
       ],
     },
-    toolbox: {
-      title: '',
-      subtitle: '',
-      alt: 'Shotera-gereedschapskist: vastleggen, scrollende schermafbeelding, opnemen, AI-uitsnede, offline OCR, beeldvertaling, vastpinnen en de beeldviewer',
+    core: {
+      title: 'Kernmogelijkheden',
+      subtitle:
+        'Schermafbeelding, lange schermafbeelding, vastpinnen, schermopname, offline OCR en AI op je apparaat — de zes dingen waar je de hele dag naar grijpt, op één sneltoets afstand.',
+      alt: 'Shotera-annotatietools over een Windows-bureaublad: selectie, werkbalk en glazen tegels.',
       items: [
         {
-          title: 'Vastleggen',
+          title: 'Schermafbeelding',
           description:
-            'Slimme detectie van vensters en elementen — het gewenste kader is al gekozen, zodat je zelden handmatig een kader sleept.',
+            'Slimme detectie van vensters en elementen — het gewenste kader is al gekozen, zodat je zelden handmatig een kader sleept. Rond af door direct te kopiëren of open de annotatiewerkbalk — twee manieren om af te ronden, jij kiest.',
         },
         {
-          title: 'Scrollende schermafbeelding',
+          title: 'Lange schermafbeelding',
           description:
             'Scroll een pagina of een lange chat en laat Shotera er één lange opname van maken — automatisch of met de hand, met live voorbeeld.',
         },
         {
-          title: 'Schermopname en GIF',
-          description:
-            'Neem je scherm op en exporteer naar een lichtgewicht GIF; cursoraccenten en kliksignalen houden demo’s duidelijk.',
+          title: 'Vastpinnen op bureaublad',
+          description: 'Houd elke screenshot zwevend bovenop als referentie, naast elkaar gerangschikt zonder rommel.',
         },
         {
-          title: 'AI-uitsnede',
+          title: 'Schermopname & GIF',
           description:
-            'Detecteer het onderwerp en verwijder de achtergrond met één klik en exporteer transparante PNG’s. Photoshop niet nodig.',
+            'Neem je scherm op en exporteer naar een lichtgewicht GIF; cursoraccenten en kliksignalen houden demo’s duidelijk.',
         },
         {
           title: 'Offline OCR',
@@ -155,26 +153,65 @@ export const content: LocaleExtras = {
             'Haal tekst uit elke screenshot, op je apparaat en in meerdere talen. Kopieer en plak — volledig offline.',
         },
         {
+          title: 'AI-uitsnede & AI-gum',
+          description:
+            'AI-uitsnede verwijdert de achtergrond met één klik en exporteert een transparante PNG; AI-gum wist rommel en watermerken weg. Beide draaien op lokale modellen — er wordt niets geüpload.',
+        },
+      ],
+    },
+    more: {
+      title: 'Meer mogelijkheden',
+      subtitle: 'Het zijn de details die beklijven — annotatie, herkenning, weergave en de instellingen eromheen.',
+      items: [
+        {
+          title: 'Annotatietools',
+          description:
+            'Rechthoek/ellips, lijn/pijl, penseel, markeerstift, mozaïek/vervaging, tekst, nummering, emoji-stickers, loep en gum — annoteer op het moment van vastleggen.',
+        },
+        {
+          title: 'Emoji-stickers',
+          description:
+            'Honderden emoji-stickers — duim omhoog, hartjes, lachjes, confetti — vrij te schalen en overal te plaatsen voor een luchtige noot.',
+        },
+        {
+          title: 'Beeldviewer & editor',
+          description:
+            'Open een opname of een willekeurig afbeeldingsbestand in een eigen viewervenster — blader door een map, zoom in en verbeter wat je nodig hebt. Veelgebruikte formaten openen meteen.',
+        },
+        {
           title: 'Beeldvertaling',
           description:
             'Herken en vertaal tekst in elke afbeelding meteen — buitenlandse documenten, grafieken en interfaces worden leesbaar.',
         },
         {
-          title: 'Vastpinnen op scherm',
+          title: 'QR- en barcodes scannen',
           description:
-            'Houd elke screenshot zwevend bovenop als referentie, naast elkaar gerangschikt zonder rommel.',
+            'Lees QR-codes en barcodes ter plekke: links, Wi-Fi, contacten, productcodes — het resultaat is met één klik gekopieerd, volledig offline.',
         },
         {
-          title: 'Beeldviewer',
+          title: 'Aangepaste schermafbeelding',
           description:
-            'Open een opname of een willekeurig afbeeldingsbestand in een eigen viewervenster — blader door een map, zoom in en verbeter wat je nodig hebt.',
+            'Vaste grootte, verhouding, vertraging en schermcoördinaten — handig voor assets en batchopnamen.',
+        },
+        {
+          title: 'Meerdere monitoren',
+          description:
+            'Elk scherm in één coördinatensysteem, zodat ook secundaire en uitgebreide schermen correct worden geselecteerd — en opnamen scherp blijven op hoog-DPI-schermen.',
+        },
+        {
+          title: 'Donkere modus',
+          description: 'Volg het systeem, of schakel handmatig tussen licht en donker.',
+        },
+        {
+          title: 'Presentatiemodus',
+          description:
+            'Ruim het bureaublad in één toets op — vensters, pictogrammen en achtergrond — en zet daarna alles weer terug.',
         },
       ],
     },
     values: {
       title: 'Onze waarden',
-      subtitle:
-        'Een tool bouwen en er zelf mee werken is voor ons hetzelfde. We werken elke dag in wat we maken.',
+      subtitle: 'Een tool bouwen en er zelf mee werken is voor ons hetzelfde. We werken elke dag in wat we maken.',
       items: [
         {
           title: 'Gebouwd voor echt werk',
@@ -195,8 +232,7 @@ export const content: LocaleExtras = {
     },
     history: {
       title: 'Hoe we hier kwamen',
-      subtitle:
-        'Van een tool die we voor onszelf bouwden tot een waar mensen dagelijks op vertrouwen.',
+      subtitle: 'Van een tool die we voor onszelf bouwden tot een waar mensen dagelijks op vertrouwen.',
       cta: 'Download Shotera gratis',
       items: [
         {
