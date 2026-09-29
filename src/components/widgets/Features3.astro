@@ -48,8 +48,10 @@ const columnsClass =
       image && (
         /* The banner keeps the 16:7 the wrapper class names promise: a
            responsive image whose aspect-ratio drives the box, so a 16:7
-           source fills it edge to edge with no cover-crop. */
-        <div class="w-full overflow-hidden rounded-xl mx-auto bg-gray-500 shadow-lg">
+           source fills it edge to edge with no cover-crop. The 900px cap keeps
+           it below the About page's hero image (1024×576), so the second
+           illustration never steals the show. */
+        <div class="w-full overflow-hidden rounded-xl mx-auto bg-gray-500 shadow-lg" style="max-width: 900px">
           {typeof image === 'string' ? (
             <Fragment set:html={image} />
           ) : (
