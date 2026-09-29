@@ -79,6 +79,12 @@ export default {
     { value: '4.9 / 5', label: 'användarbetyg' },
     { value: '100%', label: 'AI på enheten' },
     { value: '<0.1s', label: 'start via snabbtangent' },
+    {
+      value: '{downloads}',
+      label: 'nedladdningar',
+      badge: 'Live',
+      tip: 'Live-statistik från GitHub Releases; nedladdningar från Microsoft Store ingår inte',
+    },
   ],
   modesSection: {
     bestFor: 'BÄST FÖR',

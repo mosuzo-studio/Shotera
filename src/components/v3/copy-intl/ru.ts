@@ -79,6 +79,12 @@ export default {
     { value: '4.9 / 5', label: 'рейтинг пользователей' },
     { value: '100%', label: 'AI на устройстве' },
     { value: '<0.1s', label: 'запуск по горячей клавише' },
+    {
+      value: '{downloads}',
+      label: 'загрузок',
+      badge: 'Онлайн',
+      tip: 'Статистика в реальном времени с GitHub Releases; загрузки из Microsoft Store не учитываются',
+    },
   ],
   modesSection: {
     bestFor: 'ДЛЯ ЧЕГО',

@@ -80,6 +80,12 @@ export default {
     { value: '4.9 / 5', label: 'valutazione degli utenti' },
     { value: '100%', label: 'AI sul dispositivo' },
     { value: '<0.1s', label: 'per richiamarlo' },
+    {
+      value: '{downloads}',
+      label: 'download',
+      badge: 'In diretta',
+      tip: 'Conteggio in tempo reale da GitHub Releases; non include i download da Microsoft Store',
+    },
   ],
   modesSection: {
     bestFor: 'IDEALE PER',

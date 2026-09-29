@@ -100,7 +100,9 @@ export interface V3Copy {
     recommend: string;
     allVersions: string;
   };
-  trust: { value: string; label: string }[];
+  /** A value of `{downloads}` is replaced with the live download count; `badge`
+      and `tip` only dress that one slot up so the moving number stands out. */
+  trust: { value: string; label: string; badge?: string; tip?: string }[];
   modesSection: { eyebrow: string; title: string; lead: string; bestFor: string; cards: V3ModeCard[] };
   features: V3FeatureSection[];
   cta: { eyebrow: string; title: string; lead: string; primary: string; secondary: string; note: string };
@@ -196,6 +198,12 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       { value: '4.9 / 5', label: 'user rating' },
       { value: '100%', label: 'on-device AI' },
       { value: '<0.1s', label: 'to summon' },
+      {
+        value: '{downloads}',
+        label: 'downloads',
+        badge: 'Live',
+        tip: 'Live download count from GitHub Releases; Microsoft Store downloads are not included',
+      },
     ],
     modesSection: {
       eyebrow: 'Three everyday flows',
@@ -505,6 +513,12 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
       { value: '4.9 / 5', label: '好评率' },
       { value: '100%', label: '离线 AI 处理' },
       { value: '<0.1s', label: '快捷键唤起' },
+      {
+        value: '{downloads}',
+        label: '次下载',
+        badge: '实时',
+        tip: 'GitHub Release 实时下载统计量，不含微软商店渠道',
+      },
     ],
     modesSection: {
       eyebrow: '日常三件事',

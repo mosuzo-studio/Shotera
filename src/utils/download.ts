@@ -18,6 +18,9 @@
  * page, so the build never breaks and the buttons always stay usable.
  */
 
+import { readFileSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
 /** Releases list page — also the fallback target when resolution fails. */
 export const RELEASES_URL = 'https://github.com/mosuzo-studio/Shotera/releases';
 
@@ -166,6 +169,104 @@ let cached: Promise<ReleaseDownloads> | null = null;
 export const getReleaseDownloads = (): Promise<ReleaseDownloads> => {
   cached ??= fetchLatestRelease();
   return cached;
+};
+
+/**
+ * Last download total that resolved, kept in the repo so a lookup that times
+ * out or hits the rate limit still shows a real number. The build refreshes
+ * this file whenever the API answers.
+ */
+/* Resolved from the project root: the module is bundled during a build, so
+   import.meta.url would point into dist instead of the source tree. */
+const COUNT_CACHE_PATH = resolve(process.cwd(), 'src/data/download-count.json');
+
+interface DownloadCountCache {
+  total: number;
+  fetchedAt: string;
+}
+
+const readCountCache = (): DownloadCountCache | null => {
+  try {
+    const parsed = JSON.parse(readFileSync(COUNT_CACHE_PATH, 'utf8')) as Partial<DownloadCountCache>;
+    return typeof parsed.total === 'number' ? { total: parsed.total, fetchedAt: parsed.fetchedAt ?? '' } : null;
+  } catch {
+    return null;
+  }
+};
+
+const writeCountCache = (total: number): void => {
+  try {
+    const previous = readCountCache();
+    if (previous?.total === total) return;
+    writeFileSync(
+      COUNT_CACHE_PATH,
+      `${JSON.stringify({ total, fetchedAt: new Date().toISOString() }, null, 2)}\n`,
+      'utf8'
+    );
+    console.info(`[download] Cached the download total ${previous?.total ?? '—'} → ${total}.`);
+  } catch (error) {
+    const reason = error instanceof Error ? error.message : String(error);
+    console.warn(`[download] Could not cache the download total (${reason}).`);
+  }
+};
+
+/** One page is enough while the project stays under 100 releases. */
+const RELEASES_API_URL = 'https://api.github.com/repos/mosuzo-studio/Shotera/releases?per_page=100';
+
+interface ReleaseAsset {
+  name?: string;
+  download_count?: number;
+}
+
+interface Release {
+  assets?: ReleaseAsset[];
+}
+
+/** Every asset download GitHub reports, packages and updater metadata alike. */
+const sumDownloads = (releases: Release[]): number =>
+  releases.reduce(
+    (total, release) => total + (release.assets ?? []).reduce((sum, asset) => sum + (asset.download_count ?? 0), 0),
+    0
+  );
+
+const fetchTotalDownloads = async (): Promise<number> => {
+  await installProxyDispatcher();
+
+  const response = await fetch(RELEASES_API_URL, {
+    headers: { Accept: 'application/vnd.github+json', 'User-Agent': 'shotera-site-build' },
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+  });
+
+  if (!response.ok) throw new Error(`status ${response.status}`);
+
+  const total = sumDownloads((await response.json()) as Release[]);
+  if (!total) throw new Error('no downloads in the response');
+
+  writeCountCache(total);
+
+  return total;
+};
+
+let cachedDownloads: Promise<number | null> | null = null;
+
+/**
+ * Total downloads GitHub reports across every release. The site is static, so
+ * this is the number the build bakes in; the homepage refreshes it from the
+ * same endpoint in the visitor's browser. A failed lookup falls back to the
+ * last cached value, and to nothing when there is no cache to fall back to.
+ */
+export const getTotalDownloads = (): Promise<number | null> => {
+  cachedDownloads ??= fetchTotalDownloads().catch((error: unknown) => {
+    const reason = error instanceof Error ? error.message : String(error);
+    const cached = readCountCache();
+    console.warn(
+      `[download] Could not read the download totals (${reason}); using the last cached count${
+        cached ? ` (${cached.total})` : ' — none cached yet'
+      }.`
+    );
+    return cached?.total ?? null;
+  });
+  return cachedDownloads;
 };
 
 /**

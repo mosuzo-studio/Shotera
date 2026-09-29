@@ -81,6 +81,12 @@ export default {
     { value: '4.9 / 5', label: 'Nutzerbewertung' },
     { value: '100%', label: 'AI auf dem Gerät' },
     { value: '<0.1s', label: 'Start per Tastenkürzel' },
+    {
+      value: '{downloads}',
+      label: 'Downloads',
+      badge: 'Live',
+      tip: 'Live-Statistik von GitHub Releases; Downloads aus dem Microsoft Store sind nicht enthalten',
+    },
   ],
   modesSection: {
     eyebrow: 'Drei Abläufe für den Alltag',

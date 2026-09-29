@@ -81,6 +81,12 @@ export default {
     { value: '4.9 / 5', label: 'valoración de usuarios' },
     { value: '100%', label: 'IA local' },
     { value: '<0.1s', label: 'para invocarlo' },
+    {
+      value: '{downloads}',
+      label: 'descargas',
+      badge: 'En vivo',
+      tip: 'Recuento en vivo desde GitHub Releases; no incluye descargas de Microsoft Store',
+    },
   ],
   modesSection: {
     bestFor: 'IDEAL PARA',

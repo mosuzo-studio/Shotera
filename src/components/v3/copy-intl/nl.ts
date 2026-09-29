@@ -76,6 +76,12 @@ export default {
     { value: '4.9 / 5', label: 'gebruikersbeoordeling' },
     { value: '100%', label: 'AI op je apparaat' },
     { value: '<0.1s', label: 'Oproepen via sneltoets' },
+    {
+      value: '{downloads}',
+      label: 'downloads',
+      badge: 'Live',
+      tip: 'Live telling van GitHub Releases; downloads via Microsoft Store zijn niet meegerekend',
+    },
   ],
   modesSection: {
     bestFor: 'IDEAAL VOOR',

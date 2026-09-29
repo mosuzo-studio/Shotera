@@ -75,6 +75,12 @@ export default {
     { value: '4.9 / 5', label: 'ユーザー評価' },
     { value: '100%', label: '端末上の AI 処理' },
     { value: '<0.1s', label: 'ショートカット起動' },
+    {
+      value: '{downloads}',
+      label: 'ダウンロード',
+      badge: 'リアルタイム',
+      tip: 'GitHub Release のリアルタイム集計。Microsoft Store 版のダウンロードは含みません',
+    },
   ],
   modesSection: {
     eyebrow: '毎日使う3つの流れ',

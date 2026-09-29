@@ -2,7 +2,7 @@
 import { getImage } from 'astro:assets';
 import { localizedPath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
-import { getReleaseDownloads, RELEASES_URL, STORE_URL } from '~/utils/download';
+import { getReleaseDownloads, getTotalDownloads, RELEASES_URL, STORE_URL } from '~/utils/download';
 import { getV3Copy } from './copy-intl';
 
 import captureDemo from '~/assets/images/capture-demo.png';
@@ -31,6 +31,9 @@ const c = getV3Copy(lang);
 const l = (path: string) => localizedPath(lang, path);
 
 const { urls: downloadUrls } = await getReleaseDownloads();
+/* null when the lookup failed and nothing is cached; the slot then stays out. */
+const downloadTotal = await getTotalDownloads();
+const downloadTotalText = downloadTotal === null ? null : new Intl.NumberFormat(lang).format(downloadTotal);
 
 const shotSources = {
   capture: captureWide,
@@ -244,11 +247,24 @@ const shotData = JSON.stringify({
 <div class="v3-trust">
   <div class="v3-wrap v3-trust-row">
     {
-      c.trust.map((item) => (
-        <span>
-          <b>{item.value}</b> {item.label}
-        </span>
-      ))
+      c.trust.map((item) => {
+        if (!item.value.includes('{downloads}')) {
+          return (
+            <span>
+              <b>{item.value}</b> {item.label}
+            </span>
+          );
+        }
+        if (downloadTotalText === null) return null;
+        /* The one moving number; refreshed in the browser, see initV3DownloadCount. */
+        return (
+          <span class="v3-trust-live" data-v3-tip={item.tip}>
+            <em aria-hidden="true" />
+            <b data-v3-downloads="">{item.value.replace('{downloads}', downloadTotalText)}</b> {item.label}
+            {item.badge && <i>{item.badge}</i>}
+          </span>
+        );
+      })
     }
   </div>
 </div>
@@ -468,6 +484,33 @@ const shotData = JSON.stringify({
 
   initV3ShotSwitcher();
   document.addEventListener('astro:page-load', initV3ShotSwitcher);
+
+  /* The trust bar carries the count the build baked in; refresh it from the same
+     GitHub endpoint in the visitor's browser so it keeps moving between
+     deploys. Offline or rate limited keeps the baked number. */
+  function initV3DownloadCount() {
+    const el = document.querySelector<HTMLElement>('[data-v3-downloads]');
+    if (!el || el.dataset.wired === '1') return;
+    el.dataset.wired = '1';
+
+    fetch('https://api.github.com/repos/mosuzo-studio/Shotera/releases?per_page=100', {
+      headers: { Accept: 'application/vnd.github+json' },
+    })
+      .then((response) => (response.ok ? response.json() : Promise.reject(new Error(String(response.status)))))
+      .then((releases: { assets?: { name?: string; download_count?: number }[] }[]) => {
+        const total = releases.reduce(
+          (sum, release) => sum + (release.assets ?? []).reduce((inner, asset) => inner + (asset.download_count ?? 0), 0),
+          0
+        );
+        if (total > 0) el.textContent = new Intl.NumberFormat(document.documentElement.lang || 'en').format(total);
+      })
+      .catch(() => {
+        /* keep the baked number */
+      });
+  }
+
+  initV3DownloadCount();
+  document.addEventListener('astro:page-load', initV3DownloadCount);
 
   /* The hero alternates between the two CSS shells - the aluminium monitor and
      the laptop, one switch every 20s on a loop - and the two dots under its

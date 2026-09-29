@@ -79,6 +79,12 @@ export default {
     { value: '4.9 / 5', label: 'avaliação dos usuários' },
     { value: '100%', label: 'AI no dispositivo' },
     { value: '<0.1s', label: 'para chamar' },
+    {
+      value: '{downloads}',
+      label: 'downloads',
+      badge: 'Tempo real',
+      tip: 'Contagem em tempo real do GitHub Releases; não inclui downloads da Microsoft Store',
+    },
   ],
   modesSection: {
     bestFor: 'IDEAL PARA',

@@ -76,6 +76,12 @@ export default {
     { value: '4.9 / 5', label: '好評率' },
     { value: '100%', label: '離線 AI 處理' },
     { value: '<0.1s', label: '快速鍵喚起' },
+    {
+      value: '{downloads}',
+      label: '次下載',
+      badge: '即時',
+      tip: 'GitHub Release 即時下載統計量，不含 Microsoft Store 下載',
+    },
   ],
   modesSection: {
     bestFor: '最適合',

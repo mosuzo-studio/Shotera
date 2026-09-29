@@ -72,6 +72,12 @@ export default {
     { value: '4.9 / 5', label: '사용자 평점' },
     { value: '100%', label: '기기 내 AI 처리' },
     { value: '<0.1s', label: '단축키 실행' },
+    {
+      value: '{downloads}',
+      label: '다운로드',
+      badge: '실시간',
+      tip: 'GitHub Release 실시간 집계, Microsoft Store 다운로드는 포함되지 않습니다',
+    },
   ],
   modesSection: {
     bestFor: '추천 용도',

@@ -79,6 +79,12 @@ export default {
     { value: '4.9 / 5', label: 'تقييم المستخدمين' },
     { value: '100%', label: 'ذكاء اصطناعي على الجهاز' },
     { value: '<0.1s', label: 'زمن الاستدعاء' },
+    {
+      value: '{downloads}',
+      label: 'عملية تنزيل',
+      badge: 'مباشر',
+      tip: 'إحصاء مباشر من GitHub Releases؛ لا يشمل التنزيلات من Microsoft Store',
+    },
   ],
   modesSection: {
     bestFor: 'الأفضل لـ',

@@ -80,6 +80,12 @@ export default {
     { value: '4.9 / 5', label: 'note des utilisateurs' },
     { value: '100%', label: 'IA sur l’appareil' },
     { value: '<0.1s', label: 'lancement par raccourci' },
+    {
+      value: '{downloads}',
+      label: 'téléchargements',
+      badge: 'En direct',
+      tip: 'Comptage en direct depuis GitHub Releases ; les téléchargements du Microsoft Store ne sont pas inclus',
+    },
   ],
   modesSection: {
     bestFor: 'IDÉAL POUR',
