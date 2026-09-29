@@ -983,7 +983,10 @@
 
 .v3-trust-row {
   display: flex;
-  gap: 38px;
+  /* centre each item so the chip text sits level with the plain ones */
+  align-items: center;
+  column-gap: 38px;
+  row-gap: 14px;
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px 0;
@@ -1002,6 +1005,9 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  /* never squeezed or wrapped: it drops to its own line instead */
+  flex: none;
+  white-space: nowrap;
   padding: 5px 12px 5px 10px;
   border-radius: 9999px;
   background: var(--v3-p1);
@@ -1724,6 +1730,13 @@ a.v3-chcard:hover .v3-chgo {
   .v3-pill-dark {
     padding: 8px 14px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 1160px) {
+  /* Keep the five trust items on one line a bit longer. */
+  .v3-trust-row {
+    column-gap: 22px;
   }
 }
 
