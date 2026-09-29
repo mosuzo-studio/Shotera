@@ -46,18 +46,19 @@ const columnsClass =
   <div aria-hidden="true" class="aspect-w-16 aspect-h-7">
     {
       image && (
-        /* No fixed height here: the image sets its own pixel height, so a
-           rem-based one would disagree whenever the root font size differs. */
+        /* The banner keeps the 16:7 the wrapper class names promise: a
+           responsive image whose aspect-ratio drives the box, so a 16:7
+           source fills it edge to edge with no cover-crop. */
         <div class="w-full overflow-hidden rounded-xl mx-auto bg-gray-500 shadow-lg">
           {typeof image === 'string' ? (
             <Fragment set:html={image} />
           ) : (
             <Image
               class="w-full object-cover"
-              width={768}
-              height={320}
+              width={1792}
+              height={784}
               widths={[400, 768, 1280, 1792]}
-              layout="fullWidth"
+              layout="responsive"
               format="webp"
               {...image}
             />
