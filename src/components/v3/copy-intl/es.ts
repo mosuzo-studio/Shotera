@@ -85,7 +85,7 @@ export default {
       value: '{downloads}',
       label: 'descargas',
       badge: 'En vivo',
-      tip: 'Recuento en vivo desde GitHub Releases; no incluye descargas de Microsoft Store',
+      tip: 'Recuento en vivo desde GitHub Releases',
     },
   ],
   modesSection: {

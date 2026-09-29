@@ -83,7 +83,7 @@ export default {
       value: '{downloads}',
       label: 'عملية تنزيل',
       badge: 'مباشر',
-      tip: 'إحصاء مباشر من GitHub Releases؛ لا يشمل التنزيلات من Microsoft Store',
+      tip: 'إحصاء مباشر من GitHub Releases',
     },
   ],
   modesSection: {

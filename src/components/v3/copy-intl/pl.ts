@@ -84,7 +84,7 @@ export default {
       value: '{downloads}',
       label: 'pobrań',
       badge: 'Na żywo',
-      tip: 'Statystyka na żywo z GitHub Releases; nie obejmuje pobrań z Microsoft Store',
+      tip: 'Statystyka na żywo z GitHub Releases',
     },
   ],
   modesSection: {

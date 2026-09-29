@@ -83,7 +83,7 @@ export default {
       value: '{downloads}',
       label: 'nedladdningar',
       badge: 'Live',
-      tip: 'Live-statistik från GitHub Releases; nedladdningar från Microsoft Store ingår inte',
+      tip: 'Live-statistik från GitHub Releases',
     },
   ],
   modesSection: {

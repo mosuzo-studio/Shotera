@@ -80,7 +80,7 @@ export default {
       value: '{downloads}',
       label: 'downloads',
       badge: 'Live',
-      tip: 'Live telling van GitHub Releases; downloads via Microsoft Store zijn niet meegerekend',
+      tip: 'Live telling van GitHub Releases',
     },
   ],
   modesSection: {

@@ -80,7 +80,7 @@ export default {
       value: '{downloads}',
       label: '次下載',
       badge: '即時',
-      tip: 'GitHub Release 即時下載統計量，不含 Microsoft Store 下載',
+      tip: 'GitHub Release 即時下載統計量',
     },
   ],
   modesSection: {

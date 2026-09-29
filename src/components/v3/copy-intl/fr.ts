@@ -84,7 +84,7 @@ export default {
       value: '{downloads}',
       label: 'téléchargements',
       badge: 'En direct',
-      tip: 'Comptage en direct depuis GitHub Releases ; les téléchargements du Microsoft Store ne sont pas inclus',
+      tip: 'Comptage en direct depuis GitHub Releases',
     },
   ],
   modesSection: {

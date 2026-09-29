@@ -85,7 +85,7 @@ export default {
       value: '{downloads}',
       label: 'Downloads',
       badge: 'Live',
-      tip: 'Live-Statistik von GitHub Releases; Downloads aus dem Microsoft Store sind nicht enthalten',
+      tip: 'Live-Statistik von GitHub Releases',
     },
   ],
   modesSection: {

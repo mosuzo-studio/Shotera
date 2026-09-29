@@ -76,7 +76,7 @@ export default {
       value: '{downloads}',
       label: '다운로드',
       badge: '실시간',
-      tip: 'GitHub Release 실시간 집계, Microsoft Store 다운로드는 포함되지 않습니다',
+      tip: 'GitHub Release 실시간 집계',
     },
   ],
   modesSection: {

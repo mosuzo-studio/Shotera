@@ -83,7 +83,7 @@ export default {
       value: '{downloads}',
       label: 'загрузок',
       badge: 'Онлайн',
-      tip: 'Статистика в реальном времени с GitHub Releases; загрузки из Microsoft Store не учитываются',
+      tip: 'Статистика в реальном времени с GitHub Releases',
     },
   ],
   modesSection: {

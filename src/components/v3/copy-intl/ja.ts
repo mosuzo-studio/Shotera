@@ -79,7 +79,7 @@ export default {
       value: '{downloads}',
       label: 'ダウンロード',
       badge: 'リアルタイム',
-      tip: 'GitHub Release のリアルタイム集計。Microsoft Store 版のダウンロードは含みません',
+      tip: 'GitHub Release のリアルタイム集計',
     },
   ],
   modesSection: {

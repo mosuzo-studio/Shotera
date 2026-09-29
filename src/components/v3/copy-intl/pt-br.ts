@@ -83,7 +83,7 @@ export default {
       value: '{downloads}',
       label: 'downloads',
       badge: 'Tempo real',
-      tip: 'Contagem em tempo real do GitHub Releases; não inclui downloads da Microsoft Store',
+      tip: 'Contagem em tempo real do GitHub Releases',
     },
   ],
   modesSection: {

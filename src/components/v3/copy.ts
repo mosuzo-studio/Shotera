@@ -202,7 +202,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         value: '{downloads}',
         label: 'downloads',
         badge: 'Live',
-        tip: 'Live download count from GitHub Releases; Microsoft Store downloads are not included',
+        tip: 'Live download count from GitHub Releases',
       },
     ],
     modesSection: {
@@ -517,7 +517,7 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
         value: '{downloads}',
         label: '次下载',
         badge: '实时',
-        tip: 'GitHub Release 实时下载统计量，不含微软商店渠道',
+        tip: 'GitHub Release 实时下载统计量',
       },
     ],
     modesSection: {

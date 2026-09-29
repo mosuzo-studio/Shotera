@@ -84,7 +84,7 @@ export default {
       value: '{downloads}',
       label: 'download',
       badge: 'In diretta',
-      tip: 'Conteggio in tempo reale da GitHub Releases; non include i download da Microsoft Store',
+      tip: 'Conteggio in tempo reale da GitHub Releases',
     },
   ],
   modesSection: {

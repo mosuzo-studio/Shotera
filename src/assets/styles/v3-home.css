@@ -1059,6 +1059,8 @@
 .v3-trust-live[data-v3-tip]::after {
   content: attr(data-v3-tip);
   position: absolute;
+  /* the chip sets nowrap; the note still has to wrap inside its box */
+  white-space: normal;
   bottom: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
