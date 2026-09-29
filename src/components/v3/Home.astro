@@ -50,6 +50,16 @@ const featureSources = {
 type ShotKey = keyof typeof shotSources;
 type FeatureKey = keyof typeof featureSources;
 
+/* The hero pills name the anchors on the feature sections below; two of those
+   sections spell their image key differently (`longshot` / `recording`). */
+const modeKeyByFeatureImage = {
+  capture: 'capture',
+  longshot: 'long',
+  pin: 'pin',
+  recording: 'record',
+  ai: 'ai',
+} as const;
+
 const heroShots: Record<string, { src: string; width: number; height: number }> = {};
 for (const shotKey of Object.keys(shotSources) as ShotKey[]) {
   const optimized = await getImage({ src: shotSources[shotKey], width: 1200, format: 'webp' });
@@ -93,12 +103,16 @@ const shotData = JSON.stringify({
       <b>{c.hero.badge}</b><span>{c.hero.announce}</span><em aria-hidden="true">→</em>
     </div>
 
-    <div class="v3-modes" role="tablist" aria-label={c.nav.features}>
+    <div class="v3-modes" role="group" aria-label={c.nav.features}>
       {
-        c.hero.modes.map((mode, index) => (
-          <button type="button" role="tab" aria-selected={index === 0 ? 'true' : 'false'} data-v3-mode={mode.key}>
+        c.hero.modes.map((mode) => (
+          <a
+            href={`#feature-${mode.key}`}
+            aria-current={mode.key === initialMode.key ? 'true' : 'false'}
+            data-v3-mode={mode.key}
+          >
             {mode.label}
-          </button>
+          </a>
         ))
       }
     </div>
@@ -284,7 +298,7 @@ const shotData = JSON.stringify({
 
 {
   c.features.map((section) => (
-    <section class="v3-section is-tight">
+    <section class="v3-section is-tight v3-anchor" id={`feature-${modeKeyByFeatureImage[section.image]}`}>
       <div class={`v3-wrap v3-feat${section.reversed ? ' is-rev' : ''}`}>
         <div class="v3-txt">
           <div class="v3-eyebrow">{section.eyebrow}</div>
@@ -393,25 +407,55 @@ const shotData = JSON.stringify({
       modes: { key: string; caption: string }[];
     };
 
-    const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-v3-mode]'));
+    const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('[data-v3-mode]'));
 
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const modeKey = button.dataset.v3Mode;
-        if (!modeKey) return;
-        buttons.forEach((other) => other.setAttribute('aria-selected', String(other === button)));
+    const showShot = (modeKey: string) => {
+      links.forEach((link) => link.setAttribute('aria-current', String(link.dataset.v3Mode === modeKey)));
 
-        const shot = data.shots[modeKey];
-        if (shot) {
-          img.src = shot.src;
-          img.width = shot.width;
-          img.height = shot.height;
-        }
+      const shot = data.shots[modeKey];
+      if (shot && img.getAttribute('src') !== shot.src) {
+        img.src = shot.src;
+        img.width = shot.width;
+        img.height = shot.height;
+      }
 
-        const mode = data.modes.find((entry) => entry.key === modeKey);
-        if (mode) caption.textContent = mode.caption;
+      const mode = data.modes.find((entry) => entry.key === modeKey);
+      if (mode) caption.textContent = mode.caption;
+    };
+
+    // Hover previews the shot; a plain click scrolls to the feature section of
+    // the same name. The click is handled here because the view-transition
+    // router swallows same-page hash links instead of scrolling to them.
+    links.forEach((link) => {
+      const modeKey = link.dataset.v3Mode;
+      if (!modeKey) return;
+      link.addEventListener('pointerenter', () => showShot(modeKey));
+      link.addEventListener('focus', () => showShot(modeKey));
+      link.addEventListener('click', (event) => {
+        const plainClick =
+          event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
+        const anchor = link.getAttribute('href');
+        const target = anchor ? document.getElementById(anchor.slice(1)) : null;
+        if (!plainClick || event.defaultPrevented || !target) return;
+
+        event.preventDefault();
+        history.pushState(null, '', anchor);
+        showShot(modeKey);
+        target.scrollIntoView();
       });
     });
+
+    // The four other shots would otherwise be fetched on first hover; warm them
+    // once the page is done loading so the swap is instant.
+    const warmShots = () => {
+      for (const shot of Object.values(data.shots)) {
+        if (shot.src === img.getAttribute('src')) continue;
+        const preload = new Image();
+        preload.src = shot.src;
+      }
+    };
+    if (document.readyState === 'complete') warmShots();
+    else window.addEventListener('load', warmShots, { once: true });
   }
 
   initV3ShotSwitcher();

@@ -488,10 +488,7 @@
   box-shadow: 0 6px 18px -12px rgba(16, 24, 40, 0.45);
 }
 
-.v3-modes button {
-  border: 0;
-  background: transparent;
-  font: inherit;
+.v3-modes a {
   font-size: 15px;
   color: rgba(17, 17, 17, 0.5);
   padding: 8px 16px;
@@ -500,11 +497,11 @@
   transition: color 0.16s ease;
 }
 
-.v3-modes button:hover {
+.v3-modes a:hover {
   color: var(--v3-ink);
 }
 
-.v3-modes button[aria-selected='true'] {
+.v3-modes a[aria-current='true'] {
   background: #fff;
   color: var(--v3-ink);
   box-shadow: 0 1px 3px rgba(16, 24, 40, 0.16);
@@ -1006,6 +1003,11 @@
 
 .v3-section.is-tight {
   padding-top: 0;
+}
+
+/* Sections the hero pills jump to: land clear of the sticky header. */
+.v3-anchor {
+  scroll-margin-top: 5.5rem;
 }
 
 .v3-center {
