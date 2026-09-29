@@ -28,8 +28,8 @@ export interface V3FeatureSection {
   title: string;
   lead: string;
   rows: string[];
-  items: { title: string; note: string }[];
-  image: 'capture' | 'longshot' | 'pin' | 'recording' | 'ai';
+  items?: { title: string; note: string }[];
+  image: 'capture' | 'longshot' | 'pin' | 'recording' | 'ai' | 'modes';
   reversed?: boolean;
 }
 
@@ -309,6 +309,17 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
           { title: 'Image translation', note: 'read foreign screenshots instantly' },
         ],
         image: 'ai',
+      },
+      {
+        eyebrow: 'Two ways to finish',
+        title: 'Copy at once, or annotate right away',
+        lead: 'Elegant copies the moment you release; Live annotate opens the toolbar on the spot. Switch anytime in Settings → Capture.',
+        rows: [
+          'Elegant — copied instantly, with a bottom-right notification that opens the editor',
+          'Live annotate — the toolbar appears with the selection; annotate without switching windows',
+        ],
+        image: 'modes',
+        reversed: true,
       },
     ],
     cta: {
@@ -598,6 +609,14 @@ export const v3Copy: Record<V3Lang, V3Copy> = {
           { title: '图片翻译', note: '外文截图一看就懂' },
         ],
         image: 'ai',
+      },
+      {
+        eyebrow: '两种完成模式',
+        title: '截完即复制，或立即标注',
+        lead: '优雅简洁：截完即复制到剪贴板；所见即所得：截完立刻打开标注工具栏。可在「设置 → 截图」随时切换。',
+        rows: ['优雅简洁 —— 框选完成即复制，右下角通知点开进编辑器', '所见即所得 —— 标注工具栏随选区出现，不切换窗口直接画'],
+        image: 'modes',
+        reversed: true,
       },
     ],
     cta: {

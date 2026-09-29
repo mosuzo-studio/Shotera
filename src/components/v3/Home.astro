@@ -10,6 +10,7 @@ import longshotDemo from '~/assets/images/longshot-demo.png';
 import recordingDemo from '~/assets/images/recording-demo.png';
 import aiDemo from '~/assets/images/ai-demo.png';
 import pinDemo from '~/assets/images/pin-demo.png';
+import modesDemo from '~/assets/images/modes-demo.png';
 import taskbarStripSrc from '~/assets/images/taskbar.png';
 
 /* Landscape cuts of the same renders for the hero (7:4); the feature sections
@@ -45,19 +46,22 @@ const featureSources = {
   pin: pinDemo,
   recording: recordingDemo,
   ai: aiDemo,
+  modes: modesDemo,
 } as const;
 
 type ShotKey = keyof typeof shotSources;
 type FeatureKey = keyof typeof featureSources;
 
 /* The hero pills name the anchors on the feature sections below; two of those
-   sections spell their image key differently (`longshot` / `recording`). */
+   sections spell their image key differently (`longshot` / `recording`), and the
+   two-modes section has no hero pill of its own. */
 const modeKeyByFeatureImage = {
   capture: 'capture',
   longshot: 'long',
   pin: 'pin',
   recording: 'record',
   ai: 'ai',
+  modes: 'modes',
 } as const;
 
 const heroShots: Record<string, { src: string; width: number; height: number }> = {};
@@ -313,21 +317,25 @@ const shotData = JSON.stringify({
               </div>
             ))}
           </div>
-          <div class="v3-list2">
-            {section.items.map((item) => (
-              <div class="v3-it">
-                <div class="v3-d">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="m5 13 4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <b>{item.title}</b>
-                  <i>{item.note}</i>
-                </div>
+          {
+            section.items && (
+              <div class="v3-list2">
+                {section.items.map((item) => (
+                  <div class="v3-it">
+                    <div class="v3-d">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m5 13 4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div>
+                      <b>{item.title}</b>
+                      <i>{item.note}</i>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            )
+          }
         </div>
         <div class="v3-panel">
           <img
