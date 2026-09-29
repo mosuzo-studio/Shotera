@@ -1,0 +1,49 @@
+---
+/**
+ * Picks one illustration for the About capability banner on every page view.
+ *
+ * The six variants are pre-built here so the inline script below only has to
+ * swap URLs. The script sits right after the widget in the page, so it runs
+ * while the banner image is still lazy and is a no-op for clients without JS
+ * (they keep the static fallback image the About pages pass in).
+ */
+import { getImage } from 'astro:assets';
+import { aboutBannerPool } from '~/data/about-banner';
+
+const WIDTHS = [400, 768, 1280, 1792];
+
+const pool = await Promise.all(
+  aboutBannerPool.map(async ({ src, weight }) => {
+    const variants = await Promise.all(WIDTHS.map((width) => getImage({ src, width, format: 'webp' })));
+    return {
+      src: variants[variants.length - 1].src,
+      srcset: WIDTHS.map((width, i) => `${variants[i].src} ${width}w`).join(', '),
+      weight,
+    };
+  })
+);
+---
+
+<script is:inline define:vars={{ pool }}>
+  (() => {
+    const pick = (img) => {
+      if (!img || img.dataset.bannerPicked) return;
+      img.dataset.bannerPicked = '1';
+      const total = pool.reduce((sum, item) => sum + item.weight, 0);
+      let roll = Math.random() * total;
+      let chosen = pool[pool.length - 1];
+      for (const item of pool) {
+        roll -= item.weight;
+        if (roll < 0) {
+          chosen = item;
+          break;
+        }
+      }
+      img.srcset = chosen.srcset;
+      img.src = chosen.src;
+    };
+    const run = () => pick(document.querySelector('div.aspect-w-16 img'));
+    run();
+    document.addEventListener('astro:page-load', run);
+  })();
+</script>
