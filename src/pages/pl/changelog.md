@@ -12,7 +12,8 @@ Ustawienia → O programie → Opinie i sugestie
 **ℹ️ Najnowsze informacje o wersjach znajdziesz najpierw w [angielskim changelogu](/changelog); ta wersja językowa zostanie zaktualizowana nieco później.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nowość</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Nowość</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -27,6 +28,43 @@ Ustawienia → O programie → Opinie i sugestie
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**Data wydania:** 2026-09-29
+
+Pełne wsparcie długich zrzutów (start z górnego paska), mniejsze zużycie pamięci i mniejszy instalator.
+
+**🆚 Lite vs wersja Standard:** różnice w funkcjach znajdziesz w [porównaniu wersji](/pl/versions).
+
+**✨ Nowe funkcje**
+
+- Długi zrzut na stronach przeglądarki obsługuje tryb przewijania ręcznego i automatycznego, z dokładniejszym łączeniem. Pasek przechwytywania pokazuje wykrytą nazwę i wersję przeglądarki.
+- Przywrócono przycisk „Długi zrzut” w górnym pasku trybów, zarówno w wersji Standard, jak i Lite.
+- Okna przypinek: akcję dwukliku można teraz skonfigurować — Miniatura lub Zamknij — z poziomu menu kontekstowego.
+- Przeprojektowano oficjalną stronę — całkowicie nowy styl wizualny.
+
+**🚀 Ulepszenia**
+
+- Instalator mniejszy o 23.7MB: środowisko uruchomieniowe VC++ jest teraz dołączone do aplikacji, więc funkcje AI działają od razu na czystych instalacjach Windows.
+- Rzadko używane okna są teraz niszczone przy zamknięciu, zamiast pozostawać ukryte — pamięć jest zwalniana po użyciu.
+- Zoptymalizowano zużycie zasobów w Windows 10.
+- Długi zrzut ostrzega teraz, gdy w połączonym obrazie brakuje części strony.
+
+**🐞 Poprawki błędów**
+
+- Naprawiono trafianie zamrożonej nakładki przechwytywania do lewego górnego rogu drugiego monitora na konfiguracjach z dwoma monitorami, przez co reszta okna pozostawała pusta.
+- Naprawiono wyblakłe końcówki długiego zrzutu, gdy w momencie przechwytywania nie zakończyły się jeszcze animacje pojawiania się strony.
+- Naprawiono gubienie treści strony przez długi zrzut, gdy autokontrola zgłaszała „brak duplikatów”.
+- Naprawiono powtarzanie przyklejonych nagłówków strony w połączonym długim obrazie.
+- Naprawiono fałszywe ostrzeżenia „nie przewinięto do końca”, gdy strona faktycznie osiągnęła dół.
+- Naprawiono pokazywanie surowego angielskiego komunikatu błędu przez narzędzie wymazywania AI, gdy komponent AI był niedostępny.
+
+**🙏 Podziękowania**
+
+Dziękujemy wszystkim, którzy zgłaszali problemy i sugerowali funkcje.
 
 ---
 

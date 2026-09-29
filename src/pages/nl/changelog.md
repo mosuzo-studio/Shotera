@@ -12,7 +12,8 @@ Instellingen → Over → Feedback en suggesties
 **ℹ️ De nieuwste release notes staan eerst in de [Engelse changelog](/changelog); deze taalversie wordt iets later bijgewerkt.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nieuw</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Nieuw</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -27,6 +28,43 @@ Instellingen → Over → Feedback en suggesties
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**Uitgebracht:** 2026-09-29
+
+Volledige ondersteuning voor lange schermafbeeldingen (start vanaf de modusbalk boven aan het scherm), minder geheugen en een kleinere installer.
+
+**🆚 Lite vs. Standard:** de functieverschillen staan in de [versievergelijking](/nl/versions).
+
+**✨ Nieuwe functies**
+
+- De lange schermafbeelding ondersteunt op browserpagina's een handmatige en een automatische scrollmodus, met nauwkeuriger samenvoegen. De opnamebalk toont de gedetecteerde browser en versie.
+- De knop 'Lange schermafbeelding' is terug in de modusbalk boven aan het scherm, in zowel de Standard- als de Lite-versie.
+- Vastgepinde vensters: de dubbelklikactie is nu instelbaar. Kies in het contextmenu 'Miniatuur' of 'Sluiten'.
+- De officiële website is opnieuw ontworpen met een volledig nieuwe visuele stijl.
+
+**🚀 Verbeteringen**
+
+- De installer is 23.7MB kleiner: de VC++-runtime wordt met de app meegeleverd, zodat AI-functies op een schone Windows-installatie direct werken.
+- Weinig gebruikte vensters worden bij het sluiten vernietigd in plaats van verborgen te blijven, zodat het geheugen na gebruik vrijkomt.
+- Het resourcegebruik op Windows 10 is geoptimaliseerd.
+- De lange schermafbeelding waarschuwt nu wanneer een deel van de pagina ontbreekt in de samengevoegde afbeelding.
+
+**🐞 Bugfixes**
+
+- De bevroren opname-overlay belandde op dualmonitoropstellingen linksboven op de tweede monitor, waardoor de rest van het venster leeg bleef: opgelost.
+- De onderkant van de lange schermafbeelding zag er vaal uit wanneer fade-in-animaties op het moment van de opname nog niet klaar waren: opgelost.
+- De lange schermafbeelding miste pagina-inhoud terwijl de zelfcontrole 'geen duplicaten' meldde: opgelost.
+- Plakkende paginakoppen werden herhaald in de samengevoegde lange afbeelding: opgelost.
+- Valse waarschuwingen 'niet naar de onderkant gescrold' terwijl de pagina de onderkant wel had bereikt: opgelost.
+- De AI-gum toonde een onbewerkte Engelse foutmelding wanneer de AI-component niet beschikbaar was: opgelost.
+
+**🙏 Dankbetuiging**
+
+Dank aan iedereen die problemen meldde en functies voorstelde.
 
 ---
 

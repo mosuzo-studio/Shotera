@@ -12,7 +12,8 @@ Inställningar → Om → Feedback & förslag
 **ℹ️ De senaste versionsnyheterna finns först i den [engelska ändringsloggen](/changelog); den här språkversionen uppdateras lite senare.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Ny</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Ny</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -27,6 +28,43 @@ Inställningar → Om → Feedback & förslag
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**Släppt:** 2026-09-29
+
+Fullt stöd för rullande skärmbild (start från det övre lägesfältet), mindre minne och ett mindre installationspaket.
+
+**🆚 Lite vs. Standard:** funktionsskillnaderna finns i [versionsjämförelsen](/sv/versions).
+
+**✨ Nya funktioner**
+
+- Den rullande skärmbilden på webbläsarsidor stöder automatiskt och manuellt rullningsläge, med mer exakt sammanfogning. Infångningsfältet visar den identifierade webbläsarens namn och version.
+- Knappen ”Rullande skärmbild” är tillbaka i det övre lägesfältet, i både Standard och Lite.
+- Fästa fönster: dubbelklicksåtgärden kan nu anpassas – Miniatyr eller Stäng – via snabbmenyn.
+- Den officiella webbplatsen har gjorts om med en helt ny visuell stil.
+
+**🚀 Förbättringar**
+
+- Installationspaketet minskat med 23.7MB: VC++-runtime medföljer appen, så AI-funktionerna fungerar direkt på rena Windows-installationer.
+- Sällan använda fönster förstörs nu vid stängning i stället för att förbli dolda, så minnet frigörs efter användning.
+- Resursanvändningen i Windows 10 har optimerats.
+- Den rullande skärmbilden varnar nu när en del av sidan saknas i den sammanfogade bilden.
+
+**🐞 Buggfixar**
+
+- Den frysta skärmbildsoverlayen hamnade i det övre vänstra hörnet på den andra skärmen vid dubbla skärmar, så resten av fönstret blev tomt – åtgärdat.
+- Slutet på den rullande skärmbilden såg urtvättat ut när sidans inblendningsanimeringar inte hade spelats klart vid fångsttillfället – åtgärdat.
+- Den rullande skärmbilden tappade innehåll på sidan medan självkontrollen rapporterade ”inga dubbletter” – åtgärdat.
+- Klibbiga sidhuvuden upprepades i den sammanfogade långa bilden – åtgärdat.
+- Falska varningar om att sidan ”inte rullats till botten” visades trots att sidan faktiskt nådde botten – åtgärdat.
+- AI-raderingen visade ett rått engelskt felmeddelande när AI-komponenten inte var tillgänglig – åtgärdat.
+
+**🙏 Tack**
+
+Tack till alla som rapporterade issue och föreslog funktioner.
 
 ---
 

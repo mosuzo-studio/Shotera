@@ -12,7 +12,8 @@ Ajustes → Acerca de → Comentarios y sugerencias
 **ℹ️ Las notas más recientes aparecen primero en el [changelog en inglés](/changelog); esta versión se actualiza un poco después.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nuevo</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Nuevo</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -27,6 +28,43 @@ Ajustes → Acerca de → Comentarios y sugerencias
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**Publicado:** 2026-09-29
+
+Compatibilidad total con la captura larga (desde la barra superior), menos memoria y un instalador más pequeño.
+
+**🆚 Lite vs. versión Estándar:** consulta la [comparación de versiones](/es/versions) para ver las diferencias entre funciones.
+
+**✨ Novedades**
+
+- La captura larga en páginas del navegador admite los modos de desplazamiento manual y automático, con una unión más precisa. La barra de captura muestra el nombre y la versión del navegador detectados.
+- Restaurado el botón «Captura larga» en la barra de modos superior, tanto en la versión Estándar como en la Lite.
+- Ventanas de fijación: la acción del doble clic ahora se puede configurar (Miniatura o Cerrar) desde el menú contextual.
+- Rediseño del sitio web oficial con un estilo visual totalmente nuevo.
+
+**🚀 Mejoras**
+
+- Instalador reducido en 23.7MB: el runtime de VC++ ahora se incluye con la app, así que las funciones de IA funcionan desde el primer momento en instalaciones limpias de Windows.
+- Las ventanas de uso poco frecuente ahora se destruyen al cerrarlas en lugar de permanecer ocultas, de modo que la memoria se libera después de usarlas.
+- Uso de recursos optimizado en Windows 10.
+- La captura larga ahora avisa cuando falta parte de la página en la imagen unida.
+
+**🐞 Corrección de errores**
+
+- Corregida la superposición de captura congelada, que en configuraciones de dos monitores aparecía en la esquina superior izquierda del segundo monitor y dejaba en blanco el resto de la ventana.
+- Corregida la parte final de la captura larga, que se veía desvaída cuando las animaciones de aparición de la página aún no habían terminado en el momento de la captura.
+- Corregida la pérdida de contenido de la página en la captura larga mientras la autocomprobación indicaba «sin duplicados».
+- Corregidos los encabezados fijos de la página, que se repetían en la imagen larga unida.
+- Corregidos los avisos falsos de «no se ha desplazado hasta el final» cuando la página sí llegaba al final.
+- Corregido el borrado con IA, que mostraba un error en inglés sin traducir cuando el componente de IA no estaba disponible.
+
+**🙏 Agradecimientos**
+
+Gracias a todos los que informaron de problemas y sugirieron funciones.
 
 ---
 

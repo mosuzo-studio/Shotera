@@ -12,7 +12,8 @@ Paramètres → À propos → Retours et suggestions
 **ℹ️ Les notes les plus récentes paraissent d’abord dans le [changelog anglais](/changelog) ; cette version linguistique sera mise à jour un peu plus tard.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nouveau</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Nouveau</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -27,6 +28,43 @@ Paramètres → À propos → Retours et suggestions
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**Sortie:** 2026-09-29
+
+Prise en charge complète de la longue capture (depuis la barre de modes du haut), moins de mémoire et un installateur plus léger.
+
+**🆚 Lite vs version Standard :** consultez la [comparaison des versions](/fr/versions) pour connaître les différences entre les fonctions.
+
+**✨ Nouveautés**
+
+- La longue capture sur les pages de navigateur prend en charge les modes de défilement manuel et automatique, avec un assemblage plus précis. La barre de capture affiche le nom et la version du navigateur détectés.
+- Le bouton « Longue capture » réapparaît dans la barre de modes du haut, dans l'édition Standard comme dans l'édition Lite.
+- Fenêtres épinglées : l'action du double-clic est désormais configurable. Choisissez « Miniature » ou « Fermer » depuis le menu contextuel.
+- Refonte complète du site officiel, avec un style visuel entièrement nouveau.
+
+**🚀 Améliorations**
+
+- Installateur allégé de 23.7MB : le runtime VC++ est désormais fourni avec l'application, donc les fonctions AI fonctionnent immédiatement sur une installation Windows propre.
+- Les fenêtres rarement utilisées sont désormais détruites à la fermeture au lieu de rester masquées, ce qui libère la mémoire après utilisation.
+- Consommation de ressources optimisée sous Windows 10.
+- La longue capture avertit désormais lorsqu'une partie de la page est absente de l'image assemblée.
+
+**🐞 Corrections de bugs**
+
+- Correction de la superposition de capture figée qui, sur les configurations à deux écrans, apparaissait en haut à gauche du deuxième écran et laissait le reste de la fenêtre vide.
+- Correction de l'extrémité de la longue capture qui paraissait délavée lorsque les animations d'apparition en fondu de la page n'étaient pas terminées au moment de la capture.
+- Correction de la longue capture qui perdait du contenu de la page alors que l'auto-vérification signalait « aucune duplication ».
+- Correction des en-têtes collants de la page qui se répétaient dans l'image longue assemblée.
+- Correction des fausses alertes « la page n'a pas défilé jusqu'en bas » alors qu'elle atteignait bien le bas.
+- Correction de l'outil d'effacement AI qui affichait une erreur brute en anglais lorsque le composant AI était indisponible.
+
+**🙏 Remerciements**
+
+Merci à toutes les personnes qui ont signalé une issue ou suggéré une fonction.
 
 ---
 

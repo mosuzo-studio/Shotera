@@ -12,7 +12,8 @@ Configurações → Sobre → Feedback e sugestões
 **ℹ️ As notas mais recentes aparecem primeiro no [changelog em inglês](/changelog); esta versão é atualizada um pouco depois.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Novo</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Novo</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -27,6 +28,43 @@ Configurações → Sobre → Feedback e sugestões
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**Lançamento:** 2026-09-29
+
+Suporte completo à captura longa (a partir da barra de modos superior), menos memória e instalador menor.
+
+**🆚 Lite vs. versão Standard:** veja a [comparação de versões](/pt-br/versions) para as diferenças de recursos.
+
+**✨ Novidades**
+
+- A captura longa em páginas do navegador agora tem modos de rolagem manual e automática, com costura mais precisa. A barra de captura mostra o nome e a versão do navegador detectados.
+- O botão «Captura longa» voltou à barra de modos superior, tanto na versão Standard quanto na Lite.
+- Janelas de fixação: a ação do duplo clique agora é configurável — Miniatura ou Fechar — pelo menu de contexto.
+- Site oficial reformulado, com um estilo visual totalmente novo.
+
+**🚀 Melhorias**
+
+- Instalador 23.7MB menor: o runtime do VC++ agora vem junto com o app, e os recursos de AI funcionam prontos para uso em instalações limpas do Windows.
+- Janelas de uso pouco frequente agora são destruídas ao fechar, em vez de ficarem ocultas, liberando a memória após o uso.
+- Consumo de recursos otimizado no Windows 10.
+- A captura longa agora avisa quando parte da página está faltando na imagem costurada.
+
+**🐞 Correções de bugs**
+
+- Corrigida a sobreposição de captura congelada que ia parar no canto superior esquerdo do segundo monitor em configurações com dois monitores, deixando o restante da janela em branco.
+- Corrigido o aspecto desbotado da parte final da captura longa quando as animações de fade-in da página não haviam terminado no momento da captura.
+- Corrigida a perda de conteúdo da página na captura longa quando a autoverificação indicava «sem duplicatas».
+- Corrigida a repetição dos cabeçalhos fixos da página na imagem longa costurada.
+- Corrigido o aviso falso de «não chegou ao final» quando a página na verdade alcançava o final.
+- Corrigido o apagamento com AI, que mostrava um erro bruto em inglês quando o componente de AI estava indisponível.
+
+**🙏 Agradecimentos**
+
+Obrigado a todos que relataram problemas e sugeriram recursos.
 
 ---
 

@@ -10,7 +10,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 设置 → 关于 → 反馈与建议
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">新</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">新</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -25,6 +26,43 @@ layout: '~/layouts/MarkdownLayout.astro'
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**发布日期:** 2026-09-29
+
+全面支持长截图（屏幕顶部栏可触发）、更省内存、安装包更小。
+
+**🆚 Lite 版与标准版差异：** 详见[版本对比](/zh-cn/versions)。
+
+**✨ 新增功能**
+
+- 浏览器长截图支持手动与自动滚动，拼接更准。采集条会显示识别到的浏览器名称与版本。
+- 恢复顶部模式栏的「长截图」入口，标准版与 Lite 版一致。
+- 贴图窗口支持自定义双击行为：缩略图 / 关闭（右键菜单）。
+- Shotera 官方网站全新改版，视觉风格全面升级。
+
+**🚀 改进优化**
+
+- 安装包减小 23.7MB：VC++ 运行库改为随包分发，纯净 Windows 上 AI 功能开箱可用。
+- 低频窗口改为关闭时销毁，不再隐藏常驻，用完即释放内存。
+- 优化 Windows 10 下的资源占用。
+- 长截图在拼接结果缺内容时会明确提示。
+
+**🐞 问题修复**
+
+- 修复双屏场景下冻结遮罩落到第二块屏左上角、窗口其余区域空白。
+- 修复长截图尾部发虚（页面淡入动画未完成就被抓帧）。
+- 修复长截图丢内容、而自检却报「无重复」。
+- 修复吸顶导航被重复拼进长图。
+- 修复长截图「没截到底」的误报。
+- 修复 AI 组件不可用时，AI 擦图只弹出英文原始报错。
+
+**🙏 致谢名单**
+
+感谢社区成员的 issue 反馈与功能建议。
 
 ---
 

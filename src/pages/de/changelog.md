@@ -12,7 +12,8 @@ Einstellungen → Über → Feedback & Vorschläge
 **ℹ️ Die neuesten Release Notes finden Sie zuerst im [englischen Changelog](/changelog); diese Sprachfassung wird etwas später aktualisiert.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Neu</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Neu</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -27,6 +28,43 @@ Einstellungen → Über → Feedback & Vorschläge
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**Veröffentlicht:** 2026-09-29
+
+Vollständige Unterstützung für lange Screenshots (Start über die obere Modusleiste), weniger Speicher, kleineres Installationspaket.
+
+**🆚 Lite vs. Standard-Edition:** Die Funktionsunterschiede finden Sie im [Versionsvergleich](/de/versions).
+
+**✨ Neue Funktionen**
+
+- Der lange Screenshot unterstützt auf Browserseiten manuelles und automatisches Scrollen, mit genauerem Zusammenfügen. Die Aufnahmeleiste zeigt den erkannten Browsernamen und die Version.
+- Die Schaltfläche „Langer Screenshot“ ist wieder in der oberen Modusleiste verfügbar, sowohl in der Standard-Edition als auch in der Lite-Version.
+- Anheft-Fenster: Die Aktion beim Doppelklick ist jetzt konfigurierbar – Miniaturansicht oder Schließen – über das Kontextmenü.
+- Die offizielle Website wurde mit einem ganz neuen visuellen Stil neu gestaltet.
+
+**🚀 Verbesserungen**
+
+- Das Installationspaket ist 23.7MB kleiner: Die VC++-Runtime wird jetzt mit der App ausgeliefert, sodass die AI-Funktionen auf sauberen Windows-Installationen sofort funktionieren.
+- Selten genutzte Fenster werden beim Schließen jetzt zerstört, statt ausgeblendet zu bleiben, und geben so nach der Nutzung Speicher frei.
+- Der Ressourcenverbrauch unter Windows 10 wurde optimiert.
+- Der lange Screenshot warnt jetzt, wenn ein Teil der Seite im zusammengefügten Bild fehlt.
+
+**🐞 Fehlerbehebungen**
+
+- Das eingefrorene Aufnahme-Overlay landete bei Dual-Monitor-Setups in der oberen linken Ecke des zweiten Monitors, sodass der restliche Fensterbereich leer blieb – behoben.
+- Die Enden des langen Screenshots wirkten verwaschen, wenn die Einblendanimationen der Seite zum Aufnahmezeitpunkt noch nicht abgeschlossen waren – behoben.
+- Der lange Screenshot ließ Seiteninhalte aus, während die Selbstprüfung „keine Duplikate“ meldete – behoben.
+- Fixierte Seitenkopfzeilen wurden im zusammengefügten langen Bild wiederholt – behoben.
+- Falsche Warnungen „nicht bis zum Ende gescrollt“ wurden angezeigt, obwohl die Seite das Ende tatsächlich erreicht hatte – behoben.
+- Der AI-Radierer zeigte eine englische Rohfehlermeldung, wenn die AI-Komponente nicht verfügbar war – behoben.
+
+**🙏 Danksagung**
+
+Dank an alle, die Probleme gemeldet und Funktionen vorgeschlagen haben.
 
 ---
 

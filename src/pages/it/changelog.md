@@ -12,7 +12,8 @@ Impostazioni → Info → Feedback e suggerimenti
 **ℹ️ Le note più recenti compaiono prima nel [changelog in inglese](/changelog); questa versione linguistica viene aggiornata poco dopo.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nuovo</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Nuovo</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -27,6 +28,43 @@ Impostazioni → Info → Feedback e suggerimenti
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**Rilasciato:** 2026-09-29
+
+Supporto completo allo screenshot lungo (avviabile dalla barra dei modi superiore), meno memoria e installer più piccolo.
+
+**🆚 Lite vs. versione Standard:** le differenze tra le funzioni sono elencate nel [confronto versioni](/it/versions).
+
+**✨ Novità**
+
+- Lo screenshot lungo sulle pagine del browser supporta le modalità di scorrimento manuale e automatico, con un'unione più precisa. La barra di cattura mostra nome e versione del browser rilevato.
+- Ripristinato il pulsante «Screenshot lungo» nella barra dei modi superiore, sia nella versione Standard sia in quella Lite.
+- Finestre fissate: l'azione del doppio clic è ora configurabile — Miniatura o Chiudi — dal menu contestuale.
+- Il sito ufficiale è stato ridisegnato con uno stile visivo completamente nuovo.
+
+**🚀 Miglioramenti**
+
+- Installer ridotto di 23.7MB: il runtime VC++ è incluso nell'app, così le funzioni AI sono subito pronte all'uso su sistemi Windows puliti.
+- Le finestre usate raramente ora vengono distrutte alla chiusura invece di restare nascoste, liberando memoria dopo l'uso.
+- Ottimizzato l'uso delle risorse su Windows 10.
+- Lo screenshot lungo ora avvisa quando manca una parte della pagina nell'immagine unita.
+
+**🐞 Correzioni di bug**
+
+- Corretto l'overlay di cattura congelato che su configurazioni a doppio monitor finiva in alto a sinistra del secondo monitor, lasciando vuoto il resto della finestra.
+- Corretta la coda dello screenshot lungo che appariva sbiadita quando le animazioni fade-in non erano ancora terminate al momento della cattura.
+- Corretto il caso in cui lo screenshot lungo perdeva contenuto della pagina mentre il controllo automatico segnalava «nessuna duplicazione».
+- Corretta la ripetizione delle intestazioni fisse della pagina nell'immagine unita dello screenshot lungo.
+- Corretti i falsi avvisi «pagina non scorsa fino in fondo» quando la pagina era in realtà arrivata al fondo.
+- Corretto l'errore grezzo in inglese mostrato dalla cancellazione AI quando il componente AI non era disponibile.
+
+**🙏 Ringraziamenti**
+
+Grazie a tutti coloro che hanno segnalato issue e proposto funzioni.
 
 ---
 

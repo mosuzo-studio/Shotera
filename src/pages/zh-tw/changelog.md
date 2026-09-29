@@ -12,7 +12,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 **ℹ️ 最新說明請先看[英文版更新日誌](/changelog)，本語言的版本會稍晚一些更新。**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">新</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">新</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -27,6 +28,43 @@ layout: '~/layouts/MarkdownLayout.astro'
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**發布日期:** 2026-09-29
+
+全面支援長截圖（螢幕頂部模式列可觸發）、更省記憶體、安裝程式更小。
+
+**🆚 Lite 版與標準版差異：** 詳見[版本對比](/zh-tw/versions)。
+
+**✨ 新增功能**
+
+- 瀏覽器長截圖支援手動與自動滾動，拼接更精準。擷取列會顯示偵測到的瀏覽器名稱與版本。
+- 恢復頂部模式列的「長截圖」入口，標準版與 Lite 版一致。
+- 貼圖視窗支援自訂雙擊行為：縮圖 / 關閉（右鍵選單）。
+- Shotera 官方網站全新改版，視覺風格全面升級。
+
+**🚀 改進優化**
+
+- 安裝程式縮小 23.7MB：VC++ 執行階段改為隨安裝程式提供，純淨的 Windows 上 AI 功能開箱即用。
+- 低頻視窗改為關閉時銷毀，不再隱藏常駐，用完即釋放記憶體。
+- 最佳化 Windows 10 下的資源占用。
+- 長截圖在拼接結果缺少內容時會明確提示。
+
+**🐞 問題修復**
+
+- 修正雙螢幕環境下凍結擷取浮層落在第二塊螢幕左上角，導致視窗其餘區域空白。
+- 修正長截圖尾端發虛（頁面淡入動畫未完成就被擷取）。
+- 修正長截圖遺漏內容、自我檢查卻回報「無重複」。
+- 修正網頁固定導覽列被重複拼進長圖。
+- 修正長截圖「沒滾到底」的誤報。
+- 修正 AI 元件無法使用時，AI 擦除只顯示英文原始錯誤。
+
+**🙏 致謝名單**
+
+感謝社群成員的 issue 回報與功能建議。
 
 ---
 

@@ -10,7 +10,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 Settings → About → Feedback & suggestions
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">New</span></a></li>
+  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">New</span></a></li>
+  <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -25,6 +26,43 @@ Settings → About → Feedback & suggestions
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.8.0
+
+**Released:** 2026-09-29
+
+Full long screenshot support (start from the top bar), lower memory, smaller installer.
+
+**🆚 Lite edition vs. Standard edition:** see the [version comparison](/versions) for feature differences.
+
+**✨ Features**
+
+- Long screenshot on browser pages supports manual and auto scroll modes, with more accurate stitching. The capture bar shows the detected browser and version.
+- Restored the "Long screenshot" button in the top mode bar, in Standard and Lite editions alike.
+- Pin windows: the double-click action is configurable — Thumbnail or Close, from the context menu.
+- Redesigned the official website with an all-new visual style.
+
+**🚀 Improvements**
+
+- Installer reduced by 23.7 MB: VC++ runtime ships with the app, so AI features work out of the box on clean Windows systems.
+- Low-frequency windows are destroyed on close instead of staying hidden, freeing memory after use.
+- Optimized resource usage on Windows 10.
+- Long screenshot now warns when part of the page is missing from the stitched image.
+
+**🐞 Bug Fixes**
+
+- Fixed the frozen capture overlay landing at the top-left of the second monitor on dual-screen setups, leaving the rest of the window blank.
+- Fixed long screenshot tails looking washed out when fade-in animations had not finished at capture time.
+- Fixed long screenshot missing page content while the self-check reported "no duplicates".
+- Fixed sticky page headers being repeated in the stitched long image.
+- Fixed false "not scrolled to bottom" warnings when the page actually did reach the bottom.
+- Fixed the erase tool showing a raw English error when the AI component was unavailable.
+
+**🙏 Acknowledgements**
+
+Thanks to everyone who reported issues and suggested features.
 
 ---
 
