@@ -5,3 +5,9 @@
 - Unless the user explicitly requests otherwise, edit website and README copy only in English and Simplified Chinese.
 - The other 13 locales are published, but do not translate, rewrite, or synchronize their copy without explicit user approval.
 - Privacy policy and terms pages for those 13 locales intentionally resolve to the English legal documents; do not add translated legal pages unless explicitly requested.
+
+# Terminology and claims
+
+- `docs/terminology.md` is the single source of truth for feature names and outbound claims, in both EN and zh-CN.
+- One noun per feature (verbs may vary). The "no longer used" column there is binding for every outward-facing page, README, and changelog.
+- Register a new term in that file before using it anywhere.

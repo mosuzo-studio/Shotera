@@ -1,12 +1,13 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/PageLayoutV3.astro';
 import { localizedPath, defaultLang, type Lang } from '~/i18n/utils';
 
 const lang = (Astro.currentLocale ?? defaultLang) as Lang;
 
 const metadata = {
   title: '常见问题',
-  description: '关于 Shotera 的常见问题：支持哪些平台与界面语言、哪些功能离线可用、哪些免费，以及导出与性能。',
+  description:
+    '关于 Shotera 的常见问题：支持哪些平台与界面语言、哪些功能离线可用、哪些免费，以及导出、性能与个性化细节。',
 };
 
 const groups = [
@@ -30,7 +31,7 @@ const groups = [
     items: [
       {
         q: 'OCR 和 AI 抠图需要联网吗？',
-        a: '不需要。OCR 文字识别、AI 抠图、AI 擦图均为离线本地运行，不联网、不上传，隐私更有保障。图片翻译功能走云端 API，遵守对应云厂商的隐私协议。',
+        a: '不需要。离线 OCR、AI 抠图、AI 擦图均在本地运行，不上传，隐私更有保障。图片翻译功能走云端 API，遵守对应云厂商的隐私协议。',
       },
       {
         q: '完全断网还能用吗？',
@@ -60,6 +61,28 @@ const groups = [
       },
     ],
   },
+  {
+    id: 'details',
+    label: '细节与个性化',
+    items: [
+      {
+        q: '支持深色模式吗？',
+        a: '支持。「设置 → 通用 → 界面主题」可在跟随系统、浅色、深色之间切换；选「跟随系统」时自动适配 Windows 的浅色/深色外观。',
+      },
+      {
+        q: '支持多显示器和高分辨率屏幕吗？',
+        a: '支持。多台显示器按统一坐标系工作，副屏放在主屏左侧也能正常框选；高 DPI 屏幕下界面与截图保持清晰。',
+      },
+      {
+        q: '可以自定义快捷键吗？',
+        a: '可以。截图、自定义截图、贴图、演示模式等快捷键都能在「设置 → 热键」里改成顺手的组合；若被其它软件占用会提示注册失败，也可以一键恢复全部默认快捷键。',
+      },
+      {
+        q: '怎么更新到新版本？',
+        a: '应用内置更新：默认启动时检查新版本，可设为自动下载并后台静默安装，也可以在「设置 → 更新」里手动检查；通过 Microsoft Store 安装的版本由商店自动保持最新。',
+      },
+    ],
+  },
 ];
 
 const linkClass = 'font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300';
@@ -73,7 +96,7 @@ const linkClass = 'font-semibold text-blue-700 underline underline-offset-4 dark
         <h1 class="mt-3 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
           常见问题
         </h1>
-        <p class="mt-3 text-lg text-muted">平台与语言、离线与隐私、价格与导出——这里都是简短答案。</p>
+        <p class="mt-3 text-lg text-muted">平台与语言、离线与隐私、价格与导出、细节与个性化——这里都是简短答案。</p>
 
         {
           groups.map((group) => (
@@ -92,8 +115,7 @@ const linkClass = 'font-semibold text-blue-700 underline underline-offset-4 dark
         }
 
         <p class="text-muted mt-12">
-          还有疑问？<a class={linkClass} href={localizedPath(lang, '/contact')}>联系我们</a
-          >，通常 24 个工作小时内回复。
+          还有疑问？<a class={linkClass} href={localizedPath(lang, '/contact')}>联系我们</a>，通常 24 个工作小时内回复。
         </p>
       </div>
     </div>

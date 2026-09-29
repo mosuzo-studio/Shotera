@@ -6,14 +6,14 @@ import type { LocaleExtras } from '../locale-extras-types';
  * language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: 'Captura com rolagem',
+  footerScrolling: 'Captura longa',
 
   home: {
     heroAlt:
-      'Ferramentas do Shotera na tela: captura, captura com rolagem, anotação, gravação de tela, recorte com IA, OCR offline, leitura de QR Code e código de barras, tradução de imagens e fixação na tela',
+      'Ferramentas do Shotera na tela: captura, captura longa, anotação, gravação de tela, recorte com AI, OCR offline, leitura de QR Code e código de barras, tradução de imagens e fixação na área de trabalho',
     cards: [
       {
-        title: 'Captura com rolagem',
+        title: 'Captura longa',
         description:
           'Uma página mais alta que a tela ainda cabe em uma única imagem. Role você mesmo ou deixe o Shotera rolar sozinho e veja a imagem longa se montar enquanto cresce.',
       },
@@ -29,10 +29,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: 'Captura com rolagem',
+      tagline: 'Captura longa',
       title: 'Uma página mais alta que a tela, em uma só imagem',
       text: 'Páginas inteiras, conversas longas e documentos completos — capturados de ponta a ponta em uma única imagem.',
-      alt: 'Captura com rolagem montando uma página longa em uma única imagem',
+      alt: 'Captura longa montando uma página longa em uma única imagem',
       items: [
         {
           title: 'Rolagem automática ou manual',
@@ -59,7 +59,7 @@ export const content: LocaleExtras = {
     stats: [
       { title: 'Idiomas', amount: '15' },
       { title: 'Avaliação', amount: '4.9 / 5' },
-      { title: 'IA offline', amount: '100%' },
+      { title: 'AI offline', amount: '100%' },
       { title: 'Abertura por atalho', amount: '<0.1s' },
     ],
     workflow: {
@@ -78,7 +78,7 @@ export const content: LocaleExtras = {
         {
           title: 'Copie, salve ou fixe',
           description:
-            'Envie para a área de transferência, salve no computador ou fixe na tela para consultar rapidamente.',
+            'Envie para a área de transferência, salve no computador ou fixe na área de trabalho para consultar rapidamente.',
         },
       ],
     },
@@ -99,13 +99,12 @@ export const content: LocaleExtras = {
     stats: [
       { title: 'Idiomas', amount: '15' },
       { title: 'Avaliação', amount: '4.9 / 5' },
-      { title: 'IA offline', amount: '100%' },
+      { title: 'AI offline', amount: '100%' },
       { title: 'Abertura por atalho', amount: '<0.1s' },
     ],
     stand: {
       title: 'Nossos princípios',
-      subtitle:
-        'Quanto melhor a ferramenta, menos você a nota — essa ideia está por trás de cada decisão que tomamos.',
+      subtitle: 'Quanto melhor a ferramenta, menos você a nota — essa ideia está por trás de cada decisão que tomamos.',
       items: [
         {
           title: 'Velocidade em primeiro lugar',
@@ -124,50 +123,92 @@ export const content: LocaleExtras = {
         },
       ],
     },
-    toolbox: {
-      title: '',
-      subtitle: '',
-      alt: 'Caixa de ferramentas do Shotera: captura, captura com rolagem, gravação, recorte com IA, OCR offline, tradução de imagens, fixação na tela e o visualizador de imagens',
+    core: {
+      title: 'Capacidades principais',
+      subtitle:
+        'Captura, captura longa, fixar na área de trabalho, gravação de tela, OCR offline e AI no dispositivo — as seis coisas que você usa o dia todo, a um atalho de distância.',
+      alt: 'Ferramentas de anotação do Shotera sobre uma área de trabalho do Windows: seleção, barra de ferramentas e blocos de vidro',
       items: [
         {
           title: 'Captura',
           description:
-            'Detecção inteligente de janelas e elementos: o enquadramento que você quer já vem selecionado, então quase nunca é preciso desenhar a caixa à mão.',
+            'Detecção inteligente de janelas e elementos: o enquadramento que você quer já vem selecionado, então quase nunca é preciso desenhar a caixa à mão. Ao terminar, copie direto ou abra a barra de ferramentas de anotação — dois modos de conclusão, você escolhe.',
         },
         {
-          title: 'Captura com rolagem',
+          title: 'Captura longa',
           description:
             'Role uma página ou uma conversa longa e deixe o Shotera montar uma única imagem — rolagem automática ou manual, com prévia ao vivo.',
         },
         {
-          title: 'Gravação de tela e GIF',
-          description:
-            'Grave a tela e exporte em GIF leve; os realces do cursor e as indicações de clique mantêm a demonstração clara.',
-        },
-        {
-          title: 'Recorte com IA',
-          description:
-            'Detecte o assunto e remova o fundo com um clique, exportando PNGs transparentes. Sem Photoshop.',
-        },
-        {
-          title: 'OCR offline',
-          description:
-            'Extraia texto de qualquer captura no seu dispositivo, em vários idiomas. Copie e cole — sem internet.',
-        },
-        {
-          title: 'Tradução de imagens',
-          description:
-            'Reconheça e traduza textos dentro de qualquer imagem na hora — documentos, gráficos e interfaces em outro idioma ficam legíveis.',
-        },
-        {
-          title: 'Fixar na tela',
+          title: 'Fixar na área de trabalho',
           description:
             'Mantenha qualquer captura flutuando por cima para consulta, organizada lado a lado sem bagunça.',
         },
         {
-          title: 'Visualizador de imagens',
+          title: 'Gravação de tela e GIF',
           description:
-            'Abra uma captura ou qualquer arquivo de imagem na própria janela do visualizador — navegue pela pasta, amplie e ajuste o que precisar.',
+            'Grave a tela e exporte um GIF leve; os realces do cursor e as indicações de clique mantêm a demonstração clara.',
+        },
+        {
+          title: 'OCR offline',
+          description:
+            'Transforme o texto dentro de uma captura em texto editável, em vários idiomas — reconhecido no seu dispositivo e pronto para colar.',
+        },
+        {
+          title: 'Recorte e apagamento com AI',
+          description:
+            "O recorte com AI remove o fundo com um clique e exporta um PNG transparente; o apagamento com AI elimina objetos indesejados e marcas d'água. Ambos rodam em modelos locais — nada é enviado.",
+        },
+      ],
+    },
+    more: {
+      title: 'Mais capacidades',
+      subtitle:
+        'Os detalhes que fazem a diferença: anotação, reconhecimento, visualização e os ajustes ao redor deles.',
+      items: [
+        {
+          title: 'Ferramentas de anotação',
+          description:
+            'Retângulo/elipse, linha/seta, pincel, marcador, mosaico/desfoque, texto, numeração, adesivos de emoji, lupa e borracha — anote no momento da captura.',
+        },
+        {
+          title: 'Adesivos de emoji',
+          description:
+            'Centenas de adesivos de emoji — joinha, corações, risadas, confete — redimensione e posicione onde quiser para dar um toque de diversão.',
+        },
+        {
+          title: 'Visualizador e editor de imagens',
+          description:
+            'Abra uma captura ou qualquer arquivo de imagem na própria janela do visualizador — navegue pela pasta, amplie e ajuste o que precisar. Os formatos comuns abrem na hora.',
+        },
+        {
+          title: 'Tradução de imagens',
+          description:
+            'Reconheça e traduza textos dentro de qualquer captura na hora — documentos, gráficos e interfaces em outro idioma ficam legíveis. Copie a tradução e siga em frente.',
+        },
+        {
+          title: 'Leitura de QR Code e código de barras',
+          description:
+            'Leia QR Codes e códigos de barras na hora: links, Wi-Fi, contatos, códigos de produtos — copie o resultado com um clique, tudo offline.',
+        },
+        {
+          title: 'Captura personalizada',
+          description:
+            'Tamanho, proporção, atraso e coordenadas de tela fixos — prático para materiais gráficos e capturas em lote.',
+        },
+        {
+          title: 'Suporte a vários monitores',
+          description:
+            'Todas as telas compartilham um único sistema de coordenadas, então monitores secundários e estendidos são selecionados corretamente — e as capturas continuam nítidas em telas de alto DPI.',
+        },
+        {
+          title: 'Modo escuro',
+          description: 'Siga o sistema ou alterne entre claro e escuro manualmente.',
+        },
+        {
+          title: 'Modo apresentação',
+          description:
+            'Organize a área de trabalho com uma única tecla — janelas, ícones e papel de parede — e devolva tudo como estava depois.',
         },
       ],
     },
@@ -206,7 +247,7 @@ export const content: LocaleExtras = {
         {
           title: 'Crescemos com nossos usuários',
           description:
-            'Captura com rolagem, recorte com IA, OCR offline, tradução de imagens — muitos recursos vieram direto do feedback dos usuários.',
+            'Captura longa, recorte com AI, OCR offline, tradução de imagens — muitos recursos vieram direto do feedback dos usuários.',
         },
         {
           title: 'Alcançando mais pessoas',

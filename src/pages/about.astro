@@ -4,7 +4,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/PageLayoutV3.astro';
 import { getSetupDownloadUrl } from '~/utils/download';
 
 const setupUrl = await getSetupDownloadUrl();
@@ -21,7 +21,7 @@ const metadata = {
     tagline="About us"
     image={{
       src: '~/assets/images/about-hero.png',
-      alt: 'Shotera annotation tools over a Windows desktop',
+      alt: 'Shotera at a glance: capture and annotation, stitched long screenshots, pinned references and AI cutout',
     }}
   >
     <Fragment slot="title">
@@ -31,8 +31,8 @@ const metadata = {
 
     <Fragment slot="subtitle">
       Shotera started with a simple frustration: the captures we take dozens of times a day should feel faster and
-      smoother. We're a small team of product people and engineers who lean on capture tools as heavily as anyone — and we
-      built that obsession into every shortcut, every selection, every frame.
+      smoother. We're a small team of product people and engineers who lean on capture tools as heavily as anyone — and
+      we built that obsession into every shortcut, every selection, every frame.
     </Fragment>
   </Hero>
 
@@ -77,64 +77,115 @@ const metadata = {
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Features3 Widget - L1 core capabilities ************** -->
 
   <Features3
+    title="Core capabilities"
+    subtitle="Capture, scrolling capture, pin, recording, offline OCR and on-device AI - the six things you reach for all day, one shortcut away."
     columns={3}
     isAfterContent={true}
     items={[
       {
         title: 'Capture',
         description:
-          'Smart window and element detection — the frame you want is already picked, so you rarely drag a box by hand.',
+          'Smart window and element detection, so the frame is ready before you drag. Finish by copying straight away, or open the annotation toolbar - two completion modes, your call.',
         icon: 'tabler:capture',
       },
       {
         title: 'Scrolling capture',
         description:
-          'Scroll a page or a long chat and let Shotera stitch it into one long shot — auto-scroll or by hand, with a live preview.',
+          'Scroll a page or a long chat and let Shotera stitch it into one long shot - auto-scroll or by hand, with a live preview.',
         icon: 'local:longshot',
       },
       {
-        title: 'Recording & GIF',
-        description:
-          'Record your screen and export to a lightweight GIF; cursor highlights and click cues keep demos clear.',
-        icon: 'tabler:video',
-      },
-      {
-        title: 'AI cutout',
-        description:
-          'Detect the subject and drop the background in one click, exporting transparent PNGs. No Photoshop.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Offline OCR',
-        description:
-          'Extract text from any screenshot, on your device, in several languages. Copy and paste — no internet needed.',
-        icon: 'tabler:text-recognition',
-      },
-      {
-        title: 'Image translation',
-        description:
-          'Recognize and translate text inside any image on the spot — foreign docs, charts, and interfaces made readable.',
-        icon: 'tabler:language',
-      },
-      {
-        title: 'Pin to screen',
+        title: 'Pin to Desktop',
         description: 'Keep any screenshot floating on top for reference, arranged side by side without the clutter.',
         icon: 'tabler:pin',
       },
       {
-        title: 'Image viewer',
+        title: 'Recording & GIF',
         description:
-          'Open a shot or any image file in its own viewer window — browse a folder, zoom in, and touch up what you need.',
-        icon: 'tabler:photo',
+          'Record your screen and export a lightweight GIF; cursor highlights and click cues keep demos clear.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Offline OCR',
+        description:
+          'Turn the text inside a screenshot into editable copy, in several languages - recognised on your device, ready to paste.',
+        icon: 'tabler:text-recognition',
+      },
+      {
+        title: 'AI cutout & eraser',
+        description:
+          'AI cutout drops the background in one click and exports a transparent PNG; AI eraser clears away clutter and watermarks. Both run on local models - nothing is uploaded.',
+        icon: 'tabler:wand',
       },
     ]}
     image={{
       src: '~/assets/images/about-features.png',
-      alt: 'Shotera toolbox: capture, scrolling capture, recording, AI cutout, offline OCR, image translation, pinning and the image viewer',
+      alt: 'Shotera annotation tools over a Windows desktop: selection, toolbar and glass tiles',
     }}
+  />
+
+  <!-- Features3 Widget - L2 more capabilities ************** -->
+
+  <Features3
+    title="More capabilities"
+    subtitle="The details that make it stick - annotation, recognition, viewing and the settings around them."
+    columns={3}
+    items={[
+      {
+        title: 'Annotation tools',
+        description:
+          'Rectangle/ellipse, line/arrow, pen, highlighter, mosaic/blur, text, step number, emoji sticker, magnifier and eraser - annotate the moment you capture.',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: 'Emoji stickers',
+        description:
+          'Hundreds of emoji stickers - thumbs up, hearts, laughs, confetti - scale and place them anywhere to add a bit of fun.',
+        icon: 'tabler:mood-smile',
+      },
+      {
+        title: 'Image viewer & editor',
+        description:
+          'Open a shot or any image file in its own window - flip through the folder, zoom in, and touch up what you need. Common formats open as they are.',
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Image translation',
+        description: 'Foreign text inside a screenshot, translated in place - copy the translation and carry on.',
+        icon: 'tabler:language',
+      },
+      {
+        title: 'QR & barcode scanning',
+        description:
+          'QR codes and barcodes read in place: links, Wi-Fi, contacts, product codes - copy the result in one click, entirely offline.',
+        icon: 'tabler:qrcode',
+      },
+      {
+        title: 'Custom capture',
+        description: 'Fixed size, ratio, delay and screen coordinates - handy for assets and batch shots.',
+        icon: 'tabler:crop',
+      },
+      {
+        title: 'Multi-monitor',
+        description:
+          'Every screen in one coordinate space, so secondary and extended displays select correctly - and captures stay sharp on high-DPI panels.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Dark mode',
+        description: 'Follow the system, or switch between light and dark by hand.',
+        icon: 'tabler:moon',
+      },
+      {
+        title: 'Presentation mode',
+        description:
+          'Tidy the desktop in one keystroke - windows, icons and wallpaper - and put it all back afterwards.',
+        icon: 'tabler:presentation',
+      },
+    ]}
   />
 
   <!-- Steps2 Widget ****************** -->
@@ -200,9 +251,10 @@ const metadata = {
     columns={2}
     items={[
       {
-        title: 'Community',
-        description: 'Join the Shotera community for new releases, tips, and a direct line to tell us what you think.',
-        icon: 'tabler:brand-discord',
+        title: 'GitHub',
+        description:
+          '<a class="font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300" href="https://github.com/mosuzo-studio/Shotera">mosuzo-studio/Shotera</a> — bug reports, feature requests, and every release.',
+        icon: 'tabler:brand-github',
       },
       {
         title: 'Email support',

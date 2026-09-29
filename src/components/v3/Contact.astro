@@ -1,0 +1,162 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { Icon } from 'astro-icon/components';
+import { localizedPagePath } from '~/i18n/utils';
+import type { Lang } from '~/i18n/utils';
+import { getV3Copy } from './copy-intl';
+
+import xiaohongshuLogo from '~/assets/images/brand-xiaohongshu.png';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const c = getV3Copy(lang);
+const faqHref = localizedPagePath(lang, '/faq');
+
+// Marks that are not in the tabler set ship their own artwork instead.
+const brandLogos: Record<string, ImageMetadata> = { xiaohongshu: xiaohongshuLogo };
+const brandShots: Record<string, { src: string; width: number; height: number }> = {};
+for (const [channelKey, source] of Object.entries(brandLogos)) {
+  const optimized = await getImage({ src: source, width: 92, format: 'webp' });
+  brandShots[channelKey] = {
+    src: optimized.src,
+    width: optimized.attributes.width,
+    height: optimized.attributes.height,
+  };
+}
+
+/* The mail channel carries a prefilled subject and body, so the mail client
+   opens on a ready-to-fill template instead of a blank message. */
+const mailChannel = c.contact.groups
+  .flatMap((group) => group.channels)
+  .find((channel) => channel.href?.startsWith('mailto:'));
+
+const mailHref = (href: string) => {
+  const separator = href.includes('?') ? '&' : '?';
+  const subject = encodeURIComponent(c.contact.mail.subject);
+  const body = encodeURIComponent(c.contact.mail.body.replace(/\n/g, '\r\n'));
+  return `${href}${separator}subject=${subject}&body=${body}`;
+};
+---
+
+<section class="v3-section v3-contact">
+  <div class="v3-wrap">
+    <div class="v3-contact-head">
+      <div class="v3-eyebrow">{c.contact.eyebrow}</div>
+      <h1 class="v3-h1">{c.contact.title}</h1>
+      <p class="v3-lead">{c.contact.lead}</p>
+    </div>
+
+    {
+      c.contact.groups.map((group) => (
+        <div class="v3-chgroup">
+          <div class="v3-chgroup-head">
+            <h2>{group.title}</h2>
+            <p>{group.note}</p>
+          </div>
+          <div class="v3-chgrid">
+            {group.channels.map((channel) => {
+              const shot = brandShots[channel.key];
+              const chip = shot ? (
+                <span class="v3-chicon is-logo">
+                  <img src={shot.src} width={shot.width} height={shot.height} alt="" loading="lazy" />
+                </span>
+              ) : (
+                <span class="v3-chicon">
+                  <Icon name={channel.icon} />
+                </span>
+              );
+
+              return channel.href ? (
+                <a
+                  class="v3-chcard"
+                  style={`--ch-tint:${channel.tint}`}
+                  href={channel === mailChannel ? mailHref(channel.href) : channel.href}
+                  data-v3-mail={channel === mailChannel ? channel.handle : undefined}
+                  target={channel.href.startsWith('http') ? '_blank' : undefined}
+                  rel={channel.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                >
+                  {chip}
+                  <span class="v3-chtxt">
+                    <b>{channel.name}</b>
+                    {channel.handle && <i>{channel.handle}</i>}
+                    <em>{channel.note}</em>
+                  </span>
+                  <span class="v3-chgo">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M7 17 17 7M9 7h8v8"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              ) : (
+                <div class="v3-chcard is-soon">
+                  {chip}
+                  <span class="v3-chtxt">
+                    <b>{channel.name}</b>
+                    <em>{channel.note}</em>
+                  </span>
+                  <span class="v3-chsoon">{c.contact.soon}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))
+    }
+
+    <div class="v3-contact-foot">
+      <p>{c.contact.replyNote}</p>
+      <p>
+        {c.contact.faqNote}
+        <a href={faqHref}>{c.contact.faqLink}</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="v3-toast" data-v3-toast hidden role="status" aria-live="polite">{c.contact.mail.copied}</div>
+
+<script>
+  function initV3MailCopy() {
+    const toast = document.querySelector<HTMLElement>('[data-v3-toast]');
+
+    document.querySelectorAll<HTMLAnchorElement>('[data-v3-mail]').forEach((link) => {
+      if (link.dataset.wired === '1') return;
+      link.dataset.wired = '1';
+
+      let hideTimer: number | undefined;
+
+      // The mail client opens from the link itself; this only drops the address
+      // on the clipboard on the way out, for people who mail from the web.
+      link.addEventListener('click', () => {
+        const address = link.dataset.v3Mail;
+        if (!address || !navigator.clipboard) return;
+
+        navigator.clipboard.writeText(address).then(
+          () => {
+            if (!toast) return;
+            toast.hidden = false;
+            window.clearTimeout(hideTimer);
+            hideTimer = window.setTimeout(() => {
+              toast.hidden = true;
+            }, 4000);
+          },
+          () => undefined
+        );
+      });
+    });
+  }
+
+  initV3MailCopy();
+  document.addEventListener('astro:page-load', initV3MailCopy);
+</script>

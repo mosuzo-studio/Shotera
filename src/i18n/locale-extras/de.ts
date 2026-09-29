@@ -5,14 +5,14 @@ import type { LocaleExtras } from '../locale-extras-types';
  * English pages. Terminology follows the Shotera app's German language pack.
  */
 export const content: LocaleExtras = {
-  footerScrolling: 'Scrolling-Capture',
+  footerScrolling: 'Langer Screenshot',
 
   home: {
     heroAlt:
-      'Shotera-Werkzeuge auf dem Bildschirm: Aufnahme, Scrolling-Capture, Anmerkungen, Bildschirmaufnahme, KI-Freistellung, Offline-OCR, QR- und Barcode-Erkennung, Übersetzung und Anheften',
+      'Shotera-Werkzeuge auf dem Bildschirm: Aufnahme, Langer Screenshot, Anmerkungen, Bildschirmaufnahme, AI-Freistellen, Offline-OCR, QR- und Barcode-Erkennung, Übersetzung und Anheften',
     cards: [
       {
-        title: 'Scrolling-Capture',
+        title: 'Langer Screenshot',
         description:
           'Eine Seite, die höher ist als der Bildschirm, passt trotzdem in eine Aufnahme. Scrollen Sie selbst oder lassen Sie Shotera automatisch scrollen – der lange Screenshot wird dabei Stück für Stück zusammengesetzt.',
       },
@@ -28,10 +28,10 @@ export const content: LocaleExtras = {
       },
     ],
     scrolling: {
-      tagline: 'Scrolling-Capture',
+      tagline: 'Langer Screenshot',
       title: 'Eine Seite, höher als der Bildschirm – in einer Aufnahme',
       text: 'Ganze Webseiten, lange Chats und komplette Dokumente – von oben bis unten in einem Bild festgehalten.',
-      alt: 'Scrolling-Capture fügt eine lange Seite zu einem einzigen Bild zusammen',
+      alt: 'Langer Screenshot fügt eine lange Seite zu einem einzigen Bild zusammen',
       items: [
         {
           title: 'Automatisch oder selbst scrollen',
@@ -58,7 +58,7 @@ export const content: LocaleExtras = {
     stats: [
       { title: 'Sprachen', amount: '15' },
       { title: 'Bewertung', amount: '4.9 / 5' },
-      { title: 'Offline-KI', amount: '100%' },
+      { title: 'Offline-AI', amount: '100%' },
       { title: 'Start per Tastenkürzel', amount: '<0.1s' },
     ],
     workflow: {
@@ -99,7 +99,7 @@ export const content: LocaleExtras = {
     stats: [
       { title: 'Sprachen', amount: '15' },
       { title: 'Bewertung', amount: '4.9 / 5' },
-      { title: 'Offline-KI', amount: '100%' },
+      { title: 'Offline-AI', amount: '100%' },
       { title: 'Start per Tastenkürzel', amount: '<0.1s' },
     ],
     stand: {
@@ -124,41 +124,21 @@ export const content: LocaleExtras = {
         },
       ],
     },
-    toolbox: {
-      title: '',
-      subtitle: '',
-      alt:
-        'Shotera-Toolbox: Aufnahme, Scrolling-Capture, Bildschirmaufnahme, KI-Freistellung, Offline-OCR, Bildübersetzung, Auf Desktop anheften und der Bildbetrachter',
+    core: {
+      title: 'Kernfunktionen',
+      subtitle:
+        'Screenshot, Langer Screenshot, Anheften, Bildschirmaufnahme, Offline-OCR und AI auf dem Gerät – die sechs Dinge für den Alltag, nur ein Tastenkürzel entfernt.',
+      alt: 'Shotera-Anmerkungswerkzeuge auf einem Windows-Desktop: Auswahl, Werkzeugleiste und schwebende Kacheln',
       items: [
         {
-          title: 'Aufnahme',
+          title: 'Screenshot',
           description:
-            'Intelligente Fenster- und Elementerkennung – der gewünschte Ausschnitt ist bereits ausgewählt, manuelles Ziehen ist nur selten nötig.',
+            'Intelligente Fenster- und Elementerkennung – der gewünschte Ausschnitt ist bereits ausgewählt, manuelles Ziehen ist nur selten nötig. Nach der Auswahl sofort kopieren oder die Anmerkungsleiste öffnen – zwei Abschlussmodi, ganz wie Sie möchten.',
         },
         {
-          title: 'Scrolling-Capture',
+          title: 'Langer Screenshot',
           description:
             'Eine Seite oder einen langen Chat scrollen und von Shotera zu einem langen Screenshot zusammensetzen lassen – automatisch oder von Hand, mit Live-Vorschau.',
-        },
-        {
-          title: 'Bildschirmaufnahme & GIF',
-          description:
-            'Den Bildschirm aufnehmen und als leichtes GIF exportieren; Cursor-Hervorhebungen und Klick-Hinweise halten Demos verständlich.',
-        },
-        {
-          title: 'KI-Freistellung',
-          description:
-            'Motiv erkennen und den Hintergrund mit einem Klick entfernen, Export als transparentes PNG. Ohne Photoshop.',
-        },
-        {
-          title: 'Offline-OCR',
-          description:
-            'Text aus jedem Screenshot extrahieren – auf Ihrem Gerät, in mehreren Sprachen. Einfach kopieren und einfügen, ganz ohne Internet.',
-        },
-        {
-          title: 'Bildübersetzung',
-          description:
-            'Text in jedem Bild direkt erkennen und übersetzen – fremde Dokumente, Diagramme und Oberflächen werden lesbar.',
         },
         {
           title: 'Auf Desktop anheften',
@@ -166,9 +146,70 @@ export const content: LocaleExtras = {
             'Jeden Screenshot als Referenz oben schweben lassen und mehrere Bilder nebeneinander anordnen – ohne Durcheinander.',
         },
         {
-          title: 'Bildbetrachter',
+          title: 'Bildschirmaufnahme & GIF',
           description:
-            'Einen Screenshot oder eine beliebige Bilddatei im eigenen Betrachterfenster öffnen – im Ordner blättern, zoomen und bei Bedarf nachbessern.',
+            'Den Bildschirm aufnehmen und als leichtes GIF exportieren; Cursor-Hervorhebungen und Klick-Hinweise halten Demos verständlich.',
+        },
+        {
+          title: 'Offline-OCR',
+          description:
+            'Text aus jedem Screenshot extrahieren – auf Ihrem Gerät, in mehreren Sprachen. Einfach kopieren und einfügen.',
+        },
+        {
+          title: 'AI-Freistellen & AI-Radierer',
+          description:
+            'AI-Freistellen entfernt den Hintergrund mit einem Klick und exportiert ein transparentes PNG; der AI-Radierer beseitigt Störendes und Wasserzeichen. Beide laufen auf lokalen Modellen – nichts wird hochgeladen.',
+        },
+      ],
+    },
+    more: {
+      title: 'Weitere Funktionen',
+      subtitle:
+        'Die Details, die den Unterschied machen: Anmerkungen, Erkennung, Bildbetrachtung und die passenden Einstellungen dazu.',
+      items: [
+        {
+          title: 'Anmerkungswerkzeuge',
+          description:
+            'Rechteck/Ellipse, Linie/Pfeil, Pinsel, Textmarker, Mosaik/Unschärfe, Text, Nummerierung, Emoji-Sticker, Lupe und Radiergummi – direkt beim Aufnehmen annotieren.',
+        },
+        {
+          title: 'Emoji-Sticker',
+          description:
+            'Hunderte Emoji-Sticker – Daumen hoch, Herzen, Lachen, Konfetti – frei skalierbar und beliebig platzierbar, für ein bisschen Spaß am Screenshot.',
+        },
+        {
+          title: 'Bildbetrachter & Bildeditor',
+          description:
+            'Einen Screenshot oder eine beliebige Bilddatei im eigenen Betrachterfenster öffnen – im Ordner blättern, hineinzoomen und bei Bedarf nachbessern. Gängige Formate öffnen sich sofort.',
+        },
+        {
+          title: 'Bildübersetzung',
+          description:
+            'Text in jedem Bild direkt erkennen und übersetzen – fremde Dokumente, Diagramme und Oberflächen werden lesbar.',
+        },
+        {
+          title: 'QR- und Barcode-Erkennung',
+          description:
+            'QR-Codes und Barcodes direkt im Screenshot auslesen: Links, WLAN, Kontakte, Produktcodes – das Ergebnis mit einem Klick kopieren. Alles offline.',
+        },
+        {
+          title: 'Benutzerdefinierter Screenshot',
+          description:
+            'Feste Größe, Seitenverhältnis, Verzögerung und Bildschirmkoordinaten – praktisch für Bildmaterial und Serienaufnahmen.',
+        },
+        {
+          title: 'Multi-Monitor',
+          description:
+            'Alle Bildschirme arbeiten in einem gemeinsamen Koordinatensystem – auch sekundäre und erweiterte Displays lassen sich korrekt auswählen, und Aufnahmen bleiben auf High-DPI-Panels scharf.',
+        },
+        {
+          title: 'Dunkler Modus',
+          description: 'Folgen Sie dem System, oder wechseln Sie manuell zwischen hell und dunkel.',
+        },
+        {
+          title: 'Präsentationsmodus',
+          description:
+            'Räumen Sie den Desktop mit einem Tastendruck auf – Fenster, Symbole und Hintergrundbild – und stellen Sie danach alles wieder her.',
         },
       ],
     },
@@ -207,7 +248,7 @@ export const content: LocaleExtras = {
         {
           title: 'Von Nutzern vorangebracht',
           description:
-            'Scrolling-Capture, KI-Freistellung, Offline-OCR, Bildübersetzung – viele Funktionen stammen direkt aus Nutzerfeedback.',
+            'Langer Screenshot, AI-Freistellen, Offline-OCR, Bildübersetzung – viele Funktionen stammen direkt aus Nutzerfeedback.',
         },
         {
           title: 'Mehr Menschen erreichen',

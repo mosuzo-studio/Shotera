@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Paramètres → À propos → Retours et suggestions
 
-**🔗 Index des versions**
+**ℹ️ Les notes les plus récentes paraissent d’abord dans le [changelog anglais](/changelog) ; cette version linguistique sera mise à jour un peu plus tard.**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nouveau</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -36,11 +36,11 @@ Paramètres → À propos → Retours et suggestions
 
 Édition Lite, longue capture, épingles redimensionnables et compilations plus légères.
 
-**🆚 Lite vs version complète :** consultez la [comparaison des versions](/fr/versions) pour connaître les différences entre les fonctions.
+**🆚 Lite vs version Standard :** consultez la [comparaison des versions](/fr/versions) pour connaître les différences entre les fonctions.
 
 **✨ Nouveautés**
 
-- Édition Lite ajoutée : installateur de 17MB comprenant l'essentiel de la capture et de l'annotation. La bannière de mise à niveau dans les paramètres renvoie à la version complète sur le site.
+- Édition Lite ajoutée : installateur de 17MB comprenant l'essentiel de la capture et de l'annotation. La bannière de mise à niveau dans les paramètres renvoie à la version Standard sur le site.
 - [Site officiel](https://shotera.mosuzo.com/) actualisé, avec un contenu et un style rafraîchis.
 - Longue capture ajoutée (aperçu, tests bêta) : modes de défilement automatique et manuel, avec fenêtre d'aperçu en temps réel. L'algorithme d'assemblage intelligent détecte les limites supérieures et gère les mises en page mixtes. Des conseils guident la première utilisation. Rejoignez le groupe bêta pour l'essayer.
 - Améliorations de la fenêtre d'image épinglée : le double-clic bascule entre la taille d'origine et le mode miniature + fermer. Faites glisser les bords ou les coins pour redimensionner en gardant le rapport verrouillé. Le menu contextuel natif dépasse les limites de la fenêtre. La visibilité de la barre d'outils est conservée d'une session à l'autre ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14)).

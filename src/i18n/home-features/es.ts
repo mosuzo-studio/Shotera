@@ -38,7 +38,7 @@ export const content: HomeFeaturesContent = {
           'Reconoce y traduce el texto de cualquier imagen al instante. Lee documentos, capturas y menús en otro idioma y copia la traducción directamente.',
       },
       {
-        title: 'Fijar en pantalla',
+        title: 'Fijar en el escritorio',
         description:
           'Mantén cualquier captura flotando por encima mientras trabajas. Redimensiona, organiza y consulta en paralelo sin cambiar de ventana.',
       },
@@ -58,7 +58,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Un kit completo de anotación',
         description:
-          'Pegatinas emoji, lupa, números de paso, flechas, cuadros, texto, resaltado y desenfoque: marca todo en el momento de capturar para que el mensaje se entienda al instante.',
+          'Pegatinas emoji, lupa, numeración, flechas, cuadros, texto, resaltado y desenfoque: marca todo en el momento de capturar para que el mensaje se entienda al instante.',
       },
       {
         title: 'Desenfoque y resaltado',
@@ -108,7 +108,7 @@ export const content: HomeFeaturesContent = {
           'Elimina objetos no deseados, marcas de agua o imperfecciones de forma inteligente. La IA rellena el fondo de forma natural. También se ejecuta en local: sin subidas ni nube.',
       },
       {
-        title: 'Extracción de texto sin conexión',
+        title: 'OCR sin conexión',
         description:
           'El OCR se ejecuta en local y nunca toca la nube. Convierte el texto de una captura en texto editable y copiable con un clic.',
       },
@@ -134,12 +134,12 @@ export const content: HomeFeaturesContent = {
         description: 'Amplía los detalles clave para que tu audiencia vea exactamente lo que quieres destacar.',
       },
       {
-        title: 'Números de paso',
+        title: 'Numeración',
         description:
           'Guía a quien ve tus capturas con anotaciones numeradas: perfecto para tutoriales y guías paso a paso.',
       },
       {
-        title: 'Fijar en pantalla',
+        title: 'Fijar en el escritorio',
         description:
           'Mantén imágenes de referencia flotando por encima para trabajar junto a ellas, sin cambiar de ventana.',
       },

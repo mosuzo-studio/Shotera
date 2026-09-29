@@ -1,0 +1,1771 @@
+/**
+ * Site v3 — the "Cap" flavour homepage (EN + zh-CN for now).
+ *
+ * Everything is scoped under `.v3` so the other locales keep the AstroWind look.
+ * Sizes are px on purpose: the root font size is 20px on very wide screens.
+ */
+
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('/fonts/instrument-sans-latin.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('/fonts/instrument-sans-latin-ext.woff2') format('woff2');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+.v3 {
+  --v3-ink: #111;
+  --v3-muted: rgba(17, 17, 17, 0.55);
+  --v3-blue: #0a7cff;
+  --v3-page: #f2f2f2;
+  --v3-p1: #e1effe;
+  --v3-p2: #e2f6ec;
+  --v3-p3: #efe7fd;
+  --v3-p4: #fff0e0;
+  --v3-border: rgba(17, 17, 17, 0.08);
+  --v3-card-r: 20px;
+  --v3-panel-r: 28px;
+  --v3-shadow-btn: 0 0 0 1px rgba(47, 149, 255, 0.35), 0 12px 26px -10px rgba(63, 127, 205, 0.75);
+
+  background: var(--v3-page);
+  min-height: 100vh;
+  color: var(--v3-ink);
+  font-family:
+    'Instrument Sans',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.v3 img {
+  display: block;
+  max-width: 100%;
+}
+
+.v3 a {
+  text-decoration: none;
+}
+
+.v3-wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- header ---------- */
+.v3-header {
+  background: #fff;
+  border-bottom: 1px solid var(--v3-border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.v3-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  height: 76px;
+}
+
+.v3-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+}
+
+.v3-logo img {
+  width: 26px;
+  height: 26px;
+}
+
+.v3-navlink {
+  font-size: 15px;
+  color: var(--v3-muted);
+}
+
+.v3-navlink:hover {
+  color: var(--v3-ink);
+}
+
+.v3-nav-right {
+  margin-inline-start: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.v3-ghost {
+  font-size: 15px;
+  color: var(--v3-muted);
+}
+
+.v3-ghost:hover {
+  color: var(--v3-ink);
+}
+
+.v3-ghost-icon {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(17, 17, 17, 0.55);
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.v3-ghost-icon:hover {
+  color: var(--v3-ink);
+  transform: translateY(-1px);
+}
+
+.v3-lang {
+  position: relative;
+}
+
+.v3-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 2px;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 15px;
+  color: var(--v3-ink);
+  cursor: pointer;
+}
+
+.v3-lang-btn svg {
+  width: 15px;
+  height: 15px;
+  color: rgba(17, 17, 17, 0.4);
+  transition: transform 0.18s ease;
+}
+
+.v3-lang.is-open .v3-lang-btn svg {
+  transform: rotate(180deg);
+}
+
+.v3-lang-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  inset-inline-end: 0;
+  z-index: 40;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  padding: 8px;
+  min-width: 268px;
+  background: #fff;
+  border: 1px solid var(--v3-border);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px -24px rgba(16, 24, 40, 0.45);
+}
+
+.v3-lang.is-open .v3-lang-menu {
+  display: grid;
+}
+
+.v3-lang-menu a {
+  padding: 8px 10px;
+  border-radius: 9px;
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.78);
+  white-space: nowrap;
+}
+
+.v3-lang-menu a:hover {
+  background: #f2f4f7;
+  color: var(--v3-ink);
+}
+
+.v3-lang-menu a[aria-current='true'] {
+  color: var(--v3-blue);
+  font-weight: 600;
+}
+
+.v3-pill-dark {
+  background: #111;
+  color: #fff;
+  border-radius: 9999px;
+  padding: 9px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.v3-pill-dark:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -10px rgba(17, 17, 17, 0.6);
+}
+
+/* Mobile menu: the nav links collapse into a burger below 960px. */
+.v3-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 40px;
+  height: 40px;
+  padding: 0 9px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.v3-burger span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--v3-ink);
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.v3-burger[aria-expanded='true'] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.v3-burger[aria-expanded='true'] span:nth-child(2) {
+  opacity: 0;
+}
+
+.v3-burger[aria-expanded='true'] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.v3-mobile-menu {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: calc(100% - 8px);
+  z-index: 30;
+  padding: 8px;
+  border: 1px solid var(--v3-border);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 24px 48px -24px rgba(16, 24, 40, 0.45);
+}
+
+.v3-mobile-menu a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.v3-mobile-menu a:hover {
+  background: #f2f4f7;
+}
+
+/* Headings break more gracefully (e.g. the /versions hero). */
+.v3 h1,
+.v3 h2 {
+  text-wrap: balance;
+}
+
+/* Card scale on the inner pages (the widgets ship 8-12px radii; v3 uses 16px).
+   Small chips and pills keep their own radii. */
+.v3 .rounded-lg,
+.v3 .rounded-xl,
+.v3 .rounded-2xl {
+  border-radius: 16px;
+}
+
+/* ---------- hero stage ---------- */
+.v3-stage {
+  padding: 16px 16px 0;
+}
+
+.v3-sky {
+  position: relative;
+  border-radius: var(--v3-panel-r);
+  overflow: hidden;
+  text-align: center;
+  background: linear-gradient(180deg, #eaf4ff 0%, #d9ebfb 38%, #bdd8f2 100%);
+  padding: 58px 24px 0;
+}
+
+.v3-sun {
+  position: absolute;
+  right: 8%;
+  top: -6%;
+  width: 46%;
+  height: 60%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 224, 192, 0.95), rgba(255, 224, 192, 0) 72%);
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+.v3-cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  filter: blur(22px);
+  opacity: 0.98;
+  pointer-events: none;
+
+  --v3-drift: 120px;
+  --v3-duration: 120s;
+  animation: v3-cloud-drift var(--v3-duration) ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Clouds drift a little, forever, out of sync with each other. */
+@keyframes v3-cloud-drift {
+  from {
+    transform: translate3d(calc(var(--v3-drift) * -1), 0, 0);
+  }
+  to {
+    transform: translate3d(var(--v3-drift), 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v3-cloud {
+    animation: none;
+  }
+}
+
+/* A brighter core inside the soft halo, so the blobs read as clouds and not
+   as one uniform haze. */
+.v3-cloud::before {
+  content: '';
+  position: absolute;
+  inset: 22% 14%;
+  border-radius: 50%;
+  background: #fff;
+  filter: blur(7px);
+}
+
+/* Cool underside, for a hint of volume. */
+.v3-cloud::after {
+  content: '';
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  bottom: 4%;
+  height: 40%;
+  border-radius: 50%;
+  background: rgba(178, 205, 237, 0.4);
+  filter: blur(12px);
+}
+
+.v3-cloud.c1 {
+  width: 280px;
+  height: 120px;
+  left: 6%;
+  top: 16%;
+  --v3-drift: 150px;
+  --v3-duration: 72s;
+}
+.v3-cloud.c2 {
+  width: 200px;
+  height: 90px;
+  left: 22%;
+  top: 30%;
+  opacity: 0.88;
+  --v3-drift: 210px;
+  --v3-duration: 96s;
+  animation-delay: -48s;
+}
+.v3-cloud.c3 {
+  width: 340px;
+  height: 140px;
+  right: 4%;
+  top: 22%;
+  opacity: 0.92;
+  --v3-drift: 120px;
+  --v3-duration: 64s;
+  animation-delay: -20s;
+}
+.v3-cloud.c4 {
+  width: 180px;
+  height: 80px;
+  right: 26%;
+  top: 8%;
+  opacity: 0.85;
+  --v3-drift: 240px;
+  --v3-duration: 112s;
+  animation-delay: -90s;
+}
+.v3-cloud.c5 {
+  width: 260px;
+  height: 110px;
+  left: 40%;
+  top: 44%;
+  opacity: 0.7;
+  --v3-drift: 180px;
+  --v3-duration: 84s;
+  animation-delay: -66s;
+}
+
+.v3-sky > * {
+  position: relative;
+}
+
+/* Keep the decorations absolutely positioned: the `> *` rule above ties with
+   `.v3-cloud` on specificity and comes later, so it would otherwise flatten
+   the clouds and the sun into static inline boxes. */
+.v3-sky > .v3-sun,
+.v3-sky > .v3-cloud,
+.v3-dl > .v3-sun {
+  position: absolute;
+}
+
+.v3-announce {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #111;
+  color: #fff;
+  border-radius: 9999px;
+  padding: 7px 8px;
+  font-size: 13.5px;
+  box-shadow: 0 8px 20px -10px rgba(17, 17, 17, 0.55);
+}
+
+.v3-announce b {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.v3-announce span {
+  opacity: 0.86;
+}
+
+.v3-announce em {
+  font-style: normal;
+  opacity: 0.6;
+}
+
+.v3-modes {
+  display: flex;
+  width: fit-content;
+  gap: 4px;
+  margin: 20px auto 30px;
+  padding: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px -12px rgba(16, 24, 40, 0.45);
+}
+
+.v3-modes button {
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 15px;
+  color: rgba(17, 17, 17, 0.5);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: color 0.16s ease;
+}
+
+.v3-modes button:hover {
+  color: var(--v3-ink);
+}
+
+.v3-modes button[aria-selected='true'] {
+  background: #fff;
+  color: var(--v3-ink);
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.16);
+}
+
+.v3-h1 {
+  font-size: clamp(44px, 6.4vw, 78px);
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin: 0 0 22px;
+}
+
+:lang(en) .v3-h1 {
+  letter-spacing: -0.03em;
+}
+
+.v3-h1 .hl {
+  color: var(--v3-blue);
+}
+
+.v3-sub {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  color: var(--v3-muted);
+  font-size: 17px;
+  line-height: 1.72;
+  letter-spacing: 0.005em;
+}
+
+.v3-cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Split download control: the main half is the Standard installer, the toggle
+   reveals the other formats. Home.astro opens it when the pointer enters the
+   toggle (never the download half) and closes it once the pointer leaves the
+   control; touch and keyboard toggle it on click.
+   Selectors are doubled up (.v3-btn.v3-split-*) so they outrank the base
+   .v3-btn radii and keep the two halves reading as one pill. */
+.v3-split {
+  position: relative;
+  z-index: 20;
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.v3-btn.v3-split-main {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+  /* Holds the label clear of the toggle: the button stays long enough to read
+     as the primary action even when the label is short. */
+  justify-content: center;
+  min-width: 240px;
+}
+
+.v3-btn.v3-split-toggle {
+  padding: 0 13px;
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+  border-inline-start: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+.v3-split-toggle svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.18s ease;
+}
+
+.v3-split.is-open .v3-split-toggle svg {
+  transform: rotate(180deg);
+}
+
+/* Hovering either half lights up the whole control; the individual lift is
+   off so the halves never drift apart. */
+.v3-split .v3-btn-main:hover {
+  transform: none;
+}
+
+.v3-split:hover .v3-btn-main,
+.v3-split:focus-within .v3-btn-main {
+  box-shadow:
+    0 0 0 1px rgba(47, 149, 255, 0.4),
+    0 16px 30px -12px rgba(63, 127, 205, 0.85);
+}
+
+.v3-split-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  inset-inline-start: 0;
+  z-index: 40;
+  /* At least as wide as the button: the toggle sits at the right end, so a
+     narrower list would leave the pointer's way down outside the menu. */
+  min-width: 100%;
+  padding: 8px;
+  border: 1px solid var(--v3-border);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 24px 48px -22px rgba(16, 24, 40, 0.4);
+  text-align: start;
+}
+
+.v3-split.is-open .v3-split-menu {
+  display: block;
+}
+
+.v3-split-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: var(--v3-ink);
+}
+
+.v3-split-menu a:hover {
+  background: #f2f4f7;
+}
+
+.v3-split-cap {
+  margin: 4px 12px 6px;
+  color: var(--v3-muted);
+  font-size: 12px;
+}
+
+.v3-split-menu b {
+  margin-inline-start: auto;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: rgba(10, 124, 255, 0.12);
+  color: var(--v3-blue);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.v3-split-all {
+  margin-top: 4px;
+  border-top: 1px solid var(--v3-border);
+  border-radius: 0;
+  color: var(--v3-muted);
+}
+
+/* What each build actually is, for people who do not know an .exe from an .msi.
+   Pure CSS so the two menus (hero and closing CTA) need no extra markup. */
+.v3-split-menu a[data-v3-tip] {
+  position: relative;
+}
+
+.v3-split-menu a[data-v3-tip]::after {
+  content: attr(data-v3-tip);
+  position: absolute;
+  inset-inline-start: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: max-content;
+  max-width: 232px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(17, 17, 17, 0.92);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-align: start;
+  box-shadow: 0 14px 30px -16px rgba(16, 24, 40, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.v3-split-menu a[data-v3-tip]:hover::after,
+.v3-split-menu a[data-v3-tip]:focus-visible::after {
+  opacity: 1;
+}
+
+.v3-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 0 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.v3-btn-main {
+  background: linear-gradient(180deg, #2f95ff 0%, #0a7cff 100%);
+  color: #fff;
+  box-shadow: var(--v3-shadow-btn);
+}
+
+.v3-btn-main:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 1px rgba(47, 149, 255, 0.4),
+    0 16px 30px -12px rgba(63, 127, 205, 0.85);
+}
+
+.v3-btn-sub {
+  background: #fff;
+  color: var(--v3-ink);
+  border: 1px solid #d3dce6;
+}
+
+.v3-btn-sub em {
+  font-style: normal;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #eef2f7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--v3-muted);
+}
+
+.v3-meta {
+  margin: 20px 0 0;
+  font-size: 14px;
+  color: var(--v3-muted);
+}
+
+.v3-meta b {
+  color: rgba(17, 17, 17, 0.75);
+  font-weight: 600;
+}
+
+.v3-ontop {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--v3-muted);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.v3-ontop:hover {
+  color: var(--v3-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.v3-ontop-logo {
+  width: 15px;
+  height: 15px;
+}
+
+.v3-shot {
+  margin: 42px auto 0;
+  /* Sized by the frame, not by the image's intrinsic width: fit-content would
+     resolve against the full-size source and leave the right bezel empty. */
+  width: min(1064px, 100%);
+}
+
+/* ---------- hero display shell ----------
+   Two CSS shells share one screen (the per-mode render is a complete Windows 11
+   desktop, so the screen is nothing but the image): the default aluminium
+   monitor - light bezel, trapezoid neck, pill base - and a laptop with a
+   near-black bezel, a camera notch and an aluminium hinge. Flip `data-shell` on
+   .v3-display to switch. Every size is in cqw against the shell width, so the
+   proportions hold at any hero width. */
+.v3-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  container-type: inline-size;
+}
+
+/* Shell picker: two dots on the caption's line, pinned to the left edge of the
+   shell. Fixed sizes on purpose - they are a control, so they stay tappable at
+   narrow hero widths. */
+.v3-shell-dots {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.v3-shell-dot {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  place-items: center;
+}
+
+.v3-shell-dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(22, 22, 24, 0.22);
+  transition:
+    background-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.v3-shell-dot:hover::after {
+  background: rgba(22, 22, 24, 0.45);
+}
+
+.v3-shell-dot[aria-pressed='true']::after {
+  background: var(--v3-blue);
+  transform: scale(1.15);
+}
+
+.v3-shell-dot:focus-visible {
+  outline: 2px solid rgb(54 137 251 / 55%);
+  outline-offset: 1px;
+  border-radius: 50%;
+}
+
+.v3-bezel {
+  position: relative;
+  width: 100%;
+  padding: 1.44cqw;
+  border-radius: 1.44cqw;
+  background: linear-gradient(180deg, #e4e7ea, #c9ced3);
+  box-shadow: 0 3.6cqw 7.2cqw -3.6cqw rgba(16, 24, 40, 0.5);
+  z-index: 3;
+}
+
+/* Above the screen, so the laptop's notch hangs over the wallpaper the way the
+   sheet drew it. */
+.v3-cam {
+  position: absolute;
+  top: 0.6cqw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.72cqw;
+  height: 0.72cqw;
+  border-radius: 50%;
+  background: #8f969c;
+  z-index: 2;
+}
+
+.v3-desktop {
+  position: relative;
+  aspect-ratio: 7 / 4;
+  border-radius: 0.36cqw;
+  overflow: hidden;
+  background-color: #0a1740;
+}
+
+.v3-shot-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* The taskbar the hero lays over every shot: 89/1024 of the screen, flush with
+   its bottom edge, drawn at the source's own size. The renders keep no taskbar
+   of their own — their bottom band is wallpaper — so nothing else shows. */
+.v3-tb {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8.69%;
+  pointer-events: none;
+}
+
+.v3-desktop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 32%),
+    radial-gradient(120% 100% at 50% 0%, rgba(255, 255, 255, 0.05), transparent 60%);
+}
+
+/* Neck and base of the monitor: a trapezoid that widens towards the pill base,
+   both in the same light aluminium. */
+.v3-arm {
+  width: 9.14cqw;
+  height: 7.45cqw;
+  margin-top: -0.1cqw;
+  background: linear-gradient(180deg, #d5dade, #b4bac0);
+  clip-path: polygon(26% 0, 74% 0, 100% 100%, 0 100%);
+}
+
+.v3-base {
+  width: 28.8cqw;
+  height: 1.08cqw;
+  margin-top: -0.12cqw;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #d7dbdf, #b0b6bc);
+}
+
+/* Laptop: the camera dot widens into a notch, the neck becomes the hinge bar
+   and the base goes away. */
+.v3-display[data-shell='laptop'] .v3-bezel {
+  padding: 1.44cqw 1.44cqw 2.16cqw;
+  border-radius: 1.92cqw 1.92cqw 0.72cqw 0.72cqw;
+  background: #0a0a0b;
+  box-shadow: 0 3.6cqw 7.2cqw -4.1cqw rgba(16, 24, 40, 0.6);
+}
+
+.v3-display[data-shell='laptop'] .v3-cam {
+  top: 0;
+  width: 14.18cqw;
+  height: 2.04cqw;
+  border-radius: 0 0 1.08cqw 1.08cqw;
+  background: #0a0a0b;
+}
+
+.v3-display[data-shell='laptop'] .v3-desktop {
+  border-radius: 0.96cqw 0.96cqw 0.48cqw 0.48cqw;
+}
+
+.v3-display[data-shell='laptop'] .v3-arm {
+  width: 104%;
+  height: 0.84cqw;
+  margin: 0 -2%;
+  border-radius: 0 0 0.96cqw 0.96cqw;
+  background: linear-gradient(180deg, #c3c8ce, #9aa1a8);
+  clip-path: none;
+}
+
+/* Not `display: none`: the laptop has no stand, so the box keeps the monitor's
+   footprint (neck 7.45 - 0.1 + base 1.08 - 0.12 = 8.31cqw, minus the 0.84cqw
+   hinge and the 0.72cqw thicker bezel lip that stay) and the cycle never
+   shifts the page. */
+.v3-display[data-shell='laptop'] .v3-base {
+  visibility: hidden;
+  height: 6.75cqw;
+  margin-top: 0;
+}
+
+.v3-shot-cap {
+  position: relative;
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: var(--v3-muted);
+  text-align: center;
+}
+
+/* Narrow heroes wrap the caption across the full width, so keep its centred
+   text clear of the dots on the left. */
+@media (max-width: 639px) {
+  .v3-shot-cap {
+    padding-inline: 62px;
+  }
+}
+
+.v3-tail {
+  height: 66px;
+}
+
+/* ---------- trust ---------- */
+.v3-trust {
+  background: #fff;
+  border-top: 1px solid var(--v3-border);
+}
+
+.v3-trust-row {
+  display: flex;
+  gap: 38px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  font-size: 14px;
+  color: var(--v3-muted);
+}
+
+.v3-trust-row b {
+  color: var(--v3-ink);
+  font-weight: 600;
+}
+
+/* ---------- sections ---------- */
+.v3-section {
+  padding: 96px 0;
+}
+
+.v3-section.is-tight {
+  padding-top: 0;
+}
+
+.v3-center {
+  text-align: center;
+}
+
+.v3-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--v3-blue);
+  margin-bottom: 16px;
+}
+
+.v3-eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--v3-blue);
+}
+
+.v3-h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin: 0 0 16px;
+}
+
+:lang(en) .v3-h2 {
+  letter-spacing: -0.025em;
+}
+
+.v3-lead {
+  color: var(--v3-muted);
+  font-size: 17px;
+  max-width: 620px;
+  letter-spacing: 0.005em;
+  margin: 0;
+}
+
+.v3-center .v3-lead {
+  margin: 0 auto 30px;
+}
+
+.v3-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+  text-align: start;
+}
+
+.v3-mcard {
+  background: #fff;
+  border-radius: var(--v3-card-r);
+  padding: 24px;
+  border: 1px solid var(--v3-border);
+}
+
+.v3-chip {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.v3-mcard:nth-child(1) .v3-chip {
+  background: var(--v3-p1);
+}
+.v3-mcard:nth-child(2) .v3-chip {
+  background: var(--v3-p2);
+}
+.v3-mcard:nth-child(3) .v3-chip {
+  background: var(--v3-p3);
+}
+.v3-mcard:nth-child(1) .v3-chip svg {
+  stroke: #0a7cff;
+}
+.v3-mcard:nth-child(2) .v3-chip svg {
+  stroke: #12a06a;
+}
+.v3-mcard:nth-child(3) .v3-chip svg {
+  stroke: #7c4ddb;
+}
+
+.v3-chip svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.v3-mcard h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.v3-mcard .v3-one {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(17, 17, 17, 0.82);
+  margin: 0 0 16px;
+  min-height: 46px;
+}
+
+.v3-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: v3s;
+}
+
+.v3-steps li {
+  counter-increment: v3s;
+  position: relative;
+  padding-inline-start: 28px;
+  font-size: 14px;
+  color: var(--v3-muted);
+  margin: 10px 0;
+}
+
+.v3-steps li::before {
+  content: counter(v3s);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--v3-p1);
+  color: var(--v3-blue);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+.v3-bf {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--v3-border);
+  font-size: 12px;
+  color: var(--v3-muted);
+  letter-spacing: 0.01em;
+}
+
+.v3-bf b {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  color: rgba(17, 17, 17, 0.45);
+  margin-right: 8px;
+}
+
+/* ---------- alternating feature sections ---------- */
+.v3-feat {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.v3-feat.is-rev .v3-txt {
+  order: 2;
+}
+
+.v3-feat .v3-h2 {
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.v3-rows {
+  margin: 14px 0 0;
+}
+
+.v3-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--v3-border);
+  font-size: 15.5px;
+  color: rgba(17, 17, 17, 0.85);
+}
+
+.v3-row:first-child {
+  border-top: 1px solid var(--v3-border);
+}
+
+.v3-row i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--v3-blue);
+  opacity: 0.6;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.v3-row em {
+  margin-inline-start: auto;
+  font-style: normal;
+  color: rgba(17, 17, 17, 0.3);
+  font-size: 13px;
+}
+
+.v3-list2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  margin-top: 24px;
+}
+
+.v3-it {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+}
+
+.v3-it .v3-d {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 9px;
+  background: var(--v3-p1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.v3-it .v3-d svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: var(--v3-blue);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.v3-it b {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.v3-it i {
+  font-style: normal;
+  font-size: 13.5px;
+  color: var(--v3-muted);
+}
+
+.v3-panel {
+  background: #fff;
+  border: 1px solid var(--v3-border);
+  border-radius: var(--v3-card-r);
+  padding: 14px;
+  width: fit-content;
+  justify-self: center;
+}
+
+.v3-panel img {
+  width: auto;
+  max-width: 100%;
+  max-height: 460px;
+  height: auto;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* ---------- download band ---------- */
+.v3-dl {
+  border-radius: var(--v3-panel-r);
+  background: linear-gradient(180deg, #eaf4ff, #d8e8fa);
+  padding: 72px 24px;
+  text-align: center;
+  position: relative;
+  /* Visible so the download menu can hang past the panel's edge; the glow is
+     clipped inside .v3-dl-glow instead. */
+  overflow: visible;
+}
+
+/* Clipping layer for the panel's sun: it keeps the rounded silhouette without
+   clipping the menu that opens below the buttons. */
+.v3-dl > .v3-dl-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.v3-dl .v3-sun {
+  left: 12%;
+  right: auto;
+  top: -20%;
+  width: 40%;
+  height: 70%;
+  filter: blur(8px);
+}
+
+.v3-dl > * {
+  position: relative;
+}
+
+.v3-dl .v3-h2 {
+  margin-bottom: 14px;
+}
+
+.v3-other {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.v3-other i {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(17, 17, 17, 0.1);
+  display: inline-block;
+}
+
+/* ---------- footer ---------- */
+.v3-footer {
+  background: #fff;
+  border-top: 1px solid var(--v3-border);
+  padding: 48px 0 40px;
+  font-size: 14px;
+  color: var(--v3-muted);
+}
+
+.v3-footer-cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 28px;
+}
+
+.v3-footer h4 {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--v3-ink);
+  letter-spacing: 0.02em;
+}
+
+.v3-footer a {
+  display: block;
+  margin: 9px 0;
+  color: var(--v3-muted);
+}
+
+.v3-footer a:hover {
+  color: var(--v3-ink);
+}
+
+.v3-footer-base {
+  margin-top: 36px;
+  padding-top: 22px;
+  border-top: 1px solid var(--v3-border);
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.v3-footer-base .v3-sp {
+  margin-inline-start: auto;
+}
+
+.v3-foot-note {
+  color: rgba(17, 17, 17, 0.42);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* ---------- contact page ---------- */
+/* A channel is either live (an <a> with an href) or still coming (a grey
+   placeholder with no link at all) - never a link that goes nowhere. */
+.v3-contact-head {
+  max-width: 700px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.v3-contact-head .v3-h1 {
+  font-size: clamp(34px, 4.4vw, 52px);
+  margin-bottom: 18px;
+}
+
+.v3-contact-head .v3-lead {
+  margin: 0 auto;
+}
+
+.v3-chgroup + .v3-chgroup {
+  margin-top: 46px;
+}
+
+.v3-chgroup-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.v3-chgroup-head h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.v3-chgroup-head p {
+  font-size: 14px;
+  color: var(--v3-muted);
+  margin: 0;
+}
+
+.v3-chgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.v3-chcard {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: start;
+  background: #fff;
+  border: 1px solid var(--v3-border);
+  border-radius: var(--v3-card-r);
+  padding: 20px 22px;
+}
+
+a.v3-chcard {
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+a.v3-chcard:hover {
+  border-color: color-mix(in srgb, var(--ch-tint) 42%, #fff);
+  box-shadow: 0 18px 34px -22px rgba(16, 24, 40, 0.55);
+  transform: translateY(-2px);
+}
+
+.v3-chicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #eef0f3;
+  color: rgba(17, 17, 17, 0.34);
+  transition: transform 0.18s ease;
+}
+
+a.v3-chcard .v3-chicon {
+  background: var(--ch-tint);
+  color: #fff;
+  box-shadow: 0 8px 18px -10px color-mix(in srgb, var(--ch-tint) 75%, transparent);
+}
+
+a.v3-chcard:hover .v3-chicon {
+  transform: scale(1.05);
+}
+
+.v3-chicon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Platforms that ship their own artwork (Xiaohongshu) fill the chip instead. */
+.v3-chicon.is-logo,
+a.v3-chcard .v3-chicon.is-logo {
+  background: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.v3-chicon.is-logo img {
+  width: 46px;
+  height: 46px;
+}
+
+.v3-chcard.is-soon .v3-chicon.is-logo img {
+  filter: grayscale(1);
+  opacity: 0.4;
+}
+
+.v3-chtxt {
+  min-width: 0;
+}
+
+.v3-chcard b {
+  display: block;
+  font-size: 16.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.v3-chcard i {
+  display: block;
+  font-style: normal;
+  font-size: 13.5px;
+  color: var(--ch-tint);
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+}
+
+.v3-chcard em {
+  display: block;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--v3-muted);
+  margin-top: 7px;
+}
+
+.v3-chgo {
+  display: flex;
+  margin-top: 2px;
+  color: rgba(17, 17, 17, 0.22);
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.v3-chgo svg {
+  width: 16px;
+  height: 16px;
+}
+
+a.v3-chcard:hover .v3-chgo {
+  color: var(--ch-tint);
+  transform: translate(2px, -2px);
+}
+
+.v3-chcard.is-soon {
+  background: #fbfbfc;
+  border-style: dashed;
+  border-color: rgba(17, 17, 17, 0.16);
+}
+
+.v3-chcard.is-soon b {
+  color: rgba(17, 17, 17, 0.42);
+}
+
+.v3-chsoon {
+  align-self: start;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(17, 17, 17, 0.38);
+  background: #fff;
+  border: 1px solid var(--v3-border);
+  border-radius: 999px;
+  padding: 2px 9px;
+  white-space: nowrap;
+}
+
+.v3-contact-foot {
+  margin-top: 46px;
+  text-align: center;
+}
+
+.v3-contact-foot p {
+  font-size: 14px;
+  color: var(--v3-muted);
+  margin: 6px 0 0;
+}
+
+.v3-contact-foot a {
+  color: var(--v3-blue);
+  font-weight: 600;
+}
+
+.v3-contact-foot a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Confirms the clipboard half of the mail click; the mail client opens on its own. */
+.v3-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  z-index: 60;
+  transform: translateX(-50%);
+  background: rgba(17, 17, 17, 0.92);
+  color: #fff;
+  font-size: 13.5px;
+  letter-spacing: 0.01em;
+  padding: 10px 18px;
+  border-radius: 999px;
+  box-shadow: 0 16px 32px -14px rgba(16, 24, 40, 0.6);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 480px) {
+  .v3-wrap {
+    padding: 0 18px;
+  }
+
+  .v3-logo {
+    font-size: 17px;
+  }
+
+  .v3-pill-dark {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 960px) {
+  .v3-section {
+    padding: 66px 0;
+  }
+
+  .v3-cards,
+  .v3-feat,
+  .v3-feat.is-rev {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .v3-feat.is-rev .v3-txt {
+    order: 0;
+  }
+
+  .v3-list2 {
+    grid-template-columns: 1fr;
+  }
+
+  .v3-chgrid {
+    grid-template-columns: 1fr;
+  }
+
+  /* No hover on touch, and no room beside the menu on narrow screens. */
+  .v3-split-menu a[data-v3-tip]::after {
+    display: none;
+  }
+
+  .v3-chgroup + .v3-chgroup {
+    margin-top: 34px;
+  }
+
+  .v3-contact-head {
+    margin-bottom: 36px;
+  }
+
+  .v3-navlink,
+  .v3-ghost {
+    display: none;
+  }
+
+  /* Make room for the burger on small screens. */
+  .v3-nav {
+    gap: 14px;
+  }
+
+  .v3-nav-right {
+    gap: 10px;
+  }
+
+  .v3-ghost-icon {
+    display: none;
+  }
+
+  .v3-burger {
+    display: flex;
+  }
+
+  .v3-footer-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- inner pages: map the AstroWind tokens onto the v3 palette ----------
+   The EN and zh-CN inner pages (about, versions, faq, changelog, privacy, terms)
+   still use the AstroWind widgets; re-pointing these variables inside `.v3` makes
+   their colours, fonts and radii follow the v3 language. The light values are
+   forced even under `.dark`, because the v3 pages are light-only by design. */
+.v3,
+.dark .v3 {
+  --aw-font-sans: 'Instrument Sans';
+  --aw-font-serif: 'Instrument Sans';
+  --aw-font-heading: 'Instrument Sans';
+
+  --aw-color-primary: #0a7cff;
+  --aw-color-secondary: #0d44e8;
+  --aw-color-accent: #3689fb;
+
+  --aw-color-text-heading: #14161c;
+  --aw-color-text-default: rgba(22, 22, 24, 0.86);
+  --aw-color-text-muted: rgba(22, 22, 24, 0.6);
+  --aw-color-bg-page: #f2f2f2;
+}
+
+.v3 ::selection {
+  background-color: rgba(10, 124, 255, 0.18);
+}
+
+/* Buttons: same shape and finish as the v3 homepage ones. The split download
+   control keeps its one-piece look (square seam, rounded outer corners), so it
+   is excluded here and re-rounded separately below. */
+.v3 .btn:not(.split-main):not(.split-toggle) {
+  border-radius: 12px;
+  font-weight: 550;
+}
+
+.v3 .split-main {
+  border-start-start-radius: 12px;
+  border-end-start-radius: 12px;
+}
+
+.v3 .split-toggle {
+  border-start-end-radius: 12px;
+  border-end-end-radius: 12px;
+}
+
+.v3 .btn-primary {
+  background-image: linear-gradient(180deg, #2f95ff 0%, #0a7cff 100%);
+  border-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  box-shadow:
+    0 0 0 1px rgba(47, 149, 255, 0.35),
+    0 12px 26px -10px rgba(63, 127, 205, 0.75);
+}
+
+.v3 .btn-primary:hover {
+  background-image: linear-gradient(180deg, #46a0ff 0%, #0d84ff 100%);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 1px rgba(47, 149, 255, 0.42),
+    0 16px 30px -12px rgba(63, 127, 205, 0.85);
+}

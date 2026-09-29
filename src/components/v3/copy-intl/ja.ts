@@ -1,0 +1,323 @@
+import type { V3LocaleCopy } from './types';
+
+/**
+ * Japanese copy for the v3 pages. Terminology follows the Shotera app's ja
+ * language pack.
+ */
+export default {
+  home: 'Shotera — スクリーンショットと画面録画を、もっと速くスマートに',
+  nav: {
+    features: '機能',
+    versions: 'バージョン比較',
+    changelog: '更新履歴',
+    about: '概要',
+    faq: 'よくある質問',
+    menu: 'メニュー',
+    language: '言語',
+    cta: '無料ダウンロード',
+  },
+  hero: {
+    badge: '新着',
+    announce: 'Lite 版：インストーラーは約 17 MB',
+    modes: [
+      {
+        key: 'capture',
+        label: 'スクリーンショット',
+        caption: 'マウスを重ねるだけでウィンドウと UI 要素を検出。狙った範囲が一度で決まります。',
+      },
+      {
+        key: 'long',
+        label: '長尺キャプチャ',
+        caption: '長いページも長いチャットも——自動でも手動でも、1枚の画像につなぎ合わせます。',
+      },
+      {
+        key: 'pin',
+        label: '画面に固定',
+        caption: 'スクリーンショットを画面の最前面に固定。拡大縮小、半透明、並べて比較。',
+      },
+      {
+        key: 'record',
+        label: '画面録画',
+        caption: '720p から 4K まで高フレームレートで録画。カーソルとクリックを強調し、MP4 か GIF に書き出せます。',
+      },
+      { key: 'ai', label: 'AI 機能', caption: 'AI 切り抜き、AI 消去、オフライン OCR——すべて端末上で処理します。' },
+    ],
+    h1: [
+      [{ text: 'スクリーンショット、画面録画、' }, { text: 'AI の魔法', hl: true }],
+      [{ text: 'ショートカットひとつで、すべて' }],
+    ],
+    sub: 'Shotera は、一日中スクリーンショットを撮る人のためのデスクトップキャプチャツールです。注釈、長尺キャプチャ、GIF 録画、AI 切り抜き、オフライン OCR、画像翻訳、画面への固定まで——作業の流れを離れずに使えます。',
+    primary: '無料ダウンロード',
+    secondary: '使い方を見る',
+    metaStrong: 'Windows 10/11+',
+    metaRest: 'インストーラー / ポータブル版 / MSI',
+    store: 'Microsoft Store でも入手できます',
+    shellMonitor: 'アルミニウム製モニターの筐体',
+    shellLaptop: 'ノート PC の筐体',
+  },
+  download: {
+    more: 'その他のダウンロードオプション',
+    menu: 'ダウンロードオプション',
+    edition: 'Shotera Standard 版',
+    setup: 'インストーラー（.exe）',
+    portable: 'ポータブル版（.7z）',
+    msi: 'MSI インストーラー',
+    store: 'Microsoft Store 版',
+    setupTip: 'ダブルクリックでインストールできます。多くの人が選ぶ方法です。',
+    portableTip: '解凍すればすぐ使えます。USB メモリに入れて持ち歩けます。',
+    msiTip: '主に企業の管理者が、多数の PC へ一括展開するときに使います。',
+    storeTip: 'Microsoft Store で配信されている版です。ストアからアプリを入手するのが好みの方に。',
+    recommend: 'おすすめ',
+    allVersions: 'GitHub ですべてのバージョンを見る',
+  },
+  trust: [
+    { value: '15', label: 'UI 言語' },
+    { value: '4.9 / 5', label: 'ユーザー評価' },
+    { value: '100%', label: '端末上の AI 処理' },
+    { value: '<0.1s', label: 'ショートカット起動' },
+  ],
+  modesSection: {
+    eyebrow: '毎日使う3つの流れ',
+    title: 'すべてのキャプチャ作業を、ショートカットひとつで',
+    lead: 'スクリーンショット、画面に固定、画面録画 & GIF。毎日何度も使う3つの作業は、ショートカットひとつにまとまっています。',
+    bestFor: 'おすすめの用途',
+    cards: [
+      {
+        icon: 'capture',
+        title: 'スクリーンショット',
+        one: '範囲、ウィンドウ、全画面をキーひとつで。ウィンドウと UI 要素は自動で検出します。',
+        steps: ['ショートカットを押す', 'マウスを重ねて範囲を合わせる', '注釈を付けて、コピーまたは保存'],
+        bestFor: '日常の共有と資料づくり',
+      },
+      {
+        icon: 'pin',
+        title: '画面に固定',
+        one: 'スクリーンショットを、必要な間ずっとほかのすべての上に浮かせておけます。',
+        steps: ['撮ったその場で固定', '拡大縮小、半透明で比較', 'ウィンドウを行き来せずに作業'],
+        bestFor: '参照しながらの作業と並べての比較',
+      },
+      {
+        icon: 'record',
+        title: '画面録画 & GIF',
+        one: '720p から 4K まで、30 / 60 fps。録画時間の制限はありません。',
+        steps: ['範囲を選んで録画', 'カーソルとクリックを表示', 'MP4 か GIF に書き出す'],
+        bestFor: 'チュートリアルと不具合報告',
+      },
+    ],
+  },
+  features: [
+    {
+      eyebrow: 'スクリーンショット',
+      title: 'キーひとつで、狙った範囲ぴったり',
+      lead: 'ショートカットで呼び出したら、撮影・注釈・コピーまで、流れを止めずに一息で終わらせます。',
+      rows: [
+        'マウスを重ねると、Shotera が下のウィンドウや UI 要素を自動でとらえます',
+        '矢印、四角形、テキスト、連番、絵文字、ルーペ——撮ったその場で注釈できます',
+        '完了のしかたは2つ。クリップボードへすぐコピーするか、その場で注釈を始めるか（エレガント / その場で注釈）',
+      ],
+      items: [
+        { title: '絵文字ステッカー', note: 'クリックひとつで気持ちを添える' },
+        { title: 'ルーペ', note: '細部を拡大して見せる' },
+        { title: '連番', note: '読む順番を案内' },
+        { title: 'モザイク & 蛍光ペン', note: 'プライバシーと強調に' },
+      ],
+      image: 'capture',
+    },
+    {
+      eyebrow: '長尺キャプチャ',
+      title: '画面より長いページも、1枚で',
+      lead: '長いページ、長いチャット、文書まるごと——上から下まで1枚の画像に収めます。',
+      rows: [
+        '自動スクロールでも、自分の手でスクロールしても。スクロールしながら1コマずつ取り込まれます',
+        '隣り合うフレームを照合してなめらかにつなぐので、仕上がった長い画像に継ぎ目は見えません',
+      ],
+      items: [
+        { title: 'リアルタイムの結合プレビュー', note: 'すべて入った瞬間に停止' },
+        { title: '継ぎ目が見えない', note: '1枚の続いたページのように' },
+        { title: '長いチャット', note: 'やり取りの全体を1枚に' },
+        { title: 'コピーも保存も', note: '資料や Issue にそのまま' },
+      ],
+      image: 'longshot',
+      reversed: true,
+    },
+    {
+      eyebrow: '画面に固定',
+      title: '参考資料は最前面に、作業はその隣で',
+      lead: 'スクリーンショットを最前面に浮かせておけば、ウィンドウを切り替えずに比較し、参照しながら作業を続けられます。',
+      rows: [
+        '作業の流れを止めずに、スクリーンショットを画面の最前面に固定できます',
+        'どの辺や角からでもリサイズでき、縦横比は固定。ダブルクリックで元のサイズとサムネイルを切り替えられます',
+      ],
+      items: [
+        { title: '複数まとめて固定', note: '並べて比較' },
+        { title: 'サムネイルモード', note: 'ダブルクリックで小さく' },
+        { title: 'マウスパススルー', note: '下のウィンドウを遮らない' },
+        { title: '直前の固定を復元', note: 'キーひとつで呼び戻す' },
+      ],
+      image: 'pin',
+    },
+    {
+      eyebrow: '画面録画',
+      title: '4K 録画、必要なだけ長く',
+      lead: '「説明しにくい」ことを、誰でも追えるクリップに変えます。',
+      rows: [
+        '720p / 1080p / 2K / 4K、30 / 60 fps、録画時間の制限なし',
+        '軽い GIF をドキュメントやチャット、Issue に貼るだけ——プレーヤーは必要ありません',
+      ],
+      items: [
+        { title: 'カーソルとクリックを表示', note: 'すべての手順がはっきり' },
+        { title: 'MP4 か GIF', note: '画質か容量か、選べる' },
+        { title: '4K 対応', note: '高解像度ディスプレイのために' },
+        { title: '履歴', note: '直前の録画をすぐ見つける' },
+      ],
+      image: 'recording',
+      reversed: true,
+    },
+    {
+      eyebrow: 'AI 機能',
+      title: 'スクリーンショットの仕上げを担う AI',
+      lead: 'AI 切り抜き、AI 消去、OCR はすべて端末上で実行。賢さとプライバシーを両立します。',
+      rows: [
+        '人物、商品、ロゴ——数秒で透明 PNG に。アップロードも、サーバーの待ち時間もありません',
+        'OCR は端末上で動作し、編集もコピーもできるテキストをワンクリックで返します',
+      ],
+      items: [
+        { title: '被写体を切り抜く', note: 'ワンクリックで透明背景' },
+        { title: '余計なものを消去', note: 'AI が背景を自然に補完' },
+        { title: 'オフライン OCR', note: '多言語混在、コード、表' },
+        { title: '画像翻訳', note: '外国語のスクリーンショットもすぐ読める' },
+      ],
+      image: 'ai',
+    },
+  ],
+  cta: {
+    eyebrow: '無料で始める',
+    title: 'スクリーンショットを、もっと速く、もっと賢く',
+    lead: 'ダウンロードは無料、インストールは数秒です。毎日繰り返す「スクリーンショットを1枚撮るだけ」を、その手間を分かっているツールに任せてください。',
+    primary: '無料ダウンロード',
+    secondary: 'その他のバージョン',
+    note: 'Standard 版と Lite 版があります。Windows 10/11+ に対応。インストーラー / ポータブル版 / MSI を選べます。',
+  },
+  contact: {
+    eyebrow: 'お問い合わせ',
+    title: '質問もアイデアも、お聞かせください。',
+    lead: '困ったことがある、機能がほしい、ただ挨拶したい。そんなときは、ご都合のいいチャンネルを選んでください。',
+    replyNote: 'メールと GitHub は毎日確認しており、通常は 24 営業時間以内に返信します。',
+    faqNote: '困ったときは、まずよくある質問へ。ほとんどの答えはそこにあります。',
+    faqLink: 'よくある質問を読む',
+    soon: '近日公開',
+    mail: {
+      subject: 'Shotera へのフィードバック — ',
+      body: [
+        'こんにちは。',
+        '',
+        '（困っていることや、ご希望の機能をここに書いてください。）',
+        '',
+        '',
+        '差し支えなければ、以下も添えていただけると助かります。',
+        '',
+        '\u00b7 Shotera の版（Lite / Standard）：',
+        '\u00b7 Windows のバージョン：',
+        '\u00b7 再現手順：',
+        '',
+        'ありがとうございます。',
+      ].join('\n'),
+      copied: 'メールアドレスをコピーしました。メールアプリを開きます…',
+    },
+    groups: [
+      {
+        key: 'talk',
+        title: '直接連絡する',
+        note: 'いただいたフィードバックには、すべて丁寧に目を通します。',
+        channels: [
+          {
+            key: 'email',
+            name: 'メール',
+            handle: 'mosuzo.studio@gmail.com',
+            note: 'サポート、ライセンス、提携のご相談。',
+            icon: 'tabler:mail',
+            href: 'mailto:mosuzo.studio@gmail.com',
+            tint: '#0a7cff',
+          },
+          {
+            key: 'github',
+            name: 'GitHub',
+            handle: 'mosuzo-studio/Shotera',
+            note: '不具合報告、機能の提案、過去のバージョン。',
+            icon: 'tabler:brand-github',
+            href: 'https://github.com/mosuzo-studio/Shotera',
+            tint: '#24292f',
+          },
+          {
+            key: 'discord',
+            name: 'Discord',
+            note: 'ほかの Shotera ユーザーと交流できます。',
+            icon: 'tabler:brand-discord',
+            tint: '#5865f2',
+          },
+        ],
+      },
+      {
+        key: 'follow',
+        title: '最新情報をフォロー',
+        note: 'リリース情報、使い方のヒント、開発の舞台裏。',
+        channels: [
+          {
+            key: 'x',
+            name: 'X',
+            note: 'リリース情報とちょっとしたヒント。',
+            icon: 'tabler:brand-x',
+            tint: '#111111',
+          },
+          {
+            key: 'bilibili',
+            name: 'Bilibili',
+            note: 'チュートリアルと機能の紹介。',
+            icon: 'tabler:brand-bilibili',
+            tint: '#00a1d6',
+          },
+          {
+            key: 'telegram',
+            name: 'Telegram',
+            note: '新バージョンのお知らせ。',
+            icon: 'tabler:brand-telegram',
+            tint: '#229ed9',
+          },
+        ],
+      },
+    ],
+  },
+  footer: {
+    blurb:
+      'スクリーンショットと画面録画を、もっと速く、もっと賢く——固定し、注釈を付け、伝わるところまで、ショートカットひとつで。',
+    cols: [
+      {
+        title: '製品',
+        links: [
+          { text: '機能', path: '/', hash: 'features' },
+          { text: 'バージョン比較', path: '/versions' },
+        ],
+      },
+      {
+        title: 'サポート',
+        links: [
+          { text: 'よくある質問', path: '/faq' },
+          { text: '更新履歴', path: '/changelog' },
+        ],
+      },
+      {
+        title: '運営',
+        links: [
+          { text: 'Shotera について', path: '/about' },
+          { text: 'お問い合わせ', path: '/contact' },
+        ],
+      },
+    ],
+    legal: [
+      { text: '利用規約', path: '/terms' },
+      { text: 'プライバシーポリシー', path: '/privacy' },
+    ],
+    rights: '© 2026 Mosuzo Studio',
+    system: 'Windows 10/11+ · UI 言語 15 種',
+  },
+} satisfies V3LocaleCopy;

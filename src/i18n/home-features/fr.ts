@@ -18,12 +18,12 @@ export const content: HomeFeaturesContent = {
           'Enregistrez en ultra-HD jusqu’en 4K avec une fréquence d’images élevée, puis exportez en MP4 ou en GIF léger. Aucune limite de durée — enregistrez aussi longtemps que nécessaire.',
       },
       {
-        title: 'Détourage IA',
+        title: 'Détourage AI',
         description:
           'Isolez le sujet et supprimez l’arrière-plan en un clic. Personnes, produits, logos : détourés et prêts à l’emploi, traités entièrement en local. Pas besoin de Photoshop.',
       },
       {
-        title: 'Effacement IA',
+        title: 'Effacement AI',
         description:
           'Supprimez intelligemment les objets indésirables, les filigranes ou les imperfections d’une image. L’IA reconstitue l’arrière-plan naturellement. Entièrement hors ligne, entièrement privé.',
       },
@@ -38,7 +38,7 @@ export const content: HomeFeaturesContent = {
           'Reconnaissez et traduisez le texte de n’importe quelle image à la volée. Lisez documents, captures et menus en langue étrangère, puis copiez la traduction directement.',
       },
       {
-        title: 'Épingler à l’écran',
+        title: 'Épingler au bureau',
         description:
           'Gardez n’importe quelle capture flottant au-dessus pendant que vous travaillez. Redimensionnez, organisez et consultez côte à côte sans changer de fenêtre.',
       },
@@ -97,15 +97,15 @@ export const content: HomeFeaturesContent = {
   ai: {
     tagline: 'Fonctions IA',
     title: 'Une IA qui va au-delà de la capture',
-    text: 'Détourage, effacement et OCR IA tournent en local — l’intelligence sans sacrifier la confidentialité.',
+    text: 'Détourage AI, effacement AI et OCR tournent en local — l’intelligence sans sacrifier la confidentialité.',
     items: [
       {
-        title: 'Suppression d’arrière-plan par IA',
+        title: 'Détourage AI',
         description:
           'Détectez le sujet et supprimez l’arrière-plan en un clic — des PNG transparents de personnes et de produits en quelques secondes. Tourne entièrement sur votre appareil.',
       },
       {
-        title: 'Effacement IA',
+        title: 'Effacement AI',
         description:
           'Supprimez intelligemment objets indésirables, filigranes ou imperfections. L’IA reconstitue l’arrière-plan naturellement. Fonctionne aussi en local — aucun envoi, aucun cloud.',
       },
@@ -117,7 +117,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Changement de modèle flexible',
         description:
-          'Le détourage et l’effacement IA acceptent le changement de modèle personnalisé. Utilisez le meilleur modèle du moment à tout instant et gardez une longueur d’avance.',
+          'Le détourage AI et l’effacement AI acceptent le changement de modèle personnalisé. Utilisez le meilleur modèle du moment à tout instant et gardez une longueur d’avance.',
       },
     ],
   },
@@ -142,7 +142,7 @@ export const content: HomeFeaturesContent = {
           'Guidez la lecture de vos captures grâce à des annotations numérotées — parfait pour les tutoriels et les guides pas à pas.',
       },
       {
-        title: 'Épingler à l’écran',
+        title: 'Épingler au bureau',
         description:
           'Gardez vos images de référence flottant au-dessus pour travailler à côté, sans jongler entre les fenêtres.',
       },
@@ -164,7 +164,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Local d’abord, privé avant tout',
         description:
-          'OCR, détourage et effacement IA s’exécutent sur votre appareil — rien n’est envoyé. Vos captures n’appartiennent qu’à vous.',
+          'OCR, détourage AI et effacement AI s’exécutent sur votre appareil — rien n’est envoyé. Vos captures n’appartiennent qu’à vous.',
       },
       {
         title: 'Léger en ressources',

@@ -4,7 +4,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/PageLayoutV3.astro';
 import { getSetupDownloadUrl } from '~/utils/download';
 
 const setupUrl = await getSetupDownloadUrl();
@@ -21,7 +21,7 @@ const metadata = {
     tagline="关于我们"
     image={{
       src: '~/assets/images/about-hero.png',
-      alt: 'Windows 桌面上的 Shotera 标注工具',
+      alt: 'Shotera 能力全景：截图与标注、长截图拼接、贴图并排与 AI 抠图',
     }}
   >
     <Fragment slot="title">
@@ -73,57 +73,106 @@ const metadata = {
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Features3 Widget — L1 核心能力 ************** -->
 
   <Features3
+    title="核心能力"
+    subtitle="从截图到录屏，从贴图到 OCR 与 AI——六件高频的事，一个快捷键全都在。"
     columns={3}
     isAfterContent={true}
     items={[
       {
         title: '截图',
-        description: '智能识别窗口与界面元素，要截的范围自动选好，基本不用手动拖框。',
+        description:
+          '智能识别窗口与界面元素，要截的范围自动选好。框选完成后可以自动复制，也可以立刻打开标注工具栏——两种完成模式随你挑。',
         icon: 'tabler:capture',
       },
       {
-        title: '滚动截图',
+        title: '长截图',
         description: '网页、长聊天记录一次截全：自动滚或自己滚，边滚边拼成一张长图，拼到哪实时可见。',
         icon: 'local:longshot',
       },
       {
-        title: '录屏 & GIF',
-        description: '录制屏幕并一键导出轻量 GIF，光标高亮、按键提示，演示教程格外清晰。',
-        icon: 'tabler:video',
-      },
-      {
-        title: 'AI 抠图',
-        description: '一键智能识别主体、去除背景，导出透明底图片，无需 PS。',
-        icon: 'tabler:wand',
-      },
-      {
-        title: '离线 OCR',
-        description: '本地识别截图中的文字，中英日等多语言，复制粘贴即用，无需联网。',
-        icon: 'tabler:text-recognition',
-      },
-      {
-        title: '图片翻译',
-        description: '识别图片中的文字并即时翻译，看外文文档、图表、界面不再有障碍。',
-        icon: 'tabler:language',
-      },
-      {
-        title: '贴图 / 钉图',
+        title: '贴图',
         description: '把截图钉在屏幕最上层，随时对照参考，多图排布也不乱。',
         icon: 'tabler:pin',
       },
       {
-        title: '图片查看',
-        description: '截图和图片文件在独立查看窗口里打开：同目录翻页、缩放细看、顺手改两笔。',
-        icon: 'tabler:photo',
+        title: '录屏 & GIF',
+        description: '录制屏幕并一键导出轻量 GIF，光标高亮、点击提示，演示教程格外清晰。',
+        icon: 'tabler:video',
+      },
+      {
+        title: '离线 OCR',
+        description: '截图里的文字就地提取成可编辑文本，中英日等多语言，全程在本地完成，复制粘贴即用。',
+        icon: 'tabler:text-recognition',
+      },
+      {
+        title: 'AI 抠图与擦图',
+        description: 'AI 抠图一键去背景、导出透明底图；AI 擦图擦掉画面里的杂物和水印。都用本地模型，不上传。',
+        icon: 'tabler:wand',
       },
     ]}
     image={{
       src: '~/assets/images/about-features.png',
-      alt: 'Shotera 工具箱：截图、滚动截图、录屏、AI 抠图、离线 OCR、图片翻译、贴图 / 钉图与图片查看',
+      alt: 'Windows 桌面上的 Shotera 标注工具：选区、工具条与贴片',
     }}
+  />
+
+  <!-- Features3 Widget — L2 更多能力 ************** -->
+
+  <Features3
+    title="更多能力"
+    subtitle="工具感藏在细节里：标注、识别、查看，还有让桌面更顺手的那些设定。"
+    columns={3}
+    items={[
+      {
+        title: '标注工具',
+        description:
+          '矩形/椭圆、直线/箭头、画笔、荧光笔、马赛克/模糊、文字、序号、表情贴纸、放大镜、橡皮擦——截完即标。',
+        icon: 'tabler:pencil',
+      },
+      {
+        title: 'Emoji 贴纸',
+        description: '数百种表情贴纸随手贴上：点赞、比心、吐槽、庆祝，随意缩放、任意摆放，给截图加点乐子。',
+        icon: 'tabler:mood-smile',
+      },
+      {
+        title: '图片查看与编辑',
+        description: '截图和图片文件都在独立窗口里打开：同目录翻页、缩放细看、顺手改两笔；常见格式都能直接看。',
+        icon: 'tabler:photo',
+      },
+      {
+        title: '图片翻译',
+        description: '截图里的外文就地翻成你的语言，译文直接复制走。',
+        icon: 'tabler:language',
+      },
+      {
+        title: '二维码识别',
+        description: '二维码、条码就地识别：链接、WiFi、联系人、商品条码，结果一键复制，全程离线。',
+        icon: 'tabler:qrcode',
+      },
+      {
+        title: '自定义截图',
+        description: '固定尺寸、比例、延迟与屏幕坐标，做素材和批量截图更省事。',
+        icon: 'tabler:crop',
+      },
+      {
+        title: '多显示器',
+        description: '多屏按统一坐标系工作，副屏、扩展屏都能正常框选；高 DPI 屏幕下界面与截图保持清晰。',
+        icon: 'tabler:devices',
+      },
+      {
+        title: '深色模式',
+        description: '跟随系统自动切换，也可以在浅色与深色之间手动选择。',
+        icon: 'tabler:moon',
+      },
+      {
+        title: '演示模式',
+        description: '一键收起杂乱窗口、隐藏桌面图标、切换干净壁纸；收工后原样还给你。',
+        icon: 'tabler:presentation',
+      },
+    ]}
   />
 
   <!-- Steps2 Widget ****************** -->
@@ -166,7 +215,7 @@ const metadata = {
       },
       {
         title: '被用户推着长大',
-        description: '滚动截图、AI 抠图、离线 OCR、图片翻译……很多功能，都是用户在反馈里「点」出来的。',
+        description: '长截图、AI 抠图、离线 OCR、图片翻译……很多功能，都是用户在反馈里「点」出来的。',
         icon: 'tabler:users',
       },
       {
@@ -185,9 +234,10 @@ const metadata = {
     columns={2}
     items={[
       {
-        title: '用户社群',
-        description: '加入 Shotera 用户群，第一时间获取新版本、使用技巧，也能直接把想法告诉我们。',
-        icon: 'tabler:messages',
+        title: 'GitHub',
+        description:
+          '<a class="font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300" href="https://github.com/mosuzo-studio/Shotera">mosuzo-studio/Shotera</a>：提交问题与建议，下载历史版本。',
+        icon: 'tabler:brand-github',
       },
       {
         title: '邮件支持',

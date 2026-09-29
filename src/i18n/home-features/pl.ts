@@ -38,7 +38,7 @@ export const content: HomeFeaturesContent = {
           'Rozpoznawaj i tłumacz tekst w dowolnym obrazie od ręki. Czytaj obcojęzyczne dokumenty, zrzuty i menu, a potem kopiuj tłumaczenie wprost z okna.',
       },
       {
-        title: 'Przypinanie na ekranie',
+        title: 'Przypnij do pulpitu',
         description:
           'Trzymaj dowolny zrzut na wierzchu podczas pracy. Zmieniaj rozmiar, układaj obok siebie i korzystaj z odniesienia bez przełączania okien.',
       },
@@ -58,10 +58,10 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Pełny zestaw adnotacji',
         description:
-          'Naklejki emoji, lupa, numery kroków, strzałki, ramki, tekst, zakreślenia i rozmycie — oznaczaj od razu przy przechwytywaniu, aby sens trafiał natychmiast.',
+          'Naklejki emoji, lupa, numeracja, strzałki, ramki, tekst, zakreślacz i rozmycie — oznaczaj od razu przy przechwytywaniu, aby sens trafiał natychmiast.',
       },
       {
-        title: 'Rozmycie i zakreślanie',
+        title: 'Rozmycie i zakreślacz',
         description:
           'Jednym kliknięciem rozmyj wrażliwe informacje lub wyróżnij kluczowe obszary. Ochrona prywatności i podkreślenie najważniejszego naraz.',
       },
@@ -96,7 +96,7 @@ export const content: HomeFeaturesContent = {
   ai: {
     tagline: 'Funkcje AI',
     title: 'AI, które wykracza poza zrzut ekranu',
-    text: 'Wycinanie AI, gumka i OCR działają lokalnie — inteligencja bez kompromisów dla prywatności.',
+    text: 'Wycinanie AI, wymazywanie AI i OCR działają lokalnie — inteligencja bez kompromisów dla prywatności.',
     items: [
       {
         title: 'Wycinanie AI',
@@ -109,7 +109,7 @@ export const content: HomeFeaturesContent = {
           'Usuwaj niechciane obiekty, znaki wodne lub skazy inteligentnie — AI naturalnie wypełnia tło. Również lokalnie: bez wysyłania i bez chmury.',
       },
       {
-        title: 'Wyodrębnianie tekstu offline',
+        title: 'OCR offline',
         description:
           'OCR działa lokalnie i nie sięga do chmury. Zamień tekst ze zrzutu w edytowalny i kopiowalny tekst jednym kliknięciem.',
       },
@@ -135,11 +135,11 @@ export const content: HomeFeaturesContent = {
         description: 'Powiększ kluczowe szczegóły, aby odbiorcy zobaczyli dokładnie to, co chcesz podkreślić.',
       },
       {
-        title: 'Numery kroków',
+        title: 'Numeracja',
         description: 'Prowadź odbiorców przez zrzut dzięki numerowanym krokom — idealne do samouczków i instrukcji.',
       },
       {
-        title: 'Przypinanie na ekranie',
+        title: 'Przypnij do pulpitu',
         description: 'Trzymaj obrazy referencyjne na wierzchu, aby pracować obok nich bez żonglowania oknami.',
       },
       {

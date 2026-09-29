@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 設定 → 關於 → 回饋與建議
 
-**🔗 版本導覽**
+**ℹ️ 最新說明請先看[英文版更新日誌](/changelog)，本語言的版本會稍晚一些更新。**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">新</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -34,16 +34,16 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 **發布日期:** 2026-09-24
 
-Lite 版、長截圖、可縮放的釘圖，以及更輕量的建置。
+Lite 版、長截圖、可縮放的貼圖，以及更輕量的建置。
 
-**🆚 Lite 版與完整版差異：** 詳見[版本對比](/zh-tw/versions)。
+**🆚 Lite 版與標準版差異：** 詳見[版本對比](/zh-tw/versions)。
 
 **✨ 新增功能**
 
-- 新增 Lite 版：安裝程式僅 17MB，包含核心截圖與標註功能。設定頁的升級橫幅連結至官網的完整版。
+- 新增 Lite 版：安裝程式僅 17MB，包含核心截圖與標註功能。設定頁的升級橫幅連結至官網的標準版。
 - [Shotera 官方網站](https://shotera.mosuzo.com/)內容與樣式更新。
 - 新成長截圖（預覽版、Beta 測試）：提供自動與手動滾動兩種模式，附即時預覽小窗。智慧拼接演算法會偵測頂部邊界並處理混合版面。首次使用有教學提示引導操作。歡迎加入測試團隊體驗。
-- 釘圖視窗增強：雙擊可在原始尺寸與縮圖+關閉模式之間切換。拖曳邊緣或四角調整尺寸，並鎖定長寬比。原生右鍵選單可超出視窗邊界。工具列顯示狀態可跨工作階段保留 ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14))。
+- 貼圖視窗增強：雙擊可在原始尺寸與縮圖+關閉模式之間切換。拖曳邊緣或四角調整尺寸，並鎖定長寬比。原生右鍵選單可超出視窗邊界。工具列顯示狀態可跨工作階段保留 ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14))。
 - AI 去背模型改用內建 u2netp，速度極快。rmbg-1.4 改為隨需下載，首次使用附引導說明。
 - 編輯器新增列印指令：右鍵選單與「檔案」選單可開啟系統列印對話框 ([#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8))。
 - 編輯器右鍵選單可開啟檔案所在資料夾，並醒目顯示目前的檔案 ([#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10))。
@@ -62,7 +62,7 @@ Lite 版、長截圖、可縮放的釘圖，以及更輕量的建置。
 **🐞 問題修復**
 
 - 修正雙螢幕環境下標註視窗初始定位錯誤。
-- 修正釘圖視窗拖曳縮放的比例計算錯誤與邊框抖動。
+- 修正貼圖視窗拖曳縮放的比例計算錯誤與邊框抖動。
 - 修正雙擊行為在選取後未生效，且無法返回原始尺寸。
 - 修正長截圖拼接失敗對話框被點擊穿透規則擋住。
 - 修正編輯器載入圖片後出現幽靈捲軸與 0%/1% 縮放顯示。
@@ -70,7 +70,7 @@ Lite 版、長截圖、可縮放的釘圖，以及更輕量的建置。
 
 **🙏 致謝名單**
 
-感謝回報問題與提出功能建議的社群成員，這些意見塑造了本次版本。長截圖與釘圖視窗的增強由使用者回饋推動。
+感謝回報問題與提出功能建議的社群成員，這些意見塑造了本次版本。長截圖與貼圖視窗的增強由使用者回饋推動。
 
 ---
 
@@ -78,7 +78,7 @@ Lite 版、長截圖、可縮放的釘圖，以及更輕量的建置。
 
 **發布日期:** 2026-09-21
 
-新功能介紹視窗、QR Code 辨識、GIF 動圖播放，以及更多圖片格式支援。
+新功能介紹視窗、QR Code 辨識、GIF 播放，以及更多圖片格式支援。
 
 **✨ 新增功能**
 
@@ -90,7 +90,7 @@ Lite 版、長截圖、可縮放的釘圖，以及更輕量的建置。
 - 狀態列顯示縮放比例、圖片尺寸、檔案大小與檔案路徑。路徑顯示提供三種模式：隱藏、麵包屑與完整路徑。
 - 編輯器標題列顯示目前的圖片名稱。畫布右鍵選單可開啟檔案所在資料夾，並醒目顯示目前的檔案 ([#1](https://github.com/mosuzo-studio/Shotera/issues/1))。
 - 儲存覆寫檔案前新增確認對話框。勾選「不再詢問」即可日後略過。
-- 釘圖視窗：可從右鍵選單隱藏右上角工具列，且設定會被記住 ([#4](https://github.com/mosuzo-studio/Shotera/issues/4))。
+- 貼圖視窗：可從右鍵選單隱藏右上角工具列，且設定會被記住 ([#4](https://github.com/mosuzo-studio/Shotera/issues/4))。
 
 **🚀 改進優化**
 
@@ -124,12 +124,12 @@ QR Code 辨識是應重度使用者 Horihons 的意見回饋而新增。
 
 **發布日期:** 2026-09-14
 
-優雅的擷取模式、即時釘圖、複製快速鍵。
+優雅的擷取模式、即時貼圖、複製快速鍵。
 
 **✨ 新增功能**
 
 - 新增「優雅簡潔」擷取模式：選取區域，完成。圖片已複製並顯示通知預覽。無浮層。支援深色模式 ([#1](https://github.com/mosuzo-studio/Shotera/issues/1))。
-- 新增 F3 即時釘圖快速鍵，可在擷取期間或之後使用。可在「設定 → 快速鍵」中自訂 ([#3](https://github.com/mosuzo-studio/Shotera/issues/3), [#4](https://github.com/mosuzo-studio/Shotera/issues/4))。
+- 新增 F3 即時貼圖快速鍵，可在擷取期間或之後使用。可在「設定 → 快速鍵」中自訂 ([#3](https://github.com/mosuzo-studio/Shotera/issues/3), [#4](https://github.com/mosuzo-studio/Shotera/issues/4))。
 - 新增 Ctrl+C 一步複製截圖並關閉浮層。
 - 新增雙擊立即確認截圖。
 - 新增按右鍵取消截圖。
@@ -145,8 +145,8 @@ QR Code 辨識是應重度使用者 Horihons 的意見回饋而新增。
 **🐞 問題修復**
 
 - 修正非英文安裝路徑下 OCR 失敗。
-- 修正高 DPI 顯示器上釘圖解析度降低。
-- 修正 F3 從選取範圍與剪貼簿建立重複釘圖。
+- 修正高 DPI 顯示器上貼圖解析度降低。
+- 修正 F3 從選取範圍與剪貼簿建立重複貼圖。
 - 修正 Microsoft Store 版本在「優雅簡潔」模式下不顯示通知。
 - 修正 Microsoft Store 版本點擊通知觸發額外截圖。
 - 修正升級後更新按鈕紅點持續顯示。
@@ -349,7 +349,7 @@ QR Code 辨識是應重度使用者 Horihons 的意見回饋而新增。
 - 工作列控制項與檔案總管導覽圖示/文字更容易精確鎖定。
 - Chromium 與 Electron 的無障礙樹會預先暖機，並在需要時重試。
 - 剪貼簿圖片傳輸使用更直接的 RGBA 路徑。
-- 選取區域時，Alt+T 釘圖與 Ctrl+S 儲存可正常運作。
+- 選取區域時，Alt+T 貼圖與 Ctrl+S 儲存可正常運作。
 - AI 模型資產已恢復。可攜式套件包含所需的模型檔案。
 
 ---
@@ -358,16 +358,16 @@ QR Code 辨識是應重度使用者 Horihons 的意見回饋而新增。
 
 **發布日期:** 2026-07-29
 
-視窗偵測、標註工具、增強的釘圖。
+視窗偵測、標註工具、增強的貼圖。
 
 **✨ 新增功能**
 
 - 改進視窗與控制項偵測，巢狀目標的選取更容易。
 - 改良擷取放大鏡：邊框更清晰、調整把手更大、十字線更精準。
-- 新增形狀、箭頭、文字、貼紙、標記與局部放大鏡支援。
+- 新增形狀、箭頭、文字、表情貼圖、標記與局部放大鏡支援。
 - 改進編輯功能：調整尺寸、旋轉、樣式與復原/重做更流暢。
 - 更新工具列版面。
-- 增強置頂釘圖，支援移動、調整尺寸、旋轉、翻轉、不透明度與點擊穿透。
+- 增強置頂貼圖，支援移動、調整尺寸、旋轉、翻轉、不透明度與點擊穿透。
 - 更佳的剪貼簿相容性。
 - 恢復 AI 工具項目與工具列按鈕。
 - 恢復功能引導項目。
@@ -388,7 +388,7 @@ QR Code 辨識是應重度使用者 Horihons 的意見回饋而新增。
 
 - 快速截圖工作流程，具備 F1 熱鍵、視窗/控制項偵測與螢幕放大鏡。
 - 標註工具：矩形、橢圓、線條、箭頭、自由筆、螢光筆、富文字、自動步驟編號、馬賽克/模糊、表情貼圖、局部放大鏡。
-- F3 可為截圖或剪貼簿內容建立置頂釘圖。釘圖支援移動、調整尺寸、旋轉、翻轉與透明度。
+- F3 可為截圖或剪貼簿內容建立置頂貼圖。貼圖支援移動、調整尺寸、旋轉、翻轉與透明度。
 - 演示模式透過隱藏圖示與套用主題/桌布預設，協助在截圖/會議前準備更乾淨的桌面。
 
 **🚀 改進優化**

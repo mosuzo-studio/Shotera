@@ -18,12 +18,12 @@ export const content: HomeFeaturesContent = {
           'Registra fino a 4K Ultra HD con frame rate elevato ed esporta in MP4 o in GIF leggeri. Nessun limite di durata: registra quanto ti serve.',
       },
       {
-        title: 'Scontorno IA',
+        title: 'Scontorno AI',
         description:
           'Isola il soggetto ed elimina lo sfondo con un clic. Persone, prodotti, loghi: scontornati e pronti all’uso, con elaborazione completamente sul dispositivo. Non serve Photoshop.',
       },
       {
-        title: 'Cancellazione IA',
+        title: 'Cancellazione AI',
         description:
           'Rimuovi in modo intelligente oggetti indesiderati, filigrane o imperfezioni dalle immagini. L’AI riempie lo sfondo in modo naturale. Completamente offline, completamente privato.',
       },
@@ -58,7 +58,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Kit di annotazione completo',
         description:
-          'Adesivi emoji, lente d’ingrandimento, numeri di passo, frecce, riquadri, testo, evidenziazioni e sfocatura: annota subito dopo la cattura e il messaggio arriva all’istante.',
+          'Adesivi emoji, lente d’ingrandimento, numerazione, frecce, riquadri, testo, evidenziazioni e sfocatura: annota subito dopo la cattura e il messaggio arriva all’istante.',
       },
       {
         title: 'Sfocatura ed evidenziazione',
@@ -95,27 +95,27 @@ export const content: HomeFeaturesContent = {
   ai: {
     tagline: 'Funzioni AI',
     title: 'L’AI che va oltre lo screenshot',
-    text: 'Scontorno IA, cancellazione e OCR funzionano tutti in locale: intelligenza senza rinunciare alla privacy.',
+    text: 'Scontorno AI, cancellazione e OCR funzionano tutti in locale: intelligenza senza rinunciare alla privacy.',
     items: [
       {
-        title: 'Scontorno IA',
+        title: 'Scontorno AI',
         description:
           'Rileva il soggetto ed elimina lo sfondo con un clic: PNG trasparenti di persone e prodotti in pochi secondi. Funziona interamente sul dispositivo.',
       },
       {
-        title: 'Cancellazione IA',
+        title: 'Cancellazione AI',
         description:
           'Rimuovi oggetti indesiderati, filigrane o imperfezioni in modo intelligente. L’AI riempie lo sfondo naturalmente. Funziona anch’essa in locale: nessun caricamento, nessun cloud.',
       },
       {
-        title: 'Estrazione testo offline',
+        title: 'OCR offline',
         description:
           'L’OCR funziona in locale e non tocca mai il cloud. Trasforma il testo degli screenshot in testo modificabile e copiabile con un clic.',
       },
       {
         title: 'Cambio modello flessibile',
         description:
-          'Scontorno e cancellazione IA supportano il cambio di modello personalizzato. Usa in qualsiasi momento il modello migliore e resta sempre un passo avanti.',
+          'Scontorno e cancellazione AI supportano il cambio di modello personalizzato. Usa in qualsiasi momento il modello migliore e resta sempre un passo avanti.',
       },
     ],
   },
@@ -162,7 +162,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Prima il locale, e privato',
         description:
-          'OCR, scontorno IA e cancellazione IA funzionano tutti sul tuo dispositivo: nulla viene caricato. I tuoi screenshot sono solo tuoi.',
+          'OCR, scontorno AI e cancellazione AI funzionano tutti sul tuo dispositivo: nulla viene caricato. I tuoi screenshot sono solo tuoi.',
       },
       {
         title: 'Leggero sulle risorse',

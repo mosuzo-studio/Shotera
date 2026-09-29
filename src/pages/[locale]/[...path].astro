@@ -1,17 +1,27 @@
 ---
+import Layout from '~/layouts/Layout.astro';
+import PageLayoutV3 from '~/layouts/PageLayoutV3.astro';
+import Header from '~/components/v3/Header.astro';
+import Home from '~/components/v3/Home.astro';
+import Footer from '~/components/v3/Footer.astro';
+import Contact from '~/components/v3/Contact.astro';
+import { getV3Copy } from '~/components/v3/copy-intl';
 import LocalizedAbout from '~/components/localization/LocalizedAbout.astro';
-import LocalizedHome from '~/components/localization/LocalizedHome.astro';
+import LocalizedFaq from '~/components/localization/LocalizedFaq.astro';
 import LocalizedPage from '~/components/localization/LocalizedPage.astro';
 import LocalizedVersions from '~/components/localization/LocalizedVersions.astro';
 import { publishedLocales } from '~/i18n/locales';
 import { localizedSiteContent, type LocalizedLocale } from '~/i18n/site-content';
 import { versionsContent } from '~/i18n/versions-content';
+import { getSetupDownloadUrl } from '~/utils/download';
+
+import '~/assets/styles/v3-home.css';
 
 export function getStaticPaths() {
   const localizedLocales = publishedLocales.filter(
     (locale): locale is LocalizedLocale => locale !== 'en' && locale !== 'zh-cn'
   );
-  const localizedPaths = ['', '404', 'about', 'contact', 'blog', 'versions'] as const;
+  const localizedPaths = ['', '404', 'about', 'contact', 'faq', 'versions'] as const;
 
   return localizedLocales.flatMap((locale) =>
     localizedPaths.map((path) => ({
@@ -28,13 +38,31 @@ interface Props {
 
 const { locale, path } = Astro.props;
 const content = localizedSiteContent[locale];
+const downloadUrl = await getSetupDownloadUrl();
+const v3 = getV3Copy(locale);
 ---
 
 {
   path === '' ? (
-    <LocalizedHome locale={locale} content={content} />
+    /* The homepage leads the v3 migration; the inner pages still render on the
+       previous design until their own pass. */
+    <Layout metadata={{ title: v3.home, ignoreTitleTemplate: true }} language={locale}>
+      <div class="v3">
+        <Header lang={locale} downloadUrl={downloadUrl} />
+        <main>
+          <Home lang={locale} downloadUrl={downloadUrl} />
+        </main>
+        <Footer lang={locale} />
+      </div>
+    </Layout>
   ) : path === 'about' ? (
     <LocalizedAbout locale={locale} content={content} />
+  ) : path === 'faq' ? (
+    <LocalizedFaq locale={locale} />
+  ) : path === 'contact' ? (
+    <PageLayoutV3 metadata={{ title: `${v3.contact.title} — Shotera` }} lang={locale}>
+      <Contact lang={locale} />
+    </PageLayoutV3>
   ) : path === 'versions' ? (
     <LocalizedVersions locale={locale} content={versionsContent[locale]} />
   ) : (

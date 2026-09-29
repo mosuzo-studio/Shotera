@@ -9,7 +9,7 @@ export const content: LocaleExtras = {
 
   home: {
     heroAlt:
-      'Shoteras verktyg på skärmen: fångst, rullande skärmbild, anteckningar, inspelning, AI-frilägg, offline-OCR, QR- och streckkodsläsning, översättning och fästning',
+      'Shoteras verktyg på skärmen: skärmbild, rullande skärmbild, anteckningar, skärminspelning, AI-frilägg, offline-OCR, QR- och streckkodsläsning, översättning och fäst på skrivbordet',
     cards: [
       {
         title: 'Rullande skärmbild',
@@ -72,13 +72,11 @@ export const content: LocaleExtras = {
         },
         {
           title: 'Anteckna, extrahera eller redigera',
-          description:
-            'Markera det viktiga, kör OCR, frilägg ett motiv, översätt — i samma fönster.',
+          description: 'Markera det viktiga, kör OCR, frilägg ett motiv, översätt — i samma fönster.',
         },
         {
           title: 'Kopiera, spara eller fäst',
-          description:
-            'Skicka till urklipp, spara lokalt eller fäst ovanpå för snabb referens.',
+          description: 'Skicka till urklipp, spara lokalt eller fäst ovanpå för snabb referens.',
         },
       ],
     },
@@ -86,14 +84,13 @@ export const content: LocaleExtras = {
 
   about: {
     statsTitle: 'Shotera i korthet',
-    metaDescription:
-      'Om teamet bakom Shotera och varför vi bygger snabba, enkla och diskreta skärmbilder.',
+    metaDescription: 'Om teamet bakom Shotera och varför vi bygger snabba, enkla och diskreta skärmbilder.',
     hero: {
       tagline: 'Om oss',
       title: 'Gör skärmbilder',
       accent: 'så bra att de försvinner',
       subtitle:
-        'Shotera började med en enkel frustration: skärmbilderna vi tar dussintals gånger om dagen borde kännas snabbare och smidigare. Vi är ett litet team av produktmänniskor och ingenjörer som lutar oss mot fångstverktyg lika mycket som någon annan — och den besattheten byggde vi in i varje snabbtangent, varje markering, varje bildruta.',
+        'Shotera började med en enkel frustration: skärmbilderna vi tar dussintals gånger om dagen borde kännas snabbare och smidigare. Vi är ett litet team av produktmänniskor och ingenjörer som lutar oss mot skärmbildsverktyg lika mycket som någon annan — och den besattheten byggde vi in i varje snabbtangent, varje markering, varje bildruta.',
       alt: 'Shoteras anteckningsverktyg över ett Windows-skrivbord',
     },
     stats: [
@@ -110,7 +107,7 @@ export const content: LocaleExtras = {
         {
           title: 'Snabbhet kommer först',
           description:
-            'En snabbtangent räcker för att väcka den, fönster och element identifieras automatiskt och du får exakt den bildruta du menade. Under en sekund från avsikt till fångst.',
+            'En snabbtangent räcker för att väcka den, fönster och element identifieras automatiskt och du får exakt den bildruta du menade. Under en sekund från avsikt till skärmbild.',
         },
         {
           title: 'Lokalt först och privat som standard',
@@ -124,15 +121,16 @@ export const content: LocaleExtras = {
         },
       ],
     },
-    toolbox: {
-      title: '',
-      subtitle: '',
-      alt: 'Shoteras verktygslåda: fångst, rullande skärmbild, inspelning, AI-frilägg, offline-OCR, bildöversättning, fästning och bildvisaren',
+    core: {
+      title: 'Kärnfunktioner',
+      subtitle:
+        'Skärmbild, rullande skärmbild, fäst på skrivbordet, skärminspelning, offline-OCR och AI — de sex sakerna du använder hela dagen, bara en snabbtangent bort.',
+      alt: 'Shoteras anteckningsverktyg över ett Windows-skrivbord: markering, verktygsfält och glaspaneler',
       items: [
         {
-          title: 'Fångst',
+          title: 'Skärmbild',
           description:
-            'Smart identifiering av fönster och element — rätt bildruta är redan vald, så du drar sällan en ruta för hand.',
+            'Smart identifiering av fönster och element — rätt bildruta är klar redan innan du drar. Avsluta med att kopiera direkt eller öppna anteckningsverktygsfältet — två avslutningslägen, du väljer.',
         },
         {
           title: 'Rullande skärmbild',
@@ -140,34 +138,72 @@ export const content: LocaleExtras = {
             'Rulla en sida eller en lång chatt och låt Shotera sy ihop den till en enda lång bild — automatiskt eller för hand, med förhandsvisning i realtid.',
         },
         {
+          title: 'Fäst på skrivbordet',
+          description: 'Håll vilken skärmbild som helst flytande ovanpå som referens, ordnad sida vid sida utan röra.',
+        },
+        {
           title: 'Skärminspelning och GIF',
           description:
             'Spela in skärmen och exportera till en lättviktig GIF; markeringar av pekare och klick håller demon tydlig.',
         },
         {
-          title: 'AI-frilägg',
-          description:
-            'Identifiera motivet och ta bort bakgrunden med ett klick och exportera genomskinliga PNG:er. Ingen Photoshop.',
-        },
-        {
           title: 'Offline-OCR',
           description:
-            'Extrahera text ur vilken skärmbild som helst, på din enhet, på flera språk. Kopiera och klistra in — helt offline.',
+            'Gör texten i en skärmbild till redigerbar text, på flera språk — igenkänd på din enhet, redo att klistra in.',
+        },
+        {
+          title: 'AI-frilägg och AI-radering',
+          description:
+            'AI-frilägg tar bort bakgrunden med ett klick och exporterar en genomskinlig PNG; AI-radering suddar bort stök och vattenstämplar. Båda körs på lokala modeller — inget laddas upp.',
+        },
+      ],
+    },
+    more: {
+      title: 'Fler funktioner',
+      subtitle: 'Detaljerna som gör att det håller — anteckningar, igenkänning, visning och inställningarna runt dem.',
+      items: [
+        {
+          title: 'Anteckningsverktyg',
+          description:
+            'Rektangel/ellips, linje/pil, pensel, överstrykningspenna, mosaik/oskärpa, text, numrering, emoji-klistermärken, förstoringsglas och suddgummi — anteckna direkt när du tar skärmbilden.',
+        },
+        {
+          title: 'Emoji-klistermärken',
+          description:
+            'Hundratals emoji-klistermärken — tummen upp, hjärtan, skratt, konfetti — som du kan skala och placera var du vill för att lägga till lite kul.',
+        },
+        {
+          title: 'Bildvisare och redigerare',
+          description:
+            'Öppna en skärmbild eller vilken bildfil som helst i ett eget fönster — bläddra i en mapp, zooma in och fixa det du behöver. Vanliga format öppnas direkt.',
         },
         {
           title: 'Bildöversättning',
-          description:
-            'Känn igen och översätt text i vilken bild som helst direkt — utländska dokument, diagram och gränssnitt blir läsbara.',
+          description: 'Utländsk text i en skärmbild översätts direkt i bilden — kopiera översättningen och fortsätt.',
         },
         {
-          title: 'Fäst på skärmen',
+          title: 'QR- och streckkodsläsning',
           description:
-            'Håll vilken skärmbild som helst flytande ovanpå som referens, ordnad sida vid sida utan röra.',
+            'Läs QR-koder och streckkoder direkt i skärmbilden: länkar, Wi-Fi, kontakter, produktkoder — kopiera resultatet med ett klick, helt offline.',
         },
         {
-          title: 'Bildvisare',
+          title: 'Anpassad skärmbild',
           description:
-            'Öppna en skärmbild eller vilken bildfil som helst i ett eget fönster — bläddra i en mapp, zooma in och fixa det du behöver.',
+            'Fast storlek, proportioner, fördröjning och skärmkoordinater — praktiskt för bildmaterial och skärmbilder i följd.',
+        },
+        {
+          title: 'Flera skärmar',
+          description:
+            'Alla skärmar i ett gemensamt koordinatsystem, så sekundära och utökade skärmar markeras korrekt — och skärmbilderna förblir skarpa på skärmar med hög DPI.',
+        },
+        {
+          title: 'Mörkt läge',
+          description: 'Följ systemet, eller växla mellan ljust och mörkt för hand.',
+        },
+        {
+          title: 'Presentationsläge',
+          description:
+            'Gör skrivbordet rent med ett tangenttryck — fönster, ikoner och bakgrundsbild — och återställ allt efteråt.',
         },
       ],
     },
@@ -195,14 +231,12 @@ export const content: LocaleExtras = {
     },
     history: {
       title: 'Hur vi hamnade här',
-      subtitle:
-        'Från ett verktyg vi byggde för oss själva till ett som människor litar på varje dag.',
+      subtitle: 'Från ett verktyg vi byggde för oss själva till ett som människor litar på varje dag.',
       cta: 'Ladda ner Shotera gratis',
       items: [
         {
           title: 'Började med vårt eget behov',
-          description:
-            'Vi hittade inget fångstverktyg som var snabbt och smidigt nog, så vi skrev ett eget.',
+          description: 'Vi hittade inget skärmbildsverktyg som var snabbt och smidigt nog, så vi skrev ett eget.',
         },
         {
           title: 'Växt genom våra användare',

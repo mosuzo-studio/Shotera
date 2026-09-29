@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 설정 → 정보 → 피드백 및 제안
 
-**🔗 버전 목록**
+**ℹ️ 최신 릴리스 노트는 [영문 업데이트 내역](/changelog)에서 먼저 확인할 수 있습니다. 이 언어판은 조금 뒤에 업데이트됩니다.**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">신규</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -36,11 +36,11 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Lite 버전, 스크롤 캡처, 크기를 조절할 수 있는 고정 창, 그리고 더 가벼워진 빌드.
 
-**🆚 Lite 버전과 전체 버전 차이:** 기능 차이는 [버전 비교](/ko/versions)에서 확인하세요.
+**🆚 Lite 버전과 Standard 버전 차이:** 기능 차이는 [버전 비교](/ko/versions)에서 확인하세요.
 
 **✨ 새로운 기능**
 
-- Lite 버전 추가: 설치 프로그램이 17MB에 불과하며 핵심 스크린샷과 주석 기능을 담았습니다. 설정의 업그레이드 배너가 웹사이트의 전체 버전으로 연결됩니다.
+- Lite 버전 추가: 설치 프로그램이 17MB에 불과하며 핵심 스크린샷과 주석 기능을 담았습니다. 설정의 업그레이드 배너가 웹사이트의 Standard 버전으로 연결됩니다.
 - [Shotera 공식 웹사이트](https://shotera.mosuzo.com/)의 콘텐츠와 스타일을 새롭게 정비했습니다.
 - 스크롤 캡처(미리 보기, 베타 테스트) 추가: 자동 스크롤과 수동 스크롤 두 가지 모드와 실시간 미리 보기 창을 제공합니다. 지능형 병합 알고리즘이 상단 경계를 감지하고 혼합 레이아웃을 처리합니다. 처음 사용할 때 안내 팁이 조작을 이끌어 줍니다. 베타 그룹에 참여해 테스트해 보세요.
 - 고정 창 개선: 더블클릭으로 원래 크기와 '썸네일+닫기' 모드를 전환할 수 있습니다. 가장자리나 모서리를 드래그해 크기를 조절하며 종횡비는 고정됩니다. 네이티브 우클릭 메뉴가 창 경계를 넘어 표시됩니다. 도구 모음 표시 상태가 세션을 넘어 유지됩니다 ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14)).

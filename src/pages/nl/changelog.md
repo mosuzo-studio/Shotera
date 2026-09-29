@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Instellingen → Over → Feedback en suggesties
 
-**🔗 Versie-index**
+**ℹ️ De nieuwste release notes staan eerst in de [Engelse changelog](/changelog); deze taalversie wordt iets later bijgewerkt.**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nieuw</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -36,11 +36,11 @@ Instellingen → Over → Feedback en suggesties
 
 Lite-versie, lange schermafbeelding, schaalbare vastgepinde vensters en lichtere builds.
 
-**🆚 Lite vs. volledige versie:** de functieverschillen staan in de [versievergelijking](/nl/versions).
+**🆚 Lite vs. Standard:** de functieverschillen staan in de [versievergelijking](/nl/versions).
 
 **✨ Nieuwe functies**
 
-- Nieuwe Lite-versie: installer van 17 MB met de belangrijkste functies voor schermafbeelding en annotatie. Een upgradebanner in Instellingen verwijst naar de volledige versie op de website.
+- Nieuwe Lite-versie: installer van 17 MB met de belangrijkste functies voor schermafbeelding en annotatie. Een upgradebanner in Instellingen verwijst naar Standard op de website.
 - De [officiële website](https://shotera.mosuzo.com/) is vernieuwd in inhoud en vormgeving.
 - Nieuwe lange schermafbeelding (preview, bètatest): automatische en handmatige scrollmodus met een realtime voorbeeldvenster. Een slim stitch-algoritme herkent de bovenrand en verwerkt gemengde lay-outs. Aanwijzingen helpen je bij het eerste gebruik. Sluit je bij de bètagroep aan om mee te testen.
 - Verbeteringen aan vastgepinde vensters: dubbelklikken schakelt tussen de oorspronkelijke grootte en de miniatuurmodus met sluitknop. Sleep randen of hoeken om te schalen met behoud van de verhouding. Het native contextmenu reikt buiten de venstergrenzen. De zichtbaarheid van de werkbalk blijft bewaard tussen sessies ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14)).
@@ -189,7 +189,7 @@ Volledige afbeeldingseditor, opnamemodi, uitgebreide CPU-ondersteuning.
 - AI-uitsnijden en AI-gum lieten verschoven afbeeldingen en niet-gewiste stroken achter: opgelost.
 - De statusbalk van de editor werkte niet bij na het laden van een afbeelding: opgelost.
 - De markeringen van tekstextractie stonden verschoven in de editor: opgelost.
-- Cijfer- en emojistickers zakten naar beneden bij het schalen: opgelost.
+- Cijfer- en emoji-stickers zakten naar beneden bij het schalen: opgelost.
 
 **🗑️ Verwijderd**
 
@@ -387,7 +387,7 @@ Leg vast wat belangrijk is. Leg het duidelijk uit. Houd het in zicht.
 **✨ Nieuwe functies**
 
 - Snelle schermafbeelding met F1-hotkey, detectie van vensters en bedieningselementen en een loep op het scherm.
-- Annotatietools: rechthoeken, ellipsen, lijnen, pijlen, vrije pen, markeerstift, rich text, automatische stapnummers, mozaïek/vervaging, emojistickers en lokale loep.
+- Annotatietools: rechthoeken, ellipsen, lijnen, pijlen, vrije pen, markeerstift, rich text, automatische nummering, mozaïek/vervaging, emoji-stickers en lokale loep.
 - F3 maakt pins die altijd bovenop blijven voor schermafbeeldingen of klembordinhoud. Pins ondersteunen verplaatsen, schalen, roteren, spiegelen en transparantie.
 - De presentatiemodus helpt om het bureaublad op te schonen voor schermafbeeldingen en vergaderingen door pictogrammen te verbergen en thema- en achtergrondvoorinstellingen toe te passen.
 

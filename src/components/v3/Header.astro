@@ -1,0 +1,228 @@
+---
+import { languages, localizedPagePath, switchLocalePath } from '~/i18n/utils';
+import type { Lang } from '~/i18n/utils';
+import appMark from '~/assets/favicons/favicon.svg';
+import { getV3Copy } from './copy-intl';
+
+export interface Props {
+  lang: Lang;
+  downloadUrl: string;
+}
+
+const { lang, downloadUrl } = Astro.props;
+const c = getV3Copy(lang);
+const l = (path: string) => localizedPagePath(lang, path);
+
+/* The trigger carries a short code; the menu spells each language out. */
+const shortLabels: Record<Lang, string> = {
+  en: 'EN',
+  'zh-cn': '中文',
+  'zh-tw': '繁中',
+  ja: '日本語',
+  'pt-br': 'PT',
+  es: 'ES',
+  de: 'DE',
+  fr: 'FR',
+  it: 'IT',
+  ko: '한국어',
+  ru: 'RU',
+  ar: 'AR',
+  nl: 'NL',
+  pl: 'PL',
+  sv: 'SV',
+};
+
+const localeEntries = Object.entries(languages) as [Lang, string][];
+---
+
+<header class="v3-header">
+  <div class="v3-wrap v3-nav">
+    <a class="v3-logo" href={l('/')} aria-label="Shotera">
+      <img src={appMark.src} width="26" height="26" alt="" />
+      Shotera
+    </a>
+
+    <a class="v3-navlink" href={l('/#features')}>{c.nav.features}</a>
+    <a class="v3-navlink" href={l('/versions')}>{c.nav.versions}</a>
+    <a class="v3-navlink" href={l('/changelog')}>{c.nav.changelog}</a>
+    <a class="v3-navlink" href={l('/faq')}>{c.nav.faq}</a>
+    <a class="v3-navlink" href={l('/about')}>{c.nav.about}</a>
+
+    <div class="v3-nav-right">
+      <div class="v3-lang" data-v3-lang>
+        <button
+          class="v3-lang-btn"
+          type="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-label={c.nav.language}
+          data-v3-lang-toggle
+        >
+          {shortLabels[lang] ?? shortLabels.en}
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6 9.5l6 6 6-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="v3-lang-menu" data-v3-lang-menu>
+          {
+            localeEntries.map(([code, label]) => (
+              <a href={switchLocalePath(Astro.url, code)} lang={code} aria-current={code === lang ? 'true' : undefined}>
+                {label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+      <a
+        class="v3-ghost-icon"
+        href="https://github.com/mosuzo-studio/Shotera"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+      >
+        <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A7.995 7.995 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+          ></path>
+        </svg>
+      </a>
+      <a class="v3-pill-dark" href={downloadUrl}>{c.nav.cta}</a>
+
+      <button
+        class="v3-burger"
+        type="button"
+        aria-label={c.nav.menu}
+        aria-expanded="false"
+        aria-controls="v3-mobile-menu"
+        data-v3-burger
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="v3-mobile-menu" id="v3-mobile-menu" hidden data-v3-menu>
+    <a href={l('/#features')}>{c.nav.features}</a>
+    <a href={l('/versions')}>{c.nav.versions}</a>
+    <a href={l('/changelog')}>{c.nav.changelog}</a>
+    <a href={l('/faq')}>{c.nav.faq}</a>
+    <a href={l('/about')}>{c.nav.about}</a>
+  </div>
+</header>
+
+<script>
+  function initV3MobileMenu() {
+    const button = document.querySelector<HTMLButtonElement>('[data-v3-burger]');
+    const menu = document.querySelector<HTMLElement>('[data-v3-menu]');
+    if (!button || !menu || button.dataset.wired === '1') return;
+    button.dataset.wired = '1';
+
+    const setOpen = (open: boolean) => {
+      menu.hidden = !open;
+      button.setAttribute('aria-expanded', String(open));
+    };
+
+    button.addEventListener('click', () => setOpen(menu.hidden));
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (menu.hidden || !(event.target instanceof Node)) return;
+      if (button.contains(event.target) || menu.contains(event.target)) return;
+      setOpen(false);
+    });
+  }
+
+  initV3MobileMenu();
+  document.addEventListener('astro:page-load', initV3MobileMenu);
+
+  function initV3LangMenu() {
+    const wrapper = document.querySelector<HTMLElement>('[data-v3-lang]');
+    const toggle = wrapper?.querySelector<HTMLButtonElement>('[data-v3-lang-toggle]');
+    if (!wrapper || !toggle || toggle.dataset.wired === '1') return;
+    toggle.dataset.wired = '1';
+
+    const canHover = window.matchMedia('(hover: hover)').matches;
+
+    const setOpen = (open: boolean) => {
+      wrapper.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+
+    let closeTimer: number | undefined;
+    const cancelClose = () => {
+      if (closeTimer !== undefined) {
+        window.clearTimeout(closeTimer);
+        closeTimer = undefined;
+      }
+    };
+
+    if (canHover) {
+      // Same contract as the download split in Home.astro: hovering the trigger
+      // opens the list; leaving the control closes it after a grace period long
+      // enough for the pointer to cross the gap down into the list.
+      wrapper.addEventListener('pointerenter', cancelClose);
+      toggle.addEventListener('pointerenter', () => {
+        cancelClose();
+        setOpen(true);
+      });
+      wrapper.addEventListener('pointerleave', () => {
+        cancelClose();
+        closeTimer = window.setTimeout(() => setOpen(false), 160);
+      });
+    }
+
+    toggle.addEventListener('click', (event) => {
+      // With a mouse the hover handlers already own the open state, so a click
+      // there must not close the menu the pointer just opened. Keyboard
+      // activation (detail 0) and touch taps still toggle.
+      if (canHover && event.detail > 0) return;
+      setOpen(!wrapper.classList.contains('is-open'));
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!wrapper.classList.contains('is-open') || !(event.target instanceof Node)) return;
+      if (wrapper.contains(event.target)) return;
+      setOpen(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    });
+  }
+
+  initV3LangMenu();
+  document.addEventListener('astro:page-load', initV3LangMenu);
+
+  function initV3LangHash() {
+    const menu = document.querySelector<HTMLElement>('[data-v3-lang-menu]');
+    if (!menu || menu.dataset.hashWired === '1') return;
+    menu.dataset.hashWired = '1';
+
+    /* A fragment never reaches the build, so the rendered language links carry
+       none and a switch from `/#features` would land at the top of the
+       translated page. Re-attach the live fragment to the link about to be
+       followed - in the capture phase, before the router reads the href. */
+    menu.addEventListener(
+      'click',
+      (event) => {
+        const link = (event.target as Element | null)?.closest<HTMLAnchorElement>('a');
+        if (!link || !window.location.hash) return;
+        link.setAttribute('href', link.href.split('#')[0] + window.location.hash);
+      },
+      true
+    );
+  }
+
+  initV3LangHash();
+  document.addEventListener('astro:page-load', initV3LangHash);
+</script>

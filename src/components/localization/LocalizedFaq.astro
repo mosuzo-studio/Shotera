@@ -1,0 +1,53 @@
+---
+import Layout from '~/layouts/PageLayoutV3.astro';
+import { localizedPath } from '~/i18n/utils';
+import { faqContent } from '~/i18n/faq';
+import type { LocalizedLocale } from '~/i18n/site-content';
+
+export interface Props {
+  locale: LocalizedLocale;
+}
+
+const { locale } = Astro.props;
+const c = faqContent[locale];
+const contactHref = localizedPath(locale, '/contact');
+
+const metadata = { title: c.metaTitle, description: c.metaDescription };
+const linkClass = 'font-semibold text-blue-700 underline underline-offset-4 dark:text-blue-300';
+---
+
+<Layout metadata={metadata} lang={locale}>
+  <section class="relative md:-mt-[76px]">
+    <div class="pt-0 md:pt-[76px]">
+      <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6 md:py-16">
+        <p class="text-sm font-bold tracking-wide text-secondary uppercase dark:text-blue-200">FAQ</p>
+        <h1 class="mt-3 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+          {c.title}
+        </h1>
+        <p class="mt-3 text-lg text-muted">{c.lead}</p>
+
+        {
+          c.groups.map((group) => (
+            <section id={group.id} class="mt-12">
+              <h2 class="text-sm font-semibold tracking-wide text-muted uppercase">{group.label}</h2>
+              <dl class="mt-3 border-t border-gray-200 dark:border-slate-700">
+                {group.items.map((item) => (
+                  <div class="border-b border-gray-200 py-6 dark:border-slate-700">
+                    <dt class="text-lg font-semibold text-gray-900 dark:text-white">{item.q}</dt>
+                    <dd class="text-muted mt-2 leading-relaxed">{item.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          ))
+        }
+
+        <p class="text-muted mt-12">
+          {c.footnoteBefore}
+          <a class={linkClass} href={contactHref}>{c.footnoteLink}</a>
+          {c.footnoteAfter}
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

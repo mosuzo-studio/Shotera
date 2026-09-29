@@ -1,0 +1,40 @@
+---
+import { localizedPagePath } from '~/i18n/utils';
+import type { Lang } from '~/i18n/utils';
+import { getV3Copy } from './copy-intl';
+
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const c = getV3Copy(lang);
+const l = (path: string, hash?: string) => `${localizedPagePath(lang, path)}${hash ? `#${hash}` : ''}`;
+---
+
+<footer class="v3-footer">
+  <div class="v3-wrap">
+    <div class="v3-footer-cols">
+      <div>
+        <h4>Shotera</h4>
+        <p class="v3-foot-note" style="margin:0;max-width:280px">{c.footer.blurb}</p>
+      </div>
+      {
+        c.footer.cols.map((col) => (
+          <div>
+            <h4>{col.title}</h4>
+            {col.links.map((link) => (
+              <a href={l(link.path, link.hash)}>{link.text}</a>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="v3-footer-base">
+      <span dir="ltr">{c.footer.rights}</span>
+      {c.footer.legal.map((link) => <a href={l(link.path)}>{link.text}</a>)}
+      <span class="v3-sp">{c.footer.system}</span>
+    </div>
+  </div>
+</footer>

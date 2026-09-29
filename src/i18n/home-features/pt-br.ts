@@ -18,14 +18,14 @@ export const content: HomeFeaturesContent = {
           'Grave em resolução ultra-HD de até 4K com alta taxa de quadros e exporte para MP4 ou GIF leve. Sem limite de tempo de gravação — grave o quanto precisar.',
       },
       {
-        title: 'Recorte com IA',
+        title: 'Recorte com AI',
         description:
           'Isole o assunto e remova o fundo com um clique. Pessoas, produtos, logos — recortados e prontos para usar, com processamento totalmente local. Não precisa do Photoshop.',
       },
       {
-        title: 'Apagar com IA',
+        title: 'Apagar com AI',
         description:
-          "Remova objetos indesejados, marcas d'água ou imperfeições das imagens de forma inteligente. A IA preenche o fundo naturalmente. Totalmente offline e privado.",
+          "Remova objetos indesejados, marcas d'água ou imperfeições das imagens de forma inteligente. A AI preenche o fundo naturalmente. Totalmente offline e privado.",
       },
       {
         title: 'OCR offline',
@@ -38,7 +38,7 @@ export const content: HomeFeaturesContent = {
           'Reconheça e traduza textos dentro de qualquer imagem na hora. Leia documentos, capturas e menus em outro idioma e copie a tradução direto.',
       },
       {
-        title: 'Fixar na tela',
+        title: 'Fixar na área de trabalho',
         description:
           'Mantenha qualquer captura flutuando por cima enquanto trabalha. Redimensione, organize e consulte lado a lado sem trocar de janela.',
       },
@@ -93,19 +93,19 @@ export const content: HomeFeaturesContent = {
     ],
   },
   ai: {
-    tagline: 'Recursos de IA',
-    title: 'IA que vai além da captura de tela',
-    text: 'Recorte, apagamento e OCR com IA rodam localmente — inteligência sem abrir mão da privacidade.',
+    tagline: 'Recursos de AI',
+    title: 'AI que vai além da captura de tela',
+    text: 'Recorte, apagamento e OCR com AI rodam localmente — inteligência sem abrir mão da privacidade.',
     items: [
       {
-        title: 'Recorte com IA',
+        title: 'Recorte com AI',
         description:
           'Detecte o assunto e remova o fundo em um clique — PNGs transparentes de pessoas e produtos em segundos. Roda inteiramente no dispositivo.',
       },
       {
-        title: 'Apagar com IA',
+        title: 'Apagar com AI',
         description:
-          "Remova objetos indesejados, marcas d'água ou imperfeições de forma inteligente. A IA preenche o fundo naturalmente. Também roda localmente — sem upload, sem nuvem.",
+          "Remova objetos indesejados, marcas d'água ou imperfeições de forma inteligente. A AI preenche o fundo naturalmente. Também roda localmente — sem upload, sem nuvem.",
       },
       {
         title: 'Extração de texto offline',
@@ -115,7 +115,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Troca flexível de modelo',
         description:
-          'O recorte e o apagamento com IA aceitam troca de modelo personalizada. Use o melhor modelo atual a qualquer momento e saia na frente.',
+          'O recorte e o apagamento com AI aceitam troca de modelo personalizada. Use o melhor modelo atual a qualquer momento e saia na frente.',
       },
     ],
   },
@@ -139,7 +139,7 @@ export const content: HomeFeaturesContent = {
           'Guie quem vê suas capturas com anotações numeradas — perfeito para tutoriais e guias passo a passo.',
       },
       {
-        title: 'Fixar na tela',
+        title: 'Fixar na área de trabalho',
         description:
           'Mantenha imagens de referência flutuando por cima para trabalhar ao lado delas, sem ficar trocando de janela.',
       },
@@ -160,7 +160,7 @@ export const content: HomeFeaturesContent = {
       {
         title: 'Local em primeiro lugar e privado',
         description:
-          'OCR, recorte e apagamento com IA rodam no seu dispositivo — nada é enviado. Suas capturas são só suas.',
+          'OCR, recorte e apagamento com AI rodam no seu dispositivo — nada é enviado. Suas capturas são só suas.',
       },
       {
         title: 'Leve em recursos',

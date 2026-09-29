@@ -31,7 +31,6 @@ export interface Props {
   isDark?: boolean;
   isFullWidth?: boolean;
   showToggleTheme?: boolean;
-  showRssFeed?: boolean;
   position?: string;
 }
 
@@ -44,7 +43,6 @@ const {
   isDark = false,
   isFullWidth = false,
   showToggleTheme = false,
-  showRssFeed = false,
   position = 'center',
 } = Astro.props;
 
@@ -145,17 +143,6 @@ const homeHref = localizedPath(lang, '/');
         <div class="flex">
           <LanguageSwitcher lang={lang} />
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
-          {
-            showRssFeed && (
-              <a
-                class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 hidden rounded-lg p-2.5 text-sm xl:inline-flex items-center"
-                aria-label="RSS Feed"
-                href={getAsset('/rss.xml')}
-              >
-                <Icon name="tabler:rss" class="w-5 h-5" />
-              </a>
-            )
-          }
         </div>
         {
           actions?.length ? (

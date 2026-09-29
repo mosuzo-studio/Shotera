@@ -1,0 +1,531 @@
+---
+import { getImage } from 'astro:assets';
+import { localizedPath } from '~/i18n/utils';
+import type { Lang } from '~/i18n/utils';
+import { getReleaseDownloads, RELEASES_URL, STORE_URL } from '~/utils/download';
+import { getV3Copy } from './copy-intl';
+
+import captureDemo from '~/assets/images/capture-demo.png';
+import longshotDemo from '~/assets/images/longshot-demo.png';
+import recordingDemo from '~/assets/images/recording-demo.png';
+import aiDemo from '~/assets/images/ai-demo.png';
+import pinDemo from '~/assets/images/pin-demo.png';
+import taskbarStripSrc from '~/assets/images/taskbar.png';
+
+/* Landscape cuts of the same renders for the hero (7:4); the feature sections
+   below keep the square ones. */
+import captureWide from '~/assets/images/capture-wide.png';
+import longshotWide from '~/assets/images/longshot-wide.png';
+import recordingWide from '~/assets/images/recording-wide.png';
+import aiWide from '~/assets/images/ai-wide.png';
+import pinWide from '~/assets/images/pin-wide.png';
+
+export interface Props {
+  lang: Lang;
+  downloadUrl: string;
+}
+
+const { lang, downloadUrl } = Astro.props;
+const c = getV3Copy(lang);
+const l = (path: string) => localizedPath(lang, path);
+
+const { urls: downloadUrls } = await getReleaseDownloads();
+
+const shotSources = {
+  capture: captureWide,
+  long: longshotWide,
+  pin: pinWide,
+  record: recordingWide,
+  ai: aiWide,
+} as const;
+
+const featureSources = {
+  capture: captureDemo,
+  longshot: longshotDemo,
+  pin: pinDemo,
+  recording: recordingDemo,
+  ai: aiDemo,
+} as const;
+
+type ShotKey = keyof typeof shotSources;
+type FeatureKey = keyof typeof featureSources;
+
+const heroShots: Record<string, { src: string; width: number; height: number }> = {};
+for (const shotKey of Object.keys(shotSources) as ShotKey[]) {
+  const optimized = await getImage({ src: shotSources[shotKey], width: 1200, format: 'webp' });
+  heroShots[shotKey] = {
+    src: optimized.src,
+    width: optimized.attributes.width,
+    height: optimized.attributes.height,
+  };
+}
+
+/* One taskbar for all five shots: the renders each carry their own, and the
+   pinned tile in them doesn't sit where it should, so the hero lays this strip
+   over the taskbar band instead of re-rendering every image. */
+const taskbarStrip = await getImage({ src: taskbarStripSrc, width: 1792, format: 'webp', quality: 92 });
+
+const featureImages: Record<string, { src: string; width: number; height: number }> = {};
+for (const featureKey of Object.keys(featureSources) as FeatureKey[]) {
+  const optimized = await getImage({ src: featureSources[featureKey], width: 920, format: 'webp' });
+  featureImages[featureKey] = {
+    src: optimized.src,
+    width: optimized.attributes.width,
+    height: optimized.attributes.height,
+  };
+}
+
+const initialMode = c.hero.modes[0];
+const initialShot = heroShots[initialMode.key];
+const shotData = JSON.stringify({
+  shots: heroShots,
+  modes: c.hero.modes.map((mode) => ({ key: mode.key, caption: mode.caption })),
+});
+---
+
+<section class="v3-stage">
+  <div class="v3-sky">
+    <span class="v3-sun"></span>
+    <i class="v3-cloud c1"></i><i class="v3-cloud c2"></i><i class="v3-cloud c3"></i><i class="v3-cloud c4"></i>
+    <i class="v3-cloud c5"></i>
+
+    <div class="v3-announce">
+      <b>{c.hero.badge}</b><span>{c.hero.announce}</span><em aria-hidden="true">→</em>
+    </div>
+
+    <div class="v3-modes" role="tablist" aria-label={c.nav.features}>
+      {
+        c.hero.modes.map((mode, index) => (
+          <button type="button" role="tab" aria-selected={index === 0 ? 'true' : 'false'} data-v3-mode={mode.key}>
+            {mode.label}
+          </button>
+        ))
+      }
+    </div>
+
+    <h1 class="v3-h1">
+      {
+        c.hero.h1.map((line, lineIndex) => (
+          <>
+            {line.map((segment) => (segment.hl ? <span class="hl">{segment.text}</span> : <span>{segment.text}</span>))}
+            {lineIndex < c.hero.h1.length - 1 && <br />}
+          </>
+        ))
+      }
+    </h1>
+
+    <p class="v3-sub">{c.hero.sub}</p>
+
+    <div class="v3-cta">
+      <div class="v3-split" data-v3-split>
+        <a class="v3-btn v3-btn-main v3-split-main" href={downloadUrl}>{c.hero.primary}</a>
+        <button
+          class="v3-btn v3-btn-main v3-split-toggle"
+          type="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-label={c.download.more}
+          data-v3-split-toggle
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6 9.5l6 6 6-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="v3-split-menu" aria-label={c.download.menu}>
+          <p class="v3-split-cap">{c.download.edition}</p>
+          <a href={downloadUrls.setup} data-v3-tip={c.download.setupTip}>
+            <span>{c.download.setup}</span><b>{c.download.recommend}</b>
+          </a>
+          <a href={downloadUrls.portable} data-v3-tip={c.download.portableTip}>{c.download.portable}</a>
+          <a href={downloadUrls.msi} data-v3-tip={c.download.msiTip}>{c.download.msi}</a>
+          <a href={STORE_URL} target="_blank" rel="noopener noreferrer" data-v3-tip={c.download.storeTip}
+            >{c.download.store}</a
+          >
+          <a class="v3-split-all" href={RELEASES_URL} target="_blank" rel="noopener noreferrer"
+            >{c.download.allVersions}</a
+          >
+        </div>
+      </div>
+      <a class="v3-btn v3-btn-sub" href={l('/#features')}>{c.hero.secondary} <em aria-hidden="true">▾</em></a>
+    </div>
+
+    {
+      /* The platform line is a Latin token in every locale, so keep its own
+        direction in RTL pages (`+Windows 10/11` would otherwise flip). */
+    }
+    <p class="v3-meta"><b dir="ltr">{c.hero.metaStrong}</b> · {c.hero.metaRest}</p>
+    <a class="v3-ontop" href={STORE_URL} target="_blank" rel="noopener noreferrer">
+      {c.hero.store}
+      <svg class="v3-ontop-logo" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m17.8 20l-12-1.5c-1-.1-1.8-.9-1.8-1.9V7.4c0-1 .8-1.8 1.8-1.9l12-1.5c1.2-.1 2.2.8 2.2 1.9V18c0 1.2-1.1 2.1-2.2 1.9zM12 5v14m-8-7h16"
+        ></path>
+      </svg>
+    </a>
+
+    <figure class="v3-shot">
+      {/* data-shell="laptop" swaps the aluminium monitor for the laptop shell */}
+      <div class="v3-display" data-shell="monitor">
+        <div class="v3-bezel">
+          <span class="v3-cam" aria-hidden="true"></span>
+          <div class="v3-desktop">
+            <img
+              id="v3-shot"
+              class="v3-shot-img"
+              src={initialShot.src}
+              width={initialShot.width}
+              height={initialShot.height}
+              alt={initialMode.label}
+            />
+            <img
+              class="v3-tb"
+              src={taskbarStrip.src}
+              width={taskbarStrip.attributes.width}
+              height={taskbarStrip.attributes.height}
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+        <div class="v3-arm" aria-hidden="true"></div>
+        <div class="v3-base" aria-hidden="true"></div>
+      </div>
+      <figcaption class="v3-shot-cap" id="v3-shot-cap">
+        <span id="v3-shot-cap-text">{initialMode.caption}</span>
+        <span class="v3-shell-dots">
+          <button
+            type="button"
+            class="v3-shell-dot"
+            data-shell-target="monitor"
+            aria-pressed="true"
+            aria-label={c.hero.shellMonitor}></button>
+          <button
+            type="button"
+            class="v3-shell-dot"
+            data-shell-target="laptop"
+            aria-pressed="false"
+            aria-label={c.hero.shellLaptop}></button>
+        </span>
+      </figcaption>
+    </figure>
+    <div class="v3-tail"></div>
+  </div>
+</section>
+
+<div class="v3-trust">
+  <div class="v3-wrap v3-trust-row">
+    {
+      c.trust.map((item) => (
+        <span>
+          <b>{item.value}</b> {item.label}
+        </span>
+      ))
+    }
+  </div>
+</div>
+
+<section class="v3-section v3-center" id="features">
+  <div class="v3-wrap">
+    <div class="v3-eyebrow">{c.modesSection.eyebrow}</div>
+    <h2 class="v3-h2">{c.modesSection.title}</h2>
+    <p class="v3-lead">{c.modesSection.lead}</p>
+
+    <div class="v3-cards">
+      {
+        c.modesSection.cards.map((card) => (
+          <div class="v3-mcard">
+            <div class="v3-chip">
+              {card.icon === 'capture' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16M4 12h16" />
+                </svg>
+              )}
+              {card.icon === 'pin' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9.5 3h5l-.8 5.2 3.3 3.3v2H7v-2l3.3-3.3L9.5 3Z" />
+                  <path d="M12 13.5V21" />
+                </svg>
+              )}
+              {card.icon === 'record' && (
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="6" width="13" height="12" rx="2" />
+                  <path d="M16 11.5 21 8.5v7L16 12.5" />
+                </svg>
+              )}
+            </div>
+            <h3>{card.title}</h3>
+            <p class="v3-one">{card.one}</p>
+            <ol class="v3-steps">
+              {card.steps.map((step) => (
+                <li>{step}</li>
+              ))}
+            </ol>
+            <p class="v3-bf">
+              <b>{c.modesSection.bestFor}</b>
+              {card.bestFor}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+{
+  c.features.map((section) => (
+    <section class="v3-section is-tight">
+      <div class={`v3-wrap v3-feat${section.reversed ? ' is-rev' : ''}`}>
+        <div class="v3-txt">
+          <div class="v3-eyebrow">{section.eyebrow}</div>
+          <h2 class="v3-h2">{section.title}</h2>
+          <p class="v3-lead">{section.lead}</p>
+          <div class="v3-rows">
+            {section.rows.map((row) => (
+              <div class="v3-row">
+                <i />
+                <span>{row}</span>
+                <em aria-hidden="true">›</em>
+              </div>
+            ))}
+          </div>
+          <div class="v3-list2">
+            {section.items.map((item) => (
+              <div class="v3-it">
+                <div class="v3-d">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m5 13 4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <b>{item.title}</b>
+                  <i>{item.note}</i>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="v3-panel">
+          <img
+            src={featureImages[section.image].src}
+            width={featureImages[section.image].width}
+            height={featureImages[section.image].height}
+            alt={section.title}
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+  ))
+}
+
+<section class="v3-section is-tight" id="download">
+  <div class="v3-wrap">
+    <div class="v3-dl">
+      <div class="v3-dl-glow"><span class="v3-sun"></span></div>
+      <div class="v3-eyebrow">{c.cta.eyebrow}</div>
+      <h2 class="v3-h2">{c.cta.title}</h2>
+      <p class="v3-lead" style="margin:0 auto 28px">{c.cta.lead}</p>
+      <div class="v3-cta">
+        <div class="v3-split" data-v3-split>
+          <a class="v3-btn v3-btn-main v3-split-main" href={downloadUrl}>{c.cta.primary}</a>
+          <button
+            class="v3-btn v3-btn-main v3-split-toggle"
+            type="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-label={c.download.more}
+            data-v3-split-toggle
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 9.5l6 6 6-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <div class="v3-split-menu" aria-label={c.download.menu}>
+            <p class="v3-split-cap">{c.download.edition}</p>
+            <a href={downloadUrls.setup} data-v3-tip={c.download.setupTip}>
+              <span>{c.download.setup}</span><b>{c.download.recommend}</b>
+            </a>
+            <a href={downloadUrls.portable} data-v3-tip={c.download.portableTip}>{c.download.portable}</a>
+            <a href={downloadUrls.msi} data-v3-tip={c.download.msiTip}>{c.download.msi}</a>
+            <a href={STORE_URL} target="_blank" rel="noopener noreferrer" data-v3-tip={c.download.storeTip}>
+              {c.download.store}
+            </a>
+            <a class="v3-split-all" href={RELEASES_URL} target="_blank" rel="noopener noreferrer">
+              {c.download.allVersions}
+            </a>
+          </div>
+        </div>
+        <a class="v3-btn v3-btn-sub" href={l('/versions')}>{c.cta.secondary}</a>
+      </div>
+      <div class="v3-other"><i></i>{c.cta.note}</div>
+    </div>
+  </div>
+</section>
+
+<script is:inline type="application/json" id="v3-shot-data" set:html={shotData} />
+<script>
+  function initV3ShotSwitcher() {
+    const dataEl = document.getElementById('v3-shot-data');
+    const img = document.getElementById('v3-shot') as HTMLImageElement | null;
+    const caption = document.getElementById('v3-shot-cap-text');
+    if (!dataEl || !img || !caption || dataEl.dataset.wired === '1') return;
+    dataEl.dataset.wired = '1';
+
+    const data = JSON.parse(dataEl.textContent || '{}') as {
+      shots: Record<string, { src: string; width: number; height: number }>;
+      modes: { key: string; caption: string }[];
+    };
+
+    const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-v3-mode]'));
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const modeKey = button.dataset.v3Mode;
+        if (!modeKey) return;
+        buttons.forEach((other) => other.setAttribute('aria-selected', String(other === button)));
+
+        const shot = data.shots[modeKey];
+        if (shot) {
+          img.src = shot.src;
+          img.width = shot.width;
+          img.height = shot.height;
+        }
+
+        const mode = data.modes.find((entry) => entry.key === modeKey);
+        if (mode) caption.textContent = mode.caption;
+      });
+    });
+  }
+
+  initV3ShotSwitcher();
+  document.addEventListener('astro:page-load', initV3ShotSwitcher);
+
+  /* The hero alternates between the two CSS shells - the aluminium monitor and
+     the laptop, one switch every 20s on a loop - and the two dots under its
+     left corner switch them by hand. Picking a shell restarts that window. */
+  let shellCycleTimer: number | undefined;
+
+  function initV3ShellCycle() {
+    window.clearInterval(shellCycleTimer);
+    const display = document.querySelector<HTMLElement>('.v3-display');
+    if (!display) return;
+
+    const shells = ['monitor', 'laptop'] as const;
+    type Shell = (typeof shells)[number];
+    const dots = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-shell-target]'));
+
+    const setShell = (shell: Shell) => {
+      display.dataset.shell = shell;
+      dots.forEach((dot) => dot.setAttribute('aria-pressed', String(dot.dataset.shellTarget === shell)));
+    };
+
+    let index = Math.max(0, shells.indexOf((display.dataset.shell ?? 'monitor') as Shell));
+
+    const startCycle = () => {
+      window.clearInterval(shellCycleTimer);
+      // Reduced motion: no auto-rotation; the dots still switch on click.
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      shellCycleTimer = window.setInterval(() => {
+        index = (index + 1) % shells.length;
+        setShell(shells[index]);
+      }, 20000);
+    };
+
+    dots.forEach((dot) => {
+      if (dot.dataset.wired === '1') return;
+      dot.dataset.wired = '1';
+      dot.addEventListener('click', () => {
+        const target = dot.dataset.shellTarget as Shell | undefined;
+        if (!target || !shells.includes(target)) return;
+        index = shells.indexOf(target);
+        setShell(target);
+        startCycle();
+      });
+    });
+
+    startCycle();
+  }
+
+  initV3ShellCycle();
+  document.addEventListener('astro:page-load', initV3ShellCycle);
+  function initV3SplitMenus() {
+    // The hover path below only makes sense where a real pointer exists; touch
+    // devices keep the tap-to-toggle behaviour.
+    const canHover = window.matchMedia('(hover: hover)').matches;
+
+    document.querySelectorAll<HTMLElement>('[data-v3-split]').forEach((split) => {
+      if (split.dataset.wired === '1') return;
+      split.dataset.wired = '1';
+
+      const toggle = split.querySelector<HTMLButtonElement>('[data-v3-split-toggle]');
+      if (!toggle) return;
+
+      const setOpen = (open: boolean) => {
+        split.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+      };
+
+      let closeTimer: number | undefined;
+      const cancelClose = () => {
+        if (closeTimer !== undefined) {
+          window.clearTimeout(closeTimer);
+          closeTimer = undefined;
+        }
+      };
+
+      if (canHover) {
+        // Only the chevron opens the list; sliding onto the download half leaves
+        // it closed. Leaving the control closes it again after a short grace
+        // period, so the pointer can cross the gap down into the list.
+        split.addEventListener('pointerenter', cancelClose);
+        toggle.addEventListener('pointerenter', () => {
+          cancelClose();
+          setOpen(true);
+        });
+        split.addEventListener('pointerleave', () => {
+          cancelClose();
+          closeTimer = window.setTimeout(() => setOpen(false), 160);
+        });
+      }
+
+      toggle.addEventListener('click', (event) => {
+        // With a mouse the hover handlers already own the open state, so a click
+        // there must not close the menu the pointer just opened. Keyboard
+        // activation (detail 0) and touch taps still toggle.
+        if (canHover && event.detail > 0) return;
+        setOpen(!split.classList.contains('is-open'));
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!split.classList.contains('is-open')) return;
+        const target = event.target as Node | null;
+        if (target && split.contains(target)) return;
+        setOpen(false);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setOpen(false);
+      });
+    });
+  }
+
+  initV3SplitMenus();
+  document.addEventListener('astro:page-load', initV3SplitMenus);
+</script>

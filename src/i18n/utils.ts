@@ -72,6 +72,19 @@ export function localizedPath(lang: Lang, path = '/'): string {
   return hash ? `${localized.replace(/\/$/, '')}#${hash}` : localized;
 }
 
+/** Routes only EN and zh-CN publish; every other locale links to the English one. */
+const ENGLISH_ONLY_PATHS = new Set(['/privacy', '/terms']);
+
+/**
+ * Locale-aware path for a page, honouring the split routes: the legal pages
+ * exist for EN and zh-CN only, so the other locales link to the English ones
+ * instead of a 404.
+ */
+export function localizedPagePath(lang: Lang, path: string): string {
+  if (ENGLISH_ONLY_PATHS.has(path) && lang !== 'en' && lang !== 'zh-cn') return path;
+  return localizedPath(lang, path);
+}
+
 /**
  * Given the current URL, return the equivalent path in `targetLang`, used by
  * the language switcher. Strips any existing locale prefix, then re-localizes.
@@ -92,8 +105,7 @@ export function switchLocalePath(url: URL, targetLang: Lang): string {
   }
 
   const appPath = '/' + segments.join('/');
-  if ((appPath === '/privacy' || appPath === '/terms') && targetLang !== 'en' && targetLang !== 'zh-cn') {
-    return appPath;
-  }
-  return localizedPath(targetLang, appPath === '/' ? '/' : appPath);
+  // The 13 other locales publish neither the legal pages nor an FAQ of their
+  // own, so those links fall back to the English ones (the footer does the same).
+  return localizedPagePath(targetLang, appPath === '/' ? '/' : appPath);
 }

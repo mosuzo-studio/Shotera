@@ -9,10 +9,10 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 Ajustes → Acerca de → Comentarios y sugerencias
 
-**🔗 Índice de versiones**
+**ℹ️ Las notas más recientes aparecen primero en el [changelog en inglés](/changelog); esta versión se actualiza un poco después.**
 
 <ul class="version-index">
-  <li><a href="#shotera-v770">v7.7.0</a></li>
+  <li class="is-new"><a href="#shotera-v770">v7.7.0<span class="tag">Nuevo</span></a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
   <li><a href="#shotera-v750">v7.5.0</a></li>
@@ -36,11 +36,11 @@ Ajustes → Acerca de → Comentarios y sugerencias
 
 Versión Lite, captura larga, fijaciones redimensionables y compilaciones más ligeras.
 
-**🆚 Lite vs. versión completa:** consulta la [comparación de versiones](/es/versions) para ver las diferencias entre funciones.
+**🆚 Lite vs. versión Estándar:** consulta la [comparación de versiones](/es/versions) para ver las diferencias entre funciones.
 
 **✨ Novedades**
 
-- Versión Lite añadida: instalador de 17MB con las funciones esenciales de captura y anotación. El banner de mejora de la configuración enlaza con la versión completa en el sitio web.
+- Versión Lite añadida: instalador de 17MB con las funciones esenciales de captura y anotación. El banner de mejora de la configuración enlaza con la versión Estándar en el sitio web.
 - [Sitio web oficial](https://shotera.mosuzo.com/) actualizado, con contenido y estilo renovados.
 - Captura larga añadida (vista previa, pruebas beta): modos de desplazamiento automático y manual, con ventana de vista previa en tiempo real. El algoritmo inteligente de unión detecta los límites superiores y maneja diseños mixtos. Los consejos guían el primer uso. Únete al grupo beta para probarla.
 - Mejoras en la ventana de fijación: el doble clic alterna entre el tamaño original y el modo miniatura + cerrar. Arrastra los bordes o las esquinas para redimensionar con la proporción bloqueada. El menú contextual nativo se extiende más allá de los límites de la ventana. La visibilidad de la barra de herramientas se mantiene entre sesiones ([#5](https://github.com/mosuzo-studio/Shotera/issues/5), [#7](https://github.com/mosuzo-studio/Shotera/issues/7), [#8](https://github.com/mosuzo-studio/Shotera/issues/8), [#9](https://github.com/mosuzo-studio/Shotera/issues/9), [#10](https://github.com/mosuzo-studio/Shotera/issues/10), [#14](https://github.com/mosuzo-studio/Shotera/issues/14)).

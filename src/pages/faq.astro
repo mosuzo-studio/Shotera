@@ -1,10 +1,10 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/PageLayoutV3.astro';
 
 const metadata = {
   title: 'FAQ',
   description:
-    'Short answers about Shotera: which platforms and interface languages it supports, what runs offline, what stays free, and how exports and performance work.',
+    'Short answers about Shotera: which platforms and interface languages it supports, what runs offline, what stays free, how exports and performance work, and the details like themes and shortcuts.',
 };
 
 const groups = [
@@ -54,7 +54,29 @@ const groups = [
       },
       {
         q: 'Will it slow down my computer?',
-        a: 'No. Shotera is built to stay light — minimal memory and instant startup, unnoticeable even when running in the background.',
+        a: 'No. Shotera is built to stay light — minimal memory and instant startup, unnoticeable even running in the background.',
+      },
+    ],
+  },
+  {
+    id: 'details',
+    label: 'Details and customization',
+    items: [
+      {
+        q: 'Does Shotera have a dark mode?',
+        a: 'Yes. Settings → General → Interface theme switches between Follow system, Light and Dark; Follow system tracks the Windows light/dark setting automatically.',
+      },
+      {
+        q: 'Does it work with multiple monitors and hi-res screens?',
+        a: 'Yes. Multiple monitors are treated as one continuous desktop, so a secondary screen placed to the left of the main one still selects correctly — and the UI and captures stay sharp on high-DPI displays.',
+      },
+      {
+        q: 'Can I change the keyboard shortcuts?',
+        a: 'Yes. Capture, custom capture, pin and Presentation Mode can all be rebound under Settings → Hotkeys; if another app already owns a key, Shotera tells you, and you can restore every default in one click.',
+      },
+      {
+        q: 'How do I update to a new version?',
+        a: 'Shotera updates itself: it checks at startup by default, can download and install in the background, or you can check manually under Settings → Updates. The Microsoft Store edition stays current through the Store.',
       },
     ],
   },
@@ -72,7 +94,7 @@ const linkClass = 'font-semibold text-blue-700 underline underline-offset-4 dark
           Frequently asked questions
         </h1>
         <p class="mt-3 text-lg text-muted">
-          Platforms, languages, offline privacy, plans, and exports — the short version.
+          Platforms, languages, offline privacy, plans, exports and details — the short version.
         </p>
 
         {

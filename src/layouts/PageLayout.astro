@@ -26,7 +26,7 @@ const [headerData, footerData] = await Promise.all([getHeaderData(lang), getFoot
     <Announcement lang={lang} />
   </slot>
   <slot name="header">
-    <Header {...headerData} lang={lang} isSticky showRssFeed showToggleTheme />
+    <Header {...headerData} lang={lang} isSticky showToggleTheme />
   </slot>
   <main>
     <slot />
