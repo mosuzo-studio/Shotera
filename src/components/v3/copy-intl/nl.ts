@@ -194,6 +194,17 @@ export default {
       ],
       image: 'ai',
     },
+    {
+      eyebrow: 'Twee afrondmodi',
+      title: 'Direct kopiëren of meteen annoteren',
+      lead: 'Strak en simpel kopieert zodra je loslaat; Direct annoteren opent de werkbalk meteen. Wissel wanneer je wilt via Instellingen → Schermafbeelding.',
+      rows: [
+        'Strak en simpel — direct gekopieerd, met een kaart rechtsonder die de editor opent',
+        'Direct annoteren — de werkbalk verschijnt met de selectie; annoteer zonder van venster te wisselen',
+      ],
+      image: 'modes',
+      reversed: true,
+    },
   ],
   cta: {
     eyebrow: 'Gratis beginnen',

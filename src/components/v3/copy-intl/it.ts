@@ -198,6 +198,17 @@ export default {
       ],
       image: 'ai',
     },
+    {
+      eyebrow: 'Due modalità di completamento',
+      title: 'Copia subito o annota sul posto',
+      lead: 'Elegante copia appena rilasci la selezione; Annotazione immediata apre la barra sul posto. Cambia quando vuoi in Impostazioni → Cattura.',
+      rows: [
+        'Elegante — copiato all’istante, con una scheda in basso a destra che apre l’editor',
+        'Annotazione immediata — la barra compare con la selezione; annota senza cambiare finestra',
+      ],
+      image: 'modes',
+      reversed: true,
+    },
   ],
   cta: {
     eyebrow: 'Inizia gratis',

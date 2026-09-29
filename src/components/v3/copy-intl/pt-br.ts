@@ -197,6 +197,17 @@ export default {
       ],
       image: 'ai',
     },
+    {
+      eyebrow: 'Dois modos de conclusão',
+      title: 'Copie na hora ou anote na hora',
+      lead: 'Elegante copia assim que você solta a seleção; Anotação imediata abre a barra na hora. Troque quando quiser em Configurações → Captura.',
+      rows: [
+        'Elegante — copiado na hora, com um cartão no canto inferior direito que abre o editor',
+        'Anotação imediata — a barra aparece junto com a seleção; anote sem trocar de janela',
+      ],
+      image: 'modes',
+      reversed: true,
+    },
   ],
   cta: {
     eyebrow: 'Comece grátis',

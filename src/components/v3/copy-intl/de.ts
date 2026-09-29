@@ -199,6 +199,17 @@ export default {
       ],
       image: 'ai',
     },
+    {
+      eyebrow: 'Zwei Fertig-Modi',
+      title: 'Sofort kopieren oder direkt annotieren',
+      lead: 'Elegant kopiert beim Loslassen sofort in die Zwischenablage; Direkt kommentieren öffnet die Leiste an Ort und Stelle. Umschalten jederzeit unter Einstellungen → Screenshot.',
+      rows: [
+        'Elegant — sofort kopiert, mit einer Karte unten rechts, die den Editor öffnet',
+        'Direkt kommentieren — die Leiste erscheint mit der Auswahl; annotieren ohne Fensterwechsel',
+      ],
+      image: 'modes',
+      reversed: true,
+    },
   ],
   cta: {
     eyebrow: 'Kostenlos starten',

@@ -198,6 +198,17 @@ export default {
       ],
       image: 'ai',
     },
+    {
+      eyebrow: 'Deux modes de finition',
+      title: 'Copie immédiate ou annotation directe',
+      lead: 'Élégant copie dès que vous relâchez la sélection ; Annotation directe ouvre la barre sur place. Modifiable à tout moment dans Paramètres → Capture.',
+      rows: [
+        'Élégant — copié aussitôt, avec une carte en bas à droite qui ouvre l’éditeur',
+        'Annotation directe — la barre apparaît avec la sélection ; annotez sans changer de fenêtre',
+      ],
+      image: 'modes',
+      reversed: true,
+    },
   ],
   cta: {
     eyebrow: 'Gratuit pour commencer',

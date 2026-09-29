@@ -193,6 +193,17 @@ export default {
       ],
       image: 'ai',
     },
+    {
+      eyebrow: 'Två avslutningslägen',
+      title: 'Kopiera direkt eller anteckna på plats',
+      lead: 'Elegant kopierar i samma stund du släpper; Direktanteckna öppnar verktygsfältet på plats. Byt när som helst under Inställningar → Skärmbild.',
+      rows: [
+        'Elegant — kopieras direkt, med ett kort nere till höger som öppnar editorn',
+        'Direktanteckna — verktygsfältet visas med markeringen; anteckna utan att byta fönster',
+      ],
+      image: 'modes',
+      reversed: true,
+    },
   ],
   cta: {
     eyebrow: 'Gratis att börja',

@@ -198,6 +198,17 @@ export default {
       ],
       image: 'ai',
     },
+    {
+      eyebrow: 'Dwa tryby zakończenia',
+      title: 'Kopiuj od razu albo opisuj na miejscu',
+      lead: 'Elegancko kopiuje w chwili puszczenia zaznaczenia; Adnotacje od razu otwierają pasek na miejscu. Zmienisz to w każdej chwili w Ustawienia → Zrzut ekranu.',
+      rows: [
+        'Elegancko — kopiowane od razu, z kartą w prawym dolnym rogu, która otwiera edytor',
+        'Adnotacje od razu — pasek pojawia się razem z zaznaczeniem; opisuj bez przełączania okien',
+      ],
+      image: 'modes',
+      reversed: true,
+    },
   ],
   cta: {
     eyebrow: 'Zacznij za darmo',
