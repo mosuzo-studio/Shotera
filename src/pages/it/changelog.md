@@ -38,7 +38,7 @@ Impostazioni → Info → Feedback e suggerimenti
 
 Registrazione schermo e registrazione GIF (fino a 4K), Ctrl+A per selezionare l'intero schermo e una versione Lite più snella.
 
-Screenshot, screenshot lungo, fissaggio sul desktop, registrazione 4K, registrazione GIF, funzioni AI (scontorno AI, cancellazione AI, traduzione immagini, OCR offline), riconoscimento dei codici QR e altro ancora sono ora tutti ufficialmente supportati.
+Screenshot, screenshot lungo, fissaggio sul desktop, registrazione 4K, registrazione GIF, funzioni AI (scontorno AI, cancellazione AI, traduzione immagini, OCR offline), riconoscimento dei codici QR e altro ancora sono stati rifiniti meticolosamente, per una qualità ancora migliore.
 
 **🆚 Lite vs. versione Standard:** le differenze tra le funzioni sono elencate nel [confronto versioni](/it/versions).
 

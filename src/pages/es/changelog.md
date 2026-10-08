@@ -38,7 +38,7 @@ Ajustes → Acerca de → Comentarios y sugerencias
 
 Grabación de pantalla y grabación de GIF (hasta 4K), Ctrl+A para seleccionar toda la pantalla y una versión Lite más ligera.
 
-La captura, la captura larga, las fijaciones en el escritorio, la grabación 4K, la grabación de GIF, las capacidades de IA (recorte con IA, borrado con IA, traducción de imágenes, OCR sin conexión), la lectura de código QR y muchas más ya cuentan con soporte oficial.
+La captura, la captura larga, las fijaciones en el escritorio, la grabación 4K, la grabación de GIF, las capacidades de IA (recorte con IA, borrado con IA, traducción de imágenes, OCR sin conexión), la lectura de código QR y muchas más se han pulido meticulosamente para ofrecer una calidad excepcional.
 
 **🆚 Lite vs. versión Estándar:** consulta la [comparación de versiones](/es/versions) para ver las diferencias entre funciones.
 

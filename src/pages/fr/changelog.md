@@ -38,7 +38,7 @@ Paramètres → À propos → Retours et suggestions
 
 Enregistrement d'écran et enregistrement GIF (jusqu'à 4K), Ctrl+A pour sélectionner tout l'écran, et une édition Lite plus légère.
 
-La capture d'écran, la longue capture, l'épinglage au bureau, l'enregistrement 4K, l'enregistrement GIF, les fonctions AI (détourage AI, effacement AI, traduction d'images, OCR hors ligne), la reconnaissance de QR codes et bien d'autres sont désormais tous officiellement pris en charge.
+La capture d'écran, la longue capture, l'épinglage au bureau, l'enregistrement 4K, l'enregistrement GIF, les fonctions AI (détourage AI, effacement AI, traduction d'images, OCR hors ligne), la reconnaissance de QR codes et bien d'autres ont été méticuleusement peaufinés, pour une qualité encore meilleure.
 
 **🆚 Lite vs version Standard :** consultez la [comparaison des versions](/fr/versions) pour connaître les différences entre les fonctions.
 

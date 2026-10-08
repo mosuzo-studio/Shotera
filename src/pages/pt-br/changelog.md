@@ -38,7 +38,7 @@ Configurações → Sobre → Feedback e sugestões
 
 Gravar tela e gravar GIF (até 4K), Ctrl+A para selecionar a tela inteira e uma versão Lite mais enxuta.
 
-Captura, captura longa, fixar na área de trabalho, gravação 4K, gravação de GIF, recursos de AI (recorte com AI, apagamento com AI, tradução de imagens, OCR offline), leitura de QR Code e muito mais agora contam com suporte oficial.
+Captura, captura longa, fixar na área de trabalho, gravação 4K, gravação de GIF, recursos de AI (recorte com AI, apagamento com AI, tradução de imagens, OCR offline), leitura de QR Code e muito mais passaram por um polimento meticuloso, com qualidade excepcional.
 
 **🆚 Lite vs. versão Standard:** veja a [comparação de versões](/pt-br/versions) para as diferenças de recursos.
 

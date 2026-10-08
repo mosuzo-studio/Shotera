@@ -38,7 +38,7 @@ Ustawienia → O programie → Opinie i sugestie
 
 Nagrywanie ekranu i nagrywanie GIF (do 4K), zaznaczanie całego ekranu przez Ctrl+A i lżejsza wersja Lite.
 
-Zrzut ekranu, długi zrzut, przypinanie do pulpitu, nagrywanie 4K, nagrywanie GIF, funkcje AI (wycinanie AI, wymazywanie AI, tłumaczenie obrazów, OCR offline), rozpoznawanie kodów QR i inne funkcje są teraz oficjalnie wspierane.
+Zrzut ekranu, długi zrzut, przypinanie do pulpitu, nagrywanie 4K, nagrywanie GIF, funkcje AI (wycinanie AI, wymazywanie AI, tłumaczenie obrazów, OCR offline), rozpoznawanie kodów QR i inne funkcje zostały starannie dopracowane, a ich jakość jest jeszcze lepsza.
 
 **🆚 Lite vs wersja Standard:** różnice w funkcjach znajdziesz w [porównaniu wersji](/pl/versions).
 

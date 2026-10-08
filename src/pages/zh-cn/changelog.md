@@ -36,7 +36,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 录屏与 GIF 录制（最高 4K）、Ctrl+A 全选屏幕、Lite 版更精简。
 
-截图、长截图、贴图、4K 录屏、GIF 录制、AI 能力（AI 抠图、AI 擦图、图片翻译、离线 OCR）、二维码识别等已全部正式支持。
+截图、长截图、贴图、4K 录屏、GIF 录制、AI 能力（AI 抠图、AI 擦图、图片翻译、离线 OCR）、二维码识别等均已精心打磨、品质更出色。
 
 **🆚 Lite 版与标准版差异：** 详见[版本对比](/zh-cn/versions)。
 

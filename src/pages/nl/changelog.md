@@ -38,7 +38,7 @@ Instellingen → Over → Feedback en suggesties
 
 Schermopname en GIF-opname (tot 4K), Ctrl+A om het hele scherm te selecteren en een slankere Lite-versie.
 
-Schermafbeelding, lange schermafbeelding, vastpinnen op bureaublad, 4K-opname, GIF-opname, AI-functies (AI-uitsnede, AI-gum, afbeeldingsvertaling, offline OCR), QR-codes scannen en meer worden nu allemaal officieel ondersteund.
+Schermafbeelding, lange schermafbeelding, vastpinnen op bureaublad, 4K-opname, GIF-opname, AI-functies (AI-uitsnede, AI-gum, afbeeldingsvertaling, offline OCR), QR-codes scannen en meer zijn allemaal zorgvuldig gepolijst, voor nog betere kwaliteit.
 
 **🆚 Lite vs. Standard:** de functieverschillen staan in de [versievergelijking](/nl/versions).
 

@@ -36,7 +36,7 @@ Settings → About → Feedback & suggestions
 
 Screen recording and GIF recording (up to 4K), Ctrl+A select-all screen, and a leaner Lite edition.
 
-Screenshot, long screenshot, pin to desktop, 4K recording, GIF recording, AI features (AI cutout, AI erase, image translation, offline OCR), QR code recognition and more are now all officially supported.
+Screenshot, long screenshot, pin to desktop, 4K recording, GIF recording, AI features (AI cutout, AI erase, image translation, offline OCR), QR code recognition and more are now all meticulously polished for exceptional quality.
 
 **🆚 Lite edition vs. Standard edition:** see the [version comparison](/versions) for feature differences.
 

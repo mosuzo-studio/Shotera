@@ -38,7 +38,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 錄製螢幕與 GIF（最高 4K）、Ctrl+A 全選螢幕、Lite 版更精簡。
 
-截圖、長截圖、貼圖、4K 錄製螢幕、GIF 錄製、AI 能力（AI 去背、AI 擦除、圖片翻譯、離線 OCR）、QR Code 辨識等已全部正式支援。
+截圖、長截圖、貼圖、4K 錄製螢幕、GIF 錄製、AI 能力（AI 去背、AI 擦除、圖片翻譯、離線 OCR）、QR Code 辨識等均已精心打磨、品質更出色。
 
 **🆚 Lite 版與標準版差異：** 詳見[版本對比](/zh-tw/versions)。
 

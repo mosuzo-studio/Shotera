@@ -38,7 +38,7 @@ Einstellungen → Über → Feedback & Vorschläge
 
 Bildschirmaufnahme und GIF-Aufnahme (bis zu 4K), Ctrl+A zur Vollauswahl des Bildschirms und eine schlankere Lite-Version.
 
-Screenshot, langer Screenshot, Anheften auf dem Desktop, 4K-Aufnahme, GIF-Aufnahme, AI-Funktionen (AI-Freistellen, AI-Radierer, Bildübersetzung, Offline-OCR), QR-Code-Erkennung und mehr werden jetzt alle offiziell unterstützt.
+Screenshot, langer Screenshot, Anheften auf dem Desktop, 4K-Aufnahme, GIF-Aufnahme, AI-Funktionen (AI-Freistellen, AI-Radierer, Bildübersetzung, Offline-OCR), QR-Code-Erkennung und mehr wurden jetzt alle sorgfältig poliert – für eine noch bessere Qualität.
 
 **🆚 Lite vs. Standard-Edition:** Die Funktionsunterschiede finden Sie im [Versionsvergleich](/de/versions).
 

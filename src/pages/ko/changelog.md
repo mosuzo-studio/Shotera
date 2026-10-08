@@ -38,7 +38,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 화면 녹화와 GIF 녹화(최대 4K), Ctrl+A 화면 전체 선택, 그리고 더 가벼워진 Lite 버전.
 
-스크린샷, 스크롤 캡처, 고정 창, 4K 녹화, GIF 녹화, AI 기능(AI 배경 제거, AI 지우기, AI 이미지 번역, 오프라인 OCR), QR 코드 인식 등이 이제 모두 공식 지원됩니다.
+스크린샷, 스크롤 캡처, 고정 창, 4K 녹화, GIF 녹화, AI 기능(AI 배경 제거, AI 지우기, AI 이미지 번역, 오프라인 OCR), QR 코드 인식 등 모든 기능을 정성껏 다듬어 품질을 한층 높였습니다.
 
 **🆚 Lite 버전과 Standard 버전 차이:** 기능 차이는 [버전 비교](/ko/versions)에서 확인하세요.
 

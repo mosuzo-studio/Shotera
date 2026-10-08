@@ -38,7 +38,7 @@ Inställningar → Om → Feedback & förslag
 
 Skärminspelning och GIF-inspelning (upp till 4K), Ctrl+A för att markera hela skärmen och en lättare Lite-version.
 
-Skärmbild, rullande skärmbild, fästa bilder, 4K-inspelning, GIF-inspelning, AI-funktioner (AI-frilägg, AI-radering, bildöversättning, offline-OCR), QR-kodsläsning med mera stöds nu officiellt.
+Skärmbild, rullande skärmbild, fästa bilder, 4K-inspelning, GIF-inspelning, AI-funktioner (AI-frilägg, AI-radering, bildöversättning, offline-OCR), QR-kodsläsning med mera har finslipats minutiöst för ännu bättre kvalitet.
 
 **🆚 Lite vs. Standard:** funktionsskillnaderna finns i [versionsjämförelsen](/sv/versions).
 
