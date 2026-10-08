@@ -12,7 +12,8 @@ Inställningar → Om → Feedback & förslag
 **ℹ️ De senaste versionsnyheterna finns först i den [engelska ändringsloggen](/changelog); den här språkversionen uppdateras lite senare.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Ny</span></a></li>
+  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Ny</span></a></li>
+  <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
@@ -28,6 +29,41 @@ Inställningar → Om → Feedback & förslag
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.0
+
+**Släppt:** 2026-10-08
+
+Skärminspelning och GIF-inspelning (upp till 4K), Ctrl+A för att markera hela skärmen och en lättare Lite-version.
+
+Skärmbild, rullande skärmbild, fästa bilder, 4K-inspelning, GIF-inspelning, AI-funktioner (AI-frilägg, AI-radering, bildöversättning, offline-OCR), QR-kodsläsning med mera stöds nu officiellt.
+
+**🆚 Lite vs. Standard:** funktionsskillnaderna finns i [versionsjämförelsen](/sv/versions).
+
+**✨ Nya funktioner**
+
+- Stöd för skärminspelning och GIF-inspelning har lagts till.
+- Skärminspelningen spelar in video i upp till 4K, och GIF-inspelningen exporterar animerade GIF-filer.
+- Ctrl+A markerar hela skärmen medan du markerar ett område: tryck en gång för ”Aktuell skärm”, igen för ”Alla skärmar”. En flytande förhandsvisning av markeringen visas längst ner till vänster.
+
+**🚀 Förbättringar**
+
+- Lite-versionen fokuserar på skärmbild och annotering; inspelning, GIF, rullande skärmbild och QR-kod ingår i Standard.
+- Lite-versionen: uppgraderingsbannern hänvisar nu användare till Standard och länkar till versionsjämförelsen.
+- Inställningar → Presentation: lägesväxlaren är nu en segmenterad kontroll ”Normal | Presentation”, så att det aktiva läget förblir synligt.
+- Textverktyget: nya textrutor visas centrerade på klickpunkten.
+
+**🐞 Buggfixar**
+
+- Områdesinspelningen gav tomma filer på stående (roterade) skärmar – åtgärdat.
+- Den frysta skärmbildsoverlayen hamnade i det övre vänstra hörnet på den primära skärmen vid den första skärmbilden efter att skärmen har vaknat ur viloläget – åtgärdat.
+- Förstoringsglaset har återställts till den cirkulära stilen, med ram som följer den valda färgen, heldragen/streckad stil och färgpalett.
+
+**🙏 Tack**
+
+Tack till alla som rapporterade issue och föreslog funktioner.
 
 ---
 

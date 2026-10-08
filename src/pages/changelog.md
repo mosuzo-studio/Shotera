@@ -10,7 +10,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 Settings → About → Feedback & suggestions
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">New</span></a></li>
+  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">New</span></a></li>
+  <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
@@ -26,6 +27,41 @@ Settings → About → Feedback & suggestions
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.0
+
+**Released:** 2026-10-08
+
+Screen recording and GIF recording (up to 4K), Ctrl+A select-all screen, and a leaner Lite edition.
+
+Screenshot, long screenshot, pin to desktop, 4K recording, GIF recording, AI features (AI cutout, AI erase, image translation, offline OCR), QR code recognition and more are now all officially supported.
+
+**🆚 Lite edition vs. Standard edition:** see the [version comparison](/versions) for feature differences.
+
+**✨ Features**
+
+- Added screen recording and GIF recording support.
+- Screen recording captures up to 4K video, and GIF recording exports animated GIFs.
+- Ctrl+A selects the whole screen during region selection: press once for the current screen, again for all screens. A floating preview of the selection appears at the bottom-left.
+
+**🚀 Improvements**
+
+- Lite edition focuses on screenshot and annotation; recording, GIF, long screenshot, and QR code are Standard features.
+- Lite edition: the upgrade banner now guides users to Standard and links to the version comparison page.
+- Settings → Presentation: the mode switch is now a "Normal | Presentation" segmented control, so the active mode stays visible.
+- Text tool: new text boxes appear centered on the click point.
+
+**🐞 Bug Fixes**
+
+- Fixed region recording producing empty files on portrait (rotated) displays.
+- Fixed the frozen capture overlay landing at the top-left of the primary screen on the first capture after the display wakes from sleep.
+- Magnifier restored to the circular style, with color-following border, solid/dashed styles, and color palette.
+
+**🙏 Acknowledgements**
+
+Thanks to everyone who reported issues and suggested features.
 
 ---
 

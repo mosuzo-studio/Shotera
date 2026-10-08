@@ -12,7 +12,8 @@ Instellingen → Over → Feedback en suggesties
 **ℹ️ De nieuwste release notes staan eerst in de [Engelse changelog](/changelog); deze taalversie wordt iets later bijgewerkt.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Nieuw</span></a></li>
+  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Nieuw</span></a></li>
+  <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
@@ -28,6 +29,41 @@ Instellingen → Over → Feedback en suggesties
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.0
+
+**Uitgebracht:** 2026-10-08
+
+Schermopname en GIF-opname (tot 4K), Ctrl+A om het hele scherm te selecteren en een slankere Lite-versie.
+
+Schermafbeelding, lange schermafbeelding, vastpinnen op bureaublad, 4K-opname, GIF-opname, AI-functies (AI-uitsnede, AI-gum, afbeeldingsvertaling, offline OCR), QR-codes scannen en meer worden nu allemaal officieel ondersteund.
+
+**🆚 Lite vs. Standard:** de functieverschillen staan in de [versievergelijking](/nl/versions).
+
+**✨ Nieuwe functies**
+
+- Nieuwe ondersteuning voor schermopname en GIF-opname.
+- Schermopname legt video vast tot 4K en GIF-opname exporteert geanimeerde GIF's.
+- Ctrl+A selecteert tijdens het selecteren van een gebied het hele scherm: druk één keer voor 'Huidig scherm' en nog een keer voor 'Alle schermen'. Linksonder verschijnt een zwevende voorvertoning van de selectie.
+
+**🚀 Verbeteringen**
+
+- De Lite-versie richt zich op schermafbeelding en annotatie; schermopname, GIF, lange schermafbeelding en QR-code zijn functies van Standard.
+- Lite-versie: de upgradebanner leidt je nu naar Standard en linkt naar de versievergelijking.
+- Instellingen → Presentatie: de modusschakelaar is nu een gesegmenteerd bedieningselement 'Normaal | Presentatie', zodat de actieve modus zichtbaar blijft.
+- Tekst-tool: nieuwe tekstvakken verschijnen gecentreerd op het klikpunt.
+
+**🐞 Bugfixes**
+
+- Schermopname van een gebied leverde lege bestanden op bij staande (gedraaide) schermen: opgelost.
+- De bevroren opname-overlay belandde bij de eerste opname, nadat het beeldscherm uit de slaapstand was gekomen, linksboven op het primaire scherm: opgelost.
+- De loep is teruggezet naar de ronde stijl, met een rand die de gekozen kleur volgt, doorlopende en gestreepte stijlen en een kleurenpalet.
+
+**🙏 Dankbetuiging**
+
+Dank aan iedereen die problemen meldde en functies voorstelde.
 
 ---
 

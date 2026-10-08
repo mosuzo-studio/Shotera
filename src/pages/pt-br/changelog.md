@@ -12,7 +12,8 @@ Configurações → Sobre → Feedback e sugestões
 **ℹ️ As notas mais recentes aparecem primeiro no [changelog em inglês](/changelog); esta versão é atualizada um pouco depois.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Novo</span></a></li>
+  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Novo</span></a></li>
+  <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
@@ -28,6 +29,41 @@ Configurações → Sobre → Feedback e sugestões
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.0
+
+**Lançamento:** 2026-10-08
+
+Gravar tela e gravar GIF (até 4K), Ctrl+A para selecionar a tela inteira e uma versão Lite mais enxuta.
+
+Captura, captura longa, fixar na área de trabalho, gravação 4K, gravação de GIF, recursos de AI (recorte com AI, apagamento com AI, tradução de imagens, OCR offline), leitura de QR Code e muito mais agora contam com suporte oficial.
+
+**🆚 Lite vs. versão Standard:** veja a [comparação de versões](/pt-br/versions) para as diferenças de recursos.
+
+**✨ Novidades**
+
+- Suporte adicionado para gravar tela e gravar GIF.
+- A gravação de tela captura vídeos em até 4K, e a gravação de GIF exporta GIFs animados.
+- Durante a seleção da região, Ctrl+A seleciona a tela inteira: pressione uma vez para a tela atual e novamente para todas as telas. Uma prévia flutuante da seleção aparece no canto inferior esquerdo.
+
+**🚀 Melhorias**
+
+- A versão Lite foca em captura e anotação; gravar tela, gravar GIF, captura longa e QR Code são recursos da versão Standard.
+- Versão Lite: o banner de atualização agora orienta os usuários a atualizar para a versão Standard e leva à página de comparação de versões.
+- Configurações → Apresentação: o seletor de modo agora é um controle segmentado «Normal | Apresentação», para que o modo ativo permaneça visível.
+- Ferramenta de texto: novas caixas de texto aparecem centralizadas no ponto do clique.
+
+**🐞 Correções de bugs**
+
+- Corrigida a gravação de região que gerava arquivos vazios em telas na vertical (giradas).
+- Corrigida a sobreposição de captura congelada que ia parar no canto superior esquerdo da tela principal na primeira captura depois que a tela desperta da suspensão.
+- A lupa foi restaurada ao estilo circular, com borda que acompanha a cor selecionada, estilos de linha sólida/tracejada e paleta de cores.
+
+**🙏 Agradecimentos**
+
+Obrigado a todos que relataram problemas e sugeriram recursos.
 
 ---
 

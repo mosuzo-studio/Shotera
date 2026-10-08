@@ -12,7 +12,8 @@ Impostazioni → Info → Feedback e suggerimenti
 **ℹ️ Le note più recenti compaiono prima nel [changelog in inglese](/changelog); questa versione linguistica viene aggiornata poco dopo.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Nuovo</span></a></li>
+  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Nuovo</span></a></li>
+  <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
@@ -28,6 +29,41 @@ Impostazioni → Info → Feedback e suggerimenti
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.0
+
+**Rilasciato:** 2026-10-08
+
+Registrazione schermo e registrazione GIF (fino a 4K), Ctrl+A per selezionare l'intero schermo e una versione Lite più snella.
+
+Screenshot, screenshot lungo, fissaggio sul desktop, registrazione 4K, registrazione GIF, funzioni AI (scontorno AI, cancellazione AI, traduzione immagini, OCR offline), riconoscimento dei codici QR e altro ancora sono ora tutti ufficialmente supportati.
+
+**🆚 Lite vs. versione Standard:** le differenze tra le funzioni sono elencate nel [confronto versioni](/it/versions).
+
+**✨ Novità**
+
+- Aggiunto il supporto per la registrazione schermo e la registrazione GIF.
+- La registrazione schermo cattura video fino a 4K e la registrazione GIF esporta GIF animate.
+- Ctrl+A seleziona l'intero schermo durante la selezione dell'area: premi una volta per lo schermo corrente, di nuovo per tutti gli schermi. Un'anteprima fluttuante della selezione compare in basso a sinistra.
+
+**🚀 Miglioramenti**
+
+- La versione Lite si concentra su screenshot e annotazione; registrazione, GIF, screenshot lungo e codice QR sono funzioni della versione Standard.
+- Versione Lite: il banner di upgrade ora guida verso la versione Standard e rimanda alla pagina di confronto delle versioni.
+- Impostazioni → Presentazione: il selettore della modalità è ora un controllo segmentato «Normale | Presentazione», così la modalità attiva resta sempre visibile.
+- Strumento Testo: i nuovi riquadri di testo compaiono centrati sul punto in cui fai clic.
+
+**🐞 Correzioni di bug**
+
+- Corretta la registrazione di area che produceva file vuoti su display verticali (ruotati).
+- Corretto l'overlay di cattura congelato che alla prima cattura dopo il risveglio del display finiva in alto a sinistra dello schermo principale.
+- Ripristinata la lente d'ingrandimento nello stile circolare, con bordo che segue il colore selezionato, stili continuo e tratteggiato e tavolozza dei colori.
+
+**🙏 Ringraziamenti**
+
+Grazie a tutti coloro che hanno segnalato issue e proposto funzioni.
 
 ---
 

@@ -12,7 +12,8 @@ Paramètres → À propos → Retours et suggestions
 **ℹ️ Les notes les plus récentes paraissent d’abord dans le [changelog anglais](/changelog) ; cette version linguistique sera mise à jour un peu plus tard.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Nouveau</span></a></li>
+  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Nouveau</span></a></li>
+  <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
@@ -28,6 +29,41 @@ Paramètres → À propos → Retours et suggestions
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.0
+
+**Sortie:** 2026-10-08
+
+Enregistrement d'écran et enregistrement GIF (jusqu'à 4K), Ctrl+A pour sélectionner tout l'écran, et une édition Lite plus légère.
+
+La capture d'écran, la longue capture, l'épinglage au bureau, l'enregistrement 4K, l'enregistrement GIF, les fonctions AI (détourage AI, effacement AI, traduction d'images, OCR hors ligne), la reconnaissance de QR codes et bien d'autres sont désormais tous officiellement pris en charge.
+
+**🆚 Lite vs version Standard :** consultez la [comparaison des versions](/fr/versions) pour connaître les différences entre les fonctions.
+
+**✨ Nouveautés**
+
+- L'enregistrement d'écran et l'enregistrement GIF sont désormais pris en charge.
+- L'enregistrement d'écran capture une vidéo jusqu'à 4K, et l'enregistrement GIF exporte des GIF animés.
+- Lors de la sélection d'une zone, Ctrl+A sélectionne tout l'écran : appuyez une fois pour l'écran actuel, à nouveau pour tous les écrans. Un aperçu flottant de la sélection apparaît en bas à gauche.
+
+**🚀 Améliorations**
+
+- L'édition Lite se concentre sur la capture et l'annotation ; l'enregistrement, le GIF, la longue capture et les QR codes sont des fonctions de la version Standard.
+- Édition Lite : la bannière de mise à niveau oriente désormais vers la version Standard et renvoie à la page de comparaison des versions.
+- Paramètres → Présentation : le sélecteur de mode est désormais un contrôle segmenté « Normal | Présentation », pour que le mode actif reste visible.
+- Outil Texte : les nouvelles zones de texte apparaissent centrées sur le point de clic.
+
+**🐞 Corrections de bugs**
+
+- Correction de l'enregistrement d'une zone, qui produisait des fichiers vides sur les écrans en mode portrait (pivotés).
+- Correction de la superposition de capture figée qui, à la première capture après le réveil de l'écran, apparaissait en haut à gauche de l'écran principal.
+- La loupe est restaurée dans son style circulaire, avec une bordure qui suit la couleur, des styles continu et pointillé et une palette de couleurs.
+
+**🙏 Remerciements**
+
+Merci à toutes les personnes qui ont signalé une issue ou suggéré une fonction.
 
 ---
 

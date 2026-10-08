@@ -12,7 +12,8 @@ Ustawienia → O programie → Opinie i sugestie
 **ℹ️ Najnowsze informacje o wersjach znajdziesz najpierw w [angielskim changelogu](/changelog); ta wersja językowa zostanie zaktualizowana nieco później.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Nowość</span></a></li>
+  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Nowość</span></a></li>
+  <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
@@ -28,6 +29,41 @@ Ustawienia → O programie → Opinie i sugestie
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.0
+
+**Data wydania:** 2026-10-08
+
+Nagrywanie ekranu i nagrywanie GIF (do 4K), zaznaczanie całego ekranu przez Ctrl+A i lżejsza wersja Lite.
+
+Zrzut ekranu, długi zrzut, przypinanie do pulpitu, nagrywanie 4K, nagrywanie GIF, funkcje AI (wycinanie AI, wymazywanie AI, tłumaczenie obrazów, OCR offline), rozpoznawanie kodów QR i inne funkcje są teraz oficjalnie wspierane.
+
+**🆚 Lite vs wersja Standard:** różnice w funkcjach znajdziesz w [porównaniu wersji](/pl/versions).
+
+**✨ Nowe funkcje**
+
+- Dodano obsługę nagrywania ekranu i nagrywania GIF.
+- Nagrywanie ekranu zapisuje wideo w rozdzielczości do 4K, a nagrywanie GIF eksportuje animowane GIF-y.
+- Podczas zaznaczania obszaru Ctrl+A zaznacza cały ekran: naciśnij raz, aby wybrać bieżący ekran, a ponownie — wszystkie ekrany. W lewym dolnym rogu pojawia się pływający podgląd zaznaczenia.
+
+**🚀 Ulepszenia**
+
+- Wersja Lite skupia się na zrzutach ekranu i adnotacjach; nagrywanie, GIF, długi zrzut i kody QR to funkcje wersji Standard.
+- Wersja Lite: baner aktualizacji prowadzi teraz do wersji Standard i odsyła do strony porównania wersji.
+- Ustawienia → Prezentacja: przełącznik trybu to teraz kontrolka segmentowa „Normalny | Prezentacja”, dzięki czemu aktywny tryb pozostaje widoczny.
+- Narzędzie tekstowe: nowe pola tekstowe pojawiają się wyśrodkowane na punkcie kliknięcia.
+
+**🐞 Poprawki błędów**
+
+- Naprawiono tworzenie pustych plików przez nagrywanie obszaru na ekranach w orientacji pionowej (obróconych).
+- Naprawiono trafianie zamrożonej nakładki przechwytywania do lewego górnego rogu głównego ekranu przy pierwszym zrzucie po wybudzeniu ekranu z uśpienia.
+- Przywrócono lupie okrągły styl: ramka podążająca za wybieranym kolorem, style ciągły i przerywany oraz paleta kolorów.
+
+**🙏 Podziękowania**
+
+Dziękujemy wszystkim, którzy zgłaszali problemy i sugerowali funkcje.
 
 ---
 

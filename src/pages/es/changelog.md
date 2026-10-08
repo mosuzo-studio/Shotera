@@ -12,7 +12,8 @@ Ajustes → Acerca de → Comentarios y sugerencias
 **ℹ️ Las notas más recientes aparecen primero en el [changelog en inglés](/changelog); esta versión se actualiza un poco después.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Nuevo</span></a></li>
+  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Nuevo</span></a></li>
+  <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
@@ -28,6 +29,41 @@ Ajustes → Acerca de → Comentarios y sugerencias
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.0
+
+**Publicado:** 2026-10-08
+
+Grabación de pantalla y grabación de GIF (hasta 4K), Ctrl+A para seleccionar toda la pantalla y una versión Lite más ligera.
+
+La captura, la captura larga, las fijaciones en el escritorio, la grabación 4K, la grabación de GIF, las capacidades de IA (recorte con IA, borrado con IA, traducción de imágenes, OCR sin conexión), la lectura de código QR y muchas más ya cuentan con soporte oficial.
+
+**🆚 Lite vs. versión Estándar:** consulta la [comparación de versiones](/es/versions) para ver las diferencias entre funciones.
+
+**✨ Novedades**
+
+- Grabación de pantalla y grabación de GIF añadidas.
+- La grabación de pantalla captura vídeo de hasta 4K y la grabación de GIF exporta GIF animados.
+- Ctrl+A selecciona toda la pantalla durante la selección de región: pulsa una vez para la pantalla actual y de nuevo para todas las pantallas. Una vista previa flotante de la selección aparece en la esquina inferior izquierda.
+
+**🚀 Mejoras**
+
+- La versión Lite se centra en la captura y la anotación; la grabación, el GIF, la captura larga y el código QR son funciones de la versión Estándar.
+- Versión Lite: el banner de mejora ahora guía a los usuarios hacia la versión Estándar y enlaza con la página de comparación de versiones.
+- Ajustes → Presentación: el interruptor de modo es ahora un control segmentado «Normal | Presentación», para que el modo activo permanezca visible.
+- Herramienta de texto: los nuevos cuadros de texto aparecen centrados en el punto donde se hace clic.
+
+**🐞 Corrección de errores**
+
+- Corregida la grabación de región, que generaba archivos vacíos en pantallas verticales (giradas).
+- Corregida la superposición de captura congelada, que en la primera captura tras despertar el monitor del modo de suspensión aparecía en la esquina superior izquierda de la pantalla principal.
+- Restaurada la lupa al estilo circular, con un borde que sigue el color, estilos de borde continuo/discontinuo y paleta de colores.
+
+**🙏 Agradecimientos**
+
+Gracias a todos los que informaron de problemas y sugirieron funciones.
 
 ---
 

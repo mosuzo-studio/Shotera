@@ -12,7 +12,8 @@ Einstellungen → Über → Feedback & Vorschläge
 **ℹ️ Die neuesten Release Notes finden Sie zuerst im [englischen Changelog](/changelog); diese Sprachfassung wird etwas später aktualisiert.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">Neu</span></a></li>
+  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Neu</span></a></li>
+  <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
@@ -28,6 +29,41 @@ Einstellungen → Über → Feedback & Vorschläge
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.0
+
+**Veröffentlicht:** 2026-10-08
+
+Bildschirmaufnahme und GIF-Aufnahme (bis zu 4K), Ctrl+A zur Vollauswahl des Bildschirms und eine schlankere Lite-Version.
+
+Screenshot, langer Screenshot, Anheften auf dem Desktop, 4K-Aufnahme, GIF-Aufnahme, AI-Funktionen (AI-Freistellen, AI-Radierer, Bildübersetzung, Offline-OCR), QR-Code-Erkennung und mehr werden jetzt alle offiziell unterstützt.
+
+**🆚 Lite vs. Standard-Edition:** Die Funktionsunterschiede finden Sie im [Versionsvergleich](/de/versions).
+
+**✨ Neue Funktionen**
+
+- Neue Unterstützung für Bildschirmaufnahme und GIF-Aufnahme.
+- Die Bildschirmaufnahme erfasst Videos in bis zu 4K, und die GIF-Aufnahme exportiert animierte GIFs.
+- Ctrl+A wählt während der Bereichsauswahl den ganzen Bildschirm aus: einmal drücken für den aktuellen Bildschirm, erneut für alle Bildschirme. Unten links erscheint eine schwebende Vorschau der Auswahl.
+
+**🚀 Verbesserungen**
+
+- Die Lite-Version konzentriert sich auf Screenshot und Anmerkungen; Bildschirmaufnahme, GIF, langer Screenshot und QR-Code sind Funktionen der Standard-Edition.
+- Lite-Version: Das Upgrade-Banner führt Nutzer jetzt zur Standard-Edition und verlinkt auf den Versionsvergleich.
+- Einstellungen → Präsentation: Der Modusschalter ist jetzt ein Segmentsteuerelement „Normal | Präsentation“, sodass der aktive Modus sichtbar bleibt.
+- Textwerkzeug: Neue Textfelder erscheinen zentriert am Klickpunkt.
+
+**🐞 Fehlerbehebungen**
+
+- Die Bereichsaufnahme erzeugte auf Hochformat-Displays (gedrehten Bildschirmen) leere Dateien – behoben.
+- Das eingefrorene Aufnahme-Overlay landete beim ersten Screenshot, nachdem der Bildschirm aus dem Schlafmodus erwacht war, in der oberen linken Ecke des Hauptbildschirms – behoben.
+- Die Lupe ist wieder im runden Stil verfügbar, mit einem Rand, der der aktuellen Farbwahl folgt, durchgezogenen und gestrichelten Randstilen sowie der Farbpalette.
+
+**🙏 Danksagung**
+
+Dank an alle, die Probleme gemeldet und Funktionen vorgeschlagen haben.
 
 ---
 

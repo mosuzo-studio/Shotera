@@ -12,7 +12,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 **ℹ️ 最新說明請先看[英文版更新日誌](/changelog)，本語言的版本會稍晚一些更新。**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v780">v7.8.0<span class="tag">新</span></a></li>
+  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">新</span></a></li>
+  <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
   <li><a href="#shotera-v751">v7.5.1</a></li>
@@ -28,6 +29,41 @@ layout: '~/layouts/MarkdownLayout.astro'
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.0
+
+**發布日期:** 2026-10-08
+
+錄製螢幕與 GIF（最高 4K）、Ctrl+A 全選螢幕、Lite 版更精簡。
+
+截圖、長截圖、貼圖、4K 錄製螢幕、GIF 錄製、AI 能力（AI 去背、AI 擦除、圖片翻譯、離線 OCR）、QR Code 辨識等已全部正式支援。
+
+**🆚 Lite 版與標準版差異：** 詳見[版本對比](/zh-tw/versions)。
+
+**✨ 新增功能**
+
+- 新增錄製螢幕與 GIF 錄製支援。
+- 錄製螢幕影片最高支援 4K，GIF 錄製可直接匯出動態 GIF。
+- 框選時按 Ctrl+A 全選螢幕：按一次選取「目前螢幕」，再按切換到「全部螢幕」。左下角會出現選區浮動預覽。
+
+**🚀 改進優化**
+
+- Lite 版聚焦截圖與標註，錄製螢幕、GIF、長截圖、QR Code 由標準版提供。
+- Lite 版升級橫幅改為引導升級標準版，並連結到官網版本對比頁。
+- 設定 → 演示：模式開關改為「一般｜演示」分段控制項，目前所在模式持續可見。
+- 文字工具：新建輸入框以點擊處為中心彈出。
+
+**🐞 問題修復**
+
+- 修正直立（旋轉）螢幕區域錄製輸出空檔案的問題。
+- 修正螢幕關閉再重新連線後首次截圖，凍結畫面錯位到實體主螢幕左上角的問題。
+- 放大鏡工具還原為圓形，外框跟隨目前取色，並恢復實線／虛線樣式與色彩面板。
+
+**🙏 致謝名單**
+
+感謝社群成員的 issue 回報與功能建議。
 
 ---
 
