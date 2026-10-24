@@ -10,7 +10,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 设置 → 关于 → 反馈与建议
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">新</span></a></li>
+  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">新</span></a></li>
+  <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
@@ -27,6 +28,29 @@ layout: '~/layouts/MarkdownLayout.astro'
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.2
+
+**发布日期:** 2026-10-24
+
+国际化翻译，以及 bug 修复与部分性能提升。
+
+**🆚 Lite 版与标准版差异：** 详见[版本对比](/zh-cn/versions)。
+
+**🚀 改进优化**
+
+- 新增国际化翻译。
+- 提升部分性能。
+
+**🐞 问题修复**
+
+- 修复若干问题。
+
+**🙏 致谢名单**
+
+感谢社区成员的 issue 反馈与功能建议。
 
 ---
 

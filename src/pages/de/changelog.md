@@ -12,7 +12,8 @@ Einstellungen → Über → Feedback & Vorschläge
 **ℹ️ Die neuesten Release Notes finden Sie zuerst im [englischen Changelog](/changelog); diese Sprachfassung wird etwas später aktualisiert.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Neu</span></a></li>
+  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">Neu</span></a></li>
+  <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
@@ -29,6 +30,29 @@ Einstellungen → Über → Feedback & Vorschläge
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.2
+
+**Veröffentlicht:** 2026-10-24
+
+Übersetzungen für die Internationalisierung sowie Fehlerbehebungen und einige Leistungsverbesserungen.
+
+**🆚 Lite vs. Standard-Edition:** Die Funktionsunterschiede finden Sie im [Versionsvergleich](/de/versions).
+
+**🚀 Verbesserungen**
+
+- Übersetzungen für die Internationalisierung hinzugefügt.
+- Die Leistung in einigen Bereichen verbessert.
+
+**🐞 Fehlerbehebungen**
+
+- Mehrere Fehler behoben.
+
+**🙏 Danksagung**
+
+Dank an alle, die Probleme gemeldet und Funktionen vorgeschlagen haben.
 
 ---
 

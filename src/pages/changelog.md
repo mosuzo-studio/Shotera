@@ -10,7 +10,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 Settings → About → Feedback & suggestions
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">New</span></a></li>
+  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">New</span></a></li>
+  <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
@@ -27,6 +28,29 @@ Settings → About → Feedback & suggestions
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.2
+
+**Released:** 2026-10-24
+
+Internationalization translations, plus bug fixes and some performance improvements.
+
+**🆚 Lite edition vs. Standard edition:** see the [version comparison](/versions) for feature differences.
+
+**🚀 Improvements**
+
+- Added internationalization translations.
+- Improved performance in some areas.
+
+**🐞 Bug Fixes**
+
+- Fixed several issues.
+
+**🙏 Acknowledgements**
+
+Thanks to everyone who reported issues and suggested features.
 
 ---
 

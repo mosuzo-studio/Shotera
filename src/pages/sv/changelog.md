@@ -12,7 +12,8 @@ Inställningar → Om → Feedback & förslag
 **ℹ️ De senaste versionsnyheterna finns först i den [engelska ändringsloggen](/changelog); den här språkversionen uppdateras lite senare.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Ny</span></a></li>
+  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">Ny</span></a></li>
+  <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
@@ -29,6 +30,29 @@ Inställningar → Om → Feedback & förslag
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.2
+
+**Släppt:** 2026-10-24
+
+Översättningar för internationalisering, samt buggfixar och vissa prestandaförbättringar.
+
+**🆚 Lite vs. Standard:** funktionsskillnaderna finns i [versionsjämförelsen](/sv/versions).
+
+**🚀 Förbättringar**
+
+- Översättningar för internationalisering tillagda.
+- Prestandan har förbättrats på vissa områden.
+
+**🐞 Buggfixar**
+
+- Flera buggar åtgärdade.
+
+**🙏 Tack**
+
+Tack till alla som rapporterade issue och föreslog funktioner.
 
 ---
 

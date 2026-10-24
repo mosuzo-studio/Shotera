@@ -12,7 +12,8 @@ Paramètres → À propos → Retours et suggestions
 **ℹ️ Les notes les plus récentes paraissent d’abord dans le [changelog anglais](/changelog) ; cette version linguistique sera mise à jour un peu plus tard.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">Nouveau</span></a></li>
+  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">Nouveau</span></a></li>
+  <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
@@ -29,6 +30,29 @@ Paramètres → À propos → Retours et suggestions
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.2
+
+**Sortie:** 2026-10-24
+
+Traductions d'internationalisation, ainsi que des corrections de bugs et quelques améliorations de performances.
+
+**🆚 Lite vs version Standard :** consultez la [comparaison des versions](/fr/versions) pour connaître les différences entre les fonctions.
+
+**🚀 Améliorations**
+
+- Traductions d'internationalisation ajoutées.
+- Performances améliorées dans certains domaines.
+
+**🐞 Corrections de bugs**
+
+- Plusieurs bugs corrigés.
+
+**🙏 Remerciements**
+
+Merci à toutes les personnes qui ont signalé une issue ou suggéré une fonction.
 
 ---
 

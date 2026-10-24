@@ -12,7 +12,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 **ℹ️ 最新のリリースノートは[英語版の更新履歴](/changelog)で先にご覧いただけます。日本語版は少し遅れて更新します。**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v790">v7.9.0<span class="tag">新着</span></a></li>
+  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">新着</span></a></li>
+  <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
   <li><a href="#shotera-v760">v7.6.0</a></li>
@@ -29,6 +30,29 @@ layout: '~/layouts/MarkdownLayout.astro'
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.2
+
+**リリース日:** 2026-10-24
+
+多言語対応の翻訳に加え、不具合の修正と一部のパフォーマンス改善を行いました。
+
+**🆚 Lite版と Standard 版の違い：** 機能の違いは[バージョン比較](/ja/versions)をご覧ください。
+
+**🚀 改善**
+
+- 多言語対応の翻訳を追加しました。
+- 一部のパフォーマンスを改善しました。
+
+**🐞 バグ修正**
+
+- いくつかの不具合を修正しました。
+
+**🙏 謝辞**
+
+issue の報告や機能提案をしてくださったコミュニティの皆さまに感謝します。
 
 ---
 
