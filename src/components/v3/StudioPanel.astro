@@ -1,0 +1,72 @@
+---
+import { localizedPagePath } from '~/i18n/utils';
+import {
+  productMenuHref,
+  studioHome,
+  studioProducts,
+  studioProductsUrl,
+  type StudioLang,
+} from '~/data/studio';
+
+export interface Props {
+  lang: StudioLang;
+  current: string;
+  id: string;
+  variant: 'desktop' | 'mobile';
+}
+
+const { lang, current, id, variant } = Astro.props;
+const zh = lang === 'zh-cn';
+---
+
+<div
+  class:list={['v3-studio-panel', `v3-studio-panel--${variant}`]}
+  id={id}
+  aria-label={zh ? '工作室与产品' : 'Studio and products'}
+  data-v3-studio-panel
+  hidden
+>
+  <a class="v3-studio-home" href={studioHome(lang)}>
+    <img src="/studio/mosuzo.svg" width="34" height="34" alt="" />
+    <span class="v3-studio-home-copy">
+      <span class="v3-studio-wordmark">Mosuzo <b>Studio</b></span>
+      <span class="v3-studio-home-label">{zh ? '工作室首页' : 'Studio home'}</span>
+      <span class="v3-studio-home-note">
+        {zh ? '浏览我们为 Windows 打造的工具。' : 'Browse the tools we build for Windows.'}
+      </span>
+    </span>
+    <span class="v3-studio-arrow" aria-hidden="true">↗</span>
+  </a>
+
+  <div class="v3-studio-list">
+    {
+      studioProducts.map((product) => {
+        const active = product.slug === current;
+        return (
+          <a
+            class="v3-studio-product"
+            href={active ? localizedPagePath(lang, '/') : productMenuHref(lang, product)}
+            aria-current={active ? 'page' : undefined}
+          >
+            <img src={product.icon} width="30" height="30" alt="" />
+            <span class="v3-studio-product-copy">
+              <span class="v3-studio-product-name">{product.name}</span>
+              <span class="v3-studio-product-purpose">{product.purpose[lang]}</span>
+            </span>
+            {active && (
+              <span class="v3-studio-chip">{zh ? '当前产品' : 'Current product'}</span>
+            )}
+            {!active && product.siteUnavailable && (
+              <span class="v3-studio-chip v3-studio-chip--alt">GitHub Releases</span>
+            )}
+          </a>
+        );
+      })
+    }
+  </div>
+
+  <a class="v3-studio-all" href={studioProductsUrl(lang)}>
+    <span>{zh ? '查看全部产品' : 'View all products'}</span>
+    <span aria-hidden="true">↗</span>
+  </a>
+</div>

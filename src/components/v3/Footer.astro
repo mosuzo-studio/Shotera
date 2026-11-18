@@ -1,6 +1,7 @@
 ---
 import { localizedPagePath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
+import { studioContactUrl, studioHome, studioProductsUrl } from '~/data/studio';
 import { getV3Copy } from './copy-intl';
 
 export interface Props {
@@ -9,6 +10,8 @@ export interface Props {
 
 const { lang } = Astro.props;
 const c = getV3Copy(lang);
+const refreshed = lang === 'en' || lang === 'zh-cn';
+const zh = lang === 'zh-cn';
 const l = (path: string, hash?: string) => `${localizedPagePath(lang, path)}${hash ? `#${hash}` : ''}`;
 ---
 
@@ -20,12 +23,25 @@ const l = (path: string, hash?: string) => `${localizedPagePath(lang, path)}${ha
         <p class="v3-foot-note" style="margin:0;max-width:280px">{c.footer.blurb}</p>
       </div>
       {
-        c.footer.cols.map((col) => (
+        c.footer.cols.map((col, index) => (
           <div>
-            <h4>{col.title}</h4>
+            <h4>
+              {refreshed && index === c.footer.cols.length - 1
+                ? zh
+                  ? '工作室'
+                  : 'Studio'
+                : col.title}
+            </h4>
             {col.links.map((link) => (
               <a href={l(link.path, link.hash)}>{link.text}</a>
             ))}
+            {refreshed && index === c.footer.cols.length - 1 && (
+              <>
+                <a href={studioHome(lang)}>{zh ? '工作室首页' : 'Studio home'}</a>
+                <a href={studioProductsUrl(lang)}>{zh ? '全部产品' : 'All products'}</a>
+                <a href={studioContactUrl(lang)}>{zh ? '联系工作室' : 'Contact the studio'}</a>
+              </>
+            )}
           </div>
         ))
       }

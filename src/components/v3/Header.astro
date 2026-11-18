@@ -2,6 +2,7 @@
 import { languages, localizedPagePath, switchLocalePath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
 import appMark from '~/assets/favicons/favicon.svg';
+import StudioPanel from './StudioPanel.astro';
 import { getV3Copy } from './copy-intl';
 
 export interface Props {
@@ -33,6 +34,8 @@ const shortLabels: Record<Lang, string> = {
 };
 
 const localeEntries = Object.entries(languages) as [Lang, string][];
+const refreshed = lang === 'en' || lang === 'zh-cn';
+const studioLabel = lang === 'zh-cn' ? '工作室与产品' : 'Studio & products';
 ---
 
 <header class="v3-header">
@@ -47,6 +50,30 @@ const localeEntries = Object.entries(languages) as [Lang, string][];
     <a class="v3-navlink" href={l('/changelog')}>{c.nav.changelog}</a>
     <a class="v3-navlink" href={l('/faq')}>{c.nav.faq}</a>
     <a class="v3-navlink" href={l('/about')}>{c.nav.about}</a>
+
+    {
+      refreshed && (
+        <button
+          class="v3-studio-trigger v3-studio-trigger--desktop"
+          type="button"
+          aria-expanded="false"
+          aria-controls="v3-studio-desktop"
+          data-v3-studio-trigger
+        >
+          {studioLabel}
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M6 9.5l6 6 6-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      )
+    }
 
     <div class="v3-nav-right">
       <div class="v3-lang" data-v3-lang>
@@ -105,6 +132,8 @@ const localeEntries = Object.entries(languages) as [Lang, string][];
         <span></span><span></span><span></span>
       </button>
     </div>
+
+    {refreshed && <StudioPanel lang={lang} current="shotera" id="v3-studio-desktop" variant="desktop" />}
   </div>
 
   <div class="v3-mobile-menu" id="v3-mobile-menu" hidden data-v3-menu>
@@ -113,6 +142,32 @@ const localeEntries = Object.entries(languages) as [Lang, string][];
     <a href={l('/changelog')}>{c.nav.changelog}</a>
     <a href={l('/faq')}>{c.nav.faq}</a>
     <a href={l('/about')}>{c.nav.about}</a>
+    {
+      refreshed && (
+        <div class="v3-mobile-studio">
+          <button
+            class="v3-studio-trigger v3-studio-trigger--mobile"
+            type="button"
+            aria-expanded="false"
+            aria-controls="v3-studio-mobile"
+            data-v3-studio-trigger
+          >
+            {studioLabel}
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6 9.5l6 6 6-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <StudioPanel lang={lang} current="shotera" id="v3-studio-mobile" variant="mobile" />
+        </div>
+      )
+    }
   </div>
 </header>
 
@@ -126,6 +181,16 @@ const localeEntries = Object.entries(languages) as [Lang, string][];
     const setOpen = (open: boolean) => {
       menu.hidden = !open;
       button.setAttribute('aria-expanded', String(open));
+      if (!open) {
+        const studioTrigger = menu.querySelector<HTMLButtonElement>('[data-v3-studio-trigger]');
+        const studioPanel = studioTrigger
+          ? document.getElementById(studioTrigger.getAttribute('aria-controls') || '')
+          : null;
+        if (studioTrigger && studioPanel) {
+          studioTrigger.setAttribute('aria-expanded', 'false');
+          studioPanel.hidden = true;
+        }
+      }
     };
 
     button.addEventListener('click', () => setOpen(menu.hidden));
@@ -225,4 +290,83 @@ const localeEntries = Object.entries(languages) as [Lang, string][];
 
   initV3LangHash();
   document.addEventListener('astro:page-load', initV3LangHash);
+
+  function initV3StudioMenu() {
+    const closeLangMenu = () => {
+      const wrapper = document.querySelector<HTMLElement>('[data-v3-lang]');
+      const toggle = wrapper?.querySelector<HTMLButtonElement>('[data-v3-lang-toggle]');
+      if (!wrapper || !toggle) return;
+      wrapper.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    document.querySelectorAll<HTMLButtonElement>('[data-v3-studio-trigger]').forEach((trigger) => {
+      if (trigger.dataset.wired === '1') return;
+      const panel = document.getElementById(trigger.getAttribute('aria-controls') || '');
+      if (!panel) return;
+      trigger.dataset.wired = '1';
+
+      trigger.addEventListener('click', () => {
+        const willOpen = panel.hidden;
+        document.querySelectorAll<HTMLButtonElement>('[data-v3-studio-trigger]').forEach((other) => {
+          if (other === trigger) return;
+          const otherPanel = document.getElementById(other.getAttribute('aria-controls') || '');
+          if (!otherPanel) return;
+          other.setAttribute('aria-expanded', 'false');
+          otherPanel.hidden = true;
+        });
+        trigger.setAttribute('aria-expanded', String(willOpen));
+        panel.hidden = !willOpen;
+        if (willOpen) closeLangMenu();
+      });
+
+      panel.querySelectorAll('a').forEach((link) =>
+        link.addEventListener('click', () => {
+          trigger.setAttribute('aria-expanded', 'false');
+          panel.hidden = true;
+        })
+      );
+    });
+
+    if (document.documentElement.dataset.v3StudioWired === '1') return;
+    document.documentElement.dataset.v3StudioWired = '1';
+
+    const openPair = () => {
+      for (const trigger of document.querySelectorAll<HTMLButtonElement>('[data-v3-studio-trigger]')) {
+        const panel = document.getElementById(trigger.getAttribute('aria-controls') || '');
+        if (panel && !panel.hidden) return { trigger, panel };
+      }
+      return null;
+    };
+
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Node)) return;
+      document.querySelectorAll<HTMLButtonElement>('[data-v3-studio-trigger]').forEach((trigger) => {
+        const panel = document.getElementById(trigger.getAttribute('aria-controls') || '');
+        if (!panel || panel.hidden) return;
+        if (trigger.contains(target) || panel.contains(target)) return;
+        trigger.setAttribute('aria-expanded', 'false');
+        panel.hidden = true;
+      });
+    });
+
+    // Capture so Escape closes the panel without the mobile menu also closing.
+    document.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key !== 'Escape') return;
+        const open = openPair();
+        if (!open) return;
+        open.trigger.setAttribute('aria-expanded', 'false');
+        open.panel.hidden = true;
+        open.trigger.focus();
+        event.stopPropagation();
+      },
+      true
+    );
+  }
+
+  initV3StudioMenu();
+  document.addEventListener('astro:page-load', initV3StudioMenu);
 </script>

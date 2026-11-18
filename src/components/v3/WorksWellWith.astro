@@ -1,0 +1,64 @@
+---
+import {
+  productBySlug,
+  recommendationHref,
+  recommendationLabel,
+  recommendations,
+  type StudioLang,
+} from '~/data/studio';
+
+export interface Props {
+  lang: StudioLang;
+  current: string;
+}
+
+const { lang, current } = Astro.props;
+const zh = lang === 'zh-cn';
+const items = (recommendations[current] ?? []).map((item) => ({
+  product: productBySlug(item.slug),
+  reason: item.reason[lang],
+}));
+---
+
+{
+  items.length > 0 && (
+    <section class="studio-rec" aria-labelledby="studio-rec-title">
+      <div class="v3-wrap">
+        <div class="studio-rec-head">
+          <p class="studio-rec-kicker">
+            <span aria-hidden="true" />
+            {zh ? '下一步' : 'NEXT STEP'}
+          </p>
+          <h2 id="studio-rec-title">{zh ? '搭配使用' : 'Works well with'}</h2>
+          <p>
+            {zh
+              ? '根据你正在做的事，另一件工具可能刚好补上下一步。'
+              : 'Another tool for the step you are about to take.'}
+          </p>
+        </div>
+        <div class:list={['studio-rec-grid', { 'is-single': items.length === 1 }]}>
+          {items.map(({ product, reason }) => (
+            <article class="studio-rec-card">
+              <div class="studio-rec-top">
+                <img src={product.icon} width="34" height="34" alt="" />
+                <span class="studio-rec-status">{product.status[lang]}</span>
+              </div>
+              <h3>{product.name}</h3>
+              <p class="studio-rec-purpose">{product.purpose[lang]}</p>
+              <p class="studio-rec-reason">{reason}</p>
+              <a class="studio-rec-link" href={recommendationHref(lang, product)}>
+                {recommendationLabel(product)[lang]}
+                <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          ))}
+        </div>
+        <p class="studio-rec-note">
+          {zh
+            ? '每款工具独立安装、独立授权；这里建议的是手动衔接的步骤。'
+            : 'Each tool is installed and licensed separately; these are suggested manual hand-offs.'}
+        </p>
+      </div>
+    </section>
+  )
+}

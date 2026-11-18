@@ -4,6 +4,7 @@ import { localizedPath } from '~/i18n/utils';
 import type { Lang } from '~/i18n/utils';
 import { getReleaseDownloads, getTotalDownloads, RELEASES_URL, STORE_URL } from '~/utils/download';
 import { getV3Copy } from './copy-intl';
+import WorksWellWith from './WorksWellWith.astro';
 
 import captureDemo from '~/assets/images/capture-demo.png';
 import longshotDemo from '~/assets/images/longshot-demo.png';
@@ -29,6 +30,7 @@ export interface Props {
 const { lang, downloadUrl } = Astro.props;
 const c = getV3Copy(lang);
 const l = (path: string) => localizedPath(lang, path);
+const refreshed = lang === 'en' || lang === 'zh-cn';
 
 const { urls: downloadUrls } = await getReleaseDownloads();
 /* null when the lookup failed and nothing is cached; the slot then stays out. */
@@ -366,6 +368,8 @@ const shotData = JSON.stringify({
     </section>
   ))
 }
+
+{refreshed && <WorksWellWith lang={lang} current="shotera" />}
 
 <section class="v3-section is-tight" id="download">
   <div class="v3-wrap">
