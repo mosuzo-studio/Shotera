@@ -36,7 +36,6 @@ export const studioProducts: StudioProduct[] = [
       '截图、长截图与录屏，再把重点标清楚。'
     ),
     status: pair('Download available', '可下载'),
-    siteUnavailable: true,
     releases: 'https://github.com/mosuzo-studio/Shotera/releases',
   },
   {
@@ -44,7 +43,7 @@ export const studioProducts: StudioProduct[] = [
     name: 'SnipArc',
     icon: '/studio/sniparc.svg',
     purpose: pair('Capture the point, mark it, share it.', '截下重点，标清楚，马上分享。'),
-    status: pair('Check release status', '查看发布状态'),
+    status: pair('Download available', '可下载'),
   },
   {
     slug: 'windowsift',
@@ -54,14 +53,14 @@ export const studioProducts: StudioProduct[] = [
       'Find the app behind a window; inspect the tree and properties.',
       '找到窗口背后的程序，查看窗口树与属性。'
     ),
-    status: pair('Standalone release pending', '独立版本待发布'),
+    status: pair('Download available', '可下载'),
   },
   {
     slug: 'imageperch',
     name: 'ImagePerch',
     icon: '/studio/imageperch.svg',
     purpose: pair('Navigate, trim and edit long images.', '长图浏览、裁切与编辑。'),
-    status: pair('Standalone release pending', '独立版本待发布'),
+    status: pair('Download available', '可下载'),
   },
   {
     slug: 'keysplera',
