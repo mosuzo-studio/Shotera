@@ -12,7 +12,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 **ℹ️ 최신 릴리스 노트는 [영문 업데이트 내역](/changelog)에서 먼저 확인할 수 있습니다. 이 언어판은 조금 뒤에 업데이트됩니다.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">신규</span></a></li>
+  <li class="is-new"><a href="#shotera-v794">v7.9.4<span class="tag">신규</span></a></li>
+  <li><a href="#shotera-v793">v7.9.3</a></li>
   <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
@@ -31,6 +32,35 @@ layout: '~/layouts/MarkdownLayout.astro'
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.4
+
+**출시일:** 2026-11-28
+
+공식 사이트 15개 언어 홈페이지에 SnipArc 추천을 추가하고, 다운로드 버튼을 "Shotera 다운로드"로 변경했습니다.
+
+**🆚 Lite 버전과 Standard 버전 차이:** 기능 차이는 [버전 비교](/ko/versions)에서 확인하세요.
+
+**✨ 새로운 기능**
+
+- 공식 사이트 15개 언어 홈페이지에 SnipArc 추천 카드를 추가했습니다. 원클릭 다운로드와 공식 사이트 링크를 제공합니다.
+- 기본 다운로드 버튼을 "Shotera 다운로드"로 변경했습니다.
+- QQ 커뮤니티 그룹(418103279) 입구를 추가했습니다.
+
+**🚀 개선 사항**
+
+- "설정 → 정보"에도 SnipArc 추천을 추가했습니다.
+- 첫 소개 후 화면 오른쪽 아래에 간결한 알림을 표시합니다.
+
+**🐞 버그 수정**
+
+- 첫 실행 시 SnipArc 소개가 표시되지 않을 수 있는 문제를 수정했습니다.
+
+**🙏 감사의 말**
+
+issue를 보고해 주시고 기능을 제안해 주신 모든 분께 감사드립니다.
 
 ---
 

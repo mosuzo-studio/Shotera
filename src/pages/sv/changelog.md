@@ -12,7 +12,8 @@ Inställningar → Om → Feedback & förslag
 **ℹ️ De senaste versionsnyheterna finns först i den [engelska ändringsloggen](/changelog); den här språkversionen uppdateras lite senare.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">Ny</span></a></li>
+  <li class="is-new"><a href="#shotera-v794">v7.9.4<span class="tag">Ny</span></a></li>
+  <li><a href="#shotera-v793">v7.9.3</a></li>
   <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
@@ -31,6 +32,35 @@ Inställningar → Om → Feedback & förslag
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.4
+
+**Släppt:** 2026-11-28
+
+Startsidan rekommenderar nu SnipArc på alla 15 språk, med en tydligare knapp ”Ladda ner Shotera”.
+
+**🆚 Lite vs. Standard:** funktionsskillnaderna finns i [versionsjämförelsen](/sv/versions).
+
+**✨ Nya funktioner**
+
+- Startsidan rekommenderar nu SnipArc på alla 15 språk, med nedladdning i ett klick och länkar till webbplatsen.
+- Den huvudsakliga nedladdningsknappen heter nu ”Ladda ner Shotera”.
+- En ingång till QQ-communitygruppen (418103279) har lagts till.
+
+**🚀 Förbättringar**
+
+- SnipArc-rekommendationen finns nu även under Inställningar → Om.
+- Efter den första introduktionen visas en kompakt påminnelse längst ner till höger.
+
+**🐞 Buggfixar**
+
+- Åtgärdat: SnipArc-introduktionen kunde utebli vid första starten.
+
+**🙏 Tack**
+
+Tack till alla som rapporterade issue och föreslog funktioner.
 
 ---
 

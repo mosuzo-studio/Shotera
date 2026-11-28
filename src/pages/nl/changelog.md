@@ -12,7 +12,8 @@ Instellingen → Over → Feedback en suggesties
 **ℹ️ De nieuwste release notes staan eerst in de [Engelse changelog](/changelog); deze taalversie wordt iets later bijgewerkt.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">Nieuw</span></a></li>
+  <li class="is-new"><a href="#shotera-v794">v7.9.4<span class="tag">Nieuw</span></a></li>
+  <li><a href="#shotera-v793">v7.9.3</a></li>
   <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
@@ -31,6 +32,35 @@ Instellingen → Over → Feedback en suggesties
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.4
+
+**Uitgebracht:** 2026-11-28
+
+De homepage beveelt SnipArc nu aan in alle 15 talen, met een duidelijkere knop ‘Shotera downloaden’.
+
+**🆚 Lite vs. Standard:** de functieverschillen staan in de [versievergelijking](/nl/versions).
+
+**✨ Nieuwe functies**
+
+- De homepage beveelt SnipArc nu aan in alle 15 talen, met download in één klik en links naar de website.
+- De hoofddownloadknop heet nu ‘Shotera downloaden’.
+- Een ingang naar de QQ-communitygroep (418103279) toegevoegd.
+
+**🚀 Verbeteringen**
+
+- De SnipArc-aanbeveling staat nu ook onder Instellingen → Over.
+- Na de eerste introductie verschijnt rechtsonder een compacte herinnering.
+
+**🐞 Bugfixes**
+
+- Opgelost: de SnipArc-introductie kon bij de eerste start ontbreken.
+
+**🙏 Dankbetuiging**
+
+Dank aan iedereen die problemen meldde en functies voorstelde.
 
 ---
 

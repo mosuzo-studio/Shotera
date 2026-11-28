@@ -12,7 +12,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 **ℹ️ 最新のリリースノートは[英語版の更新履歴](/changelog)で先にご覧いただけます。日本語版は少し遅れて更新します。**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">新着</span></a></li>
+  <li class="is-new"><a href="#shotera-v794">v7.9.4<span class="tag">新着</span></a></li>
+  <li><a href="#shotera-v793">v7.9.3</a></li>
   <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
@@ -31,6 +32,35 @@ layout: '~/layouts/MarkdownLayout.astro'
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.4
+
+**リリース日:** 2026-11-28
+
+公式サイト全 15 言語のホームページに SnipArc の推薦を追加し、ダウンロードボタンを「Shotera をダウンロード」に変更しました。
+
+**🆚 Lite版と Standard 版の違い：** 機能の違いは[バージョン比較](/ja/versions)をご覧ください。
+
+**✨ 新機能**
+
+- 公式サイト全 15 言語のホームページに SnipArc の推薦カードを追加。ワンクリックのダウンロードと公式サイトへのリンクを用意しました。
+- メインのダウンロードボタンを「Shotera をダウンロード」に変更しました。
+- QQ コミュニティ（418103279）への入口を追加しました。
+
+**🚀 改善**
+
+- 「設定 → について」にも SnipArc の推薦を追加しました。
+- 初回の紹介後は、右下にコンパクトなリマインダーを表示します。
+
+**🐞 バグ修正**
+
+- 初回起動時に SnipArc の紹介が表示されないことがある問題を修正しました。
+
+**🙏 謝辞**
+
+issue の報告や機能提案をしてくださったコミュニティの皆さまに感謝します。
 
 ---
 

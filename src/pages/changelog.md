@@ -10,7 +10,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 Settings → About → Feedback & suggestions
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">New</span></a></li>
+  <li class="is-new"><a href="#shotera-v794">v7.9.4<span class="tag">New</span></a></li>
+  <li><a href="#shotera-v793">v7.9.3</a></li>
   <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
@@ -29,6 +30,35 @@ Settings → About → Feedback & suggestions
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.4
+
+**Released:** 2026-11-28
+
+The homepage now recommends SnipArc in all 15 languages, with a clearer Download Shotera button.
+
+**🆚 Lite edition vs. Standard edition:** see the [version comparison](/versions) for feature differences.
+
+**✨ Features**
+
+- The homepage now recommends SnipArc on all 15 locales, with one-click download and website links.
+- The main download button now reads "Download Shotera".
+- Added a QQ community group entry (418103279).
+
+**🚀 Improvements**
+
+- The SnipArc recommendation is also available under Settings → About.
+- A compact reminder follows the first SnipArc introduction.
+
+**🐞 Bug Fixes**
+
+- Fixed the SnipArc introduction not appearing on first launch.
+
+**🙏 Acknowledgements**
+
+Thanks to everyone who reported issues and suggested features.
 
 ---
 

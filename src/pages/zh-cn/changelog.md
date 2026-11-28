@@ -10,7 +10,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 设置 → 关于 → 反馈与建议
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">新</span></a></li>
+  <li class="is-new"><a href="#shotera-v794">v7.9.4<span class="tag">新</span></a></li>
+  <li><a href="#shotera-v793">v7.9.3</a></li>
   <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
@@ -29,6 +30,35 @@ layout: '~/layouts/MarkdownLayout.astro'
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.4
+
+**发布日期:** 2026-11-28
+
+官网 15 种语言首页新增 SnipArc 推荐，「下载 Shotera」按钮更明确。
+
+**🆚 Lite 版与标准版差异：** 详见[版本对比](/zh-cn/versions)。
+
+**✨ 新增功能**
+
+- 官网 15 种语言首页新增 SnipArc 推荐卡片，提供一键下载与官网入口。
+- 主下载按钮改为「下载 Shotera」。
+- 新增 QQ 交流群入口（418103279）。
+
+**🚀 改进优化**
+
+- 「设置 → 关于」新增 SnipArc 推荐入口。
+- 首次介绍后，以右下角简版提醒继续展示 SnipArc。
+
+**🐞 问题修复**
+
+- 修复首次运行时可能看不到 SnipArc 介绍的问题。
+
+**🙏 致谢名单**
+
+感谢社区成员的 issue 反馈与功能建议。
 
 ---
 

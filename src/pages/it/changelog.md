@@ -12,7 +12,8 @@ Impostazioni → Info → Feedback e suggerimenti
 **ℹ️ Le note più recenti compaiono prima nel [changelog in inglese](/changelog); questa versione linguistica viene aggiornata poco dopo.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">Nuovo</span></a></li>
+  <li class="is-new"><a href="#shotera-v794">v7.9.4<span class="tag">Nuovo</span></a></li>
+  <li><a href="#shotera-v793">v7.9.3</a></li>
   <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
@@ -31,6 +32,35 @@ Impostazioni → Info → Feedback e suggerimenti
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.4
+
+**Rilasciato:** 2026-11-28
+
+La homepage ora consiglia SnipArc in tutte le 15 lingue, con un pulsante «Scarica Shotera» più chiaro.
+
+**🆚 Lite vs. versione Standard:** le differenze tra le funzioni sono elencate nel [confronto versioni](/it/versions).
+
+**✨ Novità**
+
+- La homepage consiglia ora SnipArc in tutte le 15 lingue, con download in un clic e link al sito.
+- Il pulsante di download principale ora dice «Scarica Shotera».
+- Aggiunto l’accesso al gruppo della community QQ (418103279).
+
+**🚀 Miglioramenti**
+
+- Il consiglio su SnipArc è disponibile anche in Impostazioni → Info.
+- Dopo la prima presentazione, un promemoria compatto appare in basso a destra.
+
+**🐞 Correzioni di bug**
+
+- Corretto: la presentazione di SnipArc poteva non comparire al primo avvio.
+
+**🙏 Ringraziamenti**
+
+Grazie a tutti coloro che hanno segnalato issue e proposto funzioni.
 
 ---
 
