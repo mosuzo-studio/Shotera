@@ -12,7 +12,8 @@ Instellingen → Over → Feedback en suggesties
 **ℹ️ De nieuwste release notes staan eerst in de [Engelse changelog](/changelog); deze taalversie wordt iets later bijgewerkt.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">Nieuw</span></a></li>
+  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">Nieuw</span></a></li>
+  <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
@@ -30,6 +31,30 @@ Instellingen → Over → Feedback en suggesties
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.3
+
+**Uitgebracht:** 2026-11-28
+
+Maak kennis met SnipArc, de schermafbeeldingstool van de volgende generatie van Shotera — en minder geheugengebruik wanneer de app inactief is.
+
+**🆚 Lite vs. Standard:** de functieverschillen staan in de [versievergelijking](/nl/versions).
+
+**✨ Nieuwe functies**
+
+- SnipArc-introductie in het updatevenster en in een apart herinneringsvenster; latere herinneringen verschijnen als toast in de schermhoek.
+- Herinneringen verschijnen maximaal 3 keer, met minstens 7 dagen ertussen, en stoppen zodra de downloadpagina is geopend; ze onderbreken nooit opnames of bewerken.
+
+**🚀 Verbeteringen**
+
+- Minder geheugengebruik terwijl de opname-overlay en vastgepinde afbeeldingen verborgen zijn.
+- De SnipArc-introductie is beschikbaar in alle 15 talen.
+
+**🙏 Dankbetuiging**
+
+Dank aan iedereen die problemen meldde en functies voorstelde.
 
 ---
 

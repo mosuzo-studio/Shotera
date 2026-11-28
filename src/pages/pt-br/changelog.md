@@ -12,7 +12,8 @@ Configurações → Sobre → Feedback e sugestões
 **ℹ️ As notas mais recentes aparecem primeiro no [changelog em inglês](/changelog); esta versão é atualizada um pouco depois.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">Novo</span></a></li>
+  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">Novo</span></a></li>
+  <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
@@ -30,6 +31,30 @@ Configurações → Sobre → Feedback e sugestões
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.3
+
+**Lançamento:** 2026-11-28
+
+Conheça o SnipArc, a ferramenta de captura de tela de próxima geração do Shotera — e menos uso de memória quando o app está ocioso.
+
+**🆚 Lite vs. versão Standard:** veja a [comparação de versões](/pt-br/versions) para as diferenças de recursos.
+
+**✨ Novidades**
+
+- Apresentação do SnipArc na janela de atualização e em uma janela de lembrete separada; os lembretes seguintes aparecem como aviso no canto da tela.
+- Os lembretes são no máximo 3, com pelo menos 7 dias de intervalo, e param quando a página de download é aberta; nunca interrompem a captura ou a edição.
+
+**🚀 Melhorias**
+
+- Menor uso de memória enquanto a sobreposição de captura e as imagens fixadas estão ocultas.
+- A apresentação do SnipArc está disponível nos 15 idiomas.
+
+**🙏 Agradecimentos**
+
+Obrigado a todos que relataram problemas e sugeriram recursos.
 
 ---
 

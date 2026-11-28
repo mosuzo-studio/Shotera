@@ -12,7 +12,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 **ℹ️ 最新のリリースノートは[英語版の更新履歴](/changelog)で先にご覧いただけます。日本語版は少し遅れて更新します。**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">新着</span></a></li>
+  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">新着</span></a></li>
+  <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
@@ -30,6 +31,30 @@ layout: '~/layouts/MarkdownLayout.astro'
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.3
+
+**リリース日:** 2026-11-28
+
+次世代スクリーンショットツール SnipArc のご紹介と、アイドル時のメモリ使用量の削減。
+
+**🆚 Lite版と Standard 版の違い：** 機能の違いは[バージョン比較](/ja/versions)をご覧ください。
+
+**✨ 新機能**
+
+- 更新ウィンドウに SnipArc の紹介カードと独立したリマインダーウィンドウを追加。以降のリマインダーは画面隅のトーストで表示されます。
+- リマインダーは最大 3 回、7 日間隔で、ダウンロードページを開くと表示されなくなります。スクリーンショットや編集を妨げません。
+
+**🚀 改善**
+
+- キャプチャオーバーレイや固定した画像を非表示にしている間のメモリ使用量を削減。
+- SnipArc の紹介は全 15 言語に対応。
+
+**🙏 謝辞**
+
+issue の報告や機能提案をしてくださったコミュニティの皆さまに感謝します。
 
 ---
 

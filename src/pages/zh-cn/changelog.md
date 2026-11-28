@@ -10,7 +10,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 设置 → 关于 → 反馈与建议
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">新</span></a></li>
+  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">新</span></a></li>
+  <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
@@ -28,6 +29,30 @@ layout: '~/layouts/MarkdownLayout.astro'
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.3
+
+**发布日期:** 2026-11-28
+
+认识下一代截图工具 SnipArc，应用空闲时内存占用更低。
+
+**🆚 Lite 版与标准版差异：** 详见[版本对比](/zh-cn/versions)。
+
+**✨ 新增功能**
+
+- 更新弹窗新增 SnipArc 介绍卡片与独立提醒窗口，后续提醒以角落浮窗出现。
+- 提醒最多 3 次、间隔 7 天，打开过下载后不再提示；不打断截图与编辑。
+
+**🚀 改进优化**
+
+- 截图浮层与贴图隐藏时降低内存占用。
+- SnipArc 介绍支持全部 15 种语言。
+
+**🙏 致谢名单**
+
+感谢社区成员的 issue 反馈与功能建议。
 
 ---
 

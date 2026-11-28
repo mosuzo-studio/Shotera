@@ -10,7 +10,8 @@ layout: '~/layouts/MarkdownLayout.astro'
 Settings → About → Feedback & suggestions
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">New</span></a></li>
+  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">New</span></a></li>
+  <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
@@ -28,6 +29,30 @@ Settings → About → Feedback & suggestions
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.3
+
+**Released:** 2026-11-28
+
+Meet SnipArc, Shotera's next-generation screenshot tool — and lower memory use while the app is idle.
+
+**🆚 Lite edition vs. Standard edition:** see the [version comparison](/versions) for feature differences.
+
+**✨ Features**
+
+- Added a SnipArc introduction in the update window and a standalone reminder; later reminders appear as a corner toast.
+- Reminders are capped at 3, at least 7 days apart, and stop once the download page is opened; they never interrupt capture or editing.
+
+**🚀 Improvements**
+
+- Lower memory use while the capture overlay and pins are hidden.
+- The SnipArc introduction is available in all 15 languages.
+
+**🙏 Acknowledgements**
+
+Thanks to everyone who reported issues and suggested features.
 
 ---
 

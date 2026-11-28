@@ -12,7 +12,8 @@ Paramètres → À propos → Retours et suggestions
 **ℹ️ Les notes les plus récentes paraissent d’abord dans le [changelog anglais](/changelog) ; cette version linguistique sera mise à jour un peu plus tard.**
 
 <ul class="version-index">
-  <li class="is-new"><a href="#shotera-v792">v7.9.2<span class="tag">Nouveau</span></a></li>
+  <li class="is-new"><a href="#shotera-v793">v7.9.3<span class="tag">Nouveau</span></a></li>
+  <li><a href="#shotera-v792">v7.9.2</a></li>
   <li><a href="#shotera-v790">v7.9.0</a></li>
   <li><a href="#shotera-v780">v7.8.0</a></li>
   <li><a href="#shotera-v770">v7.7.0</a></li>
@@ -30,6 +31,30 @@ Paramètres → À propos → Retours et suggestions
   <li><a href="#shotera-v710">v7.1.0</a></li>
   <li><a href="#shotera-v700">v7.0.0</a></li>
 </ul>
+
+---
+
+## Shotera v7.9.3
+
+**Sortie:** 2026-11-28
+
+Découvrez SnipArc, l’outil de capture d’écran nouvelle génération de Shotera — et une consommation mémoire réduite au repos.
+
+**🆚 Lite vs version Standard :** consultez la [comparaison des versions](/fr/versions) pour connaître les différences entre les fonctions.
+
+**✨ Nouveautés**
+
+- Présentation de SnipArc dans la fenêtre de mise à jour et dans une fenêtre de rappel dédiée ; les rappels suivants apparaissent dans un toast en coin d’écran.
+- Les rappels sont limités à 3, espacés d’au moins 7 jours, et s’arrêtent une fois la page de téléchargement ouverte ; ils n’interrompent jamais la capture ni l’édition.
+
+**🚀 Améliorations**
+
+- Consommation mémoire réduite lorsque l’overlay de capture et les fenêtres épinglées sont masqués.
+- La présentation de SnipArc est disponible dans les 15 langues.
+
+**🙏 Remerciements**
+
+Merci à toutes les personnes qui ont signalé une issue ou suggéré une fonction.
 
 ---
 
