@@ -5,6 +5,8 @@ import type { Lang } from '~/i18n/utils';
 import { getReleaseDownloads, getTotalDownloads, RELEASES_URL, STORE_URL } from '~/utils/download';
 import { getV3Copy } from './copy-intl';
 import WorksWellWith from './WorksWellWith.astro';
+import SnipArcRecommendation from './SnipArcRecommendation.astro';
+import { snipArcRecommendationCopy } from './sniparc-copy';
 
 import captureDemo from '~/assets/images/capture-demo.png';
 import longshotDemo from '~/assets/images/longshot-demo.png';
@@ -29,6 +31,7 @@ export interface Props {
 
 const { lang, downloadUrl } = Astro.props;
 const c = getV3Copy(lang);
+const recommendationCopy = snipArcRecommendationCopy[lang];
 const l = (path: string) => localizedPath(lang, path);
 const refreshed = lang === 'en' || lang === 'zh-cn';
 
@@ -103,14 +106,12 @@ const shotData = JSON.stringify({
 ---
 
 <section class="v3-stage">
-  <div class="v3-sky">
+  <div class="v3-sky v3-sky--recommendation">
     <span class="v3-sun"></span>
     <i class="v3-cloud c1"></i><i class="v3-cloud c2"></i><i class="v3-cloud c3"></i><i class="v3-cloud c4"></i>
     <i class="v3-cloud c5"></i>
 
-    <div class="v3-announce">
-      <b>{c.hero.badge}</b><span>{c.hero.announce}</span><em aria-hidden="true">→</em>
-    </div>
+    <SnipArcRecommendation lang={lang} />
 
     <div class="v3-modes" role="group" aria-label={c.nav.features}>
       {
@@ -141,7 +142,9 @@ const shotData = JSON.stringify({
 
     <div class="v3-cta">
       <div class="v3-split" data-v3-split>
-        <a class="v3-btn v3-btn-main v3-split-main" href={downloadUrl}>{c.hero.primary}</a>
+        <a class="v3-btn v3-btn-main v3-split-main" href={downloadUrl}>
+          {recommendationCopy.shoteraDownload}
+        </a>
         <button
           class="v3-btn v3-btn-main v3-split-toggle"
           type="button"
@@ -195,6 +198,24 @@ const shotData = JSON.stringify({
           d="m17.8 20l-12-1.5c-1-.1-1.8-.9-1.8-1.9V7.4c0-1 .8-1.8 1.8-1.9l12-1.5c1.2-.1 2.2.8 2.2 1.9V18c0 1.2-1.1 2.1-2.2 1.9zM12 5v14m-8-7h16"
         ></path>
       </svg>
+    </a>
+
+    <a class="v3-qq" href="https://qm.qq.com/q/ff0xkauRdm" target="_blank" rel="noopener noreferrer">
+      <svg
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M7.5 9.5C7.5 5.5 9.5 3 12 3s4.5 2.5 4.5 6.5c1.9 2 2.9 4.2 2.5 6.5l-2.5-.7c-.1 1-.4 1.8-1 2.5 1.6.7 2 2.7.3 2.7h-2l-1.8-.9-1.8.9h-2c-1.7 0-1.3-2 .3-2.7-.6-.7-.9-1.5-1-2.5L5 16c-.4-2.3.6-4.5 2.5-6.5Z" />
+        <path d="M10 8h.01M14 8h.01M10.6 10.5l1.4.8 1.4-.8M8 12.5c2.6 1.2 5.4 1.2 8 0" />
+      </svg>
+      <span>{recommendationCopy.qqGroup} <b><bdi>418103279</bdi></b></span>
     </a>
 
     <figure class="v3-shot">

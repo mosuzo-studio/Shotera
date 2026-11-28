@@ -766,6 +766,36 @@
   height: 15px;
 }
 
+.v3-sky.v3-sky--recommendation {
+  padding-top: clamp(14px, 3vw, 36px);
+}
+
+.v3-qq {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  margin-top: 14px;
+  padding: 5px 12px;
+  border: 1px solid #abc6de;
+  border-radius: 9px;
+  background: #f3f9ff;
+  color: #214b73;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.v3-qq:hover {
+  background: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.v3-qq:focus-visible {
+  outline: 2px solid #214b73;
+  outline-offset: 3px;
+}
+
 .v3-shot {
   margin: 42px auto 0;
   /* Sized by the frame, not by the image's intrinsic width: fit-content would

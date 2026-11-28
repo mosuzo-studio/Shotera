@@ -1,0 +1,152 @@
+---
+import { productBySlug, productHome, productStatusUrl, type StudioLang } from '~/data/studio';
+import type { PublishedLocale } from '~/i18n/locales';
+import { snipArcRecommendationCopy } from './sniparc-copy';
+
+interface Props {
+  lang: PublishedLocale;
+}
+
+const { lang } = Astro.props;
+const snipArc = productBySlug('sniparc');
+const copy = snipArcRecommendationCopy[lang];
+const downloadLang: StudioLang = lang === 'zh-cn' ? 'zh-cn' : 'en';
+const website = productHome('en', snipArc) + (lang === 'en' ? '' : `${lang}/`);
+---
+
+<section class="recommendation" aria-labelledby="sniparc-recommendation">
+  <div class="identity">
+    <div class="mark"><img src={snipArc.icon} alt="" width="34" height="34" /></div>
+    <div>
+      <div class="heading">
+        <p class="title" id="sniparc-recommendation">{copy.title}</p>
+        <bdi class="version">{copy.version ?? 'V8.0+'}</bdi>
+      </div>
+      <p class="description">{copy.description}</p>
+    </div>
+  </div>
+  <div class="actions">
+    <a class="download" href={productStatusUrl(downloadLang, snipArc)}>{copy.download}</a>
+    <a class="website" href={website}>{copy.website} <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+
+<style>
+  .recommendation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 24px;
+    width: min(100%, 960px);
+    margin: 0 auto;
+    padding: 16px 18px;
+    border: 1px solid #f1d7bd;
+    border-radius: 18px;
+    background: #fffaf4;
+    color: #312417;
+    text-align: start;
+    box-shadow: 0 10px 25px rgb(83 61 44 / 8%);
+  }
+
+  .identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mark {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid #f1e1d0;
+    border-radius: 13px;
+    background: #fff;
+  }
+
+  .heading,
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 750;
+    line-height: 1.3;
+  }
+
+  .version {
+    padding: 2px 7px;
+    border-radius: 8px;
+    background: #f8e6d2;
+    color: #71421f;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .description {
+    margin: 4px 0 0;
+    color: #624d3b;
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+
+  .actions {
+    flex: none;
+  }
+
+  .actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 44px;
+    padding: 8px 11px;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 650;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .download {
+    background: #943a18;
+    color: #fff;
+  }
+
+  .download:hover {
+    background: #792e12;
+  }
+
+  .website {
+    color: #694026;
+  }
+
+  .website:hover {
+    background: #f8eadb;
+  }
+
+  .actions a:focus-visible {
+    outline: 2px solid #943a18;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 740px) {
+    .recommendation {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      padding: 12px;
+    }
+
+    .identity {
+      align-items: flex-start;
+    }
+  }
+</style>
