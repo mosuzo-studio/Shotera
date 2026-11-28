@@ -38,19 +38,18 @@ Impostazioni → Info → Feedback e suggerimenti
 
 **Rilasciato:** 2026-11-28
 
-Scopri SnipArc, lo strumento di cattura schermo di nuova generazione di Shotera, e un minor uso di memoria quando l'app è inattiva.
+Consigliamo SnipArc V8.0, lo strumento di cattura schermo di nuova generazione di Shotera, e un minor uso di memoria quando l'app è inattiva.
 
 **🆚 Lite vs. versione Standard:** le differenze tra le funzioni sono elencate nel [confronto versioni](/it/versions).
 
 **✨ Novità**
 
-- Presentazione di SnipArc nella finestra di aggiornamento e in una finestra di promemoria dedicata; i promemoria successivi appaiono come avviso nell'angolo.
-- I promemoria sono al massimo 3, a distanza di almeno 7 giorni, e si fermano dopo l'apertura della pagina di download; non interrompono mai cattura e modifica.
+- Consigliamo SnipArc V8.0, lo strumento di cattura schermo di nuova generazione: risposta immediata, minore uso di risorse e requisiti più bassi per i dispositivi meno recenti.
 
 **🚀 Miglioramenti**
 
 - Meno memoria usata quando l'overlay di cattura e le immagini fissate sono nascoste.
-- La presentazione di SnipArc è disponibile in tutte le 15 lingue.
+- Il consiglio su SnipArc è disponibile in tutte le 15 lingue.
 
 **🙏 Ringraziamenti**
 

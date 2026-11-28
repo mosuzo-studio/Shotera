@@ -36,19 +36,18 @@ Settings → About → Feedback & suggestions
 
 **Released:** 2026-11-28
 
-Meet SnipArc, Shotera's next-generation screenshot tool — and lower memory use while the app is idle.
+Recommended SnipArc V8.0, Shotera's next-generation screenshot tool — and lower memory use while the app is idle.
 
 **🆚 Lite edition vs. Standard edition:** see the [version comparison](/versions) for feature differences.
 
 **✨ Features**
 
-- Added a SnipArc introduction in the update window and a standalone reminder; later reminders appear as a corner toast.
-- Reminders are capped at 3, at least 7 days apart, and stop once the download page is opened; they never interrupt capture or editing.
+- Recommended SnipArc V8.0: instant response, lower resource use, and lower demands on older devices.
 
 **🚀 Improvements**
 
 - Lower memory use while the capture overlay and pins are hidden.
-- The SnipArc introduction is available in all 15 languages.
+- The SnipArc recommendation is available in all 15 languages.
 
 **🙏 Acknowledgements**
 

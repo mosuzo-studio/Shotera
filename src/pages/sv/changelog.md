@@ -38,19 +38,18 @@ Inställningar → Om → Feedback & förslag
 
 **Släppt:** 2026-11-28
 
-Möt SnipArc, Shoteras skärmbildsverktyg i nästa generation – och lägre minnesanvändning när appen är inaktiv.
+Vi rekommenderar SnipArc V8.0, Shoteras skärmbildsverktyg i nästa generation – och lägre minnesanvändning när appen är inaktiv.
 
 **🆚 Lite vs. Standard:** funktionsskillnaderna finns i [versionsjämförelsen](/sv/versions).
 
 **✨ Nya funktioner**
 
-- SnipArc-presentation i uppdateringsfönstret och i ett separat påminnelsefönster; senare påminnelser visas som en toast i skärmhörnet.
-- Påminnelser visas högst 3 gånger, med minst 7 dagars mellanrum, och slutar när nedladdningssidan öppnas; de avbryter aldrig skärmdumpar eller redigering.
+- Vi rekommenderar SnipArc V8.0, skärmbildsverktyget i nästa generation: omedelbar respons, lägre resursanvändning och lägre krav på äldre enheter.
 
 **🚀 Förbättringar**
 
 - Lägre minnesanvändning medan inspelningsöverlägget och fästa bilder är dolda.
-- SnipArc-presentationen finns på alla 15 språk.
+- SnipArc-rekommendationen finns på alla 15 språk.
 
 **🙏 Tack**
 

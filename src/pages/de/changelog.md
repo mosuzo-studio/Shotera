@@ -38,19 +38,18 @@ Einstellungen → Über → Feedback & Vorschläge
 
 **Veröffentlicht:** 2026-11-28
 
-Lernen Sie SnipArc kennen, Shoteras Screenshot-Tool der nächsten Generation – und weniger Speicherverbrauch im Leerlauf.
+Wir empfehlen SnipArc V8.0, das Screenshot-Tool der nächsten Generation – und weniger Speicherverbrauch im Leerlauf.
 
 **🆚 Lite vs. Standard-Edition:** Die Funktionsunterschiede finden Sie im [Versionsvergleich](/de/versions).
 
 **✨ Neue Funktionen**
 
-- SnipArc-Vorstellung im Update-Fenster und in einem eigenen Erinnerungsfenster; spätere Erinnerungen erscheinen als Toast in der Bildschirmecke.
-- Erinnerungen erscheinen höchstens dreimal im Abstand von mindestens 7 Tagen und enden, sobald die Downloadseite geöffnet wurde; Aufnahmen und Bearbeitung werden nie unterbrochen.
+- Wir empfehlen SnipArc V8.0, das Screenshot-Tool der nächsten Generation: blitzschnelle Reaktion, geringerer Ressourcenverbrauch und niedrigere Anforderungen an ältere Geräte.
 
 **🚀 Verbesserungen**
 
 - Geringerer Speicherverbrauch, während das Aufnahme-Overlay und angeheftete Bilder ausgeblendet sind.
-- Die SnipArc-Vorstellung ist in allen 15 Sprachen verfügbar.
+- Die SnipArc-Empfehlung ist in allen 15 Sprachen verfügbar.
 
 **🙏 Danksagung**
 

@@ -38,19 +38,18 @@ Ustawienia → O programie → Opinie i sugestie
 
 **Data wydania:** 2026-11-28
 
-Poznaj SnipArc — narzędzie do zrzutów ekranu nowej generacji od Shotera — oraz mniejsze zużycie pamięci, gdy aplikacja jest bezczynna.
+Polecamy SnipArc V8.0 — narzędzie do zrzutów ekranu nowej generacji od Shotera — oraz mniejsze zużycie pamięci, gdy aplikacja jest bezczynna.
 
 **🆚 Lite vs wersja Standard:** różnice w funkcjach znajdziesz w [porównaniu wersji](/pl/versions).
 
 **✨ Nowe funkcje**
 
-- Prezentacja SnipArc w oknie aktualizacji i w osobnym oknie przypomnienia; kolejne przypomnienia pojawiają się jako powiadomienie w rogu ekranu.
-- Przypomnienia pojawiają się maksymalnie 3 razy, w odstępie co najmniej 7 dni, i kończą się po otwarciu strony pobierania; nigdy nie przerywają przechwytywania ani edycji.
+- Polecamy SnipArc V8.0 — narzędzie do zrzutów ekranu nowej generacji: błyskawiczna reakcja, mniejsze zużycie zasobów i niższe wymagania wobec starszych urządzeń.
 
 **🚀 Ulepszenia**
 
 - Mniejsze zużycie pamięci, gdy nakładka przechwytywania i przypięte obrazy są ukryte.
-- Prezentacja SnipArc jest dostępna we wszystkich 15 językach.
+- Rekomendacja SnipArc jest dostępna we wszystkich 15 językach.
 
 **🙏 Podziękowania**
 

@@ -38,19 +38,18 @@ Ajustes → Acerca de → Comentarios y sugerencias
 
 **Publicado:** 2026-11-28
 
-Descubre SnipArc, la herramienta de captura de pantalla de nueva generación de Shotera, y un menor uso de memoria cuando la aplicación está inactiva.
+Recomendamos SnipArc V8.0, la herramienta de captura de pantalla de nueva generación de Shotera, y un menor uso de memoria cuando la aplicación está inactiva.
 
 **🆚 Lite vs. versión Estándar:** consulta la [comparación de versiones](/es/versions) para ver las diferencias entre funciones.
 
 **✨ Novedades**
 
-- Presentación de SnipArc en la ventana de actualización y en una ventana de recordatorio independiente; los recordatorios posteriores aparecen como un aviso en la esquina.
-- Los recordatorios son como máximo 3, con al menos 7 días de diferencia, y se detienen al abrir la página de descarga; nunca interrumpen la captura ni la edición.
+- Recomendamos SnipArc V8.0, la herramienta de captura de pantalla de nueva generación: respuesta inmediata, menor uso de recursos y menos exigencia para equipos antiguos.
 
 **🚀 Mejoras**
 
 - Menor uso de memoria mientras la capa de captura y las imágenes fijadas están ocultas.
-- La presentación de SnipArc está disponible en los 15 idiomas.
+- La recomendación de SnipArc está disponible en los 15 idiomas.
 
 **🙏 Agradecimientos**
 

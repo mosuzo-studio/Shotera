@@ -38,19 +38,18 @@ Instellingen → Over → Feedback en suggesties
 
 **Uitgebracht:** 2026-11-28
 
-Maak kennis met SnipArc, de schermafbeeldingstool van de volgende generatie van Shotera — en minder geheugengebruik wanneer de app inactief is.
+We raden SnipArc V8.0 aan, de schermafbeeldingstool van de volgende generatie van Shotera — en minder geheugengebruik wanneer de app inactief is.
 
 **🆚 Lite vs. Standard:** de functieverschillen staan in de [versievergelijking](/nl/versions).
 
 **✨ Nieuwe functies**
 
-- SnipArc-introductie in het updatevenster en in een apart herinneringsvenster; latere herinneringen verschijnen als toast in de schermhoek.
-- Herinneringen verschijnen maximaal 3 keer, met minstens 7 dagen ertussen, en stoppen zodra de downloadpagina is geopend; ze onderbreken nooit opnames of bewerken.
+- We raden SnipArc V8.0 aan, de schermafbeeldingstool van de volgende generatie: directe respons, minder resourcegebruik en lagere eisen voor oudere apparaten.
 
 **🚀 Verbeteringen**
 
 - Minder geheugengebruik terwijl de opname-overlay en vastgepinde afbeeldingen verborgen zijn.
-- De SnipArc-introductie is beschikbaar in alle 15 talen.
+- De SnipArc-aanbeveling is beschikbaar in alle 15 talen.
 
 **🙏 Dankbetuiging**
 

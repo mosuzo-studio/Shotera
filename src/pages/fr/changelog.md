@@ -38,19 +38,18 @@ Paramètres → À propos → Retours et suggestions
 
 **Sortie:** 2026-11-28
 
-Découvrez SnipArc, l’outil de capture d’écran nouvelle génération de Shotera — et une consommation mémoire réduite au repos.
+Nous recommandons SnipArc V8.0, l’outil de capture d’écran nouvelle génération de Shotera — et une consommation mémoire réduite au repos.
 
 **🆚 Lite vs version Standard :** consultez la [comparaison des versions](/fr/versions) pour connaître les différences entre les fonctions.
 
 **✨ Nouveautés**
 
-- Présentation de SnipArc dans la fenêtre de mise à jour et dans une fenêtre de rappel dédiée ; les rappels suivants apparaissent dans un toast en coin d’écran.
-- Les rappels sont limités à 3, espacés d’au moins 7 jours, et s’arrêtent une fois la page de téléchargement ouverte ; ils n’interrompent jamais la capture ni l’édition.
+- Nous recommandons SnipArc V8.0, l’outil de capture d’écran nouvelle génération : réactivité immédiate, consommation de ressources réduite et exigences plus basses pour les appareils plus anciens.
 
 **🚀 Améliorations**
 
 - Consommation mémoire réduite lorsque l’overlay de capture et les fenêtres épinglées sont masqués.
-- La présentation de SnipArc est disponible dans les 15 langues.
+- La recommandation SnipArc est disponible dans les 15 langues.
 
 **🙏 Remerciements**
 
